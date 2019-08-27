@@ -28,7 +28,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "Dangl/AVACloud": "*@dev"
+    "dangl/avacloud": "*@dev"
   }
 }
 ```
