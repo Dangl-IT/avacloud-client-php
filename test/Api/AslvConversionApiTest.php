@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Dangl/AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace Dangl/AVACloud;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \Dangl/AVACloud\Configuration;
+use \Dangl/AVACloud\ApiException;
+use \Dangl/AVACloud\ObjectSerializer;
 
 /**
  * AslvConversionApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Dangl/AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

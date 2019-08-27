@@ -14,8 +14,8 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./lib/Api</directory>
-            <directory suffix=".php">./lib/Model</directory>
+            <directory suffix=".php">./lib/Dangl/AVACloud</directory>
+            <directory suffix=".php">./lib/Dangl/AVACloud</directory>
         </whitelist>
     </filter>
 </phpunit>

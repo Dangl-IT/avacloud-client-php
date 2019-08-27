@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Dangl/AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Dangl/AVACloud;
 
 /**
  * CommercePropertiesDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This class holds specialized information that is relevant to trade or commerce based data exchange scenarios, e.g. between customers, vendors, suppliers and distributors. It is used when exporting to GAEB XML 9x exchange phases.
- * @package     Swagger\Client
+ * @package     Dangl/AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Dangl/AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Dangl/AVACloud;
 
 /**
  * GrossPriceComponentDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This is used in an ElementContainerBase to hold the price composition.
- * @package     Swagger\Client
+ * @package     Dangl/AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

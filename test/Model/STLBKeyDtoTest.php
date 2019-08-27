@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Dangl/AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Dangl/AVACloud;
 
 /**
  * STLBKeyDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This class represents a single key reference within the German STLB \&quot;Standardleistungsbuch Bau\&quot;
- * @package     Swagger\Client
+ * @package     Dangl/AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

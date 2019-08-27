@@ -1,4 +1,4 @@
-# Swagger\Client\RebConversionApi
+# Dangl/AVACloud\RebConversionApi
 
 All URIs are relative to *https://avacloud-api.dangl-it.com*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **rebConversionConvertToAva**
-> \Swagger\Client\Model\ProjectDto rebConversionConvertToAva($reb_file, $remove_plain_text_long_texts, $remove_html_long_texts)
+> \Dangl/AVACloud\Dangl\AVACloud\ProjectDto rebConversionConvertToAva($reb_file, $remove_plain_text_long_texts, $remove_html_long_texts)
 
 Converts REB files to Dangl.AVA projects
 
@@ -21,9 +21,9 @@ Converts REB files to Dangl.AVA projects
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RebConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\RebConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)
+[**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)
 
 ### Authorization
 
@@ -76,9 +76,9 @@ Converts REB files to Excel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RebConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\RebConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,9 +133,9 @@ Converts REB files to GAEB files
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RebConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\RebConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,9 +188,9 @@ Converts REB files to Oenorm
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RebConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\RebConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

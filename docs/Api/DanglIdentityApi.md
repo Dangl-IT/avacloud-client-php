@@ -1,4 +1,4 @@
-# Swagger\Client\DanglIdentityApi
+# Dangl/AVACloud\DanglIdentityApi
 
 All URIs are relative to *https://avacloud-api.dangl-it.com*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **danglIdentityLoginAndReturnToken**
-> \Swagger\Client\Model\TokenResponseGet danglIdentityLoginAndReturnToken($model)
+> \Dangl/AVACloud\Dangl\AVACloud\TokenResponseGet danglIdentityLoginAndReturnToken($model)
 
 
 
@@ -23,15 +23,15 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DanglIdentityApi(
+$apiInstance = new Dangl/AVACloud\Api\DanglIdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$model = new \Swagger\Client\Model\TokenLoginPost(); // \Swagger\Client\Model\TokenLoginPost | 
+$model = new \Dangl/AVACloud\Dangl\AVACloud\TokenLoginPost(); // \Dangl/AVACloud\Dangl\AVACloud\TokenLoginPost | 
 
 try {
     $result = $apiInstance->danglIdentityLoginAndReturnToken($model);
@@ -46,11 +46,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**\Swagger\Client\Model\TokenLoginPost**](../Model/TokenLoginPost.md)|  |
+ **model** | [**\Dangl/AVACloud\Dangl\AVACloud\TokenLoginPost**](../Model/TokenLoginPost.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TokenResponseGet**](../Model/TokenResponseGet.md)
+[**\Dangl/AVACloud\Dangl\AVACloud\TokenResponseGet**](../Model/TokenResponseGet.md)
 
 ### Authorization
 
@@ -74,15 +74,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DanglIdentityApi(
+$apiInstance = new Dangl/AVACloud\Api\DanglIdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$model = new \Swagger\Client\Model\LoginPost(); // \Swagger\Client\Model\LoginPost | 
+$model = new \Dangl/AVACloud\Dangl\AVACloud\LoginPost(); // \Dangl/AVACloud\Dangl\AVACloud\LoginPost | 
 $redirect_url = "redirect_url_example"; // string | 
 
 try {
@@ -97,7 +97,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**\Swagger\Client\Model\LoginPost**](../Model/LoginPost.md)|  |
+ **model** | [**\Dangl/AVACloud\Dangl\AVACloud\LoginPost**](../Model/LoginPost.md)|  |
  **redirect_url** | **string**|  | [optional]
 
 ### Return type
@@ -116,7 +116,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **danglIdentityRefreshToken**
-> \Swagger\Client\Model\TokenResponseGet danglIdentityRefreshToken($model)
+> \Dangl/AVACloud\Dangl\AVACloud\TokenResponseGet danglIdentityRefreshToken($model)
 
 
 
@@ -126,15 +126,15 @@ void (empty response body)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DanglIdentityApi(
+$apiInstance = new Dangl/AVACloud\Api\DanglIdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$model = new \Swagger\Client\Model\TokenRefreshPost(); // \Swagger\Client\Model\TokenRefreshPost | 
+$model = new \Dangl/AVACloud\Dangl\AVACloud\TokenRefreshPost(); // \Dangl/AVACloud\Dangl\AVACloud\TokenRefreshPost | 
 
 try {
     $result = $apiInstance->danglIdentityRefreshToken($model);
@@ -149,11 +149,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**\Swagger\Client\Model\TokenRefreshPost**](../Model/TokenRefreshPost.md)|  |
+ **model** | [**\Dangl/AVACloud\Dangl\AVACloud\TokenRefreshPost**](../Model/TokenRefreshPost.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\TokenResponseGet**](../Model/TokenResponseGet.md)
+[**\Dangl/AVACloud\Dangl\AVACloud\TokenResponseGet**](../Model/TokenResponseGet.md)
 
 ### Authorization
 
@@ -177,15 +177,15 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DanglIdentityApi(
+$apiInstance = new Dangl/AVACloud\Api\DanglIdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$register_model = new \Swagger\Client\Model\RegisterPost(); // \Swagger\Client\Model\RegisterPost | 
+$register_model = new \Dangl/AVACloud\Dangl\AVACloud\RegisterPost(); // \Dangl/AVACloud\Dangl\AVACloud\RegisterPost | 
 
 try {
     $apiInstance->danglIdentityRegister($register_model);
@@ -199,7 +199,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **register_model** | [**\Swagger\Client\Model\RegisterPost**](../Model/RegisterPost.md)|  |
+ **register_model** | [**\Dangl/AVACloud\Dangl\AVACloud\RegisterPost**](../Model/RegisterPost.md)|  |
 
 ### Return type
 
@@ -227,15 +227,15 @@ void (empty response body)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DanglIdentityApi(
+$apiInstance = new Dangl/AVACloud\Api\DanglIdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$forgot_password_model = new \Swagger\Client\Model\ForgotPasswordPost(); // \Swagger\Client\Model\ForgotPasswordPost | 
+$forgot_password_model = new \Dangl/AVACloud\Dangl\AVACloud\ForgotPasswordPost(); // \Dangl/AVACloud\Dangl\AVACloud\ForgotPasswordPost | 
 
 try {
     $apiInstance->danglIdentityRequestPasswordReset($forgot_password_model);
@@ -249,7 +249,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgot_password_model** | [**\Swagger\Client\Model\ForgotPasswordPost**](../Model/ForgotPasswordPost.md)|  |
+ **forgot_password_model** | [**\Dangl/AVACloud\Dangl\AVACloud\ForgotPasswordPost**](../Model/ForgotPasswordPost.md)|  |
 
 ### Return type
 
@@ -277,9 +277,9 @@ void (empty response body)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DanglIdentityApi(
+$apiInstance = new Dangl/AVACloud\Api\DanglIdentityApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

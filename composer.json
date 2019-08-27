@@ -1,6 +1,6 @@
 {
   "name": "dangl/avacloud",
-  "version": "0.1.13-beta0001",
+  "version": "0.1.13-beta0002",
   "description": "",
   "keywords": [
     "gaeb",
@@ -31,12 +31,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Dangl\\AVACloud\\": "lib/"
+      "Dangl/AVACloud\\": "lib/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dangl\\AVACloud\\": "test/"
+      "Dangl/AVACloud\\": "test/"
     }
   }
 }

@@ -1,4 +1,4 @@
-# Swagger\Client\AvaConversionApi
+# Dangl/AVACloud\AvaConversionApi
 
 All URIs are relative to *https://avacloud-api.dangl-it.com*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **avaConversionConvertToAva**
-> \Swagger\Client\Model\ProjectDto avaConversionConvertToAva($ava_project, $remove_plain_text_long_texts, $remove_html_long_texts)
+> \Dangl/AVACloud\Dangl\AVACloud\ProjectDto avaConversionConvertToAva($ava_project, $remove_plain_text_long_texts, $remove_html_long_texts)
 
 Converts Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
 
@@ -23,15 +23,15 @@ Converts Dangl.AVA projects to Dangl.AVA. This is useful when you want to genera
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AvaConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\AvaConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project = new \Swagger\Client\Model\ProjectDto(); // \Swagger\Client\Model\ProjectDto | The Dangl.AVA project
+$ava_project = new \Dangl/AVACloud\Dangl\AVACloud\ProjectDto(); // \Dangl/AVACloud\Dangl\AVACloud\ProjectDto | The Dangl.AVA project
 $remove_plain_text_long_texts = true; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
 $remove_html_long_texts = true; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
 
@@ -48,13 +48,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ava_project** | [**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
+ **ava_project** | [**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **remove_plain_text_long_texts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional]
  **remove_html_long_texts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)
+[**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)
 
 ### Authorization
 
@@ -78,15 +78,15 @@ Converts Dangl.AVA projects to Excel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AvaConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\AvaConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project = new \Swagger\Client\Model\ProjectDto(); // \Swagger\Client\Model\ProjectDto | The Dangl.AVA project
+$ava_project = new \Dangl/AVACloud\Dangl\AVACloud\ProjectDto(); // \Dangl/AVACloud\Dangl\AVACloud\ProjectDto | The Dangl.AVA project
 $write_prices = true; // bool | Defaults to true
 $write_long_texts = true; // bool | Defaults to true
 $conversion_culture = "conversion_culture_example"; // string | The culture that should be used for the conversion process, to have localized Excel files
@@ -104,7 +104,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ava_project** | [**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
+ **ava_project** | [**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **write_prices** | **bool**| Defaults to true | [optional]
  **write_long_texts** | **bool**| Defaults to true | [optional]
  **conversion_culture** | **string**| The culture that should be used for the conversion process, to have localized Excel files | [optional]
@@ -135,15 +135,15 @@ Converts Dangl.AVA projects to GAEB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AvaConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\AvaConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project = new \Swagger\Client\Model\ProjectDto(); // \Swagger\Client\Model\ProjectDto | The Dangl.AVA project
+$ava_project = new \Dangl/AVACloud\Dangl\AVACloud\ProjectDto(); // \Dangl/AVACloud\Dangl\AVACloud\ProjectDto | The Dangl.AVA project
 $destination_gaeb_type = "destination_gaeb_type_example"; // string | Defaults to GAEB XML V3.2
 $target_exchange_phase_transform = "target_exchange_phase_transform_example"; // string | Defaults to none, meaning no transformation will be done
 
@@ -160,7 +160,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ava_project** | [**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
+ **ava_project** | [**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **destination_gaeb_type** | **string**| Defaults to GAEB XML V3.2 | [optional]
  **target_exchange_phase_transform** | **string**| Defaults to none, meaning no transformation will be done | [optional]
 
@@ -190,15 +190,15 @@ Converts Dangl.AVA projects to Oenorm
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AvaConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\AvaConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project = new \Swagger\Client\Model\ProjectDto(); // \Swagger\Client\Model\ProjectDto | The Dangl.AVA project
+$ava_project = new \Dangl/AVACloud\Dangl\AVACloud\ProjectDto(); // \Dangl/AVACloud\Dangl\AVACloud\ProjectDto | The Dangl.AVA project
 $destination_oenorm_type = "destination_oenorm_type_example"; // string | Defaults to Lv2015
 $try_repair_project_structure = true; // bool | Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target
 
@@ -215,7 +215,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ava_project** | [**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
+ **ava_project** | [**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **destination_oenorm_type** | **string**| Defaults to Lv2015 | [optional]
  **try_repair_project_structure** | **bool**| Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target | [optional]
 
@@ -245,15 +245,15 @@ Converts Dangl.AVA projects to REB
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AvaConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\AvaConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project = new \Swagger\Client\Model\ProjectDto(); // \Swagger\Client\Model\ProjectDto | The Dangl.AVA project
+$ava_project = new \Dangl/AVACloud\Dangl\AVACloud\ProjectDto(); // \Dangl/AVACloud\Dangl\AVACloud\ProjectDto | The Dangl.AVA project
 
 try {
     $result = $apiInstance->avaConversionConvertToReb($ava_project);
@@ -268,7 +268,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ava_project** | [**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
+ **ava_project** | [**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
 
 ### Return type
 
@@ -296,15 +296,15 @@ Converts Dangl.AVA projects to SIA 451
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AvaConversionApi(
+$apiInstance = new Dangl/AVACloud\Api\AvaConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project = new \Swagger\Client\Model\ProjectDto(); // \Swagger\Client\Model\ProjectDto | The Dangl.AVA project
+$ava_project = new \Dangl/AVACloud\Dangl\AVACloud\ProjectDto(); // \Dangl/AVACloud\Dangl\AVACloud\ProjectDto | The Dangl.AVA project
 
 try {
     $result = $apiInstance->avaConversionConvertToSia($ava_project);
@@ -319,7 +319,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ava_project** | [**\Swagger\Client\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
+ **ava_project** | [**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
 
 ### Return type
 

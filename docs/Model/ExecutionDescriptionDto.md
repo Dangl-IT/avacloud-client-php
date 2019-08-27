@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**blocks** | [**\Swagger\Client\Model\NoteTextDto[]**](NoteTextDto.md) | Blocks within an ExecutionDescription contain the actual information. | [optional] 
+**blocks** | [**\Dangl/AVACloud\Dangl\AVACloud\NoteTextDto[]**](NoteTextDto.md) | Blocks within an ExecutionDescription contain the actual information. | [optional] 
 **label** | **string** | Labels this ExecutionDescription. | [optional] 
 **identifier** | **string** | Uniquely identifies this ExecutionDescription. | [optional] 
 **element_type** | **string** |  | [optional] 

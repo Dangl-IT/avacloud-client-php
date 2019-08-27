@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **deduction_factor** | **float** | The final, total price will be deducted by this rate. | 
 **flat_sum** | **float** | This is given when there is only one flat price for the whole service specification. | 
 **tax_rate** | **float** | Global tax rate for the project. Note that certain elements may have a different, specific tax rate. | 
-**trade_discounts** | [**\Swagger\Client\Model\TradeDiscountDto[]**](TradeDiscountDto.md) | Trade discounts for offered in this ServiceSpecification. | [optional] 
+**trade_discounts** | [**\Dangl/AVACloud\Dangl\AVACloud\TradeDiscountDto[]**](TradeDiscountDto.md) | Trade discounts for offered in this ServiceSpecification. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
