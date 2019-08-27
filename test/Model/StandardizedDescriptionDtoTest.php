@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * StandardizedDescriptionDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This class represents a standardized description. This means that instead of solely relying on texts to describe a service, external standards and definitions are referenced for a common understanding.
- * @package     Dangl/AVACloud
+ * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

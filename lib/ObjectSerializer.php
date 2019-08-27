@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,13 +27,13 @@
  * Do not edit the class manually.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -298,7 +298,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Dangl/AVACloud\Model\\' . $data->{$discriminator};
+                $subclass = '\Dangl\AVACloud\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

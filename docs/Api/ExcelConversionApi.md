@@ -1,4 +1,4 @@
-# Dangl/AVACloud\ExcelConversionApi
+# Dangl\AVACloud\ExcelConversionApi
 
 All URIs are relative to *https://avacloud-api.dangl-it.com*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **excelConversionConvertToAva**
-> \Dangl/AVACloud\Dangl\AVACloud\ProjectDto excelConversionConvertToAva($excel_file, $read_new_elements, $rebuild_item_number_schema, $remove_plain_text_long_texts, $remove_html_long_texts)
+> \Dangl\AVACloud\Model\ProjectDto excelConversionConvertToAva($excel_file, $read_new_elements, $rebuild_item_number_schema, $remove_plain_text_long_texts, $remove_html_long_texts)
 
 Converts Excel files to Dangl.AVA projects.
 
@@ -21,9 +21,9 @@ Converts Excel files to Dangl.AVA projects.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\ExcelConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\ExcelConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)
+[**\Dangl\AVACloud\Model\ProjectDto**](../Model/ProjectDto.md)
 
 ### Authorization
 
@@ -80,9 +80,9 @@ Converts Excel files to Excel files. Used, for example, when elements were added
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\ExcelConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\ExcelConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,9 +141,9 @@ Converts Excel files to GAEB files.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\ExcelConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\ExcelConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,9 +200,9 @@ Converts Excel files to Oenorm files.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\ExcelConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\ExcelConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

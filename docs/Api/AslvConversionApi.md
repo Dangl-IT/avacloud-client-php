@@ -1,4 +1,4 @@
-# Dangl/AVACloud\AslvConversionApi
+# Dangl\AVACloud\AslvConversionApi
 
 All URIs are relative to *https://avacloud-api.dangl-it.com*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **aslvConversionConvertToAva**
-> \Dangl/AVACloud\Dangl\AVACloud\ProjectDto aslvConversionConvertToAva($aslv_file, $remove_plain_text_long_texts, $remove_html_long_texts)
+> \Dangl\AVACloud\Model\ProjectDto aslvConversionConvertToAva($aslv_file, $remove_plain_text_long_texts, $remove_html_long_texts)
 
 Converts Aslv files to Dangl.AVA projects
 
@@ -21,9 +21,9 @@ Converts Aslv files to Dangl.AVA projects
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\AslvConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\AslvConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Dangl/AVACloud\Dangl\AVACloud\ProjectDto**](../Model/ProjectDto.md)
+[**\Dangl\AVACloud\Model\ProjectDto**](../Model/ProjectDto.md)
 
 ### Authorization
 
@@ -76,9 +76,9 @@ Converts Aslv files to Excel
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\AslvConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\AslvConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,9 +133,9 @@ Converts Aslv files to GAEB files
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\AslvConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\AslvConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -188,9 +188,9 @@ Converts Aslv files to Oenorm files
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\AslvConversionApi(
+$apiInstance = new Dangl\AVACloud\Api\AslvConversionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

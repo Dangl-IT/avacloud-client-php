@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * AwardTypeDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This enumeration describes the type of the award / procurement process. If this is used in a GAEB context, more information about award types can be found in the German VOB/A rules and the GAEB standard
- * @package     Dangl/AVACloud
+ * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

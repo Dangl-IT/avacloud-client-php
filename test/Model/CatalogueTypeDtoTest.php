@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * CatalogueTypeDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This enumeration describes the type of a catalogue. Catalogues, or collections, hold information to categorize and describe items. For example, the German DIN 276 cost group standards describe different types of costs for building projects. When referencing the DIN 276 catalogue and providing an item key or identifier, it is possible to reference data in this catalogue.
- * @package     Dangl/AVACloud
+ * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

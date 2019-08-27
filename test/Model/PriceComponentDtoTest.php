@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * PriceComponentDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This class provides means to store information about a price and it&#39;s composition. Note that this is referencing to a single price component, so for example a Position would have a list of PriceComponents, one for Material, one for Labour etc.
- * @package     Dangl/AVACloud
+ * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

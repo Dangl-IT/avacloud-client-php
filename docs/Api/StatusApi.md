@@ -1,4 +1,4 @@
-# Dangl/AVACloud\StatusApi
+# Dangl\AVACloud\StatusApi
 
 All URIs are relative to *https://avacloud-api.dangl-it.com*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **statusGetStatus**
-> \Dangl/AVACloud\Dangl\AVACloud\GetStatus statusGetStatus()
+> \Dangl\AVACloud\Model\GetStatus statusGetStatus()
 
 Reports the health status of the AVACloud API
 
@@ -18,9 +18,9 @@ Reports the health status of the AVACloud API
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Dangl.Identity
-$config = Dangl/AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Dangl/AVACloud\Api\StatusApi(
+$apiInstance = new Dangl\AVACloud\Api\StatusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Dangl/AVACloud\Dangl\AVACloud\GetStatus**](../Model/GetStatus.md)
+[**\Dangl\AVACloud\Model\GetStatus**](../Model/GetStatus.md)
 
 ### Authorization
 

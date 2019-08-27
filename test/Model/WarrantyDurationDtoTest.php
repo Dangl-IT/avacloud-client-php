@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * WarrantyDurationDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This class does not represent a typical &#x60;TimeSpan&#x60; but has a scalar value int Duration and a DurationUnit Unit to represent durations as typically used in contracts, e.g. 5 Months
- * @package     Dangl/AVACloud
+ * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

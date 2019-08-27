@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
-use \Dangl/AVACloud\Configuration;
-use \Dangl/AVACloud\ApiException;
-use \Dangl/AVACloud\ObjectSerializer;
+use \Dangl\AVACloud\Configuration;
+use \Dangl\AVACloud\ApiException;
+use \Dangl\AVACloud\ObjectSerializer;
 
 /**
  * GaebConversionApiTest Class Doc Comment
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Dangl/AVACloud
+ * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl/AVACloud;
+namespace Dangl\AVACloud;
 
 /**
  * STLBReferenceDtoTest Class Doc Comment
  *
  * @category    Class
  * @description This class represents a specialized reference to the German STLB \&quot;Standardleistungsbuch Bau\&quot;. The STLB is a commercial offering and describes common services in the construction sector. When this is used, this describes the exact type of a service via a reference to this standard
- * @package     Dangl/AVACloud
+ * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
