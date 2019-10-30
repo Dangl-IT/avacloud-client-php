@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseErrorTypeTest
+ * ProductDataDtoTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Dangl\AVACloud;
 
 /**
- * ResponseErrorTypeTest Class Doc Comment
+ * ProductDataDtoTest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description This class represents data about products and their vendor
  * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ResponseErrorTypeTest extends \PHPUnit_Framework_TestCase
+class ProductDataDtoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,51 @@ class ResponseErrorTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ResponseErrorType"
+     * Test "ProductDataDto"
      */
-    public function testResponseErrorType()
+    public function testProductDataDto()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "vendor"
+     */
+    public function testPropertyVendor()
+    {
+    }
+
+    /**
+     * Test attribute "articles"
+     */
+    public function testPropertyArticles()
+    {
+    }
+
+    /**
+     * Test attribute "short_text"
+     */
+    public function testPropertyShortText()
+    {
+    }
+
+    /**
+     * Test attribute "long_text"
+     */
+    public function testPropertyLongText()
+    {
+    }
+
+    /**
+     * Test attribute "html_long_text"
+     */
+    public function testPropertyHtmlLongText()
     {
     }
 }

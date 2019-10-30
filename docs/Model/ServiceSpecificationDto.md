@@ -26,21 +26,22 @@ Name | Type | Description | Notes
 **project_information** | [**\Dangl\AVACloud\Model\ProjectInformationDto**](ProjectInformationDto.md) | The ProjectInformation used within the Project in which this ElementContainerBase is contained. This is reference equal to the ProjectInformation used in the parent project. | [optional] 
 **exchange_phase** | [**\Dangl\AVACloud\Model\ExchangePhaseDto**](ExchangePhaseDto.md) | This service specifications exchange phase, i.e. the current status in the project it is intended to be used (such as request for offer, offer, awarding...). | 
 **origin** | [**\Dangl\AVACloud\Model\OriginDto**](OriginDto.md) | This indicates where the service specification originates, i.e. from an exchange file format or self created. | 
-**creation_date** | [**\DateTime**](\DateTime.md) | Creation date of this ServiceSpecification. | 
-**offer_by_date** | [**\DateTime**](\DateTime.md) | Date indicating until when an offer has to be submitted. In German, this is often called the \&quot;Eröffnungstermin\&quot; | 
-**decision_date** | [**\DateTime**](\DateTime.md) | Date indicating by when the buyer will select a contractor. | 
+**creation_date** | [**\DateTime**](\DateTime.md) | Creation date of this ServiceSpecification. | [optional] 
+**offer_by_date** | [**\DateTime**](\DateTime.md) | Date indicating until when an offer has to be submitted. In German, this is often called the \&quot;Eröffnungstermin\&quot; | [optional] 
+**decision_date** | [**\DateTime**](\DateTime.md) | Date indicating by when the buyer will select a contractor. | [optional] 
 **submission_location** | **string** | String indicating where the physical submission of the offer is taking place. | [optional] 
 **description** | **string** | Description of this ServiceSpecification. | [optional] 
 **name** | **string** | The name of this ServiceSpecification. | [optional] 
 **price_information** | [**\Dangl\AVACloud\Model\PriceInformationDto**](PriceInformationDto.md) | This PriceInformation contains global data for the ServiceSpecification. When inside a Project, do not set this property manually. | [optional] 
-**project_catalogues** | [**\Dangl\AVACloud\Model\CatalogueDto[]**](CatalogueDto.md) | These are Catalogues that are used within this ServiceSpecification. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. | [optional] 
-**planned_execution_start** | [**\DateTime**](\DateTime.md) | The date when the execution of the services is scheduled to start | 
-**planned_execution_end** | [**\DateTime**](\DateTime.md) | The date then the execution of the services is scheduled to be finished | 
-**contract_date** | [**\DateTime**](\DateTime.md) | The date on which the contract has been awarded. This matches \&quot;Auftragsdatum\&quot; in GAEB | 
+**project_catalogues** | [**\Dangl\AVACloud\Model\CatalogueDto[]**](CatalogueDto.md) | These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. | [optional] 
+**catalogue_references** | [**\Dangl\AVACloud\Model\CatalogueReferenceDto[]**](CatalogueReferenceDto.md) | Referenced catalogues for this QuantityAssignment. | [optional] 
+**planned_execution_start** | [**\DateTime**](\DateTime.md) | The date when the execution of the services is scheduled to start | [optional] 
+**planned_execution_end** | [**\DateTime**](\DateTime.md) | The date then the execution of the services is scheduled to be finished | [optional] 
+**contract_date** | [**\DateTime**](\DateTime.md) | The date on which the contract has been awarded. This matches \&quot;Auftragsdatum\&quot; in GAEB | [optional] 
 **contract_identifier** | **string** | This value can be used to indicate the number or identifier of the contract. It matches \&quot;Auftragsnummer\&quot; in GAEB | [optional] 
 **warranty_duration** | [**\Dangl\AVACloud\Model\WarrantyDurationDto**](WarrantyDurationDto.md) | This indicates how long the warranty period is for this ServiceSpecification | [optional] 
-**warranty_end** | [**\DateTime**](\DateTime.md) | The date on which the warranty period ends | 
-**approval_date** | [**\DateTime**](\DateTime.md) | The date on which the services rendered by the bidder are scheduled to be approved by the buyer | 
+**warranty_end** | [**\DateTime**](\DateTime.md) | The date on which the warranty period ends | [optional] 
+**approval_date** | [**\DateTime**](\DateTime.md) | The date on which the services rendered by the bidder are scheduled to be approved by the buyer | [optional] 
 **type_of_approval** | **string** | This should specify how the approval is performed by the buyer. This matches \&quot;AcceptType\&quot; in GAEB | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

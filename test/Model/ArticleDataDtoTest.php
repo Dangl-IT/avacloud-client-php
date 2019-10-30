@@ -1,6 +1,6 @@
 <?php
 /**
- * ResponseErrorTypeTest
+ * ArticleDataDtoTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Dangl\AVACloud;
 
 /**
- * ResponseErrorTypeTest Class Doc Comment
+ * ArticleDataDtoTest Class Doc Comment
  *
  * @category    Class
- * @description 
+ * @description This class represents a single article, usually used within ProductData
  * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ResponseErrorTypeTest extends \PHPUnit_Framework_TestCase
+class ArticleDataDtoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,72 @@ class ResponseErrorTypeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ResponseErrorType"
+     * Test "ArticleDataDto"
      */
-    public function testResponseErrorType()
+    public function testArticleDataDto()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+    }
+
+    /**
+     * Test attribute "article_number"
+     */
+    public function testPropertyArticleNumber()
+    {
+    }
+
+    /**
+     * Test attribute "quantity"
+     */
+    public function testPropertyQuantity()
+    {
+    }
+
+    /**
+     * Test attribute "unit_tag"
+     */
+    public function testPropertyUnitTag()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+    }
+
+    /**
+     * Test attribute "short_text"
+     */
+    public function testPropertyShortText()
+    {
+    }
+
+    /**
+     * Test attribute "long_text"
+     */
+    public function testPropertyLongText()
+    {
+    }
+
+    /**
+     * Test attribute "html_long_text"
+     */
+    public function testPropertyHtmlLongText()
     {
     }
 }

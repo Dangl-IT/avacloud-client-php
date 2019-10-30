@@ -1,6 +1,6 @@
 <?php
 /**
- * PriceInformationDto
+ * ProductDataDto
  *
  * PHP version 5
  *
@@ -33,15 +33,15 @@ use \ArrayAccess;
 use \Dangl\AVACloud\ObjectSerializer;
 
 /**
- * PriceInformationDto Class Doc Comment
+ * ProductDataDto Class Doc Comment
  *
  * @category Class
- * @description Holds global price information for a ServiceSpecification
+ * @description This class represents data about products and their vendor
  * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PriceInformationDto implements ModelInterface, ArrayAccess
+class ProductDataDto implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PriceInformationDto';
+    protected static $swaggerModelName = 'ProductDataDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,11 +59,11 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'hourly_wage' => 'float',
-        'deduction_factor' => 'float',
-        'flat_sum' => 'float',
-        'tax_rate' => 'float',
-        'trade_discounts' => '\Dangl\AVACloud\Model\TradeDiscountDto[]'
+        'vendor' => '\Dangl\AVACloud\Model\PartyInformationDto',
+        'articles' => '\Dangl\AVACloud\Model\ArticleDataDto[]',
+        'short_text' => 'string',
+        'long_text' => 'string',
+        'html_long_text' => 'string'
     ];
 
     /**
@@ -73,11 +73,11 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'guid',
-        'hourly_wage' => 'decimal',
-        'deduction_factor' => 'decimal',
-        'flat_sum' => 'decimal',
-        'tax_rate' => 'decimal',
-        'trade_discounts' => null
+        'vendor' => null,
+        'articles' => null,
+        'short_text' => null,
+        'long_text' => null,
+        'html_long_text' => null
     ];
 
     /**
@@ -108,11 +108,11 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'hourly_wage' => 'hourlyWage',
-        'deduction_factor' => 'deductionFactor',
-        'flat_sum' => 'flatSum',
-        'tax_rate' => 'taxRate',
-        'trade_discounts' => 'tradeDiscounts'
+        'vendor' => 'vendor',
+        'articles' => 'articles',
+        'short_text' => 'shortText',
+        'long_text' => 'longText',
+        'html_long_text' => 'htmlLongText'
     ];
 
     /**
@@ -122,11 +122,11 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'hourly_wage' => 'setHourlyWage',
-        'deduction_factor' => 'setDeductionFactor',
-        'flat_sum' => 'setFlatSum',
-        'tax_rate' => 'setTaxRate',
-        'trade_discounts' => 'setTradeDiscounts'
+        'vendor' => 'setVendor',
+        'articles' => 'setArticles',
+        'short_text' => 'setShortText',
+        'long_text' => 'setLongText',
+        'html_long_text' => 'setHtmlLongText'
     ];
 
     /**
@@ -136,11 +136,11 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'hourly_wage' => 'getHourlyWage',
-        'deduction_factor' => 'getDeductionFactor',
-        'flat_sum' => 'getFlatSum',
-        'tax_rate' => 'getTaxRate',
-        'trade_discounts' => 'getTradeDiscounts'
+        'vendor' => 'getVendor',
+        'articles' => 'getArticles',
+        'short_text' => 'getShortText',
+        'long_text' => 'getLongText',
+        'html_long_text' => 'getHtmlLongText'
     ];
 
     /**
@@ -204,11 +204,11 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['hourly_wage'] = isset($data['hourly_wage']) ? $data['hourly_wage'] : null;
-        $this->container['deduction_factor'] = isset($data['deduction_factor']) ? $data['deduction_factor'] : null;
-        $this->container['flat_sum'] = isset($data['flat_sum']) ? $data['flat_sum'] : null;
-        $this->container['tax_rate'] = isset($data['tax_rate']) ? $data['tax_rate'] : null;
-        $this->container['trade_discounts'] = isset($data['trade_discounts']) ? $data['trade_discounts'] : null;
+        $this->container['vendor'] = isset($data['vendor']) ? $data['vendor'] : null;
+        $this->container['articles'] = isset($data['articles']) ? $data['articles'] : null;
+        $this->container['short_text'] = isset($data['short_text']) ? $data['short_text'] : null;
+        $this->container['long_text'] = isset($data['long_text']) ? $data['long_text'] : null;
+        $this->container['html_long_text'] = isset($data['html_long_text']) ? $data['html_long_text'] : null;
     }
 
     /**
@@ -222,18 +222,6 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
 
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['hourly_wage'] === null) {
-            $invalidProperties[] = "'hourly_wage' can't be null";
-        }
-        if ($this->container['deduction_factor'] === null) {
-            $invalidProperties[] = "'deduction_factor' can't be null";
-        }
-        if ($this->container['flat_sum'] === null) {
-            $invalidProperties[] = "'flat_sum' can't be null";
-        }
-        if ($this->container['tax_rate'] === null) {
-            $invalidProperties[] = "'tax_rate' can't be null";
         }
         return $invalidProperties;
     }
@@ -275,121 +263,121 @@ class PriceInformationDto implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets hourly_wage
+     * Gets vendor
      *
-     * @return float
+     * @return \Dangl\AVACloud\Model\PartyInformationDto
      */
-    public function getHourlyWage()
+    public function getVendor()
     {
-        return $this->container['hourly_wage'];
+        return $this->container['vendor'];
     }
 
     /**
-     * Sets hourly_wage
+     * Sets vendor
      *
-     * @param float $hourly_wage The amount of currency per one hour of manual labour work in this project.
+     * @param \Dangl\AVACloud\Model\PartyInformationDto $vendor This PartyInformation is used to describe details about the vendor of this ProductData.
      *
      * @return $this
      */
-    public function setHourlyWage($hourly_wage)
+    public function setVendor($vendor)
     {
-        $this->container['hourly_wage'] = $hourly_wage;
+        $this->container['vendor'] = $vendor;
 
         return $this;
     }
 
     /**
-     * Gets deduction_factor
+     * Gets articles
      *
-     * @return float
+     * @return \Dangl\AVACloud\Model\ArticleDataDto[]
      */
-    public function getDeductionFactor()
+    public function getArticles()
     {
-        return $this->container['deduction_factor'];
+        return $this->container['articles'];
     }
 
     /**
-     * Sets deduction_factor
+     * Sets articles
      *
-     * @param float $deduction_factor The final, total price will be deducted by this rate.
+     * @param \Dangl\AVACloud\Model\ArticleDataDto[] $articles The collection of ArticleData that describe this product, e.g. a pipe product could be composed out of multiple pipe segments and fittings.
      *
      * @return $this
      */
-    public function setDeductionFactor($deduction_factor)
+    public function setArticles($articles)
     {
-        $this->container['deduction_factor'] = $deduction_factor;
+        $this->container['articles'] = $articles;
 
         return $this;
     }
 
     /**
-     * Gets flat_sum
+     * Gets short_text
      *
-     * @return float
+     * @return string
      */
-    public function getFlatSum()
+    public function getShortText()
     {
-        return $this->container['flat_sum'];
+        return $this->container['short_text'];
     }
 
     /**
-     * Sets flat_sum
+     * Sets short_text
      *
-     * @param float $flat_sum This is given when there is only one flat price for the whole service specification.
+     * @param string $short_text Short description for this ITextElement element.
      *
      * @return $this
      */
-    public function setFlatSum($flat_sum)
+    public function setShortText($short_text)
     {
-        $this->container['flat_sum'] = $flat_sum;
+        $this->container['short_text'] = $short_text;
 
         return $this;
     }
 
     /**
-     * Gets tax_rate
+     * Gets long_text
      *
-     * @return float
+     * @return string
      */
-    public function getTaxRate()
+    public function getLongText()
     {
-        return $this->container['tax_rate'];
+        return $this->container['long_text'];
     }
 
     /**
-     * Sets tax_rate
+     * Sets long_text
      *
-     * @param float $tax_rate Global tax rate for the project. Note that certain elements may have a different, specific tax rate.
+     * @param string $long_text Detailed description for this ITextElement element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
      *
      * @return $this
      */
-    public function setTaxRate($tax_rate)
+    public function setLongText($long_text)
     {
-        $this->container['tax_rate'] = $tax_rate;
+        $this->container['long_text'] = $long_text;
 
         return $this;
     }
 
     /**
-     * Gets trade_discounts
+     * Gets html_long_text
      *
-     * @return \Dangl\AVACloud\Model\TradeDiscountDto[]
+     * @return string
      */
-    public function getTradeDiscounts()
+    public function getHtmlLongText()
     {
-        return $this->container['trade_discounts'];
+        return $this->container['html_long_text'];
     }
 
     /**
-     * Sets trade_discounts
+     * Sets html_long_text
      *
-     * @param \Dangl\AVACloud\Model\TradeDiscountDto[] $trade_discounts Trade discounts for offered in this ServiceSpecification.
+     * @param string $html_long_text This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
      *
      * @return $this
      */
-    public function setTradeDiscounts($trade_discounts)
+    public function setHtmlLongText($html_long_text)
     {
-        $this->container['trade_discounts'] = $trade_discounts;
+        $this->container['html_long_text'] = $html_long_text;
 
         return $this;
     }
