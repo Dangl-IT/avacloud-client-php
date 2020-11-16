@@ -1,6 +1,6 @@
 <?php
 /**
- * CalculationDtoTest
+ * ComplementedByQuantityDtoTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Dangl\AVACloud;
 
 /**
- * CalculationDtoTest Class Doc Comment
+ * ComplementedByQuantityDtoTest Class Doc Comment
  *
  * @category    Class
- * @description This class holds means to calculate mathematical expressions from given strings.
+ * @description This class represents the linking to a complementary position with a specific quantity set. For example, Position &#39;A&#39; could be complementing Position &#39;B&#39; with a total quantity of 20 units
  * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CalculationDtoTest extends \PHPUnit_Framework_TestCase
+class ComplementedByQuantityDtoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,23 @@ class CalculationDtoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CalculationDto"
+     * Test "ComplementedByQuantityDto"
      */
-    public function testCalculationDto()
+    public function testComplementedByQuantityDto()
     {
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "quantity"
      */
-    public function testPropertyDescription()
+    public function testPropertyQuantity()
     {
     }
 
     /**
-     * Test attribute "formula"
+     * Test attribute "complementing_position_id"
      */
-    public function testPropertyFormula()
-    {
-    }
-
-    /**
-     * Test attribute "result"
-     */
-    public function testPropertyResult()
-    {
-    }
-
-    /**
-     * Test attribute "valid"
-     */
-    public function testPropertyValid()
-    {
-    }
-
-    /**
-     * Test attribute "error_position_in_line"
-     */
-    public function testPropertyErrorPositionInLine()
+    public function testPropertyComplementingPositionId()
     {
     }
 }

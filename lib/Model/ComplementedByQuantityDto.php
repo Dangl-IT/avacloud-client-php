@@ -1,6 +1,6 @@
 <?php
 /**
- * IElementDto
+ * ComplementedByQuantityDto
  *
  * PHP version 5
  *
@@ -33,24 +33,24 @@ use \ArrayAccess;
 use \Dangl\AVACloud\ObjectSerializer;
 
 /**
- * IElementDto Class Doc Comment
+ * ComplementedByQuantityDto Class Doc Comment
  *
  * @category Class
- * @description Base interface definition for elements within an ElementContainerBase.
+ * @description This class represents the linking to a complementary position with a specific quantity set. For example, Position &#39;A&#39; could be complementing Position &#39;B&#39; with a total quantity of 20 units
  * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class IElementDto implements ModelInterface, ArrayAccess
+class ComplementedByQuantityDto implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = 'elementTypeDiscriminator';
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'IElementDto';
+    protected static $swaggerModelName = 'ComplementedByQuantityDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,8 @@ class IElementDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'gaeb_xml_id' => 'string',
-        'element_type_discriminator' => 'string'
+        'quantity' => 'float',
+        'complementing_position_id' => 'string'
     ];
 
     /**
@@ -69,9 +68,8 @@ class IElementDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'guid',
-        'gaeb_xml_id' => null,
-        'element_type_discriminator' => null
+        'quantity' => 'decimal',
+        'complementing_position_id' => 'guid'
     ];
 
     /**
@@ -101,9 +99,8 @@ class IElementDto implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'gaeb_xml_id' => 'gaebXmlId',
-        'element_type_discriminator' => 'elementTypeDiscriminator'
+        'quantity' => 'quantity',
+        'complementing_position_id' => 'complementingPositionId'
     ];
 
     /**
@@ -112,9 +109,8 @@ class IElementDto implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'gaeb_xml_id' => 'setGaebXmlId',
-        'element_type_discriminator' => 'setElementTypeDiscriminator'
+        'quantity' => 'setQuantity',
+        'complementing_position_id' => 'setComplementingPositionId'
     ];
 
     /**
@@ -123,9 +119,8 @@ class IElementDto implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'gaeb_xml_id' => 'getGaebXmlId',
-        'element_type_discriminator' => 'getElementTypeDiscriminator'
+        'quantity' => 'getQuantity',
+        'complementing_position_id' => 'getComplementingPositionId'
     ];
 
     /**
@@ -188,13 +183,8 @@ class IElementDto implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['gaeb_xml_id'] = isset($data['gaeb_xml_id']) ? $data['gaeb_xml_id'] : null;
-        $this->container['element_type_discriminator'] = isset($data['element_type_discriminator']) ? $data['element_type_discriminator'] : null;
-
-        // Initialize discriminator property with the model name.
-        $discriminator = array_search('elementTypeDiscriminator', self::$attributeMap, true);
-        $this->container[$discriminator] = static::$swaggerModelName;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
+        $this->container['complementing_position_id'] = isset($data['complementing_position_id']) ? $data['complementing_position_id'] : null;
     }
 
     /**
@@ -206,11 +196,8 @@ class IElementDto implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['element_type_discriminator'] === null) {
-            $invalidProperties[] = "'element_type_discriminator' can't be null";
+        if ($this->container['quantity'] === null) {
+            $invalidProperties[] = "'quantity' can't be null";
         }
         return $invalidProperties;
     }
@@ -228,73 +215,49 @@ class IElementDto implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets quantity
      *
-     * @return string
+     * @return float
      */
-    public function getId()
+    public function getQuantity()
     {
-        return $this->container['id'];
+        return $this->container['quantity'];
     }
 
     /**
-     * Sets id
+     * Sets quantity
      *
-     * @param string $id Elements GUID identifier.
+     * @param float $quantity The quantity that is complemented. E.g., if the base position has a quantity of 100 m² of a brick wall, a complementing position might be for 'walls that exceed 3 m height' and for a total quantity of 10 m².
      *
      * @return $this
      */
-    public function setId($id)
+    public function setQuantity($quantity)
     {
-        $this->container['id'] = $id;
+        $this->container['quantity'] = $quantity;
 
         return $this;
     }
 
     /**
-     * Gets gaeb_xml_id
+     * Gets complementing_position_id
      *
      * @return string
      */
-    public function getGaebXmlId()
+    public function getComplementingPositionId()
     {
-        return $this->container['gaeb_xml_id'];
+        return $this->container['complementing_position_id'];
     }
 
     /**
-     * Sets gaeb_xml_id
+     * Sets complementing_position_id
      *
-     * @param string $gaeb_xml_id This is used to store the GAEB XML Id within this IElement. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
+     * @param string $complementing_position_id This is the reference to the Id of the Position that is complementing. This means it does NOT reference the base position but the one that contains the actual addition.
      *
      * @return $this
      */
-    public function setGaebXmlId($gaeb_xml_id)
+    public function setComplementingPositionId($complementing_position_id)
     {
-        $this->container['gaeb_xml_id'] = $gaeb_xml_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets element_type_discriminator
-     *
-     * @return string
-     */
-    public function getElementTypeDiscriminator()
-    {
-        return $this->container['element_type_discriminator'];
-    }
-
-    /**
-     * Sets element_type_discriminator
-     *
-     * @param string $element_type_discriminator element_type_discriminator
-     *
-     * @return $this
-     */
-    public function setElementTypeDiscriminator($element_type_discriminator)
-    {
-        $this->container['element_type_discriminator'] = $element_type_discriminator;
+        $this->container['complementing_position_id'] = $complementing_position_id;
 
         return $this;
     }

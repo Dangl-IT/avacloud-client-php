@@ -11,7 +11,9 @@ Name | Type | Description | Notes
 **elements** | [**\Dangl\AVACloud\Model\IElementDto[]**](IElementDto.md) | The IElements within this ElementContainerBase. | [optional] 
 **project_labour_time_label** | **string** | The label used in the parent Project to mark labour time, e.g. \&quot;Hours\&quot; or \&quot;Stunden\&quot;. | [optional] 
 **contains_duplicate_item_numbers** | **bool** | Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers. | 
+**contains_duplicate_element_ids** | **bool** | Indicates if there are child IElements that have conflicting, duplicated Ids or if any child ElementContainerBase elements themselves contain duplicate Id s. Will always indicate false when told to ignore duplicate item numbers. | 
 **ignore_duplicate_item_numbers** | **bool** | Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes. | 
+**ignore_duplicate_element_ids** | **bool** | Indicate if duplicated Ids within child elements are to be ignored. Will not perform checks for duplicates if yes. | 
 **total_price_gross_by_tax_rate** | [**\Dangl\AVACloud\Model\GrossPriceComponentDto[]**](GrossPriceComponentDto.md) | Price composition by tax rate. | [optional] 
 **ignore_child_price_updates** | **bool** | Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once. | 
 **deducted_price** | **float** | Net price after applied deductions. | 
@@ -25,7 +27,8 @@ Name | Type | Description | Notes
 **gaeb_xml_id** | **string** | This is used to store the GAEB XML Id within this ServiceSpecification. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization. | [optional] 
 **project_information** | [**\Dangl\AVACloud\Model\ProjectInformationDto**](ProjectInformationDto.md) | The ProjectInformation used within the Project in which this ElementContainerBase is contained. This is reference equal to the ProjectInformation used in the parent project. | [optional] 
 **exchange_phase** | [**\Dangl\AVACloud\Model\ExchangePhaseDto**](ExchangePhaseDto.md) | This service specifications exchange phase, i.e. the current status in the project it is intended to be used (such as request for offer, offer, awarding...). | 
-**origin** | [**\Dangl\AVACloud\Model\OriginDto**](OriginDto.md) | This indicates where the service specification originates, i.e. from an exchange file format or self created. | 
+**origin** | [**\Dangl\AVACloud\Model\OriginDto**](OriginDto.md) | This indicates where the service specification originates, i.e. from an exchange file format or self created. If applicable, additional information is present in the OriginDetail property. | 
+**origin_detail** | **string** | This property complements the Origin property. Some formats, e.g. GaebXml might have additional information attached, e.g. GAEB XML V3.2 oder GAEB XML V3.1. This string property is used to hold such data. The Dangl.AVA module does not have a list of possible values, since this is defined in the native format assemblies, e.g. Dangl.GAEB or Dangl.Oenorm. | [optional] 
 **creation_date** | [**\DateTime**](\DateTime.md) | Creation date of this ServiceSpecification. | [optional] 
 **offer_by_date** | [**\DateTime**](\DateTime.md) | Date indicating until when an offer has to be submitted. In German, this is often called the \&quot;Eröffnungstermin\&quot; | [optional] 
 **decision_date** | [**\DateTime**](\DateTime.md) | Date indicating by when the buyer will select a contractor. | [optional] 

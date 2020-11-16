@@ -13,8 +13,8 @@ Name | Type | Description | Notes
 **quantity_components** | [**\Dangl\AVACloud\Model\CalculationDto[]**](CalculationDto.md) | The quantity components of this Position. | [optional] 
 **sub_descriptions** | [**\Dangl\AVACloud\Model\SubDescriptionDto[]**](SubDescriptionDto.md) | Further structuring of this Position. | [optional] 
 **comission_status** | [**\Dangl\AVACloud\Model\ComissionStatusDto**](ComissionStatusDto.md) | Indicates the status of this Position&#39;s comission. | 
-**complemented_by** | **string[]** | A list of positions that complement this Position. The positions are referenced by their GUIDs. | [optional] 
-**complemented** | **bool** | Will indicate if this Position is complemented in this ServiceSpecification by other Positions. | 
+**complemented_by** | **string[]** | A list of positions that complement this Position. The positions are referenced by their GUIDs. It might be used together with ComplementedByQuantities in case that only a given quantity is complemented by positions. | [optional] 
+**complemented** | **bool** | Will indicate if this Position is complemented in this ServiceSpecification by other Positions. It can not be set to false when there are entries in the ComplementedBy property. | 
 **amount_to_be_entered_by_bidder** | **bool** | Indicates that the amount for this Position is to be set by the bidder. | 
 **price_composition_required** | **bool** | Indicates if the bidder demands for prices to be broken up into their price components. | 
 **use_different_tax_rate** | **bool** | Indicates if this Position should use a different TaxRate than what is the default for the Project. | 
@@ -43,6 +43,8 @@ Name | Type | Description | Notes
 **catalogue_references** | [**\Dangl\AVACloud\Model\CatalogueReferenceDto[]**](CatalogueReferenceDto.md) | Referenced catalogues for this Position. | [optional] 
 **type** | **string** |  | [optional] 
 **standardized_description** | [**\Dangl\AVACloud\Model\StandardizedDescriptionDto**](StandardizedDescriptionDto.md) | This represents a standardized description. This means that instead of solely relying on texts to describe a service, external standards and definitions are referenced for a common understanding. | [optional] 
+**complemented_by_quantities** | [**\Dangl\AVACloud\Model\ComplementedByQuantityDto[]**](ComplementedByQuantityDto.md) | This list contains references to positions that complement this one, additionally also specifying a quantity for which the addition is intended. This does not replace the ComplementedBy property and there are no automatic checks being done between these two properties, so it&#39;s up to the user code to ensure deletions (and additions, if desired) are performed for both properties. When copying withing keeping Ids, this list will not be part of the copy process, since it would only contain quantities without actual position references. Containers, however, will rebuild the list with updated position references when copying positions that contain entries here. | [optional] 
+**execution_description_reference** | **string** | This identifier can be used to point to the Id of an ExecutionDescription in the same ServiceSpecification. ExecutionDescriptions act as a way to centrally describe how positions should be executed in practice. Often, the position itself still has text of its own to highlight deviations from that or add more details. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

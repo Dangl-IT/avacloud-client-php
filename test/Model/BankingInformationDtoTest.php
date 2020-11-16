@@ -1,6 +1,6 @@
 <?php
 /**
- * CalculationDtoTest
+ * BankingInformationDtoTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Dangl\AVACloud;
 
 /**
- * CalculationDtoTest Class Doc Comment
+ * BankingInformationDtoTest Class Doc Comment
  *
  * @category    Class
- * @description This class holds means to calculate mathematical expressions from given strings.
+ * @description This is a class that represents the information about a bank connection. It is usually used within a PartyInformation.
  * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CalculationDtoTest extends \PHPUnit_Framework_TestCase
+class BankingInformationDtoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,44 +70,51 @@ class CalculationDtoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CalculationDto"
+     * Test "BankingInformationDto"
      */
-    public function testCalculationDto()
+    public function testBankingInformationDto()
     {
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "id"
      */
-    public function testPropertyDescription()
+    public function testPropertyId()
     {
     }
 
     /**
-     * Test attribute "formula"
+     * Test attribute "name"
      */
-    public function testPropertyFormula()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "result"
+     * Test attribute "iban"
      */
-    public function testPropertyResult()
+    public function testPropertyIban()
     {
     }
 
     /**
-     * Test attribute "valid"
+     * Test attribute "account_number"
      */
-    public function testPropertyValid()
+    public function testPropertyAccountNumber()
     {
     }
 
     /**
-     * Test attribute "error_position_in_line"
+     * Test attribute "bic"
      */
-    public function testPropertyErrorPositionInLine()
+    public function testPropertyBic()
+    {
+    }
+
+    /**
+     * Test attribute "routing_number"
+     */
+    public function testPropertyRoutingNumber()
     {
     }
 }

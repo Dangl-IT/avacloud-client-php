@@ -1,6 +1,6 @@
 <?php
 /**
- * IElementDto
+ * BankingInformationDto
  *
  * PHP version 5
  *
@@ -33,24 +33,24 @@ use \ArrayAccess;
 use \Dangl\AVACloud\ObjectSerializer;
 
 /**
- * IElementDto Class Doc Comment
+ * BankingInformationDto Class Doc Comment
  *
  * @category Class
- * @description Base interface definition for elements within an ElementContainerBase.
+ * @description This is a class that represents the information about a bank connection. It is usually used within a PartyInformation.
  * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class IElementDto implements ModelInterface, ArrayAccess
+class BankingInformationDto implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = 'elementTypeDiscriminator';
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $swaggerModelName = 'IElementDto';
+    protected static $swaggerModelName = 'BankingInformationDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,11 @@ class IElementDto implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'gaeb_xml_id' => 'string',
-        'element_type_discriminator' => 'string'
+        'name' => 'string',
+        'iban' => 'string',
+        'account_number' => 'string',
+        'bic' => 'string',
+        'routing_number' => 'string'
     ];
 
     /**
@@ -70,8 +73,11 @@ class IElementDto implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id' => 'guid',
-        'gaeb_xml_id' => null,
-        'element_type_discriminator' => null
+        'name' => null,
+        'iban' => null,
+        'account_number' => null,
+        'bic' => null,
+        'routing_number' => null
     ];
 
     /**
@@ -102,8 +108,11 @@ class IElementDto implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'gaeb_xml_id' => 'gaebXmlId',
-        'element_type_discriminator' => 'elementTypeDiscriminator'
+        'name' => 'name',
+        'iban' => 'iban',
+        'account_number' => 'accountNumber',
+        'bic' => 'bic',
+        'routing_number' => 'routingNumber'
     ];
 
     /**
@@ -113,8 +122,11 @@ class IElementDto implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'gaeb_xml_id' => 'setGaebXmlId',
-        'element_type_discriminator' => 'setElementTypeDiscriminator'
+        'name' => 'setName',
+        'iban' => 'setIban',
+        'account_number' => 'setAccountNumber',
+        'bic' => 'setBic',
+        'routing_number' => 'setRoutingNumber'
     ];
 
     /**
@@ -124,8 +136,11 @@ class IElementDto implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'gaeb_xml_id' => 'getGaebXmlId',
-        'element_type_discriminator' => 'getElementTypeDiscriminator'
+        'name' => 'getName',
+        'iban' => 'getIban',
+        'account_number' => 'getAccountNumber',
+        'bic' => 'getBic',
+        'routing_number' => 'getRoutingNumber'
     ];
 
     /**
@@ -189,12 +204,11 @@ class IElementDto implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['gaeb_xml_id'] = isset($data['gaeb_xml_id']) ? $data['gaeb_xml_id'] : null;
-        $this->container['element_type_discriminator'] = isset($data['element_type_discriminator']) ? $data['element_type_discriminator'] : null;
-
-        // Initialize discriminator property with the model name.
-        $discriminator = array_search('elementTypeDiscriminator', self::$attributeMap, true);
-        $this->container[$discriminator] = static::$swaggerModelName;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
+        $this->container['account_number'] = isset($data['account_number']) ? $data['account_number'] : null;
+        $this->container['bic'] = isset($data['bic']) ? $data['bic'] : null;
+        $this->container['routing_number'] = isset($data['routing_number']) ? $data['routing_number'] : null;
     }
 
     /**
@@ -208,9 +222,6 @@ class IElementDto implements ModelInterface, ArrayAccess
 
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['element_type_discriminator'] === null) {
-            $invalidProperties[] = "'element_type_discriminator' can't be null";
         }
         return $invalidProperties;
     }
@@ -252,49 +263,121 @@ class IElementDto implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets gaeb_xml_id
+     * Gets name
      *
      * @return string
      */
-    public function getGaebXmlId()
+    public function getName()
     {
-        return $this->container['gaeb_xml_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets gaeb_xml_id
+     * Sets name
      *
-     * @param string $gaeb_xml_id This is used to store the GAEB XML Id within this IElement. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
+     * @param string $name The name of the bank.
      *
      * @return $this
      */
-    public function setGaebXmlId($gaeb_xml_id)
+    public function setName($name)
     {
-        $this->container['gaeb_xml_id'] = $gaeb_xml_id;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets element_type_discriminator
+     * Gets iban
      *
      * @return string
      */
-    public function getElementTypeDiscriminator()
+    public function getIban()
     {
-        return $this->container['element_type_discriminator'];
+        return $this->container['iban'];
     }
 
     /**
-     * Sets element_type_discriminator
+     * Sets iban
      *
-     * @param string $element_type_discriminator element_type_discriminator
+     * @param string $iban The international identifier for the bank account.
      *
      * @return $this
      */
-    public function setElementTypeDiscriminator($element_type_discriminator)
+    public function setIban($iban)
     {
-        $this->container['element_type_discriminator'] = $element_type_discriminator;
+        $this->container['iban'] = $iban;
+
+        return $this;
+    }
+
+    /**
+     * Gets account_number
+     *
+     * @return string
+     */
+    public function getAccountNumber()
+    {
+        return $this->container['account_number'];
+    }
+
+    /**
+     * Sets account_number
+     *
+     * @param string $account_number The account number. Typically no longer used since the introduction of IBAN within the SEPA area.
+     *
+     * @return $this
+     */
+    public function setAccountNumber($account_number)
+    {
+        $this->container['account_number'] = $account_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets bic
+     *
+     * @return string
+     */
+    public function getBic()
+    {
+        return $this->container['bic'];
+    }
+
+    /**
+     * Sets bic
+     *
+     * @param string $bic The international bank identifier.
+     *
+     * @return $this
+     */
+    public function setBic($bic)
+    {
+        $this->container['bic'] = $bic;
+
+        return $this;
+    }
+
+    /**
+     * Gets routing_number
+     *
+     * @return string
+     */
+    public function getRoutingNumber()
+    {
+        return $this->container['routing_number'];
+    }
+
+    /**
+     * Sets routing_number
+     *
+     * @param string $routing_number The routing number for the bank. Typically no longer used since the introduction of IBAN within the SEPA area.
+     *
+     * @return $this
+     */
+    public function setRoutingNumber($routing_number)
+    {
+        $this->container['routing_number'] = $routing_number;
 
         return $this;
     }
