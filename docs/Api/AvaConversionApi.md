@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **avaConversionConvertToGaeb**
-> \SplFileObject avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform)
+> \SplFileObject avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output)
 
 Converts Dangl.AVA projects to GAEB
 
@@ -146,9 +146,10 @@ $apiInstance = new Dangl\AVACloud\Api\AvaConversionApi(
 $ava_project = new \Dangl\AVACloud\Model\ProjectDto(); // \Dangl\AVACloud\Model\ProjectDto | The Dangl.AVA project
 $destination_gaeb_type = "destination_gaeb_type_example"; // string | Defaults to GAEB XML V3.2
 $target_exchange_phase_transform = "target_exchange_phase_transform_example"; // string | Defaults to none, meaning no transformation will be done
+$enforce_strict_offer_phase_long_text_output = true; // bool | Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export.
 
 try {
-    $result = $apiInstance->avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform);
+    $result = $apiInstance->avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AvaConversionApi->avaConversionConvertToGaeb: ', $e->getMessage(), PHP_EOL;
@@ -163,6 +164,7 @@ Name | Type | Description  | Notes
  **ava_project** | [**\Dangl\AVACloud\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **destination_gaeb_type** | **string**| Defaults to GAEB XML V3.2 | [optional]
  **target_exchange_phase_transform** | **string**| Defaults to none, meaning no transformation will be done | [optional]
+ **enforce_strict_offer_phase_long_text_output** | **bool**| Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. | [optional]
 
 ### Return type
 
