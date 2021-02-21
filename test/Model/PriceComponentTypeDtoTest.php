@@ -1,6 +1,6 @@
 <?php
 /**
- * TokenRefreshPostTest
+ * PriceComponentTypeDtoTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Dangl\AVACloud;
 
 /**
- * TokenRefreshPostTest Class Doc Comment
+ * PriceComponentTypeDtoTest Class Doc Comment
  *
  * @category    Class
- * @description TokenRefreshPost
+ * @description This enumeration models types of price components for better classification.
  * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TokenRefreshPostTest extends \PHPUnit_Framework_TestCase
+class PriceComponentTypeDtoTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,9 @@ class TokenRefreshPostTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TokenRefreshPost"
+     * Test "PriceComponentTypeDto"
      */
-    public function testTokenRefreshPost()
-    {
-    }
-
-    /**
-     * Test attribute "refresh_token"
-     */
-    public function testPropertyRefreshToken()
+    public function testPriceComponentTypeDto()
     {
     }
 }

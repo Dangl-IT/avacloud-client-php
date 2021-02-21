@@ -1,6 +1,6 @@
 <?php
 /**
- * SpecialAwardKindDto
+ * PriceComponentTypeDto
  *
  * PHP version 5
  *
@@ -31,23 +31,24 @@ namespace Dangl\AVACloud\Model;
 use \Dangl\AVACloud\ObjectSerializer;
 
 /**
- * SpecialAwardKindDto Class Doc Comment
+ * PriceComponentTypeDto Class Doc Comment
  *
  * @category Class
- * @description This enumeration describes awards for project that are not just a regular procurement. For example, it can be used to describe recurring maintenance or an outline contract (German: Rahmenvertrag) which just specifies services and prices but may be requested on demand when necessary
+ * @description This enumeration models types of price components for better classification.
  * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SpecialAwardKindDto
+class PriceComponentTypeDto
 {
     /**
      * Possible values of this enum
      */
-    const UNSPECIFIED = 'Unspecified';
-    const MAINTENANCE_CONTRACT = 'MaintenanceContract';
-    const OUTLINE_CONTRACT = 'OutlineContract';
-    const OUTLINE_FOR_MAINTENANCE_CONTRACT = 'OutlineForMaintenanceContract';
+    const UNKNOWN = 'Unknown';
+    const WAGES = 'Wages';
+    const MATERIALS = 'Materials';
+    const PLANT = 'Plant';
+    const MISCELLANEOUS = 'Miscellaneous';
     
     /**
      * Gets allowable values of the enum
@@ -56,10 +57,11 @@ class SpecialAwardKindDto
     public static function getAllowableEnumValues()
     {
         return [
-            self::UNSPECIFIED,
-            self::MAINTENANCE_CONTRACT,
-            self::OUTLINE_CONTRACT,
-            self::OUTLINE_FOR_MAINTENANCE_CONTRACT,
+            self::UNKNOWN,
+            self::WAGES,
+            self::MATERIALS,
+            self::PLANT,
+            self::MISCELLANEOUS,
         ];
     }
 }

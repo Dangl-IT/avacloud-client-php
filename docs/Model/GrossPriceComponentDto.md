@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **total_deducted** | **float** | The resulting price component after applied deductions | 
 **total_tax** | **float** | The total tax amount for all components of a given tax rate. | 
 **total_gross** | **float** | The total gross price for all components of a given tax rate. | 
+**total_gross_deducted** | **float** | The total gross price for all components of a given tax rate, after applied deductions. | 
+**total_tax_deducted** | **float** | The total tax amount for all components of a given tax rate, after applied deductions. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
