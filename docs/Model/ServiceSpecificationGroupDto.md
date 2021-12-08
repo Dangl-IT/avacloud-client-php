@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **project_catalogues** | [**\Dangl\AVACloud\Model\CatalogueDto[]**](CatalogueDto.md) | These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. | [optional] 
 **catalogue_references** | [**\Dangl\AVACloud\Model\CatalogueReferenceDto[]**](CatalogueReferenceDto.md) | Referenced catalogues for this QuantityAssignment. | [optional] 
+**oenorm_properties** | [**\Dangl\AVACloud\Model\OenormPropertiesDto**](OenormPropertiesDto.md) | This class models special properties that only apply to some exchange scenarios where ÖNorm is used. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

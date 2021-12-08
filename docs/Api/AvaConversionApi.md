@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **avaConversionConvertToGaeb**
-> \SplFileObject avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output)
+> \SplFileObject avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination)
 
 Converts Dangl.AVA projects to GAEB
 
@@ -147,9 +147,10 @@ $ava_project = new \Dangl\AVACloud\Model\ProjectDto(); // \Dangl\AVACloud\Model\
 $destination_gaeb_type = "destination_gaeb_type_example"; // string | Defaults to GAEB XML V3.2
 $target_exchange_phase_transform = "target_exchange_phase_transform_example"; // string | Defaults to none, meaning no transformation will be done
 $enforce_strict_offer_phase_long_text_output = true; // bool | Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export.
+$export_quantity_determination = true; // bool | Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the 'QtyDeterm' (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the 'QuantityComponents' property of positions. Please see the entry for 'Quantity Determination' in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the 'QuantityComponents' property.
 
 try {
-    $result = $apiInstance->avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output);
+    $result = $apiInstance->avaConversionConvertToGaeb($ava_project, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AvaConversionApi->avaConversionConvertToGaeb: ', $e->getMessage(), PHP_EOL;
@@ -165,6 +166,7 @@ Name | Type | Description  | Notes
  **destination_gaeb_type** | **string**| Defaults to GAEB XML V3.2 | [optional]
  **target_exchange_phase_transform** | **string**| Defaults to none, meaning no transformation will be done | [optional]
  **enforce_strict_offer_phase_long_text_output** | **bool**| Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. | [optional]
+ **export_quantity_determination** | **bool**| Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. | [optional]
 
 ### Return type
 
@@ -182,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **avaConversionConvertToOenorm**
-> \SplFileObject avaConversionConvertToOenorm($ava_project, $destination_oenorm_type, $try_repair_project_structure)
+> \SplFileObject avaConversionConvertToOenorm($ava_project, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output)
 
 Converts Dangl.AVA projects to Oenorm
 
@@ -203,9 +205,10 @@ $apiInstance = new Dangl\AVACloud\Api\AvaConversionApi(
 $ava_project = new \Dangl\AVACloud\Model\ProjectDto(); // \Dangl\AVACloud\Model\ProjectDto | The Dangl.AVA project
 $destination_oenorm_type = "destination_oenorm_type_example"; // string | Defaults to Lv2015
 $try_repair_project_structure = true; // bool | Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target
+$skip_try_enforce_schema_compliant_xml_output = true; // bool | If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option.
 
 try {
-    $result = $apiInstance->avaConversionConvertToOenorm($ava_project, $destination_oenorm_type, $try_repair_project_structure);
+    $result = $apiInstance->avaConversionConvertToOenorm($ava_project, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AvaConversionApi->avaConversionConvertToOenorm: ', $e->getMessage(), PHP_EOL;
@@ -220,6 +223,7 @@ Name | Type | Description  | Notes
  **ava_project** | [**\Dangl\AVACloud\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **destination_oenorm_type** | **string**| Defaults to Lv2015 | [optional]
  **try_repair_project_structure** | **bool**| Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target | [optional]
+ **skip_try_enforce_schema_compliant_xml_output** | **bool**| If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. | [optional]
 
 ### Return type
 
