@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **standardized_description** | [**\Dangl\AVACloud\Model\StandardizedDescriptionDto**](StandardizedDescriptionDto.md) | This represents a standardized description. This means that instead of solely relying on texts to describe a service, external standards and definitions are referenced for a common understanding. | [optional] 
 **element_type** | **string** |  | [optional] 
 **description_id** | **string** | This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It&#39;s different to an elements identifier in that it should only apply to the description component, meaning the text itself. | [optional] 
+**oenorm_note_text_properties** | [**\Dangl\AVACloud\Model\OenormNoteTextPropertiesDto**](OenormNoteTextPropertiesDto.md) | This class models special properties that only apply to some exchange scenarios where ÖNorm is used. It is special for NoteTexts. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

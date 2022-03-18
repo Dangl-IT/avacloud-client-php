@@ -50,6 +50,8 @@ Name | Type | Description | Notes
 **not_offered** | **bool** | This indicates if a position has not been offered. This is typically only expected to be true when the exchange phase of the parent ServiceSpecification is Offer, and it means that the position has not been offered at all. | 
 **oenorm_position_properties** | [**\Dangl\AVACloud\Model\OenormPositionPropertiesDto**](OenormPositionPropertiesDto.md) | This class models special properties that only apply to some exchange scenarios where ÖNorm is used. It is special for Positions and extends the OenormProperties base class. | [optional] 
 **description_id** | **string** | This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It&#39;s different to an elements identifier in that it should only apply to the description component, meaning the text itself. | [optional] 
+**hierarchy_level** | **int** | This is a zero based hierarchy level. It&#39;s set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element. | 
+**addendum_status** | [**\Dangl\AVACloud\Model\AddendumStatusDto**](AddendumStatusDto.md) | This indicates, if this element is part of an addendum an, if yes, with what status. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
