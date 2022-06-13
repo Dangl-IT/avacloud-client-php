@@ -27,7 +27,9 @@
  * Please update the test case below to test the model.
  */
 
-namespace Dangl\AVACloud;
+namespace Dangl\AVACloud\Model;
+
+use \Dangl\AVACloud\AbstractSkippableTest;
 
 /**
  * OenormPositionPropertiesDtoTest Class Doc Comment
@@ -38,36 +40,8 @@ namespace Dangl\AVACloud;
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class OenormPositionPropertiesDtoTest extends \PHPUnit\Framework\TestCase
+class OenormPositionPropertiesDtoTest extends AbstractSkippableTest
 {
-
-    /**
-     * Setup before running any test case
-     */
-    public static function setUpBeforeClass(): void
-    {
-    }
-
-    /**
-     * Setup before running each test case
-     */
-    public function setUp(): void
-    {
-    }
-
-    /**
-     * Clean up after running each test case
-     */
-    public function tearDown(): void
-    {
-    }
-
-    /**
-     * Clean up after running all test cases
-     */
-    public static function tearDownAfterClass(): void
-    {
-    }
 
     /**
      * Test "OenormPositionPropertiesDto"
