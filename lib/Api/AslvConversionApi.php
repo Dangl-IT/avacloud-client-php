@@ -300,7 +300,7 @@ class AslvConversionApi
         // form params
         if ($aslv_file !== null) {
             $multipart = true;
-            $formParams['aslvFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
+            $formParams['aslvFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -599,7 +599,7 @@ class AslvConversionApi
         // form params
         if ($aslv_file !== null) {
             $multipart = true;
-            $formParams['aslvFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
+            $formParams['aslvFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -916,7 +916,7 @@ class AslvConversionApi
         // form params
         if ($aslv_file !== null) {
             $multipart = true;
-            $formParams['aslvFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
+            $formParams['aslvFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -1224,7 +1224,7 @@ class AslvConversionApi
         // form params
         if ($aslv_file !== null) {
             $multipart = true;
-            $formParams['aslvFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
+            $formParams['aslvFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($aslv_file), 'rb');
         }
         // body params
         $_tempBody = null;

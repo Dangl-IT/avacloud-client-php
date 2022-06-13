@@ -300,7 +300,7 @@ class RebConversionApi
         // form params
         if ($reb_file !== null) {
             $multipart = true;
-            $formParams['rebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($reb_file), 'rb');
+            $formParams['rebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($reb_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -599,7 +599,7 @@ class RebConversionApi
         // form params
         if ($reb_file !== null) {
             $multipart = true;
-            $formParams['rebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($reb_file), 'rb');
+            $formParams['rebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($reb_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -916,7 +916,7 @@ class RebConversionApi
         // form params
         if ($reb_file !== null) {
             $multipart = true;
-            $formParams['rebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($reb_file), 'rb');
+            $formParams['rebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($reb_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -1224,7 +1224,7 @@ class RebConversionApi
         // form params
         if ($reb_file !== null) {
             $multipart = true;
-            $formParams['rebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($reb_file), 'rb');
+            $formParams['rebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($reb_file), 'rb');
         }
         // body params
         $_tempBody = null;

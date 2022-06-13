@@ -318,7 +318,7 @@ class ExcelConversionApi
         // form params
         if ($excel_file !== null) {
             $multipart = true;
-            $formParams['excelFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($excel_file), 'rb');
+            $formParams['excelFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($excel_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -635,7 +635,7 @@ class ExcelConversionApi
         // form params
         if ($excel_file !== null) {
             $multipart = true;
-            $formParams['excelFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($excel_file), 'rb');
+            $formParams['excelFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($excel_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -970,7 +970,7 @@ class ExcelConversionApi
         // form params
         if ($excel_file !== null) {
             $multipart = true;
-            $formParams['excelFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($excel_file), 'rb');
+            $formParams['excelFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($excel_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -1296,7 +1296,7 @@ class ExcelConversionApi
         // form params
         if ($excel_file !== null) {
             $multipart = true;
-            $formParams['excelFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($excel_file), 'rb');
+            $formParams['excelFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($excel_file), 'rb');
         }
         // body params
         $_tempBody = null;

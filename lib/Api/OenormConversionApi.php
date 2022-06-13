@@ -300,7 +300,7 @@ class OenormConversionApi
         // form params
         if ($oenorm_file !== null) {
             $multipart = true;
-            $formParams['oenormFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
+            $formParams['oenormFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -599,7 +599,7 @@ class OenormConversionApi
         // form params
         if ($oenorm_file !== null) {
             $multipart = true;
-            $formParams['oenormFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
+            $formParams['oenormFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -916,7 +916,7 @@ class OenormConversionApi
         // form params
         if ($oenorm_file !== null) {
             $multipart = true;
-            $formParams['oenormFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
+            $formParams['oenormFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -1224,7 +1224,7 @@ class OenormConversionApi
         // form params
         if ($oenorm_file !== null) {
             $multipart = true;
-            $formParams['oenormFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
+            $formParams['oenormFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($oenorm_file), 'rb');
         }
         // body params
         $_tempBody = null;

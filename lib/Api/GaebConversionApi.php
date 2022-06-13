@@ -309,7 +309,7 @@ class GaebConversionApi
         // form params
         if ($gaeb_file !== null) {
             $multipart = true;
-            $formParams['gaebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
+            $formParams['gaebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -617,7 +617,7 @@ class GaebConversionApi
         // form params
         if ($gaeb_file !== null) {
             $multipart = true;
-            $formParams['gaebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
+            $formParams['gaebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -943,7 +943,7 @@ class GaebConversionApi
         // form params
         if ($gaeb_file !== null) {
             $multipart = true;
-            $formParams['gaebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
+            $formParams['gaebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
         }
         // body params
         $_tempBody = null;
@@ -1260,7 +1260,7 @@ class GaebConversionApi
         // form params
         if ($gaeb_file !== null) {
             $multipart = true;
-            $formParams['gaebFile'] = \GuzzleHttp\Psr7\try_fopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
+            $formParams['gaebFile'] = \GuzzleHttp\Psr7\Utils::tryFopen(ObjectSerializer::toFormValue($gaeb_file), 'rb');
         }
         // body params
         $_tempBody = null;
