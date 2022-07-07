@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **element_type** | **string** |  | [optional] 
 **description_id** | **string** | This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It&#39;s different to an elements identifier in that it should only apply to the description component, meaning the text itself. | [optional] 
 **oenorm_note_text_properties** | [**\Dangl\AVACloud\Model\OenormNoteTextPropertiesDto**](OenormNoteTextPropertiesDto.md) | This class models special properties that only apply to some exchange scenarios where ÖNorm is used. It is special for NoteTexts. | [optional] 
+**has_bidder_comment_in_html_long_text** | **bool** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

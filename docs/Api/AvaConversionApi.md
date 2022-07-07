@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **avaConversionConvertToReb**
-> \SplFileObject avaConversionConvertToReb($ava_project, $try_auto_generate_item_numbers_and_schema)
+> \SplFileObject avaConversionConvertToReb($ava_project, $try_auto_generate_item_numbers_and_schema, $destination_reb_type)
 
 Converts Dangl.AVA projects to REB
 
@@ -273,9 +273,10 @@ $apiInstance = new Dangl\AVACloud\Api\AvaConversionApi(
 );
 $ava_project = new \Dangl\AVACloud\Model\ProjectDto(); // \Dangl\AVACloud\Model\ProjectDto | The Dangl.AVA project
 $try_auto_generate_item_numbers_and_schema = true; // bool | If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number.
+$destination_reb_type = "destination_reb_type_example"; // string | Defaults to D11
 
 try {
-    $result = $apiInstance->avaConversionConvertToReb($ava_project, $try_auto_generate_item_numbers_and_schema);
+    $result = $apiInstance->avaConversionConvertToReb($ava_project, $try_auto_generate_item_numbers_and_schema, $destination_reb_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AvaConversionApi->avaConversionConvertToReb: ', $e->getMessage(), PHP_EOL;
@@ -289,6 +290,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ava_project** | [**\Dangl\AVACloud\Model\ProjectDto**](../Model/ProjectDto.md)| The Dangl.AVA project |
  **try_auto_generate_item_numbers_and_schema** | **bool**| If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. | [optional]
+ **destination_reb_type** | **string**| Defaults to D11 | [optional]
 
 ### Return type
 

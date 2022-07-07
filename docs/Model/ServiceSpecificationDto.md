@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **ignore_child_price_updates** | **bool** | Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once. | 
 **deducted_price** | **float** | Net price after applied deductions. | 
 **deduction_factor** | **float** | Factor of applied deductions to the total price. For example, \&quot;0.03\&quot; means that a 3% deduction is to be applied. | 
+**absolute_deduction** | **float** | The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum. | [optional] 
 **total_price** | **float** | Will return this ElementContainerBase&#39;s total price. | 
 **total_price_gross** | **float** | The total gross price for this ElementContainerBase including all child elements. | 
 **total_price_gross_deducted** | **float** | Total gross price after applied deductions. | 
@@ -37,7 +38,7 @@ Name | Type | Description | Notes
 **name** | **string** | The name of this ServiceSpecification. | [optional] 
 **price_information** | [**\Dangl\AVACloud\Model\PriceInformationDto**](PriceInformationDto.md) | This PriceInformation contains global data for the ServiceSpecification. When inside a Project, do not set this property manually. | [optional] 
 **project_catalogues** | [**\Dangl\AVACloud\Model\CatalogueDto[]**](CatalogueDto.md) | These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. | [optional] 
-**catalogue_references** | [**\Dangl\AVACloud\Model\CatalogueReferenceDto[]**](CatalogueReferenceDto.md) | Referenced catalogues for this QuantityAssignment. | [optional] 
+**catalogue_references** | [**\Dangl\AVACloud\Model\CatalogueReferenceDto[]**](CatalogueReferenceDto.md) | Referenced catalogues for this ElementContainerBase. | [optional] 
 **planned_execution_start** | [**\DateTime**](\DateTime.md) | The date when the execution of the services is scheduled to start | [optional] 
 **planned_execution_end** | [**\DateTime**](\DateTime.md) | The date then the execution of the services is scheduled to be finished | [optional] 
 **contract_date** | [**\DateTime**](\DateTime.md) | The date on which the contract has been awarded. This matches \&quot;Auftragsdatum\&quot; in GAEB | [optional] 

@@ -1,6 +1,6 @@
 <?php
 /**
- * StandardReferenceTypeDtoTest
+ * DestinationRebTypeTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Dangl\AVACloud;
 
 /**
- * StandardReferenceTypeDtoTest Class Doc Comment
+ * DestinationRebTypeTest Class Doc Comment
  *
  * @category    Class
- * @description This enumeration identifies a pre-known standard used for referencing standardized descriptions.
+ * @description Represents valid REB target types
  * @package     Dangl\AVACloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class StandardReferenceTypeDtoTest extends \PHPUnit_Framework_TestCase
+class DestinationRebTypeTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class StandardReferenceTypeDtoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "StandardReferenceTypeDto"
+     * Test "DestinationRebType"
      */
-    public function testStandardReferenceTypeDto()
+    public function testDestinationRebType()
     {
     }
 }

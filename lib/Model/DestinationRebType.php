@@ -1,6 +1,6 @@
 <?php
 /**
- * StandardReferenceTypeDto
+ * DestinationRebType
  *
  * PHP version 5
  *
@@ -31,23 +31,21 @@ namespace Dangl\AVACloud\Model;
 use \Dangl\AVACloud\ObjectSerializer;
 
 /**
- * StandardReferenceTypeDto Class Doc Comment
+ * DestinationRebType Class Doc Comment
  *
  * @category Class
- * @description This enumeration identifies a pre-known standard used for referencing standardized descriptions.
+ * @description Represents valid REB target types
  * @package  Dangl\AVACloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class StandardReferenceTypeDto
+class DestinationRebType
 {
     /**
      * Possible values of this enum
      */
-    const UNKNOWN = 'Unknown';
-    const ST_LB = 'StLB';
-    const ST_LK = 'StLK';
-    const STLB_BAU_Z = 'STLBBauZ';
+    const D11 = 'D11';
+    const X31_GAEB_XML_V32 = 'X31GaebXmlV32';
     
     /**
      * Gets allowable values of the enum
@@ -56,10 +54,8 @@ class StandardReferenceTypeDto
     public static function getAllowableEnumValues()
     {
         return [
-            self::UNKNOWN,
-            self::ST_LB,
-            self::ST_LK,
-            self::STLB_BAU_Z,
+            self::D11,
+            self::X31_GAEB_XML_V32,
         ];
     }
 }
