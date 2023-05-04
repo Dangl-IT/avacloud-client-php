@@ -33,6 +33,9 @@ Name | Type | Description | Notes
 **creation_date** | [**\DateTime**](\DateTime.md) | Creation date of this ServiceSpecification. | [optional] 
 **offer_by_date** | [**\DateTime**](\DateTime.md) | Date indicating until when an offer has to be submitted. In German, this is often called the \&quot;Eröffnungstermin\&quot; | [optional] 
 **decision_date** | [**\DateTime**](\DateTime.md) | Date indicating by when the buyer will select a contractor. | [optional] 
+**bid_date** | [**\DateTime**](\DateTime.md) | Date of when the offer / bid was created | [optional] 
+**warranty_bond_percentage** | **float** | If a construction project requires a warranty bond, this property indicates the amount as a percentage, e.g. &#39;0.15m&#39; means 15% of the construction total amount as a warranty bond. | 
+**execution_guarantee_percentage** | **float** | If a construction project requires an execution guarantty, this property indicates the amount as a percentage, e.g. &#39;0.15m&#39; means 15% of the construction total amount as an execution guarantee. In practice, this percentage is usually deducted from intermediate invoices and only billed in the final invoice. | 
 **submission_location** | **string** | String indicating where the physical submission of the offer is taking place. | [optional] 
 **description** | **string** | Description of this ServiceSpecification. | [optional] 
 **name** | **string** | The name of this ServiceSpecification. | [optional] 
@@ -49,6 +52,7 @@ Name | Type | Description | Notes
 **type_of_approval** | **string** | This should specify how the approval is performed by the buyer. This matches \&quot;AcceptType\&quot; in GAEB | [optional] 
 **addendum_number** | **string** | This optional string property is shared by all IElements, and indicates if the element is part of an addendum, a &#39;Nachtrag&#39; in German. | [optional] 
 **addendum_status** | [**\Dangl\AVACloud\Model\AddendumStatusDto**](AddendumStatusDto.md) | This indicates, if this element is part of an addendum an, if yes, with what status. | [optional] 
+**commerce_properties** | [**\Dangl\AVACloud\Model\ServiceSpecificationCommercePropertiesDto**](ServiceSpecificationCommercePropertiesDto.md) | This property holds additional information that&#39;s only valid in commerce exchange phases. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
