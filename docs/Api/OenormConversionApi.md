@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**oenormConversionConvertToAva**](OenormConversionApi.md#oenormConversionConvertToAva) | **POST** /conversion/oenorm/ava | Converts ÖNorm files to Dangl.AVA projects
 [**oenormConversionConvertToExcel**](OenormConversionApi.md#oenormConversionConvertToExcel) | **POST** /conversion/oenorm/excel | Converts ÖNorm files to Excel
+[**oenormConversionConvertToFlatAva**](OenormConversionApi.md#oenormConversionConvertToFlatAva) | **POST** /conversion/oenorm/flat-ava | Converts ÖNorm files to Dangl.AVA projects
 [**oenormConversionConvertToGaeb**](OenormConversionApi.md#oenormConversionConvertToGaeb) | **POST** /conversion/oenorm/gaeb | Converts ÖNorm files to GAEB files.
 [**oenormConversionConvertToOenorm**](OenormConversionApi.md#oenormConversionConvertToOenorm) | **POST** /conversion/oenorm/oenorm | Converts ÖNorm files to Oenorm files.
 
@@ -66,7 +67,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **oenormConversionConvertToExcel**
-> \SplFileObject oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture)
+> \SplFileObject oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers)
 
 Converts ÖNorm files to Excel
 
@@ -88,9 +89,10 @@ $oenorm_file = "/path/to/file.txt"; // \SplFileObject | The input file
 $write_prices = true; // bool | Defaults to true
 $write_long_texts = true; // bool | Defaults to true
 $conversion_culture = "conversion_culture_example"; // string | The culture that should be used for the conversion process, to have localized Excel files
+$include_article_numbers = true; // bool | If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from 'position.commerceProperties.articleNumber'
 
 try {
-    $result = $apiInstance->oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture);
+    $result = $apiInstance->oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OenormConversionApi->oenormConversionConvertToExcel: ', $e->getMessage(), PHP_EOL;
@@ -106,6 +108,7 @@ Name | Type | Description  | Notes
  **write_prices** | **bool**| Defaults to true | [optional]
  **write_long_texts** | **bool**| Defaults to true | [optional]
  **conversion_culture** | **string**| The culture that should be used for the conversion process, to have localized Excel files | [optional]
+ **include_article_numbers** | **bool**| If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; | [optional]
 
 ### Return type
 
@@ -119,6 +122,57 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: text/plain, application/json, text/json, application/problem+json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **oenormConversionConvertToFlatAva**
+> \Dangl\AVACloud\Model\FlatAvaProject oenormConversionConvertToFlatAva($oenorm_file)
+
+Converts ÖNorm files to Dangl.AVA projects
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: Dangl.Identity
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Dangl\AVACloud\Api\OenormConversionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$oenorm_file = "/path/to/file.txt"; // \SplFileObject | The input file
+
+try {
+    $result = $apiInstance->oenormConversionConvertToFlatAva($oenorm_file);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OenormConversionApi->oenormConversionConvertToFlatAva: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **oenorm_file** | **\SplFileObject**| The input file | [optional]
+
+### Return type
+
+[**\Dangl\AVACloud\Model\FlatAvaProject**](../Model/FlatAvaProject.md)
+
+### Authorization
+
+[Dangl.Identity](../../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -143,7 +197,7 @@ $apiInstance = new Dangl\AVACloud\Api\OenormConversionApi(
 );
 $oenorm_file = "/path/to/file.txt"; // \SplFileObject | The input file
 $destination_gaeb_type = "destination_gaeb_type_example"; // string | Defaults to GAEB XML V3.2
-$target_exchange_phase_transform = "target_exchange_phase_transform_example"; // string | Defaults to none, meaning no transformation will be done
+$target_exchange_phase_transform = "target_exchange_phase_transform_example"; // string | Defaults to none, meaning no transformation will be done. The phases are: Base = 81 CostEstimate = 82 OfferRequest = 83 Offer = 84 SideOffer = 85 Grant = 86
 $enforce_strict_offer_phase_long_text_output = true; // bool | Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export.
 $export_quantity_determination = true; // bool | Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the 'QtyDeterm' (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the 'QuantityComponents' property of positions. Please see the entry for 'Quantity Determination' in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the 'QuantityComponents' property.
 $remove_unprintable_characters_from_texts = true; // bool | If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
@@ -165,7 +219,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oenorm_file** | **\SplFileObject**| The input file | [optional]
  **destination_gaeb_type** | **string**| Defaults to GAEB XML V3.2 | [optional]
- **target_exchange_phase_transform** | **string**| Defaults to none, meaning no transformation will be done | [optional]
+ **target_exchange_phase_transform** | **string**| Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 | [optional]
  **enforce_strict_offer_phase_long_text_output** | **bool**| Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. | [optional]
  **export_quantity_determination** | **bool**| Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. | [optional]
  **remove_unprintable_characters_from_texts** | **bool**| If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. | [optional]

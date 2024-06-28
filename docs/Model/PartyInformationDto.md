@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **creditor_or_debtor_identifier** | **string** | Depending on which party this class represents, it might have either a &#39;creditor&#39; or &#39;debtor&#39; number. This is often used in internal accounting systems. | [optional] 
 **global_location_number** | **string** | The Global Location Number (GLN) is issued by GS1 and is intended to be a unique identifier for the physical address of a party, e.g. a business office. | [optional] 
 **banking_information** | [**\Dangl\AVACloud\Model\BankingInformationDto[]**](BankingInformationDto.md) | This list contains information about bank accounts associated with this PartyInformation. It&#39;s typically used for buyers and bidders. | [optional] 
+**registration_number** | **string** | This can be used to specify a registration number for this party, e.g. a company registration number. It is usually used in GAEB XML commerce exchanges for bidders to supply their WEEE registration number, which is used to identify them as a registered WEEE company. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

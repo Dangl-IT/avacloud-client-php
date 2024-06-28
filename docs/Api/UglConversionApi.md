@@ -5,6 +5,7 @@ All URIs are relative to *https://avacloud-api.dangl-it.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**uglConversionConvertToAva**](UglConversionApi.md#uglConversionConvertToAva) | **POST** /conversion/ugl/ava | Converts Ugl files to Dangl.AVA projects
+[**uglConversionConvertToFlatAva**](UglConversionApi.md#uglConversionConvertToFlatAva) | **POST** /conversion/ugl/flat-ava | Converts Ugl files to Dangl.AVA projects
 
 
 # **uglConversionConvertToAva**
@@ -59,6 +60,57 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/vnd.com.dangl-it.ProjectDto.v1+json, application/problem+json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **uglConversionConvertToFlatAva**
+> \Dangl\AVACloud\Model\FlatAvaProject uglConversionConvertToFlatAva($ugl_file)
+
+Converts Ugl files to Dangl.AVA projects
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: Dangl.Identity
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Dangl\AVACloud\Api\UglConversionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ugl_file = "/path/to/file.txt"; // \SplFileObject | The input file
+
+try {
+    $result = $apiInstance->uglConversionConvertToFlatAva($ugl_file);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UglConversionApi->uglConversionConvertToFlatAva: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ugl_file** | **\SplFileObject**| The input file | [optional]
+
+### Return type
+
+[**\Dangl\AVACloud\Model\FlatAvaProject**](../Model/FlatAvaProject.md)
+
+### Authorization
+
+[Dangl.Identity](../../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

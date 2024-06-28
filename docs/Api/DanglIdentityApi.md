@@ -4,6 +4,7 @@ All URIs are relative to *https://avacloud-api.dangl-it.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**danglIdentityGetUserInfo**](DanglIdentityApi.md#danglIdentityGetUserInfo) | **GET** /identity/user-info | 
 [**danglIdentityLoginAndReturnToken**](DanglIdentityApi.md#danglIdentityLoginAndReturnToken) | **POST** /identity/token-login | 
 [**danglIdentityLoginWithCookie**](DanglIdentityApi.md#danglIdentityLoginWithCookie) | **POST** /identity/login | 
 [**danglIdentityRefreshToken**](DanglIdentityApi.md#danglIdentityRefreshToken) | **POST** /identity/token-refresh | 
@@ -11,6 +12,53 @@ Method | HTTP request | Description
 [**danglIdentityRequestPasswordReset**](DanglIdentityApi.md#danglIdentityRequestPasswordReset) | **POST** /identity/password-forgotten | 
 [**danglIdentitySignOutWithSignInManager**](DanglIdentityApi.md#danglIdentitySignOutWithSignInManager) | **DELETE** /identity/login | 
 
+
+# **danglIdentityGetUserInfo**
+> \Dangl\AVACloud\Model\UserInfoGet danglIdentityGetUserInfo()
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: Dangl.Identity
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Dangl\AVACloud\Api\DanglIdentityApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->danglIdentityGetUserInfo();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DanglIdentityApi->danglIdentityGetUserInfo: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Dangl\AVACloud\Model\UserInfoGet**](../Model/UserInfoGet.md)
+
+### Authorization
+
+[Dangl.Identity](../../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **danglIdentityLoginAndReturnToken**
 > \Dangl\AVACloud\Model\TokenResponseGet danglIdentityLoginAndReturnToken($model)
@@ -262,7 +310,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json-patch+json, application/json, text/json, application/_*+json
- - **Accept**: application/problem+json
+ - **Accept**: text/plain, application/json, text/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 

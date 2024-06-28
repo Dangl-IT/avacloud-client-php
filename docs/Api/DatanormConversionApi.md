@@ -5,6 +5,7 @@ All URIs are relative to *https://avacloud-api.dangl-it.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**datanormConversionConvertToAva**](DatanormConversionApi.md#datanormConversionConvertToAva) | **POST** /conversion/datanorm/ava | Converts Datanorm files to Dangl.AVA projects
+[**datanormConversionConvertToFlatAva**](DatanormConversionApi.md#datanormConversionConvertToFlatAva) | **POST** /conversion/datanorm/flat-ava | Converts Datanorm files to Dangl.AVA projects
 
 
 # **datanormConversionConvertToAva**
@@ -59,6 +60,57 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: multipart/form-data
  - **Accept**: application/vnd.com.dangl-it.ProjectDto.v1+json, application/problem+json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **datanormConversionConvertToFlatAva**
+> \Dangl\AVACloud\Model\FlatAvaProject datanormConversionConvertToFlatAva($datanorm_file)
+
+Converts Datanorm files to Dangl.AVA projects
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: Dangl.Identity
+$config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Dangl\AVACloud\Api\DatanormConversionApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$datanorm_file = "/path/to/file.txt"; // \SplFileObject | The input file
+
+try {
+    $result = $apiInstance->datanormConversionConvertToFlatAva($datanorm_file);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DatanormConversionApi->datanormConversionConvertToFlatAva: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datanorm_file** | **\SplFileObject**| The input file | [optional]
+
+### Return type
+
+[**\Dangl\AVACloud\Model\FlatAvaProject**](../Model/FlatAvaProject.md)
+
+### Authorization
+
+[Dangl.Identity](../../README.md#Dangl.Identity)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json, application/problem+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
