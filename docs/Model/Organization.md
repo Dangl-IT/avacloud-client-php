@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identifier** | **string** | BT-46 (BT-29 for the Seller) The identifier of the organization | [optional] 
+**identifier_scheme** | **string** | BT-46 (BT-29 for the Seller) If a Identifier is used, this indicates the scheme used for the identifier. This works in conjunction with the Identifier property. | [optional] 
 **name** | **string** | BT-44 (BT-27 for the seller, BT-62 for the seller tax representative) The name of the organization | [optional] 
 **registration_number** | **string** | BT-30, for the seller, doesn&#39;t exist in the buyer actually A registration number, e.g. a Handelsregisternummer in Germany | [optional] 
 **vat_id** | **string** | BT-48, BT-32 for the seller, BT-63 for the seller tax representative The VAT ID for the organization | [optional] 

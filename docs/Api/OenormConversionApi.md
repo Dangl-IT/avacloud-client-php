@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **oenormConversionConvertToAva**
-> \Dangl\AVACloud\Model\ProjectDto oenormConversionConvertToAva($oenorm_file, $remove_plain_text_long_texts, $remove_html_long_texts)
+> \Dangl\AVACloud\Model\ProjectDto oenormConversionConvertToAva($oenorm_file, $remove_plain_text_long_texts, $remove_html_long_texts, $use_oenorm_file_declaration_for_item_number_schema)
 
 Converts ÖNorm files to Dangl.AVA projects
 
@@ -33,9 +33,10 @@ $apiInstance = new Dangl\AVACloud\Api\OenormConversionApi(
 $oenorm_file = "/path/to/file.txt"; // \SplFileObject | The input file
 $remove_plain_text_long_texts = true; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
 $remove_html_long_texts = true; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
+$use_oenorm_file_declaration_for_item_number_schema = true; // bool | If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty
 
 try {
-    $result = $apiInstance->oenormConversionConvertToAva($oenorm_file, $remove_plain_text_long_texts, $remove_html_long_texts);
+    $result = $apiInstance->oenormConversionConvertToAva($oenorm_file, $remove_plain_text_long_texts, $remove_html_long_texts, $use_oenorm_file_declaration_for_item_number_schema);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OenormConversionApi->oenormConversionConvertToAva: ', $e->getMessage(), PHP_EOL;
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
  **oenorm_file** | **\SplFileObject**| The input file | [optional]
  **remove_plain_text_long_texts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional]
  **remove_html_long_texts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional]
+ **use_oenorm_file_declaration_for_item_number_schema** | **bool**| If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty | [optional]
 
 ### Return type
 
@@ -67,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **oenormConversionConvertToExcel**
-> \SplFileObject oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices)
+> \SplFileObject oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $use_oenorm_file_declaration_for_item_number_schema)
 
 Converts ÖNorm files to Excel
 
@@ -91,9 +93,10 @@ $write_long_texts = true; // bool | Defaults to true
 $conversion_culture = "conversion_culture_example"; // string | The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: 'en' for English, 'de' for German, 'fr' for French, ' it' for Italian and ' es' for Spanish. If the culture is not supported, 'en' will be used.
 $include_article_numbers = true; // bool | If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from 'position.commerceProperties.articleNumber'
 $lock_all_cells_but_prices = true; // bool | If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields.
+$use_oenorm_file_declaration_for_item_number_schema = true; // bool | If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty
 
 try {
-    $result = $apiInstance->oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices);
+    $result = $apiInstance->oenormConversionConvertToExcel($oenorm_file, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $use_oenorm_file_declaration_for_item_number_schema);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OenormConversionApi->oenormConversionConvertToExcel: ', $e->getMessage(), PHP_EOL;
@@ -111,6 +114,7 @@ Name | Type | Description  | Notes
  **conversion_culture** | **string**| The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. | [optional]
  **include_article_numbers** | **bool**| If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; | [optional]
  **lock_all_cells_but_prices** | **bool**| If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. | [optional]
+ **use_oenorm_file_declaration_for_item_number_schema** | **bool**| If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty | [optional]
 
 ### Return type
 
@@ -128,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **oenormConversionConvertToFlatAva**
-> \Dangl\AVACloud\Model\FlatAvaProject oenormConversionConvertToFlatAva($oenorm_file)
+> \Dangl\AVACloud\Model\FlatAvaProject oenormConversionConvertToFlatAva($oenorm_file, $use_oenorm_file_declaration_for_item_number_schema)
 
 Converts ÖNorm files to Dangl.AVA projects
 
@@ -147,9 +151,10 @@ $apiInstance = new Dangl\AVACloud\Api\OenormConversionApi(
     $config
 );
 $oenorm_file = "/path/to/file.txt"; // \SplFileObject | The input file
+$use_oenorm_file_declaration_for_item_number_schema = true; // bool | If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty
 
 try {
-    $result = $apiInstance->oenormConversionConvertToFlatAva($oenorm_file);
+    $result = $apiInstance->oenormConversionConvertToFlatAva($oenorm_file, $use_oenorm_file_declaration_for_item_number_schema);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OenormConversionApi->oenormConversionConvertToFlatAva: ', $e->getMessage(), PHP_EOL;
@@ -162,6 +167,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **oenorm_file** | **\SplFileObject**| The input file | [optional]
+ **use_oenorm_file_declaration_for_item_number_schema** | **bool**| If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty | [optional]
 
 ### Return type
 
@@ -179,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **oenormConversionConvertToGaeb**
-> \SplFileObject oenormConversionConvertToGaeb($oenorm_file, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid)
+> \SplFileObject oenormConversionConvertToGaeb($oenorm_file, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $use_oenorm_file_declaration_for_item_number_schema)
 
 Converts ÖNorm files to GAEB files.
 
@@ -205,9 +211,10 @@ $export_quantity_determination = true; // bool | Defaults to false. If this is e
 $remove_unprintable_characters_from_texts = true; // bool | If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
 $force_include_descriptions = true; // bool | If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions.
 $treat_null_item_number_schema_as_invalid = true; // bool | When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons.
+$use_oenorm_file_declaration_for_item_number_schema = true; // bool | If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty
 
 try {
-    $result = $apiInstance->oenormConversionConvertToGaeb($oenorm_file, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid);
+    $result = $apiInstance->oenormConversionConvertToGaeb($oenorm_file, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $use_oenorm_file_declaration_for_item_number_schema);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OenormConversionApi->oenormConversionConvertToGaeb: ', $e->getMessage(), PHP_EOL;
@@ -227,6 +234,7 @@ Name | Type | Description  | Notes
  **remove_unprintable_characters_from_texts** | **bool**| If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. | [optional]
  **force_include_descriptions** | **bool**| If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. | [optional]
  **treat_null_item_number_schema_as_invalid** | **bool**| When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. | [optional]
+ **use_oenorm_file_declaration_for_item_number_schema** | **bool**| If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty | [optional]
 
 ### Return type
 
@@ -244,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **oenormConversionConvertToOenorm**
-> \SplFileObject oenormConversionConvertToOenorm($oenorm_file, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts)
+> \SplFileObject oenormConversionConvertToOenorm($oenorm_file, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $use_oenorm_file_declaration_for_item_number_schema)
 
 Converts ÖNorm files to Oenorm files.
 
@@ -267,9 +275,10 @@ $destination_oenorm_type = "destination_oenorm_type_example"; // string | Defaul
 $try_repair_project_structure = true; // bool | Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target
 $skip_try_enforce_schema_compliant_xml_output = true; // bool | If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option.
 $remove_unprintable_characters_from_texts = true; // bool | If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
+$use_oenorm_file_declaration_for_item_number_schema = true; // bool | If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty
 
 try {
-    $result = $apiInstance->oenormConversionConvertToOenorm($oenorm_file, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts);
+    $result = $apiInstance->oenormConversionConvertToOenorm($oenorm_file, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $use_oenorm_file_declaration_for_item_number_schema);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OenormConversionApi->oenormConversionConvertToOenorm: ', $e->getMessage(), PHP_EOL;
@@ -286,6 +295,7 @@ Name | Type | Description  | Notes
  **try_repair_project_structure** | **bool**| Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target | [optional]
  **skip_try_enforce_schema_compliant_xml_output** | **bool**| If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. | [optional]
  **remove_unprintable_characters_from_texts** | **bool**| If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. | [optional]
+ **use_oenorm_file_declaration_for_item_number_schema** | **bool**| If this is enabled, then the actual content structure inside the ÖNorm file is ignored. The item number schema of the target will be built based on the top level structure definition of the ÖNorm file, even if the file content itself might be different or empty | [optional]
 
 ### Return type
 

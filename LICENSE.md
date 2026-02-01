@@ -1,6 +1,6 @@
 ### Licence
 
-#### Copyright (c) 2025 Dangl IT GmbH, [https://www.dangl-it.com](https://www.dangl-it.com)
+#### Copyright (c) 2026 Dangl IT GmbH, [https://www.dangl-it.com](https://www.dangl-it.com)
 
 This software shall only be used for non-commercial evaluation purposes.
 Please contact Dangl**IT** for a commercial licence.
