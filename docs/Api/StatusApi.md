@@ -1,24 +1,33 @@
 # Dangl\AVACloud\StatusApi
 
-All URIs are relative to *https://avacloud-api.dangl-it.com*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**statusGetStatus**](StatusApi.md#statusGetStatus) | **GET** /status | Reports the health status of the AVACloud API
 
 
-# **statusGetStatus**
-> \Dangl\AVACloud\Model\GetStatus statusGetStatus()
+All URIs are relative to https://avacloud-api.dangl-it.com, except if the operation defines another base path.
+
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**statusGetStatus()**](StatusApi.md#statusGetStatus) | **GET** /status | Reports the health status of the AVACloud API |
+
+
+## `statusGetStatus()`
+
+```php
+statusGetStatus(): \Dangl\AVACloud\Model\GetStatus
+```
 
 Reports the health status of the AVACloud API
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: Dangl.Identity
 $config = Dangl\AVACloud\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
 
 $apiInstance = new Dangl\AVACloud\Api\StatusApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -33,10 +42,10 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling StatusApi->statusGetStatus: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -49,8 +58,9 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json, application/problem+json
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`, `application/problem+json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)

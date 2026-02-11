@@ -1,11 +1,10 @@
-# InvoicePeriod
+# # InvoicePeriod
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**start** | [**\DateTime**](\DateTime.md) | BT-134 The start date | [optional] 
-**end** | [**\DateTime**](\DateTime.md) | BT-135 The end date | [optional] 
+**start** | **\DateTime** | BT-134 The start date | [optional]
+**end** | **\DateTime** | BT-135 The end date | [optional]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
