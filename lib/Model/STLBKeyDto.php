@@ -59,9 +59,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'art_identifier' => 'int',
-        'art_index' => 'int',
-        'kind_identifier' => 'int'
+        'artIdentifier' => 'int',
+        'artIndex' => 'int',
+        'kindIdentifier' => 'int'
     ];
 
     /**
@@ -72,9 +72,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'art_identifier' => 'int32',
-        'art_index' => 'int32',
-        'kind_identifier' => 'int32'
+        'artIdentifier' => 'int32',
+        'artIndex' => 'int32',
+        'kindIdentifier' => 'int32'
     ];
 
     /**
@@ -83,9 +83,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'art_identifier' => false,
-        'art_index' => false,
-        'kind_identifier' => false
+        'artIdentifier' => false,
+        'artIndex' => false,
+        'kindIdentifier' => false
     ];
 
     /**
@@ -174,9 +174,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'art_identifier' => 'artIdentifier',
-        'art_index' => 'artIndex',
-        'kind_identifier' => 'kindIdentifier'
+        'artIdentifier' => 'artIdentifier',
+        'artIndex' => 'artIndex',
+        'kindIdentifier' => 'kindIdentifier'
     ];
 
     /**
@@ -185,9 +185,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'art_identifier' => 'setArtIdentifier',
-        'art_index' => 'setArtIndex',
-        'kind_identifier' => 'setKindIdentifier'
+        'artIdentifier' => 'setArtIdentifier',
+        'artIndex' => 'setArtIndex',
+        'kindIdentifier' => 'setKindIdentifier'
     ];
 
     /**
@@ -196,9 +196,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'art_identifier' => 'getArtIdentifier',
-        'art_index' => 'getArtIndex',
-        'kind_identifier' => 'getKindIdentifier'
+        'artIdentifier' => 'getArtIdentifier',
+        'artIndex' => 'getArtIndex',
+        'kindIdentifier' => 'getKindIdentifier'
     ];
 
     /**
@@ -258,9 +258,9 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('art_identifier', $data ?? [], null);
-        $this->setIfExists('art_index', $data ?? [], null);
-        $this->setIfExists('kind_identifier', $data ?? [], null);
+        $this->setIfExists('artIdentifier', $data ?? [], null);
+        $this->setIfExists('artIndex', $data ?? [], null);
+        $this->setIfExists('kindIdentifier', $data ?? [], null);
     }
 
     /**
@@ -290,8 +290,8 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['art_identifier'] === null) {
-            $invalidProperties[] = "'art_identifier' can't be null";
+        if ($this->container['artIdentifier'] === null) {
+            $invalidProperties[] = "'artIdentifier' can't be null";
         }
         return $invalidProperties;
     }
@@ -309,82 +309,82 @@ class STLBKeyDto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets art_identifier
+     * Gets artIdentifier
      *
      * @return int
      */
     public function getArtIdentifier()
     {
-        return $this->container['art_identifier'];
+        return $this->container['artIdentifier'];
     }
 
     /**
-     * Sets art_identifier
+     * Sets artIdentifier
      *
-     * @param int $art_identifier This identifier is required and uniquely describes a single reference within the STLB standard. It maps to \"ArtChrIdent\" in GAEB XML
+     * @param int $artIdentifier This identifier is required and uniquely describes a single reference within the STLB standard. It maps to \"ArtChrIdent\" in GAEB XML
      *
      * @return self
      */
-    public function setArtIdentifier($art_identifier)
+    public function setArtIdentifier($artIdentifier)
     {
-        if (is_null($art_identifier)) {
-            throw new \InvalidArgumentException('non-nullable art_identifier cannot be null');
+        if (is_null($artIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable artIdentifier cannot be null');
         }
-        $this->container['art_identifier'] = $art_identifier;
+        $this->container['artIdentifier'] = $artIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets art_index
+     * Gets artIndex
      *
      * @return int|null
      */
     public function getArtIndex()
     {
-        return $this->container['art_index'];
+        return $this->container['artIndex'];
     }
 
     /**
-     * Sets art_index
+     * Sets artIndex
      *
-     * @param int|null $art_index This optional index property further categorizes a single reference within the STLB standard. It maps to \"ArtChIdx\" in GAEB XML
+     * @param int|null $artIndex This optional index property further categorizes a single reference within the STLB standard. It maps to \"ArtChIdx\" in GAEB XML
      *
      * @return self
      */
-    public function setArtIndex($art_index)
+    public function setArtIndex($artIndex)
     {
-        if (is_null($art_index)) {
-            throw new \InvalidArgumentException('non-nullable art_index cannot be null');
+        if (is_null($artIndex)) {
+            throw new \InvalidArgumentException('non-nullable artIndex cannot be null');
         }
-        $this->container['art_index'] = $art_index;
+        $this->container['artIndex'] = $artIndex;
 
         return $this;
     }
 
     /**
-     * Gets kind_identifier
+     * Gets kindIdentifier
      *
      * @return int|null
      */
     public function getKindIdentifier()
     {
-        return $this->container['kind_identifier'];
+        return $this->container['kindIdentifier'];
     }
 
     /**
-     * Sets kind_identifier
+     * Sets kindIdentifier
      *
-     * @param int|null $kind_identifier This optional identifier further specifies the execution kind of the reference in the STLB standard. It maps to \"ChVIdent\" in GAEB XML
+     * @param int|null $kindIdentifier This optional identifier further specifies the execution kind of the reference in the STLB standard. It maps to \"ChVIdent\" in GAEB XML
      *
      * @return self
      */
-    public function setKindIdentifier($kind_identifier)
+    public function setKindIdentifier($kindIdentifier)
     {
-        if (is_null($kind_identifier)) {
-            throw new \InvalidArgumentException('non-nullable kind_identifier cannot be null');
+        if (is_null($kindIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable kindIdentifier cannot be null');
         }
-        $this->container['kind_identifier'] = $kind_identifier;
+        $this->container['kindIdentifier'] = $kindIdentifier;
 
         return $this;
     }

@@ -81,7 +81,7 @@ class STLBKeyDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "art_identifier"
+     * Test attribute "artIdentifier"
      */
     public function testPropertyArtIdentifier()
     {
@@ -90,7 +90,7 @@ class STLBKeyDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "art_index"
+     * Test attribute "artIndex"
      */
     public function testPropertyArtIndex()
     {
@@ -99,7 +99,7 @@ class STLBKeyDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "kind_identifier"
+     * Test attribute "kindIdentifier"
      */
     public function testPropertyKindIdentifier()
     {

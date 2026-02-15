@@ -59,7 +59,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_healthy' => 'bool',
+        'isHealthy' => 'bool',
         'version' => 'string',
         'environment' => 'string'
     ];
@@ -72,7 +72,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_healthy' => null,
+        'isHealthy' => null,
         'version' => null,
         'environment' => null
     ];
@@ -83,7 +83,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'is_healthy' => false,
+        'isHealthy' => false,
         'version' => false,
         'environment' => false
     ];
@@ -174,7 +174,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_healthy' => 'isHealthy',
+        'isHealthy' => 'isHealthy',
         'version' => 'version',
         'environment' => 'environment'
     ];
@@ -185,7 +185,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'is_healthy' => 'setIsHealthy',
+        'isHealthy' => 'setIsHealthy',
         'version' => 'setVersion',
         'environment' => 'setEnvironment'
     ];
@@ -196,7 +196,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'is_healthy' => 'getIsHealthy',
+        'isHealthy' => 'getIsHealthy',
         'version' => 'getVersion',
         'environment' => 'getEnvironment'
     ];
@@ -258,7 +258,7 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('is_healthy', $data ?? [], null);
+        $this->setIfExists('isHealthy', $data ?? [], null);
         $this->setIfExists('version', $data ?? [], null);
         $this->setIfExists('environment', $data ?? [], null);
     }
@@ -290,8 +290,8 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['is_healthy'] === null) {
-            $invalidProperties[] = "'is_healthy' can't be null";
+        if ($this->container['isHealthy'] === null) {
+            $invalidProperties[] = "'isHealthy' can't be null";
         }
         return $invalidProperties;
     }
@@ -309,28 +309,28 @@ class GetStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets is_healthy
+     * Gets isHealthy
      *
      * @return bool
      */
     public function getIsHealthy()
     {
-        return $this->container['is_healthy'];
+        return $this->container['isHealthy'];
     }
 
     /**
-     * Sets is_healthy
+     * Sets isHealthy
      *
-     * @param bool $is_healthy If any problems in the service health are known, this is set to false
+     * @param bool $isHealthy If any problems in the service health are known, this is set to false
      *
      * @return self
      */
-    public function setIsHealthy($is_healthy)
+    public function setIsHealthy($isHealthy)
     {
-        if (is_null($is_healthy)) {
-            throw new \InvalidArgumentException('non-nullable is_healthy cannot be null');
+        if (is_null($isHealthy)) {
+            throw new \InvalidArgumentException('non-nullable isHealthy cannot be null');
         }
-        $this->container['is_healthy'] = $is_healthy;
+        $this->container['isHealthy'] = $isHealthy;
 
         return $this;
     }

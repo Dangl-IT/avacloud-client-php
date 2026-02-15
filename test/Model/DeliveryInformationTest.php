@@ -81,7 +81,7 @@ class DeliveryInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "deliver_to_name"
+     * Test attribute "deliverToName"
      */
     public function testPropertyDeliverToName()
     {
@@ -90,7 +90,7 @@ class DeliveryInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "deliver_to_location_identifier"
+     * Test attribute "deliverToLocationIdentifier"
      */
     public function testPropertyDeliverToLocationIdentifier()
     {
@@ -99,7 +99,7 @@ class DeliveryInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_date"
+     * Test attribute "deliveryDate"
      */
     public function testPropertyDeliveryDate()
     {
@@ -108,7 +108,7 @@ class DeliveryInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_address"
+     * Test attribute "deliveryAddress"
      */
     public function testPropertyDeliveryAddress()
     {

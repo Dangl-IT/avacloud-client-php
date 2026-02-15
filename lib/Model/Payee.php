@@ -61,7 +61,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'name' => 'string',
         'identifier' => 'string',
-        'legal_registration_identifier' => 'string'
+        'legalRegistrationIdentifier' => 'string'
     ];
 
     /**
@@ -74,7 +74,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'name' => null,
         'identifier' => null,
-        'legal_registration_identifier' => null
+        'legalRegistrationIdentifier' => null
     ];
 
     /**
@@ -85,7 +85,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'name' => false,
         'identifier' => false,
-        'legal_registration_identifier' => false
+        'legalRegistrationIdentifier' => false
     ];
 
     /**
@@ -176,7 +176,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'name' => 'name',
         'identifier' => 'identifier',
-        'legal_registration_identifier' => 'legalRegistrationIdentifier'
+        'legalRegistrationIdentifier' => 'legalRegistrationIdentifier'
     ];
 
     /**
@@ -187,7 +187,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'name' => 'setName',
         'identifier' => 'setIdentifier',
-        'legal_registration_identifier' => 'setLegalRegistrationIdentifier'
+        'legalRegistrationIdentifier' => 'setLegalRegistrationIdentifier'
     ];
 
     /**
@@ -198,7 +198,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'name' => 'getName',
         'identifier' => 'getIdentifier',
-        'legal_registration_identifier' => 'getLegalRegistrationIdentifier'
+        'legalRegistrationIdentifier' => 'getLegalRegistrationIdentifier'
     ];
 
     /**
@@ -260,7 +260,7 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('legal_registration_identifier', $data ?? [], null);
+        $this->setIfExists('legalRegistrationIdentifier', $data ?? [], null);
     }
 
     /**
@@ -360,28 +360,28 @@ class Payee implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets legal_registration_identifier
+     * Gets legalRegistrationIdentifier
      *
      * @return string|null
      */
     public function getLegalRegistrationIdentifier()
     {
-        return $this->container['legal_registration_identifier'];
+        return $this->container['legalRegistrationIdentifier'];
     }
 
     /**
-     * Sets legal_registration_identifier
+     * Sets legalRegistrationIdentifier
      *
-     * @param string|null $legal_registration_identifier BT-61 A registered identifier for the payee, e.g. a VAT ID or Tax ID
+     * @param string|null $legalRegistrationIdentifier BT-61 A registered identifier for the payee, e.g. a VAT ID or Tax ID
      *
      * @return self
      */
-    public function setLegalRegistrationIdentifier($legal_registration_identifier)
+    public function setLegalRegistrationIdentifier($legalRegistrationIdentifier)
     {
-        if (is_null($legal_registration_identifier)) {
-            throw new \InvalidArgumentException('non-nullable legal_registration_identifier cannot be null');
+        if (is_null($legalRegistrationIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable legalRegistrationIdentifier cannot be null');
         }
-        $this->container['legal_registration_identifier'] = $legal_registration_identifier;
+        $this->container['legalRegistrationIdentifier'] = $legalRegistrationIdentifier;
 
         return $this;
     }

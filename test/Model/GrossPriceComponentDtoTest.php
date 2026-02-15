@@ -81,7 +81,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_rate"
+     * Test attribute "taxRate"
      */
     public function testPropertyTaxRate()
     {
@@ -90,7 +90,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "deduction_factor"
+     * Test attribute "deductionFactor"
      */
     public function testPropertyDeductionFactor()
     {
@@ -99,7 +99,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_net"
+     * Test attribute "totalNet"
      */
     public function testPropertyTotalNet()
     {
@@ -108,7 +108,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_deducted"
+     * Test attribute "totalDeducted"
      */
     public function testPropertyTotalDeducted()
     {
@@ -117,7 +117,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_tax"
+     * Test attribute "totalTax"
      */
     public function testPropertyTotalTax()
     {
@@ -126,7 +126,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_gross"
+     * Test attribute "totalGross"
      */
     public function testPropertyTotalGross()
     {
@@ -135,7 +135,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_gross_deducted"
+     * Test attribute "totalGrossDeducted"
      */
     public function testPropertyTotalGrossDeducted()
     {
@@ -144,7 +144,7 @@ class GrossPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_tax_deducted"
+     * Test attribute "totalTaxDeducted"
      */
     public function testPropertyTotalTaxDeducted()
     {

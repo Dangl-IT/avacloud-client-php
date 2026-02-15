@@ -81,7 +81,7 @@ class LineItemPriceDetailTest extends TestCase
     }
 
     /**
-     * Test attribute "net_price"
+     * Test attribute "netPrice"
      */
     public function testPropertyNetPrice()
     {
@@ -90,7 +90,7 @@ class LineItemPriceDetailTest extends TestCase
     }
 
     /**
-     * Test attribute "absolute_discount_per_item"
+     * Test attribute "absoluteDiscountPerItem"
      */
     public function testPropertyAbsoluteDiscountPerItem()
     {
@@ -99,7 +99,7 @@ class LineItemPriceDetailTest extends TestCase
     }
 
     /**
-     * Test attribute "gross_price"
+     * Test attribute "grossPrice"
      */
     public function testPropertyGrossPrice()
     {
@@ -108,7 +108,7 @@ class LineItemPriceDetailTest extends TestCase
     }
 
     /**
-     * Test attribute "base_quantity"
+     * Test attribute "baseQuantity"
      */
     public function testPropertyBaseQuantity()
     {
@@ -117,7 +117,7 @@ class LineItemPriceDetailTest extends TestCase
     }
 
     /**
-     * Test attribute "base_quantity_unit_code"
+     * Test attribute "baseQuantityUnitCode"
      */
     public function testPropertyBaseQuantityUnitCode()
     {

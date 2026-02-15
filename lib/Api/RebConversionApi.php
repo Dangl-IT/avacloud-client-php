@@ -143,18 +143,18 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function rebConversionConvertToAva($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
+    public function rebConversionConvertToAva($rebFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
     {
-        list($response) = $this->rebConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $reb_file, $contentType);
+        list($response) = $this->rebConversionConvertToAvaWithHttpInfo($rebFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -163,18 +163,18 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rebConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
+    public function rebConversionConvertToAvaWithHttpInfo($rebFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
     {
-        $request = $this->rebConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToAvaRequest($rebFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -264,17 +264,17 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToAvaAsync($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
+    public function rebConversionConvertToAvaAsync($rebFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
     {
-        return $this->rebConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $reb_file, $contentType)
+        return $this->rebConversionConvertToAvaAsyncWithHttpInfo($rebFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -287,18 +287,18 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
+    public function rebConversionConvertToAvaAsyncWithHttpInfo($rebFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->rebConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToAvaRequest($rebFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,15 +339,15 @@ class RebConversionApi
     /**
      * Create request for operation 'rebConversionConvertToAva'
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function rebConversionConvertToAvaRequest($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
+    public function rebConversionConvertToAvaRequest($rebFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['rebConversionConvertToAva'][0])
     {
 
 
@@ -363,7 +363,7 @@ class RebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -372,7 +372,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -386,7 +386,7 @@ class RebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'reb_file' => $reb_file,
+            'rebFile' => $rebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -455,21 +455,21 @@ class RebConversionApi
      *
      * Converts REB files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function rebConversionConvertToExcel($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
+    public function rebConversionConvertToExcel($rebFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
     {
-        list($response) = $this->rebConversionConvertToExcelWithHttpInfo($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $reb_file, $contentType);
+        list($response) = $this->rebConversionConvertToExcelWithHttpInfo($rebFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
         return $response;
     }
 
@@ -478,21 +478,21 @@ class RebConversionApi
      *
      * Converts REB files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rebConversionConvertToExcelWithHttpInfo($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
+    public function rebConversionConvertToExcelWithHttpInfo($rebFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
     {
-        $request = $this->rebConversionConvertToExcelRequest($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToExcelRequest($rebFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -582,20 +582,20 @@ class RebConversionApi
      *
      * Converts REB files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToExcelAsync($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
+    public function rebConversionConvertToExcelAsync($rebFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
     {
-        return $this->rebConversionConvertToExcelAsyncWithHttpInfo($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $reb_file, $contentType)
+        return $this->rebConversionConvertToExcelAsyncWithHttpInfo($rebFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -608,21 +608,21 @@ class RebConversionApi
      *
      * Converts REB files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToExcelAsyncWithHttpInfo($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
+    public function rebConversionConvertToExcelAsyncWithHttpInfo($rebFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->rebConversionConvertToExcelRequest($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToExcelRequest($rebFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -663,18 +663,18 @@ class RebConversionApi
     /**
      * Create request for operation 'rebConversionConvertToExcel'
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function rebConversionConvertToExcelRequest($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
+    public function rebConversionConvertToExcelRequest($rebFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['rebConversionConvertToExcel'][0])
     {
 
 
@@ -693,7 +693,7 @@ class RebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_prices,
+            $writePrices,
             'WritePrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -702,7 +702,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_long_texts,
+            $writeLongTexts,
             'WriteLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -711,7 +711,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $conversion_culture,
+            $conversionCulture,
             'ConversionCulture', // param base name
             'string', // openApiType
             '', // style
@@ -720,7 +720,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_article_numbers,
+            $includeArticleNumbers,
             'IncludeArticleNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -729,7 +729,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $lock_all_cells_but_prices,
+            $lockAllCellsButPrices,
             'LockAllCellsButPrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -743,7 +743,7 @@ class RebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'reb_file' => $reb_file,
+            'rebFile' => $rebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -812,16 +812,16 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function rebConversionConvertToFlatAva($reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
+    public function rebConversionConvertToFlatAva($rebFile = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->rebConversionConvertToFlatAvaWithHttpInfo($reb_file, $contentType);
+        list($response) = $this->rebConversionConvertToFlatAvaWithHttpInfo($rebFile, $contentType);
         return $response;
     }
 
@@ -830,16 +830,16 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rebConversionConvertToFlatAvaWithHttpInfo($reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
+    public function rebConversionConvertToFlatAvaWithHttpInfo($rebFile = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
     {
-        $request = $this->rebConversionConvertToFlatAvaRequest($reb_file, $contentType);
+        $request = $this->rebConversionConvertToFlatAvaRequest($rebFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -929,15 +929,15 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToFlatAvaAsync($reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
+    public function rebConversionConvertToFlatAvaAsync($rebFile = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
     {
-        return $this->rebConversionConvertToFlatAvaAsyncWithHttpInfo($reb_file, $contentType)
+        return $this->rebConversionConvertToFlatAvaAsyncWithHttpInfo($rebFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -950,16 +950,16 @@ class RebConversionApi
      *
      * Converts REB files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToFlatAvaAsyncWithHttpInfo($reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
+    public function rebConversionConvertToFlatAvaAsyncWithHttpInfo($rebFile = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->rebConversionConvertToFlatAvaRequest($reb_file, $contentType);
+        $request = $this->rebConversionConvertToFlatAvaRequest($rebFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1000,13 +1000,13 @@ class RebConversionApi
     /**
      * Create request for operation 'rebConversionConvertToFlatAva'
      *
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function rebConversionConvertToFlatAvaRequest($reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
+    public function rebConversionConvertToFlatAvaRequest($rebFile = null, string $contentType = self::contentTypes['rebConversionConvertToFlatAva'][0])
     {
 
 
@@ -1025,7 +1025,7 @@ class RebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'reb_file' => $reb_file,
+            'rebFile' => $rebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1094,23 +1094,23 @@ class RebConversionApi
      *
      * Converts REB files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function rebConversionConvertToGaeb($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
+    public function rebConversionConvertToGaeb($rebFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
     {
-        list($response) = $this->rebConversionConvertToGaebWithHttpInfo($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $reb_file, $contentType);
+        list($response) = $this->rebConversionConvertToGaebWithHttpInfo($rebFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
         return $response;
     }
 
@@ -1119,23 +1119,23 @@ class RebConversionApi
      *
      * Converts REB files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rebConversionConvertToGaebWithHttpInfo($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
+    public function rebConversionConvertToGaebWithHttpInfo($rebFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
     {
-        $request = $this->rebConversionConvertToGaebRequest($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToGaebRequest($rebFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1225,22 +1225,22 @@ class RebConversionApi
      *
      * Converts REB files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToGaebAsync($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
+    public function rebConversionConvertToGaebAsync($rebFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
     {
-        return $this->rebConversionConvertToGaebAsyncWithHttpInfo($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $reb_file, $contentType)
+        return $this->rebConversionConvertToGaebAsyncWithHttpInfo($rebFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1253,23 +1253,23 @@ class RebConversionApi
      *
      * Converts REB files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToGaebAsyncWithHttpInfo($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
+    public function rebConversionConvertToGaebAsyncWithHttpInfo($rebFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->rebConversionConvertToGaebRequest($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToGaebRequest($rebFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1310,20 +1310,20 @@ class RebConversionApi
     /**
      * Create request for operation 'rebConversionConvertToGaeb'
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function rebConversionConvertToGaebRequest($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
+    public function rebConversionConvertToGaebRequest($rebFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['rebConversionConvertToGaeb'][0])
     {
 
 
@@ -1344,7 +1344,7 @@ class RebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_gaeb_type,
+            $destinationGaebType,
             'DestinationGaebType', // param base name
             'string', // openApiType
             '', // style
@@ -1353,7 +1353,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_exchange_phase_transform,
+            $targetExchangePhaseTransform,
             'TargetExchangePhaseTransform', // param base name
             'string', // openApiType
             '', // style
@@ -1362,7 +1362,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $enforce_strict_offer_phase_long_text_output,
+            $enforceStrictOfferPhaseLongTextOutput,
             'EnforceStrictOfferPhaseLongTextOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1371,7 +1371,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $export_quantity_determination,
+            $exportQuantityDetermination,
             'ExportQuantityDetermination', // param base name
             'boolean', // openApiType
             '', // style
@@ -1380,7 +1380,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1389,7 +1389,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $force_include_descriptions,
+            $forceIncludeDescriptions,
             'ForceIncludeDescriptions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1398,7 +1398,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $treat_null_item_number_schema_as_invalid,
+            $treatNullItemNumberSchemaAsInvalid,
             'TreatNullItemNumberSchemaAsInvalid', // param base name
             'boolean', // openApiType
             '', // style
@@ -1412,7 +1412,7 @@ class RebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'reb_file' => $reb_file,
+            'rebFile' => $rebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1481,20 +1481,20 @@ class RebConversionApi
      *
      * Converts REB files to Oenorm
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function rebConversionConvertToOenorm($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
+    public function rebConversionConvertToOenorm($rebFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
     {
-        list($response) = $this->rebConversionConvertToOenormWithHttpInfo($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $reb_file, $contentType);
+        list($response) = $this->rebConversionConvertToOenormWithHttpInfo($rebFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
         return $response;
     }
 
@@ -1503,20 +1503,20 @@ class RebConversionApi
      *
      * Converts REB files to Oenorm
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function rebConversionConvertToOenormWithHttpInfo($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
+    public function rebConversionConvertToOenormWithHttpInfo($rebFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
     {
-        $request = $this->rebConversionConvertToOenormRequest($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToOenormRequest($rebFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1606,19 +1606,19 @@ class RebConversionApi
      *
      * Converts REB files to Oenorm
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToOenormAsync($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
+    public function rebConversionConvertToOenormAsync($rebFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
     {
-        return $this->rebConversionConvertToOenormAsyncWithHttpInfo($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $reb_file, $contentType)
+        return $this->rebConversionConvertToOenormAsyncWithHttpInfo($rebFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1631,20 +1631,20 @@ class RebConversionApi
      *
      * Converts REB files to Oenorm
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function rebConversionConvertToOenormAsyncWithHttpInfo($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
+    public function rebConversionConvertToOenormAsyncWithHttpInfo($rebFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->rebConversionConvertToOenormRequest($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $reb_file, $contentType);
+        $request = $this->rebConversionConvertToOenormRequest($rebFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1685,17 +1685,17 @@ class RebConversionApi
     /**
      * Create request for operation 'rebConversionConvertToOenorm'
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $reb_file The input file (optional)
+     * @param  \SplFileObject|null $rebFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['rebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function rebConversionConvertToOenormRequest($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $reb_file = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
+    public function rebConversionConvertToOenormRequest($rebFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['rebConversionConvertToOenorm'][0])
     {
 
 
@@ -1713,7 +1713,7 @@ class RebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_oenorm_type,
+            $destinationOenormType,
             'DestinationOenormType', // param base name
             'string', // openApiType
             '', // style
@@ -1722,7 +1722,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_repair_project_structure,
+            $tryRepairProjectStructure,
             'TryRepairProjectStructure', // param base name
             'boolean', // openApiType
             '', // style
@@ -1731,7 +1731,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $skip_try_enforce_schema_compliant_xml_output,
+            $skipTryEnforceSchemaCompliantXmlOutput,
             'SkipTryEnforceSchemaCompliantXmlOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1740,7 +1740,7 @@ class RebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1754,7 +1754,7 @@ class RebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'reb_file' => $reb_file,
+            'rebFile' => $rebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

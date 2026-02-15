@@ -59,8 +59,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'routing_id' => 'string',
-        'factur_x_payment_terms' => '\Dangl\AVACloud\Model\FacturXPaymentTerm[]'
+        'routingId' => 'string',
+        'facturXPaymentTerms' => '\Dangl\AVACloud\Model\FacturXPaymentTerm[]'
     ];
 
     /**
@@ -71,8 +71,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'routing_id' => null,
-        'factur_x_payment_terms' => null
+        'routingId' => null,
+        'facturXPaymentTerms' => null
     ];
 
     /**
@@ -81,8 +81,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'routing_id' => false,
-        'factur_x_payment_terms' => false
+        'routingId' => false,
+        'facturXPaymentTerms' => false
     ];
 
     /**
@@ -171,8 +171,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'routing_id' => 'routingId',
-        'factur_x_payment_terms' => 'facturXPaymentTerms'
+        'routingId' => 'routingId',
+        'facturXPaymentTerms' => 'facturXPaymentTerms'
     ];
 
     /**
@@ -181,8 +181,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'routing_id' => 'setRoutingId',
-        'factur_x_payment_terms' => 'setFacturXPaymentTerms'
+        'routingId' => 'setRoutingId',
+        'facturXPaymentTerms' => 'setFacturXPaymentTerms'
     ];
 
     /**
@@ -191,8 +191,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'routing_id' => 'getRoutingId',
-        'factur_x_payment_terms' => 'getFacturXPaymentTerms'
+        'routingId' => 'getRoutingId',
+        'facturXPaymentTerms' => 'getFacturXPaymentTerms'
     ];
 
     /**
@@ -252,8 +252,8 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('routing_id', $data ?? [], null);
-        $this->setIfExists('factur_x_payment_terms', $data ?? [], null);
+        $this->setIfExists('routingId', $data ?? [], null);
+        $this->setIfExists('facturXPaymentTerms', $data ?? [], null);
     }
 
     /**
@@ -299,55 +299,55 @@ class FacturXData implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets routing_id
+     * Gets routingId
      *
      * @return string|null
      */
     public function getRoutingId()
     {
-        return $this->container['routing_id'];
+        return $this->container['routingId'];
     }
 
     /**
-     * Sets routing_id
+     * Sets routingId
      *
-     * @param string|null $routing_id Factur-X specific routing ID, \"Leitweg-ID\" in German. This is typically required in public administration invoicing in Germany.
+     * @param string|null $routingId Factur-X specific routing ID, \"Leitweg-ID\" in German. This is typically required in public administration invoicing in Germany.
      *
      * @return self
      */
-    public function setRoutingId($routing_id)
+    public function setRoutingId($routingId)
     {
-        if (is_null($routing_id)) {
-            throw new \InvalidArgumentException('non-nullable routing_id cannot be null');
+        if (is_null($routingId)) {
+            throw new \InvalidArgumentException('non-nullable routingId cannot be null');
         }
-        $this->container['routing_id'] = $routing_id;
+        $this->container['routingId'] = $routingId;
 
         return $this;
     }
 
     /**
-     * Gets factur_x_payment_terms
+     * Gets facturXPaymentTerms
      *
      * @return \Dangl\AVACloud\Model\FacturXPaymentTerm[]|null
      */
     public function getFacturXPaymentTerms()
     {
-        return $this->container['factur_x_payment_terms'];
+        return $this->container['facturXPaymentTerms'];
     }
 
     /**
-     * Sets factur_x_payment_terms
+     * Sets facturXPaymentTerms
      *
-     * @param \Dangl\AVACloud\Model\FacturXPaymentTerm[]|null $factur_x_payment_terms The field BT-20 in XRechnung can only hold one payment term, but Factur-X / ZUGFeRD allows multiple payment terms. If the invoice was originally created in Factur-X / ZUGFeRD format, then this property holds all additional payment terms except the first one. Similar, on export, this property is used to export additional payment terms to Factur-X / ZUGFeRD. Factur-X / ZUGFeRD also allows a more detailled representation of payment terms, so they are given in a special object instead of just a string. If those are present, the regular PaymentTerms will be ignored on export to the CII / Factur-X format, as the information in this object is more detailled.
+     * @param \Dangl\AVACloud\Model\FacturXPaymentTerm[]|null $facturXPaymentTerms The field BT-20 in XRechnung can only hold one payment term, but Factur-X / ZUGFeRD allows multiple payment terms. If the invoice was originally created in Factur-X / ZUGFeRD format, then this property holds all additional payment terms except the first one. Similar, on export, this property is used to export additional payment terms to Factur-X / ZUGFeRD. Factur-X / ZUGFeRD also allows a more detailled representation of payment terms, so they are given in a special object instead of just a string. If those are present, the regular PaymentTerms will be ignored on export to the CII / Factur-X format, as the information in this object is more detailled.
      *
      * @return self
      */
-    public function setFacturXPaymentTerms($factur_x_payment_terms)
+    public function setFacturXPaymentTerms($facturXPaymentTerms)
     {
-        if (is_null($factur_x_payment_terms)) {
-            throw new \InvalidArgumentException('non-nullable factur_x_payment_terms cannot be null');
+        if (is_null($facturXPaymentTerms)) {
+            throw new \InvalidArgumentException('non-nullable facturXPaymentTerms cannot be null');
         }
-        $this->container['factur_x_payment_terms'] = $factur_x_payment_terms;
+        $this->container['facturXPaymentTerms'] = $facturXPaymentTerms;
 
         return $this;
     }

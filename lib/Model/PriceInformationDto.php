@@ -60,12 +60,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'hourly_wage' => 'float',
-        'deduction_factor' => 'float',
-        'flat_sum' => 'float',
-        'tax_rate' => 'float',
-        'has_unset_tax_rate' => 'bool',
-        'trade_discounts' => '\Dangl\AVACloud\Model\TradeDiscountDto[]'
+        'hourlyWage' => 'float',
+        'deductionFactor' => 'float',
+        'flatSum' => 'float',
+        'taxRate' => 'float',
+        'hasUnsetTaxRate' => 'bool',
+        'tradeDiscounts' => '\Dangl\AVACloud\Model\TradeDiscountDto[]'
     ];
 
     /**
@@ -77,12 +77,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'hourly_wage' => 'decimal',
-        'deduction_factor' => 'decimal',
-        'flat_sum' => 'decimal',
-        'tax_rate' => 'decimal',
-        'has_unset_tax_rate' => null,
-        'trade_discounts' => null
+        'hourlyWage' => 'decimal',
+        'deductionFactor' => 'decimal',
+        'flatSum' => 'decimal',
+        'taxRate' => 'decimal',
+        'hasUnsetTaxRate' => null,
+        'tradeDiscounts' => null
     ];
 
     /**
@@ -92,12 +92,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'hourly_wage' => false,
-        'deduction_factor' => false,
-        'flat_sum' => false,
-        'tax_rate' => false,
-        'has_unset_tax_rate' => false,
-        'trade_discounts' => false
+        'hourlyWage' => false,
+        'deductionFactor' => false,
+        'flatSum' => false,
+        'taxRate' => false,
+        'hasUnsetTaxRate' => false,
+        'tradeDiscounts' => false
     ];
 
     /**
@@ -187,12 +187,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'hourly_wage' => 'hourlyWage',
-        'deduction_factor' => 'deductionFactor',
-        'flat_sum' => 'flatSum',
-        'tax_rate' => 'taxRate',
-        'has_unset_tax_rate' => 'hasUnsetTaxRate',
-        'trade_discounts' => 'tradeDiscounts'
+        'hourlyWage' => 'hourlyWage',
+        'deductionFactor' => 'deductionFactor',
+        'flatSum' => 'flatSum',
+        'taxRate' => 'taxRate',
+        'hasUnsetTaxRate' => 'hasUnsetTaxRate',
+        'tradeDiscounts' => 'tradeDiscounts'
     ];
 
     /**
@@ -202,12 +202,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'id' => 'setId',
-        'hourly_wage' => 'setHourlyWage',
-        'deduction_factor' => 'setDeductionFactor',
-        'flat_sum' => 'setFlatSum',
-        'tax_rate' => 'setTaxRate',
-        'has_unset_tax_rate' => 'setHasUnsetTaxRate',
-        'trade_discounts' => 'setTradeDiscounts'
+        'hourlyWage' => 'setHourlyWage',
+        'deductionFactor' => 'setDeductionFactor',
+        'flatSum' => 'setFlatSum',
+        'taxRate' => 'setTaxRate',
+        'hasUnsetTaxRate' => 'setHasUnsetTaxRate',
+        'tradeDiscounts' => 'setTradeDiscounts'
     ];
 
     /**
@@ -217,12 +217,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'id' => 'getId',
-        'hourly_wage' => 'getHourlyWage',
-        'deduction_factor' => 'getDeductionFactor',
-        'flat_sum' => 'getFlatSum',
-        'tax_rate' => 'getTaxRate',
-        'has_unset_tax_rate' => 'getHasUnsetTaxRate',
-        'trade_discounts' => 'getTradeDiscounts'
+        'hourlyWage' => 'getHourlyWage',
+        'deductionFactor' => 'getDeductionFactor',
+        'flatSum' => 'getFlatSum',
+        'taxRate' => 'getTaxRate',
+        'hasUnsetTaxRate' => 'getHasUnsetTaxRate',
+        'tradeDiscounts' => 'getTradeDiscounts'
     ];
 
     /**
@@ -283,12 +283,12 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('hourly_wage', $data ?? [], null);
-        $this->setIfExists('deduction_factor', $data ?? [], null);
-        $this->setIfExists('flat_sum', $data ?? [], null);
-        $this->setIfExists('tax_rate', $data ?? [], null);
-        $this->setIfExists('has_unset_tax_rate', $data ?? [], null);
-        $this->setIfExists('trade_discounts', $data ?? [], null);
+        $this->setIfExists('hourlyWage', $data ?? [], null);
+        $this->setIfExists('deductionFactor', $data ?? [], null);
+        $this->setIfExists('flatSum', $data ?? [], null);
+        $this->setIfExists('taxRate', $data ?? [], null);
+        $this->setIfExists('hasUnsetTaxRate', $data ?? [], null);
+        $this->setIfExists('tradeDiscounts', $data ?? [], null);
     }
 
     /**
@@ -321,20 +321,20 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['hourly_wage'] === null) {
-            $invalidProperties[] = "'hourly_wage' can't be null";
+        if ($this->container['hourlyWage'] === null) {
+            $invalidProperties[] = "'hourlyWage' can't be null";
         }
-        if ($this->container['deduction_factor'] === null) {
-            $invalidProperties[] = "'deduction_factor' can't be null";
+        if ($this->container['deductionFactor'] === null) {
+            $invalidProperties[] = "'deductionFactor' can't be null";
         }
-        if ($this->container['flat_sum'] === null) {
-            $invalidProperties[] = "'flat_sum' can't be null";
+        if ($this->container['flatSum'] === null) {
+            $invalidProperties[] = "'flatSum' can't be null";
         }
-        if ($this->container['tax_rate'] === null) {
-            $invalidProperties[] = "'tax_rate' can't be null";
+        if ($this->container['taxRate'] === null) {
+            $invalidProperties[] = "'taxRate' can't be null";
         }
-        if ($this->container['has_unset_tax_rate'] === null) {
-            $invalidProperties[] = "'has_unset_tax_rate' can't be null";
+        if ($this->container['hasUnsetTaxRate'] === null) {
+            $invalidProperties[] = "'hasUnsetTaxRate' can't be null";
         }
         return $invalidProperties;
     }
@@ -379,163 +379,163 @@ class PriceInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets hourly_wage
+     * Gets hourlyWage
      *
      * @return float
      */
     public function getHourlyWage()
     {
-        return $this->container['hourly_wage'];
+        return $this->container['hourlyWage'];
     }
 
     /**
-     * Sets hourly_wage
+     * Sets hourlyWage
      *
-     * @param float $hourly_wage The amount of currency per one hour of manual labour work in this project.
+     * @param float $hourlyWage The amount of currency per one hour of manual labour work in this project.
      *
      * @return self
      */
-    public function setHourlyWage($hourly_wage)
+    public function setHourlyWage($hourlyWage)
     {
-        if (is_null($hourly_wage)) {
-            throw new \InvalidArgumentException('non-nullable hourly_wage cannot be null');
+        if (is_null($hourlyWage)) {
+            throw new \InvalidArgumentException('non-nullable hourlyWage cannot be null');
         }
-        $this->container['hourly_wage'] = $hourly_wage;
+        $this->container['hourlyWage'] = $hourlyWage;
 
         return $this;
     }
 
     /**
-     * Gets deduction_factor
+     * Gets deductionFactor
      *
      * @return float
      */
     public function getDeductionFactor()
     {
-        return $this->container['deduction_factor'];
+        return $this->container['deductionFactor'];
     }
 
     /**
-     * Sets deduction_factor
+     * Sets deductionFactor
      *
-     * @param float $deduction_factor The final, total price will be deducted by this rate.
+     * @param float $deductionFactor The final, total price will be deducted by this rate.
      *
      * @return self
      */
-    public function setDeductionFactor($deduction_factor)
+    public function setDeductionFactor($deductionFactor)
     {
-        if (is_null($deduction_factor)) {
-            throw new \InvalidArgumentException('non-nullable deduction_factor cannot be null');
+        if (is_null($deductionFactor)) {
+            throw new \InvalidArgumentException('non-nullable deductionFactor cannot be null');
         }
-        $this->container['deduction_factor'] = $deduction_factor;
+        $this->container['deductionFactor'] = $deductionFactor;
 
         return $this;
     }
 
     /**
-     * Gets flat_sum
+     * Gets flatSum
      *
      * @return float
      */
     public function getFlatSum()
     {
-        return $this->container['flat_sum'];
+        return $this->container['flatSum'];
     }
 
     /**
-     * Sets flat_sum
+     * Sets flatSum
      *
-     * @param float $flat_sum This is given when there is only one flat price for the whole service specification.
+     * @param float $flatSum This is given when there is only one flat price for the whole service specification.
      *
      * @return self
      */
-    public function setFlatSum($flat_sum)
+    public function setFlatSum($flatSum)
     {
-        if (is_null($flat_sum)) {
-            throw new \InvalidArgumentException('non-nullable flat_sum cannot be null');
+        if (is_null($flatSum)) {
+            throw new \InvalidArgumentException('non-nullable flatSum cannot be null');
         }
-        $this->container['flat_sum'] = $flat_sum;
+        $this->container['flatSum'] = $flatSum;
 
         return $this;
     }
 
     /**
-     * Gets tax_rate
+     * Gets taxRate
      *
      * @return float
      */
     public function getTaxRate()
     {
-        return $this->container['tax_rate'];
+        return $this->container['taxRate'];
     }
 
     /**
-     * Sets tax_rate
+     * Sets taxRate
      *
-     * @param float $tax_rate Global tax rate for the project. Note that certain elements may have a different, specific tax rate.
+     * @param float $taxRate Global tax rate for the project. Note that certain elements may have a different, specific tax rate.
      *
      * @return self
      */
-    public function setTaxRate($tax_rate)
+    public function setTaxRate($taxRate)
     {
-        if (is_null($tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable tax_rate cannot be null');
+        if (is_null($taxRate)) {
+            throw new \InvalidArgumentException('non-nullable taxRate cannot be null');
         }
-        $this->container['tax_rate'] = $tax_rate;
+        $this->container['taxRate'] = $taxRate;
 
         return $this;
     }
 
     /**
-     * Gets has_unset_tax_rate
+     * Gets hasUnsetTaxRate
      *
      * @return bool
      */
     public function getHasUnsetTaxRate()
     {
-        return $this->container['has_unset_tax_rate'];
+        return $this->container['hasUnsetTaxRate'];
     }
 
     /**
-     * Sets has_unset_tax_rate
+     * Sets hasUnsetTaxRate
      *
-     * @param bool $has_unset_tax_rate This property indicates if the TaxRate property is actually zero (0) or if it's just unset. The TaxRate is a non-nullable property, so it can't be null and therefore a distinction between unset and zero relies on this additional property. When exporting to GAEB, this can be used e.g. to decide whether or not the tax rate should be serialized. This property is automtically set to false when the TaxRate is set to any value, even zero. If the TaxRate is not set to zero, this property will always return false and can not be set to true.
+     * @param bool $hasUnsetTaxRate This property indicates if the TaxRate property is actually zero (0) or if it's just unset. The TaxRate is a non-nullable property, so it can't be null and therefore a distinction between unset and zero relies on this additional property. When exporting to GAEB, this can be used e.g. to decide whether or not the tax rate should be serialized. This property is automtically set to false when the TaxRate is set to any value, even zero. If the TaxRate is not set to zero, this property will always return false and can not be set to true.
      *
      * @return self
      */
-    public function setHasUnsetTaxRate($has_unset_tax_rate)
+    public function setHasUnsetTaxRate($hasUnsetTaxRate)
     {
-        if (is_null($has_unset_tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable has_unset_tax_rate cannot be null');
+        if (is_null($hasUnsetTaxRate)) {
+            throw new \InvalidArgumentException('non-nullable hasUnsetTaxRate cannot be null');
         }
-        $this->container['has_unset_tax_rate'] = $has_unset_tax_rate;
+        $this->container['hasUnsetTaxRate'] = $hasUnsetTaxRate;
 
         return $this;
     }
 
     /**
-     * Gets trade_discounts
+     * Gets tradeDiscounts
      *
      * @return \Dangl\AVACloud\Model\TradeDiscountDto[]|null
      */
     public function getTradeDiscounts()
     {
-        return $this->container['trade_discounts'];
+        return $this->container['tradeDiscounts'];
     }
 
     /**
-     * Sets trade_discounts
+     * Sets tradeDiscounts
      *
-     * @param \Dangl\AVACloud\Model\TradeDiscountDto[]|null $trade_discounts Trade discounts for offered in this ServiceSpecification.
+     * @param \Dangl\AVACloud\Model\TradeDiscountDto[]|null $tradeDiscounts Trade discounts for offered in this ServiceSpecification.
      *
      * @return self
      */
-    public function setTradeDiscounts($trade_discounts)
+    public function setTradeDiscounts($tradeDiscounts)
     {
-        if (is_null($trade_discounts)) {
-            throw new \InvalidArgumentException('non-nullable trade_discounts cannot be null');
+        if (is_null($tradeDiscounts)) {
+            throw new \InvalidArgumentException('non-nullable tradeDiscounts cannot be null');
         }
-        $this->container['trade_discounts'] = $trade_discounts;
+        $this->container['tradeDiscounts'] = $tradeDiscounts;
 
         return $this;
     }

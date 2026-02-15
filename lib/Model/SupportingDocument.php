@@ -59,13 +59,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'document_reference' => 'string',
+        'documentReference' => 'string',
         'description' => 'string',
-        'external_document_url' => 'string',
-        'document_base64' => 'string',
-        'file_name' => 'string',
-        'document_mime_type' => '\Dangl\AVACloud\Model\AttachmentMimeType',
-        'placeholder_id' => 'string'
+        'externalDocumentUrl' => 'string',
+        'documentBase64' => 'string',
+        'fileName' => 'string',
+        'documentMimeType' => '\Dangl\AVACloud\Model\AttachmentMimeType',
+        'placeholderId' => 'string'
     ];
 
     /**
@@ -76,13 +76,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'document_reference' => null,
+        'documentReference' => null,
         'description' => null,
-        'external_document_url' => null,
-        'document_base64' => null,
-        'file_name' => null,
-        'document_mime_type' => null,
-        'placeholder_id' => 'guid'
+        'externalDocumentUrl' => null,
+        'documentBase64' => null,
+        'fileName' => null,
+        'documentMimeType' => null,
+        'placeholderId' => 'guid'
     ];
 
     /**
@@ -91,13 +91,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'document_reference' => false,
+        'documentReference' => false,
         'description' => false,
-        'external_document_url' => false,
-        'document_base64' => false,
-        'file_name' => false,
-        'document_mime_type' => false,
-        'placeholder_id' => false
+        'externalDocumentUrl' => false,
+        'documentBase64' => false,
+        'fileName' => false,
+        'documentMimeType' => false,
+        'placeholderId' => false
     ];
 
     /**
@@ -186,13 +186,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'document_reference' => 'documentReference',
+        'documentReference' => 'documentReference',
         'description' => 'description',
-        'external_document_url' => 'externalDocumentUrl',
-        'document_base64' => 'documentBase64',
-        'file_name' => 'fileName',
-        'document_mime_type' => 'documentMimeType',
-        'placeholder_id' => 'placeholderId'
+        'externalDocumentUrl' => 'externalDocumentUrl',
+        'documentBase64' => 'documentBase64',
+        'fileName' => 'fileName',
+        'documentMimeType' => 'documentMimeType',
+        'placeholderId' => 'placeholderId'
     ];
 
     /**
@@ -201,13 +201,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'document_reference' => 'setDocumentReference',
+        'documentReference' => 'setDocumentReference',
         'description' => 'setDescription',
-        'external_document_url' => 'setExternalDocumentUrl',
-        'document_base64' => 'setDocumentBase64',
-        'file_name' => 'setFileName',
-        'document_mime_type' => 'setDocumentMimeType',
-        'placeholder_id' => 'setPlaceholderId'
+        'externalDocumentUrl' => 'setExternalDocumentUrl',
+        'documentBase64' => 'setDocumentBase64',
+        'fileName' => 'setFileName',
+        'documentMimeType' => 'setDocumentMimeType',
+        'placeholderId' => 'setPlaceholderId'
     ];
 
     /**
@@ -216,13 +216,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'document_reference' => 'getDocumentReference',
+        'documentReference' => 'getDocumentReference',
         'description' => 'getDescription',
-        'external_document_url' => 'getExternalDocumentUrl',
-        'document_base64' => 'getDocumentBase64',
-        'file_name' => 'getFileName',
-        'document_mime_type' => 'getDocumentMimeType',
-        'placeholder_id' => 'getPlaceholderId'
+        'externalDocumentUrl' => 'getExternalDocumentUrl',
+        'documentBase64' => 'getDocumentBase64',
+        'fileName' => 'getFileName',
+        'documentMimeType' => 'getDocumentMimeType',
+        'placeholderId' => 'getPlaceholderId'
     ];
 
     /**
@@ -282,13 +282,13 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('document_reference', $data ?? [], null);
+        $this->setIfExists('documentReference', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('external_document_url', $data ?? [], null);
-        $this->setIfExists('document_base64', $data ?? [], null);
-        $this->setIfExists('file_name', $data ?? [], null);
-        $this->setIfExists('document_mime_type', $data ?? [], null);
-        $this->setIfExists('placeholder_id', $data ?? [], null);
+        $this->setIfExists('externalDocumentUrl', $data ?? [], null);
+        $this->setIfExists('documentBase64', $data ?? [], null);
+        $this->setIfExists('fileName', $data ?? [], null);
+        $this->setIfExists('documentMimeType', $data ?? [], null);
+        $this->setIfExists('placeholderId', $data ?? [], null);
     }
 
     /**
@@ -318,8 +318,8 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
     {
         $invalidProperties = [];
 
-        if ($this->container['document_mime_type'] === null) {
-            $invalidProperties[] = "'document_mime_type' can't be null";
+        if ($this->container['documentMimeType'] === null) {
+            $invalidProperties[] = "'documentMimeType' can't be null";
         }
         return $invalidProperties;
     }
@@ -337,28 +337,28 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets document_reference
+     * Gets documentReference
      *
      * @return string|null
      */
     public function getDocumentReference()
     {
-        return $this->container['document_reference'];
+        return $this->container['documentReference'];
     }
 
     /**
-     * Sets document_reference
+     * Sets documentReference
      *
-     * @param string|null $document_reference BT-122 This is typically an id or a name
+     * @param string|null $documentReference BT-122 This is typically an id or a name
      *
      * @return self
      */
-    public function setDocumentReference($document_reference)
+    public function setDocumentReference($documentReference)
     {
-        if (is_null($document_reference)) {
-            throw new \InvalidArgumentException('non-nullable document_reference cannot be null');
+        if (is_null($documentReference)) {
+            throw new \InvalidArgumentException('non-nullable documentReference cannot be null');
         }
-        $this->container['document_reference'] = $document_reference;
+        $this->container['documentReference'] = $documentReference;
 
         return $this;
     }
@@ -391,136 +391,136 @@ class SupportingDocument implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets external_document_url
+     * Gets externalDocumentUrl
      *
      * @return string|null
      */
     public function getExternalDocumentUrl()
     {
-        return $this->container['external_document_url'];
+        return $this->container['externalDocumentUrl'];
     }
 
     /**
-     * Sets external_document_url
+     * Sets externalDocumentUrl
      *
-     * @param string|null $external_document_url BT-124 A link to the document in case this is an external reference
+     * @param string|null $externalDocumentUrl BT-124 A link to the document in case this is an external reference
      *
      * @return self
      */
-    public function setExternalDocumentUrl($external_document_url)
+    public function setExternalDocumentUrl($externalDocumentUrl)
     {
-        if (is_null($external_document_url)) {
-            throw new \InvalidArgumentException('non-nullable external_document_url cannot be null');
+        if (is_null($externalDocumentUrl)) {
+            throw new \InvalidArgumentException('non-nullable externalDocumentUrl cannot be null');
         }
-        $this->container['external_document_url'] = $external_document_url;
+        $this->container['externalDocumentUrl'] = $externalDocumentUrl;
 
         return $this;
     }
 
     /**
-     * Gets document_base64
+     * Gets documentBase64
      *
      * @return string|null
      */
     public function getDocumentBase64()
     {
-        return $this->container['document_base64'];
+        return $this->container['documentBase64'];
     }
 
     /**
-     * Sets document_base64
+     * Sets documentBase64
      *
-     * @param string|null $document_base64 BT-125 The document in base64 encoded form as binary data. This is ignored if you set PlaceholderId.
+     * @param string|null $documentBase64 BT-125 The document in base64 encoded form as binary data. This is ignored if you set PlaceholderId.
      *
      * @return self
      */
-    public function setDocumentBase64($document_base64)
+    public function setDocumentBase64($documentBase64)
     {
-        if (is_null($document_base64)) {
-            throw new \InvalidArgumentException('non-nullable document_base64 cannot be null');
+        if (is_null($documentBase64)) {
+            throw new \InvalidArgumentException('non-nullable documentBase64 cannot be null');
         }
-        $this->container['document_base64'] = $document_base64;
+        $this->container['documentBase64'] = $documentBase64;
 
         return $this;
     }
 
     /**
-     * Gets file_name
+     * Gets fileName
      *
      * @return string|null
      */
     public function getFileName()
     {
-        return $this->container['file_name'];
+        return $this->container['fileName'];
     }
 
     /**
-     * Sets file_name
+     * Sets fileName
      *
-     * @param string|null $file_name BT-125 This should be present if DocumentBase64 is set.
+     * @param string|null $fileName BT-125 This should be present if DocumentBase64 is set.
      *
      * @return self
      */
-    public function setFileName($file_name)
+    public function setFileName($fileName)
     {
-        if (is_null($file_name)) {
-            throw new \InvalidArgumentException('non-nullable file_name cannot be null');
+        if (is_null($fileName)) {
+            throw new \InvalidArgumentException('non-nullable fileName cannot be null');
         }
-        $this->container['file_name'] = $file_name;
+        $this->container['fileName'] = $fileName;
 
         return $this;
     }
 
     /**
-     * Gets document_mime_type
+     * Gets documentMimeType
      *
      * @return \Dangl\AVACloud\Model\AttachmentMimeType
      */
     public function getDocumentMimeType()
     {
-        return $this->container['document_mime_type'];
+        return $this->container['documentMimeType'];
     }
 
     /**
-     * Sets document_mime_type
+     * Sets documentMimeType
      *
-     * @param \Dangl\AVACloud\Model\AttachmentMimeType $document_mime_type document_mime_type
+     * @param \Dangl\AVACloud\Model\AttachmentMimeType $documentMimeType documentMimeType
      *
      * @return self
      */
-    public function setDocumentMimeType($document_mime_type)
+    public function setDocumentMimeType($documentMimeType)
     {
-        if (is_null($document_mime_type)) {
-            throw new \InvalidArgumentException('non-nullable document_mime_type cannot be null');
+        if (is_null($documentMimeType)) {
+            throw new \InvalidArgumentException('non-nullable documentMimeType cannot be null');
         }
-        $this->container['document_mime_type'] = $document_mime_type;
+        $this->container['documentMimeType'] = $documentMimeType;
 
         return $this;
     }
 
     /**
-     * Gets placeholder_id
+     * Gets placeholderId
      *
      * @return string|null
      */
     public function getPlaceholderId()
     {
-        return $this->container['placeholder_id'];
+        return $this->container['placeholderId'];
     }
 
     /**
-     * Sets placeholder_id
+     * Sets placeholderId
      *
-     * @param string|null $placeholder_id This is placeholder id to use instead of DocumentBase64 property for lazy-loading of documents. The use case of this is to avoid having the documents be processed in memory when they might be handled by the calling code. For example, in the AVACloud webservice, this placeholder can be used to avoid having to send the Base64 encoded document to the server and then downloading it again in the result. If this is given, the generated XML file will not be valid, since it will include the literal Guid value as a placeholder. You can use the 'xmlExportCallback' parameter in the XRechnungWriter to replace the placeholder with the actual Base64 contents of the file in this library, or just use a string replace method if you're working with the XML in a different context.
+     * @param string|null $placeholderId This is placeholder id to use instead of DocumentBase64 property for lazy-loading of documents. The use case of this is to avoid having the documents be processed in memory when they might be handled by the calling code. For example, in the AVACloud webservice, this placeholder can be used to avoid having to send the Base64 encoded document to the server and then downloading it again in the result. If this is given, the generated XML file will not be valid, since it will include the literal Guid value as a placeholder. You can use the 'xmlExportCallback' parameter in the XRechnungWriter to replace the placeholder with the actual Base64 contents of the file in this library, or just use a string replace method if you're working with the XML in a different context.
      *
      * @return self
      */
-    public function setPlaceholderId($placeholder_id)
+    public function setPlaceholderId($placeholderId)
     {
-        if (is_null($placeholder_id)) {
-            throw new \InvalidArgumentException('non-nullable placeholder_id cannot be null');
+        if (is_null($placeholderId)) {
+            throw new \InvalidArgumentException('non-nullable placeholderId cannot be null');
         }
-        $this->container['placeholder_id'] = $placeholder_id;
+        $this->container['placeholderId'] = $placeholderId;
 
         return $this;
     }

@@ -59,8 +59,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'vat_category' => '\Dangl\AVACloud\Model\VatCategory',
-        'vat_rate' => 'float'
+        'vatCategory' => '\Dangl\AVACloud\Model\VatCategory',
+        'vatRate' => 'float'
     ];
 
     /**
@@ -71,8 +71,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'vat_category' => null,
-        'vat_rate' => 'decimal'
+        'vatCategory' => null,
+        'vatRate' => 'decimal'
     ];
 
     /**
@@ -81,8 +81,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'vat_category' => false,
-        'vat_rate' => false
+        'vatCategory' => false,
+        'vatRate' => false
     ];
 
     /**
@@ -171,8 +171,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'vat_category' => 'vatCategory',
-        'vat_rate' => 'vatRate'
+        'vatCategory' => 'vatCategory',
+        'vatRate' => 'vatRate'
     ];
 
     /**
@@ -181,8 +181,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'vat_category' => 'setVatCategory',
-        'vat_rate' => 'setVatRate'
+        'vatCategory' => 'setVatCategory',
+        'vatRate' => 'setVatRate'
     ];
 
     /**
@@ -191,8 +191,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'vat_category' => 'getVatCategory',
-        'vat_rate' => 'getVatRate'
+        'vatCategory' => 'getVatCategory',
+        'vatRate' => 'getVatRate'
     ];
 
     /**
@@ -252,8 +252,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('vat_category', $data ?? [], null);
-        $this->setIfExists('vat_rate', $data ?? [], null);
+        $this->setIfExists('vatCategory', $data ?? [], null);
+        $this->setIfExists('vatRate', $data ?? [], null);
     }
 
     /**
@@ -283,8 +283,8 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['vat_category'] === null) {
-            $invalidProperties[] = "'vat_category' can't be null";
+        if ($this->container['vatCategory'] === null) {
+            $invalidProperties[] = "'vatCategory' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,55 +302,55 @@ class LineItemVatInformation implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets vat_category
+     * Gets vatCategory
      *
      * @return \Dangl\AVACloud\Model\VatCategory
      */
     public function getVatCategory()
     {
-        return $this->container['vat_category'];
+        return $this->container['vatCategory'];
     }
 
     /**
-     * Sets vat_category
+     * Sets vatCategory
      *
-     * @param \Dangl\AVACloud\Model\VatCategory $vat_category vat_category
+     * @param \Dangl\AVACloud\Model\VatCategory $vatCategory vatCategory
      *
      * @return self
      */
-    public function setVatCategory($vat_category)
+    public function setVatCategory($vatCategory)
     {
-        if (is_null($vat_category)) {
-            throw new \InvalidArgumentException('non-nullable vat_category cannot be null');
+        if (is_null($vatCategory)) {
+            throw new \InvalidArgumentException('non-nullable vatCategory cannot be null');
         }
-        $this->container['vat_category'] = $vat_category;
+        $this->container['vatCategory'] = $vatCategory;
 
         return $this;
     }
 
     /**
-     * Gets vat_rate
+     * Gets vatRate
      *
      * @return float|null
      */
     public function getVatRate()
     {
-        return $this->container['vat_rate'];
+        return $this->container['vatRate'];
     }
 
     /**
-     * Sets vat_rate
+     * Sets vatRate
      *
-     * @param float|null $vat_rate BT-152 The actual tax rate as a decimal value, meaning 19% would be 0.19
+     * @param float|null $vatRate BT-152 The actual tax rate as a decimal value, meaning 19% would be 0.19
      *
      * @return self
      */
-    public function setVatRate($vat_rate)
+    public function setVatRate($vatRate)
     {
-        if (is_null($vat_rate)) {
-            throw new \InvalidArgumentException('non-nullable vat_rate cannot be null');
+        if (is_null($vatRate)) {
+            throw new \InvalidArgumentException('non-nullable vatRate cannot be null');
         }
-        $this->container['vat_rate'] = $vat_rate;
+        $this->container['vatRate'] = $vatRate;
 
         return $this;
     }

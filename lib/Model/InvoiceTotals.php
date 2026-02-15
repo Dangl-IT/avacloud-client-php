@@ -59,15 +59,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_net' => 'float',
-        'total_allowances' => 'float',
-        'total_charges' => 'float',
-        'total_after_deductions' => 'float',
-        'total_vat_amount' => 'float',
-        'total_gross' => 'float',
-        'already_paid_total' => 'float',
-        'payable_rounding_amount' => 'float',
-        'total_to_be_paid' => 'float'
+        'totalNet' => 'float',
+        'totalAllowances' => 'float',
+        'totalCharges' => 'float',
+        'totalAfterDeductions' => 'float',
+        'totalVatAmount' => 'float',
+        'totalGross' => 'float',
+        'alreadyPaidTotal' => 'float',
+        'payableRoundingAmount' => 'float',
+        'totalToBePaid' => 'float'
     ];
 
     /**
@@ -78,15 +78,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_net' => 'decimal',
-        'total_allowances' => 'decimal',
-        'total_charges' => 'decimal',
-        'total_after_deductions' => 'decimal',
-        'total_vat_amount' => 'decimal',
-        'total_gross' => 'decimal',
-        'already_paid_total' => 'decimal',
-        'payable_rounding_amount' => 'decimal',
-        'total_to_be_paid' => 'decimal'
+        'totalNet' => 'decimal',
+        'totalAllowances' => 'decimal',
+        'totalCharges' => 'decimal',
+        'totalAfterDeductions' => 'decimal',
+        'totalVatAmount' => 'decimal',
+        'totalGross' => 'decimal',
+        'alreadyPaidTotal' => 'decimal',
+        'payableRoundingAmount' => 'decimal',
+        'totalToBePaid' => 'decimal'
     ];
 
     /**
@@ -95,15 +95,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'total_net' => false,
-        'total_allowances' => false,
-        'total_charges' => false,
-        'total_after_deductions' => false,
-        'total_vat_amount' => false,
-        'total_gross' => false,
-        'already_paid_total' => false,
-        'payable_rounding_amount' => false,
-        'total_to_be_paid' => false
+        'totalNet' => false,
+        'totalAllowances' => false,
+        'totalCharges' => false,
+        'totalAfterDeductions' => false,
+        'totalVatAmount' => false,
+        'totalGross' => false,
+        'alreadyPaidTotal' => false,
+        'payableRoundingAmount' => false,
+        'totalToBePaid' => false
     ];
 
     /**
@@ -192,15 +192,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_net' => 'totalNet',
-        'total_allowances' => 'totalAllowances',
-        'total_charges' => 'totalCharges',
-        'total_after_deductions' => 'totalAfterDeductions',
-        'total_vat_amount' => 'totalVatAmount',
-        'total_gross' => 'totalGross',
-        'already_paid_total' => 'alreadyPaidTotal',
-        'payable_rounding_amount' => 'payableRoundingAmount',
-        'total_to_be_paid' => 'totalToBePaid'
+        'totalNet' => 'totalNet',
+        'totalAllowances' => 'totalAllowances',
+        'totalCharges' => 'totalCharges',
+        'totalAfterDeductions' => 'totalAfterDeductions',
+        'totalVatAmount' => 'totalVatAmount',
+        'totalGross' => 'totalGross',
+        'alreadyPaidTotal' => 'alreadyPaidTotal',
+        'payableRoundingAmount' => 'payableRoundingAmount',
+        'totalToBePaid' => 'totalToBePaid'
     ];
 
     /**
@@ -209,15 +209,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'total_net' => 'setTotalNet',
-        'total_allowances' => 'setTotalAllowances',
-        'total_charges' => 'setTotalCharges',
-        'total_after_deductions' => 'setTotalAfterDeductions',
-        'total_vat_amount' => 'setTotalVatAmount',
-        'total_gross' => 'setTotalGross',
-        'already_paid_total' => 'setAlreadyPaidTotal',
-        'payable_rounding_amount' => 'setPayableRoundingAmount',
-        'total_to_be_paid' => 'setTotalToBePaid'
+        'totalNet' => 'setTotalNet',
+        'totalAllowances' => 'setTotalAllowances',
+        'totalCharges' => 'setTotalCharges',
+        'totalAfterDeductions' => 'setTotalAfterDeductions',
+        'totalVatAmount' => 'setTotalVatAmount',
+        'totalGross' => 'setTotalGross',
+        'alreadyPaidTotal' => 'setAlreadyPaidTotal',
+        'payableRoundingAmount' => 'setPayableRoundingAmount',
+        'totalToBePaid' => 'setTotalToBePaid'
     ];
 
     /**
@@ -226,15 +226,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'total_net' => 'getTotalNet',
-        'total_allowances' => 'getTotalAllowances',
-        'total_charges' => 'getTotalCharges',
-        'total_after_deductions' => 'getTotalAfterDeductions',
-        'total_vat_amount' => 'getTotalVatAmount',
-        'total_gross' => 'getTotalGross',
-        'already_paid_total' => 'getAlreadyPaidTotal',
-        'payable_rounding_amount' => 'getPayableRoundingAmount',
-        'total_to_be_paid' => 'getTotalToBePaid'
+        'totalNet' => 'getTotalNet',
+        'totalAllowances' => 'getTotalAllowances',
+        'totalCharges' => 'getTotalCharges',
+        'totalAfterDeductions' => 'getTotalAfterDeductions',
+        'totalVatAmount' => 'getTotalVatAmount',
+        'totalGross' => 'getTotalGross',
+        'alreadyPaidTotal' => 'getAlreadyPaidTotal',
+        'payableRoundingAmount' => 'getPayableRoundingAmount',
+        'totalToBePaid' => 'getTotalToBePaid'
     ];
 
     /**
@@ -294,15 +294,15 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('total_net', $data ?? [], null);
-        $this->setIfExists('total_allowances', $data ?? [], null);
-        $this->setIfExists('total_charges', $data ?? [], null);
-        $this->setIfExists('total_after_deductions', $data ?? [], null);
-        $this->setIfExists('total_vat_amount', $data ?? [], null);
-        $this->setIfExists('total_gross', $data ?? [], null);
-        $this->setIfExists('already_paid_total', $data ?? [], null);
-        $this->setIfExists('payable_rounding_amount', $data ?? [], null);
-        $this->setIfExists('total_to_be_paid', $data ?? [], null);
+        $this->setIfExists('totalNet', $data ?? [], null);
+        $this->setIfExists('totalAllowances', $data ?? [], null);
+        $this->setIfExists('totalCharges', $data ?? [], null);
+        $this->setIfExists('totalAfterDeductions', $data ?? [], null);
+        $this->setIfExists('totalVatAmount', $data ?? [], null);
+        $this->setIfExists('totalGross', $data ?? [], null);
+        $this->setIfExists('alreadyPaidTotal', $data ?? [], null);
+        $this->setIfExists('payableRoundingAmount', $data ?? [], null);
+        $this->setIfExists('totalToBePaid', $data ?? [], null);
     }
 
     /**
@@ -348,244 +348,244 @@ class InvoiceTotals implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets total_net
+     * Gets totalNet
      *
      * @return float|null
      */
     public function getTotalNet()
     {
-        return $this->container['total_net'];
+        return $this->container['totalNet'];
     }
 
     /**
-     * Sets total_net
+     * Sets totalNet
      *
-     * @param float|null $total_net BT-106 Sum of all invoice items in net. BT-106 in XRechnung.
+     * @param float|null $totalNet BT-106 Sum of all invoice items in net. BT-106 in XRechnung.
      *
      * @return self
      */
-    public function setTotalNet($total_net)
+    public function setTotalNet($totalNet)
     {
-        if (is_null($total_net)) {
-            throw new \InvalidArgumentException('non-nullable total_net cannot be null');
+        if (is_null($totalNet)) {
+            throw new \InvalidArgumentException('non-nullable totalNet cannot be null');
         }
-        $this->container['total_net'] = $total_net;
+        $this->container['totalNet'] = $totalNet;
 
         return $this;
     }
 
     /**
-     * Gets total_allowances
+     * Gets totalAllowances
      *
      * @return float|null
      */
     public function getTotalAllowances()
     {
-        return $this->container['total_allowances'];
+        return $this->container['totalAllowances'];
     }
 
     /**
-     * Sets total_allowances
+     * Sets totalAllowances
      *
-     * @param float|null $total_allowances BT-107 This is the sum of all allowances (e.g. deductions or withheld tax) in the invoice BT-107 in XRechnung.
+     * @param float|null $totalAllowances BT-107 This is the sum of all allowances (e.g. deductions or withheld tax) in the invoice BT-107 in XRechnung.
      *
      * @return self
      */
-    public function setTotalAllowances($total_allowances)
+    public function setTotalAllowances($totalAllowances)
     {
-        if (is_null($total_allowances)) {
-            throw new \InvalidArgumentException('non-nullable total_allowances cannot be null');
+        if (is_null($totalAllowances)) {
+            throw new \InvalidArgumentException('non-nullable totalAllowances cannot be null');
         }
-        $this->container['total_allowances'] = $total_allowances;
+        $this->container['totalAllowances'] = $totalAllowances;
 
         return $this;
     }
 
     /**
-     * Gets total_charges
+     * Gets totalCharges
      *
      * @return float|null
      */
     public function getTotalCharges()
     {
-        return $this->container['total_charges'];
+        return $this->container['totalCharges'];
     }
 
     /**
-     * Sets total_charges
+     * Sets totalCharges
      *
-     * @param float|null $total_charges BT-108 This is the sum of all charges in the invoice, except VAT. For example, late fees or surcharges. BT-108 in XRechnung.
+     * @param float|null $totalCharges BT-108 This is the sum of all charges in the invoice, except VAT. For example, late fees or surcharges. BT-108 in XRechnung.
      *
      * @return self
      */
-    public function setTotalCharges($total_charges)
+    public function setTotalCharges($totalCharges)
     {
-        if (is_null($total_charges)) {
-            throw new \InvalidArgumentException('non-nullable total_charges cannot be null');
+        if (is_null($totalCharges)) {
+            throw new \InvalidArgumentException('non-nullable totalCharges cannot be null');
         }
-        $this->container['total_charges'] = $total_charges;
+        $this->container['totalCharges'] = $totalCharges;
 
         return $this;
     }
 
     /**
-     * Gets total_after_deductions
+     * Gets totalAfterDeductions
      *
      * @return float|null
      */
     public function getTotalAfterDeductions()
     {
-        return $this->container['total_after_deductions'];
+        return $this->container['totalAfterDeductions'];
     }
 
     /**
-     * Sets total_after_deductions
+     * Sets totalAfterDeductions
      *
-     * @param float|null $total_after_deductions BT-109 This is the total net value of the invoice after applied allowances and charges, meaning the actual net sum to be paid. BT-109 in XRechnung.
+     * @param float|null $totalAfterDeductions BT-109 This is the total net value of the invoice after applied allowances and charges, meaning the actual net sum to be paid. BT-109 in XRechnung.
      *
      * @return self
      */
-    public function setTotalAfterDeductions($total_after_deductions)
+    public function setTotalAfterDeductions($totalAfterDeductions)
     {
-        if (is_null($total_after_deductions)) {
-            throw new \InvalidArgumentException('non-nullable total_after_deductions cannot be null');
+        if (is_null($totalAfterDeductions)) {
+            throw new \InvalidArgumentException('non-nullable totalAfterDeductions cannot be null');
         }
-        $this->container['total_after_deductions'] = $total_after_deductions;
+        $this->container['totalAfterDeductions'] = $totalAfterDeductions;
 
         return $this;
     }
 
     /**
-     * Gets total_vat_amount
+     * Gets totalVatAmount
      *
      * @return float|null
      */
     public function getTotalVatAmount()
     {
-        return $this->container['total_vat_amount'];
+        return $this->container['totalVatAmount'];
     }
 
     /**
-     * Sets total_vat_amount
+     * Sets totalVatAmount
      *
-     * @param float|null $total_vat_amount BT-110 The total amount of VAT in the invoice. BT-110 in XRechnung.
+     * @param float|null $totalVatAmount BT-110 The total amount of VAT in the invoice. BT-110 in XRechnung.
      *
      * @return self
      */
-    public function setTotalVatAmount($total_vat_amount)
+    public function setTotalVatAmount($totalVatAmount)
     {
-        if (is_null($total_vat_amount)) {
-            throw new \InvalidArgumentException('non-nullable total_vat_amount cannot be null');
+        if (is_null($totalVatAmount)) {
+            throw new \InvalidArgumentException('non-nullable totalVatAmount cannot be null');
         }
-        $this->container['total_vat_amount'] = $total_vat_amount;
+        $this->container['totalVatAmount'] = $totalVatAmount;
 
         return $this;
     }
 
     /**
-     * Gets total_gross
+     * Gets totalGross
      *
      * @return float|null
      */
     public function getTotalGross()
     {
-        return $this->container['total_gross'];
+        return $this->container['totalGross'];
     }
 
     /**
-     * Sets total_gross
+     * Sets totalGross
      *
-     * @param float|null $total_gross BT-112 The total gross amount of the invoice, including all taxes and deductions. BT-112 in XRechnung.
+     * @param float|null $totalGross BT-112 The total gross amount of the invoice, including all taxes and deductions. BT-112 in XRechnung.
      *
      * @return self
      */
-    public function setTotalGross($total_gross)
+    public function setTotalGross($totalGross)
     {
-        if (is_null($total_gross)) {
-            throw new \InvalidArgumentException('non-nullable total_gross cannot be null');
+        if (is_null($totalGross)) {
+            throw new \InvalidArgumentException('non-nullable totalGross cannot be null');
         }
-        $this->container['total_gross'] = $total_gross;
+        $this->container['totalGross'] = $totalGross;
 
         return $this;
     }
 
     /**
-     * Gets already_paid_total
+     * Gets alreadyPaidTotal
      *
      * @return float|null
      */
     public function getAlreadyPaidTotal()
     {
-        return $this->container['already_paid_total'];
+        return $this->container['alreadyPaidTotal'];
     }
 
     /**
-     * Sets already_paid_total
+     * Sets alreadyPaidTotal
      *
-     * @param float|null $already_paid_total BT-113 The total amount that has already been paid for this invoice, e.g. used when previous invoice sums are included here that have already been paid. BT-113 in XRechnung.
+     * @param float|null $alreadyPaidTotal BT-113 The total amount that has already been paid for this invoice, e.g. used when previous invoice sums are included here that have already been paid. BT-113 in XRechnung.
      *
      * @return self
      */
-    public function setAlreadyPaidTotal($already_paid_total)
+    public function setAlreadyPaidTotal($alreadyPaidTotal)
     {
-        if (is_null($already_paid_total)) {
-            throw new \InvalidArgumentException('non-nullable already_paid_total cannot be null');
+        if (is_null($alreadyPaidTotal)) {
+            throw new \InvalidArgumentException('non-nullable alreadyPaidTotal cannot be null');
         }
-        $this->container['already_paid_total'] = $already_paid_total;
+        $this->container['alreadyPaidTotal'] = $alreadyPaidTotal;
 
         return $this;
     }
 
     /**
-     * Gets payable_rounding_amount
+     * Gets payableRoundingAmount
      *
      * @return float|null
      */
     public function getPayableRoundingAmount()
     {
-        return $this->container['payable_rounding_amount'];
+        return $this->container['payableRoundingAmount'];
     }
 
     /**
-     * Sets payable_rounding_amount
+     * Sets payableRoundingAmount
      *
-     * @param float|null $payable_rounding_amount BT-114 If this is given, this specifies if any rounding amount is applied to the invoice, before calculating the TotalToBePaid value. BT-114 in XRechnung.
+     * @param float|null $payableRoundingAmount BT-114 If this is given, this specifies if any rounding amount is applied to the invoice, before calculating the TotalToBePaid value. BT-114 in XRechnung.
      *
      * @return self
      */
-    public function setPayableRoundingAmount($payable_rounding_amount)
+    public function setPayableRoundingAmount($payableRoundingAmount)
     {
-        if (is_null($payable_rounding_amount)) {
-            throw new \InvalidArgumentException('non-nullable payable_rounding_amount cannot be null');
+        if (is_null($payableRoundingAmount)) {
+            throw new \InvalidArgumentException('non-nullable payableRoundingAmount cannot be null');
         }
-        $this->container['payable_rounding_amount'] = $payable_rounding_amount;
+        $this->container['payableRoundingAmount'] = $payableRoundingAmount;
 
         return $this;
     }
 
     /**
-     * Gets total_to_be_paid
+     * Gets totalToBePaid
      *
      * @return float|null
      */
     public function getTotalToBePaid()
     {
-        return $this->container['total_to_be_paid'];
+        return $this->container['totalToBePaid'];
     }
 
     /**
-     * Sets total_to_be_paid
+     * Sets totalToBePaid
      *
-     * @param float|null $total_to_be_paid BT-115 The sum that needs to be paid for this invoice. This is the total gross amount minus the already paid amount. BT-115 in XRechnung.
+     * @param float|null $totalToBePaid BT-115 The sum that needs to be paid for this invoice. This is the total gross amount minus the already paid amount. BT-115 in XRechnung.
      *
      * @return self
      */
-    public function setTotalToBePaid($total_to_be_paid)
+    public function setTotalToBePaid($totalToBePaid)
     {
-        if (is_null($total_to_be_paid)) {
-            throw new \InvalidArgumentException('non-nullable total_to_be_paid cannot be null');
+        if (is_null($totalToBePaid)) {
+            throw new \InvalidArgumentException('non-nullable totalToBePaid cannot be null');
         }
-        $this->container['total_to_be_paid'] = $total_to_be_paid;
+        $this->container['totalToBePaid'] = $totalToBePaid;
 
         return $this;
     }

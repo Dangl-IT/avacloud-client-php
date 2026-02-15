@@ -81,7 +81,7 @@ class GetProjectMergeResultTest extends TestCase
     }
 
     /**
-     * Test attribute "merged_project"
+     * Test attribute "mergedProject"
      */
     public function testPropertyMergedProject()
     {
@@ -90,7 +90,7 @@ class GetProjectMergeResultTest extends TestCase
     }
 
     /**
-     * Test attribute "non_matched_source_elements"
+     * Test attribute "nonMatchedSourceElements"
      */
     public function testPropertyNonMatchedSourceElements()
     {
@@ -99,7 +99,7 @@ class GetProjectMergeResultTest extends TestCase
     }
 
     /**
-     * Test attribute "non_matched_target_elements"
+     * Test attribute "nonMatchedTargetElements"
      */
     public function testPropertyNonMatchedTargetElements()
     {

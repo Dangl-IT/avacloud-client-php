@@ -59,7 +59,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'element_path' => 'string'
+        'elementPath' => 'string'
     ];
 
     /**
@@ -70,7 +70,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'element_path' => null
+        'elementPath' => null
     ];
 
     /**
@@ -79,7 +79,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'element_path' => false
+        'elementPath' => false
     ];
 
     /**
@@ -168,7 +168,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'element_path' => 'elementPath'
+        'elementPath' => 'elementPath'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'element_path' => 'setElementPath'
+        'elementPath' => 'setElementPath'
     ];
 
     /**
@@ -186,7 +186,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'element_path' => 'getElementPath'
+        'elementPath' => 'getElementPath'
     ];
 
     /**
@@ -246,7 +246,7 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('element_path', $data ?? [], null);
+        $this->setIfExists('elementPath', $data ?? [], null);
     }
 
     /**
@@ -292,28 +292,28 @@ class ObjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets element_path
+     * Gets elementPath
      *
      * @return string|null
      */
     public function getElementPath()
     {
-        return $this->container['element_path'];
+        return $this->container['elementPath'];
     }
 
     /**
-     * Sets element_path
+     * Sets elementPath
      *
-     * @param string|null $element_path The path under which the element with error was found.
+     * @param string|null $elementPath The path under which the element with error was found.
      *
      * @return self
      */
-    public function setElementPath($element_path)
+    public function setElementPath($elementPath)
     {
-        if (is_null($element_path)) {
-            throw new \InvalidArgumentException('non-nullable element_path cannot be null');
+        if (is_null($elementPath)) {
+            throw new \InvalidArgumentException('non-nullable elementPath cannot be null');
         }
-        $this->container['element_path'] = $element_path;
+        $this->container['elementPath'] = $elementPath;
 
         return $this;
     }

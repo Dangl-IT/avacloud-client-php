@@ -59,9 +59,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'line_number' => 'int',
-        'line_position' => 'int',
-        'invoice_data_point_id' => 'string'
+        'lineNumber' => 'int',
+        'linePosition' => 'int',
+        'invoiceDataPointId' => 'string'
     ];
 
     /**
@@ -72,9 +72,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'line_number' => 'int32',
-        'line_position' => 'int32',
-        'invoice_data_point_id' => null
+        'lineNumber' => 'int32',
+        'linePosition' => 'int32',
+        'invoiceDataPointId' => null
     ];
 
     /**
@@ -83,9 +83,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'line_number' => false,
-        'line_position' => false,
-        'invoice_data_point_id' => false
+        'lineNumber' => false,
+        'linePosition' => false,
+        'invoiceDataPointId' => false
     ];
 
     /**
@@ -174,9 +174,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'line_number' => 'lineNumber',
-        'line_position' => 'linePosition',
-        'invoice_data_point_id' => 'invoiceDataPointId'
+        'lineNumber' => 'lineNumber',
+        'linePosition' => 'linePosition',
+        'invoiceDataPointId' => 'invoiceDataPointId'
     ];
 
     /**
@@ -185,9 +185,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'line_number' => 'setLineNumber',
-        'line_position' => 'setLinePosition',
-        'invoice_data_point_id' => 'setInvoiceDataPointId'
+        'lineNumber' => 'setLineNumber',
+        'linePosition' => 'setLinePosition',
+        'invoiceDataPointId' => 'setInvoiceDataPointId'
     ];
 
     /**
@@ -196,9 +196,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'line_number' => 'getLineNumber',
-        'line_position' => 'getLinePosition',
-        'invoice_data_point_id' => 'getInvoiceDataPointId'
+        'lineNumber' => 'getLineNumber',
+        'linePosition' => 'getLinePosition',
+        'invoiceDataPointId' => 'getInvoiceDataPointId'
     ];
 
     /**
@@ -258,9 +258,9 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('line_number', $data ?? [], null);
-        $this->setIfExists('line_position', $data ?? [], null);
-        $this->setIfExists('invoice_data_point_id', $data ?? [], null);
+        $this->setIfExists('lineNumber', $data ?? [], null);
+        $this->setIfExists('linePosition', $data ?? [], null);
+        $this->setIfExists('invoiceDataPointId', $data ?? [], null);
     }
 
     /**
@@ -290,11 +290,11 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
     {
         $invalidProperties = [];
 
-        if ($this->container['line_number'] === null) {
-            $invalidProperties[] = "'line_number' can't be null";
+        if ($this->container['lineNumber'] === null) {
+            $invalidProperties[] = "'lineNumber' can't be null";
         }
-        if ($this->container['line_position'] === null) {
-            $invalidProperties[] = "'line_position' can't be null";
+        if ($this->container['linePosition'] === null) {
+            $invalidProperties[] = "'linePosition' can't be null";
         }
         return $invalidProperties;
     }
@@ -312,82 +312,82 @@ class XmlSchemaValidationCheckDetails implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets line_number
+     * Gets lineNumber
      *
      * @return int
      */
     public function getLineNumber()
     {
-        return $this->container['line_number'];
+        return $this->container['lineNumber'];
     }
 
     /**
-     * Sets line_number
+     * Sets lineNumber
      *
-     * @param int $line_number The line number on which the validation happened
+     * @param int $lineNumber The line number on which the validation happened
      *
      * @return self
      */
-    public function setLineNumber($line_number)
+    public function setLineNumber($lineNumber)
     {
-        if (is_null($line_number)) {
-            throw new \InvalidArgumentException('non-nullable line_number cannot be null');
+        if (is_null($lineNumber)) {
+            throw new \InvalidArgumentException('non-nullable lineNumber cannot be null');
         }
-        $this->container['line_number'] = $line_number;
+        $this->container['lineNumber'] = $lineNumber;
 
         return $this;
     }
 
     /**
-     * Gets line_position
+     * Gets linePosition
      *
      * @return int
      */
     public function getLinePosition()
     {
-        return $this->container['line_position'];
+        return $this->container['linePosition'];
     }
 
     /**
-     * Sets line_position
+     * Sets linePosition
      *
-     * @param int $line_position The position in the line
+     * @param int $linePosition The position in the line
      *
      * @return self
      */
-    public function setLinePosition($line_position)
+    public function setLinePosition($linePosition)
     {
-        if (is_null($line_position)) {
-            throw new \InvalidArgumentException('non-nullable line_position cannot be null');
+        if (is_null($linePosition)) {
+            throw new \InvalidArgumentException('non-nullable linePosition cannot be null');
         }
-        $this->container['line_position'] = $line_position;
+        $this->container['linePosition'] = $linePosition;
 
         return $this;
     }
 
     /**
-     * Gets invoice_data_point_id
+     * Gets invoiceDataPointId
      *
      * @return string|null
      */
     public function getInvoiceDataPointId()
     {
-        return $this->container['invoice_data_point_id'];
+        return $this->container['invoiceDataPointId'];
     }
 
     /**
-     * Sets invoice_data_point_id
+     * Sets invoiceDataPointId
      *
-     * @param string|null $invoice_data_point_id Official data point identifier for XRechnung values, e.g. `BT-1` Should be null for other data types, e.g. GAEB or ÖNorm
+     * @param string|null $invoiceDataPointId Official data point identifier for XRechnung values, e.g. `BT-1` Should be null for other data types, e.g. GAEB or ÖNorm
      *
      * @return self
      */
-    public function setInvoiceDataPointId($invoice_data_point_id)
+    public function setInvoiceDataPointId($invoiceDataPointId)
     {
-        if (is_null($invoice_data_point_id)) {
-            throw new \InvalidArgumentException('non-nullable invoice_data_point_id cannot be null');
+        if (is_null($invoiceDataPointId)) {
+            throw new \InvalidArgumentException('non-nullable invoiceDataPointId cannot be null');
         }
-        $this->container['invoice_data_point_id'] = $invoice_data_point_id;
+        $this->container['invoiceDataPointId'] = $invoiceDataPointId;
 
         return $this;
     }

@@ -99,7 +99,7 @@ class ArticleDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "article_number"
+     * Test attribute "articleNumber"
      */
     public function testPropertyArticleNumber()
     {
@@ -117,7 +117,7 @@ class ArticleDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_tag"
+     * Test attribute "unitTag"
      */
     public function testPropertyUnitTag()
     {
@@ -135,7 +135,7 @@ class ArticleDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text"
+     * Test attribute "shortText"
      */
     public function testPropertyShortText()
     {
@@ -144,7 +144,7 @@ class ArticleDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "long_text"
+     * Test attribute "longText"
      */
     public function testPropertyLongText()
     {
@@ -153,7 +153,7 @@ class ArticleDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_long_text"
+     * Test attribute "htmlLongText"
      */
     public function testPropertyHtmlLongText()
     {

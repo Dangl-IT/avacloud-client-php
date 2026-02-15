@@ -61,11 +61,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'label' => 'string',
         'price' => 'float',
-        'hourly_wage' => 'float',
+        'hourlyWage' => 'float',
         'values' => '\Dangl\AVACloud\Model\CalculationDto[]',
-        'use_own_hourly_wage' => 'bool',
-        'total_time' => 'float',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]'
+        'useOwnHourlyWage' => 'bool',
+        'totalTime' => 'float',
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]'
     ];
 
     /**
@@ -78,11 +78,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPIFormats = [
         'label' => null,
         'price' => 'decimal',
-        'hourly_wage' => 'decimal',
+        'hourlyWage' => 'decimal',
         'values' => null,
-        'use_own_hourly_wage' => null,
-        'total_time' => 'decimal',
-        'project_catalogues' => null
+        'useOwnHourlyWage' => null,
+        'totalTime' => 'decimal',
+        'projectCatalogues' => null
     ];
 
     /**
@@ -93,11 +93,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     protected static array $openAPINullables = [
         'label' => false,
         'price' => false,
-        'hourly_wage' => false,
+        'hourlyWage' => false,
         'values' => false,
-        'use_own_hourly_wage' => false,
-        'total_time' => false,
-        'project_catalogues' => false
+        'useOwnHourlyWage' => false,
+        'totalTime' => false,
+        'projectCatalogues' => false
     ];
 
     /**
@@ -188,11 +188,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $attributeMap = [
         'label' => 'label',
         'price' => 'price',
-        'hourly_wage' => 'hourlyWage',
+        'hourlyWage' => 'hourlyWage',
         'values' => 'values',
-        'use_own_hourly_wage' => 'useOwnHourlyWage',
-        'total_time' => 'totalTime',
-        'project_catalogues' => 'projectCatalogues'
+        'useOwnHourlyWage' => 'useOwnHourlyWage',
+        'totalTime' => 'totalTime',
+        'projectCatalogues' => 'projectCatalogues'
     ];
 
     /**
@@ -203,11 +203,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $setters = [
         'label' => 'setLabel',
         'price' => 'setPrice',
-        'hourly_wage' => 'setHourlyWage',
+        'hourlyWage' => 'setHourlyWage',
         'values' => 'setValues',
-        'use_own_hourly_wage' => 'setUseOwnHourlyWage',
-        'total_time' => 'setTotalTime',
-        'project_catalogues' => 'setProjectCatalogues'
+        'useOwnHourlyWage' => 'setUseOwnHourlyWage',
+        'totalTime' => 'setTotalTime',
+        'projectCatalogues' => 'setProjectCatalogues'
     ];
 
     /**
@@ -218,11 +218,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $getters = [
         'label' => 'getLabel',
         'price' => 'getPrice',
-        'hourly_wage' => 'getHourlyWage',
+        'hourlyWage' => 'getHourlyWage',
         'values' => 'getValues',
-        'use_own_hourly_wage' => 'getUseOwnHourlyWage',
-        'total_time' => 'getTotalTime',
-        'project_catalogues' => 'getProjectCatalogues'
+        'useOwnHourlyWage' => 'getUseOwnHourlyWage',
+        'totalTime' => 'getTotalTime',
+        'projectCatalogues' => 'getProjectCatalogues'
     ];
 
     /**
@@ -284,11 +284,11 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $this->setIfExists('label', $data ?? [], null);
         $this->setIfExists('price', $data ?? [], null);
-        $this->setIfExists('hourly_wage', $data ?? [], null);
+        $this->setIfExists('hourlyWage', $data ?? [], null);
         $this->setIfExists('values', $data ?? [], null);
-        $this->setIfExists('use_own_hourly_wage', $data ?? [], null);
-        $this->setIfExists('total_time', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
+        $this->setIfExists('useOwnHourlyWage', $data ?? [], null);
+        $this->setIfExists('totalTime', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
     }
 
     /**
@@ -321,14 +321,14 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
         if ($this->container['price'] === null) {
             $invalidProperties[] = "'price' can't be null";
         }
-        if ($this->container['hourly_wage'] === null) {
-            $invalidProperties[] = "'hourly_wage' can't be null";
+        if ($this->container['hourlyWage'] === null) {
+            $invalidProperties[] = "'hourlyWage' can't be null";
         }
-        if ($this->container['use_own_hourly_wage'] === null) {
-            $invalidProperties[] = "'use_own_hourly_wage' can't be null";
+        if ($this->container['useOwnHourlyWage'] === null) {
+            $invalidProperties[] = "'useOwnHourlyWage' can't be null";
         }
-        if ($this->container['total_time'] === null) {
-            $invalidProperties[] = "'total_time' can't be null";
+        if ($this->container['totalTime'] === null) {
+            $invalidProperties[] = "'totalTime' can't be null";
         }
         return $invalidProperties;
     }
@@ -400,28 +400,28 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets hourly_wage
+     * Gets hourlyWage
      *
      * @return float
      */
     public function getHourlyWage()
     {
-        return $this->container['hourly_wage'];
+        return $this->container['hourlyWage'];
     }
 
     /**
-     * Sets hourly_wage
+     * Sets hourlyWage
      *
-     * @param float $hourly_wage The cost per hour of manual labor.
+     * @param float $hourlyWage The cost per hour of manual labor.
      *
      * @return self
      */
-    public function setHourlyWage($hourly_wage)
+    public function setHourlyWage($hourlyWage)
     {
-        if (is_null($hourly_wage)) {
-            throw new \InvalidArgumentException('non-nullable hourly_wage cannot be null');
+        if (is_null($hourlyWage)) {
+            throw new \InvalidArgumentException('non-nullable hourlyWage cannot be null');
         }
-        $this->container['hourly_wage'] = $hourly_wage;
+        $this->container['hourlyWage'] = $hourlyWage;
 
         return $this;
     }
@@ -454,82 +454,82 @@ class LabourPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets use_own_hourly_wage
+     * Gets useOwnHourlyWage
      *
      * @return bool
      */
     public function getUseOwnHourlyWage()
     {
-        return $this->container['use_own_hourly_wage'];
+        return $this->container['useOwnHourlyWage'];
     }
 
     /**
-     * Sets use_own_hourly_wage
+     * Sets useOwnHourlyWage
      *
-     * @param bool $use_own_hourly_wage Indicates if the ServiceSpecification's standard HourlyWage is to be used or a custom value.
+     * @param bool $useOwnHourlyWage Indicates if the ServiceSpecification's standard HourlyWage is to be used or a custom value.
      *
      * @return self
      */
-    public function setUseOwnHourlyWage($use_own_hourly_wage)
+    public function setUseOwnHourlyWage($useOwnHourlyWage)
     {
-        if (is_null($use_own_hourly_wage)) {
-            throw new \InvalidArgumentException('non-nullable use_own_hourly_wage cannot be null');
+        if (is_null($useOwnHourlyWage)) {
+            throw new \InvalidArgumentException('non-nullable useOwnHourlyWage cannot be null');
         }
-        $this->container['use_own_hourly_wage'] = $use_own_hourly_wage;
+        $this->container['useOwnHourlyWage'] = $useOwnHourlyWage;
 
         return $this;
     }
 
     /**
-     * Gets total_time
+     * Gets totalTime
      *
      * @return float
      */
     public function getTotalTime()
     {
-        return $this->container['total_time'];
+        return $this->container['totalTime'];
     }
 
     /**
-     * Sets total_time
+     * Sets totalTime
      *
-     * @param float $total_time The total, calculated time of this component. Will return the result rounded to three decimal places.
+     * @param float $totalTime The total, calculated time of this component. Will return the result rounded to three decimal places.
      *
      * @return self
      */
-    public function setTotalTime($total_time)
+    public function setTotalTime($totalTime)
     {
-        if (is_null($total_time)) {
-            throw new \InvalidArgumentException('non-nullable total_time cannot be null');
+        if (is_null($totalTime)) {
+            throw new \InvalidArgumentException('non-nullable totalTime cannot be null');
         }
-        $this->container['total_time'] = $total_time;
+        $this->container['totalTime'] = $totalTime;
 
         return $this;
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues These are Catalogues that are used within this PriceComponent. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues These are Catalogues that are used within this PriceComponent. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }

@@ -60,12 +60,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'unit_price_from' => 'float',
-        'unit_price_to' => 'float',
-        'unit_price_average' => 'float',
-        'wage_price_from' => 'float',
-        'wage_price_to' => 'float',
-        'wage_price_average' => 'float'
+        'unitPriceFrom' => 'float',
+        'unitPriceTo' => 'float',
+        'unitPriceAverage' => 'float',
+        'wagePriceFrom' => 'float',
+        'wagePriceTo' => 'float',
+        'wagePriceAverage' => 'float'
     ];
 
     /**
@@ -77,12 +77,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'unit_price_from' => 'decimal',
-        'unit_price_to' => 'decimal',
-        'unit_price_average' => 'decimal',
-        'wage_price_from' => 'decimal',
-        'wage_price_to' => 'decimal',
-        'wage_price_average' => 'decimal'
+        'unitPriceFrom' => 'decimal',
+        'unitPriceTo' => 'decimal',
+        'unitPriceAverage' => 'decimal',
+        'wagePriceFrom' => 'decimal',
+        'wagePriceTo' => 'decimal',
+        'wagePriceAverage' => 'decimal'
     ];
 
     /**
@@ -92,12 +92,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'unit_price_from' => false,
-        'unit_price_to' => false,
-        'unit_price_average' => false,
-        'wage_price_from' => false,
-        'wage_price_to' => false,
-        'wage_price_average' => false
+        'unitPriceFrom' => false,
+        'unitPriceTo' => false,
+        'unitPriceAverage' => false,
+        'wagePriceFrom' => false,
+        'wagePriceTo' => false,
+        'wagePriceAverage' => false
     ];
 
     /**
@@ -187,12 +187,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'unit_price_from' => 'unitPriceFrom',
-        'unit_price_to' => 'unitPriceTo',
-        'unit_price_average' => 'unitPriceAverage',
-        'wage_price_from' => 'wagePriceFrom',
-        'wage_price_to' => 'wagePriceTo',
-        'wage_price_average' => 'wagePriceAverage'
+        'unitPriceFrom' => 'unitPriceFrom',
+        'unitPriceTo' => 'unitPriceTo',
+        'unitPriceAverage' => 'unitPriceAverage',
+        'wagePriceFrom' => 'wagePriceFrom',
+        'wagePriceTo' => 'wagePriceTo',
+        'wagePriceAverage' => 'wagePriceAverage'
     ];
 
     /**
@@ -202,12 +202,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'id' => 'setId',
-        'unit_price_from' => 'setUnitPriceFrom',
-        'unit_price_to' => 'setUnitPriceTo',
-        'unit_price_average' => 'setUnitPriceAverage',
-        'wage_price_from' => 'setWagePriceFrom',
-        'wage_price_to' => 'setWagePriceTo',
-        'wage_price_average' => 'setWagePriceAverage'
+        'unitPriceFrom' => 'setUnitPriceFrom',
+        'unitPriceTo' => 'setUnitPriceTo',
+        'unitPriceAverage' => 'setUnitPriceAverage',
+        'wagePriceFrom' => 'setWagePriceFrom',
+        'wagePriceTo' => 'setWagePriceTo',
+        'wagePriceAverage' => 'setWagePriceAverage'
     ];
 
     /**
@@ -217,12 +217,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'id' => 'getId',
-        'unit_price_from' => 'getUnitPriceFrom',
-        'unit_price_to' => 'getUnitPriceTo',
-        'unit_price_average' => 'getUnitPriceAverage',
-        'wage_price_from' => 'getWagePriceFrom',
-        'wage_price_to' => 'getWagePriceTo',
-        'wage_price_average' => 'getWagePriceAverage'
+        'unitPriceFrom' => 'getUnitPriceFrom',
+        'unitPriceTo' => 'getUnitPriceTo',
+        'unitPriceAverage' => 'getUnitPriceAverage',
+        'wagePriceFrom' => 'getWagePriceFrom',
+        'wagePriceTo' => 'getWagePriceTo',
+        'wagePriceAverage' => 'getWagePriceAverage'
     ];
 
     /**
@@ -283,12 +283,12 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('unit_price_from', $data ?? [], null);
-        $this->setIfExists('unit_price_to', $data ?? [], null);
-        $this->setIfExists('unit_price_average', $data ?? [], null);
-        $this->setIfExists('wage_price_from', $data ?? [], null);
-        $this->setIfExists('wage_price_to', $data ?? [], null);
-        $this->setIfExists('wage_price_average', $data ?? [], null);
+        $this->setIfExists('unitPriceFrom', $data ?? [], null);
+        $this->setIfExists('unitPriceTo', $data ?? [], null);
+        $this->setIfExists('unitPriceAverage', $data ?? [], null);
+        $this->setIfExists('wagePriceFrom', $data ?? [], null);
+        $this->setIfExists('wagePriceTo', $data ?? [], null);
+        $this->setIfExists('wagePriceAverage', $data ?? [], null);
     }
 
     /**
@@ -364,163 +364,163 @@ class PriceCatalogueDataDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets unit_price_from
+     * Gets unitPriceFrom
      *
      * @return float|null
      */
     public function getUnitPriceFrom()
     {
-        return $this->container['unit_price_from'];
+        return $this->container['unitPriceFrom'];
     }
 
     /**
-     * Sets unit_price_from
+     * Sets unitPriceFrom
      *
-     * @param float|null $unit_price_from The lower bound of the unit price
+     * @param float|null $unitPriceFrom The lower bound of the unit price
      *
      * @return self
      */
-    public function setUnitPriceFrom($unit_price_from)
+    public function setUnitPriceFrom($unitPriceFrom)
     {
-        if (is_null($unit_price_from)) {
-            throw new \InvalidArgumentException('non-nullable unit_price_from cannot be null');
+        if (is_null($unitPriceFrom)) {
+            throw new \InvalidArgumentException('non-nullable unitPriceFrom cannot be null');
         }
-        $this->container['unit_price_from'] = $unit_price_from;
+        $this->container['unitPriceFrom'] = $unitPriceFrom;
 
         return $this;
     }
 
     /**
-     * Gets unit_price_to
+     * Gets unitPriceTo
      *
      * @return float|null
      */
     public function getUnitPriceTo()
     {
-        return $this->container['unit_price_to'];
+        return $this->container['unitPriceTo'];
     }
 
     /**
-     * Sets unit_price_to
+     * Sets unitPriceTo
      *
-     * @param float|null $unit_price_to The upper bound of the unit price
+     * @param float|null $unitPriceTo The upper bound of the unit price
      *
      * @return self
      */
-    public function setUnitPriceTo($unit_price_to)
+    public function setUnitPriceTo($unitPriceTo)
     {
-        if (is_null($unit_price_to)) {
-            throw new \InvalidArgumentException('non-nullable unit_price_to cannot be null');
+        if (is_null($unitPriceTo)) {
+            throw new \InvalidArgumentException('non-nullable unitPriceTo cannot be null');
         }
-        $this->container['unit_price_to'] = $unit_price_to;
+        $this->container['unitPriceTo'] = $unitPriceTo;
 
         return $this;
     }
 
     /**
-     * Gets unit_price_average
+     * Gets unitPriceAverage
      *
      * @return float|null
      */
     public function getUnitPriceAverage()
     {
-        return $this->container['unit_price_average'];
+        return $this->container['unitPriceAverage'];
     }
 
     /**
-     * Sets unit_price_average
+     * Sets unitPriceAverage
      *
-     * @param float|null $unit_price_average The average unit price
+     * @param float|null $unitPriceAverage The average unit price
      *
      * @return self
      */
-    public function setUnitPriceAverage($unit_price_average)
+    public function setUnitPriceAverage($unitPriceAverage)
     {
-        if (is_null($unit_price_average)) {
-            throw new \InvalidArgumentException('non-nullable unit_price_average cannot be null');
+        if (is_null($unitPriceAverage)) {
+            throw new \InvalidArgumentException('non-nullable unitPriceAverage cannot be null');
         }
-        $this->container['unit_price_average'] = $unit_price_average;
+        $this->container['unitPriceAverage'] = $unitPriceAverage;
 
         return $this;
     }
 
     /**
-     * Gets wage_price_from
+     * Gets wagePriceFrom
      *
      * @return float|null
      */
     public function getWagePriceFrom()
     {
-        return $this->container['wage_price_from'];
+        return $this->container['wagePriceFrom'];
     }
 
     /**
-     * Sets wage_price_from
+     * Sets wagePriceFrom
      *
-     * @param float|null $wage_price_from The lower bound of the wage price
+     * @param float|null $wagePriceFrom The lower bound of the wage price
      *
      * @return self
      */
-    public function setWagePriceFrom($wage_price_from)
+    public function setWagePriceFrom($wagePriceFrom)
     {
-        if (is_null($wage_price_from)) {
-            throw new \InvalidArgumentException('non-nullable wage_price_from cannot be null');
+        if (is_null($wagePriceFrom)) {
+            throw new \InvalidArgumentException('non-nullable wagePriceFrom cannot be null');
         }
-        $this->container['wage_price_from'] = $wage_price_from;
+        $this->container['wagePriceFrom'] = $wagePriceFrom;
 
         return $this;
     }
 
     /**
-     * Gets wage_price_to
+     * Gets wagePriceTo
      *
      * @return float|null
      */
     public function getWagePriceTo()
     {
-        return $this->container['wage_price_to'];
+        return $this->container['wagePriceTo'];
     }
 
     /**
-     * Sets wage_price_to
+     * Sets wagePriceTo
      *
-     * @param float|null $wage_price_to The upper bound of the wage price
+     * @param float|null $wagePriceTo The upper bound of the wage price
      *
      * @return self
      */
-    public function setWagePriceTo($wage_price_to)
+    public function setWagePriceTo($wagePriceTo)
     {
-        if (is_null($wage_price_to)) {
-            throw new \InvalidArgumentException('non-nullable wage_price_to cannot be null');
+        if (is_null($wagePriceTo)) {
+            throw new \InvalidArgumentException('non-nullable wagePriceTo cannot be null');
         }
-        $this->container['wage_price_to'] = $wage_price_to;
+        $this->container['wagePriceTo'] = $wagePriceTo;
 
         return $this;
     }
 
     /**
-     * Gets wage_price_average
+     * Gets wagePriceAverage
      *
      * @return float|null
      */
     public function getWagePriceAverage()
     {
-        return $this->container['wage_price_average'];
+        return $this->container['wagePriceAverage'];
     }
 
     /**
-     * Sets wage_price_average
+     * Sets wagePriceAverage
      *
-     * @param float|null $wage_price_average The average wage price
+     * @param float|null $wagePriceAverage The average wage price
      *
      * @return self
      */
-    public function setWagePriceAverage($wage_price_average)
+    public function setWagePriceAverage($wagePriceAverage)
     {
-        if (is_null($wage_price_average)) {
-            throw new \InvalidArgumentException('non-nullable wage_price_average cannot be null');
+        if (is_null($wagePriceAverage)) {
+            throw new \InvalidArgumentException('non-nullable wagePriceAverage cannot be null');
         }
-        $this->container['wage_price_average'] = $wage_price_average;
+        $this->container['wagePriceAverage'] = $wagePriceAverage;
 
         return $this;
     }

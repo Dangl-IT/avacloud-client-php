@@ -59,13 +59,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ava_project' => '\Dangl\AVACloud\Model\ProjectDto',
-        'service_specification_index' => 'int',
-        'validation_type' => '\Dangl\AVACloud\Model\ValidationType',
-        'exchange_phase' => '\Dangl\AVACloud\Model\ExchangePhaseDto',
-        'ava_source_options' => '\Dangl\AVACloud\Model\PostAvaSourceOptions',
-        'oenorm_destination_options' => '\Dangl\AVACloud\Model\PostOenormDestinationOptions',
-        'gaeb_destination_options' => '\Dangl\AVACloud\Model\PostGaebDestinationOptions'
+        'avaProject' => '\Dangl\AVACloud\Model\ProjectDto',
+        'serviceSpecificationIndex' => 'int',
+        'validationType' => '\Dangl\AVACloud\Model\ValidationType',
+        'exchangePhase' => '\Dangl\AVACloud\Model\ExchangePhaseDto',
+        'avaSourceOptions' => '\Dangl\AVACloud\Model\PostAvaSourceOptions',
+        'oenormDestinationOptions' => '\Dangl\AVACloud\Model\PostOenormDestinationOptions',
+        'gaebDestinationOptions' => '\Dangl\AVACloud\Model\PostGaebDestinationOptions'
     ];
 
     /**
@@ -76,13 +76,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ava_project' => null,
-        'service_specification_index' => 'int32',
-        'validation_type' => null,
-        'exchange_phase' => null,
-        'ava_source_options' => null,
-        'oenorm_destination_options' => null,
-        'gaeb_destination_options' => null
+        'avaProject' => null,
+        'serviceSpecificationIndex' => 'int32',
+        'validationType' => null,
+        'exchangePhase' => null,
+        'avaSourceOptions' => null,
+        'oenormDestinationOptions' => null,
+        'gaebDestinationOptions' => null
     ];
 
     /**
@@ -91,13 +91,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'ava_project' => false,
-        'service_specification_index' => false,
-        'validation_type' => false,
-        'exchange_phase' => false,
-        'ava_source_options' => false,
-        'oenorm_destination_options' => false,
-        'gaeb_destination_options' => false
+        'avaProject' => false,
+        'serviceSpecificationIndex' => false,
+        'validationType' => false,
+        'exchangePhase' => false,
+        'avaSourceOptions' => false,
+        'oenormDestinationOptions' => false,
+        'gaebDestinationOptions' => false
     ];
 
     /**
@@ -186,13 +186,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'ava_project' => 'avaProject',
-        'service_specification_index' => 'serviceSpecificationIndex',
-        'validation_type' => 'validationType',
-        'exchange_phase' => 'exchangePhase',
-        'ava_source_options' => 'avaSourceOptions',
-        'oenorm_destination_options' => 'oenormDestinationOptions',
-        'gaeb_destination_options' => 'gaebDestinationOptions'
+        'avaProject' => 'avaProject',
+        'serviceSpecificationIndex' => 'serviceSpecificationIndex',
+        'validationType' => 'validationType',
+        'exchangePhase' => 'exchangePhase',
+        'avaSourceOptions' => 'avaSourceOptions',
+        'oenormDestinationOptions' => 'oenormDestinationOptions',
+        'gaebDestinationOptions' => 'gaebDestinationOptions'
     ];
 
     /**
@@ -201,13 +201,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'ava_project' => 'setAvaProject',
-        'service_specification_index' => 'setServiceSpecificationIndex',
-        'validation_type' => 'setValidationType',
-        'exchange_phase' => 'setExchangePhase',
-        'ava_source_options' => 'setAvaSourceOptions',
-        'oenorm_destination_options' => 'setOenormDestinationOptions',
-        'gaeb_destination_options' => 'setGaebDestinationOptions'
+        'avaProject' => 'setAvaProject',
+        'serviceSpecificationIndex' => 'setServiceSpecificationIndex',
+        'validationType' => 'setValidationType',
+        'exchangePhase' => 'setExchangePhase',
+        'avaSourceOptions' => 'setAvaSourceOptions',
+        'oenormDestinationOptions' => 'setOenormDestinationOptions',
+        'gaebDestinationOptions' => 'setGaebDestinationOptions'
     ];
 
     /**
@@ -216,13 +216,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'ava_project' => 'getAvaProject',
-        'service_specification_index' => 'getServiceSpecificationIndex',
-        'validation_type' => 'getValidationType',
-        'exchange_phase' => 'getExchangePhase',
-        'ava_source_options' => 'getAvaSourceOptions',
-        'oenorm_destination_options' => 'getOenormDestinationOptions',
-        'gaeb_destination_options' => 'getGaebDestinationOptions'
+        'avaProject' => 'getAvaProject',
+        'serviceSpecificationIndex' => 'getServiceSpecificationIndex',
+        'validationType' => 'getValidationType',
+        'exchangePhase' => 'getExchangePhase',
+        'avaSourceOptions' => 'getAvaSourceOptions',
+        'oenormDestinationOptions' => 'getOenormDestinationOptions',
+        'gaebDestinationOptions' => 'getGaebDestinationOptions'
     ];
 
     /**
@@ -282,13 +282,13 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('ava_project', $data ?? [], null);
-        $this->setIfExists('service_specification_index', $data ?? [], null);
-        $this->setIfExists('validation_type', $data ?? [], null);
-        $this->setIfExists('exchange_phase', $data ?? [], null);
-        $this->setIfExists('ava_source_options', $data ?? [], null);
-        $this->setIfExists('oenorm_destination_options', $data ?? [], null);
-        $this->setIfExists('gaeb_destination_options', $data ?? [], null);
+        $this->setIfExists('avaProject', $data ?? [], null);
+        $this->setIfExists('serviceSpecificationIndex', $data ?? [], null);
+        $this->setIfExists('validationType', $data ?? [], null);
+        $this->setIfExists('exchangePhase', $data ?? [], null);
+        $this->setIfExists('avaSourceOptions', $data ?? [], null);
+        $this->setIfExists('oenormDestinationOptions', $data ?? [], null);
+        $this->setIfExists('gaebDestinationOptions', $data ?? [], null);
     }
 
     /**
@@ -318,11 +318,11 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
     {
         $invalidProperties = [];
 
-        if ($this->container['ava_project'] === null) {
-            $invalidProperties[] = "'ava_project' can't be null";
+        if ($this->container['avaProject'] === null) {
+            $invalidProperties[] = "'avaProject' can't be null";
         }
-        if ($this->container['validation_type'] === null) {
-            $invalidProperties[] = "'validation_type' can't be null";
+        if ($this->container['validationType'] === null) {
+            $invalidProperties[] = "'validationType' can't be null";
         }
         return $invalidProperties;
     }
@@ -340,190 +340,190 @@ class PostAvaProjectValidationSourceOptions implements ModelInterface, ArrayAcce
 
 
     /**
-     * Gets ava_project
+     * Gets avaProject
      *
      * @return \Dangl\AVACloud\Model\ProjectDto
      */
     public function getAvaProject()
     {
-        return $this->container['ava_project'];
+        return $this->container['avaProject'];
     }
 
     /**
-     * Sets ava_project
+     * Sets avaProject
      *
-     * @param \Dangl\AVACloud\Model\ProjectDto $ava_project ava_project
+     * @param \Dangl\AVACloud\Model\ProjectDto $avaProject avaProject
      *
      * @return self
      */
-    public function setAvaProject($ava_project)
+    public function setAvaProject($avaProject)
     {
-        if (is_null($ava_project)) {
-            throw new \InvalidArgumentException('non-nullable ava_project cannot be null');
+        if (is_null($avaProject)) {
+            throw new \InvalidArgumentException('non-nullable avaProject cannot be null');
         }
-        $this->container['ava_project'] = $ava_project;
+        $this->container['avaProject'] = $avaProject;
 
         return $this;
     }
 
     /**
-     * Gets service_specification_index
+     * Gets serviceSpecificationIndex
      *
      * @return int|null
      */
     public function getServiceSpecificationIndex()
     {
-        return $this->container['service_specification_index'];
+        return $this->container['serviceSpecificationIndex'];
     }
 
     /**
-     * Sets service_specification_index
+     * Sets serviceSpecificationIndex
      *
-     * @param int|null $service_specification_index The index of the ServiceSpecification that should be validated. If not given, will default to the first one in the project.
+     * @param int|null $serviceSpecificationIndex The index of the ServiceSpecification that should be validated. If not given, will default to the first one in the project.
      *
      * @return self
      */
-    public function setServiceSpecificationIndex($service_specification_index)
+    public function setServiceSpecificationIndex($serviceSpecificationIndex)
     {
-        if (is_null($service_specification_index)) {
-            throw new \InvalidArgumentException('non-nullable service_specification_index cannot be null');
+        if (is_null($serviceSpecificationIndex)) {
+            throw new \InvalidArgumentException('non-nullable serviceSpecificationIndex cannot be null');
         }
-        $this->container['service_specification_index'] = $service_specification_index;
+        $this->container['serviceSpecificationIndex'] = $serviceSpecificationIndex;
 
         return $this;
     }
 
     /**
-     * Gets validation_type
+     * Gets validationType
      *
      * @return \Dangl\AVACloud\Model\ValidationType
      */
     public function getValidationType()
     {
-        return $this->container['validation_type'];
+        return $this->container['validationType'];
     }
 
     /**
-     * Sets validation_type
+     * Sets validationType
      *
-     * @param \Dangl\AVACloud\Model\ValidationType $validation_type validation_type
+     * @param \Dangl\AVACloud\Model\ValidationType $validationType validationType
      *
      * @return self
      */
-    public function setValidationType($validation_type)
+    public function setValidationType($validationType)
     {
-        if (is_null($validation_type)) {
-            throw new \InvalidArgumentException('non-nullable validation_type cannot be null');
+        if (is_null($validationType)) {
+            throw new \InvalidArgumentException('non-nullable validationType cannot be null');
         }
-        $this->container['validation_type'] = $validation_type;
+        $this->container['validationType'] = $validationType;
 
         return $this;
     }
 
     /**
-     * Gets exchange_phase
+     * Gets exchangePhase
      *
      * @return \Dangl\AVACloud\Model\ExchangePhaseDto|null
      */
     public function getExchangePhase()
     {
-        return $this->container['exchange_phase'];
+        return $this->container['exchangePhase'];
     }
 
     /**
-     * Sets exchange_phase
+     * Sets exchangePhase
      *
-     * @param \Dangl\AVACloud\Model\ExchangePhaseDto|null $exchange_phase exchange_phase
+     * @param \Dangl\AVACloud\Model\ExchangePhaseDto|null $exchangePhase exchangePhase
      *
      * @return self
      */
-    public function setExchangePhase($exchange_phase)
+    public function setExchangePhase($exchangePhase)
     {
-        if (is_null($exchange_phase)) {
-            throw new \InvalidArgumentException('non-nullable exchange_phase cannot be null');
+        if (is_null($exchangePhase)) {
+            throw new \InvalidArgumentException('non-nullable exchangePhase cannot be null');
         }
-        $this->container['exchange_phase'] = $exchange_phase;
+        $this->container['exchangePhase'] = $exchangePhase;
 
         return $this;
     }
 
     /**
-     * Gets ava_source_options
+     * Gets avaSourceOptions
      *
      * @return \Dangl\AVACloud\Model\PostAvaSourceOptions|null
      */
     public function getAvaSourceOptions()
     {
-        return $this->container['ava_source_options'];
+        return $this->container['avaSourceOptions'];
     }
 
     /**
-     * Sets ava_source_options
+     * Sets avaSourceOptions
      *
-     * @param \Dangl\AVACloud\Model\PostAvaSourceOptions|null $ava_source_options ava_source_options
+     * @param \Dangl\AVACloud\Model\PostAvaSourceOptions|null $avaSourceOptions avaSourceOptions
      *
      * @return self
      */
-    public function setAvaSourceOptions($ava_source_options)
+    public function setAvaSourceOptions($avaSourceOptions)
     {
-        if (is_null($ava_source_options)) {
-            throw new \InvalidArgumentException('non-nullable ava_source_options cannot be null');
+        if (is_null($avaSourceOptions)) {
+            throw new \InvalidArgumentException('non-nullable avaSourceOptions cannot be null');
         }
-        $this->container['ava_source_options'] = $ava_source_options;
+        $this->container['avaSourceOptions'] = $avaSourceOptions;
 
         return $this;
     }
 
     /**
-     * Gets oenorm_destination_options
+     * Gets oenormDestinationOptions
      *
      * @return \Dangl\AVACloud\Model\PostOenormDestinationOptions|null
      */
     public function getOenormDestinationOptions()
     {
-        return $this->container['oenorm_destination_options'];
+        return $this->container['oenormDestinationOptions'];
     }
 
     /**
-     * Sets oenorm_destination_options
+     * Sets oenormDestinationOptions
      *
-     * @param \Dangl\AVACloud\Model\PostOenormDestinationOptions|null $oenorm_destination_options oenorm_destination_options
+     * @param \Dangl\AVACloud\Model\PostOenormDestinationOptions|null $oenormDestinationOptions oenormDestinationOptions
      *
      * @return self
      */
-    public function setOenormDestinationOptions($oenorm_destination_options)
+    public function setOenormDestinationOptions($oenormDestinationOptions)
     {
-        if (is_null($oenorm_destination_options)) {
-            throw new \InvalidArgumentException('non-nullable oenorm_destination_options cannot be null');
+        if (is_null($oenormDestinationOptions)) {
+            throw new \InvalidArgumentException('non-nullable oenormDestinationOptions cannot be null');
         }
-        $this->container['oenorm_destination_options'] = $oenorm_destination_options;
+        $this->container['oenormDestinationOptions'] = $oenormDestinationOptions;
 
         return $this;
     }
 
     /**
-     * Gets gaeb_destination_options
+     * Gets gaebDestinationOptions
      *
      * @return \Dangl\AVACloud\Model\PostGaebDestinationOptions|null
      */
     public function getGaebDestinationOptions()
     {
-        return $this->container['gaeb_destination_options'];
+        return $this->container['gaebDestinationOptions'];
     }
 
     /**
-     * Sets gaeb_destination_options
+     * Sets gaebDestinationOptions
      *
-     * @param \Dangl\AVACloud\Model\PostGaebDestinationOptions|null $gaeb_destination_options gaeb_destination_options
+     * @param \Dangl\AVACloud\Model\PostGaebDestinationOptions|null $gaebDestinationOptions gaebDestinationOptions
      *
      * @return self
      */
-    public function setGaebDestinationOptions($gaeb_destination_options)
+    public function setGaebDestinationOptions($gaebDestinationOptions)
     {
-        if (is_null($gaeb_destination_options)) {
-            throw new \InvalidArgumentException('non-nullable gaeb_destination_options cannot be null');
+        if (is_null($gaebDestinationOptions)) {
+            throw new \InvalidArgumentException('non-nullable gaebDestinationOptions cannot be null');
         }
-        $this->container['gaeb_destination_options'] = $gaeb_destination_options;
+        $this->container['gaebDestinationOptions'] = $gaebDestinationOptions;
 
         return $this;
     }

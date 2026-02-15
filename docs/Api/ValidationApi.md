@@ -13,7 +13,7 @@ All URIs are relative to https://avacloud-api.dangl-it.com, except if the operat
 ## `validationValidateFile()`
 
 ```php
-validationValidateFile($file_validation_source_type, $ava_file): \Dangl\AVACloud\Model\ValidationResult
+validationValidateFile($avaFile, $fileValidationSourceType): \Dangl\AVACloud\Model\ValidationResult
 ```
 
 This endpoint validates AVA files, typically GAEB or ÖNorm. The type of file needs to be provided as a query parameter, since there is no auto detection of the uploaded file type.
@@ -36,11 +36,11 @@ $apiInstance = new Dangl\AVACloud\Api\ValidationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$file_validation_source_type = 'file_validation_source_type_example'; // string | You need to indicate which type of file is being provided, there is no auto detection mechanism
-$ava_file = '/path/to/file.txt'; // \SplFileObject | The file to validate
+$avaFile = '/path/to/file.txt'; // \SplFileObject | The file to validate
+$fileValidationSourceType = 'fileValidationSourceType_example'; // string | You need to indicate which type of file is being provided, there is no auto detection mechanism
 
 try {
-    $result = $apiInstance->validationValidateFile($file_validation_source_type, $ava_file);
+    $result = $apiInstance->validationValidateFile($avaFile, $fileValidationSourceType);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ValidationApi->validationValidateFile: ', $e->getMessage(), PHP_EOL;
@@ -51,8 +51,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **file_validation_source_type** | **string**| You need to indicate which type of file is being provided, there is no auto detection mechanism | [optional] |
-| **ava_file** | **\SplFileObject****\SplFileObject**| The file to validate | [optional] |
+| **avaFile** | **\SplFileObject****\SplFileObject**| The file to validate | [optional] |
+| **fileValidationSourceType** | **string**| You need to indicate which type of file is being provided, there is no auto detection mechanism | [optional] |
 
 ### Return type
 
@@ -74,7 +74,7 @@ try {
 ## `validationValidateProject()`
 
 ```php
-validationValidateProject($ava_project_validation_source_options): \Dangl\AVACloud\Model\ValidationResult
+validationValidateProject($avaProjectValidationSourceOptions): \Dangl\AVACloud\Model\ValidationResult
 ```
 
 This endpoint provides a full validation of a provided ProjectDto. It will take the given exchange phase into account and do some general project validation. Optionally, a conversion to a desired target can also be done, in which case the target file will also be validated.
@@ -97,10 +97,10 @@ $apiInstance = new Dangl\AVACloud\Api\ValidationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ava_project_validation_source_options = new \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions(); // \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions | The options used for the validation operation
+$avaProjectValidationSourceOptions = new \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions(); // \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions | The options used for the validation operation
 
 try {
-    $result = $apiInstance->validationValidateProject($ava_project_validation_source_options);
+    $result = $apiInstance->validationValidateProject($avaProjectValidationSourceOptions);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ValidationApi->validationValidateProject: ', $e->getMessage(), PHP_EOL;
@@ -111,7 +111,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ava_project_validation_source_options** | [**\Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions**](../Model/PostAvaProjectValidationSourceOptions.md)| The options used for the validation operation | |
+| **avaProjectValidationSourceOptions** | [**\Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions**](../Model/PostAvaProjectValidationSourceOptions.md)| The options used for the validation operation | |
 
 ### Return type
 

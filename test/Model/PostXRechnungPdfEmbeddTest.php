@@ -90,7 +90,7 @@ class PostXRechnungPdfEmbeddTest extends TestCase
     }
 
     /**
-     * Test attribute "pdf_file_base64"
+     * Test attribute "pdfFileBase64"
      */
     public function testPropertyPdfFileBase64()
     {

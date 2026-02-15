@@ -59,9 +59,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'origin_code' => '\Dangl\AVACloud\Model\OenormOriginCodeDto',
-        'opening_text_is_free_text' => 'bool',
-        'is_undivided_position' => 'bool'
+        'originCode' => '\Dangl\AVACloud\Model\OenormOriginCodeDto',
+        'openingTextIsFreeText' => 'bool',
+        'isUndividedPosition' => 'bool'
     ];
 
     /**
@@ -72,9 +72,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'origin_code' => null,
-        'opening_text_is_free_text' => null,
-        'is_undivided_position' => null
+        'originCode' => null,
+        'openingTextIsFreeText' => null,
+        'isUndividedPosition' => null
     ];
 
     /**
@@ -83,9 +83,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'origin_code' => false,
-        'opening_text_is_free_text' => false,
-        'is_undivided_position' => false
+        'originCode' => false,
+        'openingTextIsFreeText' => false,
+        'isUndividedPosition' => false
     ];
 
     /**
@@ -174,9 +174,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'origin_code' => 'originCode',
-        'opening_text_is_free_text' => 'openingTextIsFreeText',
-        'is_undivided_position' => 'isUndividedPosition'
+        'originCode' => 'originCode',
+        'openingTextIsFreeText' => 'openingTextIsFreeText',
+        'isUndividedPosition' => 'isUndividedPosition'
     ];
 
     /**
@@ -185,9 +185,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'origin_code' => 'setOriginCode',
-        'opening_text_is_free_text' => 'setOpeningTextIsFreeText',
-        'is_undivided_position' => 'setIsUndividedPosition'
+        'originCode' => 'setOriginCode',
+        'openingTextIsFreeText' => 'setOpeningTextIsFreeText',
+        'isUndividedPosition' => 'setIsUndividedPosition'
     ];
 
     /**
@@ -196,9 +196,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'origin_code' => 'getOriginCode',
-        'opening_text_is_free_text' => 'getOpeningTextIsFreeText',
-        'is_undivided_position' => 'getIsUndividedPosition'
+        'originCode' => 'getOriginCode',
+        'openingTextIsFreeText' => 'getOpeningTextIsFreeText',
+        'isUndividedPosition' => 'getIsUndividedPosition'
     ];
 
     /**
@@ -258,9 +258,9 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('origin_code', $data ?? [], null);
-        $this->setIfExists('opening_text_is_free_text', $data ?? [], null);
-        $this->setIfExists('is_undivided_position', $data ?? [], null);
+        $this->setIfExists('originCode', $data ?? [], null);
+        $this->setIfExists('openingTextIsFreeText', $data ?? [], null);
+        $this->setIfExists('isUndividedPosition', $data ?? [], null);
     }
 
     /**
@@ -290,14 +290,14 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
-        if ($this->container['origin_code'] === null) {
-            $invalidProperties[] = "'origin_code' can't be null";
+        if ($this->container['originCode'] === null) {
+            $invalidProperties[] = "'originCode' can't be null";
         }
-        if ($this->container['opening_text_is_free_text'] === null) {
-            $invalidProperties[] = "'opening_text_is_free_text' can't be null";
+        if ($this->container['openingTextIsFreeText'] === null) {
+            $invalidProperties[] = "'openingTextIsFreeText' can't be null";
         }
-        if ($this->container['is_undivided_position'] === null) {
-            $invalidProperties[] = "'is_undivided_position' can't be null";
+        if ($this->container['isUndividedPosition'] === null) {
+            $invalidProperties[] = "'isUndividedPosition' can't be null";
         }
         return $invalidProperties;
     }
@@ -315,82 +315,82 @@ class OenormNoteTextPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets origin_code
+     * Gets originCode
      *
      * @return \Dangl\AVACloud\Model\OenormOriginCodeDto
      */
     public function getOriginCode()
     {
-        return $this->container['origin_code'];
+        return $this->container['originCode'];
     }
 
     /**
-     * Sets origin_code
+     * Sets originCode
      *
-     * @param \Dangl\AVACloud\Model\OenormOriginCodeDto $origin_code origin_code
+     * @param \Dangl\AVACloud\Model\OenormOriginCodeDto $originCode originCode
      *
      * @return self
      */
-    public function setOriginCode($origin_code)
+    public function setOriginCode($originCode)
     {
-        if (is_null($origin_code)) {
-            throw new \InvalidArgumentException('non-nullable origin_code cannot be null');
+        if (is_null($originCode)) {
+            throw new \InvalidArgumentException('non-nullable originCode cannot be null');
         }
-        $this->container['origin_code'] = $origin_code;
+        $this->container['originCode'] = $originCode;
 
         return $this;
     }
 
     /**
-     * Gets opening_text_is_free_text
+     * Gets openingTextIsFreeText
      *
      * @return bool
      */
     public function getOpeningTextIsFreeText()
     {
-        return $this->container['opening_text_is_free_text'];
+        return $this->container['openingTextIsFreeText'];
     }
 
     /**
-     * Sets opening_text_is_free_text
+     * Sets openingTextIsFreeText
      *
-     * @param bool $opening_text_is_free_text This marks if the opening texts within this element are considered free text. It corresponds to 'vorbemerkungskennzeichen' in ÖNorm.
+     * @param bool $openingTextIsFreeText This marks if the opening texts within this element are considered free text. It corresponds to 'vorbemerkungskennzeichen' in ÖNorm.
      *
      * @return self
      */
-    public function setOpeningTextIsFreeText($opening_text_is_free_text)
+    public function setOpeningTextIsFreeText($openingTextIsFreeText)
     {
-        if (is_null($opening_text_is_free_text)) {
-            throw new \InvalidArgumentException('non-nullable opening_text_is_free_text cannot be null');
+        if (is_null($openingTextIsFreeText)) {
+            throw new \InvalidArgumentException('non-nullable openingTextIsFreeText cannot be null');
         }
-        $this->container['opening_text_is_free_text'] = $opening_text_is_free_text;
+        $this->container['openingTextIsFreeText'] = $openingTextIsFreeText;
 
         return $this;
     }
 
     /**
-     * Gets is_undivided_position
+     * Gets isUndividedPosition
      *
      * @return bool
      */
     public function getIsUndividedPosition()
     {
-        return $this->container['is_undivided_position'];
+        return $this->container['isUndividedPosition'];
     }
 
     /**
-     * Sets is_undivided_position
+     * Sets isUndividedPosition
      *
-     * @param bool $is_undivided_position This indicates if the ÖNorm position / note text was a 'ungeteilteposition' (undivided position). This will only be taken into account when the position / note text is also the sole element inside it's parent group
+     * @param bool $isUndividedPosition This indicates if the ÖNorm position / note text was a 'ungeteilteposition' (undivided position). This will only be taken into account when the position / note text is also the sole element inside it's parent group
      *
      * @return self
      */
-    public function setIsUndividedPosition($is_undivided_position)
+    public function setIsUndividedPosition($isUndividedPosition)
     {
-        if (is_null($is_undivided_position)) {
-            throw new \InvalidArgumentException('non-nullable is_undivided_position cannot be null');
+        if (is_null($isUndividedPosition)) {
+            throw new \InvalidArgumentException('non-nullable isUndividedPosition cannot be null');
         }
-        $this->container['is_undivided_position'] = $is_undivided_position;
+        $this->container['isUndividedPosition'] = $isUndividedPosition;
 
         return $this;
     }

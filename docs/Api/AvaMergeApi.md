@@ -12,7 +12,7 @@ All URIs are relative to https://avacloud-api.dangl-it.com, except if the operat
 ## `avaMergeConvertToAva()`
 
 ```php
-avaMergeConvertToAva($merge_configuration): \Dangl\AVACloud\Model\GetProjectMergeResult
+avaMergeConvertToAva($mergeConfiguration): \Dangl\AVACloud\Model\GetProjectMergeResult
 ```
 
 This will merge two AVA projects into one. Typically this is used for merging offers into a base project, which preserves the base projects structure and adds prices and text additions from the offer project. This is currently in a preview phase, and the endpoint and its models are subject to change in the next versions of AVACloud.
@@ -35,10 +35,10 @@ $apiInstance = new Dangl\AVACloud\Api\AvaMergeApi(
     new GuzzleHttp\Client(),
     $config
 );
-$merge_configuration = new \Dangl\AVACloud\Model\PostAvaProjectMerge(); // \Dangl\AVACloud\Model\PostAvaProjectMerge
+$mergeConfiguration = new \Dangl\AVACloud\Model\PostAvaProjectMerge(); // \Dangl\AVACloud\Model\PostAvaProjectMerge
 
 try {
-    $result = $apiInstance->avaMergeConvertToAva($merge_configuration);
+    $result = $apiInstance->avaMergeConvertToAva($mergeConfiguration);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AvaMergeApi->avaMergeConvertToAva: ', $e->getMessage(), PHP_EOL;
@@ -49,7 +49,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **merge_configuration** | [**\Dangl\AVACloud\Model\PostAvaProjectMerge**](../Model/PostAvaProjectMerge.md)|  | |
+| **mergeConfiguration** | [**\Dangl\AVACloud\Model\PostAvaProjectMerge**](../Model/PostAvaProjectMerge.md)|  | |
 
 ### Return type
 

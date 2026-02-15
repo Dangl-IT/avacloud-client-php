@@ -164,16 +164,16 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to a PDF file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper ava_wrapper (required)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper avaWrapper (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SplFileObject|\Dangl\AVACloud\Model\ApiError
      */
-    public function xRechnungConversionConvertAvaToPdfInvoice($ava_wrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
+    public function xRechnungConversionConvertAvaToPdfInvoice($avaWrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
     {
-        list($response) = $this->xRechnungConversionConvertAvaToPdfInvoiceWithHttpInfo($ava_wrapper, $contentType);
+        list($response) = $this->xRechnungConversionConvertAvaToPdfInvoiceWithHttpInfo($avaWrapper, $contentType);
         return $response;
     }
 
@@ -182,16 +182,16 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to a PDF file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function xRechnungConversionConvertAvaToPdfInvoiceWithHttpInfo($ava_wrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
+    public function xRechnungConversionConvertAvaToPdfInvoiceWithHttpInfo($avaWrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
     {
-        $request = $this->xRechnungConversionConvertAvaToPdfInvoiceRequest($ava_wrapper, $contentType);
+        $request = $this->xRechnungConversionConvertAvaToPdfInvoiceRequest($avaWrapper, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -281,15 +281,15 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to a PDF file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertAvaToPdfInvoiceAsync($ava_wrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
+    public function xRechnungConversionConvertAvaToPdfInvoiceAsync($avaWrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
     {
-        return $this->xRechnungConversionConvertAvaToPdfInvoiceAsyncWithHttpInfo($ava_wrapper, $contentType)
+        return $this->xRechnungConversionConvertAvaToPdfInvoiceAsyncWithHttpInfo($avaWrapper, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -302,16 +302,16 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to a PDF file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertAvaToPdfInvoiceAsyncWithHttpInfo($ava_wrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
+    public function xRechnungConversionConvertAvaToPdfInvoiceAsyncWithHttpInfo($avaWrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->xRechnungConversionConvertAvaToPdfInvoiceRequest($ava_wrapper, $contentType);
+        $request = $this->xRechnungConversionConvertAvaToPdfInvoiceRequest($avaWrapper, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -352,19 +352,19 @@ class XRechnungConversionApi
     /**
      * Create request for operation 'xRechnungConversionConvertAvaToPdfInvoice'
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function xRechnungConversionConvertAvaToPdfInvoiceRequest($ava_wrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
+    public function xRechnungConversionConvertAvaToPdfInvoiceRequest($avaWrapper, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToPdfInvoice'][0])
     {
 
-        // verify the required parameter 'ava_wrapper' is set
-        if ($ava_wrapper === null || (is_array($ava_wrapper) && count($ava_wrapper) === 0)) {
+        // verify the required parameter 'avaWrapper' is set
+        if ($avaWrapper === null || (is_array($avaWrapper) && count($avaWrapper) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ava_wrapper when calling xRechnungConversionConvertAvaToPdfInvoice'
+                'Missing the required parameter $avaWrapper when calling xRechnungConversionConvertAvaToPdfInvoice'
             );
         }
 
@@ -387,12 +387,12 @@ class XRechnungConversionApi
         );
 
         // for model (json/xml)
-        if (isset($ava_wrapper)) {
+        if (isset($avaWrapper)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($ava_wrapper));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($avaWrapper));
             } else {
-                $httpBody = $ava_wrapper;
+                $httpBody = $avaWrapper;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -449,19 +449,19 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to an XRechnung file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper ava_wrapper (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper avaWrapper (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToXRechnung'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SplFileObject|\Dangl\AVACloud\Model\ApiError
      */
-    public function xRechnungConversionConvertAvaToXRechnung($ava_wrapper, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
+    public function xRechnungConversionConvertAvaToXRechnung($avaWrapper, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
     {
-        list($response) = $this->xRechnungConversionConvertAvaToXRechnungWithHttpInfo($ava_wrapper, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        list($response) = $this->xRechnungConversionConvertAvaToXRechnungWithHttpInfo($avaWrapper, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
         return $response;
     }
 
@@ -470,19 +470,19 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to an XRechnung file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToXRechnung'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function xRechnungConversionConvertAvaToXRechnungWithHttpInfo($ava_wrapper, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
+    public function xRechnungConversionConvertAvaToXRechnungWithHttpInfo($avaWrapper, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
     {
-        $request = $this->xRechnungConversionConvertAvaToXRechnungRequest($ava_wrapper, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        $request = $this->xRechnungConversionConvertAvaToXRechnungRequest($avaWrapper, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -572,18 +572,18 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to an XRechnung file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToXRechnung'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertAvaToXRechnungAsync($ava_wrapper, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
+    public function xRechnungConversionConvertAvaToXRechnungAsync($avaWrapper, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
     {
-        return $this->xRechnungConversionConvertAvaToXRechnungAsyncWithHttpInfo($ava_wrapper, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType)
+        return $this->xRechnungConversionConvertAvaToXRechnungAsyncWithHttpInfo($avaWrapper, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -596,19 +596,19 @@ class XRechnungConversionApi
      *
      * This will convert an AVA wrapper object to an XRechnung file
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToXRechnung'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertAvaToXRechnungAsyncWithHttpInfo($ava_wrapper, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
+    public function xRechnungConversionConvertAvaToXRechnungAsyncWithHttpInfo($avaWrapper, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->xRechnungConversionConvertAvaToXRechnungRequest($ava_wrapper, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        $request = $this->xRechnungConversionConvertAvaToXRechnungRequest($avaWrapper, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -649,22 +649,22 @@ class XRechnungConversionApi
     /**
      * Create request for operation 'xRechnungConversionConvertAvaToXRechnung'
      *
-     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $ava_wrapper (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\AvaProjectWrapper $avaWrapper (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertAvaToXRechnung'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function xRechnungConversionConvertAvaToXRechnungRequest($ava_wrapper, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
+    public function xRechnungConversionConvertAvaToXRechnungRequest($avaWrapper, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertAvaToXRechnung'][0])
     {
 
-        // verify the required parameter 'ava_wrapper' is set
-        if ($ava_wrapper === null || (is_array($ava_wrapper) && count($ava_wrapper) === 0)) {
+        // verify the required parameter 'avaWrapper' is set
+        if ($avaWrapper === null || (is_array($avaWrapper) && count($avaWrapper) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ava_wrapper when calling xRechnungConversionConvertAvaToXRechnung'
+                'Missing the required parameter $avaWrapper when calling xRechnungConversionConvertAvaToXRechnung'
             );
         }
 
@@ -681,7 +681,7 @@ class XRechnungConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_format,
+            $targetFormat,
             'TargetFormat', // param base name
             'string', // openApiType
             '', // style
@@ -690,7 +690,7 @@ class XRechnungConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_price_rounding,
+            $disablePriceRounding,
             'DisablePriceRounding', // param base name
             'boolean', // openApiType
             '', // style
@@ -699,7 +699,7 @@ class XRechnungConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_branding_comment,
+            $disableBrandingComment,
             'DisableBrandingComment', // param base name
             'boolean', // openApiType
             '', // style
@@ -717,12 +717,12 @@ class XRechnungConversionApi
         );
 
         // for model (json/xml)
-        if (isset($ava_wrapper)) {
+        if (isset($avaWrapper)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($ava_wrapper));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($avaWrapper));
             } else {
-                $httpBody = $ava_wrapper;
+                $httpBody = $avaWrapper;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1065,18 +1065,18 @@ class XRechnungConversionApi
      * This will convert an Invoice object to an XRechnung file
      *
      * @param  \Dangl\AVACloud\Model\Invoice $invoice invoice (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SplFileObject|\Dangl\AVACloud\Model\ApiError
      */
-    public function xRechnungConversionConvertInvoiceToXRechnung($invoice, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
+    public function xRechnungConversionConvertInvoiceToXRechnung($invoice, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
     {
-        list($response) = $this->xRechnungConversionConvertInvoiceToXRechnungWithHttpInfo($invoice, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        list($response) = $this->xRechnungConversionConvertInvoiceToXRechnungWithHttpInfo($invoice, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
         return $response;
     }
 
@@ -1086,18 +1086,18 @@ class XRechnungConversionApi
      * This will convert an Invoice object to an XRechnung file
      *
      * @param  \Dangl\AVACloud\Model\Invoice $invoice (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function xRechnungConversionConvertInvoiceToXRechnungWithHttpInfo($invoice, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
+    public function xRechnungConversionConvertInvoiceToXRechnungWithHttpInfo($invoice, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
     {
-        $request = $this->xRechnungConversionConvertInvoiceToXRechnungRequest($invoice, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        $request = $this->xRechnungConversionConvertInvoiceToXRechnungRequest($invoice, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1188,17 +1188,17 @@ class XRechnungConversionApi
      * This will convert an Invoice object to an XRechnung file
      *
      * @param  \Dangl\AVACloud\Model\Invoice $invoice (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertInvoiceToXRechnungAsync($invoice, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
+    public function xRechnungConversionConvertInvoiceToXRechnungAsync($invoice, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
     {
-        return $this->xRechnungConversionConvertInvoiceToXRechnungAsyncWithHttpInfo($invoice, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType)
+        return $this->xRechnungConversionConvertInvoiceToXRechnungAsyncWithHttpInfo($invoice, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1212,18 +1212,18 @@ class XRechnungConversionApi
      * This will convert an Invoice object to an XRechnung file
      *
      * @param  \Dangl\AVACloud\Model\Invoice $invoice (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertInvoiceToXRechnungAsyncWithHttpInfo($invoice, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
+    public function xRechnungConversionConvertInvoiceToXRechnungAsyncWithHttpInfo($invoice, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->xRechnungConversionConvertInvoiceToXRechnungRequest($invoice, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        $request = $this->xRechnungConversionConvertInvoiceToXRechnungRequest($invoice, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1265,15 +1265,15 @@ class XRechnungConversionApi
      * Create request for operation 'xRechnungConversionConvertInvoiceToXRechnung'
      *
      * @param  \Dangl\AVACloud\Model\Invoice $invoice (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function xRechnungConversionConvertInvoiceToXRechnungRequest($invoice, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
+    public function xRechnungConversionConvertInvoiceToXRechnungRequest($invoice, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionConvertInvoiceToXRechnung'][0])
     {
 
         // verify the required parameter 'invoice' is set
@@ -1296,7 +1296,7 @@ class XRechnungConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_format,
+            $targetFormat,
             'TargetFormat', // param base name
             'string', // openApiType
             '', // style
@@ -1305,7 +1305,7 @@ class XRechnungConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_price_rounding,
+            $disablePriceRounding,
             'DisablePriceRounding', // param base name
             'boolean', // openApiType
             '', // style
@@ -1314,7 +1314,7 @@ class XRechnungConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_branding_comment,
+            $disableBrandingComment,
             'DisableBrandingComment', // param base name
             'boolean', // openApiType
             '', // style
@@ -1394,16 +1394,16 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an AVA wrapper object
      *
-     * @param  \SplFileObject|null $xrechnung_file xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\AvaProjectWrapper|\Dangl\AVACloud\Model\ApiError
      */
-    public function xRechnungConversionConvertXRechnungToAva($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
+    public function xRechnungConversionConvertXRechnungToAva($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
     {
-        list($response) = $this->xRechnungConversionConvertXRechnungToAvaWithHttpInfo($xrechnung_file, $contentType);
+        list($response) = $this->xRechnungConversionConvertXRechnungToAvaWithHttpInfo($xrechnungFile, $contentType);
         return $response;
     }
 
@@ -1412,16 +1412,16 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an AVA wrapper object
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\AvaProjectWrapper|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function xRechnungConversionConvertXRechnungToAvaWithHttpInfo($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
+    public function xRechnungConversionConvertXRechnungToAvaWithHttpInfo($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
     {
-        $request = $this->xRechnungConversionConvertXRechnungToAvaRequest($xrechnung_file, $contentType);
+        $request = $this->xRechnungConversionConvertXRechnungToAvaRequest($xrechnungFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1511,15 +1511,15 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an AVA wrapper object
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertXRechnungToAvaAsync($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
+    public function xRechnungConversionConvertXRechnungToAvaAsync($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
     {
-        return $this->xRechnungConversionConvertXRechnungToAvaAsyncWithHttpInfo($xrechnung_file, $contentType)
+        return $this->xRechnungConversionConvertXRechnungToAvaAsyncWithHttpInfo($xrechnungFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1532,16 +1532,16 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an AVA wrapper object
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertXRechnungToAvaAsyncWithHttpInfo($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
+    public function xRechnungConversionConvertXRechnungToAvaAsyncWithHttpInfo($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\AvaProjectWrapper';
-        $request = $this->xRechnungConversionConvertXRechnungToAvaRequest($xrechnung_file, $contentType);
+        $request = $this->xRechnungConversionConvertXRechnungToAvaRequest($xrechnungFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1582,13 +1582,13 @@ class XRechnungConversionApi
     /**
      * Create request for operation 'xRechnungConversionConvertXRechnungToAva'
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function xRechnungConversionConvertXRechnungToAvaRequest($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
+    public function xRechnungConversionConvertXRechnungToAvaRequest($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToAva'][0])
     {
 
 
@@ -1607,7 +1607,7 @@ class XRechnungConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'xrechnung_file' => $xrechnung_file,
+            'xrechnungFile' => $xrechnungFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1676,16 +1676,16 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an Invoice object
      *
-     * @param  \SplFileObject|null $xrechnung_file xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\Invoice|\Dangl\AVACloud\Model\ApiError
      */
-    public function xRechnungConversionConvertXRechnungToInvoice($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
+    public function xRechnungConversionConvertXRechnungToInvoice($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
     {
-        list($response) = $this->xRechnungConversionConvertXRechnungToInvoiceWithHttpInfo($xrechnung_file, $contentType);
+        list($response) = $this->xRechnungConversionConvertXRechnungToInvoiceWithHttpInfo($xrechnungFile, $contentType);
         return $response;
     }
 
@@ -1694,16 +1694,16 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an Invoice object
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\Invoice|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function xRechnungConversionConvertXRechnungToInvoiceWithHttpInfo($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
+    public function xRechnungConversionConvertXRechnungToInvoiceWithHttpInfo($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
     {
-        $request = $this->xRechnungConversionConvertXRechnungToInvoiceRequest($xrechnung_file, $contentType);
+        $request = $this->xRechnungConversionConvertXRechnungToInvoiceRequest($xrechnungFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1793,15 +1793,15 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an Invoice object
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertXRechnungToInvoiceAsync($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
+    public function xRechnungConversionConvertXRechnungToInvoiceAsync($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
     {
-        return $this->xRechnungConversionConvertXRechnungToInvoiceAsyncWithHttpInfo($xrechnung_file, $contentType)
+        return $this->xRechnungConversionConvertXRechnungToInvoiceAsyncWithHttpInfo($xrechnungFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1814,16 +1814,16 @@ class XRechnungConversionApi
      *
      * This will read an XRechnung file and convert it to an Invoice object
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionConvertXRechnungToInvoiceAsyncWithHttpInfo($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
+    public function xRechnungConversionConvertXRechnungToInvoiceAsyncWithHttpInfo($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\Invoice';
-        $request = $this->xRechnungConversionConvertXRechnungToInvoiceRequest($xrechnung_file, $contentType);
+        $request = $this->xRechnungConversionConvertXRechnungToInvoiceRequest($xrechnungFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1864,13 +1864,13 @@ class XRechnungConversionApi
     /**
      * Create request for operation 'xRechnungConversionConvertXRechnungToInvoice'
      *
-     * @param  \SplFileObject|null $xrechnung_file (optional)
+     * @param  \SplFileObject|null $xrechnungFile (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function xRechnungConversionConvertXRechnungToInvoiceRequest($xrechnung_file = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
+    public function xRechnungConversionConvertXRechnungToInvoiceRequest($xrechnungFile = null, string $contentType = self::contentTypes['xRechnungConversionConvertXRechnungToInvoice'][0])
     {
 
 
@@ -1889,7 +1889,7 @@ class XRechnungConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'xrechnung_file' => $xrechnung_file,
+            'xrechnungFile' => $xrechnungFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1958,19 +1958,19 @@ class XRechnungConversionApi
      *
      * This will embedd an XRechnung file into an existing PDF file as an attachment.
      *
-     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdf_embedd_model pdf_embedd_model (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdfEmbeddModel pdfEmbeddModel (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \SplFileObject|\Dangl\AVACloud\Model\ApiError
      */
-    public function xRechnungConversionMergeInvoiceIntoPdfFile($pdf_embedd_model, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
+    public function xRechnungConversionMergeInvoiceIntoPdfFile($pdfEmbeddModel, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
     {
-        list($response) = $this->xRechnungConversionMergeInvoiceIntoPdfFileWithHttpInfo($pdf_embedd_model, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        list($response) = $this->xRechnungConversionMergeInvoiceIntoPdfFileWithHttpInfo($pdfEmbeddModel, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
         return $response;
     }
 
@@ -1979,19 +1979,19 @@ class XRechnungConversionApi
      *
      * This will embedd an XRechnung file into an existing PDF file as an attachment.
      *
-     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdf_embedd_model (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdfEmbeddModel (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function xRechnungConversionMergeInvoiceIntoPdfFileWithHttpInfo($pdf_embedd_model, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
+    public function xRechnungConversionMergeInvoiceIntoPdfFileWithHttpInfo($pdfEmbeddModel, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
     {
-        $request = $this->xRechnungConversionMergeInvoiceIntoPdfFileRequest($pdf_embedd_model, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        $request = $this->xRechnungConversionMergeInvoiceIntoPdfFileRequest($pdfEmbeddModel, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2081,18 +2081,18 @@ class XRechnungConversionApi
      *
      * This will embedd an XRechnung file into an existing PDF file as an attachment.
      *
-     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdf_embedd_model (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdfEmbeddModel (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionMergeInvoiceIntoPdfFileAsync($pdf_embedd_model, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
+    public function xRechnungConversionMergeInvoiceIntoPdfFileAsync($pdfEmbeddModel, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
     {
-        return $this->xRechnungConversionMergeInvoiceIntoPdfFileAsyncWithHttpInfo($pdf_embedd_model, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType)
+        return $this->xRechnungConversionMergeInvoiceIntoPdfFileAsyncWithHttpInfo($pdfEmbeddModel, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2105,19 +2105,19 @@ class XRechnungConversionApi
      *
      * This will embedd an XRechnung file into an existing PDF file as an attachment.
      *
-     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdf_embedd_model (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdfEmbeddModel (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function xRechnungConversionMergeInvoiceIntoPdfFileAsyncWithHttpInfo($pdf_embedd_model, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
+    public function xRechnungConversionMergeInvoiceIntoPdfFileAsyncWithHttpInfo($pdfEmbeddModel, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->xRechnungConversionMergeInvoiceIntoPdfFileRequest($pdf_embedd_model, $target_format, $disable_price_rounding, $disable_branding_comment, $contentType);
+        $request = $this->xRechnungConversionMergeInvoiceIntoPdfFileRequest($pdfEmbeddModel, $targetFormat, $disablePriceRounding, $disableBrandingComment, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2158,22 +2158,22 @@ class XRechnungConversionApi
     /**
      * Create request for operation 'xRechnungConversionMergeInvoiceIntoPdfFile'
      *
-     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdf_embedd_model (required)
-     * @param  string|null $target_format The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
-     * @param  bool|null $disable_price_rounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
-     * @param  bool|null $disable_branding_comment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
+     * @param  \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd $pdfEmbeddModel (required)
+     * @param  string|null $targetFormat The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) (optional)
+     * @param  bool|null $disablePriceRounding If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. (optional)
+     * @param  bool|null $disableBrandingComment If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function xRechnungConversionMergeInvoiceIntoPdfFileRequest($pdf_embedd_model, $target_format = null, $disable_price_rounding = null, $disable_branding_comment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
+    public function xRechnungConversionMergeInvoiceIntoPdfFileRequest($pdfEmbeddModel, $targetFormat = null, $disablePriceRounding = null, $disableBrandingComment = null, string $contentType = self::contentTypes['xRechnungConversionMergeInvoiceIntoPdfFile'][0])
     {
 
-        // verify the required parameter 'pdf_embedd_model' is set
-        if ($pdf_embedd_model === null || (is_array($pdf_embedd_model) && count($pdf_embedd_model) === 0)) {
+        // verify the required parameter 'pdfEmbeddModel' is set
+        if ($pdfEmbeddModel === null || (is_array($pdfEmbeddModel) && count($pdfEmbeddModel) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $pdf_embedd_model when calling xRechnungConversionMergeInvoiceIntoPdfFile'
+                'Missing the required parameter $pdfEmbeddModel when calling xRechnungConversionMergeInvoiceIntoPdfFile'
             );
         }
 
@@ -2190,7 +2190,7 @@ class XRechnungConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_format,
+            $targetFormat,
             'TargetFormat', // param base name
             'string', // openApiType
             '', // style
@@ -2199,7 +2199,7 @@ class XRechnungConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_price_rounding,
+            $disablePriceRounding,
             'DisablePriceRounding', // param base name
             'boolean', // openApiType
             '', // style
@@ -2208,7 +2208,7 @@ class XRechnungConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_branding_comment,
+            $disableBrandingComment,
             'DisableBrandingComment', // param base name
             'boolean', // openApiType
             '', // style
@@ -2226,12 +2226,12 @@ class XRechnungConversionApi
         );
 
         // for model (json/xml)
-        if (isset($pdf_embedd_model)) {
+        if (isset($pdfEmbeddModel)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($pdf_embedd_model));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($pdfEmbeddModel));
             } else {
-                $httpBody = $pdf_embedd_model;
+                $httpBody = $pdfEmbeddModel;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

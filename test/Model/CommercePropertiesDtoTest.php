@@ -81,7 +81,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "article_number"
+     * Test attribute "articleNumber"
      */
     public function testPropertyArticleNumber()
     {
@@ -90,7 +90,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "ean_gtin_article_number"
+     * Test attribute "eanGtinArticleNumber"
      */
     public function testPropertyEanGtinArticleNumber()
     {
@@ -99,7 +99,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "iln_article_number"
+     * Test attribute "ilnArticleNumber"
      */
     public function testPropertyIlnArticleNumber()
     {
@@ -108,7 +108,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_number"
+     * Test attribute "catalogueNumber"
      */
     public function testPropertyCatalogueNumber()
     {
@@ -117,7 +117,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_article_number"
+     * Test attribute "catalogueArticleNumber"
      */
     public function testPropertyCatalogueArticleNumber()
     {
@@ -126,7 +126,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_basis"
+     * Test attribute "priceBasis"
      */
     public function testPropertyPriceBasis()
     {
@@ -135,7 +135,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "sub_position_identifier"
+     * Test attribute "subPositionIdentifier"
      */
     public function testPropertySubPositionIdentifier()
     {
@@ -144,7 +144,7 @@ class CommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "customer_base_item_number"
+     * Test attribute "customerBaseItemNumber"
      */
     public function testPropertyCustomerBaseItemNumber()
     {

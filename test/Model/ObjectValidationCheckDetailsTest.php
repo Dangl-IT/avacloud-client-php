@@ -81,7 +81,7 @@ class ObjectValidationCheckDetailsTest extends TestCase
     }
 
     /**
-     * Test attribute "element_path"
+     * Test attribute "elementPath"
      */
     public function testPropertyElementPath()
     {

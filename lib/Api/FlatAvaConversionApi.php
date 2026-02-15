@@ -188,19 +188,19 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function flatAvaConversionConvertToAva($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
+    public function flatAvaConversionConvertToAva($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToAvaWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $contentType);
+        list($response) = $this->flatAvaConversionConvertToAvaWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -209,19 +209,19 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToAvaWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
+    public function flatAvaConversionConvertToAvaWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
     {
-        $request = $this->flatAvaConversionConvertToAvaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $contentType);
+        $request = $this->flatAvaConversionConvertToAvaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -311,18 +311,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToAvaAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
+    public function flatAvaConversionConvertToAvaAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
     {
-        return $this->flatAvaConversionConvertToAvaAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $contentType)
+        return $this->flatAvaConversionConvertToAvaAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -335,19 +335,19 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToAvaAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
+    public function flatAvaConversionConvertToAvaAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->flatAvaConversionConvertToAvaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $contentType);
+        $request = $this->flatAvaConversionConvertToAvaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -388,22 +388,22 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToAva'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToAvaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
+    public function flatAvaConversionConvertToAvaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToAva'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToAva'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToAva'
             );
         }
 
@@ -420,7 +420,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -429,7 +429,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -438,7 +438,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -456,12 +456,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -518,18 +518,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Datanorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $datanorm_destination_version The Datanorm version to convert to. Defaults to V4. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $datanormDestinationVersion The Datanorm version to convert to. Defaults to V4. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToDatanorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToDatanorm($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $datanorm_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
+    public function flatAvaConversionConvertToDatanorm($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $datanormDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToDatanormWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $datanorm_destination_version, $contentType);
+        list($response) = $this->flatAvaConversionConvertToDatanormWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $datanormDestinationVersion, $contentType);
         return $response;
     }
 
@@ -538,18 +538,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Datanorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $datanorm_destination_version The Datanorm version to convert to. Defaults to V4. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $datanormDestinationVersion The Datanorm version to convert to. Defaults to V4. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToDatanorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToDatanormWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $datanorm_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
+    public function flatAvaConversionConvertToDatanormWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $datanormDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
     {
-        $request = $this->flatAvaConversionConvertToDatanormRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $datanorm_destination_version, $contentType);
+        $request = $this->flatAvaConversionConvertToDatanormRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $datanormDestinationVersion, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -639,17 +639,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Datanorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $datanorm_destination_version The Datanorm version to convert to. Defaults to V4. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $datanormDestinationVersion The Datanorm version to convert to. Defaults to V4. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToDatanorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToDatanormAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $datanorm_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
+    public function flatAvaConversionConvertToDatanormAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $datanormDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
     {
-        return $this->flatAvaConversionConvertToDatanormAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $datanorm_destination_version, $contentType)
+        return $this->flatAvaConversionConvertToDatanormAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $datanormDestinationVersion, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -662,18 +662,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Datanorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $datanorm_destination_version The Datanorm version to convert to. Defaults to V4. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $datanormDestinationVersion The Datanorm version to convert to. Defaults to V4. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToDatanorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToDatanormAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $datanorm_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
+    public function flatAvaConversionConvertToDatanormAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $datanormDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToDatanormRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $datanorm_destination_version, $contentType);
+        $request = $this->flatAvaConversionConvertToDatanormRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $datanormDestinationVersion, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -714,21 +714,21 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToDatanorm'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $datanorm_destination_version The Datanorm version to convert to. Defaults to V4. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $datanormDestinationVersion The Datanorm version to convert to. Defaults to V4. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToDatanorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToDatanormRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $datanorm_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
+    public function flatAvaConversionConvertToDatanormRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $datanormDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToDatanorm'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToDatanorm'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToDatanorm'
             );
         }
 
@@ -744,7 +744,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -753,7 +753,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $datanorm_destination_version,
+            $datanormDestinationVersion,
             'DatanormDestinationVersion', // param base name
             'string', // openApiType
             '', // style
@@ -771,12 +771,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -833,22 +833,22 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Excel
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToExcel($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
+    public function flatAvaConversionConvertToExcel($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToExcelWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $contentType);
+        list($response) = $this->flatAvaConversionConvertToExcelWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
         return $response;
     }
 
@@ -857,22 +857,22 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Excel
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToExcelWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
+    public function flatAvaConversionConvertToExcelWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
     {
-        $request = $this->flatAvaConversionConvertToExcelRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $contentType);
+        $request = $this->flatAvaConversionConvertToExcelRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -962,21 +962,21 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Excel
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToExcelAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
+    public function flatAvaConversionConvertToExcelAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
     {
-        return $this->flatAvaConversionConvertToExcelAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $contentType)
+        return $this->flatAvaConversionConvertToExcelAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -989,22 +989,22 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Excel
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToExcelAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
+    public function flatAvaConversionConvertToExcelAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToExcelRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $contentType);
+        $request = $this->flatAvaConversionConvertToExcelRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1045,25 +1045,25 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToExcel'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToExcelRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
+    public function flatAvaConversionConvertToExcelRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['flatAvaConversionConvertToExcel'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToExcel'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToExcel'
             );
         }
 
@@ -1083,7 +1083,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -1092,7 +1092,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_prices,
+            $writePrices,
             'WritePrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -1101,7 +1101,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_long_texts,
+            $writeLongTexts,
             'WriteLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1110,7 +1110,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $conversion_culture,
+            $conversionCulture,
             'ConversionCulture', // param base name
             'string', // openApiType
             '', // style
@@ -1119,7 +1119,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_article_numbers,
+            $includeArticleNumbers,
             'IncludeArticleNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -1128,7 +1128,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $lock_all_cells_but_prices,
+            $lockAllCellsButPrices,
             'LockAllCellsButPrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -1146,12 +1146,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1208,17 +1208,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function flatAvaConversionConvertToFlatAva($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
+    public function flatAvaConversionConvertToFlatAva($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToFlatAvaWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $contentType);
+        list($response) = $this->flatAvaConversionConvertToFlatAvaWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $contentType);
         return $response;
     }
 
@@ -1227,17 +1227,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToFlatAvaWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
+    public function flatAvaConversionConvertToFlatAvaWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
     {
-        $request = $this->flatAvaConversionConvertToFlatAvaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $contentType);
+        $request = $this->flatAvaConversionConvertToFlatAvaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1327,16 +1327,16 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToFlatAvaAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
+    public function flatAvaConversionConvertToFlatAvaAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
     {
-        return $this->flatAvaConversionConvertToFlatAvaAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $contentType)
+        return $this->flatAvaConversionConvertToFlatAvaAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1349,17 +1349,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Dangl.AVA. This is useful when you want to generate the calculated properties.
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToFlatAvaAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
+    public function flatAvaConversionConvertToFlatAvaAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->flatAvaConversionConvertToFlatAvaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $contentType);
+        $request = $this->flatAvaConversionConvertToFlatAvaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1400,20 +1400,20 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToFlatAva'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToFlatAvaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
+    public function flatAvaConversionConvertToFlatAvaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, string $contentType = self::contentTypes['flatAvaConversionConvertToFlatAva'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToFlatAva'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToFlatAva'
             );
         }
 
@@ -1428,7 +1428,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -1446,12 +1446,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1508,24 +1508,24 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to GAEB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToGaeb($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
+    public function flatAvaConversionConvertToGaeb($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToGaebWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $contentType);
+        list($response) = $this->flatAvaConversionConvertToGaebWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
         return $response;
     }
 
@@ -1534,24 +1534,24 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to GAEB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToGaebWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
+    public function flatAvaConversionConvertToGaebWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
     {
-        $request = $this->flatAvaConversionConvertToGaebRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $contentType);
+        $request = $this->flatAvaConversionConvertToGaebRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1641,23 +1641,23 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to GAEB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToGaebAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
+    public function flatAvaConversionConvertToGaebAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
     {
-        return $this->flatAvaConversionConvertToGaebAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $contentType)
+        return $this->flatAvaConversionConvertToGaebAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1670,24 +1670,24 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to GAEB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToGaebAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
+    public function flatAvaConversionConvertToGaebAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToGaebRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $contentType);
+        $request = $this->flatAvaConversionConvertToGaebRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1728,27 +1728,27 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToGaeb'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToGaebRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
+    public function flatAvaConversionConvertToGaebRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['flatAvaConversionConvertToGaeb'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToGaeb'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToGaeb'
             );
         }
 
@@ -1770,7 +1770,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -1779,7 +1779,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_gaeb_type,
+            $destinationGaebType,
             'DestinationGaebType', // param base name
             'string', // openApiType
             '', // style
@@ -1788,7 +1788,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_exchange_phase_transform,
+            $targetExchangePhaseTransform,
             'TargetExchangePhaseTransform', // param base name
             'string', // openApiType
             '', // style
@@ -1797,7 +1797,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $enforce_strict_offer_phase_long_text_output,
+            $enforceStrictOfferPhaseLongTextOutput,
             'EnforceStrictOfferPhaseLongTextOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1806,7 +1806,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $export_quantity_determination,
+            $exportQuantityDetermination,
             'ExportQuantityDetermination', // param base name
             'boolean', // openApiType
             '', // style
@@ -1815,7 +1815,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1824,7 +1824,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $force_include_descriptions,
+            $forceIncludeDescriptions,
             'ForceIncludeDescriptions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1833,7 +1833,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $treat_null_item_number_schema_as_invalid,
+            $treatNullItemNumberSchemaAsInvalid,
             'TreatNullItemNumberSchemaAsInvalid', // param base name
             'boolean', // openApiType
             '', // style
@@ -1851,12 +1851,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1913,8 +1913,8 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to IDS Connect files
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string|null $version The IDS Connect version to convert to. Defaults to V2_5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToIdsConnect'] to see the possible values for this operation
      *
@@ -1922,9 +1922,9 @@ class FlatAvaConversionApi
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToIdsConnect($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
+    public function flatAvaConversionConvertToIdsConnect($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToIdsConnectWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $version, $contentType);
+        list($response) = $this->flatAvaConversionConvertToIdsConnectWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $version, $contentType);
         return $response;
     }
 
@@ -1933,8 +1933,8 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to IDS Connect files
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string|null $version The IDS Connect version to convert to. Defaults to V2_5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToIdsConnect'] to see the possible values for this operation
      *
@@ -1942,9 +1942,9 @@ class FlatAvaConversionApi
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToIdsConnectWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
+    public function flatAvaConversionConvertToIdsConnectWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
     {
-        $request = $this->flatAvaConversionConvertToIdsConnectRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $version, $contentType);
+        $request = $this->flatAvaConversionConvertToIdsConnectRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $version, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2034,17 +2034,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to IDS Connect files
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string|null $version The IDS Connect version to convert to. Defaults to V2_5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToIdsConnect'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToIdsConnectAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
+    public function flatAvaConversionConvertToIdsConnectAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
     {
-        return $this->flatAvaConversionConvertToIdsConnectAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $version, $contentType)
+        return $this->flatAvaConversionConvertToIdsConnectAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $version, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2057,18 +2057,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to IDS Connect files
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string|null $version The IDS Connect version to convert to. Defaults to V2_5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToIdsConnect'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToIdsConnectAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
+    public function flatAvaConversionConvertToIdsConnectAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToIdsConnectRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $version, $contentType);
+        $request = $this->flatAvaConversionConvertToIdsConnectRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $version, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2109,21 +2109,21 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToIdsConnect'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
      * @param  string|null $version The IDS Connect version to convert to. Defaults to V2_5. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToIdsConnect'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToIdsConnectRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
+    public function flatAvaConversionConvertToIdsConnectRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToIdsConnect'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToIdsConnect'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToIdsConnect'
             );
         }
 
@@ -2139,7 +2139,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -2166,12 +2166,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2228,21 +2228,21 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Oenorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToOenorm($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
+    public function flatAvaConversionConvertToOenorm($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToOenormWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $contentType);
+        list($response) = $this->flatAvaConversionConvertToOenormWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
         return $response;
     }
 
@@ -2251,21 +2251,21 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Oenorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToOenormWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
+    public function flatAvaConversionConvertToOenormWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
     {
-        $request = $this->flatAvaConversionConvertToOenormRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $contentType);
+        $request = $this->flatAvaConversionConvertToOenormRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2355,20 +2355,20 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Oenorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToOenormAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
+    public function flatAvaConversionConvertToOenormAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
     {
-        return $this->flatAvaConversionConvertToOenormAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $contentType)
+        return $this->flatAvaConversionConvertToOenormAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2381,21 +2381,21 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to Oenorm
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToOenormAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
+    public function flatAvaConversionConvertToOenormAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToOenormRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $contentType);
+        $request = $this->flatAvaConversionConvertToOenormRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2436,24 +2436,24 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToOenorm'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToOenormRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
+    public function flatAvaConversionConvertToOenormRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['flatAvaConversionConvertToOenorm'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToOenorm'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToOenorm'
             );
         }
 
@@ -2472,7 +2472,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -2481,7 +2481,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_oenorm_type,
+            $destinationOenormType,
             'DestinationOenormType', // param base name
             'string', // openApiType
             '', // style
@@ -2490,7 +2490,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_repair_project_structure,
+            $tryRepairProjectStructure,
             'TryRepairProjectStructure', // param base name
             'boolean', // openApiType
             '', // style
@@ -2499,7 +2499,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $skip_try_enforce_schema_compliant_xml_output,
+            $skipTryEnforceSchemaCompliantXmlOutput,
             'SkipTryEnforceSchemaCompliantXmlOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -2508,7 +2508,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -2526,12 +2526,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2588,19 +2588,19 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to REB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_reb_type Defaults to D11 (optional)
-     * @param  string|null $last_row_address If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationRebType Defaults to D11 (optional)
+     * @param  string|null $lastRowAddress If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToReb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToReb($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_reb_type = null, $last_row_address = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
+    public function flatAvaConversionConvertToReb($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationRebType = null, $lastRowAddress = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToRebWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_reb_type, $last_row_address, $contentType);
+        list($response) = $this->flatAvaConversionConvertToRebWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationRebType, $lastRowAddress, $contentType);
         return $response;
     }
 
@@ -2609,19 +2609,19 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to REB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_reb_type Defaults to D11 (optional)
-     * @param  string|null $last_row_address If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationRebType Defaults to D11 (optional)
+     * @param  string|null $lastRowAddress If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToReb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToRebWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_reb_type = null, $last_row_address = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
+    public function flatAvaConversionConvertToRebWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationRebType = null, $lastRowAddress = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
     {
-        $request = $this->flatAvaConversionConvertToRebRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_reb_type, $last_row_address, $contentType);
+        $request = $this->flatAvaConversionConvertToRebRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationRebType, $lastRowAddress, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2711,18 +2711,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to REB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_reb_type Defaults to D11 (optional)
-     * @param  string|null $last_row_address If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationRebType Defaults to D11 (optional)
+     * @param  string|null $lastRowAddress If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToReb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToRebAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_reb_type = null, $last_row_address = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
+    public function flatAvaConversionConvertToRebAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationRebType = null, $lastRowAddress = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
     {
-        return $this->flatAvaConversionConvertToRebAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_reb_type, $last_row_address, $contentType)
+        return $this->flatAvaConversionConvertToRebAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationRebType, $lastRowAddress, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2735,19 +2735,19 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to REB
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_reb_type Defaults to D11 (optional)
-     * @param  string|null $last_row_address If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationRebType Defaults to D11 (optional)
+     * @param  string|null $lastRowAddress If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToReb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToRebAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_reb_type = null, $last_row_address = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
+    public function flatAvaConversionConvertToRebAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationRebType = null, $lastRowAddress = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToRebRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $destination_reb_type, $last_row_address, $contentType);
+        $request = $this->flatAvaConversionConvertToRebRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $destinationRebType, $lastRowAddress, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2788,22 +2788,22 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToReb'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $destination_reb_type Defaults to D11 (optional)
-     * @param  string|null $last_row_address If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $destinationRebType Defaults to D11 (optional)
+     * @param  string|null $lastRowAddress If this is present, the export to REB will be started from the next available row address after the given one. This must be a valid 6 character address, e.g. \&quot;1234A0\&quot; (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToReb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToRebRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $destination_reb_type = null, $last_row_address = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
+    public function flatAvaConversionConvertToRebRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $destinationRebType = null, $lastRowAddress = null, string $contentType = self::contentTypes['flatAvaConversionConvertToReb'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToReb'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToReb'
             );
         }
 
@@ -2820,7 +2820,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -2829,7 +2829,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_reb_type,
+            $destinationRebType,
             'DestinationRebType', // param base name
             'string', // openApiType
             '', // style
@@ -2838,7 +2838,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $last_row_address,
+            $lastRowAddress,
             'LastRowAddress', // param base name
             'string', // openApiType
             '', // style
@@ -2856,12 +2856,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -2918,18 +2918,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to SIA 451
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $sia_destination_type Defaults to Sia451 (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $siaDestinationType Defaults to Sia451 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToSia'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToSia($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $sia_destination_type = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
+    public function flatAvaConversionConvertToSia($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $siaDestinationType = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToSiaWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $sia_destination_type, $contentType);
+        list($response) = $this->flatAvaConversionConvertToSiaWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $siaDestinationType, $contentType);
         return $response;
     }
 
@@ -2938,18 +2938,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to SIA 451
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $sia_destination_type Defaults to Sia451 (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $siaDestinationType Defaults to Sia451 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToSia'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToSiaWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $sia_destination_type = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
+    public function flatAvaConversionConvertToSiaWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $siaDestinationType = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
     {
-        $request = $this->flatAvaConversionConvertToSiaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $sia_destination_type, $contentType);
+        $request = $this->flatAvaConversionConvertToSiaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $siaDestinationType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3039,17 +3039,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to SIA 451
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $sia_destination_type Defaults to Sia451 (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $siaDestinationType Defaults to Sia451 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToSia'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToSiaAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $sia_destination_type = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
+    public function flatAvaConversionConvertToSiaAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $siaDestinationType = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
     {
-        return $this->flatAvaConversionConvertToSiaAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $sia_destination_type, $contentType)
+        return $this->flatAvaConversionConvertToSiaAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $siaDestinationType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3062,18 +3062,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to SIA 451
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $sia_destination_type Defaults to Sia451 (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $siaDestinationType Defaults to Sia451 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToSia'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToSiaAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $sia_destination_type = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
+    public function flatAvaConversionConvertToSiaAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $siaDestinationType = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToSiaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $sia_destination_type, $contentType);
+        $request = $this->flatAvaConversionConvertToSiaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $siaDestinationType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3114,21 +3114,21 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToSia'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $sia_destination_type Defaults to Sia451 (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $siaDestinationType Defaults to Sia451 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToSia'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToSiaRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $sia_destination_type = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
+    public function flatAvaConversionConvertToSiaRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $siaDestinationType = null, string $contentType = self::contentTypes['flatAvaConversionConvertToSia'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToSia'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToSia'
             );
         }
 
@@ -3144,7 +3144,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -3153,7 +3153,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $sia_destination_type,
+            $siaDestinationType,
             'SiaDestinationType', // param base name
             'string', // openApiType
             '', // style
@@ -3171,12 +3171,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3233,18 +3233,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to UGL
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $ugl_destination_version The UGL version to convert to. Defaults to V1. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $uglDestinationVersion The UGL version to convert to. Defaults to V1. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToUgl'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function flatAvaConversionConvertToUgl($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $ugl_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
+    public function flatAvaConversionConvertToUgl($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $uglDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
     {
-        list($response) = $this->flatAvaConversionConvertToUglWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $ugl_destination_version, $contentType);
+        list($response) = $this->flatAvaConversionConvertToUglWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $uglDestinationVersion, $contentType);
         return $response;
     }
 
@@ -3253,18 +3253,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to UGL
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $ugl_destination_version The UGL version to convert to. Defaults to V1. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $uglDestinationVersion The UGL version to convert to. Defaults to V1. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToUgl'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function flatAvaConversionConvertToUglWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $ugl_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
+    public function flatAvaConversionConvertToUglWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $uglDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
     {
-        $request = $this->flatAvaConversionConvertToUglRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $ugl_destination_version, $contentType);
+        $request = $this->flatAvaConversionConvertToUglRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $uglDestinationVersion, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3354,17 +3354,17 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to UGL
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $ugl_destination_version The UGL version to convert to. Defaults to V1. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $uglDestinationVersion The UGL version to convert to. Defaults to V1. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToUgl'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToUglAsync($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $ugl_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
+    public function flatAvaConversionConvertToUglAsync($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $uglDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
     {
-        return $this->flatAvaConversionConvertToUglAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $ugl_destination_version, $contentType)
+        return $this->flatAvaConversionConvertToUglAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $uglDestinationVersion, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3377,18 +3377,18 @@ class FlatAvaConversionApi
      *
      * Converts flat Dangl.AVA projects to UGL
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $ugl_destination_version The UGL version to convert to. Defaults to V1. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $uglDestinationVersion The UGL version to convert to. Defaults to V1. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToUgl'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function flatAvaConversionConvertToUglAsyncWithHttpInfo($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $ugl_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
+    public function flatAvaConversionConvertToUglAsyncWithHttpInfo($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $uglDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->flatAvaConversionConvertToUglRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema, $ugl_destination_version, $contentType);
+        $request = $this->flatAvaConversionConvertToUglRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema, $uglDestinationVersion, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3429,21 +3429,21 @@ class FlatAvaConversionApi
     /**
      * Create request for operation 'flatAvaConversionConvertToUgl'
      *
-     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flat_ava_project The flat Dangl.AVA project (required)
-     * @param  bool|null $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
-     * @param  string|null $ugl_destination_version The UGL version to convert to. Defaults to V1. (optional)
+     * @param  \Dangl\AVACloud\Model\FlatAvaProject $flatAvaProject The flat Dangl.AVA project (required)
+     * @param  bool|null $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number. (optional)
+     * @param  string|null $uglDestinationVersion The UGL version to convert to. Defaults to V1. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['flatAvaConversionConvertToUgl'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function flatAvaConversionConvertToUglRequest($flat_ava_project, $try_auto_generate_item_numbers_and_schema = null, $ugl_destination_version = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
+    public function flatAvaConversionConvertToUglRequest($flatAvaProject, $tryAutoGenerateItemNumbersAndSchema = null, $uglDestinationVersion = null, string $contentType = self::contentTypes['flatAvaConversionConvertToUgl'][0])
     {
 
-        // verify the required parameter 'flat_ava_project' is set
-        if ($flat_ava_project === null || (is_array($flat_ava_project) && count($flat_ava_project) === 0)) {
+        // verify the required parameter 'flatAvaProject' is set
+        if ($flatAvaProject === null || (is_array($flatAvaProject) && count($flatAvaProject) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $flat_ava_project when calling flatAvaConversionConvertToUgl'
+                'Missing the required parameter $flatAvaProject when calling flatAvaConversionConvertToUgl'
             );
         }
 
@@ -3459,7 +3459,7 @@ class FlatAvaConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_auto_generate_item_numbers_and_schema,
+            $tryAutoGenerateItemNumbersAndSchema,
             'TryAutoGenerateItemNumbersAndSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -3468,7 +3468,7 @@ class FlatAvaConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $ugl_destination_version,
+            $uglDestinationVersion,
             'UglDestinationVersion', // param base name
             'string', // openApiType
             '', // style
@@ -3486,12 +3486,12 @@ class FlatAvaConversionApi
         );
 
         // for model (json/xml)
-        if (isset($flat_ava_project)) {
+        if (isset($flatAvaProject)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flat_ava_project));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($flatAvaProject));
             } else {
-                $httpBody = $flat_ava_project;
+                $httpBody = $flatAvaProject;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

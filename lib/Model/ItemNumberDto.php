@@ -60,13 +60,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'string_representation' => 'string',
-        'is_schema_compliant' => 'bool',
-        'item_number_schema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
+        'stringRepresentation' => 'string',
+        'isSchemaCompliant' => 'bool',
+        'itemNumberSchema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
         'identifiers' => 'string[]',
-        'is_lot' => 'bool',
-        'hierarchy_level' => 'int',
-        'is_attached_to_position' => 'bool'
+        'isLot' => 'bool',
+        'hierarchyLevel' => 'int',
+        'isAttachedToPosition' => 'bool'
     ];
 
     /**
@@ -78,13 +78,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'string_representation' => null,
-        'is_schema_compliant' => null,
-        'item_number_schema' => null,
+        'stringRepresentation' => null,
+        'isSchemaCompliant' => null,
+        'itemNumberSchema' => null,
         'identifiers' => null,
-        'is_lot' => null,
-        'hierarchy_level' => 'int32',
-        'is_attached_to_position' => null
+        'isLot' => null,
+        'hierarchyLevel' => 'int32',
+        'isAttachedToPosition' => null
     ];
 
     /**
@@ -94,13 +94,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'string_representation' => false,
-        'is_schema_compliant' => false,
-        'item_number_schema' => false,
+        'stringRepresentation' => false,
+        'isSchemaCompliant' => false,
+        'itemNumberSchema' => false,
         'identifiers' => false,
-        'is_lot' => false,
-        'hierarchy_level' => false,
-        'is_attached_to_position' => false
+        'isLot' => false,
+        'hierarchyLevel' => false,
+        'isAttachedToPosition' => false
     ];
 
     /**
@@ -190,13 +190,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'string_representation' => 'stringRepresentation',
-        'is_schema_compliant' => 'isSchemaCompliant',
-        'item_number_schema' => 'itemNumberSchema',
+        'stringRepresentation' => 'stringRepresentation',
+        'isSchemaCompliant' => 'isSchemaCompliant',
+        'itemNumberSchema' => 'itemNumberSchema',
         'identifiers' => 'identifiers',
-        'is_lot' => 'isLot',
-        'hierarchy_level' => 'hierarchyLevel',
-        'is_attached_to_position' => 'isAttachedToPosition'
+        'isLot' => 'isLot',
+        'hierarchyLevel' => 'hierarchyLevel',
+        'isAttachedToPosition' => 'isAttachedToPosition'
     ];
 
     /**
@@ -206,13 +206,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'string_representation' => 'setStringRepresentation',
-        'is_schema_compliant' => 'setIsSchemaCompliant',
-        'item_number_schema' => 'setItemNumberSchema',
+        'stringRepresentation' => 'setStringRepresentation',
+        'isSchemaCompliant' => 'setIsSchemaCompliant',
+        'itemNumberSchema' => 'setItemNumberSchema',
         'identifiers' => 'setIdentifiers',
-        'is_lot' => 'setIsLot',
-        'hierarchy_level' => 'setHierarchyLevel',
-        'is_attached_to_position' => 'setIsAttachedToPosition'
+        'isLot' => 'setIsLot',
+        'hierarchyLevel' => 'setHierarchyLevel',
+        'isAttachedToPosition' => 'setIsAttachedToPosition'
     ];
 
     /**
@@ -222,13 +222,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'string_representation' => 'getStringRepresentation',
-        'is_schema_compliant' => 'getIsSchemaCompliant',
-        'item_number_schema' => 'getItemNumberSchema',
+        'stringRepresentation' => 'getStringRepresentation',
+        'isSchemaCompliant' => 'getIsSchemaCompliant',
+        'itemNumberSchema' => 'getItemNumberSchema',
         'identifiers' => 'getIdentifiers',
-        'is_lot' => 'getIsLot',
-        'hierarchy_level' => 'getHierarchyLevel',
-        'is_attached_to_position' => 'getIsAttachedToPosition'
+        'isLot' => 'getIsLot',
+        'hierarchyLevel' => 'getHierarchyLevel',
+        'isAttachedToPosition' => 'getIsAttachedToPosition'
     ];
 
     /**
@@ -289,13 +289,13 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('string_representation', $data ?? [], null);
-        $this->setIfExists('is_schema_compliant', $data ?? [], null);
-        $this->setIfExists('item_number_schema', $data ?? [], null);
+        $this->setIfExists('stringRepresentation', $data ?? [], null);
+        $this->setIfExists('isSchemaCompliant', $data ?? [], null);
+        $this->setIfExists('itemNumberSchema', $data ?? [], null);
         $this->setIfExists('identifiers', $data ?? [], null);
-        $this->setIfExists('is_lot', $data ?? [], null);
-        $this->setIfExists('hierarchy_level', $data ?? [], null);
-        $this->setIfExists('is_attached_to_position', $data ?? [], null);
+        $this->setIfExists('isLot', $data ?? [], null);
+        $this->setIfExists('hierarchyLevel', $data ?? [], null);
+        $this->setIfExists('isAttachedToPosition', $data ?? [], null);
     }
 
     /**
@@ -328,17 +328,17 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['is_schema_compliant'] === null) {
-            $invalidProperties[] = "'is_schema_compliant' can't be null";
+        if ($this->container['isSchemaCompliant'] === null) {
+            $invalidProperties[] = "'isSchemaCompliant' can't be null";
         }
-        if ($this->container['is_lot'] === null) {
-            $invalidProperties[] = "'is_lot' can't be null";
+        if ($this->container['isLot'] === null) {
+            $invalidProperties[] = "'isLot' can't be null";
         }
-        if ($this->container['hierarchy_level'] === null) {
-            $invalidProperties[] = "'hierarchy_level' can't be null";
+        if ($this->container['hierarchyLevel'] === null) {
+            $invalidProperties[] = "'hierarchyLevel' can't be null";
         }
-        if ($this->container['is_attached_to_position'] === null) {
-            $invalidProperties[] = "'is_attached_to_position' can't be null";
+        if ($this->container['isAttachedToPosition'] === null) {
+            $invalidProperties[] = "'isAttachedToPosition' can't be null";
         }
         return $invalidProperties;
     }
@@ -383,82 +383,82 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets string_representation
+     * Gets stringRepresentation
      *
      * @return string|null
      */
     public function getStringRepresentation()
     {
-        return $this->container['string_representation'];
+        return $this->container['stringRepresentation'];
     }
 
     /**
-     * Sets string_representation
+     * Sets stringRepresentation
      *
-     * @param string|null $string_representation Will return this ItemNumber as point delimited string. Will not distinguish between upper- and lowercase and return an all-lowercase representation. Will consider first numbers, then characters, e.g. 1a is considered preceding aa. Transformation to all lowercase can be configured in the ItemNumberSchema property.
+     * @param string|null $stringRepresentation Will return this ItemNumber as point delimited string. Will not distinguish between upper- and lowercase and return an all-lowercase representation. Will consider first numbers, then characters, e.g. 1a is considered preceding aa. Transformation to all lowercase can be configured in the ItemNumberSchema property.
      *
      * @return self
      */
-    public function setStringRepresentation($string_representation)
+    public function setStringRepresentation($stringRepresentation)
     {
-        if (is_null($string_representation)) {
-            throw new \InvalidArgumentException('non-nullable string_representation cannot be null');
+        if (is_null($stringRepresentation)) {
+            throw new \InvalidArgumentException('non-nullable stringRepresentation cannot be null');
         }
-        $this->container['string_representation'] = $string_representation;
+        $this->container['stringRepresentation'] = $stringRepresentation;
 
         return $this;
     }
 
     /**
-     * Gets is_schema_compliant
+     * Gets isSchemaCompliant
      *
      * @return bool
      */
     public function getIsSchemaCompliant()
     {
-        return $this->container['is_schema_compliant'];
+        return $this->container['isSchemaCompliant'];
     }
 
     /**
-     * Sets is_schema_compliant
+     * Sets isSchemaCompliant
      *
-     * @param bool $is_schema_compliant Indicates if the characters and the length of the Identifiers match the current ItemNumberSchema.
+     * @param bool $isSchemaCompliant Indicates if the characters and the length of the Identifiers match the current ItemNumberSchema.
      *
      * @return self
      */
-    public function setIsSchemaCompliant($is_schema_compliant)
+    public function setIsSchemaCompliant($isSchemaCompliant)
     {
-        if (is_null($is_schema_compliant)) {
-            throw new \InvalidArgumentException('non-nullable is_schema_compliant cannot be null');
+        if (is_null($isSchemaCompliant)) {
+            throw new \InvalidArgumentException('non-nullable isSchemaCompliant cannot be null');
         }
-        $this->container['is_schema_compliant'] = $is_schema_compliant;
+        $this->container['isSchemaCompliant'] = $isSchemaCompliant;
 
         return $this;
     }
 
     /**
-     * Gets item_number_schema
+     * Gets itemNumberSchema
      *
      * @return \Dangl\AVACloud\Model\ItemNumberSchemaDto|null
      */
     public function getItemNumberSchema()
     {
-        return $this->container['item_number_schema'];
+        return $this->container['itemNumberSchema'];
     }
 
     /**
-     * Sets item_number_schema
+     * Sets itemNumberSchema
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $item_number_schema item_number_schema
+     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $itemNumberSchema itemNumberSchema
      *
      * @return self
      */
-    public function setItemNumberSchema($item_number_schema)
+    public function setItemNumberSchema($itemNumberSchema)
     {
-        if (is_null($item_number_schema)) {
-            throw new \InvalidArgumentException('non-nullable item_number_schema cannot be null');
+        if (is_null($itemNumberSchema)) {
+            throw new \InvalidArgumentException('non-nullable itemNumberSchema cannot be null');
         }
-        $this->container['item_number_schema'] = $item_number_schema;
+        $this->container['itemNumberSchema'] = $itemNumberSchema;
 
         return $this;
     }
@@ -491,82 +491,82 @@ class ItemNumberDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_lot
+     * Gets isLot
      *
      * @return bool
      */
     public function getIsLot()
     {
-        return $this->container['is_lot'];
+        return $this->container['isLot'];
     }
 
     /**
-     * Sets is_lot
+     * Sets isLot
      *
-     * @param bool $is_lot This indicates if this item number is at the lot level. Find out more about lots in the documentation.
+     * @param bool $isLot This indicates if this item number is at the lot level. Find out more about lots in the documentation.
      *
      * @return self
      */
-    public function setIsLot($is_lot)
+    public function setIsLot($isLot)
     {
-        if (is_null($is_lot)) {
-            throw new \InvalidArgumentException('non-nullable is_lot cannot be null');
+        if (is_null($isLot)) {
+            throw new \InvalidArgumentException('non-nullable isLot cannot be null');
         }
-        $this->container['is_lot'] = $is_lot;
+        $this->container['isLot'] = $isLot;
 
         return $this;
     }
 
     /**
-     * Gets hierarchy_level
+     * Gets hierarchyLevel
      *
      * @return int
      */
     public function getHierarchyLevel()
     {
-        return $this->container['hierarchy_level'];
+        return $this->container['hierarchyLevel'];
     }
 
     /**
-     * Sets hierarchy_level
+     * Sets hierarchyLevel
      *
-     * @param int $hierarchy_level This is a zero based hierarchy level. It's set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element.
+     * @param int $hierarchyLevel This is a zero based hierarchy level. It's set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element.
      *
      * @return self
      */
-    public function setHierarchyLevel($hierarchy_level)
+    public function setHierarchyLevel($hierarchyLevel)
     {
-        if (is_null($hierarchy_level)) {
-            throw new \InvalidArgumentException('non-nullable hierarchy_level cannot be null');
+        if (is_null($hierarchyLevel)) {
+            throw new \InvalidArgumentException('non-nullable hierarchyLevel cannot be null');
         }
-        $this->container['hierarchy_level'] = $hierarchy_level;
+        $this->container['hierarchyLevel'] = $hierarchyLevel;
 
         return $this;
     }
 
     /**
-     * Gets is_attached_to_position
+     * Gets isAttachedToPosition
      *
      * @return bool
      */
     public function getIsAttachedToPosition()
     {
-        return $this->container['is_attached_to_position'];
+        return $this->container['isAttachedToPosition'];
     }
 
     /**
-     * Sets is_attached_to_position
+     * Sets isAttachedToPosition
      *
-     * @param bool $is_attached_to_position This property indicates if this ItemNumber is attached to an object of the Position type.
+     * @param bool $isAttachedToPosition This property indicates if this ItemNumber is attached to an object of the Position type.
      *
      * @return self
      */
-    public function setIsAttachedToPosition($is_attached_to_position)
+    public function setIsAttachedToPosition($isAttachedToPosition)
     {
-        if (is_null($is_attached_to_position)) {
-            throw new \InvalidArgumentException('non-nullable is_attached_to_position cannot be null');
+        if (is_null($isAttachedToPosition)) {
+            throw new \InvalidArgumentException('non-nullable isAttachedToPosition cannot be null');
         }
-        $this->container['is_attached_to_position'] = $is_attached_to_position;
+        $this->container['isAttachedToPosition'] = $isAttachedToPosition;
 
         return $this;
     }

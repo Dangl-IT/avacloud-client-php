@@ -90,7 +90,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "identifier_scheme"
+     * Test attribute "identifierScheme"
      */
     public function testPropertyIdentifierScheme()
     {
@@ -108,7 +108,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "registration_number"
+     * Test attribute "registrationNumber"
      */
     public function testPropertyRegistrationNumber()
     {
@@ -117,7 +117,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_id"
+     * Test attribute "vatId"
      */
     public function testPropertyVatId()
     {
@@ -126,7 +126,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_id"
+     * Test attribute "taxId"
      */
     public function testPropertyTaxId()
     {
@@ -144,7 +144,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "contact_person_name"
+     * Test attribute "contactPersonName"
      */
     public function testPropertyContactPersonName()
     {
@@ -153,7 +153,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "contact_person_phone"
+     * Test attribute "contactPersonPhone"
      */
     public function testPropertyContactPersonPhone()
     {
@@ -162,7 +162,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "contact_person_email"
+     * Test attribute "contactPersonEmail"
      */
     public function testPropertyContactPersonEmail()
     {
@@ -189,7 +189,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "zip_code"
+     * Test attribute "zipCode"
      */
     public function testPropertyZipCode()
     {
@@ -198,7 +198,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "country_code"
+     * Test attribute "countryCode"
      */
     public function testPropertyCountryCode()
     {
@@ -216,7 +216,7 @@ class OrganizationTest extends TestCase
     }
 
     /**
-     * Test attribute "additional_legal_information"
+     * Test attribute "additionalLegalInformation"
      */
     public function testPropertyAdditionalLegalInformation()
     {

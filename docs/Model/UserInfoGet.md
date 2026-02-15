@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_is_authenticated** | **bool** |  |
-**client_is_authenticated** | **bool** |  |
-**current_user_id** | **string** |  | [optional]
-**current_user_identicon_id** | **string** |  | [optional]
-**current_user_name** | **string** |  | [optional]
-**current_user_email** | **string** |  | [optional]
-**current_client_id** | **string** |  | [optional]
-**user_claims** | [**\Dangl\AVACloud\Model\ClaimGet[]**](ClaimGet.md) |  | [optional]
-**client_claims** | [**\Dangl\AVACloud\Model\ClaimGet[]**](ClaimGet.md) |  | [optional]
+**userIsAuthenticated** | **bool** |  |
+**clientIsAuthenticated** | **bool** |  |
+**currentUserId** | **string** |  | [optional]
+**currentUserIdenticonId** | **string** |  | [optional]
+**currentUserName** | **string** |  | [optional]
+**currentUserEmail** | **string** |  | [optional]
+**currentClientId** | **string** |  | [optional]
+**userClaims** | [**\Dangl\AVACloud\Model\ClaimGet[]**](ClaimGet.md) |  | [optional]
+**clientClaims** | [**\Dangl\AVACloud\Model\ClaimGet[]**](ClaimGet.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

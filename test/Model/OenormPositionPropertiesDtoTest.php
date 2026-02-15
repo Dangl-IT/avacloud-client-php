@@ -81,7 +81,7 @@ class OenormPositionPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "origin_code"
+     * Test attribute "originCode"
      */
     public function testPropertyOriginCode()
     {
@@ -90,7 +90,7 @@ class OenormPositionPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "opening_text_is_free_text"
+     * Test attribute "openingTextIsFreeText"
      */
     public function testPropertyOpeningTextIsFreeText()
     {
@@ -99,7 +99,7 @@ class OenormPositionPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_main_position"
+     * Test attribute "isMainPosition"
      */
     public function testPropertyIsMainPosition()
     {
@@ -108,7 +108,7 @@ class OenormPositionPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_undivided_position"
+     * Test attribute "isUndividedPosition"
      */
     public function testPropertyIsUndividedPosition()
     {
@@ -117,7 +117,7 @@ class OenormPositionPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "oenorm_short_text"
+     * Test attribute "oenormShortText"
      */
     public function testPropertyOenormShortText()
     {
@@ -126,7 +126,7 @@ class OenormPositionPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "oenorm_short_text_addition"
+     * Test attribute "oenormShortTextAddition"
      */
     public function testPropertyOenormShortTextAddition()
     {

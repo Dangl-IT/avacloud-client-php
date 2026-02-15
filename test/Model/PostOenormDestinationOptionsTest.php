@@ -81,7 +81,7 @@ class PostOenormDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "destination_oenorm_type"
+     * Test attribute "destinationOenormType"
      */
     public function testPropertyDestinationOenormType()
     {
@@ -90,7 +90,7 @@ class PostOenormDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "try_repair_project_structure"
+     * Test attribute "tryRepairProjectStructure"
      */
     public function testPropertyTryRepairProjectStructure()
     {
@@ -99,7 +99,7 @@ class PostOenormDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "skip_try_enforce_schema_compliant_xml_output"
+     * Test attribute "skipTryEnforceSchemaCompliantXmlOutput"
      */
     public function testPropertySkipTryEnforceSchemaCompliantXmlOutput()
     {
@@ -108,7 +108,7 @@ class PostOenormDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "remove_unprintable_characters_from_texts"
+     * Test attribute "removeUnprintableCharactersFromTexts"
      */
     public function testPropertyRemoveUnprintableCharactersFromTexts()
     {

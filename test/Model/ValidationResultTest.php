@@ -81,7 +81,7 @@ class ValidationResultTest extends TestCase
     }
 
     /**
-     * Test attribute "is_schema_compliant"
+     * Test attribute "isSchemaCompliant"
      */
     public function testPropertyIsSchemaCompliant()
     {
@@ -90,7 +90,7 @@ class ValidationResultTest extends TestCase
     }
 
     /**
-     * Test attribute "check_results"
+     * Test attribute "checkResults"
      */
     public function testPropertyCheckResults()
     {
@@ -99,7 +99,7 @@ class ValidationResultTest extends TestCase
     }
 
     /**
-     * Test attribute "validation_type"
+     * Test attribute "validationType"
      */
     public function testPropertyValidationType()
     {
@@ -108,7 +108,7 @@ class ValidationResultTest extends TestCase
     }
 
     /**
-     * Test attribute "file_name"
+     * Test attribute "fileName"
      */
     public function testPropertyFileName()
     {

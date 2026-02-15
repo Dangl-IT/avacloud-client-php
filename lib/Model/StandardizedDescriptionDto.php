@@ -59,9 +59,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'standard_reference_type' => '\Dangl\AVACloud\Model\StandardReferenceTypeDto',
-        'standard_reference' => 'string',
-        'stlb_reference' => '\Dangl\AVACloud\Model\STLBReferenceDto'
+        'standardReferenceType' => '\Dangl\AVACloud\Model\StandardReferenceTypeDto',
+        'standardReference' => 'string',
+        'stlbReference' => '\Dangl\AVACloud\Model\STLBReferenceDto'
     ];
 
     /**
@@ -72,9 +72,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'standard_reference_type' => null,
-        'standard_reference' => null,
-        'stlb_reference' => null
+        'standardReferenceType' => null,
+        'standardReference' => null,
+        'stlbReference' => null
     ];
 
     /**
@@ -83,9 +83,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'standard_reference_type' => false,
-        'standard_reference' => false,
-        'stlb_reference' => false
+        'standardReferenceType' => false,
+        'standardReference' => false,
+        'stlbReference' => false
     ];
 
     /**
@@ -174,9 +174,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'standard_reference_type' => 'standardReferenceType',
-        'standard_reference' => 'standardReference',
-        'stlb_reference' => 'stlbReference'
+        'standardReferenceType' => 'standardReferenceType',
+        'standardReference' => 'standardReference',
+        'stlbReference' => 'stlbReference'
     ];
 
     /**
@@ -185,9 +185,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'standard_reference_type' => 'setStandardReferenceType',
-        'standard_reference' => 'setStandardReference',
-        'stlb_reference' => 'setStlbReference'
+        'standardReferenceType' => 'setStandardReferenceType',
+        'standardReference' => 'setStandardReference',
+        'stlbReference' => 'setStlbReference'
     ];
 
     /**
@@ -196,9 +196,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'standard_reference_type' => 'getStandardReferenceType',
-        'standard_reference' => 'getStandardReference',
-        'stlb_reference' => 'getStlbReference'
+        'standardReferenceType' => 'getStandardReferenceType',
+        'standardReference' => 'getStandardReference',
+        'stlbReference' => 'getStlbReference'
     ];
 
     /**
@@ -258,9 +258,9 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('standard_reference_type', $data ?? [], null);
-        $this->setIfExists('standard_reference', $data ?? [], null);
-        $this->setIfExists('stlb_reference', $data ?? [], null);
+        $this->setIfExists('standardReferenceType', $data ?? [], null);
+        $this->setIfExists('standardReference', $data ?? [], null);
+        $this->setIfExists('stlbReference', $data ?? [], null);
     }
 
     /**
@@ -290,8 +290,8 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['standard_reference_type'] === null) {
-            $invalidProperties[] = "'standard_reference_type' can't be null";
+        if ($this->container['standardReferenceType'] === null) {
+            $invalidProperties[] = "'standardReferenceType' can't be null";
         }
         return $invalidProperties;
     }
@@ -309,82 +309,82 @@ class StandardizedDescriptionDto implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets standard_reference_type
+     * Gets standardReferenceType
      *
      * @return \Dangl\AVACloud\Model\StandardReferenceTypeDto
      */
     public function getStandardReferenceType()
     {
-        return $this->container['standard_reference_type'];
+        return $this->container['standardReferenceType'];
     }
 
     /**
-     * Sets standard_reference_type
+     * Sets standardReferenceType
      *
-     * @param \Dangl\AVACloud\Model\StandardReferenceTypeDto $standard_reference_type standard_reference_type
+     * @param \Dangl\AVACloud\Model\StandardReferenceTypeDto $standardReferenceType standardReferenceType
      *
      * @return self
      */
-    public function setStandardReferenceType($standard_reference_type)
+    public function setStandardReferenceType($standardReferenceType)
     {
-        if (is_null($standard_reference_type)) {
-            throw new \InvalidArgumentException('non-nullable standard_reference_type cannot be null');
+        if (is_null($standardReferenceType)) {
+            throw new \InvalidArgumentException('non-nullable standardReferenceType cannot be null');
         }
-        $this->container['standard_reference_type'] = $standard_reference_type;
+        $this->container['standardReferenceType'] = $standardReferenceType;
 
         return $this;
     }
 
     /**
-     * Gets standard_reference
+     * Gets standardReference
      *
      * @return string|null
      */
     public function getStandardReference()
     {
-        return $this->container['standard_reference'];
+        return $this->container['standardReference'];
     }
 
     /**
-     * Sets standard_reference
+     * Sets standardReference
      *
-     * @param string|null $standard_reference This string property is the identifier to map to the references standard. Its type is given in the StandardReferenceType
+     * @param string|null $standardReference This string property is the identifier to map to the references standard. Its type is given in the StandardReferenceType
      *
      * @return self
      */
-    public function setStandardReference($standard_reference)
+    public function setStandardReference($standardReference)
     {
-        if (is_null($standard_reference)) {
-            throw new \InvalidArgumentException('non-nullable standard_reference cannot be null');
+        if (is_null($standardReference)) {
+            throw new \InvalidArgumentException('non-nullable standardReference cannot be null');
         }
-        $this->container['standard_reference'] = $standard_reference;
+        $this->container['standardReference'] = $standardReference;
 
         return $this;
     }
 
     /**
-     * Gets stlb_reference
+     * Gets stlbReference
      *
      * @return \Dangl\AVACloud\Model\STLBReferenceDto|null
      */
     public function getStlbReference()
     {
-        return $this->container['stlb_reference'];
+        return $this->container['stlbReference'];
     }
 
     /**
-     * Sets stlb_reference
+     * Sets stlbReference
      *
-     * @param \Dangl\AVACloud\Model\STLBReferenceDto|null $stlb_reference stlb_reference
+     * @param \Dangl\AVACloud\Model\STLBReferenceDto|null $stlbReference stlbReference
      *
      * @return self
      */
-    public function setStlbReference($stlb_reference)
+    public function setStlbReference($stlbReference)
     {
-        if (is_null($stlb_reference)) {
-            throw new \InvalidArgumentException('non-nullable stlb_reference cannot be null');
+        if (is_null($stlbReference)) {
+            throw new \InvalidArgumentException('non-nullable stlbReference cannot be null');
         }
-        $this->container['stlb_reference'] = $stlb_reference;
+        $this->container['stlbReference'] = $stlbReference;
 
         return $this;
     }

@@ -81,7 +81,7 @@ class TokenRefreshPostTest extends TestCase
     }
 
     /**
-     * Test attribute "refresh_token"
+     * Test attribute "refreshToken"
      */
     public function testPropertyRefreshToken()
     {

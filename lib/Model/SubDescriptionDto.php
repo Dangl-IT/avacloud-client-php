@@ -61,21 +61,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPITypes = [
         'id' => 'string',
         'quantity' => 'float',
-        'quantity_override' => 'float',
-        'quantity_components' => '\Dangl\AVACloud\Model\CalculationDto[]',
-        'amount_to_be_entered_by_bidder' => 'bool',
+        'quantityOverride' => 'float',
+        'quantityComponents' => '\Dangl\AVACloud\Model\CalculationDto[]',
+        'amountToBeEnteredByBidder' => 'bool',
         'identifier' => 'string',
-        'short_text' => 'string',
-        'html_short_text' => 'string',
-        'long_text' => 'string',
-        'unit_tag' => 'string',
-        'html_long_text' => 'string',
-        'addition_type' => '\Dangl\AVACloud\Model\AdditionTypeDto',
-        'standardized_description' => '\Dangl\AVACloud\Model\StandardizedDescriptionDto',
-        'execution_description_reference' => 'string',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
-        'description_id' => 'string',
-        'has_bidder_comment_in_html_long_text' => 'bool'
+        'shortText' => 'string',
+        'htmlShortText' => 'string',
+        'longText' => 'string',
+        'unitTag' => 'string',
+        'htmlLongText' => 'string',
+        'additionType' => '\Dangl\AVACloud\Model\AdditionTypeDto',
+        'standardizedDescription' => '\Dangl\AVACloud\Model\StandardizedDescriptionDto',
+        'executionDescriptionReference' => 'string',
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
+        'descriptionId' => 'string',
+        'hasBidderCommentInHtmlLongText' => 'bool'
     ];
 
     /**
@@ -88,21 +88,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $openAPIFormats = [
         'id' => 'guid',
         'quantity' => 'decimal',
-        'quantity_override' => 'decimal',
-        'quantity_components' => null,
-        'amount_to_be_entered_by_bidder' => null,
+        'quantityOverride' => 'decimal',
+        'quantityComponents' => null,
+        'amountToBeEnteredByBidder' => null,
         'identifier' => null,
-        'short_text' => null,
-        'html_short_text' => null,
-        'long_text' => null,
-        'unit_tag' => null,
-        'html_long_text' => null,
-        'addition_type' => null,
-        'standardized_description' => null,
-        'execution_description_reference' => 'guid',
-        'project_catalogues' => null,
-        'description_id' => null,
-        'has_bidder_comment_in_html_long_text' => null
+        'shortText' => null,
+        'htmlShortText' => null,
+        'longText' => null,
+        'unitTag' => null,
+        'htmlLongText' => null,
+        'additionType' => null,
+        'standardizedDescription' => null,
+        'executionDescriptionReference' => 'guid',
+        'projectCatalogues' => null,
+        'descriptionId' => null,
+        'hasBidderCommentInHtmlLongText' => null
     ];
 
     /**
@@ -113,21 +113,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static array $openAPINullables = [
         'id' => false,
         'quantity' => false,
-        'quantity_override' => false,
-        'quantity_components' => false,
-        'amount_to_be_entered_by_bidder' => false,
+        'quantityOverride' => false,
+        'quantityComponents' => false,
+        'amountToBeEnteredByBidder' => false,
         'identifier' => false,
-        'short_text' => false,
-        'html_short_text' => false,
-        'long_text' => false,
-        'unit_tag' => false,
-        'html_long_text' => false,
-        'addition_type' => false,
-        'standardized_description' => false,
-        'execution_description_reference' => false,
-        'project_catalogues' => false,
-        'description_id' => false,
-        'has_bidder_comment_in_html_long_text' => false
+        'shortText' => false,
+        'htmlShortText' => false,
+        'longText' => false,
+        'unitTag' => false,
+        'htmlLongText' => false,
+        'additionType' => false,
+        'standardizedDescription' => false,
+        'executionDescriptionReference' => false,
+        'projectCatalogues' => false,
+        'descriptionId' => false,
+        'hasBidderCommentInHtmlLongText' => false
     ];
 
     /**
@@ -218,21 +218,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $attributeMap = [
         'id' => 'id',
         'quantity' => 'quantity',
-        'quantity_override' => 'quantityOverride',
-        'quantity_components' => 'quantityComponents',
-        'amount_to_be_entered_by_bidder' => 'amountToBeEnteredByBidder',
+        'quantityOverride' => 'quantityOverride',
+        'quantityComponents' => 'quantityComponents',
+        'amountToBeEnteredByBidder' => 'amountToBeEnteredByBidder',
         'identifier' => 'identifier',
-        'short_text' => 'shortText',
-        'html_short_text' => 'htmlShortText',
-        'long_text' => 'longText',
-        'unit_tag' => 'unitTag',
-        'html_long_text' => 'htmlLongText',
-        'addition_type' => 'additionType',
-        'standardized_description' => 'standardizedDescription',
-        'execution_description_reference' => 'executionDescriptionReference',
-        'project_catalogues' => 'projectCatalogues',
-        'description_id' => 'descriptionId',
-        'has_bidder_comment_in_html_long_text' => 'hasBidderCommentInHtmlLongText'
+        'shortText' => 'shortText',
+        'htmlShortText' => 'htmlShortText',
+        'longText' => 'longText',
+        'unitTag' => 'unitTag',
+        'htmlLongText' => 'htmlLongText',
+        'additionType' => 'additionType',
+        'standardizedDescription' => 'standardizedDescription',
+        'executionDescriptionReference' => 'executionDescriptionReference',
+        'projectCatalogues' => 'projectCatalogues',
+        'descriptionId' => 'descriptionId',
+        'hasBidderCommentInHtmlLongText' => 'hasBidderCommentInHtmlLongText'
     ];
 
     /**
@@ -243,21 +243,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $setters = [
         'id' => 'setId',
         'quantity' => 'setQuantity',
-        'quantity_override' => 'setQuantityOverride',
-        'quantity_components' => 'setQuantityComponents',
-        'amount_to_be_entered_by_bidder' => 'setAmountToBeEnteredByBidder',
+        'quantityOverride' => 'setQuantityOverride',
+        'quantityComponents' => 'setQuantityComponents',
+        'amountToBeEnteredByBidder' => 'setAmountToBeEnteredByBidder',
         'identifier' => 'setIdentifier',
-        'short_text' => 'setShortText',
-        'html_short_text' => 'setHtmlShortText',
-        'long_text' => 'setLongText',
-        'unit_tag' => 'setUnitTag',
-        'html_long_text' => 'setHtmlLongText',
-        'addition_type' => 'setAdditionType',
-        'standardized_description' => 'setStandardizedDescription',
-        'execution_description_reference' => 'setExecutionDescriptionReference',
-        'project_catalogues' => 'setProjectCatalogues',
-        'description_id' => 'setDescriptionId',
-        'has_bidder_comment_in_html_long_text' => 'setHasBidderCommentInHtmlLongText'
+        'shortText' => 'setShortText',
+        'htmlShortText' => 'setHtmlShortText',
+        'longText' => 'setLongText',
+        'unitTag' => 'setUnitTag',
+        'htmlLongText' => 'setHtmlLongText',
+        'additionType' => 'setAdditionType',
+        'standardizedDescription' => 'setStandardizedDescription',
+        'executionDescriptionReference' => 'setExecutionDescriptionReference',
+        'projectCatalogues' => 'setProjectCatalogues',
+        'descriptionId' => 'setDescriptionId',
+        'hasBidderCommentInHtmlLongText' => 'setHasBidderCommentInHtmlLongText'
     ];
 
     /**
@@ -268,21 +268,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     protected static $getters = [
         'id' => 'getId',
         'quantity' => 'getQuantity',
-        'quantity_override' => 'getQuantityOverride',
-        'quantity_components' => 'getQuantityComponents',
-        'amount_to_be_entered_by_bidder' => 'getAmountToBeEnteredByBidder',
+        'quantityOverride' => 'getQuantityOverride',
+        'quantityComponents' => 'getQuantityComponents',
+        'amountToBeEnteredByBidder' => 'getAmountToBeEnteredByBidder',
         'identifier' => 'getIdentifier',
-        'short_text' => 'getShortText',
-        'html_short_text' => 'getHtmlShortText',
-        'long_text' => 'getLongText',
-        'unit_tag' => 'getUnitTag',
-        'html_long_text' => 'getHtmlLongText',
-        'addition_type' => 'getAdditionType',
-        'standardized_description' => 'getStandardizedDescription',
-        'execution_description_reference' => 'getExecutionDescriptionReference',
-        'project_catalogues' => 'getProjectCatalogues',
-        'description_id' => 'getDescriptionId',
-        'has_bidder_comment_in_html_long_text' => 'getHasBidderCommentInHtmlLongText'
+        'shortText' => 'getShortText',
+        'htmlShortText' => 'getHtmlShortText',
+        'longText' => 'getLongText',
+        'unitTag' => 'getUnitTag',
+        'htmlLongText' => 'getHtmlLongText',
+        'additionType' => 'getAdditionType',
+        'standardizedDescription' => 'getStandardizedDescription',
+        'executionDescriptionReference' => 'getExecutionDescriptionReference',
+        'projectCatalogues' => 'getProjectCatalogues',
+        'descriptionId' => 'getDescriptionId',
+        'hasBidderCommentInHtmlLongText' => 'getHasBidderCommentInHtmlLongText'
     ];
 
     /**
@@ -344,21 +344,21 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('quantity', $data ?? [], null);
-        $this->setIfExists('quantity_override', $data ?? [], null);
-        $this->setIfExists('quantity_components', $data ?? [], null);
-        $this->setIfExists('amount_to_be_entered_by_bidder', $data ?? [], null);
+        $this->setIfExists('quantityOverride', $data ?? [], null);
+        $this->setIfExists('quantityComponents', $data ?? [], null);
+        $this->setIfExists('amountToBeEnteredByBidder', $data ?? [], null);
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('html_short_text', $data ?? [], null);
-        $this->setIfExists('long_text', $data ?? [], null);
-        $this->setIfExists('unit_tag', $data ?? [], null);
-        $this->setIfExists('html_long_text', $data ?? [], null);
-        $this->setIfExists('addition_type', $data ?? [], null);
-        $this->setIfExists('standardized_description', $data ?? [], null);
-        $this->setIfExists('execution_description_reference', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
-        $this->setIfExists('description_id', $data ?? [], null);
-        $this->setIfExists('has_bidder_comment_in_html_long_text', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('htmlShortText', $data ?? [], null);
+        $this->setIfExists('longText', $data ?? [], null);
+        $this->setIfExists('unitTag', $data ?? [], null);
+        $this->setIfExists('htmlLongText', $data ?? [], null);
+        $this->setIfExists('additionType', $data ?? [], null);
+        $this->setIfExists('standardizedDescription', $data ?? [], null);
+        $this->setIfExists('executionDescriptionReference', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
+        $this->setIfExists('descriptionId', $data ?? [], null);
+        $this->setIfExists('hasBidderCommentInHtmlLongText', $data ?? [], null);
     }
 
     /**
@@ -394,14 +394,14 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['amount_to_be_entered_by_bidder'] === null) {
-            $invalidProperties[] = "'amount_to_be_entered_by_bidder' can't be null";
+        if ($this->container['amountToBeEnteredByBidder'] === null) {
+            $invalidProperties[] = "'amountToBeEnteredByBidder' can't be null";
         }
-        if ($this->container['addition_type'] === null) {
-            $invalidProperties[] = "'addition_type' can't be null";
+        if ($this->container['additionType'] === null) {
+            $invalidProperties[] = "'additionType' can't be null";
         }
-        if ($this->container['has_bidder_comment_in_html_long_text'] === null) {
-            $invalidProperties[] = "'has_bidder_comment_in_html_long_text' can't be null";
+        if ($this->container['hasBidderCommentInHtmlLongText'] === null) {
+            $invalidProperties[] = "'hasBidderCommentInHtmlLongText' can't be null";
         }
         return $invalidProperties;
     }
@@ -473,82 +473,82 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets quantity_override
+     * Gets quantityOverride
      *
      * @return float|null
      */
     public function getQuantityOverride()
     {
-        return $this->container['quantity_override'];
+        return $this->container['quantityOverride'];
     }
 
     /**
-     * Sets quantity_override
+     * Sets quantityOverride
      *
-     * @param float|null $quantity_override You can use this property to directly set the quantity for this sub description. This will override any given QuantityComponents
+     * @param float|null $quantityOverride You can use this property to directly set the quantity for this sub description. This will override any given QuantityComponents
      *
      * @return self
      */
-    public function setQuantityOverride($quantity_override)
+    public function setQuantityOverride($quantityOverride)
     {
-        if (is_null($quantity_override)) {
-            throw new \InvalidArgumentException('non-nullable quantity_override cannot be null');
+        if (is_null($quantityOverride)) {
+            throw new \InvalidArgumentException('non-nullable quantityOverride cannot be null');
         }
-        $this->container['quantity_override'] = $quantity_override;
+        $this->container['quantityOverride'] = $quantityOverride;
 
         return $this;
     }
 
     /**
-     * Gets quantity_components
+     * Gets quantityComponents
      *
      * @return \Dangl\AVACloud\Model\CalculationDto[]|null
      */
     public function getQuantityComponents()
     {
-        return $this->container['quantity_components'];
+        return $this->container['quantityComponents'];
     }
 
     /**
-     * Sets quantity_components
+     * Sets quantityComponents
      *
-     * @param \Dangl\AVACloud\Model\CalculationDto[]|null $quantity_components Holds quantity information for this sub description. Quantity is listening to changes here and is reporting the total sum of all quantity components.
+     * @param \Dangl\AVACloud\Model\CalculationDto[]|null $quantityComponents Holds quantity information for this sub description. Quantity is listening to changes here and is reporting the total sum of all quantity components.
      *
      * @return self
      */
-    public function setQuantityComponents($quantity_components)
+    public function setQuantityComponents($quantityComponents)
     {
-        if (is_null($quantity_components)) {
-            throw new \InvalidArgumentException('non-nullable quantity_components cannot be null');
+        if (is_null($quantityComponents)) {
+            throw new \InvalidArgumentException('non-nullable quantityComponents cannot be null');
         }
-        $this->container['quantity_components'] = $quantity_components;
+        $this->container['quantityComponents'] = $quantityComponents;
 
         return $this;
     }
 
     /**
-     * Gets amount_to_be_entered_by_bidder
+     * Gets amountToBeEnteredByBidder
      *
      * @return bool
      */
     public function getAmountToBeEnteredByBidder()
     {
-        return $this->container['amount_to_be_entered_by_bidder'];
+        return $this->container['amountToBeEnteredByBidder'];
     }
 
     /**
-     * Sets amount_to_be_entered_by_bidder
+     * Sets amountToBeEnteredByBidder
      *
-     * @param bool $amount_to_be_entered_by_bidder Indicates if the bidder is asked to specify an amount.
+     * @param bool $amountToBeEnteredByBidder Indicates if the bidder is asked to specify an amount.
      *
      * @return self
      */
-    public function setAmountToBeEnteredByBidder($amount_to_be_entered_by_bidder)
+    public function setAmountToBeEnteredByBidder($amountToBeEnteredByBidder)
     {
-        if (is_null($amount_to_be_entered_by_bidder)) {
-            throw new \InvalidArgumentException('non-nullable amount_to_be_entered_by_bidder cannot be null');
+        if (is_null($amountToBeEnteredByBidder)) {
+            throw new \InvalidArgumentException('non-nullable amountToBeEnteredByBidder cannot be null');
         }
-        $this->container['amount_to_be_entered_by_bidder'] = $amount_to_be_entered_by_bidder;
+        $this->container['amountToBeEnteredByBidder'] = $amountToBeEnteredByBidder;
 
         return $this;
     }
@@ -581,298 +581,298 @@ class SubDescriptionDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text Short description for this DescriptionBase element. Please note that by default, this property takes precedence over the `HtmlShortText` property. If you want to convert from DTO objects, and you want to work with the `HtmlShortText` property, you need to set this property to null.
+     * @param string|null $shortText Short description for this DescriptionBase element. Please note that by default, this property takes precedence over the `HtmlShortText` property. If you want to convert from DTO objects, and you want to work with the `HtmlShortText` property, you need to set this property to null.
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets html_short_text
+     * Gets htmlShortText
      *
      * @return string|null
      */
     public function getHtmlShortText()
     {
-        return $this->container['html_short_text'];
+        return $this->container['htmlShortText'];
     }
 
     /**
-     * Sets html_short_text
+     * Sets htmlShortText
      *
-     * @param string|null $html_short_text This contains the Html representation of the Shorttext. When the ShortText is set, this property will be set to contain the plain text representation of the Html text and vice versa. In practice, it's recommended to always use the plain text representations for short texts. This property is used to store the short text in HTML format. If you want to convert from DTO objects, and you want to use this property, then you need to ensure that `ShortText` is set to null, otherwise the plain text takes precedence over the HTML text.
+     * @param string|null $htmlShortText This contains the Html representation of the Shorttext. When the ShortText is set, this property will be set to contain the plain text representation of the Html text and vice versa. In practice, it's recommended to always use the plain text representations for short texts. This property is used to store the short text in HTML format. If you want to convert from DTO objects, and you want to use this property, then you need to ensure that `ShortText` is set to null, otherwise the plain text takes precedence over the HTML text.
      *
      * @return self
      */
-    public function setHtmlShortText($html_short_text)
+    public function setHtmlShortText($htmlShortText)
     {
-        if (is_null($html_short_text)) {
-            throw new \InvalidArgumentException('non-nullable html_short_text cannot be null');
+        if (is_null($htmlShortText)) {
+            throw new \InvalidArgumentException('non-nullable htmlShortText cannot be null');
         }
-        $this->container['html_short_text'] = $html_short_text;
+        $this->container['htmlShortText'] = $htmlShortText;
 
         return $this;
     }
 
     /**
-     * Gets long_text
+     * Gets longText
      *
      * @return string|null
      */
     public function getLongText()
     {
-        return $this->container['long_text'];
+        return $this->container['longText'];
     }
 
     /**
-     * Sets long_text
+     * Sets longText
      *
-     * @param string|null $long_text Detailed description for this DescriptionBase element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
+     * @param string|null $longText Detailed description for this DescriptionBase element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
      *
      * @return self
      */
-    public function setLongText($long_text)
+    public function setLongText($longText)
     {
-        if (is_null($long_text)) {
-            throw new \InvalidArgumentException('non-nullable long_text cannot be null');
+        if (is_null($longText)) {
+            throw new \InvalidArgumentException('non-nullable longText cannot be null');
         }
-        $this->container['long_text'] = $long_text;
+        $this->container['longText'] = $longText;
 
         return $this;
     }
 
     /**
-     * Gets unit_tag
+     * Gets unitTag
      *
      * @return string|null
      */
     public function getUnitTag()
     {
-        return $this->container['unit_tag'];
+        return $this->container['unitTag'];
     }
 
     /**
-     * Sets unit_tag
+     * Sets unitTag
      *
-     * @param string|null $unit_tag If this is given, then the sub description has a different unit tag than the parent position.
+     * @param string|null $unitTag If this is given, then the sub description has a different unit tag than the parent position.
      *
      * @return self
      */
-    public function setUnitTag($unit_tag)
+    public function setUnitTag($unitTag)
     {
-        if (is_null($unit_tag)) {
-            throw new \InvalidArgumentException('non-nullable unit_tag cannot be null');
+        if (is_null($unitTag)) {
+            throw new \InvalidArgumentException('non-nullable unitTag cannot be null');
         }
-        $this->container['unit_tag'] = $unit_tag;
+        $this->container['unitTag'] = $unitTag;
 
         return $this;
     }
 
     /**
-     * Gets html_long_text
+     * Gets htmlLongText
      *
      * @return string|null
      */
     public function getHtmlLongText()
     {
-        return $this->container['html_long_text'];
+        return $this->container['htmlLongText'];
     }
 
     /**
-     * Sets html_long_text
+     * Sets htmlLongText
      *
-     * @param string|null $html_long_text This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
+     * @param string|null $htmlLongText This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
      *
      * @return self
      */
-    public function setHtmlLongText($html_long_text)
+    public function setHtmlLongText($htmlLongText)
     {
-        if (is_null($html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable html_long_text cannot be null');
+        if (is_null($htmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable htmlLongText cannot be null');
         }
-        $this->container['html_long_text'] = $html_long_text;
+        $this->container['htmlLongText'] = $htmlLongText;
 
         return $this;
     }
 
     /**
-     * Gets addition_type
+     * Gets additionType
      *
      * @return \Dangl\AVACloud\Model\AdditionTypeDto
      */
     public function getAdditionType()
     {
-        return $this->container['addition_type'];
+        return $this->container['additionType'];
     }
 
     /**
-     * Sets addition_type
+     * Sets additionType
      *
-     * @param \Dangl\AVACloud\Model\AdditionTypeDto $addition_type addition_type
+     * @param \Dangl\AVACloud\Model\AdditionTypeDto $additionType additionType
      *
      * @return self
      */
-    public function setAdditionType($addition_type)
+    public function setAdditionType($additionType)
     {
-        if (is_null($addition_type)) {
-            throw new \InvalidArgumentException('non-nullable addition_type cannot be null');
+        if (is_null($additionType)) {
+            throw new \InvalidArgumentException('non-nullable additionType cannot be null');
         }
-        $this->container['addition_type'] = $addition_type;
+        $this->container['additionType'] = $additionType;
 
         return $this;
     }
 
     /**
-     * Gets standardized_description
+     * Gets standardizedDescription
      *
      * @return \Dangl\AVACloud\Model\StandardizedDescriptionDto|null
      */
     public function getStandardizedDescription()
     {
-        return $this->container['standardized_description'];
+        return $this->container['standardizedDescription'];
     }
 
     /**
-     * Sets standardized_description
+     * Sets standardizedDescription
      *
-     * @param \Dangl\AVACloud\Model\StandardizedDescriptionDto|null $standardized_description standardized_description
+     * @param \Dangl\AVACloud\Model\StandardizedDescriptionDto|null $standardizedDescription standardizedDescription
      *
      * @return self
      */
-    public function setStandardizedDescription($standardized_description)
+    public function setStandardizedDescription($standardizedDescription)
     {
-        if (is_null($standardized_description)) {
-            throw new \InvalidArgumentException('non-nullable standardized_description cannot be null');
+        if (is_null($standardizedDescription)) {
+            throw new \InvalidArgumentException('non-nullable standardizedDescription cannot be null');
         }
-        $this->container['standardized_description'] = $standardized_description;
+        $this->container['standardizedDescription'] = $standardizedDescription;
 
         return $this;
     }
 
     /**
-     * Gets execution_description_reference
+     * Gets executionDescriptionReference
      *
      * @return string|null
      */
     public function getExecutionDescriptionReference()
     {
-        return $this->container['execution_description_reference'];
+        return $this->container['executionDescriptionReference'];
     }
 
     /**
-     * Sets execution_description_reference
+     * Sets executionDescriptionReference
      *
-     * @param string|null $execution_description_reference This identifier can be used to point to the Id of an ExecutionDescription in the same ServiceSpecification. ExecutionDescriptions act as a way to centrally describe how positions (or sub descriptions) should be executed in practice. Often, the position (or sub description) itself still has text of its own to highlight deviations from that or add more details. When working with import and export features, this property is only supported in GAEB 90 data exchange.
+     * @param string|null $executionDescriptionReference This identifier can be used to point to the Id of an ExecutionDescription in the same ServiceSpecification. ExecutionDescriptions act as a way to centrally describe how positions (or sub descriptions) should be executed in practice. Often, the position (or sub description) itself still has text of its own to highlight deviations from that or add more details. When working with import and export features, this property is only supported in GAEB 90 data exchange.
      *
      * @return self
      */
-    public function setExecutionDescriptionReference($execution_description_reference)
+    public function setExecutionDescriptionReference($executionDescriptionReference)
     {
-        if (is_null($execution_description_reference)) {
-            throw new \InvalidArgumentException('non-nullable execution_description_reference cannot be null');
+        if (is_null($executionDescriptionReference)) {
+            throw new \InvalidArgumentException('non-nullable executionDescriptionReference cannot be null');
         }
-        $this->container['execution_description_reference'] = $execution_description_reference;
+        $this->container['executionDescriptionReference'] = $executionDescriptionReference;
 
         return $this;
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues These are Catalogues that are used within this Calculation. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues These are Catalogues that are used within this Calculation. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }
 
     /**
-     * Gets description_id
+     * Gets descriptionId
      *
      * @return string|null
      */
     public function getDescriptionId()
     {
-        return $this->container['description_id'];
+        return $this->container['descriptionId'];
     }
 
     /**
-     * Sets description_id
+     * Sets descriptionId
      *
-     * @param string|null $description_id This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It's different to an elements identifier in that it should only apply to the description component, meaning the text itself.
+     * @param string|null $descriptionId This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It's different to an elements identifier in that it should only apply to the description component, meaning the text itself.
      *
      * @return self
      */
-    public function setDescriptionId($description_id)
+    public function setDescriptionId($descriptionId)
     {
-        if (is_null($description_id)) {
-            throw new \InvalidArgumentException('non-nullable description_id cannot be null');
+        if (is_null($descriptionId)) {
+            throw new \InvalidArgumentException('non-nullable descriptionId cannot be null');
         }
-        $this->container['description_id'] = $description_id;
+        $this->container['descriptionId'] = $descriptionId;
 
         return $this;
     }
 
     /**
-     * Gets has_bidder_comment_in_html_long_text
+     * Gets hasBidderCommentInHtmlLongText
      *
      * @return bool
      */
     public function getHasBidderCommentInHtmlLongText()
     {
-        return $this->container['has_bidder_comment_in_html_long_text'];
+        return $this->container['hasBidderCommentInHtmlLongText'];
     }
 
     /**
-     * Sets has_bidder_comment_in_html_long_text
+     * Sets hasBidderCommentInHtmlLongText
      *
-     * @param bool $has_bidder_comment_in_html_long_text has_bidder_comment_in_html_long_text
+     * @param bool $hasBidderCommentInHtmlLongText hasBidderCommentInHtmlLongText
      *
      * @return self
      */
-    public function setHasBidderCommentInHtmlLongText($has_bidder_comment_in_html_long_text)
+    public function setHasBidderCommentInHtmlLongText($hasBidderCommentInHtmlLongText)
     {
-        if (is_null($has_bidder_comment_in_html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable has_bidder_comment_in_html_long_text cannot be null');
+        if (is_null($hasBidderCommentInHtmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable hasBidderCommentInHtmlLongText cannot be null');
         }
-        $this->container['has_bidder_comment_in_html_long_text'] = $has_bidder_comment_in_html_long_text;
+        $this->container['hasBidderCommentInHtmlLongText'] = $hasBidderCommentInHtmlLongText;
 
         return $this;
     }

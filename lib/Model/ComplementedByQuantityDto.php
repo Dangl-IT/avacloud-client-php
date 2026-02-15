@@ -60,7 +60,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'quantity' => 'float',
-        'complementing_position_id' => 'string'
+        'complementingPositionId' => 'string'
     ];
 
     /**
@@ -72,7 +72,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPIFormats = [
         'quantity' => 'decimal',
-        'complementing_position_id' => 'guid'
+        'complementingPositionId' => 'guid'
     ];
 
     /**
@@ -82,7 +82,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static array $openAPINullables = [
         'quantity' => false,
-        'complementing_position_id' => false
+        'complementingPositionId' => false
     ];
 
     /**
@@ -172,7 +172,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
      */
     protected static $attributeMap = [
         'quantity' => 'quantity',
-        'complementing_position_id' => 'complementingPositionId'
+        'complementingPositionId' => 'complementingPositionId'
     ];
 
     /**
@@ -182,7 +182,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
      */
     protected static $setters = [
         'quantity' => 'setQuantity',
-        'complementing_position_id' => 'setComplementingPositionId'
+        'complementingPositionId' => 'setComplementingPositionId'
     ];
 
     /**
@@ -192,7 +192,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
      */
     protected static $getters = [
         'quantity' => 'getQuantity',
-        'complementing_position_id' => 'getComplementingPositionId'
+        'complementingPositionId' => 'getComplementingPositionId'
     ];
 
     /**
@@ -253,7 +253,7 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
     public function __construct(?array $data = null)
     {
         $this->setIfExists('quantity', $data ?? [], null);
-        $this->setIfExists('complementing_position_id', $data ?? [], null);
+        $this->setIfExists('complementingPositionId', $data ?? [], null);
     }
 
     /**
@@ -329,28 +329,28 @@ class ComplementedByQuantityDto implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets complementing_position_id
+     * Gets complementingPositionId
      *
      * @return string|null
      */
     public function getComplementingPositionId()
     {
-        return $this->container['complementing_position_id'];
+        return $this->container['complementingPositionId'];
     }
 
     /**
-     * Sets complementing_position_id
+     * Sets complementingPositionId
      *
-     * @param string|null $complementing_position_id This is the reference to the Id of the Position that is complementing. This means it does NOT reference the base position but the one that contains the actual addition.
+     * @param string|null $complementingPositionId This is the reference to the Id of the Position that is complementing. This means it does NOT reference the base position but the one that contains the actual addition.
      *
      * @return self
      */
-    public function setComplementingPositionId($complementing_position_id)
+    public function setComplementingPositionId($complementingPositionId)
     {
-        if (is_null($complementing_position_id)) {
-            throw new \InvalidArgumentException('non-nullable complementing_position_id cannot be null');
+        if (is_null($complementingPositionId)) {
+            throw new \InvalidArgumentException('non-nullable complementingPositionId cannot be null');
         }
-        $this->container['complementing_position_id'] = $complementing_position_id;
+        $this->container['complementingPositionId'] = $complementingPositionId;
 
         return $this;
     }

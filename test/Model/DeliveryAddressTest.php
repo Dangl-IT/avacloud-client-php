@@ -99,7 +99,7 @@ class DeliveryAddressTest extends TestCase
     }
 
     /**
-     * Test attribute "zip_code"
+     * Test attribute "zipCode"
      */
     public function testPropertyZipCode()
     {
@@ -108,7 +108,7 @@ class DeliveryAddressTest extends TestCase
     }
 
     /**
-     * Test attribute "country_code"
+     * Test attribute "countryCode"
      */
     public function testPropertyCountryCode()
     {

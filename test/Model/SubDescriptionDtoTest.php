@@ -99,7 +99,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "quantity_override"
+     * Test attribute "quantityOverride"
      */
     public function testPropertyQuantityOverride()
     {
@@ -108,7 +108,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "quantity_components"
+     * Test attribute "quantityComponents"
      */
     public function testPropertyQuantityComponents()
     {
@@ -117,7 +117,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "amount_to_be_entered_by_bidder"
+     * Test attribute "amountToBeEnteredByBidder"
      */
     public function testPropertyAmountToBeEnteredByBidder()
     {
@@ -135,7 +135,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text"
+     * Test attribute "shortText"
      */
     public function testPropertyShortText()
     {
@@ -144,7 +144,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_short_text"
+     * Test attribute "htmlShortText"
      */
     public function testPropertyHtmlShortText()
     {
@@ -153,7 +153,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "long_text"
+     * Test attribute "longText"
      */
     public function testPropertyLongText()
     {
@@ -162,7 +162,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_tag"
+     * Test attribute "unitTag"
      */
     public function testPropertyUnitTag()
     {
@@ -171,7 +171,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_long_text"
+     * Test attribute "htmlLongText"
      */
     public function testPropertyHtmlLongText()
     {
@@ -180,7 +180,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addition_type"
+     * Test attribute "additionType"
      */
     public function testPropertyAdditionType()
     {
@@ -189,7 +189,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "standardized_description"
+     * Test attribute "standardizedDescription"
      */
     public function testPropertyStandardizedDescription()
     {
@@ -198,7 +198,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "execution_description_reference"
+     * Test attribute "executionDescriptionReference"
      */
     public function testPropertyExecutionDescriptionReference()
     {
@@ -207,7 +207,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {
@@ -216,7 +216,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "description_id"
+     * Test attribute "descriptionId"
      */
     public function testPropertyDescriptionId()
     {
@@ -225,7 +225,7 @@ class SubDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "has_bidder_comment_in_html_long_text"
+     * Test attribute "hasBidderCommentInHtmlLongText"
      */
     public function testPropertyHasBidderCommentInHtmlLongText()
     {

@@ -90,7 +90,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_accuracy"
+     * Test attribute "priceAccuracy"
      */
     public function testPropertyPriceAccuracy()
     {
@@ -99,7 +99,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_price_accuracy"
+     * Test attribute "unitPriceAccuracy"
      */
     public function testPropertyUnitPriceAccuracy()
     {
@@ -108,7 +108,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "force_strict_totals"
+     * Test attribute "forceStrictTotals"
      */
     public function testPropertyForceStrictTotals()
     {
@@ -117,7 +117,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_rounding_mode"
+     * Test attribute "priceRoundingMode"
      */
     public function testPropertyPriceRoundingMode()
     {
@@ -126,7 +126,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_information"
+     * Test attribute "projectInformation"
      */
     public function testPropertyProjectInformation()
     {
@@ -135,7 +135,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "service_specifications"
+     * Test attribute "serviceSpecifications"
      */
     public function testPropertyServiceSpecifications()
     {
@@ -144,7 +144,7 @@ class ProjectDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "gaeb_xml_id"
+     * Test attribute "gaebXmlId"
      */
     public function testPropertyGaebXmlId()
     {

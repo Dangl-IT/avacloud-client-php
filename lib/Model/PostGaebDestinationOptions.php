@@ -59,13 +59,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'destination_gaeb_type' => '\Dangl\AVACloud\Model\DestinationGaebType',
-        'target_exchange_phase_transform' => '\Dangl\AVACloud\Model\DestinationGaebExchangePhase',
-        'enforce_strict_offer_phase_long_text_output' => 'bool',
-        'export_quantity_determination' => 'bool',
-        'remove_unprintable_characters_from_texts' => 'bool',
-        'force_include_descriptions' => 'bool',
-        'treat_null_item_number_schema_as_invalid' => 'bool'
+        'destinationGaebType' => '\Dangl\AVACloud\Model\DestinationGaebType',
+        'targetExchangePhaseTransform' => '\Dangl\AVACloud\Model\DestinationGaebExchangePhase',
+        'enforceStrictOfferPhaseLongTextOutput' => 'bool',
+        'exportQuantityDetermination' => 'bool',
+        'removeUnprintableCharactersFromTexts' => 'bool',
+        'forceIncludeDescriptions' => 'bool',
+        'treatNullItemNumberSchemaAsInvalid' => 'bool'
     ];
 
     /**
@@ -76,13 +76,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'destination_gaeb_type' => null,
-        'target_exchange_phase_transform' => null,
-        'enforce_strict_offer_phase_long_text_output' => null,
-        'export_quantity_determination' => null,
-        'remove_unprintable_characters_from_texts' => null,
-        'force_include_descriptions' => null,
-        'treat_null_item_number_schema_as_invalid' => null
+        'destinationGaebType' => null,
+        'targetExchangePhaseTransform' => null,
+        'enforceStrictOfferPhaseLongTextOutput' => null,
+        'exportQuantityDetermination' => null,
+        'removeUnprintableCharactersFromTexts' => null,
+        'forceIncludeDescriptions' => null,
+        'treatNullItemNumberSchemaAsInvalid' => null
     ];
 
     /**
@@ -91,13 +91,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'destination_gaeb_type' => false,
-        'target_exchange_phase_transform' => false,
-        'enforce_strict_offer_phase_long_text_output' => false,
-        'export_quantity_determination' => false,
-        'remove_unprintable_characters_from_texts' => false,
-        'force_include_descriptions' => false,
-        'treat_null_item_number_schema_as_invalid' => false
+        'destinationGaebType' => false,
+        'targetExchangePhaseTransform' => false,
+        'enforceStrictOfferPhaseLongTextOutput' => false,
+        'exportQuantityDetermination' => false,
+        'removeUnprintableCharactersFromTexts' => false,
+        'forceIncludeDescriptions' => false,
+        'treatNullItemNumberSchemaAsInvalid' => false
     ];
 
     /**
@@ -186,13 +186,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'destination_gaeb_type' => 'destinationGaebType',
-        'target_exchange_phase_transform' => 'targetExchangePhaseTransform',
-        'enforce_strict_offer_phase_long_text_output' => 'enforceStrictOfferPhaseLongTextOutput',
-        'export_quantity_determination' => 'exportQuantityDetermination',
-        'remove_unprintable_characters_from_texts' => 'removeUnprintableCharactersFromTexts',
-        'force_include_descriptions' => 'forceIncludeDescriptions',
-        'treat_null_item_number_schema_as_invalid' => 'treatNullItemNumberSchemaAsInvalid'
+        'destinationGaebType' => 'destinationGaebType',
+        'targetExchangePhaseTransform' => 'targetExchangePhaseTransform',
+        'enforceStrictOfferPhaseLongTextOutput' => 'enforceStrictOfferPhaseLongTextOutput',
+        'exportQuantityDetermination' => 'exportQuantityDetermination',
+        'removeUnprintableCharactersFromTexts' => 'removeUnprintableCharactersFromTexts',
+        'forceIncludeDescriptions' => 'forceIncludeDescriptions',
+        'treatNullItemNumberSchemaAsInvalid' => 'treatNullItemNumberSchemaAsInvalid'
     ];
 
     /**
@@ -201,13 +201,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'destination_gaeb_type' => 'setDestinationGaebType',
-        'target_exchange_phase_transform' => 'setTargetExchangePhaseTransform',
-        'enforce_strict_offer_phase_long_text_output' => 'setEnforceStrictOfferPhaseLongTextOutput',
-        'export_quantity_determination' => 'setExportQuantityDetermination',
-        'remove_unprintable_characters_from_texts' => 'setRemoveUnprintableCharactersFromTexts',
-        'force_include_descriptions' => 'setForceIncludeDescriptions',
-        'treat_null_item_number_schema_as_invalid' => 'setTreatNullItemNumberSchemaAsInvalid'
+        'destinationGaebType' => 'setDestinationGaebType',
+        'targetExchangePhaseTransform' => 'setTargetExchangePhaseTransform',
+        'enforceStrictOfferPhaseLongTextOutput' => 'setEnforceStrictOfferPhaseLongTextOutput',
+        'exportQuantityDetermination' => 'setExportQuantityDetermination',
+        'removeUnprintableCharactersFromTexts' => 'setRemoveUnprintableCharactersFromTexts',
+        'forceIncludeDescriptions' => 'setForceIncludeDescriptions',
+        'treatNullItemNumberSchemaAsInvalid' => 'setTreatNullItemNumberSchemaAsInvalid'
     ];
 
     /**
@@ -216,13 +216,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'destination_gaeb_type' => 'getDestinationGaebType',
-        'target_exchange_phase_transform' => 'getTargetExchangePhaseTransform',
-        'enforce_strict_offer_phase_long_text_output' => 'getEnforceStrictOfferPhaseLongTextOutput',
-        'export_quantity_determination' => 'getExportQuantityDetermination',
-        'remove_unprintable_characters_from_texts' => 'getRemoveUnprintableCharactersFromTexts',
-        'force_include_descriptions' => 'getForceIncludeDescriptions',
-        'treat_null_item_number_schema_as_invalid' => 'getTreatNullItemNumberSchemaAsInvalid'
+        'destinationGaebType' => 'getDestinationGaebType',
+        'targetExchangePhaseTransform' => 'getTargetExchangePhaseTransform',
+        'enforceStrictOfferPhaseLongTextOutput' => 'getEnforceStrictOfferPhaseLongTextOutput',
+        'exportQuantityDetermination' => 'getExportQuantityDetermination',
+        'removeUnprintableCharactersFromTexts' => 'getRemoveUnprintableCharactersFromTexts',
+        'forceIncludeDescriptions' => 'getForceIncludeDescriptions',
+        'treatNullItemNumberSchemaAsInvalid' => 'getTreatNullItemNumberSchemaAsInvalid'
     ];
 
     /**
@@ -282,13 +282,13 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('destination_gaeb_type', $data ?? [], null);
-        $this->setIfExists('target_exchange_phase_transform', $data ?? [], null);
-        $this->setIfExists('enforce_strict_offer_phase_long_text_output', $data ?? [], null);
-        $this->setIfExists('export_quantity_determination', $data ?? [], null);
-        $this->setIfExists('remove_unprintable_characters_from_texts', $data ?? [], null);
-        $this->setIfExists('force_include_descriptions', $data ?? [], null);
-        $this->setIfExists('treat_null_item_number_schema_as_invalid', $data ?? [], null);
+        $this->setIfExists('destinationGaebType', $data ?? [], null);
+        $this->setIfExists('targetExchangePhaseTransform', $data ?? [], null);
+        $this->setIfExists('enforceStrictOfferPhaseLongTextOutput', $data ?? [], null);
+        $this->setIfExists('exportQuantityDetermination', $data ?? [], null);
+        $this->setIfExists('removeUnprintableCharactersFromTexts', $data ?? [], null);
+        $this->setIfExists('forceIncludeDescriptions', $data ?? [], null);
+        $this->setIfExists('treatNullItemNumberSchemaAsInvalid', $data ?? [], null);
     }
 
     /**
@@ -318,26 +318,26 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        if ($this->container['destination_gaeb_type'] === null) {
-            $invalidProperties[] = "'destination_gaeb_type' can't be null";
+        if ($this->container['destinationGaebType'] === null) {
+            $invalidProperties[] = "'destinationGaebType' can't be null";
         }
-        if ($this->container['target_exchange_phase_transform'] === null) {
-            $invalidProperties[] = "'target_exchange_phase_transform' can't be null";
+        if ($this->container['targetExchangePhaseTransform'] === null) {
+            $invalidProperties[] = "'targetExchangePhaseTransform' can't be null";
         }
-        if ($this->container['enforce_strict_offer_phase_long_text_output'] === null) {
-            $invalidProperties[] = "'enforce_strict_offer_phase_long_text_output' can't be null";
+        if ($this->container['enforceStrictOfferPhaseLongTextOutput'] === null) {
+            $invalidProperties[] = "'enforceStrictOfferPhaseLongTextOutput' can't be null";
         }
-        if ($this->container['export_quantity_determination'] === null) {
-            $invalidProperties[] = "'export_quantity_determination' can't be null";
+        if ($this->container['exportQuantityDetermination'] === null) {
+            $invalidProperties[] = "'exportQuantityDetermination' can't be null";
         }
-        if ($this->container['remove_unprintable_characters_from_texts'] === null) {
-            $invalidProperties[] = "'remove_unprintable_characters_from_texts' can't be null";
+        if ($this->container['removeUnprintableCharactersFromTexts'] === null) {
+            $invalidProperties[] = "'removeUnprintableCharactersFromTexts' can't be null";
         }
-        if ($this->container['force_include_descriptions'] === null) {
-            $invalidProperties[] = "'force_include_descriptions' can't be null";
+        if ($this->container['forceIncludeDescriptions'] === null) {
+            $invalidProperties[] = "'forceIncludeDescriptions' can't be null";
         }
-        if ($this->container['treat_null_item_number_schema_as_invalid'] === null) {
-            $invalidProperties[] = "'treat_null_item_number_schema_as_invalid' can't be null";
+        if ($this->container['treatNullItemNumberSchemaAsInvalid'] === null) {
+            $invalidProperties[] = "'treatNullItemNumberSchemaAsInvalid' can't be null";
         }
         return $invalidProperties;
     }
@@ -355,190 +355,190 @@ class PostGaebDestinationOptions implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets destination_gaeb_type
+     * Gets destinationGaebType
      *
      * @return \Dangl\AVACloud\Model\DestinationGaebType
      */
     public function getDestinationGaebType()
     {
-        return $this->container['destination_gaeb_type'];
+        return $this->container['destinationGaebType'];
     }
 
     /**
-     * Sets destination_gaeb_type
+     * Sets destinationGaebType
      *
-     * @param \Dangl\AVACloud\Model\DestinationGaebType $destination_gaeb_type destination_gaeb_type
+     * @param \Dangl\AVACloud\Model\DestinationGaebType $destinationGaebType destinationGaebType
      *
      * @return self
      */
-    public function setDestinationGaebType($destination_gaeb_type)
+    public function setDestinationGaebType($destinationGaebType)
     {
-        if (is_null($destination_gaeb_type)) {
-            throw new \InvalidArgumentException('non-nullable destination_gaeb_type cannot be null');
+        if (is_null($destinationGaebType)) {
+            throw new \InvalidArgumentException('non-nullable destinationGaebType cannot be null');
         }
-        $this->container['destination_gaeb_type'] = $destination_gaeb_type;
+        $this->container['destinationGaebType'] = $destinationGaebType;
 
         return $this;
     }
 
     /**
-     * Gets target_exchange_phase_transform
+     * Gets targetExchangePhaseTransform
      *
      * @return \Dangl\AVACloud\Model\DestinationGaebExchangePhase
      */
     public function getTargetExchangePhaseTransform()
     {
-        return $this->container['target_exchange_phase_transform'];
+        return $this->container['targetExchangePhaseTransform'];
     }
 
     /**
-     * Sets target_exchange_phase_transform
+     * Sets targetExchangePhaseTransform
      *
-     * @param \Dangl\AVACloud\Model\DestinationGaebExchangePhase $target_exchange_phase_transform target_exchange_phase_transform
+     * @param \Dangl\AVACloud\Model\DestinationGaebExchangePhase $targetExchangePhaseTransform targetExchangePhaseTransform
      *
      * @return self
      */
-    public function setTargetExchangePhaseTransform($target_exchange_phase_transform)
+    public function setTargetExchangePhaseTransform($targetExchangePhaseTransform)
     {
-        if (is_null($target_exchange_phase_transform)) {
-            throw new \InvalidArgumentException('non-nullable target_exchange_phase_transform cannot be null');
+        if (is_null($targetExchangePhaseTransform)) {
+            throw new \InvalidArgumentException('non-nullable targetExchangePhaseTransform cannot be null');
         }
-        $this->container['target_exchange_phase_transform'] = $target_exchange_phase_transform;
+        $this->container['targetExchangePhaseTransform'] = $targetExchangePhaseTransform;
 
         return $this;
     }
 
     /**
-     * Gets enforce_strict_offer_phase_long_text_output
+     * Gets enforceStrictOfferPhaseLongTextOutput
      *
      * @return bool
      */
     public function getEnforceStrictOfferPhaseLongTextOutput()
     {
-        return $this->container['enforce_strict_offer_phase_long_text_output'];
+        return $this->container['enforceStrictOfferPhaseLongTextOutput'];
     }
 
     /**
-     * Sets enforce_strict_offer_phase_long_text_output
+     * Sets enforceStrictOfferPhaseLongTextOutput
      *
-     * @param bool $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export.
+     * @param bool $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export.
      *
      * @return self
      */
-    public function setEnforceStrictOfferPhaseLongTextOutput($enforce_strict_offer_phase_long_text_output)
+    public function setEnforceStrictOfferPhaseLongTextOutput($enforceStrictOfferPhaseLongTextOutput)
     {
-        if (is_null($enforce_strict_offer_phase_long_text_output)) {
-            throw new \InvalidArgumentException('non-nullable enforce_strict_offer_phase_long_text_output cannot be null');
+        if (is_null($enforceStrictOfferPhaseLongTextOutput)) {
+            throw new \InvalidArgumentException('non-nullable enforceStrictOfferPhaseLongTextOutput cannot be null');
         }
-        $this->container['enforce_strict_offer_phase_long_text_output'] = $enforce_strict_offer_phase_long_text_output;
+        $this->container['enforceStrictOfferPhaseLongTextOutput'] = $enforceStrictOfferPhaseLongTextOutput;
 
         return $this;
     }
 
     /**
-     * Gets export_quantity_determination
+     * Gets exportQuantityDetermination
      *
      * @return bool
      */
     public function getExportQuantityDetermination()
     {
-        return $this->container['export_quantity_determination'];
+        return $this->container['exportQuantityDetermination'];
     }
 
     /**
-     * Sets export_quantity_determination
+     * Sets exportQuantityDetermination
      *
-     * @param bool $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the 'QtyDeterm' (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the 'QuantityComponents' property of positions. Please see the entry for 'Quantity Determination' in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the 'QuantityComponents' property.
+     * @param bool $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the 'QtyDeterm' (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the 'QuantityComponents' property of positions. Please see the entry for 'Quantity Determination' in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the 'QuantityComponents' property.
      *
      * @return self
      */
-    public function setExportQuantityDetermination($export_quantity_determination)
+    public function setExportQuantityDetermination($exportQuantityDetermination)
     {
-        if (is_null($export_quantity_determination)) {
-            throw new \InvalidArgumentException('non-nullable export_quantity_determination cannot be null');
+        if (is_null($exportQuantityDetermination)) {
+            throw new \InvalidArgumentException('non-nullable exportQuantityDetermination cannot be null');
         }
-        $this->container['export_quantity_determination'] = $export_quantity_determination;
+        $this->container['exportQuantityDetermination'] = $exportQuantityDetermination;
 
         return $this;
     }
 
     /**
-     * Gets remove_unprintable_characters_from_texts
+     * Gets removeUnprintableCharactersFromTexts
      *
      * @return bool
      */
     public function getRemoveUnprintableCharactersFromTexts()
     {
-        return $this->container['remove_unprintable_characters_from_texts'];
+        return $this->container['removeUnprintableCharactersFromTexts'];
     }
 
     /**
-     * Sets remove_unprintable_characters_from_texts
+     * Sets removeUnprintableCharactersFromTexts
      *
-     * @param bool $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
+     * @param bool $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
      *
      * @return self
      */
-    public function setRemoveUnprintableCharactersFromTexts($remove_unprintable_characters_from_texts)
+    public function setRemoveUnprintableCharactersFromTexts($removeUnprintableCharactersFromTexts)
     {
-        if (is_null($remove_unprintable_characters_from_texts)) {
-            throw new \InvalidArgumentException('non-nullable remove_unprintable_characters_from_texts cannot be null');
+        if (is_null($removeUnprintableCharactersFromTexts)) {
+            throw new \InvalidArgumentException('non-nullable removeUnprintableCharactersFromTexts cannot be null');
         }
-        $this->container['remove_unprintable_characters_from_texts'] = $remove_unprintable_characters_from_texts;
+        $this->container['removeUnprintableCharactersFromTexts'] = $removeUnprintableCharactersFromTexts;
 
         return $this;
     }
 
     /**
-     * Gets force_include_descriptions
+     * Gets forceIncludeDescriptions
      *
      * @return bool
      */
     public function getForceIncludeDescriptions()
     {
-        return $this->container['force_include_descriptions'];
+        return $this->container['forceIncludeDescriptions'];
     }
 
     /**
-     * Sets force_include_descriptions
+     * Sets forceIncludeDescriptions
      *
-     * @param bool $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions.
+     * @param bool $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions.
      *
      * @return self
      */
-    public function setForceIncludeDescriptions($force_include_descriptions)
+    public function setForceIncludeDescriptions($forceIncludeDescriptions)
     {
-        if (is_null($force_include_descriptions)) {
-            throw new \InvalidArgumentException('non-nullable force_include_descriptions cannot be null');
+        if (is_null($forceIncludeDescriptions)) {
+            throw new \InvalidArgumentException('non-nullable forceIncludeDescriptions cannot be null');
         }
-        $this->container['force_include_descriptions'] = $force_include_descriptions;
+        $this->container['forceIncludeDescriptions'] = $forceIncludeDescriptions;
 
         return $this;
     }
 
     /**
-     * Gets treat_null_item_number_schema_as_invalid
+     * Gets treatNullItemNumberSchemaAsInvalid
      *
      * @return bool
      */
     public function getTreatNullItemNumberSchemaAsInvalid()
     {
-        return $this->container['treat_null_item_number_schema_as_invalid'];
+        return $this->container['treatNullItemNumberSchemaAsInvalid'];
     }
 
     /**
-     * Sets treat_null_item_number_schema_as_invalid
+     * Sets treatNullItemNumberSchemaAsInvalid
      *
-     * @param bool $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons.
+     * @param bool $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons.
      *
      * @return self
      */
-    public function setTreatNullItemNumberSchemaAsInvalid($treat_null_item_number_schema_as_invalid)
+    public function setTreatNullItemNumberSchemaAsInvalid($treatNullItemNumberSchemaAsInvalid)
     {
-        if (is_null($treat_null_item_number_schema_as_invalid)) {
-            throw new \InvalidArgumentException('non-nullable treat_null_item_number_schema_as_invalid cannot be null');
+        if (is_null($treatNullItemNumberSchemaAsInvalid)) {
+            throw new \InvalidArgumentException('non-nullable treatNullItemNumberSchemaAsInvalid cannot be null');
         }
-        $this->container['treat_null_item_number_schema_as_invalid'] = $treat_null_item_number_schema_as_invalid;
+        $this->container['treatNullItemNumberSchemaAsInvalid'] = $treatNullItemNumberSchemaAsInvalid;
 
         return $this;
     }

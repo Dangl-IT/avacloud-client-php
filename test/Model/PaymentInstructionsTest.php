@@ -90,7 +90,7 @@ class PaymentInstructionsTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_type_code"
+     * Test attribute "paymentTypeCode"
      */
     public function testPropertyPaymentTypeCode()
     {
@@ -99,7 +99,7 @@ class PaymentInstructionsTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_type"
+     * Test attribute "paymentType"
      */
     public function testPropertyPaymentType()
     {
@@ -108,7 +108,7 @@ class PaymentInstructionsTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_creditor_identifier"
+     * Test attribute "paymentCreditorIdentifier"
      */
     public function testPropertyPaymentCreditorIdentifier()
     {
@@ -117,7 +117,7 @@ class PaymentInstructionsTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_means"
+     * Test attribute "paymentMeans"
      */
     public function testPropertyPaymentMeans()
     {

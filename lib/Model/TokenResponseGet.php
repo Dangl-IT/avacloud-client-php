@@ -58,17 +58,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'access_token' => 'string',
+        'accessToken' => 'string',
         'error' => 'string',
-        'error_description' => 'string',
-        'expires_in' => 'int',
-        'http_error_reason' => 'string',
-        'http_status_code' => '\Dangl\AVACloud\Model\HttpStatusCode',
-        'identity_token' => 'string',
-        'is_error' => 'bool',
-        'refresh_token' => 'string',
-        'token_type' => 'string',
-        'error_type' => '\Dangl\AVACloud\Model\ResponseErrorType'
+        'errorDescription' => 'string',
+        'expiresIn' => 'int',
+        'httpErrorReason' => 'string',
+        'httpStatusCode' => '\Dangl\AVACloud\Model\HttpStatusCode',
+        'identityToken' => 'string',
+        'isError' => 'bool',
+        'refreshToken' => 'string',
+        'tokenType' => 'string',
+        'errorType' => '\Dangl\AVACloud\Model\ResponseErrorType'
     ];
 
     /**
@@ -79,17 +79,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'access_token' => null,
+        'accessToken' => null,
         'error' => null,
-        'error_description' => null,
-        'expires_in' => 'int64',
-        'http_error_reason' => null,
-        'http_status_code' => null,
-        'identity_token' => null,
-        'is_error' => null,
-        'refresh_token' => null,
-        'token_type' => null,
-        'error_type' => null
+        'errorDescription' => null,
+        'expiresIn' => 'int64',
+        'httpErrorReason' => null,
+        'httpStatusCode' => null,
+        'identityToken' => null,
+        'isError' => null,
+        'refreshToken' => null,
+        'tokenType' => null,
+        'errorType' => null
     ];
 
     /**
@@ -98,17 +98,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'access_token' => false,
+        'accessToken' => false,
         'error' => false,
-        'error_description' => false,
-        'expires_in' => false,
-        'http_error_reason' => false,
-        'http_status_code' => false,
-        'identity_token' => false,
-        'is_error' => false,
-        'refresh_token' => false,
-        'token_type' => false,
-        'error_type' => false
+        'errorDescription' => false,
+        'expiresIn' => false,
+        'httpErrorReason' => false,
+        'httpStatusCode' => false,
+        'identityToken' => false,
+        'isError' => false,
+        'refreshToken' => false,
+        'tokenType' => false,
+        'errorType' => false
     ];
 
     /**
@@ -197,17 +197,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'access_token' => 'accessToken',
+        'accessToken' => 'accessToken',
         'error' => 'error',
-        'error_description' => 'errorDescription',
-        'expires_in' => 'expiresIn',
-        'http_error_reason' => 'httpErrorReason',
-        'http_status_code' => 'httpStatusCode',
-        'identity_token' => 'identityToken',
-        'is_error' => 'isError',
-        'refresh_token' => 'refreshToken',
-        'token_type' => 'tokenType',
-        'error_type' => 'errorType'
+        'errorDescription' => 'errorDescription',
+        'expiresIn' => 'expiresIn',
+        'httpErrorReason' => 'httpErrorReason',
+        'httpStatusCode' => 'httpStatusCode',
+        'identityToken' => 'identityToken',
+        'isError' => 'isError',
+        'refreshToken' => 'refreshToken',
+        'tokenType' => 'tokenType',
+        'errorType' => 'errorType'
     ];
 
     /**
@@ -216,17 +216,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'access_token' => 'setAccessToken',
+        'accessToken' => 'setAccessToken',
         'error' => 'setError',
-        'error_description' => 'setErrorDescription',
-        'expires_in' => 'setExpiresIn',
-        'http_error_reason' => 'setHttpErrorReason',
-        'http_status_code' => 'setHttpStatusCode',
-        'identity_token' => 'setIdentityToken',
-        'is_error' => 'setIsError',
-        'refresh_token' => 'setRefreshToken',
-        'token_type' => 'setTokenType',
-        'error_type' => 'setErrorType'
+        'errorDescription' => 'setErrorDescription',
+        'expiresIn' => 'setExpiresIn',
+        'httpErrorReason' => 'setHttpErrorReason',
+        'httpStatusCode' => 'setHttpStatusCode',
+        'identityToken' => 'setIdentityToken',
+        'isError' => 'setIsError',
+        'refreshToken' => 'setRefreshToken',
+        'tokenType' => 'setTokenType',
+        'errorType' => 'setErrorType'
     ];
 
     /**
@@ -235,17 +235,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'access_token' => 'getAccessToken',
+        'accessToken' => 'getAccessToken',
         'error' => 'getError',
-        'error_description' => 'getErrorDescription',
-        'expires_in' => 'getExpiresIn',
-        'http_error_reason' => 'getHttpErrorReason',
-        'http_status_code' => 'getHttpStatusCode',
-        'identity_token' => 'getIdentityToken',
-        'is_error' => 'getIsError',
-        'refresh_token' => 'getRefreshToken',
-        'token_type' => 'getTokenType',
-        'error_type' => 'getErrorType'
+        'errorDescription' => 'getErrorDescription',
+        'expiresIn' => 'getExpiresIn',
+        'httpErrorReason' => 'getHttpErrorReason',
+        'httpStatusCode' => 'getHttpStatusCode',
+        'identityToken' => 'getIdentityToken',
+        'isError' => 'getIsError',
+        'refreshToken' => 'getRefreshToken',
+        'tokenType' => 'getTokenType',
+        'errorType' => 'getErrorType'
     ];
 
     /**
@@ -305,17 +305,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('access_token', $data ?? [], null);
+        $this->setIfExists('accessToken', $data ?? [], null);
         $this->setIfExists('error', $data ?? [], null);
-        $this->setIfExists('error_description', $data ?? [], null);
-        $this->setIfExists('expires_in', $data ?? [], null);
-        $this->setIfExists('http_error_reason', $data ?? [], null);
-        $this->setIfExists('http_status_code', $data ?? [], null);
-        $this->setIfExists('identity_token', $data ?? [], null);
-        $this->setIfExists('is_error', $data ?? [], null);
-        $this->setIfExists('refresh_token', $data ?? [], null);
-        $this->setIfExists('token_type', $data ?? [], null);
-        $this->setIfExists('error_type', $data ?? [], null);
+        $this->setIfExists('errorDescription', $data ?? [], null);
+        $this->setIfExists('expiresIn', $data ?? [], null);
+        $this->setIfExists('httpErrorReason', $data ?? [], null);
+        $this->setIfExists('httpStatusCode', $data ?? [], null);
+        $this->setIfExists('identityToken', $data ?? [], null);
+        $this->setIfExists('isError', $data ?? [], null);
+        $this->setIfExists('refreshToken', $data ?? [], null);
+        $this->setIfExists('tokenType', $data ?? [], null);
+        $this->setIfExists('errorType', $data ?? [], null);
     }
 
     /**
@@ -345,17 +345,17 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['expires_in'] === null) {
-            $invalidProperties[] = "'expires_in' can't be null";
+        if ($this->container['expiresIn'] === null) {
+            $invalidProperties[] = "'expiresIn' can't be null";
         }
-        if ($this->container['http_status_code'] === null) {
-            $invalidProperties[] = "'http_status_code' can't be null";
+        if ($this->container['httpStatusCode'] === null) {
+            $invalidProperties[] = "'httpStatusCode' can't be null";
         }
-        if ($this->container['is_error'] === null) {
-            $invalidProperties[] = "'is_error' can't be null";
+        if ($this->container['isError'] === null) {
+            $invalidProperties[] = "'isError' can't be null";
         }
-        if ($this->container['error_type'] === null) {
-            $invalidProperties[] = "'error_type' can't be null";
+        if ($this->container['errorType'] === null) {
+            $invalidProperties[] = "'errorType' can't be null";
         }
         return $invalidProperties;
     }
@@ -373,28 +373,28 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets access_token
+     * Gets accessToken
      *
      * @return string|null
      */
     public function getAccessToken()
     {
-        return $this->container['access_token'];
+        return $this->container['accessToken'];
     }
 
     /**
-     * Sets access_token
+     * Sets accessToken
      *
-     * @param string|null $access_token access_token
+     * @param string|null $accessToken accessToken
      *
      * @return self
      */
-    public function setAccessToken($access_token)
+    public function setAccessToken($accessToken)
     {
-        if (is_null($access_token)) {
-            throw new \InvalidArgumentException('non-nullable access_token cannot be null');
+        if (is_null($accessToken)) {
+            throw new \InvalidArgumentException('non-nullable accessToken cannot be null');
         }
-        $this->container['access_token'] = $access_token;
+        $this->container['accessToken'] = $accessToken;
 
         return $this;
     }
@@ -427,244 +427,244 @@ class TokenResponseGet implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets error_description
+     * Gets errorDescription
      *
      * @return string|null
      */
     public function getErrorDescription()
     {
-        return $this->container['error_description'];
+        return $this->container['errorDescription'];
     }
 
     /**
-     * Sets error_description
+     * Sets errorDescription
      *
-     * @param string|null $error_description error_description
+     * @param string|null $errorDescription errorDescription
      *
      * @return self
      */
-    public function setErrorDescription($error_description)
+    public function setErrorDescription($errorDescription)
     {
-        if (is_null($error_description)) {
-            throw new \InvalidArgumentException('non-nullable error_description cannot be null');
+        if (is_null($errorDescription)) {
+            throw new \InvalidArgumentException('non-nullable errorDescription cannot be null');
         }
-        $this->container['error_description'] = $error_description;
+        $this->container['errorDescription'] = $errorDescription;
 
         return $this;
     }
 
     /**
-     * Gets expires_in
+     * Gets expiresIn
      *
      * @return int
      */
     public function getExpiresIn()
     {
-        return $this->container['expires_in'];
+        return $this->container['expiresIn'];
     }
 
     /**
-     * Sets expires_in
+     * Sets expiresIn
      *
-     * @param int $expires_in expires_in
+     * @param int $expiresIn expiresIn
      *
      * @return self
      */
-    public function setExpiresIn($expires_in)
+    public function setExpiresIn($expiresIn)
     {
-        if (is_null($expires_in)) {
-            throw new \InvalidArgumentException('non-nullable expires_in cannot be null');
+        if (is_null($expiresIn)) {
+            throw new \InvalidArgumentException('non-nullable expiresIn cannot be null');
         }
-        $this->container['expires_in'] = $expires_in;
+        $this->container['expiresIn'] = $expiresIn;
 
         return $this;
     }
 
     /**
-     * Gets http_error_reason
+     * Gets httpErrorReason
      *
      * @return string|null
      */
     public function getHttpErrorReason()
     {
-        return $this->container['http_error_reason'];
+        return $this->container['httpErrorReason'];
     }
 
     /**
-     * Sets http_error_reason
+     * Sets httpErrorReason
      *
-     * @param string|null $http_error_reason http_error_reason
+     * @param string|null $httpErrorReason httpErrorReason
      *
      * @return self
      */
-    public function setHttpErrorReason($http_error_reason)
+    public function setHttpErrorReason($httpErrorReason)
     {
-        if (is_null($http_error_reason)) {
-            throw new \InvalidArgumentException('non-nullable http_error_reason cannot be null');
+        if (is_null($httpErrorReason)) {
+            throw new \InvalidArgumentException('non-nullable httpErrorReason cannot be null');
         }
-        $this->container['http_error_reason'] = $http_error_reason;
+        $this->container['httpErrorReason'] = $httpErrorReason;
 
         return $this;
     }
 
     /**
-     * Gets http_status_code
+     * Gets httpStatusCode
      *
      * @return \Dangl\AVACloud\Model\HttpStatusCode
      */
     public function getHttpStatusCode()
     {
-        return $this->container['http_status_code'];
+        return $this->container['httpStatusCode'];
     }
 
     /**
-     * Sets http_status_code
+     * Sets httpStatusCode
      *
-     * @param \Dangl\AVACloud\Model\HttpStatusCode $http_status_code http_status_code
+     * @param \Dangl\AVACloud\Model\HttpStatusCode $httpStatusCode httpStatusCode
      *
      * @return self
      */
-    public function setHttpStatusCode($http_status_code)
+    public function setHttpStatusCode($httpStatusCode)
     {
-        if (is_null($http_status_code)) {
-            throw new \InvalidArgumentException('non-nullable http_status_code cannot be null');
+        if (is_null($httpStatusCode)) {
+            throw new \InvalidArgumentException('non-nullable httpStatusCode cannot be null');
         }
-        $this->container['http_status_code'] = $http_status_code;
+        $this->container['httpStatusCode'] = $httpStatusCode;
 
         return $this;
     }
 
     /**
-     * Gets identity_token
+     * Gets identityToken
      *
      * @return string|null
      */
     public function getIdentityToken()
     {
-        return $this->container['identity_token'];
+        return $this->container['identityToken'];
     }
 
     /**
-     * Sets identity_token
+     * Sets identityToken
      *
-     * @param string|null $identity_token identity_token
+     * @param string|null $identityToken identityToken
      *
      * @return self
      */
-    public function setIdentityToken($identity_token)
+    public function setIdentityToken($identityToken)
     {
-        if (is_null($identity_token)) {
-            throw new \InvalidArgumentException('non-nullable identity_token cannot be null');
+        if (is_null($identityToken)) {
+            throw new \InvalidArgumentException('non-nullable identityToken cannot be null');
         }
-        $this->container['identity_token'] = $identity_token;
+        $this->container['identityToken'] = $identityToken;
 
         return $this;
     }
 
     /**
-     * Gets is_error
+     * Gets isError
      *
      * @return bool
      */
     public function getIsError()
     {
-        return $this->container['is_error'];
+        return $this->container['isError'];
     }
 
     /**
-     * Sets is_error
+     * Sets isError
      *
-     * @param bool $is_error is_error
+     * @param bool $isError isError
      *
      * @return self
      */
-    public function setIsError($is_error)
+    public function setIsError($isError)
     {
-        if (is_null($is_error)) {
-            throw new \InvalidArgumentException('non-nullable is_error cannot be null');
+        if (is_null($isError)) {
+            throw new \InvalidArgumentException('non-nullable isError cannot be null');
         }
-        $this->container['is_error'] = $is_error;
+        $this->container['isError'] = $isError;
 
         return $this;
     }
 
     /**
-     * Gets refresh_token
+     * Gets refreshToken
      *
      * @return string|null
      */
     public function getRefreshToken()
     {
-        return $this->container['refresh_token'];
+        return $this->container['refreshToken'];
     }
 
     /**
-     * Sets refresh_token
+     * Sets refreshToken
      *
-     * @param string|null $refresh_token refresh_token
+     * @param string|null $refreshToken refreshToken
      *
      * @return self
      */
-    public function setRefreshToken($refresh_token)
+    public function setRefreshToken($refreshToken)
     {
-        if (is_null($refresh_token)) {
-            throw new \InvalidArgumentException('non-nullable refresh_token cannot be null');
+        if (is_null($refreshToken)) {
+            throw new \InvalidArgumentException('non-nullable refreshToken cannot be null');
         }
-        $this->container['refresh_token'] = $refresh_token;
+        $this->container['refreshToken'] = $refreshToken;
 
         return $this;
     }
 
     /**
-     * Gets token_type
+     * Gets tokenType
      *
      * @return string|null
      */
     public function getTokenType()
     {
-        return $this->container['token_type'];
+        return $this->container['tokenType'];
     }
 
     /**
-     * Sets token_type
+     * Sets tokenType
      *
-     * @param string|null $token_type token_type
+     * @param string|null $tokenType tokenType
      *
      * @return self
      */
-    public function setTokenType($token_type)
+    public function setTokenType($tokenType)
     {
-        if (is_null($token_type)) {
-            throw new \InvalidArgumentException('non-nullable token_type cannot be null');
+        if (is_null($tokenType)) {
+            throw new \InvalidArgumentException('non-nullable tokenType cannot be null');
         }
-        $this->container['token_type'] = $token_type;
+        $this->container['tokenType'] = $tokenType;
 
         return $this;
     }
 
     /**
-     * Gets error_type
+     * Gets errorType
      *
      * @return \Dangl\AVACloud\Model\ResponseErrorType
      */
     public function getErrorType()
     {
-        return $this->container['error_type'];
+        return $this->container['errorType'];
     }
 
     /**
-     * Sets error_type
+     * Sets errorType
      *
-     * @param \Dangl\AVACloud\Model\ResponseErrorType $error_type error_type
+     * @param \Dangl\AVACloud\Model\ResponseErrorType $errorType errorType
      *
      * @return self
      */
-    public function setErrorType($error_type)
+    public function setErrorType($errorType)
     {
-        if (is_null($error_type)) {
-            throw new \InvalidArgumentException('non-nullable error_type cannot be null');
+        if (is_null($errorType)) {
+            throw new \InvalidArgumentException('non-nullable errorType cannot be null');
         }
-        $this->container['error_type'] = $error_type;
+        $this->container['errorType'] = $errorType;
 
         return $this;
     }

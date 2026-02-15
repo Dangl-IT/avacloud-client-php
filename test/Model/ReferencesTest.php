@@ -81,7 +81,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "buyer_reference"
+     * Test attribute "buyerReference"
      */
     public function testPropertyBuyerReference()
     {
@@ -90,7 +90,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "project_reference"
+     * Test attribute "projectReference"
      */
     public function testPropertyProjectReference()
     {
@@ -99,7 +99,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "contract_reference"
+     * Test attribute "contractReference"
      */
     public function testPropertyContractReference()
     {
@@ -108,7 +108,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "purchase_order_reference"
+     * Test attribute "purchaseOrderReference"
      */
     public function testPropertyPurchaseOrderReference()
     {
@@ -117,7 +117,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "sales_order_reference"
+     * Test attribute "salesOrderReference"
      */
     public function testPropertySalesOrderReference()
     {
@@ -126,7 +126,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "receiving_advice_reference"
+     * Test attribute "receivingAdviceReference"
      */
     public function testPropertyReceivingAdviceReference()
     {
@@ -135,7 +135,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "dispatch_advice_reference"
+     * Test attribute "dispatchAdviceReference"
      */
     public function testPropertyDispatchAdviceReference()
     {
@@ -144,7 +144,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "tender_or_lot_reference"
+     * Test attribute "tenderOrLotReference"
      */
     public function testPropertyTenderOrLotReference()
     {
@@ -153,7 +153,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "invoiced_object_identifier"
+     * Test attribute "invoicedObjectIdentifier"
      */
     public function testPropertyInvoicedObjectIdentifier()
     {
@@ -162,7 +162,7 @@ class ReferencesTest extends TestCase
     }
 
     /**
-     * Test attribute "accounting_reference"
+     * Test attribute "accountingReference"
      */
     public function testPropertyAccountingReference()
     {

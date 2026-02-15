@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tax_rate** | **float** | This components tax rate. |
-**deduction_factor** | **float** | This is the factor of applied deductions for this component |
-**total_net** | **float** | The total net price for all components of a given tax rate. |
-**total_deducted** | **float** | The resulting price component after applied deductions | [readonly]
-**total_tax** | **float** | The total tax amount for all components of a given tax rate. | [readonly]
-**total_gross** | **float** | The total gross price for all components of a given tax rate. | [readonly]
-**total_gross_deducted** | **float** | The total gross price for all components of a given tax rate, after applied deductions. | [readonly]
-**total_tax_deducted** | **float** | The total tax amount for all components of a given tax rate, after applied deductions. | [readonly]
+**taxRate** | **float** | This components tax rate. |
+**deductionFactor** | **float** | This is the factor of applied deductions for this component |
+**totalNet** | **float** | The total net price for all components of a given tax rate. |
+**totalDeducted** | **float** | The resulting price component after applied deductions | [readonly]
+**totalTax** | **float** | The total tax amount for all components of a given tax rate. | [readonly]
+**totalGross** | **float** | The total gross price for all components of a given tax rate. | [readonly]
+**totalGrossDeducted** | **float** | The total gross price for all components of a given tax rate, after applied deductions. | [readonly]
+**totalTaxDeducted** | **float** | The total tax amount for all components of a given tax rate, after applied deductions. | [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

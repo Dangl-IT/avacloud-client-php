@@ -60,21 +60,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'project' => '\Dangl\AVACloud\Model\ProjectDto',
-        'invoice_number' => 'string',
+        'invoiceNumber' => 'string',
         'documents' => '\Dangl\AVACloud\Model\SupportingDocument[]',
-        'invoice_period' => '\Dangl\AVACloud\Model\InvoicePeriod',
-        'payment_instructions' => '\Dangl\AVACloud\Model\PaymentInstructions',
-        'invoice_type' => '\Dangl\AVACloud\Model\InvoiceType',
-        'is_eu_reverse_charge_invoice' => 'bool',
-        'payment_due_date' => '\DateTime',
-        'payment_terms' => 'string',
-        'previous_invoices' => '\Dangl\AVACloud\Model\PreviousInvoice[]',
-        'already_paid_total_gross' => 'float',
+        'invoicePeriod' => '\Dangl\AVACloud\Model\InvoicePeriod',
+        'paymentInstructions' => '\Dangl\AVACloud\Model\PaymentInstructions',
+        'invoiceType' => '\Dangl\AVACloud\Model\InvoiceType',
+        'isEuReverseChargeInvoice' => 'bool',
+        'paymentDueDate' => '\DateTime',
+        'paymentTerms' => 'string',
+        'previousInvoices' => '\Dangl\AVACloud\Model\PreviousInvoice[]',
+        'alreadyPaidTotalGross' => 'float',
         'references' => '\Dangl\AVACloud\Model\References',
         'allowances' => '\Dangl\AVACloud\Model\InvoiceAllowance[]',
         'charges' => '\Dangl\AVACloud\Model\InvoiceCharge[]',
-        'delivery_information' => '\Dangl\AVACloud\Model\DeliveryInformation',
-        'seller_tax_representative' => '\Dangl\AVACloud\Model\Organization'
+        'deliveryInformation' => '\Dangl\AVACloud\Model\DeliveryInformation',
+        'sellerTaxRepresentative' => '\Dangl\AVACloud\Model\Organization'
     ];
 
     /**
@@ -86,21 +86,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'project' => null,
-        'invoice_number' => null,
+        'invoiceNumber' => null,
         'documents' => null,
-        'invoice_period' => null,
-        'payment_instructions' => null,
-        'invoice_type' => null,
-        'is_eu_reverse_charge_invoice' => null,
-        'payment_due_date' => 'date-time',
-        'payment_terms' => null,
-        'previous_invoices' => null,
-        'already_paid_total_gross' => 'decimal',
+        'invoicePeriod' => null,
+        'paymentInstructions' => null,
+        'invoiceType' => null,
+        'isEuReverseChargeInvoice' => null,
+        'paymentDueDate' => 'date-time',
+        'paymentTerms' => null,
+        'previousInvoices' => null,
+        'alreadyPaidTotalGross' => 'decimal',
         'references' => null,
         'allowances' => null,
         'charges' => null,
-        'delivery_information' => null,
-        'seller_tax_representative' => null
+        'deliveryInformation' => null,
+        'sellerTaxRepresentative' => null
     ];
 
     /**
@@ -110,21 +110,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static array $openAPINullables = [
         'project' => false,
-        'invoice_number' => false,
+        'invoiceNumber' => false,
         'documents' => false,
-        'invoice_period' => false,
-        'payment_instructions' => false,
-        'invoice_type' => false,
-        'is_eu_reverse_charge_invoice' => false,
-        'payment_due_date' => false,
-        'payment_terms' => false,
-        'previous_invoices' => false,
-        'already_paid_total_gross' => false,
+        'invoicePeriod' => false,
+        'paymentInstructions' => false,
+        'invoiceType' => false,
+        'isEuReverseChargeInvoice' => false,
+        'paymentDueDate' => false,
+        'paymentTerms' => false,
+        'previousInvoices' => false,
+        'alreadyPaidTotalGross' => false,
         'references' => false,
         'allowances' => false,
         'charges' => false,
-        'delivery_information' => false,
-        'seller_tax_representative' => false
+        'deliveryInformation' => false,
+        'sellerTaxRepresentative' => false
     ];
 
     /**
@@ -214,21 +214,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'project' => 'project',
-        'invoice_number' => 'invoiceNumber',
+        'invoiceNumber' => 'invoiceNumber',
         'documents' => 'documents',
-        'invoice_period' => 'invoicePeriod',
-        'payment_instructions' => 'paymentInstructions',
-        'invoice_type' => 'invoiceType',
-        'is_eu_reverse_charge_invoice' => 'isEuReverseChargeInvoice',
-        'payment_due_date' => 'paymentDueDate',
-        'payment_terms' => 'paymentTerms',
-        'previous_invoices' => 'previousInvoices',
-        'already_paid_total_gross' => 'alreadyPaidTotalGross',
+        'invoicePeriod' => 'invoicePeriod',
+        'paymentInstructions' => 'paymentInstructions',
+        'invoiceType' => 'invoiceType',
+        'isEuReverseChargeInvoice' => 'isEuReverseChargeInvoice',
+        'paymentDueDate' => 'paymentDueDate',
+        'paymentTerms' => 'paymentTerms',
+        'previousInvoices' => 'previousInvoices',
+        'alreadyPaidTotalGross' => 'alreadyPaidTotalGross',
         'references' => 'references',
         'allowances' => 'allowances',
         'charges' => 'charges',
-        'delivery_information' => 'deliveryInformation',
-        'seller_tax_representative' => 'sellerTaxRepresentative'
+        'deliveryInformation' => 'deliveryInformation',
+        'sellerTaxRepresentative' => 'sellerTaxRepresentative'
     ];
 
     /**
@@ -238,21 +238,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'project' => 'setProject',
-        'invoice_number' => 'setInvoiceNumber',
+        'invoiceNumber' => 'setInvoiceNumber',
         'documents' => 'setDocuments',
-        'invoice_period' => 'setInvoicePeriod',
-        'payment_instructions' => 'setPaymentInstructions',
-        'invoice_type' => 'setInvoiceType',
-        'is_eu_reverse_charge_invoice' => 'setIsEuReverseChargeInvoice',
-        'payment_due_date' => 'setPaymentDueDate',
-        'payment_terms' => 'setPaymentTerms',
-        'previous_invoices' => 'setPreviousInvoices',
-        'already_paid_total_gross' => 'setAlreadyPaidTotalGross',
+        'invoicePeriod' => 'setInvoicePeriod',
+        'paymentInstructions' => 'setPaymentInstructions',
+        'invoiceType' => 'setInvoiceType',
+        'isEuReverseChargeInvoice' => 'setIsEuReverseChargeInvoice',
+        'paymentDueDate' => 'setPaymentDueDate',
+        'paymentTerms' => 'setPaymentTerms',
+        'previousInvoices' => 'setPreviousInvoices',
+        'alreadyPaidTotalGross' => 'setAlreadyPaidTotalGross',
         'references' => 'setReferences',
         'allowances' => 'setAllowances',
         'charges' => 'setCharges',
-        'delivery_information' => 'setDeliveryInformation',
-        'seller_tax_representative' => 'setSellerTaxRepresentative'
+        'deliveryInformation' => 'setDeliveryInformation',
+        'sellerTaxRepresentative' => 'setSellerTaxRepresentative'
     ];
 
     /**
@@ -262,21 +262,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'project' => 'getProject',
-        'invoice_number' => 'getInvoiceNumber',
+        'invoiceNumber' => 'getInvoiceNumber',
         'documents' => 'getDocuments',
-        'invoice_period' => 'getInvoicePeriod',
-        'payment_instructions' => 'getPaymentInstructions',
-        'invoice_type' => 'getInvoiceType',
-        'is_eu_reverse_charge_invoice' => 'getIsEuReverseChargeInvoice',
-        'payment_due_date' => 'getPaymentDueDate',
-        'payment_terms' => 'getPaymentTerms',
-        'previous_invoices' => 'getPreviousInvoices',
-        'already_paid_total_gross' => 'getAlreadyPaidTotalGross',
+        'invoicePeriod' => 'getInvoicePeriod',
+        'paymentInstructions' => 'getPaymentInstructions',
+        'invoiceType' => 'getInvoiceType',
+        'isEuReverseChargeInvoice' => 'getIsEuReverseChargeInvoice',
+        'paymentDueDate' => 'getPaymentDueDate',
+        'paymentTerms' => 'getPaymentTerms',
+        'previousInvoices' => 'getPreviousInvoices',
+        'alreadyPaidTotalGross' => 'getAlreadyPaidTotalGross',
         'references' => 'getReferences',
         'allowances' => 'getAllowances',
         'charges' => 'getCharges',
-        'delivery_information' => 'getDeliveryInformation',
-        'seller_tax_representative' => 'getSellerTaxRepresentative'
+        'deliveryInformation' => 'getDeliveryInformation',
+        'sellerTaxRepresentative' => 'getSellerTaxRepresentative'
     ];
 
     /**
@@ -337,21 +337,21 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(?array $data = null)
     {
         $this->setIfExists('project', $data ?? [], null);
-        $this->setIfExists('invoice_number', $data ?? [], null);
+        $this->setIfExists('invoiceNumber', $data ?? [], null);
         $this->setIfExists('documents', $data ?? [], null);
-        $this->setIfExists('invoice_period', $data ?? [], null);
-        $this->setIfExists('payment_instructions', $data ?? [], null);
-        $this->setIfExists('invoice_type', $data ?? [], null);
-        $this->setIfExists('is_eu_reverse_charge_invoice', $data ?? [], null);
-        $this->setIfExists('payment_due_date', $data ?? [], null);
-        $this->setIfExists('payment_terms', $data ?? [], null);
-        $this->setIfExists('previous_invoices', $data ?? [], null);
-        $this->setIfExists('already_paid_total_gross', $data ?? [], null);
+        $this->setIfExists('invoicePeriod', $data ?? [], null);
+        $this->setIfExists('paymentInstructions', $data ?? [], null);
+        $this->setIfExists('invoiceType', $data ?? [], null);
+        $this->setIfExists('isEuReverseChargeInvoice', $data ?? [], null);
+        $this->setIfExists('paymentDueDate', $data ?? [], null);
+        $this->setIfExists('paymentTerms', $data ?? [], null);
+        $this->setIfExists('previousInvoices', $data ?? [], null);
+        $this->setIfExists('alreadyPaidTotalGross', $data ?? [], null);
         $this->setIfExists('references', $data ?? [], null);
         $this->setIfExists('allowances', $data ?? [], null);
         $this->setIfExists('charges', $data ?? [], null);
-        $this->setIfExists('delivery_information', $data ?? [], null);
-        $this->setIfExists('seller_tax_representative', $data ?? [], null);
+        $this->setIfExists('deliveryInformation', $data ?? [], null);
+        $this->setIfExists('sellerTaxRepresentative', $data ?? [], null);
     }
 
     /**
@@ -384,14 +384,14 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
         if ($this->container['project'] === null) {
             $invalidProperties[] = "'project' can't be null";
         }
-        if ($this->container['invoice_type'] === null) {
-            $invalidProperties[] = "'invoice_type' can't be null";
+        if ($this->container['invoiceType'] === null) {
+            $invalidProperties[] = "'invoiceType' can't be null";
         }
-        if ($this->container['is_eu_reverse_charge_invoice'] === null) {
-            $invalidProperties[] = "'is_eu_reverse_charge_invoice' can't be null";
+        if ($this->container['isEuReverseChargeInvoice'] === null) {
+            $invalidProperties[] = "'isEuReverseChargeInvoice' can't be null";
         }
-        if ($this->container['already_paid_total_gross'] === null) {
-            $invalidProperties[] = "'already_paid_total_gross' can't be null";
+        if ($this->container['alreadyPaidTotalGross'] === null) {
+            $invalidProperties[] = "'alreadyPaidTotalGross' can't be null";
         }
         return $invalidProperties;
     }
@@ -436,28 +436,28 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets invoice_number
+     * Gets invoiceNumber
      *
      * @return string|null
      */
     public function getInvoiceNumber()
     {
-        return $this->container['invoice_number'];
+        return $this->container['invoiceNumber'];
     }
 
     /**
-     * Sets invoice_number
+     * Sets invoiceNumber
      *
-     * @param string|null $invoice_number The number of the invoice
+     * @param string|null $invoiceNumber The number of the invoice
      *
      * @return self
      */
-    public function setInvoiceNumber($invoice_number)
+    public function setInvoiceNumber($invoiceNumber)
     {
-        if (is_null($invoice_number)) {
-            throw new \InvalidArgumentException('non-nullable invoice_number cannot be null');
+        if (is_null($invoiceNumber)) {
+            throw new \InvalidArgumentException('non-nullable invoiceNumber cannot be null');
         }
-        $this->container['invoice_number'] = $invoice_number;
+        $this->container['invoiceNumber'] = $invoiceNumber;
 
         return $this;
     }
@@ -490,217 +490,217 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets invoice_period
+     * Gets invoicePeriod
      *
      * @return \Dangl\AVACloud\Model\InvoicePeriod|null
      */
     public function getInvoicePeriod()
     {
-        return $this->container['invoice_period'];
+        return $this->container['invoicePeriod'];
     }
 
     /**
-     * Sets invoice_period
+     * Sets invoicePeriod
      *
-     * @param \Dangl\AVACloud\Model\InvoicePeriod|null $invoice_period invoice_period
+     * @param \Dangl\AVACloud\Model\InvoicePeriod|null $invoicePeriod invoicePeriod
      *
      * @return self
      */
-    public function setInvoicePeriod($invoice_period)
+    public function setInvoicePeriod($invoicePeriod)
     {
-        if (is_null($invoice_period)) {
-            throw new \InvalidArgumentException('non-nullable invoice_period cannot be null');
+        if (is_null($invoicePeriod)) {
+            throw new \InvalidArgumentException('non-nullable invoicePeriod cannot be null');
         }
-        $this->container['invoice_period'] = $invoice_period;
+        $this->container['invoicePeriod'] = $invoicePeriod;
 
         return $this;
     }
 
     /**
-     * Gets payment_instructions
+     * Gets paymentInstructions
      *
      * @return \Dangl\AVACloud\Model\PaymentInstructions|null
      */
     public function getPaymentInstructions()
     {
-        return $this->container['payment_instructions'];
+        return $this->container['paymentInstructions'];
     }
 
     /**
-     * Sets payment_instructions
+     * Sets paymentInstructions
      *
-     * @param \Dangl\AVACloud\Model\PaymentInstructions|null $payment_instructions payment_instructions
+     * @param \Dangl\AVACloud\Model\PaymentInstructions|null $paymentInstructions paymentInstructions
      *
      * @return self
      */
-    public function setPaymentInstructions($payment_instructions)
+    public function setPaymentInstructions($paymentInstructions)
     {
-        if (is_null($payment_instructions)) {
-            throw new \InvalidArgumentException('non-nullable payment_instructions cannot be null');
+        if (is_null($paymentInstructions)) {
+            throw new \InvalidArgumentException('non-nullable paymentInstructions cannot be null');
         }
-        $this->container['payment_instructions'] = $payment_instructions;
+        $this->container['paymentInstructions'] = $paymentInstructions;
 
         return $this;
     }
 
     /**
-     * Gets invoice_type
+     * Gets invoiceType
      *
      * @return \Dangl\AVACloud\Model\InvoiceType
      */
     public function getInvoiceType()
     {
-        return $this->container['invoice_type'];
+        return $this->container['invoiceType'];
     }
 
     /**
-     * Sets invoice_type
+     * Sets invoiceType
      *
-     * @param \Dangl\AVACloud\Model\InvoiceType $invoice_type invoice_type
+     * @param \Dangl\AVACloud\Model\InvoiceType $invoiceType invoiceType
      *
      * @return self
      */
-    public function setInvoiceType($invoice_type)
+    public function setInvoiceType($invoiceType)
     {
-        if (is_null($invoice_type)) {
-            throw new \InvalidArgumentException('non-nullable invoice_type cannot be null');
+        if (is_null($invoiceType)) {
+            throw new \InvalidArgumentException('non-nullable invoiceType cannot be null');
         }
-        $this->container['invoice_type'] = $invoice_type;
+        $this->container['invoiceType'] = $invoiceType;
 
         return $this;
     }
 
     /**
-     * Gets is_eu_reverse_charge_invoice
+     * Gets isEuReverseChargeInvoice
      *
      * @return bool
      */
     public function getIsEuReverseChargeInvoice()
     {
-        return $this->container['is_eu_reverse_charge_invoice'];
+        return $this->container['isEuReverseChargeInvoice'];
     }
 
     /**
-     * Sets is_eu_reverse_charge_invoice
+     * Sets isEuReverseChargeInvoice
      *
-     * @param bool $is_eu_reverse_charge_invoice If this is set to true, the invoice will be marked as a reverse charge invoice in all VAT rates. You still need to ensure that the actual tax rates are set to zero in all elements
+     * @param bool $isEuReverseChargeInvoice If this is set to true, the invoice will be marked as a reverse charge invoice in all VAT rates. You still need to ensure that the actual tax rates are set to zero in all elements
      *
      * @return self
      */
-    public function setIsEuReverseChargeInvoice($is_eu_reverse_charge_invoice)
+    public function setIsEuReverseChargeInvoice($isEuReverseChargeInvoice)
     {
-        if (is_null($is_eu_reverse_charge_invoice)) {
-            throw new \InvalidArgumentException('non-nullable is_eu_reverse_charge_invoice cannot be null');
+        if (is_null($isEuReverseChargeInvoice)) {
+            throw new \InvalidArgumentException('non-nullable isEuReverseChargeInvoice cannot be null');
         }
-        $this->container['is_eu_reverse_charge_invoice'] = $is_eu_reverse_charge_invoice;
+        $this->container['isEuReverseChargeInvoice'] = $isEuReverseChargeInvoice;
 
         return $this;
     }
 
     /**
-     * Gets payment_due_date
+     * Gets paymentDueDate
      *
      * @return \DateTime|null
      */
     public function getPaymentDueDate()
     {
-        return $this->container['payment_due_date'];
+        return $this->container['paymentDueDate'];
     }
 
     /**
-     * Sets payment_due_date
+     * Sets paymentDueDate
      *
-     * @param \DateTime|null $payment_due_date Until when the payment is due
+     * @param \DateTime|null $paymentDueDate Until when the payment is due
      *
      * @return self
      */
-    public function setPaymentDueDate($payment_due_date)
+    public function setPaymentDueDate($paymentDueDate)
     {
-        if (is_null($payment_due_date)) {
-            throw new \InvalidArgumentException('non-nullable payment_due_date cannot be null');
+        if (is_null($paymentDueDate)) {
+            throw new \InvalidArgumentException('non-nullable paymentDueDate cannot be null');
         }
-        $this->container['payment_due_date'] = $payment_due_date;
+        $this->container['paymentDueDate'] = $paymentDueDate;
 
         return $this;
     }
 
     /**
-     * Gets payment_terms
+     * Gets paymentTerms
      *
      * @return string|null
      */
     public function getPaymentTerms()
     {
-        return $this->container['payment_terms'];
+        return $this->container['paymentTerms'];
     }
 
     /**
-     * Sets payment_terms
+     * Sets paymentTerms
      *
-     * @param string|null $payment_terms A text description of payment terms, e.g. cash discounts or payment conditions
+     * @param string|null $paymentTerms A text description of payment terms, e.g. cash discounts or payment conditions
      *
      * @return self
      */
-    public function setPaymentTerms($payment_terms)
+    public function setPaymentTerms($paymentTerms)
     {
-        if (is_null($payment_terms)) {
-            throw new \InvalidArgumentException('non-nullable payment_terms cannot be null');
+        if (is_null($paymentTerms)) {
+            throw new \InvalidArgumentException('non-nullable paymentTerms cannot be null');
         }
-        $this->container['payment_terms'] = $payment_terms;
+        $this->container['paymentTerms'] = $paymentTerms;
 
         return $this;
     }
 
     /**
-     * Gets previous_invoices
+     * Gets previousInvoices
      *
      * @return \Dangl\AVACloud\Model\PreviousInvoice[]|null
      */
     public function getPreviousInvoices()
     {
-        return $this->container['previous_invoices'];
+        return $this->container['previousInvoices'];
     }
 
     /**
-     * Sets previous_invoices
+     * Sets previousInvoices
      *
-     * @param \Dangl\AVACloud\Model\PreviousInvoice[]|null $previous_invoices In case of partial of final invoices, it's possible to reference the previous invoice numbers
+     * @param \Dangl\AVACloud\Model\PreviousInvoice[]|null $previousInvoices In case of partial of final invoices, it's possible to reference the previous invoice numbers
      *
      * @return self
      */
-    public function setPreviousInvoices($previous_invoices)
+    public function setPreviousInvoices($previousInvoices)
     {
-        if (is_null($previous_invoices)) {
-            throw new \InvalidArgumentException('non-nullable previous_invoices cannot be null');
+        if (is_null($previousInvoices)) {
+            throw new \InvalidArgumentException('non-nullable previousInvoices cannot be null');
         }
-        $this->container['previous_invoices'] = $previous_invoices;
+        $this->container['previousInvoices'] = $previousInvoices;
 
         return $this;
     }
 
     /**
-     * Gets already_paid_total_gross
+     * Gets alreadyPaidTotalGross
      *
      * @return float
      */
     public function getAlreadyPaidTotalGross()
     {
-        return $this->container['already_paid_total_gross'];
+        return $this->container['alreadyPaidTotalGross'];
     }
 
     /**
-     * Sets already_paid_total_gross
+     * Sets alreadyPaidTotalGross
      *
-     * @param float $already_paid_total_gross If parts of this invoice (or of previous invoices) have already been paid, then this property can be used to specify that some parts of the invoice are already paid and this will be deducted from the to be paid amount.
+     * @param float $alreadyPaidTotalGross If parts of this invoice (or of previous invoices) have already been paid, then this property can be used to specify that some parts of the invoice are already paid and this will be deducted from the to be paid amount.
      *
      * @return self
      */
-    public function setAlreadyPaidTotalGross($already_paid_total_gross)
+    public function setAlreadyPaidTotalGross($alreadyPaidTotalGross)
     {
-        if (is_null($already_paid_total_gross)) {
-            throw new \InvalidArgumentException('non-nullable already_paid_total_gross cannot be null');
+        if (is_null($alreadyPaidTotalGross)) {
+            throw new \InvalidArgumentException('non-nullable alreadyPaidTotalGross cannot be null');
         }
-        $this->container['already_paid_total_gross'] = $already_paid_total_gross;
+        $this->container['alreadyPaidTotalGross'] = $alreadyPaidTotalGross;
 
         return $this;
     }
@@ -787,55 +787,55 @@ class AvaProjectWrapper implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets delivery_information
+     * Gets deliveryInformation
      *
      * @return \Dangl\AVACloud\Model\DeliveryInformation|null
      */
     public function getDeliveryInformation()
     {
-        return $this->container['delivery_information'];
+        return $this->container['deliveryInformation'];
     }
 
     /**
-     * Sets delivery_information
+     * Sets deliveryInformation
      *
-     * @param \Dangl\AVACloud\Model\DeliveryInformation|null $delivery_information delivery_information
+     * @param \Dangl\AVACloud\Model\DeliveryInformation|null $deliveryInformation deliveryInformation
      *
      * @return self
      */
-    public function setDeliveryInformation($delivery_information)
+    public function setDeliveryInformation($deliveryInformation)
     {
-        if (is_null($delivery_information)) {
-            throw new \InvalidArgumentException('non-nullable delivery_information cannot be null');
+        if (is_null($deliveryInformation)) {
+            throw new \InvalidArgumentException('non-nullable deliveryInformation cannot be null');
         }
-        $this->container['delivery_information'] = $delivery_information;
+        $this->container['deliveryInformation'] = $deliveryInformation;
 
         return $this;
     }
 
     /**
-     * Gets seller_tax_representative
+     * Gets sellerTaxRepresentative
      *
      * @return \Dangl\AVACloud\Model\Organization|null
      */
     public function getSellerTaxRepresentative()
     {
-        return $this->container['seller_tax_representative'];
+        return $this->container['sellerTaxRepresentative'];
     }
 
     /**
-     * Sets seller_tax_representative
+     * Sets sellerTaxRepresentative
      *
-     * @param \Dangl\AVACloud\Model\Organization|null $seller_tax_representative seller_tax_representative
+     * @param \Dangl\AVACloud\Model\Organization|null $sellerTaxRepresentative sellerTaxRepresentative
      *
      * @return self
      */
-    public function setSellerTaxRepresentative($seller_tax_representative)
+    public function setSellerTaxRepresentative($sellerTaxRepresentative)
     {
-        if (is_null($seller_tax_representative)) {
-            throw new \InvalidArgumentException('non-nullable seller_tax_representative cannot be null');
+        if (is_null($sellerTaxRepresentative)) {
+            throw new \InvalidArgumentException('non-nullable sellerTaxRepresentative cannot be null');
         }
-        $this->container['seller_tax_representative'] = $seller_tax_representative;
+        $this->container['sellerTaxRepresentative'] = $sellerTaxRepresentative;
 
         return $this;
     }

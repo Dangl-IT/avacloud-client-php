@@ -117,7 +117,7 @@ class CalculationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "error_position_in_line"
+     * Test attribute "errorPositionInLine"
      */
     public function testPropertyErrorPositionInLine()
     {
@@ -126,7 +126,7 @@ class CalculationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {
@@ -135,7 +135,7 @@ class CalculationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_references"
+     * Test attribute "catalogueReferences"
      */
     public function testPropertyCatalogueReferences()
     {

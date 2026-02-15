@@ -108,7 +108,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "zip_code"
+     * Test attribute "zipCode"
      */
     public function testPropertyZipCode()
     {
@@ -171,7 +171,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "contact_person_name"
+     * Test attribute "contactPersonName"
      */
     public function testPropertyContactPersonName()
     {
@@ -180,7 +180,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "award_identifier"
+     * Test attribute "awardIdentifier"
      */
     public function testPropertyAwardIdentifier()
     {
@@ -189,7 +189,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_in_european_economic_area"
+     * Test attribute "isInEuropeanEconomicArea"
      */
     public function testPropertyIsInEuropeanEconomicArea()
     {
@@ -198,7 +198,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_id"
+     * Test attribute "vatId"
      */
     public function testPropertyVatId()
     {
@@ -216,7 +216,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "country_code"
+     * Test attribute "countryCode"
      */
     public function testPropertyCountryCode()
     {
@@ -225,7 +225,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "creditor_or_debtor_identifier"
+     * Test attribute "creditorOrDebtorIdentifier"
      */
     public function testPropertyCreditorOrDebtorIdentifier()
     {
@@ -234,7 +234,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "global_location_number"
+     * Test attribute "globalLocationNumber"
      */
     public function testPropertyGlobalLocationNumber()
     {
@@ -243,7 +243,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "banking_information"
+     * Test attribute "bankingInformation"
      */
     public function testPropertyBankingInformation()
     {
@@ -252,7 +252,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "registration_number"
+     * Test attribute "registrationNumber"
      */
     public function testPropertyRegistrationNumber()
     {
@@ -261,7 +261,7 @@ class PartyInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_id"
+     * Test attribute "taxId"
      */
     public function testPropertyTaxId()
     {

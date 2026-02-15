@@ -81,7 +81,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "user_is_authenticated"
+     * Test attribute "userIsAuthenticated"
      */
     public function testPropertyUserIsAuthenticated()
     {
@@ -90,7 +90,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "client_is_authenticated"
+     * Test attribute "clientIsAuthenticated"
      */
     public function testPropertyClientIsAuthenticated()
     {
@@ -99,7 +99,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "current_user_id"
+     * Test attribute "currentUserId"
      */
     public function testPropertyCurrentUserId()
     {
@@ -108,7 +108,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "current_user_identicon_id"
+     * Test attribute "currentUserIdenticonId"
      */
     public function testPropertyCurrentUserIdenticonId()
     {
@@ -117,7 +117,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "current_user_name"
+     * Test attribute "currentUserName"
      */
     public function testPropertyCurrentUserName()
     {
@@ -126,7 +126,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "current_user_email"
+     * Test attribute "currentUserEmail"
      */
     public function testPropertyCurrentUserEmail()
     {
@@ -135,7 +135,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "current_client_id"
+     * Test attribute "currentClientId"
      */
     public function testPropertyCurrentClientId()
     {
@@ -144,7 +144,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "user_claims"
+     * Test attribute "userClaims"
      */
     public function testPropertyUserClaims()
     {
@@ -153,7 +153,7 @@ class UserInfoGetTest extends TestCase
     }
 
     /**
-     * Test attribute "client_claims"
+     * Test attribute "clientClaims"
      */
     public function testPropertyClientClaims()
     {

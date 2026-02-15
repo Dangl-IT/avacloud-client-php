@@ -698,32 +698,32 @@ class DanglIdentityApi
      * Operation danglIdentityLoginWithCookie
      *
      * @param  \Dangl\AVACloud\Model\LoginPost $model model (required)
-     * @param  string|null $redirect_url redirect_url (optional)
+     * @param  string|null $redirectUrl redirectUrl (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityLoginWithCookie'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function danglIdentityLoginWithCookie($model, $redirect_url = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
+    public function danglIdentityLoginWithCookie($model, $redirectUrl = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
     {
-        $this->danglIdentityLoginWithCookieWithHttpInfo($model, $redirect_url, $contentType);
+        $this->danglIdentityLoginWithCookieWithHttpInfo($model, $redirectUrl, $contentType);
     }
 
     /**
      * Operation danglIdentityLoginWithCookieWithHttpInfo
      *
      * @param  \Dangl\AVACloud\Model\LoginPost $model (required)
-     * @param  string|null $redirect_url (optional)
+     * @param  string|null $redirectUrl (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityLoginWithCookie'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function danglIdentityLoginWithCookieWithHttpInfo($model, $redirect_url = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
+    public function danglIdentityLoginWithCookieWithHttpInfo($model, $redirectUrl = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
     {
-        $request = $this->danglIdentityLoginWithCookieRequest($model, $redirect_url, $contentType);
+        $request = $this->danglIdentityLoginWithCookieRequest($model, $redirectUrl, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -762,15 +762,15 @@ class DanglIdentityApi
      * Operation danglIdentityLoginWithCookieAsync
      *
      * @param  \Dangl\AVACloud\Model\LoginPost $model (required)
-     * @param  string|null $redirect_url (optional)
+     * @param  string|null $redirectUrl (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityLoginWithCookie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function danglIdentityLoginWithCookieAsync($model, $redirect_url = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
+    public function danglIdentityLoginWithCookieAsync($model, $redirectUrl = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
     {
-        return $this->danglIdentityLoginWithCookieAsyncWithHttpInfo($model, $redirect_url, $contentType)
+        return $this->danglIdentityLoginWithCookieAsyncWithHttpInfo($model, $redirectUrl, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -782,16 +782,16 @@ class DanglIdentityApi
      * Operation danglIdentityLoginWithCookieAsyncWithHttpInfo
      *
      * @param  \Dangl\AVACloud\Model\LoginPost $model (required)
-     * @param  string|null $redirect_url (optional)
+     * @param  string|null $redirectUrl (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityLoginWithCookie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function danglIdentityLoginWithCookieAsyncWithHttpInfo($model, $redirect_url = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
+    public function danglIdentityLoginWithCookieAsyncWithHttpInfo($model, $redirectUrl = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
     {
         $returnType = '';
-        $request = $this->danglIdentityLoginWithCookieRequest($model, $redirect_url, $contentType);
+        $request = $this->danglIdentityLoginWithCookieRequest($model, $redirectUrl, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -820,13 +820,13 @@ class DanglIdentityApi
      * Create request for operation 'danglIdentityLoginWithCookie'
      *
      * @param  \Dangl\AVACloud\Model\LoginPost $model (required)
-     * @param  string|null $redirect_url (optional)
+     * @param  string|null $redirectUrl (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityLoginWithCookie'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function danglIdentityLoginWithCookieRequest($model, $redirect_url = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
+    public function danglIdentityLoginWithCookieRequest($model, $redirectUrl = null, string $contentType = self::contentTypes['danglIdentityLoginWithCookie'][0])
     {
 
         // verify the required parameter 'model' is set
@@ -847,7 +847,7 @@ class DanglIdentityApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $redirect_url,
+            $redirectUrl,
             'redirectUrl', // param base name
             'string', // openApiType
             '', // style
@@ -1202,31 +1202,31 @@ class DanglIdentityApi
     /**
      * Operation danglIdentityRegister
      *
-     * @param  \Dangl\AVACloud\Model\RegisterPost $register_model register_model (required)
+     * @param  \Dangl\AVACloud\Model\RegisterPost $registerModel registerModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRegister'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function danglIdentityRegister($register_model, string $contentType = self::contentTypes['danglIdentityRegister'][0])
+    public function danglIdentityRegister($registerModel, string $contentType = self::contentTypes['danglIdentityRegister'][0])
     {
-        $this->danglIdentityRegisterWithHttpInfo($register_model, $contentType);
+        $this->danglIdentityRegisterWithHttpInfo($registerModel, $contentType);
     }
 
     /**
      * Operation danglIdentityRegisterWithHttpInfo
      *
-     * @param  \Dangl\AVACloud\Model\RegisterPost $register_model (required)
+     * @param  \Dangl\AVACloud\Model\RegisterPost $registerModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRegister'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function danglIdentityRegisterWithHttpInfo($register_model, string $contentType = self::contentTypes['danglIdentityRegister'][0])
+    public function danglIdentityRegisterWithHttpInfo($registerModel, string $contentType = self::contentTypes['danglIdentityRegister'][0])
     {
-        $request = $this->danglIdentityRegisterRequest($register_model, $contentType);
+        $request = $this->danglIdentityRegisterRequest($registerModel, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1272,15 +1272,15 @@ class DanglIdentityApi
     /**
      * Operation danglIdentityRegisterAsync
      *
-     * @param  \Dangl\AVACloud\Model\RegisterPost $register_model (required)
+     * @param  \Dangl\AVACloud\Model\RegisterPost $registerModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRegister'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function danglIdentityRegisterAsync($register_model, string $contentType = self::contentTypes['danglIdentityRegister'][0])
+    public function danglIdentityRegisterAsync($registerModel, string $contentType = self::contentTypes['danglIdentityRegister'][0])
     {
-        return $this->danglIdentityRegisterAsyncWithHttpInfo($register_model, $contentType)
+        return $this->danglIdentityRegisterAsyncWithHttpInfo($registerModel, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1291,16 +1291,16 @@ class DanglIdentityApi
     /**
      * Operation danglIdentityRegisterAsyncWithHttpInfo
      *
-     * @param  \Dangl\AVACloud\Model\RegisterPost $register_model (required)
+     * @param  \Dangl\AVACloud\Model\RegisterPost $registerModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRegister'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function danglIdentityRegisterAsyncWithHttpInfo($register_model, string $contentType = self::contentTypes['danglIdentityRegister'][0])
+    public function danglIdentityRegisterAsyncWithHttpInfo($registerModel, string $contentType = self::contentTypes['danglIdentityRegister'][0])
     {
         $returnType = '';
-        $request = $this->danglIdentityRegisterRequest($register_model, $contentType);
+        $request = $this->danglIdentityRegisterRequest($registerModel, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1328,19 +1328,19 @@ class DanglIdentityApi
     /**
      * Create request for operation 'danglIdentityRegister'
      *
-     * @param  \Dangl\AVACloud\Model\RegisterPost $register_model (required)
+     * @param  \Dangl\AVACloud\Model\RegisterPost $registerModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRegister'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function danglIdentityRegisterRequest($register_model, string $contentType = self::contentTypes['danglIdentityRegister'][0])
+    public function danglIdentityRegisterRequest($registerModel, string $contentType = self::contentTypes['danglIdentityRegister'][0])
     {
 
-        // verify the required parameter 'register_model' is set
-        if ($register_model === null || (is_array($register_model) && count($register_model) === 0)) {
+        // verify the required parameter 'registerModel' is set
+        if ($registerModel === null || (is_array($registerModel) && count($registerModel) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $register_model when calling danglIdentityRegister'
+                'Missing the required parameter $registerModel when calling danglIdentityRegister'
             );
         }
 
@@ -1363,12 +1363,12 @@ class DanglIdentityApi
         );
 
         // for model (json/xml)
-        if (isset($register_model)) {
+        if (isset($registerModel)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($register_model));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($registerModel));
             } else {
-                $httpBody = $register_model;
+                $httpBody = $registerModel;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -1423,31 +1423,31 @@ class DanglIdentityApi
     /**
      * Operation danglIdentityRequestPasswordReset
      *
-     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgot_password_model forgot_password_model (required)
+     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgotPasswordModel forgotPasswordModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRequestPasswordReset'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function danglIdentityRequestPasswordReset($forgot_password_model, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
+    public function danglIdentityRequestPasswordReset($forgotPasswordModel, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
     {
-        $this->danglIdentityRequestPasswordResetWithHttpInfo($forgot_password_model, $contentType);
+        $this->danglIdentityRequestPasswordResetWithHttpInfo($forgotPasswordModel, $contentType);
     }
 
     /**
      * Operation danglIdentityRequestPasswordResetWithHttpInfo
      *
-     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgot_password_model (required)
+     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgotPasswordModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRequestPasswordReset'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function danglIdentityRequestPasswordResetWithHttpInfo($forgot_password_model, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
+    public function danglIdentityRequestPasswordResetWithHttpInfo($forgotPasswordModel, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
     {
-        $request = $this->danglIdentityRequestPasswordResetRequest($forgot_password_model, $contentType);
+        $request = $this->danglIdentityRequestPasswordResetRequest($forgotPasswordModel, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1493,15 +1493,15 @@ class DanglIdentityApi
     /**
      * Operation danglIdentityRequestPasswordResetAsync
      *
-     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgot_password_model (required)
+     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgotPasswordModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRequestPasswordReset'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function danglIdentityRequestPasswordResetAsync($forgot_password_model, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
+    public function danglIdentityRequestPasswordResetAsync($forgotPasswordModel, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
     {
-        return $this->danglIdentityRequestPasswordResetAsyncWithHttpInfo($forgot_password_model, $contentType)
+        return $this->danglIdentityRequestPasswordResetAsyncWithHttpInfo($forgotPasswordModel, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1512,16 +1512,16 @@ class DanglIdentityApi
     /**
      * Operation danglIdentityRequestPasswordResetAsyncWithHttpInfo
      *
-     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgot_password_model (required)
+     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgotPasswordModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRequestPasswordReset'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function danglIdentityRequestPasswordResetAsyncWithHttpInfo($forgot_password_model, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
+    public function danglIdentityRequestPasswordResetAsyncWithHttpInfo($forgotPasswordModel, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
     {
         $returnType = '';
-        $request = $this->danglIdentityRequestPasswordResetRequest($forgot_password_model, $contentType);
+        $request = $this->danglIdentityRequestPasswordResetRequest($forgotPasswordModel, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1549,19 +1549,19 @@ class DanglIdentityApi
     /**
      * Create request for operation 'danglIdentityRequestPasswordReset'
      *
-     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgot_password_model (required)
+     * @param  \Dangl\AVACloud\Model\ForgotPasswordPost $forgotPasswordModel (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['danglIdentityRequestPasswordReset'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function danglIdentityRequestPasswordResetRequest($forgot_password_model, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
+    public function danglIdentityRequestPasswordResetRequest($forgotPasswordModel, string $contentType = self::contentTypes['danglIdentityRequestPasswordReset'][0])
     {
 
-        // verify the required parameter 'forgot_password_model' is set
-        if ($forgot_password_model === null || (is_array($forgot_password_model) && count($forgot_password_model) === 0)) {
+        // verify the required parameter 'forgotPasswordModel' is set
+        if ($forgotPasswordModel === null || (is_array($forgotPasswordModel) && count($forgotPasswordModel) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $forgot_password_model when calling danglIdentityRequestPasswordReset'
+                'Missing the required parameter $forgotPasswordModel when calling danglIdentityRequestPasswordReset'
             );
         }
 
@@ -1584,12 +1584,12 @@ class DanglIdentityApi
         );
 
         // for model (json/xml)
-        if (isset($forgot_password_model)) {
+        if (isset($forgotPasswordModel)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($forgot_password_model));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($forgotPasswordModel));
             } else {
-                $httpBody = $forgot_password_model;
+                $httpBody = $forgotPasswordModel;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

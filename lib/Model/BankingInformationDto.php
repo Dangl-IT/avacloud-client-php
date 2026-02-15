@@ -62,9 +62,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => 'string',
         'name' => 'string',
         'iban' => 'string',
-        'account_number' => 'string',
+        'accountNumber' => 'string',
         'bic' => 'string',
-        'routing_number' => 'string'
+        'routingNumber' => 'string'
     ];
 
     /**
@@ -78,9 +78,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => 'guid',
         'name' => null,
         'iban' => null,
-        'account_number' => null,
+        'accountNumber' => null,
         'bic' => null,
-        'routing_number' => null
+        'routingNumber' => null
     ];
 
     /**
@@ -92,9 +92,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => false,
         'name' => false,
         'iban' => false,
-        'account_number' => false,
+        'accountNumber' => false,
         'bic' => false,
-        'routing_number' => false
+        'routingNumber' => false
     ];
 
     /**
@@ -186,9 +186,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => 'id',
         'name' => 'name',
         'iban' => 'iban',
-        'account_number' => 'accountNumber',
+        'accountNumber' => 'accountNumber',
         'bic' => 'bic',
-        'routing_number' => 'routingNumber'
+        'routingNumber' => 'routingNumber'
     ];
 
     /**
@@ -200,9 +200,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => 'setId',
         'name' => 'setName',
         'iban' => 'setIban',
-        'account_number' => 'setAccountNumber',
+        'accountNumber' => 'setAccountNumber',
         'bic' => 'setBic',
-        'routing_number' => 'setRoutingNumber'
+        'routingNumber' => 'setRoutingNumber'
     ];
 
     /**
@@ -214,9 +214,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         'id' => 'getId',
         'name' => 'getName',
         'iban' => 'getIban',
-        'account_number' => 'getAccountNumber',
+        'accountNumber' => 'getAccountNumber',
         'bic' => 'getBic',
-        'routing_number' => 'getRoutingNumber'
+        'routingNumber' => 'getRoutingNumber'
     ];
 
     /**
@@ -279,9 +279,9 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('iban', $data ?? [], null);
-        $this->setIfExists('account_number', $data ?? [], null);
+        $this->setIfExists('accountNumber', $data ?? [], null);
         $this->setIfExists('bic', $data ?? [], null);
-        $this->setIfExists('routing_number', $data ?? [], null);
+        $this->setIfExists('routingNumber', $data ?? [], null);
     }
 
     /**
@@ -411,28 +411,28 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets account_number
+     * Gets accountNumber
      *
      * @return string|null
      */
     public function getAccountNumber()
     {
-        return $this->container['account_number'];
+        return $this->container['accountNumber'];
     }
 
     /**
-     * Sets account_number
+     * Sets accountNumber
      *
-     * @param string|null $account_number The account number. Typically no longer used since the introduction of IBAN within the SEPA area.
+     * @param string|null $accountNumber The account number. Typically no longer used since the introduction of IBAN within the SEPA area.
      *
      * @return self
      */
-    public function setAccountNumber($account_number)
+    public function setAccountNumber($accountNumber)
     {
-        if (is_null($account_number)) {
-            throw new \InvalidArgumentException('non-nullable account_number cannot be null');
+        if (is_null($accountNumber)) {
+            throw new \InvalidArgumentException('non-nullable accountNumber cannot be null');
         }
-        $this->container['account_number'] = $account_number;
+        $this->container['accountNumber'] = $accountNumber;
 
         return $this;
     }
@@ -465,28 +465,28 @@ class BankingInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets routing_number
+     * Gets routingNumber
      *
      * @return string|null
      */
     public function getRoutingNumber()
     {
-        return $this->container['routing_number'];
+        return $this->container['routingNumber'];
     }
 
     /**
-     * Sets routing_number
+     * Sets routingNumber
      *
-     * @param string|null $routing_number The routing number for the bank. Typically no longer used since the introduction of IBAN within the SEPA area.
+     * @param string|null $routingNumber The routing number for the bank. Typically no longer used since the introduction of IBAN within the SEPA area.
      *
      * @return self
      */
-    public function setRoutingNumber($routing_number)
+    public function setRoutingNumber($routingNumber)
     {
-        if (is_null($routing_number)) {
-            throw new \InvalidArgumentException('non-nullable routing_number cannot be null');
+        if (is_null($routingNumber)) {
+            throw new \InvalidArgumentException('non-nullable routingNumber cannot be null');
         }
-        $this->container['routing_number'] = $routing_number;
+        $this->container['routingNumber'] = $routingNumber;
 
         return $this;
     }

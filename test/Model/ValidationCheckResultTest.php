@@ -90,7 +90,7 @@ class ValidationCheckResultTest extends TestCase
     }
 
     /**
-     * Test attribute "check_type"
+     * Test attribute "checkType"
      */
     public function testPropertyCheckType()
     {
@@ -108,7 +108,7 @@ class ValidationCheckResultTest extends TestCase
     }
 
     /**
-     * Test attribute "object_validation_check_details"
+     * Test attribute "objectValidationCheckDetails"
      */
     public function testPropertyObjectValidationCheckDetails()
     {
@@ -117,7 +117,7 @@ class ValidationCheckResultTest extends TestCase
     }
 
     /**
-     * Test attribute "xml_schema_validation_check_details"
+     * Test attribute "xmlSchemaValidationCheckDetails"
      */
     public function testPropertyXmlSchemaValidationCheckDetails()
     {
@@ -126,7 +126,7 @@ class ValidationCheckResultTest extends TestCase
     }
 
     /**
-     * Test attribute "project_validation_check_details"
+     * Test attribute "projectValidationCheckDetails"
      */
     public function testPropertyProjectValidationCheckDetails()
     {

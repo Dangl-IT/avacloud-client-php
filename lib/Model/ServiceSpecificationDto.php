@@ -60,56 +60,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'project_hourly_wage' => 'float',
-        'project_tax_rate' => 'float',
-        'project_price_components' => 'string[]',
-        'project_item_number_schema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
+        'projectHourlyWage' => 'float',
+        'projectTaxRate' => 'float',
+        'projectPriceComponents' => 'string[]',
+        'projectItemNumberSchema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
         'elements' => '\Dangl\AVACloud\Model\IElementDto[]',
-        'project_labour_time_label' => 'string',
-        'contains_duplicate_item_numbers' => 'bool',
-        'contains_duplicate_element_ids' => 'bool',
-        'ignore_duplicate_item_numbers' => 'bool',
-        'ignore_project_catalogue_propagation' => 'bool',
-        'ignore_duplicate_element_ids' => 'bool',
-        'total_price_gross_by_tax_rate' => '\Dangl\AVACloud\Model\GrossPriceComponentDto[]',
-        'ignore_child_price_updates' => 'bool',
-        'deducted_price' => 'float',
-        'deduction_factor' => 'float',
-        'absolute_deduction' => 'float',
-        'total_price' => 'float',
-        'total_price_gross' => 'float',
-        'total_price_gross_deducted' => 'float',
-        'price_type' => '\Dangl\AVACloud\Model\PriceTypeDto',
+        'projectLabourTimeLabel' => 'string',
+        'containsDuplicateItemNumbers' => 'bool',
+        'containsDuplicateElementIds' => 'bool',
+        'ignoreDuplicateItemNumbers' => 'bool',
+        'ignoreProjectCataloguePropagation' => 'bool',
+        'ignoreDuplicateElementIds' => 'bool',
+        'totalPriceGrossByTaxRate' => '\Dangl\AVACloud\Model\GrossPriceComponentDto[]',
+        'ignoreChildPriceUpdates' => 'bool',
+        'deductedPrice' => 'float',
+        'deductionFactor' => 'float',
+        'absoluteDeduction' => 'float',
+        'totalPrice' => 'float',
+        'totalPriceGross' => 'float',
+        'totalPriceGrossDeducted' => 'float',
+        'priceType' => '\Dangl\AVACloud\Model\PriceTypeDto',
         'bidder' => '\Dangl\AVACloud\Model\PartyInformationDto',
-        'bidder_discriminator' => 'string',
-        'gaeb_xml_id' => 'string',
-        'project_information' => '\Dangl\AVACloud\Model\ProjectInformationDto',
-        'exchange_phase' => '\Dangl\AVACloud\Model\ExchangePhaseDto',
+        'bidderDiscriminator' => 'string',
+        'gaebXmlId' => 'string',
+        'projectInformation' => '\Dangl\AVACloud\Model\ProjectInformationDto',
+        'exchangePhase' => '\Dangl\AVACloud\Model\ExchangePhaseDto',
         'origin' => '\Dangl\AVACloud\Model\OriginDto',
-        'origin_detail' => 'string',
-        'creation_date' => '\DateTime',
-        'offer_by_date' => '\DateTime',
-        'decision_date' => '\DateTime',
-        'bid_date' => '\DateTime',
-        'warranty_bond_percentage' => 'float',
-        'execution_guarantee_percentage' => 'float',
-        'submission_location' => 'string',
+        'originDetail' => 'string',
+        'creationDate' => '\DateTime',
+        'offerByDate' => '\DateTime',
+        'decisionDate' => '\DateTime',
+        'bidDate' => '\DateTime',
+        'warrantyBondPercentage' => 'float',
+        'executionGuaranteePercentage' => 'float',
+        'submissionLocation' => 'string',
         'description' => 'string',
         'name' => 'string',
-        'price_information' => '\Dangl\AVACloud\Model\PriceInformationDto',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
-        'catalogue_references' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]',
-        'planned_execution_start' => '\DateTime',
-        'planned_execution_end' => '\DateTime',
-        'contract_date' => '\DateTime',
-        'contract_identifier' => 'string',
-        'warranty_duration' => '\Dangl\AVACloud\Model\WarrantyDurationDto',
-        'warranty_end' => '\DateTime',
-        'approval_date' => '\DateTime',
-        'type_of_approval' => 'string',
-        'addendum_number' => 'string',
-        'addendum_status' => '\Dangl\AVACloud\Model\AddendumStatusDto',
-        'commerce_properties' => '\Dangl\AVACloud\Model\ServiceSpecificationCommercePropertiesDto'
+        'priceInformation' => '\Dangl\AVACloud\Model\PriceInformationDto',
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
+        'catalogueReferences' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]',
+        'plannedExecutionStart' => '\DateTime',
+        'plannedExecutionEnd' => '\DateTime',
+        'contractDate' => '\DateTime',
+        'contractIdentifier' => 'string',
+        'warrantyDuration' => '\Dangl\AVACloud\Model\WarrantyDurationDto',
+        'warrantyEnd' => '\DateTime',
+        'approvalDate' => '\DateTime',
+        'typeOfApproval' => 'string',
+        'addendumNumber' => 'string',
+        'addendumStatus' => '\Dangl\AVACloud\Model\AddendumStatusDto',
+        'commerceProperties' => '\Dangl\AVACloud\Model\ServiceSpecificationCommercePropertiesDto'
     ];
 
     /**
@@ -121,56 +121,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'project_hourly_wage' => 'decimal',
-        'project_tax_rate' => 'decimal',
-        'project_price_components' => null,
-        'project_item_number_schema' => null,
+        'projectHourlyWage' => 'decimal',
+        'projectTaxRate' => 'decimal',
+        'projectPriceComponents' => null,
+        'projectItemNumberSchema' => null,
         'elements' => null,
-        'project_labour_time_label' => null,
-        'contains_duplicate_item_numbers' => null,
-        'contains_duplicate_element_ids' => null,
-        'ignore_duplicate_item_numbers' => null,
-        'ignore_project_catalogue_propagation' => null,
-        'ignore_duplicate_element_ids' => null,
-        'total_price_gross_by_tax_rate' => null,
-        'ignore_child_price_updates' => null,
-        'deducted_price' => 'decimal',
-        'deduction_factor' => 'decimal',
-        'absolute_deduction' => 'decimal',
-        'total_price' => 'decimal',
-        'total_price_gross' => 'decimal',
-        'total_price_gross_deducted' => 'decimal',
-        'price_type' => null,
+        'projectLabourTimeLabel' => null,
+        'containsDuplicateItemNumbers' => null,
+        'containsDuplicateElementIds' => null,
+        'ignoreDuplicateItemNumbers' => null,
+        'ignoreProjectCataloguePropagation' => null,
+        'ignoreDuplicateElementIds' => null,
+        'totalPriceGrossByTaxRate' => null,
+        'ignoreChildPriceUpdates' => null,
+        'deductedPrice' => 'decimal',
+        'deductionFactor' => 'decimal',
+        'absoluteDeduction' => 'decimal',
+        'totalPrice' => 'decimal',
+        'totalPriceGross' => 'decimal',
+        'totalPriceGrossDeducted' => 'decimal',
+        'priceType' => null,
         'bidder' => null,
-        'bidder_discriminator' => null,
-        'gaeb_xml_id' => null,
-        'project_information' => null,
-        'exchange_phase' => null,
+        'bidderDiscriminator' => null,
+        'gaebXmlId' => null,
+        'projectInformation' => null,
+        'exchangePhase' => null,
         'origin' => null,
-        'origin_detail' => null,
-        'creation_date' => 'date-time',
-        'offer_by_date' => 'date-time',
-        'decision_date' => 'date-time',
-        'bid_date' => 'date-time',
-        'warranty_bond_percentage' => 'decimal',
-        'execution_guarantee_percentage' => 'decimal',
-        'submission_location' => null,
+        'originDetail' => null,
+        'creationDate' => 'date-time',
+        'offerByDate' => 'date-time',
+        'decisionDate' => 'date-time',
+        'bidDate' => 'date-time',
+        'warrantyBondPercentage' => 'decimal',
+        'executionGuaranteePercentage' => 'decimal',
+        'submissionLocation' => null,
         'description' => null,
         'name' => null,
-        'price_information' => null,
-        'project_catalogues' => null,
-        'catalogue_references' => null,
-        'planned_execution_start' => 'date-time',
-        'planned_execution_end' => 'date-time',
-        'contract_date' => 'date-time',
-        'contract_identifier' => null,
-        'warranty_duration' => null,
-        'warranty_end' => 'date-time',
-        'approval_date' => 'date-time',
-        'type_of_approval' => null,
-        'addendum_number' => null,
-        'addendum_status' => null,
-        'commerce_properties' => null
+        'priceInformation' => null,
+        'projectCatalogues' => null,
+        'catalogueReferences' => null,
+        'plannedExecutionStart' => 'date-time',
+        'plannedExecutionEnd' => 'date-time',
+        'contractDate' => 'date-time',
+        'contractIdentifier' => null,
+        'warrantyDuration' => null,
+        'warrantyEnd' => 'date-time',
+        'approvalDate' => 'date-time',
+        'typeOfApproval' => null,
+        'addendumNumber' => null,
+        'addendumStatus' => null,
+        'commerceProperties' => null
     ];
 
     /**
@@ -180,56 +180,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'project_hourly_wage' => false,
-        'project_tax_rate' => false,
-        'project_price_components' => false,
-        'project_item_number_schema' => false,
+        'projectHourlyWage' => false,
+        'projectTaxRate' => false,
+        'projectPriceComponents' => false,
+        'projectItemNumberSchema' => false,
         'elements' => false,
-        'project_labour_time_label' => false,
-        'contains_duplicate_item_numbers' => false,
-        'contains_duplicate_element_ids' => false,
-        'ignore_duplicate_item_numbers' => false,
-        'ignore_project_catalogue_propagation' => false,
-        'ignore_duplicate_element_ids' => false,
-        'total_price_gross_by_tax_rate' => false,
-        'ignore_child_price_updates' => false,
-        'deducted_price' => false,
-        'deduction_factor' => false,
-        'absolute_deduction' => false,
-        'total_price' => false,
-        'total_price_gross' => false,
-        'total_price_gross_deducted' => false,
-        'price_type' => false,
+        'projectLabourTimeLabel' => false,
+        'containsDuplicateItemNumbers' => false,
+        'containsDuplicateElementIds' => false,
+        'ignoreDuplicateItemNumbers' => false,
+        'ignoreProjectCataloguePropagation' => false,
+        'ignoreDuplicateElementIds' => false,
+        'totalPriceGrossByTaxRate' => false,
+        'ignoreChildPriceUpdates' => false,
+        'deductedPrice' => false,
+        'deductionFactor' => false,
+        'absoluteDeduction' => false,
+        'totalPrice' => false,
+        'totalPriceGross' => false,
+        'totalPriceGrossDeducted' => false,
+        'priceType' => false,
         'bidder' => false,
-        'bidder_discriminator' => false,
-        'gaeb_xml_id' => false,
-        'project_information' => false,
-        'exchange_phase' => false,
+        'bidderDiscriminator' => false,
+        'gaebXmlId' => false,
+        'projectInformation' => false,
+        'exchangePhase' => false,
         'origin' => false,
-        'origin_detail' => false,
-        'creation_date' => false,
-        'offer_by_date' => false,
-        'decision_date' => false,
-        'bid_date' => false,
-        'warranty_bond_percentage' => false,
-        'execution_guarantee_percentage' => false,
-        'submission_location' => false,
+        'originDetail' => false,
+        'creationDate' => false,
+        'offerByDate' => false,
+        'decisionDate' => false,
+        'bidDate' => false,
+        'warrantyBondPercentage' => false,
+        'executionGuaranteePercentage' => false,
+        'submissionLocation' => false,
         'description' => false,
         'name' => false,
-        'price_information' => false,
-        'project_catalogues' => false,
-        'catalogue_references' => false,
-        'planned_execution_start' => false,
-        'planned_execution_end' => false,
-        'contract_date' => false,
-        'contract_identifier' => false,
-        'warranty_duration' => false,
-        'warranty_end' => false,
-        'approval_date' => false,
-        'type_of_approval' => false,
-        'addendum_number' => false,
-        'addendum_status' => false,
-        'commerce_properties' => false
+        'priceInformation' => false,
+        'projectCatalogues' => false,
+        'catalogueReferences' => false,
+        'plannedExecutionStart' => false,
+        'plannedExecutionEnd' => false,
+        'contractDate' => false,
+        'contractIdentifier' => false,
+        'warrantyDuration' => false,
+        'warrantyEnd' => false,
+        'approvalDate' => false,
+        'typeOfApproval' => false,
+        'addendumNumber' => false,
+        'addendumStatus' => false,
+        'commerceProperties' => false
     ];
 
     /**
@@ -319,56 +319,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'project_hourly_wage' => 'projectHourlyWage',
-        'project_tax_rate' => 'projectTaxRate',
-        'project_price_components' => 'projectPriceComponents',
-        'project_item_number_schema' => 'projectItemNumberSchema',
+        'projectHourlyWage' => 'projectHourlyWage',
+        'projectTaxRate' => 'projectTaxRate',
+        'projectPriceComponents' => 'projectPriceComponents',
+        'projectItemNumberSchema' => 'projectItemNumberSchema',
         'elements' => 'elements',
-        'project_labour_time_label' => 'projectLabourTimeLabel',
-        'contains_duplicate_item_numbers' => 'containsDuplicateItemNumbers',
-        'contains_duplicate_element_ids' => 'containsDuplicateElementIds',
-        'ignore_duplicate_item_numbers' => 'ignoreDuplicateItemNumbers',
-        'ignore_project_catalogue_propagation' => 'ignoreProjectCataloguePropagation',
-        'ignore_duplicate_element_ids' => 'ignoreDuplicateElementIds',
-        'total_price_gross_by_tax_rate' => 'totalPriceGrossByTaxRate',
-        'ignore_child_price_updates' => 'ignoreChildPriceUpdates',
-        'deducted_price' => 'deductedPrice',
-        'deduction_factor' => 'deductionFactor',
-        'absolute_deduction' => 'absoluteDeduction',
-        'total_price' => 'totalPrice',
-        'total_price_gross' => 'totalPriceGross',
-        'total_price_gross_deducted' => 'totalPriceGrossDeducted',
-        'price_type' => 'priceType',
+        'projectLabourTimeLabel' => 'projectLabourTimeLabel',
+        'containsDuplicateItemNumbers' => 'containsDuplicateItemNumbers',
+        'containsDuplicateElementIds' => 'containsDuplicateElementIds',
+        'ignoreDuplicateItemNumbers' => 'ignoreDuplicateItemNumbers',
+        'ignoreProjectCataloguePropagation' => 'ignoreProjectCataloguePropagation',
+        'ignoreDuplicateElementIds' => 'ignoreDuplicateElementIds',
+        'totalPriceGrossByTaxRate' => 'totalPriceGrossByTaxRate',
+        'ignoreChildPriceUpdates' => 'ignoreChildPriceUpdates',
+        'deductedPrice' => 'deductedPrice',
+        'deductionFactor' => 'deductionFactor',
+        'absoluteDeduction' => 'absoluteDeduction',
+        'totalPrice' => 'totalPrice',
+        'totalPriceGross' => 'totalPriceGross',
+        'totalPriceGrossDeducted' => 'totalPriceGrossDeducted',
+        'priceType' => 'priceType',
         'bidder' => 'bidder',
-        'bidder_discriminator' => 'bidderDiscriminator',
-        'gaeb_xml_id' => 'gaebXmlId',
-        'project_information' => 'projectInformation',
-        'exchange_phase' => 'exchangePhase',
+        'bidderDiscriminator' => 'bidderDiscriminator',
+        'gaebXmlId' => 'gaebXmlId',
+        'projectInformation' => 'projectInformation',
+        'exchangePhase' => 'exchangePhase',
         'origin' => 'origin',
-        'origin_detail' => 'originDetail',
-        'creation_date' => 'creationDate',
-        'offer_by_date' => 'offerByDate',
-        'decision_date' => 'decisionDate',
-        'bid_date' => 'bidDate',
-        'warranty_bond_percentage' => 'warrantyBondPercentage',
-        'execution_guarantee_percentage' => 'executionGuaranteePercentage',
-        'submission_location' => 'submissionLocation',
+        'originDetail' => 'originDetail',
+        'creationDate' => 'creationDate',
+        'offerByDate' => 'offerByDate',
+        'decisionDate' => 'decisionDate',
+        'bidDate' => 'bidDate',
+        'warrantyBondPercentage' => 'warrantyBondPercentage',
+        'executionGuaranteePercentage' => 'executionGuaranteePercentage',
+        'submissionLocation' => 'submissionLocation',
         'description' => 'description',
         'name' => 'name',
-        'price_information' => 'priceInformation',
-        'project_catalogues' => 'projectCatalogues',
-        'catalogue_references' => 'catalogueReferences',
-        'planned_execution_start' => 'plannedExecutionStart',
-        'planned_execution_end' => 'plannedExecutionEnd',
-        'contract_date' => 'contractDate',
-        'contract_identifier' => 'contractIdentifier',
-        'warranty_duration' => 'warrantyDuration',
-        'warranty_end' => 'warrantyEnd',
-        'approval_date' => 'approvalDate',
-        'type_of_approval' => 'typeOfApproval',
-        'addendum_number' => 'addendumNumber',
-        'addendum_status' => 'addendumStatus',
-        'commerce_properties' => 'commerceProperties'
+        'priceInformation' => 'priceInformation',
+        'projectCatalogues' => 'projectCatalogues',
+        'catalogueReferences' => 'catalogueReferences',
+        'plannedExecutionStart' => 'plannedExecutionStart',
+        'plannedExecutionEnd' => 'plannedExecutionEnd',
+        'contractDate' => 'contractDate',
+        'contractIdentifier' => 'contractIdentifier',
+        'warrantyDuration' => 'warrantyDuration',
+        'warrantyEnd' => 'warrantyEnd',
+        'approvalDate' => 'approvalDate',
+        'typeOfApproval' => 'typeOfApproval',
+        'addendumNumber' => 'addendumNumber',
+        'addendumStatus' => 'addendumStatus',
+        'commerceProperties' => 'commerceProperties'
     ];
 
     /**
@@ -378,56 +378,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $setters = [
         'id' => 'setId',
-        'project_hourly_wage' => 'setProjectHourlyWage',
-        'project_tax_rate' => 'setProjectTaxRate',
-        'project_price_components' => 'setProjectPriceComponents',
-        'project_item_number_schema' => 'setProjectItemNumberSchema',
+        'projectHourlyWage' => 'setProjectHourlyWage',
+        'projectTaxRate' => 'setProjectTaxRate',
+        'projectPriceComponents' => 'setProjectPriceComponents',
+        'projectItemNumberSchema' => 'setProjectItemNumberSchema',
         'elements' => 'setElements',
-        'project_labour_time_label' => 'setProjectLabourTimeLabel',
-        'contains_duplicate_item_numbers' => 'setContainsDuplicateItemNumbers',
-        'contains_duplicate_element_ids' => 'setContainsDuplicateElementIds',
-        'ignore_duplicate_item_numbers' => 'setIgnoreDuplicateItemNumbers',
-        'ignore_project_catalogue_propagation' => 'setIgnoreProjectCataloguePropagation',
-        'ignore_duplicate_element_ids' => 'setIgnoreDuplicateElementIds',
-        'total_price_gross_by_tax_rate' => 'setTotalPriceGrossByTaxRate',
-        'ignore_child_price_updates' => 'setIgnoreChildPriceUpdates',
-        'deducted_price' => 'setDeductedPrice',
-        'deduction_factor' => 'setDeductionFactor',
-        'absolute_deduction' => 'setAbsoluteDeduction',
-        'total_price' => 'setTotalPrice',
-        'total_price_gross' => 'setTotalPriceGross',
-        'total_price_gross_deducted' => 'setTotalPriceGrossDeducted',
-        'price_type' => 'setPriceType',
+        'projectLabourTimeLabel' => 'setProjectLabourTimeLabel',
+        'containsDuplicateItemNumbers' => 'setContainsDuplicateItemNumbers',
+        'containsDuplicateElementIds' => 'setContainsDuplicateElementIds',
+        'ignoreDuplicateItemNumbers' => 'setIgnoreDuplicateItemNumbers',
+        'ignoreProjectCataloguePropagation' => 'setIgnoreProjectCataloguePropagation',
+        'ignoreDuplicateElementIds' => 'setIgnoreDuplicateElementIds',
+        'totalPriceGrossByTaxRate' => 'setTotalPriceGrossByTaxRate',
+        'ignoreChildPriceUpdates' => 'setIgnoreChildPriceUpdates',
+        'deductedPrice' => 'setDeductedPrice',
+        'deductionFactor' => 'setDeductionFactor',
+        'absoluteDeduction' => 'setAbsoluteDeduction',
+        'totalPrice' => 'setTotalPrice',
+        'totalPriceGross' => 'setTotalPriceGross',
+        'totalPriceGrossDeducted' => 'setTotalPriceGrossDeducted',
+        'priceType' => 'setPriceType',
         'bidder' => 'setBidder',
-        'bidder_discriminator' => 'setBidderDiscriminator',
-        'gaeb_xml_id' => 'setGaebXmlId',
-        'project_information' => 'setProjectInformation',
-        'exchange_phase' => 'setExchangePhase',
+        'bidderDiscriminator' => 'setBidderDiscriminator',
+        'gaebXmlId' => 'setGaebXmlId',
+        'projectInformation' => 'setProjectInformation',
+        'exchangePhase' => 'setExchangePhase',
         'origin' => 'setOrigin',
-        'origin_detail' => 'setOriginDetail',
-        'creation_date' => 'setCreationDate',
-        'offer_by_date' => 'setOfferByDate',
-        'decision_date' => 'setDecisionDate',
-        'bid_date' => 'setBidDate',
-        'warranty_bond_percentage' => 'setWarrantyBondPercentage',
-        'execution_guarantee_percentage' => 'setExecutionGuaranteePercentage',
-        'submission_location' => 'setSubmissionLocation',
+        'originDetail' => 'setOriginDetail',
+        'creationDate' => 'setCreationDate',
+        'offerByDate' => 'setOfferByDate',
+        'decisionDate' => 'setDecisionDate',
+        'bidDate' => 'setBidDate',
+        'warrantyBondPercentage' => 'setWarrantyBondPercentage',
+        'executionGuaranteePercentage' => 'setExecutionGuaranteePercentage',
+        'submissionLocation' => 'setSubmissionLocation',
         'description' => 'setDescription',
         'name' => 'setName',
-        'price_information' => 'setPriceInformation',
-        'project_catalogues' => 'setProjectCatalogues',
-        'catalogue_references' => 'setCatalogueReferences',
-        'planned_execution_start' => 'setPlannedExecutionStart',
-        'planned_execution_end' => 'setPlannedExecutionEnd',
-        'contract_date' => 'setContractDate',
-        'contract_identifier' => 'setContractIdentifier',
-        'warranty_duration' => 'setWarrantyDuration',
-        'warranty_end' => 'setWarrantyEnd',
-        'approval_date' => 'setApprovalDate',
-        'type_of_approval' => 'setTypeOfApproval',
-        'addendum_number' => 'setAddendumNumber',
-        'addendum_status' => 'setAddendumStatus',
-        'commerce_properties' => 'setCommerceProperties'
+        'priceInformation' => 'setPriceInformation',
+        'projectCatalogues' => 'setProjectCatalogues',
+        'catalogueReferences' => 'setCatalogueReferences',
+        'plannedExecutionStart' => 'setPlannedExecutionStart',
+        'plannedExecutionEnd' => 'setPlannedExecutionEnd',
+        'contractDate' => 'setContractDate',
+        'contractIdentifier' => 'setContractIdentifier',
+        'warrantyDuration' => 'setWarrantyDuration',
+        'warrantyEnd' => 'setWarrantyEnd',
+        'approvalDate' => 'setApprovalDate',
+        'typeOfApproval' => 'setTypeOfApproval',
+        'addendumNumber' => 'setAddendumNumber',
+        'addendumStatus' => 'setAddendumStatus',
+        'commerceProperties' => 'setCommerceProperties'
     ];
 
     /**
@@ -437,56 +437,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
      */
     protected static $getters = [
         'id' => 'getId',
-        'project_hourly_wage' => 'getProjectHourlyWage',
-        'project_tax_rate' => 'getProjectTaxRate',
-        'project_price_components' => 'getProjectPriceComponents',
-        'project_item_number_schema' => 'getProjectItemNumberSchema',
+        'projectHourlyWage' => 'getProjectHourlyWage',
+        'projectTaxRate' => 'getProjectTaxRate',
+        'projectPriceComponents' => 'getProjectPriceComponents',
+        'projectItemNumberSchema' => 'getProjectItemNumberSchema',
         'elements' => 'getElements',
-        'project_labour_time_label' => 'getProjectLabourTimeLabel',
-        'contains_duplicate_item_numbers' => 'getContainsDuplicateItemNumbers',
-        'contains_duplicate_element_ids' => 'getContainsDuplicateElementIds',
-        'ignore_duplicate_item_numbers' => 'getIgnoreDuplicateItemNumbers',
-        'ignore_project_catalogue_propagation' => 'getIgnoreProjectCataloguePropagation',
-        'ignore_duplicate_element_ids' => 'getIgnoreDuplicateElementIds',
-        'total_price_gross_by_tax_rate' => 'getTotalPriceGrossByTaxRate',
-        'ignore_child_price_updates' => 'getIgnoreChildPriceUpdates',
-        'deducted_price' => 'getDeductedPrice',
-        'deduction_factor' => 'getDeductionFactor',
-        'absolute_deduction' => 'getAbsoluteDeduction',
-        'total_price' => 'getTotalPrice',
-        'total_price_gross' => 'getTotalPriceGross',
-        'total_price_gross_deducted' => 'getTotalPriceGrossDeducted',
-        'price_type' => 'getPriceType',
+        'projectLabourTimeLabel' => 'getProjectLabourTimeLabel',
+        'containsDuplicateItemNumbers' => 'getContainsDuplicateItemNumbers',
+        'containsDuplicateElementIds' => 'getContainsDuplicateElementIds',
+        'ignoreDuplicateItemNumbers' => 'getIgnoreDuplicateItemNumbers',
+        'ignoreProjectCataloguePropagation' => 'getIgnoreProjectCataloguePropagation',
+        'ignoreDuplicateElementIds' => 'getIgnoreDuplicateElementIds',
+        'totalPriceGrossByTaxRate' => 'getTotalPriceGrossByTaxRate',
+        'ignoreChildPriceUpdates' => 'getIgnoreChildPriceUpdates',
+        'deductedPrice' => 'getDeductedPrice',
+        'deductionFactor' => 'getDeductionFactor',
+        'absoluteDeduction' => 'getAbsoluteDeduction',
+        'totalPrice' => 'getTotalPrice',
+        'totalPriceGross' => 'getTotalPriceGross',
+        'totalPriceGrossDeducted' => 'getTotalPriceGrossDeducted',
+        'priceType' => 'getPriceType',
         'bidder' => 'getBidder',
-        'bidder_discriminator' => 'getBidderDiscriminator',
-        'gaeb_xml_id' => 'getGaebXmlId',
-        'project_information' => 'getProjectInformation',
-        'exchange_phase' => 'getExchangePhase',
+        'bidderDiscriminator' => 'getBidderDiscriminator',
+        'gaebXmlId' => 'getGaebXmlId',
+        'projectInformation' => 'getProjectInformation',
+        'exchangePhase' => 'getExchangePhase',
         'origin' => 'getOrigin',
-        'origin_detail' => 'getOriginDetail',
-        'creation_date' => 'getCreationDate',
-        'offer_by_date' => 'getOfferByDate',
-        'decision_date' => 'getDecisionDate',
-        'bid_date' => 'getBidDate',
-        'warranty_bond_percentage' => 'getWarrantyBondPercentage',
-        'execution_guarantee_percentage' => 'getExecutionGuaranteePercentage',
-        'submission_location' => 'getSubmissionLocation',
+        'originDetail' => 'getOriginDetail',
+        'creationDate' => 'getCreationDate',
+        'offerByDate' => 'getOfferByDate',
+        'decisionDate' => 'getDecisionDate',
+        'bidDate' => 'getBidDate',
+        'warrantyBondPercentage' => 'getWarrantyBondPercentage',
+        'executionGuaranteePercentage' => 'getExecutionGuaranteePercentage',
+        'submissionLocation' => 'getSubmissionLocation',
         'description' => 'getDescription',
         'name' => 'getName',
-        'price_information' => 'getPriceInformation',
-        'project_catalogues' => 'getProjectCatalogues',
-        'catalogue_references' => 'getCatalogueReferences',
-        'planned_execution_start' => 'getPlannedExecutionStart',
-        'planned_execution_end' => 'getPlannedExecutionEnd',
-        'contract_date' => 'getContractDate',
-        'contract_identifier' => 'getContractIdentifier',
-        'warranty_duration' => 'getWarrantyDuration',
-        'warranty_end' => 'getWarrantyEnd',
-        'approval_date' => 'getApprovalDate',
-        'type_of_approval' => 'getTypeOfApproval',
-        'addendum_number' => 'getAddendumNumber',
-        'addendum_status' => 'getAddendumStatus',
-        'commerce_properties' => 'getCommerceProperties'
+        'priceInformation' => 'getPriceInformation',
+        'projectCatalogues' => 'getProjectCatalogues',
+        'catalogueReferences' => 'getCatalogueReferences',
+        'plannedExecutionStart' => 'getPlannedExecutionStart',
+        'plannedExecutionEnd' => 'getPlannedExecutionEnd',
+        'contractDate' => 'getContractDate',
+        'contractIdentifier' => 'getContractIdentifier',
+        'warrantyDuration' => 'getWarrantyDuration',
+        'warrantyEnd' => 'getWarrantyEnd',
+        'approvalDate' => 'getApprovalDate',
+        'typeOfApproval' => 'getTypeOfApproval',
+        'addendumNumber' => 'getAddendumNumber',
+        'addendumStatus' => 'getAddendumStatus',
+        'commerceProperties' => 'getCommerceProperties'
     ];
 
     /**
@@ -547,56 +547,56 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('project_hourly_wage', $data ?? [], null);
-        $this->setIfExists('project_tax_rate', $data ?? [], null);
-        $this->setIfExists('project_price_components', $data ?? [], null);
-        $this->setIfExists('project_item_number_schema', $data ?? [], null);
+        $this->setIfExists('projectHourlyWage', $data ?? [], null);
+        $this->setIfExists('projectTaxRate', $data ?? [], null);
+        $this->setIfExists('projectPriceComponents', $data ?? [], null);
+        $this->setIfExists('projectItemNumberSchema', $data ?? [], null);
         $this->setIfExists('elements', $data ?? [], null);
-        $this->setIfExists('project_labour_time_label', $data ?? [], null);
-        $this->setIfExists('contains_duplicate_item_numbers', $data ?? [], null);
-        $this->setIfExists('contains_duplicate_element_ids', $data ?? [], null);
-        $this->setIfExists('ignore_duplicate_item_numbers', $data ?? [], null);
-        $this->setIfExists('ignore_project_catalogue_propagation', $data ?? [], null);
-        $this->setIfExists('ignore_duplicate_element_ids', $data ?? [], null);
-        $this->setIfExists('total_price_gross_by_tax_rate', $data ?? [], null);
-        $this->setIfExists('ignore_child_price_updates', $data ?? [], null);
-        $this->setIfExists('deducted_price', $data ?? [], null);
-        $this->setIfExists('deduction_factor', $data ?? [], null);
-        $this->setIfExists('absolute_deduction', $data ?? [], null);
-        $this->setIfExists('total_price', $data ?? [], null);
-        $this->setIfExists('total_price_gross', $data ?? [], null);
-        $this->setIfExists('total_price_gross_deducted', $data ?? [], null);
-        $this->setIfExists('price_type', $data ?? [], null);
+        $this->setIfExists('projectLabourTimeLabel', $data ?? [], null);
+        $this->setIfExists('containsDuplicateItemNumbers', $data ?? [], null);
+        $this->setIfExists('containsDuplicateElementIds', $data ?? [], null);
+        $this->setIfExists('ignoreDuplicateItemNumbers', $data ?? [], null);
+        $this->setIfExists('ignoreProjectCataloguePropagation', $data ?? [], null);
+        $this->setIfExists('ignoreDuplicateElementIds', $data ?? [], null);
+        $this->setIfExists('totalPriceGrossByTaxRate', $data ?? [], null);
+        $this->setIfExists('ignoreChildPriceUpdates', $data ?? [], null);
+        $this->setIfExists('deductedPrice', $data ?? [], null);
+        $this->setIfExists('deductionFactor', $data ?? [], null);
+        $this->setIfExists('absoluteDeduction', $data ?? [], null);
+        $this->setIfExists('totalPrice', $data ?? [], null);
+        $this->setIfExists('totalPriceGross', $data ?? [], null);
+        $this->setIfExists('totalPriceGrossDeducted', $data ?? [], null);
+        $this->setIfExists('priceType', $data ?? [], null);
         $this->setIfExists('bidder', $data ?? [], null);
-        $this->setIfExists('bidder_discriminator', $data ?? [], null);
-        $this->setIfExists('gaeb_xml_id', $data ?? [], null);
-        $this->setIfExists('project_information', $data ?? [], null);
-        $this->setIfExists('exchange_phase', $data ?? [], null);
+        $this->setIfExists('bidderDiscriminator', $data ?? [], null);
+        $this->setIfExists('gaebXmlId', $data ?? [], null);
+        $this->setIfExists('projectInformation', $data ?? [], null);
+        $this->setIfExists('exchangePhase', $data ?? [], null);
         $this->setIfExists('origin', $data ?? [], null);
-        $this->setIfExists('origin_detail', $data ?? [], null);
-        $this->setIfExists('creation_date', $data ?? [], null);
-        $this->setIfExists('offer_by_date', $data ?? [], null);
-        $this->setIfExists('decision_date', $data ?? [], null);
-        $this->setIfExists('bid_date', $data ?? [], null);
-        $this->setIfExists('warranty_bond_percentage', $data ?? [], null);
-        $this->setIfExists('execution_guarantee_percentage', $data ?? [], null);
-        $this->setIfExists('submission_location', $data ?? [], null);
+        $this->setIfExists('originDetail', $data ?? [], null);
+        $this->setIfExists('creationDate', $data ?? [], null);
+        $this->setIfExists('offerByDate', $data ?? [], null);
+        $this->setIfExists('decisionDate', $data ?? [], null);
+        $this->setIfExists('bidDate', $data ?? [], null);
+        $this->setIfExists('warrantyBondPercentage', $data ?? [], null);
+        $this->setIfExists('executionGuaranteePercentage', $data ?? [], null);
+        $this->setIfExists('submissionLocation', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('price_information', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
-        $this->setIfExists('catalogue_references', $data ?? [], null);
-        $this->setIfExists('planned_execution_start', $data ?? [], null);
-        $this->setIfExists('planned_execution_end', $data ?? [], null);
-        $this->setIfExists('contract_date', $data ?? [], null);
-        $this->setIfExists('contract_identifier', $data ?? [], null);
-        $this->setIfExists('warranty_duration', $data ?? [], null);
-        $this->setIfExists('warranty_end', $data ?? [], null);
-        $this->setIfExists('approval_date', $data ?? [], null);
-        $this->setIfExists('type_of_approval', $data ?? [], null);
-        $this->setIfExists('addendum_number', $data ?? [], null);
-        $this->setIfExists('addendum_status', $data ?? [], null);
-        $this->setIfExists('commerce_properties', $data ?? [], null);
+        $this->setIfExists('priceInformation', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
+        $this->setIfExists('catalogueReferences', $data ?? [], null);
+        $this->setIfExists('plannedExecutionStart', $data ?? [], null);
+        $this->setIfExists('plannedExecutionEnd', $data ?? [], null);
+        $this->setIfExists('contractDate', $data ?? [], null);
+        $this->setIfExists('contractIdentifier', $data ?? [], null);
+        $this->setIfExists('warrantyDuration', $data ?? [], null);
+        $this->setIfExists('warrantyEnd', $data ?? [], null);
+        $this->setIfExists('approvalDate', $data ?? [], null);
+        $this->setIfExists('typeOfApproval', $data ?? [], null);
+        $this->setIfExists('addendumNumber', $data ?? [], null);
+        $this->setIfExists('addendumStatus', $data ?? [], null);
+        $this->setIfExists('commerceProperties', $data ?? [], null);
     }
 
     /**
@@ -629,59 +629,59 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['project_hourly_wage'] === null) {
-            $invalidProperties[] = "'project_hourly_wage' can't be null";
+        if ($this->container['projectHourlyWage'] === null) {
+            $invalidProperties[] = "'projectHourlyWage' can't be null";
         }
-        if ($this->container['project_tax_rate'] === null) {
-            $invalidProperties[] = "'project_tax_rate' can't be null";
+        if ($this->container['projectTaxRate'] === null) {
+            $invalidProperties[] = "'projectTaxRate' can't be null";
         }
-        if ($this->container['contains_duplicate_item_numbers'] === null) {
-            $invalidProperties[] = "'contains_duplicate_item_numbers' can't be null";
+        if ($this->container['containsDuplicateItemNumbers'] === null) {
+            $invalidProperties[] = "'containsDuplicateItemNumbers' can't be null";
         }
-        if ($this->container['contains_duplicate_element_ids'] === null) {
-            $invalidProperties[] = "'contains_duplicate_element_ids' can't be null";
+        if ($this->container['containsDuplicateElementIds'] === null) {
+            $invalidProperties[] = "'containsDuplicateElementIds' can't be null";
         }
-        if ($this->container['ignore_duplicate_item_numbers'] === null) {
-            $invalidProperties[] = "'ignore_duplicate_item_numbers' can't be null";
+        if ($this->container['ignoreDuplicateItemNumbers'] === null) {
+            $invalidProperties[] = "'ignoreDuplicateItemNumbers' can't be null";
         }
-        if ($this->container['ignore_project_catalogue_propagation'] === null) {
-            $invalidProperties[] = "'ignore_project_catalogue_propagation' can't be null";
+        if ($this->container['ignoreProjectCataloguePropagation'] === null) {
+            $invalidProperties[] = "'ignoreProjectCataloguePropagation' can't be null";
         }
-        if ($this->container['ignore_duplicate_element_ids'] === null) {
-            $invalidProperties[] = "'ignore_duplicate_element_ids' can't be null";
+        if ($this->container['ignoreDuplicateElementIds'] === null) {
+            $invalidProperties[] = "'ignoreDuplicateElementIds' can't be null";
         }
-        if ($this->container['ignore_child_price_updates'] === null) {
-            $invalidProperties[] = "'ignore_child_price_updates' can't be null";
+        if ($this->container['ignoreChildPriceUpdates'] === null) {
+            $invalidProperties[] = "'ignoreChildPriceUpdates' can't be null";
         }
-        if ($this->container['deducted_price'] === null) {
-            $invalidProperties[] = "'deducted_price' can't be null";
+        if ($this->container['deductedPrice'] === null) {
+            $invalidProperties[] = "'deductedPrice' can't be null";
         }
-        if ($this->container['deduction_factor'] === null) {
-            $invalidProperties[] = "'deduction_factor' can't be null";
+        if ($this->container['deductionFactor'] === null) {
+            $invalidProperties[] = "'deductionFactor' can't be null";
         }
-        if ($this->container['total_price'] === null) {
-            $invalidProperties[] = "'total_price' can't be null";
+        if ($this->container['totalPrice'] === null) {
+            $invalidProperties[] = "'totalPrice' can't be null";
         }
-        if ($this->container['total_price_gross'] === null) {
-            $invalidProperties[] = "'total_price_gross' can't be null";
+        if ($this->container['totalPriceGross'] === null) {
+            $invalidProperties[] = "'totalPriceGross' can't be null";
         }
-        if ($this->container['total_price_gross_deducted'] === null) {
-            $invalidProperties[] = "'total_price_gross_deducted' can't be null";
+        if ($this->container['totalPriceGrossDeducted'] === null) {
+            $invalidProperties[] = "'totalPriceGrossDeducted' can't be null";
         }
-        if ($this->container['price_type'] === null) {
-            $invalidProperties[] = "'price_type' can't be null";
+        if ($this->container['priceType'] === null) {
+            $invalidProperties[] = "'priceType' can't be null";
         }
-        if ($this->container['exchange_phase'] === null) {
-            $invalidProperties[] = "'exchange_phase' can't be null";
+        if ($this->container['exchangePhase'] === null) {
+            $invalidProperties[] = "'exchangePhase' can't be null";
         }
         if ($this->container['origin'] === null) {
             $invalidProperties[] = "'origin' can't be null";
         }
-        if ($this->container['warranty_bond_percentage'] === null) {
-            $invalidProperties[] = "'warranty_bond_percentage' can't be null";
+        if ($this->container['warrantyBondPercentage'] === null) {
+            $invalidProperties[] = "'warrantyBondPercentage' can't be null";
         }
-        if ($this->container['execution_guarantee_percentage'] === null) {
-            $invalidProperties[] = "'execution_guarantee_percentage' can't be null";
+        if ($this->container['executionGuaranteePercentage'] === null) {
+            $invalidProperties[] = "'executionGuaranteePercentage' can't be null";
         }
         return $invalidProperties;
     }
@@ -726,109 +726,109 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets project_hourly_wage
+     * Gets projectHourlyWage
      *
      * @return float
      */
     public function getProjectHourlyWage()
     {
-        return $this->container['project_hourly_wage'];
+        return $this->container['projectHourlyWage'];
     }
 
     /**
-     * Sets project_hourly_wage
+     * Sets projectHourlyWage
      *
-     * @param float $project_hourly_wage The hourly wage that is used within this ElementContainerBase. Will be propagated to child elements.
+     * @param float $projectHourlyWage The hourly wage that is used within this ElementContainerBase. Will be propagated to child elements.
      *
      * @return self
      */
-    public function setProjectHourlyWage($project_hourly_wage)
+    public function setProjectHourlyWage($projectHourlyWage)
     {
-        if (is_null($project_hourly_wage)) {
-            throw new \InvalidArgumentException('non-nullable project_hourly_wage cannot be null');
+        if (is_null($projectHourlyWage)) {
+            throw new \InvalidArgumentException('non-nullable projectHourlyWage cannot be null');
         }
-        $this->container['project_hourly_wage'] = $project_hourly_wage;
+        $this->container['projectHourlyWage'] = $projectHourlyWage;
 
         return $this;
     }
 
     /**
-     * Gets project_tax_rate
+     * Gets projectTaxRate
      *
      * @return float
      */
     public function getProjectTaxRate()
     {
-        return $this->container['project_tax_rate'];
+        return $this->container['projectTaxRate'];
     }
 
     /**
-     * Sets project_tax_rate
+     * Sets projectTaxRate
      *
-     * @param float $project_tax_rate The tax rate that is used within this ElementContainerBase. Will be propagated to child elements.
+     * @param float $projectTaxRate The tax rate that is used within this ElementContainerBase. Will be propagated to child elements.
      *
      * @return self
      */
-    public function setProjectTaxRate($project_tax_rate)
+    public function setProjectTaxRate($projectTaxRate)
     {
-        if (is_null($project_tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable project_tax_rate cannot be null');
+        if (is_null($projectTaxRate)) {
+            throw new \InvalidArgumentException('non-nullable projectTaxRate cannot be null');
         }
-        $this->container['project_tax_rate'] = $project_tax_rate;
+        $this->container['projectTaxRate'] = $projectTaxRate;
 
         return $this;
     }
 
     /**
-     * Gets project_price_components
+     * Gets projectPriceComponents
      *
      * @return string[]|null
      */
     public function getProjectPriceComponents()
     {
-        return $this->container['project_price_components'];
+        return $this->container['projectPriceComponents'];
     }
 
     /**
-     * Sets project_price_components
+     * Sets projectPriceComponents
      *
-     * @param string[]|null $project_price_components The price components that are used within this project. They are ignored during Json deserialization because they will be set from the parent project.
+     * @param string[]|null $projectPriceComponents The price components that are used within this project. They are ignored during Json deserialization because they will be set from the parent project.
      *
      * @return self
      */
-    public function setProjectPriceComponents($project_price_components)
+    public function setProjectPriceComponents($projectPriceComponents)
     {
-        if (is_null($project_price_components)) {
-            throw new \InvalidArgumentException('non-nullable project_price_components cannot be null');
+        if (is_null($projectPriceComponents)) {
+            throw new \InvalidArgumentException('non-nullable projectPriceComponents cannot be null');
         }
-        $this->container['project_price_components'] = $project_price_components;
+        $this->container['projectPriceComponents'] = $projectPriceComponents;
 
         return $this;
     }
 
     /**
-     * Gets project_item_number_schema
+     * Gets projectItemNumberSchema
      *
      * @return \Dangl\AVACloud\Model\ItemNumberSchemaDto|null
      */
     public function getProjectItemNumberSchema()
     {
-        return $this->container['project_item_number_schema'];
+        return $this->container['projectItemNumberSchema'];
     }
 
     /**
-     * Sets project_item_number_schema
+     * Sets projectItemNumberSchema
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $project_item_number_schema project_item_number_schema
+     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $projectItemNumberSchema projectItemNumberSchema
      *
      * @return self
      */
-    public function setProjectItemNumberSchema($project_item_number_schema)
+    public function setProjectItemNumberSchema($projectItemNumberSchema)
     {
-        if (is_null($project_item_number_schema)) {
-            throw new \InvalidArgumentException('non-nullable project_item_number_schema cannot be null');
+        if (is_null($projectItemNumberSchema)) {
+            throw new \InvalidArgumentException('non-nullable projectItemNumberSchema cannot be null');
         }
-        $this->container['project_item_number_schema'] = $project_item_number_schema;
+        $this->container['projectItemNumberSchema'] = $projectItemNumberSchema;
 
         return $this;
     }
@@ -861,406 +861,406 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets project_labour_time_label
+     * Gets projectLabourTimeLabel
      *
      * @return string|null
      */
     public function getProjectLabourTimeLabel()
     {
-        return $this->container['project_labour_time_label'];
+        return $this->container['projectLabourTimeLabel'];
     }
 
     /**
-     * Sets project_labour_time_label
+     * Sets projectLabourTimeLabel
      *
-     * @param string|null $project_labour_time_label The label used in the parent Project to mark labour time, e.g. \"Hours\" or \"Stunden\".
+     * @param string|null $projectLabourTimeLabel The label used in the parent Project to mark labour time, e.g. \"Hours\" or \"Stunden\".
      *
      * @return self
      */
-    public function setProjectLabourTimeLabel($project_labour_time_label)
+    public function setProjectLabourTimeLabel($projectLabourTimeLabel)
     {
-        if (is_null($project_labour_time_label)) {
-            throw new \InvalidArgumentException('non-nullable project_labour_time_label cannot be null');
+        if (is_null($projectLabourTimeLabel)) {
+            throw new \InvalidArgumentException('non-nullable projectLabourTimeLabel cannot be null');
         }
-        $this->container['project_labour_time_label'] = $project_labour_time_label;
+        $this->container['projectLabourTimeLabel'] = $projectLabourTimeLabel;
 
         return $this;
     }
 
     /**
-     * Gets contains_duplicate_item_numbers
+     * Gets containsDuplicateItemNumbers
      *
      * @return bool
      */
     public function getContainsDuplicateItemNumbers()
     {
-        return $this->container['contains_duplicate_item_numbers'];
+        return $this->container['containsDuplicateItemNumbers'];
     }
 
     /**
-     * Sets contains_duplicate_item_numbers
+     * Sets containsDuplicateItemNumbers
      *
-     * @param bool $contains_duplicate_item_numbers Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers.
+     * @param bool $containsDuplicateItemNumbers Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers.
      *
      * @return self
      */
-    public function setContainsDuplicateItemNumbers($contains_duplicate_item_numbers)
+    public function setContainsDuplicateItemNumbers($containsDuplicateItemNumbers)
     {
-        if (is_null($contains_duplicate_item_numbers)) {
-            throw new \InvalidArgumentException('non-nullable contains_duplicate_item_numbers cannot be null');
+        if (is_null($containsDuplicateItemNumbers)) {
+            throw new \InvalidArgumentException('non-nullable containsDuplicateItemNumbers cannot be null');
         }
-        $this->container['contains_duplicate_item_numbers'] = $contains_duplicate_item_numbers;
+        $this->container['containsDuplicateItemNumbers'] = $containsDuplicateItemNumbers;
 
         return $this;
     }
 
     /**
-     * Gets contains_duplicate_element_ids
+     * Gets containsDuplicateElementIds
      *
      * @return bool
      */
     public function getContainsDuplicateElementIds()
     {
-        return $this->container['contains_duplicate_element_ids'];
+        return $this->container['containsDuplicateElementIds'];
     }
 
     /**
-     * Sets contains_duplicate_element_ids
+     * Sets containsDuplicateElementIds
      *
-     * @param bool $contains_duplicate_element_ids Indicates if there are child IElements that have conflicting, duplicated Ids or if any child ElementContainerBase elements themselves contain duplicate Id s. Will always indicate false when told to ignore duplicate item numbers.
+     * @param bool $containsDuplicateElementIds Indicates if there are child IElements that have conflicting, duplicated Ids or if any child ElementContainerBase elements themselves contain duplicate Id s. Will always indicate false when told to ignore duplicate item numbers.
      *
      * @return self
      */
-    public function setContainsDuplicateElementIds($contains_duplicate_element_ids)
+    public function setContainsDuplicateElementIds($containsDuplicateElementIds)
     {
-        if (is_null($contains_duplicate_element_ids)) {
-            throw new \InvalidArgumentException('non-nullable contains_duplicate_element_ids cannot be null');
+        if (is_null($containsDuplicateElementIds)) {
+            throw new \InvalidArgumentException('non-nullable containsDuplicateElementIds cannot be null');
         }
-        $this->container['contains_duplicate_element_ids'] = $contains_duplicate_element_ids;
+        $this->container['containsDuplicateElementIds'] = $containsDuplicateElementIds;
 
         return $this;
     }
 
     /**
-     * Gets ignore_duplicate_item_numbers
+     * Gets ignoreDuplicateItemNumbers
      *
      * @return bool
      */
     public function getIgnoreDuplicateItemNumbers()
     {
-        return $this->container['ignore_duplicate_item_numbers'];
+        return $this->container['ignoreDuplicateItemNumbers'];
     }
 
     /**
-     * Sets ignore_duplicate_item_numbers
+     * Sets ignoreDuplicateItemNumbers
      *
-     * @param bool $ignore_duplicate_item_numbers Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes.
+     * @param bool $ignoreDuplicateItemNumbers Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes.
      *
      * @return self
      */
-    public function setIgnoreDuplicateItemNumbers($ignore_duplicate_item_numbers)
+    public function setIgnoreDuplicateItemNumbers($ignoreDuplicateItemNumbers)
     {
-        if (is_null($ignore_duplicate_item_numbers)) {
-            throw new \InvalidArgumentException('non-nullable ignore_duplicate_item_numbers cannot be null');
+        if (is_null($ignoreDuplicateItemNumbers)) {
+            throw new \InvalidArgumentException('non-nullable ignoreDuplicateItemNumbers cannot be null');
         }
-        $this->container['ignore_duplicate_item_numbers'] = $ignore_duplicate_item_numbers;
+        $this->container['ignoreDuplicateItemNumbers'] = $ignoreDuplicateItemNumbers;
 
         return $this;
     }
 
     /**
-     * Gets ignore_project_catalogue_propagation
+     * Gets ignoreProjectCataloguePropagation
      *
      * @return bool
      */
     public function getIgnoreProjectCataloguePropagation()
     {
-        return $this->container['ignore_project_catalogue_propagation'];
+        return $this->container['ignoreProjectCataloguePropagation'];
     }
 
     /**
-     * Sets ignore_project_catalogue_propagation
+     * Sets ignoreProjectCataloguePropagation
      *
-     * @param bool $ignore_project_catalogue_propagation If this is set to true, the ProjectCatalogues property will not be propagated to child elements. This is useful in mapping scenarios, where you want to disable propagation for multiple changes, and only enable it once you have mapped all properties
+     * @param bool $ignoreProjectCataloguePropagation If this is set to true, the ProjectCatalogues property will not be propagated to child elements. This is useful in mapping scenarios, where you want to disable propagation for multiple changes, and only enable it once you have mapped all properties
      *
      * @return self
      */
-    public function setIgnoreProjectCataloguePropagation($ignore_project_catalogue_propagation)
+    public function setIgnoreProjectCataloguePropagation($ignoreProjectCataloguePropagation)
     {
-        if (is_null($ignore_project_catalogue_propagation)) {
-            throw new \InvalidArgumentException('non-nullable ignore_project_catalogue_propagation cannot be null');
+        if (is_null($ignoreProjectCataloguePropagation)) {
+            throw new \InvalidArgumentException('non-nullable ignoreProjectCataloguePropagation cannot be null');
         }
-        $this->container['ignore_project_catalogue_propagation'] = $ignore_project_catalogue_propagation;
+        $this->container['ignoreProjectCataloguePropagation'] = $ignoreProjectCataloguePropagation;
 
         return $this;
     }
 
     /**
-     * Gets ignore_duplicate_element_ids
+     * Gets ignoreDuplicateElementIds
      *
      * @return bool
      */
     public function getIgnoreDuplicateElementIds()
     {
-        return $this->container['ignore_duplicate_element_ids'];
+        return $this->container['ignoreDuplicateElementIds'];
     }
 
     /**
-     * Sets ignore_duplicate_element_ids
+     * Sets ignoreDuplicateElementIds
      *
-     * @param bool $ignore_duplicate_element_ids Indicate if duplicated Ids within child elements are to be ignored. Will not perform checks for duplicates if yes.
+     * @param bool $ignoreDuplicateElementIds Indicate if duplicated Ids within child elements are to be ignored. Will not perform checks for duplicates if yes.
      *
      * @return self
      */
-    public function setIgnoreDuplicateElementIds($ignore_duplicate_element_ids)
+    public function setIgnoreDuplicateElementIds($ignoreDuplicateElementIds)
     {
-        if (is_null($ignore_duplicate_element_ids)) {
-            throw new \InvalidArgumentException('non-nullable ignore_duplicate_element_ids cannot be null');
+        if (is_null($ignoreDuplicateElementIds)) {
+            throw new \InvalidArgumentException('non-nullable ignoreDuplicateElementIds cannot be null');
         }
-        $this->container['ignore_duplicate_element_ids'] = $ignore_duplicate_element_ids;
+        $this->container['ignoreDuplicateElementIds'] = $ignoreDuplicateElementIds;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross_by_tax_rate
+     * Gets totalPriceGrossByTaxRate
      *
      * @return \Dangl\AVACloud\Model\GrossPriceComponentDto[]|null
      */
     public function getTotalPriceGrossByTaxRate()
     {
-        return $this->container['total_price_gross_by_tax_rate'];
+        return $this->container['totalPriceGrossByTaxRate'];
     }
 
     /**
-     * Sets total_price_gross_by_tax_rate
+     * Sets totalPriceGrossByTaxRate
      *
-     * @param \Dangl\AVACloud\Model\GrossPriceComponentDto[]|null $total_price_gross_by_tax_rate Price composition by tax rate.
+     * @param \Dangl\AVACloud\Model\GrossPriceComponentDto[]|null $totalPriceGrossByTaxRate Price composition by tax rate.
      *
      * @return self
      */
-    public function setTotalPriceGrossByTaxRate($total_price_gross_by_tax_rate)
+    public function setTotalPriceGrossByTaxRate($totalPriceGrossByTaxRate)
     {
-        if (is_null($total_price_gross_by_tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross_by_tax_rate cannot be null');
+        if (is_null($totalPriceGrossByTaxRate)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGrossByTaxRate cannot be null');
         }
-        $this->container['total_price_gross_by_tax_rate'] = $total_price_gross_by_tax_rate;
+        $this->container['totalPriceGrossByTaxRate'] = $totalPriceGrossByTaxRate;
 
         return $this;
     }
 
     /**
-     * Gets ignore_child_price_updates
+     * Gets ignoreChildPriceUpdates
      *
      * @return bool
      */
     public function getIgnoreChildPriceUpdates()
     {
-        return $this->container['ignore_child_price_updates'];
+        return $this->container['ignoreChildPriceUpdates'];
     }
 
     /**
-     * Sets ignore_child_price_updates
+     * Sets ignoreChildPriceUpdates
      *
-     * @param bool $ignore_child_price_updates Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once.
+     * @param bool $ignoreChildPriceUpdates Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once.
      *
      * @return self
      */
-    public function setIgnoreChildPriceUpdates($ignore_child_price_updates)
+    public function setIgnoreChildPriceUpdates($ignoreChildPriceUpdates)
     {
-        if (is_null($ignore_child_price_updates)) {
-            throw new \InvalidArgumentException('non-nullable ignore_child_price_updates cannot be null');
+        if (is_null($ignoreChildPriceUpdates)) {
+            throw new \InvalidArgumentException('non-nullable ignoreChildPriceUpdates cannot be null');
         }
-        $this->container['ignore_child_price_updates'] = $ignore_child_price_updates;
+        $this->container['ignoreChildPriceUpdates'] = $ignoreChildPriceUpdates;
 
         return $this;
     }
 
     /**
-     * Gets deducted_price
+     * Gets deductedPrice
      *
      * @return float
      */
     public function getDeductedPrice()
     {
-        return $this->container['deducted_price'];
+        return $this->container['deductedPrice'];
     }
 
     /**
-     * Sets deducted_price
+     * Sets deductedPrice
      *
-     * @param float $deducted_price Net price after applied deductions.
+     * @param float $deductedPrice Net price after applied deductions.
      *
      * @return self
      */
-    public function setDeductedPrice($deducted_price)
+    public function setDeductedPrice($deductedPrice)
     {
-        if (is_null($deducted_price)) {
-            throw new \InvalidArgumentException('non-nullable deducted_price cannot be null');
+        if (is_null($deductedPrice)) {
+            throw new \InvalidArgumentException('non-nullable deductedPrice cannot be null');
         }
-        $this->container['deducted_price'] = $deducted_price;
+        $this->container['deductedPrice'] = $deductedPrice;
 
         return $this;
     }
 
     /**
-     * Gets deduction_factor
+     * Gets deductionFactor
      *
      * @return float
      */
     public function getDeductionFactor()
     {
-        return $this->container['deduction_factor'];
+        return $this->container['deductionFactor'];
     }
 
     /**
-     * Sets deduction_factor
+     * Sets deductionFactor
      *
-     * @param float $deduction_factor Factor of applied deductions to the total price. For example, \"0.03\" means that a 3% deduction is to be applied.
+     * @param float $deductionFactor Factor of applied deductions to the total price. For example, \"0.03\" means that a 3% deduction is to be applied.
      *
      * @return self
      */
-    public function setDeductionFactor($deduction_factor)
+    public function setDeductionFactor($deductionFactor)
     {
-        if (is_null($deduction_factor)) {
-            throw new \InvalidArgumentException('non-nullable deduction_factor cannot be null');
+        if (is_null($deductionFactor)) {
+            throw new \InvalidArgumentException('non-nullable deductionFactor cannot be null');
         }
-        $this->container['deduction_factor'] = $deduction_factor;
+        $this->container['deductionFactor'] = $deductionFactor;
 
         return $this;
     }
 
     /**
-     * Gets absolute_deduction
+     * Gets absoluteDeduction
      *
      * @return float|null
      */
     public function getAbsoluteDeduction()
     {
-        return $this->container['absolute_deduction'];
+        return $this->container['absoluteDeduction'];
     }
 
     /**
-     * Sets absolute_deduction
+     * Sets absoluteDeduction
      *
-     * @param float|null $absolute_deduction The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum.
+     * @param float|null $absoluteDeduction The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum.
      *
      * @return self
      */
-    public function setAbsoluteDeduction($absolute_deduction)
+    public function setAbsoluteDeduction($absoluteDeduction)
     {
-        if (is_null($absolute_deduction)) {
-            throw new \InvalidArgumentException('non-nullable absolute_deduction cannot be null');
+        if (is_null($absoluteDeduction)) {
+            throw new \InvalidArgumentException('non-nullable absoluteDeduction cannot be null');
         }
-        $this->container['absolute_deduction'] = $absolute_deduction;
+        $this->container['absoluteDeduction'] = $absoluteDeduction;
 
         return $this;
     }
 
     /**
-     * Gets total_price
+     * Gets totalPrice
      *
      * @return float
      */
     public function getTotalPrice()
     {
-        return $this->container['total_price'];
+        return $this->container['totalPrice'];
     }
 
     /**
-     * Sets total_price
+     * Sets totalPrice
      *
-     * @param float $total_price Will return this ElementContainerBase's total price.
+     * @param float $totalPrice Will return this ElementContainerBase's total price.
      *
      * @return self
      */
-    public function setTotalPrice($total_price)
+    public function setTotalPrice($totalPrice)
     {
-        if (is_null($total_price)) {
-            throw new \InvalidArgumentException('non-nullable total_price cannot be null');
+        if (is_null($totalPrice)) {
+            throw new \InvalidArgumentException('non-nullable totalPrice cannot be null');
         }
-        $this->container['total_price'] = $total_price;
+        $this->container['totalPrice'] = $totalPrice;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross
+     * Gets totalPriceGross
      *
      * @return float
      */
     public function getTotalPriceGross()
     {
-        return $this->container['total_price_gross'];
+        return $this->container['totalPriceGross'];
     }
 
     /**
-     * Sets total_price_gross
+     * Sets totalPriceGross
      *
-     * @param float $total_price_gross The total gross price for this ElementContainerBase including all child elements.
+     * @param float $totalPriceGross The total gross price for this ElementContainerBase including all child elements.
      *
      * @return self
      */
-    public function setTotalPriceGross($total_price_gross)
+    public function setTotalPriceGross($totalPriceGross)
     {
-        if (is_null($total_price_gross)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross cannot be null');
+        if (is_null($totalPriceGross)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGross cannot be null');
         }
-        $this->container['total_price_gross'] = $total_price_gross;
+        $this->container['totalPriceGross'] = $totalPriceGross;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross_deducted
+     * Gets totalPriceGrossDeducted
      *
      * @return float
      */
     public function getTotalPriceGrossDeducted()
     {
-        return $this->container['total_price_gross_deducted'];
+        return $this->container['totalPriceGrossDeducted'];
     }
 
     /**
-     * Sets total_price_gross_deducted
+     * Sets totalPriceGrossDeducted
      *
-     * @param float $total_price_gross_deducted Total gross price after applied deductions.
+     * @param float $totalPriceGrossDeducted Total gross price after applied deductions.
      *
      * @return self
      */
-    public function setTotalPriceGrossDeducted($total_price_gross_deducted)
+    public function setTotalPriceGrossDeducted($totalPriceGrossDeducted)
     {
-        if (is_null($total_price_gross_deducted)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross_deducted cannot be null');
+        if (is_null($totalPriceGrossDeducted)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGrossDeducted cannot be null');
         }
-        $this->container['total_price_gross_deducted'] = $total_price_gross_deducted;
+        $this->container['totalPriceGrossDeducted'] = $totalPriceGrossDeducted;
 
         return $this;
     }
 
     /**
-     * Gets price_type
+     * Gets priceType
      *
      * @return \Dangl\AVACloud\Model\PriceTypeDto
      */
     public function getPriceType()
     {
-        return $this->container['price_type'];
+        return $this->container['priceType'];
     }
 
     /**
-     * Sets price_type
+     * Sets priceType
      *
-     * @param \Dangl\AVACloud\Model\PriceTypeDto $price_type price_type
+     * @param \Dangl\AVACloud\Model\PriceTypeDto $priceType priceType
      *
      * @return self
      */
-    public function setPriceType($price_type)
+    public function setPriceType($priceType)
     {
-        if (is_null($price_type)) {
-            throw new \InvalidArgumentException('non-nullable price_type cannot be null');
+        if (is_null($priceType)) {
+            throw new \InvalidArgumentException('non-nullable priceType cannot be null');
         }
-        $this->container['price_type'] = $price_type;
+        $this->container['priceType'] = $priceType;
 
         return $this;
     }
@@ -1293,109 +1293,109 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets bidder_discriminator
+     * Gets bidderDiscriminator
      *
      * @return string|null
      */
     public function getBidderDiscriminator()
     {
-        return $this->container['bidder_discriminator'];
+        return $this->container['bidderDiscriminator'];
     }
 
     /**
-     * Sets bidder_discriminator
+     * Sets bidderDiscriminator
      *
-     * @param string|null $bidder_discriminator This discriminator is used to identify different bidders in a project. It is different from the Identifier property in the Bidder in that the BidderDiscriminator is intended to be a numerical identifier within a project, while the Identifier does uniquely identify a bidder in the system independent of a specific project. This property should map to \"Bieternummer\" or \"BidderNo\" in GAEB.
+     * @param string|null $bidderDiscriminator This discriminator is used to identify different bidders in a project. It is different from the Identifier property in the Bidder in that the BidderDiscriminator is intended to be a numerical identifier within a project, while the Identifier does uniquely identify a bidder in the system independent of a specific project. This property should map to \"Bieternummer\" or \"BidderNo\" in GAEB.
      *
      * @return self
      */
-    public function setBidderDiscriminator($bidder_discriminator)
+    public function setBidderDiscriminator($bidderDiscriminator)
     {
-        if (is_null($bidder_discriminator)) {
-            throw new \InvalidArgumentException('non-nullable bidder_discriminator cannot be null');
+        if (is_null($bidderDiscriminator)) {
+            throw new \InvalidArgumentException('non-nullable bidderDiscriminator cannot be null');
         }
-        $this->container['bidder_discriminator'] = $bidder_discriminator;
+        $this->container['bidderDiscriminator'] = $bidderDiscriminator;
 
         return $this;
     }
 
     /**
-     * Gets gaeb_xml_id
+     * Gets gaebXmlId
      *
      * @return string|null
      */
     public function getGaebXmlId()
     {
-        return $this->container['gaeb_xml_id'];
+        return $this->container['gaebXmlId'];
     }
 
     /**
-     * Sets gaeb_xml_id
+     * Sets gaebXmlId
      *
-     * @param string|null $gaeb_xml_id This is used to store the GAEB XML Id within this ServiceSpecification. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
+     * @param string|null $gaebXmlId This is used to store the GAEB XML Id within this ServiceSpecification. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
      *
      * @return self
      */
-    public function setGaebXmlId($gaeb_xml_id)
+    public function setGaebXmlId($gaebXmlId)
     {
-        if (is_null($gaeb_xml_id)) {
-            throw new \InvalidArgumentException('non-nullable gaeb_xml_id cannot be null');
+        if (is_null($gaebXmlId)) {
+            throw new \InvalidArgumentException('non-nullable gaebXmlId cannot be null');
         }
-        $this->container['gaeb_xml_id'] = $gaeb_xml_id;
+        $this->container['gaebXmlId'] = $gaebXmlId;
 
         return $this;
     }
 
     /**
-     * Gets project_information
+     * Gets projectInformation
      *
      * @return \Dangl\AVACloud\Model\ProjectInformationDto|null
      */
     public function getProjectInformation()
     {
-        return $this->container['project_information'];
+        return $this->container['projectInformation'];
     }
 
     /**
-     * Sets project_information
+     * Sets projectInformation
      *
-     * @param \Dangl\AVACloud\Model\ProjectInformationDto|null $project_information project_information
+     * @param \Dangl\AVACloud\Model\ProjectInformationDto|null $projectInformation projectInformation
      *
      * @return self
      */
-    public function setProjectInformation($project_information)
+    public function setProjectInformation($projectInformation)
     {
-        if (is_null($project_information)) {
-            throw new \InvalidArgumentException('non-nullable project_information cannot be null');
+        if (is_null($projectInformation)) {
+            throw new \InvalidArgumentException('non-nullable projectInformation cannot be null');
         }
-        $this->container['project_information'] = $project_information;
+        $this->container['projectInformation'] = $projectInformation;
 
         return $this;
     }
 
     /**
-     * Gets exchange_phase
+     * Gets exchangePhase
      *
      * @return \Dangl\AVACloud\Model\ExchangePhaseDto
      */
     public function getExchangePhase()
     {
-        return $this->container['exchange_phase'];
+        return $this->container['exchangePhase'];
     }
 
     /**
-     * Sets exchange_phase
+     * Sets exchangePhase
      *
-     * @param \Dangl\AVACloud\Model\ExchangePhaseDto $exchange_phase exchange_phase
+     * @param \Dangl\AVACloud\Model\ExchangePhaseDto $exchangePhase exchangePhase
      *
      * @return self
      */
-    public function setExchangePhase($exchange_phase)
+    public function setExchangePhase($exchangePhase)
     {
-        if (is_null($exchange_phase)) {
-            throw new \InvalidArgumentException('non-nullable exchange_phase cannot be null');
+        if (is_null($exchangePhase)) {
+            throw new \InvalidArgumentException('non-nullable exchangePhase cannot be null');
         }
-        $this->container['exchange_phase'] = $exchange_phase;
+        $this->container['exchangePhase'] = $exchangePhase;
 
         return $this;
     }
@@ -1428,217 +1428,217 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets origin_detail
+     * Gets originDetail
      *
      * @return string|null
      */
     public function getOriginDetail()
     {
-        return $this->container['origin_detail'];
+        return $this->container['originDetail'];
     }
 
     /**
-     * Sets origin_detail
+     * Sets originDetail
      *
-     * @param string|null $origin_detail This property complements the Origin property. Some formats, e.g. GaebXml might have additional information attached, e.g. GAEB XML V3.2 oder GAEB XML V3.1. This string property is used to hold such data. The Dangl.AVA module does not have a list of possible values, since this is defined in the native format assemblies, e.g. Dangl.GAEB or Dangl.Oenorm.
+     * @param string|null $originDetail This property complements the Origin property. Some formats, e.g. GaebXml might have additional information attached, e.g. GAEB XML V3.2 oder GAEB XML V3.1. This string property is used to hold such data. The Dangl.AVA module does not have a list of possible values, since this is defined in the native format assemblies, e.g. Dangl.GAEB or Dangl.Oenorm.
      *
      * @return self
      */
-    public function setOriginDetail($origin_detail)
+    public function setOriginDetail($originDetail)
     {
-        if (is_null($origin_detail)) {
-            throw new \InvalidArgumentException('non-nullable origin_detail cannot be null');
+        if (is_null($originDetail)) {
+            throw new \InvalidArgumentException('non-nullable originDetail cannot be null');
         }
-        $this->container['origin_detail'] = $origin_detail;
+        $this->container['originDetail'] = $originDetail;
 
         return $this;
     }
 
     /**
-     * Gets creation_date
+     * Gets creationDate
      *
      * @return \DateTime|null
      */
     public function getCreationDate()
     {
-        return $this->container['creation_date'];
+        return $this->container['creationDate'];
     }
 
     /**
-     * Sets creation_date
+     * Sets creationDate
      *
-     * @param \DateTime|null $creation_date Creation date of this ServiceSpecification.
+     * @param \DateTime|null $creationDate Creation date of this ServiceSpecification.
      *
      * @return self
      */
-    public function setCreationDate($creation_date)
+    public function setCreationDate($creationDate)
     {
-        if (is_null($creation_date)) {
-            throw new \InvalidArgumentException('non-nullable creation_date cannot be null');
+        if (is_null($creationDate)) {
+            throw new \InvalidArgumentException('non-nullable creationDate cannot be null');
         }
-        $this->container['creation_date'] = $creation_date;
+        $this->container['creationDate'] = $creationDate;
 
         return $this;
     }
 
     /**
-     * Gets offer_by_date
+     * Gets offerByDate
      *
      * @return \DateTime|null
      */
     public function getOfferByDate()
     {
-        return $this->container['offer_by_date'];
+        return $this->container['offerByDate'];
     }
 
     /**
-     * Sets offer_by_date
+     * Sets offerByDate
      *
-     * @param \DateTime|null $offer_by_date Date indicating until when an offer has to be submitted. In German, this is often called the \"Eröffnungstermin\"
+     * @param \DateTime|null $offerByDate Date indicating until when an offer has to be submitted. In German, this is often called the \"Eröffnungstermin\"
      *
      * @return self
      */
-    public function setOfferByDate($offer_by_date)
+    public function setOfferByDate($offerByDate)
     {
-        if (is_null($offer_by_date)) {
-            throw new \InvalidArgumentException('non-nullable offer_by_date cannot be null');
+        if (is_null($offerByDate)) {
+            throw new \InvalidArgumentException('non-nullable offerByDate cannot be null');
         }
-        $this->container['offer_by_date'] = $offer_by_date;
+        $this->container['offerByDate'] = $offerByDate;
 
         return $this;
     }
 
     /**
-     * Gets decision_date
+     * Gets decisionDate
      *
      * @return \DateTime|null
      */
     public function getDecisionDate()
     {
-        return $this->container['decision_date'];
+        return $this->container['decisionDate'];
     }
 
     /**
-     * Sets decision_date
+     * Sets decisionDate
      *
-     * @param \DateTime|null $decision_date Date indicating by when the buyer will select a contractor.
+     * @param \DateTime|null $decisionDate Date indicating by when the buyer will select a contractor.
      *
      * @return self
      */
-    public function setDecisionDate($decision_date)
+    public function setDecisionDate($decisionDate)
     {
-        if (is_null($decision_date)) {
-            throw new \InvalidArgumentException('non-nullable decision_date cannot be null');
+        if (is_null($decisionDate)) {
+            throw new \InvalidArgumentException('non-nullable decisionDate cannot be null');
         }
-        $this->container['decision_date'] = $decision_date;
+        $this->container['decisionDate'] = $decisionDate;
 
         return $this;
     }
 
     /**
-     * Gets bid_date
+     * Gets bidDate
      *
      * @return \DateTime|null
      */
     public function getBidDate()
     {
-        return $this->container['bid_date'];
+        return $this->container['bidDate'];
     }
 
     /**
-     * Sets bid_date
+     * Sets bidDate
      *
-     * @param \DateTime|null $bid_date Date of when the offer / bid was created
+     * @param \DateTime|null $bidDate Date of when the offer / bid was created
      *
      * @return self
      */
-    public function setBidDate($bid_date)
+    public function setBidDate($bidDate)
     {
-        if (is_null($bid_date)) {
-            throw new \InvalidArgumentException('non-nullable bid_date cannot be null');
+        if (is_null($bidDate)) {
+            throw new \InvalidArgumentException('non-nullable bidDate cannot be null');
         }
-        $this->container['bid_date'] = $bid_date;
+        $this->container['bidDate'] = $bidDate;
 
         return $this;
     }
 
     /**
-     * Gets warranty_bond_percentage
+     * Gets warrantyBondPercentage
      *
      * @return float
      */
     public function getWarrantyBondPercentage()
     {
-        return $this->container['warranty_bond_percentage'];
+        return $this->container['warrantyBondPercentage'];
     }
 
     /**
-     * Sets warranty_bond_percentage
+     * Sets warrantyBondPercentage
      *
-     * @param float $warranty_bond_percentage If a construction project requires a warranty bond, this property indicates the amount as a percentage, e.g. '0.15m' means 15% of the construction total amount as a warranty bond.
+     * @param float $warrantyBondPercentage If a construction project requires a warranty bond, this property indicates the amount as a percentage, e.g. '0.15m' means 15% of the construction total amount as a warranty bond.
      *
      * @return self
      */
-    public function setWarrantyBondPercentage($warranty_bond_percentage)
+    public function setWarrantyBondPercentage($warrantyBondPercentage)
     {
-        if (is_null($warranty_bond_percentage)) {
-            throw new \InvalidArgumentException('non-nullable warranty_bond_percentage cannot be null');
+        if (is_null($warrantyBondPercentage)) {
+            throw new \InvalidArgumentException('non-nullable warrantyBondPercentage cannot be null');
         }
-        $this->container['warranty_bond_percentage'] = $warranty_bond_percentage;
+        $this->container['warrantyBondPercentage'] = $warrantyBondPercentage;
 
         return $this;
     }
 
     /**
-     * Gets execution_guarantee_percentage
+     * Gets executionGuaranteePercentage
      *
      * @return float
      */
     public function getExecutionGuaranteePercentage()
     {
-        return $this->container['execution_guarantee_percentage'];
+        return $this->container['executionGuaranteePercentage'];
     }
 
     /**
-     * Sets execution_guarantee_percentage
+     * Sets executionGuaranteePercentage
      *
-     * @param float $execution_guarantee_percentage If a construction project requires an execution guarantty, this property indicates the amount as a percentage, e.g. '0.15m' means 15% of the construction total amount as an execution guarantee. In practice, this percentage is usually deducted from intermediate invoices and only billed in the final invoice.
+     * @param float $executionGuaranteePercentage If a construction project requires an execution guarantty, this property indicates the amount as a percentage, e.g. '0.15m' means 15% of the construction total amount as an execution guarantee. In practice, this percentage is usually deducted from intermediate invoices and only billed in the final invoice.
      *
      * @return self
      */
-    public function setExecutionGuaranteePercentage($execution_guarantee_percentage)
+    public function setExecutionGuaranteePercentage($executionGuaranteePercentage)
     {
-        if (is_null($execution_guarantee_percentage)) {
-            throw new \InvalidArgumentException('non-nullable execution_guarantee_percentage cannot be null');
+        if (is_null($executionGuaranteePercentage)) {
+            throw new \InvalidArgumentException('non-nullable executionGuaranteePercentage cannot be null');
         }
-        $this->container['execution_guarantee_percentage'] = $execution_guarantee_percentage;
+        $this->container['executionGuaranteePercentage'] = $executionGuaranteePercentage;
 
         return $this;
     }
 
     /**
-     * Gets submission_location
+     * Gets submissionLocation
      *
      * @return string|null
      */
     public function getSubmissionLocation()
     {
-        return $this->container['submission_location'];
+        return $this->container['submissionLocation'];
     }
 
     /**
-     * Sets submission_location
+     * Sets submissionLocation
      *
-     * @param string|null $submission_location String indicating where the physical submission of the offer is taking place.
+     * @param string|null $submissionLocation String indicating where the physical submission of the offer is taking place.
      *
      * @return self
      */
-    public function setSubmissionLocation($submission_location)
+    public function setSubmissionLocation($submissionLocation)
     {
-        if (is_null($submission_location)) {
-            throw new \InvalidArgumentException('non-nullable submission_location cannot be null');
+        if (is_null($submissionLocation)) {
+            throw new \InvalidArgumentException('non-nullable submissionLocation cannot be null');
         }
-        $this->container['submission_location'] = $submission_location;
+        $this->container['submissionLocation'] = $submissionLocation;
 
         return $this;
     }
@@ -1698,379 +1698,379 @@ class ServiceSpecificationDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets price_information
+     * Gets priceInformation
      *
      * @return \Dangl\AVACloud\Model\PriceInformationDto|null
      */
     public function getPriceInformation()
     {
-        return $this->container['price_information'];
+        return $this->container['priceInformation'];
     }
 
     /**
-     * Sets price_information
+     * Sets priceInformation
      *
-     * @param \Dangl\AVACloud\Model\PriceInformationDto|null $price_information price_information
+     * @param \Dangl\AVACloud\Model\PriceInformationDto|null $priceInformation priceInformation
      *
      * @return self
      */
-    public function setPriceInformation($price_information)
+    public function setPriceInformation($priceInformation)
     {
-        if (is_null($price_information)) {
-            throw new \InvalidArgumentException('non-nullable price_information cannot be null');
+        if (is_null($priceInformation)) {
+            throw new \InvalidArgumentException('non-nullable priceInformation cannot be null');
         }
-        $this->container['price_information'] = $price_information;
+        $this->container['priceInformation'] = $priceInformation;
 
         return $this;
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves.
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues These are Catalogue that are used within this ElementContainerBase. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves.
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_references
+     * Gets catalogueReferences
      *
      * @return \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null
      */
     public function getCatalogueReferences()
     {
-        return $this->container['catalogue_references'];
+        return $this->container['catalogueReferences'];
     }
 
     /**
-     * Sets catalogue_references
+     * Sets catalogueReferences
      *
-     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogue_references Referenced catalogues for this ElementContainerBase.
+     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogueReferences Referenced catalogues for this ElementContainerBase.
      *
      * @return self
      */
-    public function setCatalogueReferences($catalogue_references)
+    public function setCatalogueReferences($catalogueReferences)
     {
-        if (is_null($catalogue_references)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_references cannot be null');
+        if (is_null($catalogueReferences)) {
+            throw new \InvalidArgumentException('non-nullable catalogueReferences cannot be null');
         }
-        $this->container['catalogue_references'] = $catalogue_references;
+        $this->container['catalogueReferences'] = $catalogueReferences;
 
         return $this;
     }
 
     /**
-     * Gets planned_execution_start
+     * Gets plannedExecutionStart
      *
      * @return \DateTime|null
      */
     public function getPlannedExecutionStart()
     {
-        return $this->container['planned_execution_start'];
+        return $this->container['plannedExecutionStart'];
     }
 
     /**
-     * Sets planned_execution_start
+     * Sets plannedExecutionStart
      *
-     * @param \DateTime|null $planned_execution_start The date when the execution of the services is scheduled to start
+     * @param \DateTime|null $plannedExecutionStart The date when the execution of the services is scheduled to start
      *
      * @return self
      */
-    public function setPlannedExecutionStart($planned_execution_start)
+    public function setPlannedExecutionStart($plannedExecutionStart)
     {
-        if (is_null($planned_execution_start)) {
-            throw new \InvalidArgumentException('non-nullable planned_execution_start cannot be null');
+        if (is_null($plannedExecutionStart)) {
+            throw new \InvalidArgumentException('non-nullable plannedExecutionStart cannot be null');
         }
-        $this->container['planned_execution_start'] = $planned_execution_start;
+        $this->container['plannedExecutionStart'] = $plannedExecutionStart;
 
         return $this;
     }
 
     /**
-     * Gets planned_execution_end
+     * Gets plannedExecutionEnd
      *
      * @return \DateTime|null
      */
     public function getPlannedExecutionEnd()
     {
-        return $this->container['planned_execution_end'];
+        return $this->container['plannedExecutionEnd'];
     }
 
     /**
-     * Sets planned_execution_end
+     * Sets plannedExecutionEnd
      *
-     * @param \DateTime|null $planned_execution_end The date then the execution of the services is scheduled to be finished
+     * @param \DateTime|null $plannedExecutionEnd The date then the execution of the services is scheduled to be finished
      *
      * @return self
      */
-    public function setPlannedExecutionEnd($planned_execution_end)
+    public function setPlannedExecutionEnd($plannedExecutionEnd)
     {
-        if (is_null($planned_execution_end)) {
-            throw new \InvalidArgumentException('non-nullable planned_execution_end cannot be null');
+        if (is_null($plannedExecutionEnd)) {
+            throw new \InvalidArgumentException('non-nullable plannedExecutionEnd cannot be null');
         }
-        $this->container['planned_execution_end'] = $planned_execution_end;
+        $this->container['plannedExecutionEnd'] = $plannedExecutionEnd;
 
         return $this;
     }
 
     /**
-     * Gets contract_date
+     * Gets contractDate
      *
      * @return \DateTime|null
      */
     public function getContractDate()
     {
-        return $this->container['contract_date'];
+        return $this->container['contractDate'];
     }
 
     /**
-     * Sets contract_date
+     * Sets contractDate
      *
-     * @param \DateTime|null $contract_date The date on which the contract has been awarded. This matches \"Auftragsdatum\" in GAEB
+     * @param \DateTime|null $contractDate The date on which the contract has been awarded. This matches \"Auftragsdatum\" in GAEB
      *
      * @return self
      */
-    public function setContractDate($contract_date)
+    public function setContractDate($contractDate)
     {
-        if (is_null($contract_date)) {
-            throw new \InvalidArgumentException('non-nullable contract_date cannot be null');
+        if (is_null($contractDate)) {
+            throw new \InvalidArgumentException('non-nullable contractDate cannot be null');
         }
-        $this->container['contract_date'] = $contract_date;
+        $this->container['contractDate'] = $contractDate;
 
         return $this;
     }
 
     /**
-     * Gets contract_identifier
+     * Gets contractIdentifier
      *
      * @return string|null
      */
     public function getContractIdentifier()
     {
-        return $this->container['contract_identifier'];
+        return $this->container['contractIdentifier'];
     }
 
     /**
-     * Sets contract_identifier
+     * Sets contractIdentifier
      *
-     * @param string|null $contract_identifier This value can be used to indicate the number or identifier of the contract. It matches \"Auftragsnummer\" in GAEB
+     * @param string|null $contractIdentifier This value can be used to indicate the number or identifier of the contract. It matches \"Auftragsnummer\" in GAEB
      *
      * @return self
      */
-    public function setContractIdentifier($contract_identifier)
+    public function setContractIdentifier($contractIdentifier)
     {
-        if (is_null($contract_identifier)) {
-            throw new \InvalidArgumentException('non-nullable contract_identifier cannot be null');
+        if (is_null($contractIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable contractIdentifier cannot be null');
         }
-        $this->container['contract_identifier'] = $contract_identifier;
+        $this->container['contractIdentifier'] = $contractIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets warranty_duration
+     * Gets warrantyDuration
      *
      * @return \Dangl\AVACloud\Model\WarrantyDurationDto|null
      */
     public function getWarrantyDuration()
     {
-        return $this->container['warranty_duration'];
+        return $this->container['warrantyDuration'];
     }
 
     /**
-     * Sets warranty_duration
+     * Sets warrantyDuration
      *
-     * @param \Dangl\AVACloud\Model\WarrantyDurationDto|null $warranty_duration warranty_duration
+     * @param \Dangl\AVACloud\Model\WarrantyDurationDto|null $warrantyDuration warrantyDuration
      *
      * @return self
      */
-    public function setWarrantyDuration($warranty_duration)
+    public function setWarrantyDuration($warrantyDuration)
     {
-        if (is_null($warranty_duration)) {
-            throw new \InvalidArgumentException('non-nullable warranty_duration cannot be null');
+        if (is_null($warrantyDuration)) {
+            throw new \InvalidArgumentException('non-nullable warrantyDuration cannot be null');
         }
-        $this->container['warranty_duration'] = $warranty_duration;
+        $this->container['warrantyDuration'] = $warrantyDuration;
 
         return $this;
     }
 
     /**
-     * Gets warranty_end
+     * Gets warrantyEnd
      *
      * @return \DateTime|null
      */
     public function getWarrantyEnd()
     {
-        return $this->container['warranty_end'];
+        return $this->container['warrantyEnd'];
     }
 
     /**
-     * Sets warranty_end
+     * Sets warrantyEnd
      *
-     * @param \DateTime|null $warranty_end The date on which the warranty period ends
+     * @param \DateTime|null $warrantyEnd The date on which the warranty period ends
      *
      * @return self
      */
-    public function setWarrantyEnd($warranty_end)
+    public function setWarrantyEnd($warrantyEnd)
     {
-        if (is_null($warranty_end)) {
-            throw new \InvalidArgumentException('non-nullable warranty_end cannot be null');
+        if (is_null($warrantyEnd)) {
+            throw new \InvalidArgumentException('non-nullable warrantyEnd cannot be null');
         }
-        $this->container['warranty_end'] = $warranty_end;
+        $this->container['warrantyEnd'] = $warrantyEnd;
 
         return $this;
     }
 
     /**
-     * Gets approval_date
+     * Gets approvalDate
      *
      * @return \DateTime|null
      */
     public function getApprovalDate()
     {
-        return $this->container['approval_date'];
+        return $this->container['approvalDate'];
     }
 
     /**
-     * Sets approval_date
+     * Sets approvalDate
      *
-     * @param \DateTime|null $approval_date The date on which the services rendered by the bidder are scheduled to be approved by the buyer
+     * @param \DateTime|null $approvalDate The date on which the services rendered by the bidder are scheduled to be approved by the buyer
      *
      * @return self
      */
-    public function setApprovalDate($approval_date)
+    public function setApprovalDate($approvalDate)
     {
-        if (is_null($approval_date)) {
-            throw new \InvalidArgumentException('non-nullable approval_date cannot be null');
+        if (is_null($approvalDate)) {
+            throw new \InvalidArgumentException('non-nullable approvalDate cannot be null');
         }
-        $this->container['approval_date'] = $approval_date;
+        $this->container['approvalDate'] = $approvalDate;
 
         return $this;
     }
 
     /**
-     * Gets type_of_approval
+     * Gets typeOfApproval
      *
      * @return string|null
      */
     public function getTypeOfApproval()
     {
-        return $this->container['type_of_approval'];
+        return $this->container['typeOfApproval'];
     }
 
     /**
-     * Sets type_of_approval
+     * Sets typeOfApproval
      *
-     * @param string|null $type_of_approval This should specify how the approval is performed by the buyer. This matches \"AcceptType\" in GAEB
+     * @param string|null $typeOfApproval This should specify how the approval is performed by the buyer. This matches \"AcceptType\" in GAEB
      *
      * @return self
      */
-    public function setTypeOfApproval($type_of_approval)
+    public function setTypeOfApproval($typeOfApproval)
     {
-        if (is_null($type_of_approval)) {
-            throw new \InvalidArgumentException('non-nullable type_of_approval cannot be null');
+        if (is_null($typeOfApproval)) {
+            throw new \InvalidArgumentException('non-nullable typeOfApproval cannot be null');
         }
-        $this->container['type_of_approval'] = $type_of_approval;
+        $this->container['typeOfApproval'] = $typeOfApproval;
 
         return $this;
     }
 
     /**
-     * Gets addendum_number
+     * Gets addendumNumber
      *
      * @return string|null
      */
     public function getAddendumNumber()
     {
-        return $this->container['addendum_number'];
+        return $this->container['addendumNumber'];
     }
 
     /**
-     * Sets addendum_number
+     * Sets addendumNumber
      *
-     * @param string|null $addendum_number This optional string property is shared by all IElements, and indicates if the element is part of an addendum, a 'Nachtrag' in German.
+     * @param string|null $addendumNumber This optional string property is shared by all IElements, and indicates if the element is part of an addendum, a 'Nachtrag' in German.
      *
      * @return self
      */
-    public function setAddendumNumber($addendum_number)
+    public function setAddendumNumber($addendumNumber)
     {
-        if (is_null($addendum_number)) {
-            throw new \InvalidArgumentException('non-nullable addendum_number cannot be null');
+        if (is_null($addendumNumber)) {
+            throw new \InvalidArgumentException('non-nullable addendumNumber cannot be null');
         }
-        $this->container['addendum_number'] = $addendum_number;
+        $this->container['addendumNumber'] = $addendumNumber;
 
         return $this;
     }
 
     /**
-     * Gets addendum_status
+     * Gets addendumStatus
      *
      * @return \Dangl\AVACloud\Model\AddendumStatusDto|null
      */
     public function getAddendumStatus()
     {
-        return $this->container['addendum_status'];
+        return $this->container['addendumStatus'];
     }
 
     /**
-     * Sets addendum_status
+     * Sets addendumStatus
      *
-     * @param \Dangl\AVACloud\Model\AddendumStatusDto|null $addendum_status addendum_status
+     * @param \Dangl\AVACloud\Model\AddendumStatusDto|null $addendumStatus addendumStatus
      *
      * @return self
      */
-    public function setAddendumStatus($addendum_status)
+    public function setAddendumStatus($addendumStatus)
     {
-        if (is_null($addendum_status)) {
-            throw new \InvalidArgumentException('non-nullable addendum_status cannot be null');
+        if (is_null($addendumStatus)) {
+            throw new \InvalidArgumentException('non-nullable addendumStatus cannot be null');
         }
-        $this->container['addendum_status'] = $addendum_status;
+        $this->container['addendumStatus'] = $addendumStatus;
 
         return $this;
     }
 
     /**
-     * Gets commerce_properties
+     * Gets commerceProperties
      *
      * @return \Dangl\AVACloud\Model\ServiceSpecificationCommercePropertiesDto|null
      */
     public function getCommerceProperties()
     {
-        return $this->container['commerce_properties'];
+        return $this->container['commerceProperties'];
     }
 
     /**
-     * Sets commerce_properties
+     * Sets commerceProperties
      *
-     * @param \Dangl\AVACloud\Model\ServiceSpecificationCommercePropertiesDto|null $commerce_properties commerce_properties
+     * @param \Dangl\AVACloud\Model\ServiceSpecificationCommercePropertiesDto|null $commerceProperties commerceProperties
      *
      * @return self
      */
-    public function setCommerceProperties($commerce_properties)
+    public function setCommerceProperties($commerceProperties)
     {
-        if (is_null($commerce_properties)) {
-            throw new \InvalidArgumentException('non-nullable commerce_properties cannot be null');
+        if (is_null($commerceProperties)) {
+            throw new \InvalidArgumentException('non-nullable commerceProperties cannot be null');
         }
-        $this->container['commerce_properties'] = $commerce_properties;
+        $this->container['commerceProperties'] = $commerceProperties;
 
         return $this;
     }

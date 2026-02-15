@@ -61,7 +61,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'days' => 'int',
         'percent' => 'float',
-        'base_amount' => 'float'
+        'baseAmount' => 'float'
     ];
 
     /**
@@ -74,7 +74,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'days' => 'int32',
         'percent' => 'decimal',
-        'base_amount' => 'decimal'
+        'baseAmount' => 'decimal'
     ];
 
     /**
@@ -85,7 +85,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'days' => false,
         'percent' => false,
-        'base_amount' => false
+        'baseAmount' => false
     ];
 
     /**
@@ -176,7 +176,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'days' => 'days',
         'percent' => 'percent',
-        'base_amount' => 'baseAmount'
+        'baseAmount' => 'baseAmount'
     ];
 
     /**
@@ -187,7 +187,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'days' => 'setDays',
         'percent' => 'setPercent',
-        'base_amount' => 'setBaseAmount'
+        'baseAmount' => 'setBaseAmount'
     ];
 
     /**
@@ -198,7 +198,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'days' => 'getDays',
         'percent' => 'getPercent',
-        'base_amount' => 'getBaseAmount'
+        'baseAmount' => 'getBaseAmount'
     ];
 
     /**
@@ -260,7 +260,7 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('days', $data ?? [], null);
         $this->setIfExists('percent', $data ?? [], null);
-        $this->setIfExists('base_amount', $data ?? [], null);
+        $this->setIfExists('baseAmount', $data ?? [], null);
     }
 
     /**
@@ -366,28 +366,28 @@ class PaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets base_amount
+     * Gets baseAmount
      *
      * @return float|null
      */
     public function getBaseAmount()
     {
-        return $this->container['base_amount'];
+        return $this->container['baseAmount'];
     }
 
     /**
-     * Sets base_amount
+     * Sets baseAmount
      *
-     * @param float|null $base_amount The base amount for the discount, if applicable.
+     * @param float|null $baseAmount The base amount for the discount, if applicable.
      *
      * @return self
      */
-    public function setBaseAmount($base_amount)
+    public function setBaseAmount($baseAmount)
     {
-        if (is_null($base_amount)) {
-            throw new \InvalidArgumentException('non-nullable base_amount cannot be null');
+        if (is_null($baseAmount)) {
+            throw new \InvalidArgumentException('non-nullable baseAmount cannot be null');
         }
-        $this->container['base_amount'] = $base_amount;
+        $this->container['baseAmount'] = $baseAmount;
 
         return $this;
     }

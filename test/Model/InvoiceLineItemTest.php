@@ -99,7 +99,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "object_identifier"
+     * Test attribute "objectIdentifier"
      */
     public function testPropertyObjectIdentifier()
     {
@@ -117,7 +117,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_code"
+     * Test attribute "unitCode"
      */
     public function testPropertyUnitCode()
     {
@@ -126,7 +126,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "net_amount"
+     * Test attribute "netAmount"
      */
     public function testPropertyNetAmount()
     {
@@ -135,7 +135,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "purchase_order_reference"
+     * Test attribute "purchaseOrderReference"
      */
     public function testPropertyPurchaseOrderReference()
     {
@@ -144,7 +144,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "line_item_period"
+     * Test attribute "lineItemPeriod"
      */
     public function testPropertyLineItemPeriod()
     {
@@ -171,7 +171,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "price_details"
+     * Test attribute "priceDetails"
      */
     public function testPropertyPriceDetails()
     {
@@ -180,7 +180,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_information"
+     * Test attribute "vatInformation"
      */
     public function testPropertyVatInformation()
     {
@@ -189,7 +189,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "item_information"
+     * Test attribute "itemInformation"
      */
     public function testPropertyItemInformation()
     {
@@ -198,7 +198,7 @@ class InvoiceLineItemTest extends TestCase
     }
 
     /**
-     * Test attribute "sub_items"
+     * Test attribute "subItems"
      */
     public function testPropertySubItems()
     {

@@ -81,7 +81,7 @@ class LineItemChargeTest extends TestCase
     }
 
     /**
-     * Test attribute "net_amount"
+     * Test attribute "netAmount"
      */
     public function testPropertyNetAmount()
     {
@@ -90,7 +90,7 @@ class LineItemChargeTest extends TestCase
     }
 
     /**
-     * Test attribute "relative_charge_base_amount"
+     * Test attribute "relativeChargeBaseAmount"
      */
     public function testPropertyRelativeChargeBaseAmount()
     {
@@ -99,7 +99,7 @@ class LineItemChargeTest extends TestCase
     }
 
     /**
-     * Test attribute "relative_charge_percentage"
+     * Test attribute "relativeChargePercentage"
      */
     public function testPropertyRelativeChargePercentage()
     {
@@ -117,7 +117,7 @@ class LineItemChargeTest extends TestCase
     }
 
     /**
-     * Test attribute "reason_code"
+     * Test attribute "reasonCode"
      */
     public function testPropertyReasonCode()
     {
@@ -126,7 +126,7 @@ class LineItemChargeTest extends TestCase
     }
 
     /**
-     * Test attribute "reason_type"
+     * Test attribute "reasonType"
      */
     public function testPropertyReasonType()
     {

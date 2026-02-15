@@ -59,10 +59,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'deliver_to_name' => 'string',
-        'deliver_to_location_identifier' => 'string',
-        'delivery_date' => '\DateTime',
-        'delivery_address' => '\Dangl\AVACloud\Model\DeliveryAddress'
+        'deliverToName' => 'string',
+        'deliverToLocationIdentifier' => 'string',
+        'deliveryDate' => '\DateTime',
+        'deliveryAddress' => '\Dangl\AVACloud\Model\DeliveryAddress'
     ];
 
     /**
@@ -73,10 +73,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'deliver_to_name' => null,
-        'deliver_to_location_identifier' => null,
-        'delivery_date' => 'date-time',
-        'delivery_address' => null
+        'deliverToName' => null,
+        'deliverToLocationIdentifier' => null,
+        'deliveryDate' => 'date-time',
+        'deliveryAddress' => null
     ];
 
     /**
@@ -85,10 +85,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'deliver_to_name' => false,
-        'deliver_to_location_identifier' => false,
-        'delivery_date' => false,
-        'delivery_address' => false
+        'deliverToName' => false,
+        'deliverToLocationIdentifier' => false,
+        'deliveryDate' => false,
+        'deliveryAddress' => false
     ];
 
     /**
@@ -177,10 +177,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'deliver_to_name' => 'deliverToName',
-        'deliver_to_location_identifier' => 'deliverToLocationIdentifier',
-        'delivery_date' => 'deliveryDate',
-        'delivery_address' => 'deliveryAddress'
+        'deliverToName' => 'deliverToName',
+        'deliverToLocationIdentifier' => 'deliverToLocationIdentifier',
+        'deliveryDate' => 'deliveryDate',
+        'deliveryAddress' => 'deliveryAddress'
     ];
 
     /**
@@ -189,10 +189,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'deliver_to_name' => 'setDeliverToName',
-        'deliver_to_location_identifier' => 'setDeliverToLocationIdentifier',
-        'delivery_date' => 'setDeliveryDate',
-        'delivery_address' => 'setDeliveryAddress'
+        'deliverToName' => 'setDeliverToName',
+        'deliverToLocationIdentifier' => 'setDeliverToLocationIdentifier',
+        'deliveryDate' => 'setDeliveryDate',
+        'deliveryAddress' => 'setDeliveryAddress'
     ];
 
     /**
@@ -201,10 +201,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'deliver_to_name' => 'getDeliverToName',
-        'deliver_to_location_identifier' => 'getDeliverToLocationIdentifier',
-        'delivery_date' => 'getDeliveryDate',
-        'delivery_address' => 'getDeliveryAddress'
+        'deliverToName' => 'getDeliverToName',
+        'deliverToLocationIdentifier' => 'getDeliverToLocationIdentifier',
+        'deliveryDate' => 'getDeliveryDate',
+        'deliveryAddress' => 'getDeliveryAddress'
     ];
 
     /**
@@ -264,10 +264,10 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('deliver_to_name', $data ?? [], null);
-        $this->setIfExists('deliver_to_location_identifier', $data ?? [], null);
-        $this->setIfExists('delivery_date', $data ?? [], null);
-        $this->setIfExists('delivery_address', $data ?? [], null);
+        $this->setIfExists('deliverToName', $data ?? [], null);
+        $this->setIfExists('deliverToLocationIdentifier', $data ?? [], null);
+        $this->setIfExists('deliveryDate', $data ?? [], null);
+        $this->setIfExists('deliveryAddress', $data ?? [], null);
     }
 
     /**
@@ -313,109 +313,109 @@ class DeliveryInformation implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets deliver_to_name
+     * Gets deliverToName
      *
      * @return string|null
      */
     public function getDeliverToName()
     {
-        return $this->container['deliver_to_name'];
+        return $this->container['deliverToName'];
     }
 
     /**
-     * Sets deliver_to_name
+     * Sets deliverToName
      *
-     * @param string|null $deliver_to_name BT-70 BT-70 in XRechnung
+     * @param string|null $deliverToName BT-70 BT-70 in XRechnung
      *
      * @return self
      */
-    public function setDeliverToName($deliver_to_name)
+    public function setDeliverToName($deliverToName)
     {
-        if (is_null($deliver_to_name)) {
-            throw new \InvalidArgumentException('non-nullable deliver_to_name cannot be null');
+        if (is_null($deliverToName)) {
+            throw new \InvalidArgumentException('non-nullable deliverToName cannot be null');
         }
-        $this->container['deliver_to_name'] = $deliver_to_name;
+        $this->container['deliverToName'] = $deliverToName;
 
         return $this;
     }
 
     /**
-     * Gets deliver_to_location_identifier
+     * Gets deliverToLocationIdentifier
      *
      * @return string|null
      */
     public function getDeliverToLocationIdentifier()
     {
-        return $this->container['deliver_to_location_identifier'];
+        return $this->container['deliverToLocationIdentifier'];
     }
 
     /**
-     * Sets deliver_to_location_identifier
+     * Sets deliverToLocationIdentifier
      *
-     * @param string|null $deliver_to_location_identifier BT-71 BT-71 in XRechnung
+     * @param string|null $deliverToLocationIdentifier BT-71 BT-71 in XRechnung
      *
      * @return self
      */
-    public function setDeliverToLocationIdentifier($deliver_to_location_identifier)
+    public function setDeliverToLocationIdentifier($deliverToLocationIdentifier)
     {
-        if (is_null($deliver_to_location_identifier)) {
-            throw new \InvalidArgumentException('non-nullable deliver_to_location_identifier cannot be null');
+        if (is_null($deliverToLocationIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable deliverToLocationIdentifier cannot be null');
         }
-        $this->container['deliver_to_location_identifier'] = $deliver_to_location_identifier;
+        $this->container['deliverToLocationIdentifier'] = $deliverToLocationIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets delivery_date
+     * Gets deliveryDate
      *
      * @return \DateTime|null
      */
     public function getDeliveryDate()
     {
-        return $this->container['delivery_date'];
+        return $this->container['deliveryDate'];
     }
 
     /**
-     * Sets delivery_date
+     * Sets deliveryDate
      *
-     * @param \DateTime|null $delivery_date BT-72 BT-72 in XRechnung
+     * @param \DateTime|null $deliveryDate BT-72 BT-72 in XRechnung
      *
      * @return self
      */
-    public function setDeliveryDate($delivery_date)
+    public function setDeliveryDate($deliveryDate)
     {
-        if (is_null($delivery_date)) {
-            throw new \InvalidArgumentException('non-nullable delivery_date cannot be null');
+        if (is_null($deliveryDate)) {
+            throw new \InvalidArgumentException('non-nullable deliveryDate cannot be null');
         }
-        $this->container['delivery_date'] = $delivery_date;
+        $this->container['deliveryDate'] = $deliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets delivery_address
+     * Gets deliveryAddress
      *
      * @return \Dangl\AVACloud\Model\DeliveryAddress|null
      */
     public function getDeliveryAddress()
     {
-        return $this->container['delivery_address'];
+        return $this->container['deliveryAddress'];
     }
 
     /**
-     * Sets delivery_address
+     * Sets deliveryAddress
      *
-     * @param \Dangl\AVACloud\Model\DeliveryAddress|null $delivery_address delivery_address
+     * @param \Dangl\AVACloud\Model\DeliveryAddress|null $deliveryAddress deliveryAddress
      *
      * @return self
      */
-    public function setDeliveryAddress($delivery_address)
+    public function setDeliveryAddress($deliveryAddress)
     {
-        if (is_null($delivery_address)) {
-            throw new \InvalidArgumentException('non-nullable delivery_address cannot be null');
+        if (is_null($deliveryAddress)) {
+            throw new \InvalidArgumentException('non-nullable deliveryAddress cannot be null');
         }
-        $this->container['delivery_address'] = $delivery_address;
+        $this->container['deliveryAddress'] = $deliveryAddress;
 
         return $this;
     }

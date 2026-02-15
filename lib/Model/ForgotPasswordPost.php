@@ -59,8 +59,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'identifier' => 'string',
-        'preferred_languages' => 'string[]',
-        'service_login_redirect_uri' => 'string'
+        'preferredLanguages' => 'string[]',
+        'serviceLoginRedirectUri' => 'string'
     ];
 
     /**
@@ -72,8 +72,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'identifier' => null,
-        'preferred_languages' => null,
-        'service_login_redirect_uri' => null
+        'preferredLanguages' => null,
+        'serviceLoginRedirectUri' => null
     ];
 
     /**
@@ -83,8 +83,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static array $openAPINullables = [
         'identifier' => false,
-        'preferred_languages' => false,
-        'service_login_redirect_uri' => false
+        'preferredLanguages' => false,
+        'serviceLoginRedirectUri' => false
     ];
 
     /**
@@ -174,8 +174,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'identifier' => 'identifier',
-        'preferred_languages' => 'preferredLanguages',
-        'service_login_redirect_uri' => 'serviceLoginRedirectUri'
+        'preferredLanguages' => 'preferredLanguages',
+        'serviceLoginRedirectUri' => 'serviceLoginRedirectUri'
     ];
 
     /**
@@ -185,8 +185,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'identifier' => 'setIdentifier',
-        'preferred_languages' => 'setPreferredLanguages',
-        'service_login_redirect_uri' => 'setServiceLoginRedirectUri'
+        'preferredLanguages' => 'setPreferredLanguages',
+        'serviceLoginRedirectUri' => 'setServiceLoginRedirectUri'
     ];
 
     /**
@@ -196,8 +196,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'identifier' => 'getIdentifier',
-        'preferred_languages' => 'getPreferredLanguages',
-        'service_login_redirect_uri' => 'getServiceLoginRedirectUri'
+        'preferredLanguages' => 'getPreferredLanguages',
+        'serviceLoginRedirectUri' => 'getServiceLoginRedirectUri'
     ];
 
     /**
@@ -258,8 +258,8 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
     public function __construct(?array $data = null)
     {
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('preferred_languages', $data ?? [], null);
-        $this->setIfExists('service_login_redirect_uri', $data ?? [], null);
+        $this->setIfExists('preferredLanguages', $data ?? [], null);
+        $this->setIfExists('serviceLoginRedirectUri', $data ?? [], null);
     }
 
     /**
@@ -344,55 +344,55 @@ class ForgotPasswordPost implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets preferred_languages
+     * Gets preferredLanguages
      *
      * @return string[]|null
      */
     public function getPreferredLanguages()
     {
-        return $this->container['preferred_languages'];
+        return $this->container['preferredLanguages'];
     }
 
     /**
-     * Sets preferred_languages
+     * Sets preferredLanguages
      *
-     * @param string[]|null $preferred_languages preferred_languages
+     * @param string[]|null $preferredLanguages preferredLanguages
      *
      * @return self
      */
-    public function setPreferredLanguages($preferred_languages)
+    public function setPreferredLanguages($preferredLanguages)
     {
-        if (is_null($preferred_languages)) {
-            throw new \InvalidArgumentException('non-nullable preferred_languages cannot be null');
+        if (is_null($preferredLanguages)) {
+            throw new \InvalidArgumentException('non-nullable preferredLanguages cannot be null');
         }
-        $this->container['preferred_languages'] = $preferred_languages;
+        $this->container['preferredLanguages'] = $preferredLanguages;
 
         return $this;
     }
 
     /**
-     * Gets service_login_redirect_uri
+     * Gets serviceLoginRedirectUri
      *
      * @return string|null
      */
     public function getServiceLoginRedirectUri()
     {
-        return $this->container['service_login_redirect_uri'];
+        return $this->container['serviceLoginRedirectUri'];
     }
 
     /**
-     * Sets service_login_redirect_uri
+     * Sets serviceLoginRedirectUri
      *
-     * @param string|null $service_login_redirect_uri service_login_redirect_uri
+     * @param string|null $serviceLoginRedirectUri serviceLoginRedirectUri
      *
      * @return self
      */
-    public function setServiceLoginRedirectUri($service_login_redirect_uri)
+    public function setServiceLoginRedirectUri($serviceLoginRedirectUri)
     {
-        if (is_null($service_login_redirect_uri)) {
-            throw new \InvalidArgumentException('non-nullable service_login_redirect_uri cannot be null');
+        if (is_null($serviceLoginRedirectUri)) {
+            throw new \InvalidArgumentException('non-nullable serviceLoginRedirectUri cannot be null');
         }
-        $this->container['service_login_redirect_uri'] = $service_login_redirect_uri;
+        $this->container['serviceLoginRedirectUri'] = $serviceLoginRedirectUri;
 
         return $this;
     }

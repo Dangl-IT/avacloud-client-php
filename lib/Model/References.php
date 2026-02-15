@@ -59,16 +59,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'buyer_reference' => 'string',
-        'project_reference' => 'string',
-        'contract_reference' => 'string',
-        'purchase_order_reference' => 'string',
-        'sales_order_reference' => 'string',
-        'receiving_advice_reference' => 'string',
-        'dispatch_advice_reference' => 'string',
-        'tender_or_lot_reference' => 'string',
-        'invoiced_object_identifier' => 'string',
-        'accounting_reference' => 'string'
+        'buyerReference' => 'string',
+        'projectReference' => 'string',
+        'contractReference' => 'string',
+        'purchaseOrderReference' => 'string',
+        'salesOrderReference' => 'string',
+        'receivingAdviceReference' => 'string',
+        'dispatchAdviceReference' => 'string',
+        'tenderOrLotReference' => 'string',
+        'invoicedObjectIdentifier' => 'string',
+        'accountingReference' => 'string'
     ];
 
     /**
@@ -79,16 +79,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'buyer_reference' => null,
-        'project_reference' => null,
-        'contract_reference' => null,
-        'purchase_order_reference' => null,
-        'sales_order_reference' => null,
-        'receiving_advice_reference' => null,
-        'dispatch_advice_reference' => null,
-        'tender_or_lot_reference' => null,
-        'invoiced_object_identifier' => null,
-        'accounting_reference' => null
+        'buyerReference' => null,
+        'projectReference' => null,
+        'contractReference' => null,
+        'purchaseOrderReference' => null,
+        'salesOrderReference' => null,
+        'receivingAdviceReference' => null,
+        'dispatchAdviceReference' => null,
+        'tenderOrLotReference' => null,
+        'invoicedObjectIdentifier' => null,
+        'accountingReference' => null
     ];
 
     /**
@@ -97,16 +97,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'buyer_reference' => false,
-        'project_reference' => false,
-        'contract_reference' => false,
-        'purchase_order_reference' => false,
-        'sales_order_reference' => false,
-        'receiving_advice_reference' => false,
-        'dispatch_advice_reference' => false,
-        'tender_or_lot_reference' => false,
-        'invoiced_object_identifier' => false,
-        'accounting_reference' => false
+        'buyerReference' => false,
+        'projectReference' => false,
+        'contractReference' => false,
+        'purchaseOrderReference' => false,
+        'salesOrderReference' => false,
+        'receivingAdviceReference' => false,
+        'dispatchAdviceReference' => false,
+        'tenderOrLotReference' => false,
+        'invoicedObjectIdentifier' => false,
+        'accountingReference' => false
     ];
 
     /**
@@ -195,16 +195,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'buyer_reference' => 'buyerReference',
-        'project_reference' => 'projectReference',
-        'contract_reference' => 'contractReference',
-        'purchase_order_reference' => 'purchaseOrderReference',
-        'sales_order_reference' => 'salesOrderReference',
-        'receiving_advice_reference' => 'receivingAdviceReference',
-        'dispatch_advice_reference' => 'dispatchAdviceReference',
-        'tender_or_lot_reference' => 'tenderOrLotReference',
-        'invoiced_object_identifier' => 'invoicedObjectIdentifier',
-        'accounting_reference' => 'accountingReference'
+        'buyerReference' => 'buyerReference',
+        'projectReference' => 'projectReference',
+        'contractReference' => 'contractReference',
+        'purchaseOrderReference' => 'purchaseOrderReference',
+        'salesOrderReference' => 'salesOrderReference',
+        'receivingAdviceReference' => 'receivingAdviceReference',
+        'dispatchAdviceReference' => 'dispatchAdviceReference',
+        'tenderOrLotReference' => 'tenderOrLotReference',
+        'invoicedObjectIdentifier' => 'invoicedObjectIdentifier',
+        'accountingReference' => 'accountingReference'
     ];
 
     /**
@@ -213,16 +213,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'buyer_reference' => 'setBuyerReference',
-        'project_reference' => 'setProjectReference',
-        'contract_reference' => 'setContractReference',
-        'purchase_order_reference' => 'setPurchaseOrderReference',
-        'sales_order_reference' => 'setSalesOrderReference',
-        'receiving_advice_reference' => 'setReceivingAdviceReference',
-        'dispatch_advice_reference' => 'setDispatchAdviceReference',
-        'tender_or_lot_reference' => 'setTenderOrLotReference',
-        'invoiced_object_identifier' => 'setInvoicedObjectIdentifier',
-        'accounting_reference' => 'setAccountingReference'
+        'buyerReference' => 'setBuyerReference',
+        'projectReference' => 'setProjectReference',
+        'contractReference' => 'setContractReference',
+        'purchaseOrderReference' => 'setPurchaseOrderReference',
+        'salesOrderReference' => 'setSalesOrderReference',
+        'receivingAdviceReference' => 'setReceivingAdviceReference',
+        'dispatchAdviceReference' => 'setDispatchAdviceReference',
+        'tenderOrLotReference' => 'setTenderOrLotReference',
+        'invoicedObjectIdentifier' => 'setInvoicedObjectIdentifier',
+        'accountingReference' => 'setAccountingReference'
     ];
 
     /**
@@ -231,16 +231,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'buyer_reference' => 'getBuyerReference',
-        'project_reference' => 'getProjectReference',
-        'contract_reference' => 'getContractReference',
-        'purchase_order_reference' => 'getPurchaseOrderReference',
-        'sales_order_reference' => 'getSalesOrderReference',
-        'receiving_advice_reference' => 'getReceivingAdviceReference',
-        'dispatch_advice_reference' => 'getDispatchAdviceReference',
-        'tender_or_lot_reference' => 'getTenderOrLotReference',
-        'invoiced_object_identifier' => 'getInvoicedObjectIdentifier',
-        'accounting_reference' => 'getAccountingReference'
+        'buyerReference' => 'getBuyerReference',
+        'projectReference' => 'getProjectReference',
+        'contractReference' => 'getContractReference',
+        'purchaseOrderReference' => 'getPurchaseOrderReference',
+        'salesOrderReference' => 'getSalesOrderReference',
+        'receivingAdviceReference' => 'getReceivingAdviceReference',
+        'dispatchAdviceReference' => 'getDispatchAdviceReference',
+        'tenderOrLotReference' => 'getTenderOrLotReference',
+        'invoicedObjectIdentifier' => 'getInvoicedObjectIdentifier',
+        'accountingReference' => 'getAccountingReference'
     ];
 
     /**
@@ -300,16 +300,16 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('buyer_reference', $data ?? [], null);
-        $this->setIfExists('project_reference', $data ?? [], null);
-        $this->setIfExists('contract_reference', $data ?? [], null);
-        $this->setIfExists('purchase_order_reference', $data ?? [], null);
-        $this->setIfExists('sales_order_reference', $data ?? [], null);
-        $this->setIfExists('receiving_advice_reference', $data ?? [], null);
-        $this->setIfExists('dispatch_advice_reference', $data ?? [], null);
-        $this->setIfExists('tender_or_lot_reference', $data ?? [], null);
-        $this->setIfExists('invoiced_object_identifier', $data ?? [], null);
-        $this->setIfExists('accounting_reference', $data ?? [], null);
+        $this->setIfExists('buyerReference', $data ?? [], null);
+        $this->setIfExists('projectReference', $data ?? [], null);
+        $this->setIfExists('contractReference', $data ?? [], null);
+        $this->setIfExists('purchaseOrderReference', $data ?? [], null);
+        $this->setIfExists('salesOrderReference', $data ?? [], null);
+        $this->setIfExists('receivingAdviceReference', $data ?? [], null);
+        $this->setIfExists('dispatchAdviceReference', $data ?? [], null);
+        $this->setIfExists('tenderOrLotReference', $data ?? [], null);
+        $this->setIfExists('invoicedObjectIdentifier', $data ?? [], null);
+        $this->setIfExists('accountingReference', $data ?? [], null);
     }
 
     /**
@@ -355,271 +355,271 @@ class References implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets buyer_reference
+     * Gets buyerReference
      *
      * @return string|null
      */
     public function getBuyerReference()
     {
-        return $this->container['buyer_reference'];
+        return $this->container['buyerReference'];
     }
 
     /**
-     * Sets buyer_reference
+     * Sets buyerReference
      *
-     * @param string|null $buyer_reference BT-10 An internal reference used by the buyer, this can also be used as the 'Leitweg-ID' in Germany BT-10 in XRechnung.
+     * @param string|null $buyerReference BT-10 An internal reference used by the buyer, this can also be used as the 'Leitweg-ID' in Germany BT-10 in XRechnung.
      *
      * @return self
      */
-    public function setBuyerReference($buyer_reference)
+    public function setBuyerReference($buyerReference)
     {
-        if (is_null($buyer_reference)) {
-            throw new \InvalidArgumentException('non-nullable buyer_reference cannot be null');
+        if (is_null($buyerReference)) {
+            throw new \InvalidArgumentException('non-nullable buyerReference cannot be null');
         }
-        $this->container['buyer_reference'] = $buyer_reference;
+        $this->container['buyerReference'] = $buyerReference;
 
         return $this;
     }
 
     /**
-     * Gets project_reference
+     * Gets projectReference
      *
      * @return string|null
      */
     public function getProjectReference()
     {
-        return $this->container['project_reference'];
+        return $this->container['projectReference'];
     }
 
     /**
-     * Sets project_reference
+     * Sets projectReference
      *
-     * @param string|null $project_reference BT-11 Reference to a project BT-11 in XRechnung.
+     * @param string|null $projectReference BT-11 Reference to a project BT-11 in XRechnung.
      *
      * @return self
      */
-    public function setProjectReference($project_reference)
+    public function setProjectReference($projectReference)
     {
-        if (is_null($project_reference)) {
-            throw new \InvalidArgumentException('non-nullable project_reference cannot be null');
+        if (is_null($projectReference)) {
+            throw new \InvalidArgumentException('non-nullable projectReference cannot be null');
         }
-        $this->container['project_reference'] = $project_reference;
+        $this->container['projectReference'] = $projectReference;
 
         return $this;
     }
 
     /**
-     * Gets contract_reference
+     * Gets contractReference
      *
      * @return string|null
      */
     public function getContractReference()
     {
-        return $this->container['contract_reference'];
+        return $this->container['contractReference'];
     }
 
     /**
-     * Sets contract_reference
+     * Sets contractReference
      *
-     * @param string|null $contract_reference BT-12 Reference to a contract BT-12 in XRechnung.
+     * @param string|null $contractReference BT-12 Reference to a contract BT-12 in XRechnung.
      *
      * @return self
      */
-    public function setContractReference($contract_reference)
+    public function setContractReference($contractReference)
     {
-        if (is_null($contract_reference)) {
-            throw new \InvalidArgumentException('non-nullable contract_reference cannot be null');
+        if (is_null($contractReference)) {
+            throw new \InvalidArgumentException('non-nullable contractReference cannot be null');
         }
-        $this->container['contract_reference'] = $contract_reference;
+        $this->container['contractReference'] = $contractReference;
 
         return $this;
     }
 
     /**
-     * Gets purchase_order_reference
+     * Gets purchaseOrderReference
      *
      * @return string|null
      */
     public function getPurchaseOrderReference()
     {
-        return $this->container['purchase_order_reference'];
+        return $this->container['purchaseOrderReference'];
     }
 
     /**
-     * Sets purchase_order_reference
+     * Sets purchaseOrderReference
      *
-     * @param string|null $purchase_order_reference BT-13 Reference to a purchase order created by the buyer BT-13 in XRechnung.
+     * @param string|null $purchaseOrderReference BT-13 Reference to a purchase order created by the buyer BT-13 in XRechnung.
      *
      * @return self
      */
-    public function setPurchaseOrderReference($purchase_order_reference)
+    public function setPurchaseOrderReference($purchaseOrderReference)
     {
-        if (is_null($purchase_order_reference)) {
-            throw new \InvalidArgumentException('non-nullable purchase_order_reference cannot be null');
+        if (is_null($purchaseOrderReference)) {
+            throw new \InvalidArgumentException('non-nullable purchaseOrderReference cannot be null');
         }
-        $this->container['purchase_order_reference'] = $purchase_order_reference;
+        $this->container['purchaseOrderReference'] = $purchaseOrderReference;
 
         return $this;
     }
 
     /**
-     * Gets sales_order_reference
+     * Gets salesOrderReference
      *
      * @return string|null
      */
     public function getSalesOrderReference()
     {
-        return $this->container['sales_order_reference'];
+        return $this->container['salesOrderReference'];
     }
 
     /**
-     * Sets sales_order_reference
+     * Sets salesOrderReference
      *
-     * @param string|null $sales_order_reference BT-14 Reference to a sales order created by the seller BT-14 in XRechnung.
+     * @param string|null $salesOrderReference BT-14 Reference to a sales order created by the seller BT-14 in XRechnung.
      *
      * @return self
      */
-    public function setSalesOrderReference($sales_order_reference)
+    public function setSalesOrderReference($salesOrderReference)
     {
-        if (is_null($sales_order_reference)) {
-            throw new \InvalidArgumentException('non-nullable sales_order_reference cannot be null');
+        if (is_null($salesOrderReference)) {
+            throw new \InvalidArgumentException('non-nullable salesOrderReference cannot be null');
         }
-        $this->container['sales_order_reference'] = $sales_order_reference;
+        $this->container['salesOrderReference'] = $salesOrderReference;
 
         return $this;
     }
 
     /**
-     * Gets receiving_advice_reference
+     * Gets receivingAdviceReference
      *
      * @return string|null
      */
     public function getReceivingAdviceReference()
     {
-        return $this->container['receiving_advice_reference'];
+        return $this->container['receivingAdviceReference'];
     }
 
     /**
-     * Sets receiving_advice_reference
+     * Sets receivingAdviceReference
      *
-     * @param string|null $receiving_advice_reference BT-15 Reference to a delivery note BT-15 in XRechnung.
+     * @param string|null $receivingAdviceReference BT-15 Reference to a delivery note BT-15 in XRechnung.
      *
      * @return self
      */
-    public function setReceivingAdviceReference($receiving_advice_reference)
+    public function setReceivingAdviceReference($receivingAdviceReference)
     {
-        if (is_null($receiving_advice_reference)) {
-            throw new \InvalidArgumentException('non-nullable receiving_advice_reference cannot be null');
+        if (is_null($receivingAdviceReference)) {
+            throw new \InvalidArgumentException('non-nullable receivingAdviceReference cannot be null');
         }
-        $this->container['receiving_advice_reference'] = $receiving_advice_reference;
+        $this->container['receivingAdviceReference'] = $receivingAdviceReference;
 
         return $this;
     }
 
     /**
-     * Gets dispatch_advice_reference
+     * Gets dispatchAdviceReference
      *
      * @return string|null
      */
     public function getDispatchAdviceReference()
     {
-        return $this->container['dispatch_advice_reference'];
+        return $this->container['dispatchAdviceReference'];
     }
 
     /**
-     * Sets dispatch_advice_reference
+     * Sets dispatchAdviceReference
      *
-     * @param string|null $dispatch_advice_reference BT-16 Reference to a dispatch advice BT-16 in XRechnung.
+     * @param string|null $dispatchAdviceReference BT-16 Reference to a dispatch advice BT-16 in XRechnung.
      *
      * @return self
      */
-    public function setDispatchAdviceReference($dispatch_advice_reference)
+    public function setDispatchAdviceReference($dispatchAdviceReference)
     {
-        if (is_null($dispatch_advice_reference)) {
-            throw new \InvalidArgumentException('non-nullable dispatch_advice_reference cannot be null');
+        if (is_null($dispatchAdviceReference)) {
+            throw new \InvalidArgumentException('non-nullable dispatchAdviceReference cannot be null');
         }
-        $this->container['dispatch_advice_reference'] = $dispatch_advice_reference;
+        $this->container['dispatchAdviceReference'] = $dispatchAdviceReference;
 
         return $this;
     }
 
     /**
-     * Gets tender_or_lot_reference
+     * Gets tenderOrLotReference
      *
      * @return string|null
      */
     public function getTenderOrLotReference()
     {
-        return $this->container['tender_or_lot_reference'];
+        return $this->container['tenderOrLotReference'];
     }
 
     /**
-     * Sets tender_or_lot_reference
+     * Sets tenderOrLotReference
      *
-     * @param string|null $tender_or_lot_reference BT-17 Reference to a tender or lot BT-17 in XRechnung.
+     * @param string|null $tenderOrLotReference BT-17 Reference to a tender or lot BT-17 in XRechnung.
      *
      * @return self
      */
-    public function setTenderOrLotReference($tender_or_lot_reference)
+    public function setTenderOrLotReference($tenderOrLotReference)
     {
-        if (is_null($tender_or_lot_reference)) {
-            throw new \InvalidArgumentException('non-nullable tender_or_lot_reference cannot be null');
+        if (is_null($tenderOrLotReference)) {
+            throw new \InvalidArgumentException('non-nullable tenderOrLotReference cannot be null');
         }
-        $this->container['tender_or_lot_reference'] = $tender_or_lot_reference;
+        $this->container['tenderOrLotReference'] = $tenderOrLotReference;
 
         return $this;
     }
 
     /**
-     * Gets invoiced_object_identifier
+     * Gets invoicedObjectIdentifier
      *
      * @return string|null
      */
     public function getInvoicedObjectIdentifier()
     {
-        return $this->container['invoiced_object_identifier'];
+        return $this->container['invoicedObjectIdentifier'];
     }
 
     /**
-     * Sets invoiced_object_identifier
+     * Sets invoicedObjectIdentifier
      *
-     * @param string|null $invoiced_object_identifier BT-18 Reference to a custom item, e.g. a phone number, person, contract or anything that would identify the invoice in the buyer's system BT-18 in XRechnung.
+     * @param string|null $invoicedObjectIdentifier BT-18 Reference to a custom item, e.g. a phone number, person, contract or anything that would identify the invoice in the buyer's system BT-18 in XRechnung.
      *
      * @return self
      */
-    public function setInvoicedObjectIdentifier($invoiced_object_identifier)
+    public function setInvoicedObjectIdentifier($invoicedObjectIdentifier)
     {
-        if (is_null($invoiced_object_identifier)) {
-            throw new \InvalidArgumentException('non-nullable invoiced_object_identifier cannot be null');
+        if (is_null($invoicedObjectIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable invoicedObjectIdentifier cannot be null');
         }
-        $this->container['invoiced_object_identifier'] = $invoiced_object_identifier;
+        $this->container['invoicedObjectIdentifier'] = $invoicedObjectIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets accounting_reference
+     * Gets accountingReference
      *
      * @return string|null
      */
     public function getAccountingReference()
     {
-        return $this->container['accounting_reference'];
+        return $this->container['accountingReference'];
     }
 
     /**
-     * Sets accounting_reference
+     * Sets accountingReference
      *
-     * @param string|null $accounting_reference BT-19 This is a reference for accounting, like a cost center or similar. In German, this would be a \"Kostenstelle\". BT-19 in XRechnung.
+     * @param string|null $accountingReference BT-19 This is a reference for accounting, like a cost center or similar. In German, this would be a \"Kostenstelle\". BT-19 in XRechnung.
      *
      * @return self
      */
-    public function setAccountingReference($accounting_reference)
+    public function setAccountingReference($accountingReference)
     {
-        if (is_null($accounting_reference)) {
-            throw new \InvalidArgumentException('non-nullable accounting_reference cannot be null');
+        if (is_null($accountingReference)) {
+            throw new \InvalidArgumentException('non-nullable accountingReference cannot be null');
         }
-        $this->container['accounting_reference'] = $accounting_reference;
+        $this->container['accountingReference'] = $accountingReference;
 
         return $this;
     }

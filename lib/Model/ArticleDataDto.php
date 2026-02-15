@@ -61,13 +61,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
-        'article_number' => 'string',
+        'articleNumber' => 'string',
         'quantity' => 'float',
-        'unit_tag' => 'string',
+        'unitTag' => 'string',
         'description' => 'string',
-        'short_text' => 'string',
-        'long_text' => 'string',
-        'html_long_text' => 'string'
+        'shortText' => 'string',
+        'longText' => 'string',
+        'htmlLongText' => 'string'
     ];
 
     /**
@@ -80,13 +80,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => 'guid',
         'name' => null,
-        'article_number' => null,
+        'articleNumber' => null,
         'quantity' => 'decimal',
-        'unit_tag' => null,
+        'unitTag' => null,
         'description' => null,
-        'short_text' => null,
-        'long_text' => null,
-        'html_long_text' => null
+        'shortText' => null,
+        'longText' => null,
+        'htmlLongText' => null
     ];
 
     /**
@@ -97,13 +97,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'name' => false,
-        'article_number' => false,
+        'articleNumber' => false,
         'quantity' => false,
-        'unit_tag' => false,
+        'unitTag' => false,
         'description' => false,
-        'short_text' => false,
-        'long_text' => false,
-        'html_long_text' => false
+        'shortText' => false,
+        'longText' => false,
+        'htmlLongText' => false
     ];
 
     /**
@@ -194,13 +194,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'article_number' => 'articleNumber',
+        'articleNumber' => 'articleNumber',
         'quantity' => 'quantity',
-        'unit_tag' => 'unitTag',
+        'unitTag' => 'unitTag',
         'description' => 'description',
-        'short_text' => 'shortText',
-        'long_text' => 'longText',
-        'html_long_text' => 'htmlLongText'
+        'shortText' => 'shortText',
+        'longText' => 'longText',
+        'htmlLongText' => 'htmlLongText'
     ];
 
     /**
@@ -211,13 +211,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'article_number' => 'setArticleNumber',
+        'articleNumber' => 'setArticleNumber',
         'quantity' => 'setQuantity',
-        'unit_tag' => 'setUnitTag',
+        'unitTag' => 'setUnitTag',
         'description' => 'setDescription',
-        'short_text' => 'setShortText',
-        'long_text' => 'setLongText',
-        'html_long_text' => 'setHtmlLongText'
+        'shortText' => 'setShortText',
+        'longText' => 'setLongText',
+        'htmlLongText' => 'setHtmlLongText'
     ];
 
     /**
@@ -228,13 +228,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'article_number' => 'getArticleNumber',
+        'articleNumber' => 'getArticleNumber',
         'quantity' => 'getQuantity',
-        'unit_tag' => 'getUnitTag',
+        'unitTag' => 'getUnitTag',
         'description' => 'getDescription',
-        'short_text' => 'getShortText',
-        'long_text' => 'getLongText',
-        'html_long_text' => 'getHtmlLongText'
+        'shortText' => 'getShortText',
+        'longText' => 'getLongText',
+        'htmlLongText' => 'getHtmlLongText'
     ];
 
     /**
@@ -296,13 +296,13 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('article_number', $data ?? [], null);
+        $this->setIfExists('articleNumber', $data ?? [], null);
         $this->setIfExists('quantity', $data ?? [], null);
-        $this->setIfExists('unit_tag', $data ?? [], null);
+        $this->setIfExists('unitTag', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('long_text', $data ?? [], null);
-        $this->setIfExists('html_long_text', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('longText', $data ?? [], null);
+        $this->setIfExists('htmlLongText', $data ?? [], null);
     }
 
     /**
@@ -408,28 +408,28 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets article_number
+     * Gets articleNumber
      *
      * @return string|null
      */
     public function getArticleNumber()
     {
-        return $this->container['article_number'];
+        return $this->container['articleNumber'];
     }
 
     /**
-     * Sets article_number
+     * Sets articleNumber
      *
-     * @param string|null $article_number An article number that describes it, useful when integrating other systems.
+     * @param string|null $articleNumber An article number that describes it, useful when integrating other systems.
      *
      * @return self
      */
-    public function setArticleNumber($article_number)
+    public function setArticleNumber($articleNumber)
     {
-        if (is_null($article_number)) {
-            throw new \InvalidArgumentException('non-nullable article_number cannot be null');
+        if (is_null($articleNumber)) {
+            throw new \InvalidArgumentException('non-nullable articleNumber cannot be null');
         }
-        $this->container['article_number'] = $article_number;
+        $this->container['articleNumber'] = $articleNumber;
 
         return $this;
     }
@@ -462,28 +462,28 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets unit_tag
+     * Gets unitTag
      *
      * @return string|null
      */
     public function getUnitTag()
     {
-        return $this->container['unit_tag'];
+        return $this->container['unitTag'];
     }
 
     /**
-     * Sets unit_tag
+     * Sets unitTag
      *
-     * @param string|null $unit_tag The unit tag for this single ArticleData.
+     * @param string|null $unitTag The unit tag for this single ArticleData.
      *
      * @return self
      */
-    public function setUnitTag($unit_tag)
+    public function setUnitTag($unitTag)
     {
-        if (is_null($unit_tag)) {
-            throw new \InvalidArgumentException('non-nullable unit_tag cannot be null');
+        if (is_null($unitTag)) {
+            throw new \InvalidArgumentException('non-nullable unitTag cannot be null');
         }
-        $this->container['unit_tag'] = $unit_tag;
+        $this->container['unitTag'] = $unitTag;
 
         return $this;
     }
@@ -516,82 +516,82 @@ class ArticleDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text Short description for this ITextElement element.
+     * @param string|null $shortText Short description for this ITextElement element.
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets long_text
+     * Gets longText
      *
      * @return string|null
      */
     public function getLongText()
     {
-        return $this->container['long_text'];
+        return $this->container['longText'];
     }
 
     /**
-     * Sets long_text
+     * Sets longText
      *
-     * @param string|null $long_text Detailed description for this ITextElement element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
+     * @param string|null $longText Detailed description for this ITextElement element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
      *
      * @return self
      */
-    public function setLongText($long_text)
+    public function setLongText($longText)
     {
-        if (is_null($long_text)) {
-            throw new \InvalidArgumentException('non-nullable long_text cannot be null');
+        if (is_null($longText)) {
+            throw new \InvalidArgumentException('non-nullable longText cannot be null');
         }
-        $this->container['long_text'] = $long_text;
+        $this->container['longText'] = $longText;
 
         return $this;
     }
 
     /**
-     * Gets html_long_text
+     * Gets htmlLongText
      *
      * @return string|null
      */
     public function getHtmlLongText()
     {
-        return $this->container['html_long_text'];
+        return $this->container['htmlLongText'];
     }
 
     /**
-     * Sets html_long_text
+     * Sets htmlLongText
      *
-     * @param string|null $html_long_text This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
+     * @param string|null $htmlLongText This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
      *
      * @return self
      */
-    public function setHtmlLongText($html_long_text)
+    public function setHtmlLongText($htmlLongText)
     {
-        if (is_null($html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable html_long_text cannot be null');
+        if (is_null($htmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable htmlLongText cannot be null');
         }
-        $this->container['html_long_text'] = $html_long_text;
+        $this->container['htmlLongText'] = $htmlLongText;
 
         return $this;
     }

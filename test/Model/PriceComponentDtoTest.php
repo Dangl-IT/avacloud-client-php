@@ -108,7 +108,7 @@ class PriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {

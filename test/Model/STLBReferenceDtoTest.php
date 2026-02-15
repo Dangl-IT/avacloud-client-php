@@ -81,7 +81,7 @@ class STLBReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "version_date"
+     * Test attribute "versionDate"
      */
     public function testPropertyVersionDate()
     {
@@ -90,7 +90,7 @@ class STLBReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_name"
+     * Test attribute "catalogueName"
      */
     public function testPropertyCatalogueName()
     {
@@ -108,7 +108,7 @@ class STLBReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "cost_group"
+     * Test attribute "costGroup"
      */
     public function testPropertyCostGroup()
     {
@@ -117,7 +117,7 @@ class STLBReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "service_area"
+     * Test attribute "serviceArea"
      */
     public function testPropertyServiceArea()
     {

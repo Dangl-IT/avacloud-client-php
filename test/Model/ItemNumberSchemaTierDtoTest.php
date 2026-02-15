@@ -108,7 +108,7 @@ class ItemNumberSchemaTierDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "tier_type"
+     * Test attribute "tierType"
      */
     public function testPropertyTierType()
     {
@@ -117,7 +117,7 @@ class ItemNumberSchemaTierDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_lot"
+     * Test attribute "isLot"
      */
     public function testPropertyIsLot()
     {
@@ -135,7 +135,7 @@ class ItemNumberSchemaTierDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "tier_name"
+     * Test attribute "tierName"
      */
     public function testPropertyTierName()
     {

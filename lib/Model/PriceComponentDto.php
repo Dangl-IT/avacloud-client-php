@@ -62,7 +62,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         'price' => 'float',
         'label' => 'string',
         'values' => '\Dangl\AVACloud\Model\CalculationDto[]',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]'
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]'
     ];
 
     /**
@@ -76,7 +76,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         'price' => 'decimal',
         'label' => null,
         'values' => null,
-        'project_catalogues' => null
+        'projectCatalogues' => null
     ];
 
     /**
@@ -88,7 +88,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         'price' => false,
         'label' => false,
         'values' => false,
-        'project_catalogues' => false
+        'projectCatalogues' => false
     ];
 
     /**
@@ -180,7 +180,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         'price' => 'price',
         'label' => 'label',
         'values' => 'values',
-        'project_catalogues' => 'projectCatalogues'
+        'projectCatalogues' => 'projectCatalogues'
     ];
 
     /**
@@ -192,7 +192,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         'price' => 'setPrice',
         'label' => 'setLabel',
         'values' => 'setValues',
-        'project_catalogues' => 'setProjectCatalogues'
+        'projectCatalogues' => 'setProjectCatalogues'
     ];
 
     /**
@@ -204,7 +204,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         'price' => 'getPrice',
         'label' => 'getLabel',
         'values' => 'getValues',
-        'project_catalogues' => 'getProjectCatalogues'
+        'projectCatalogues' => 'getProjectCatalogues'
     ];
 
     /**
@@ -267,7 +267,7 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('price', $data ?? [], null);
         $this->setIfExists('label', $data ?? [], null);
         $this->setIfExists('values', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
     }
 
     /**
@@ -397,28 +397,28 @@ class PriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues These are Catalogues that are used within this PriceComponent. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues These are Catalogues that are used within this PriceComponent. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }

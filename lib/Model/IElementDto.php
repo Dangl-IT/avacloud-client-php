@@ -44,7 +44,7 @@ use \Dangl\AVACloud\ObjectSerializer;
  */
 class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    public const DISCRIMINATOR = 'element_type_discriminator';
+    public const DISCRIMINATOR = 'elementTypeDiscriminator';
 
     /**
       * The original name of the model.
@@ -60,11 +60,11 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'gaeb_xml_id' => 'string',
-        'addendum_number' => 'string',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
-        'catalogue_references' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]',
-        'element_type_discriminator' => 'string'
+        'gaebXmlId' => 'string',
+        'addendumNumber' => 'string',
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
+        'catalogueReferences' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]',
+        'elementTypeDiscriminator' => 'string'
     ];
 
     /**
@@ -76,11 +76,11 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'gaeb_xml_id' => null,
-        'addendum_number' => null,
-        'project_catalogues' => null,
-        'catalogue_references' => null,
-        'element_type_discriminator' => null
+        'gaebXmlId' => null,
+        'addendumNumber' => null,
+        'projectCatalogues' => null,
+        'catalogueReferences' => null,
+        'elementTypeDiscriminator' => null
     ];
 
     /**
@@ -90,11 +90,11 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'gaeb_xml_id' => false,
-        'addendum_number' => false,
-        'project_catalogues' => false,
-        'catalogue_references' => false,
-        'element_type_discriminator' => false
+        'gaebXmlId' => false,
+        'addendumNumber' => false,
+        'projectCatalogues' => false,
+        'catalogueReferences' => false,
+        'elementTypeDiscriminator' => false
     ];
 
     /**
@@ -184,11 +184,11 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'gaeb_xml_id' => 'gaebXmlId',
-        'addendum_number' => 'addendumNumber',
-        'project_catalogues' => 'projectCatalogues',
-        'catalogue_references' => 'catalogueReferences',
-        'element_type_discriminator' => 'elementTypeDiscriminator'
+        'gaebXmlId' => 'gaebXmlId',
+        'addendumNumber' => 'addendumNumber',
+        'projectCatalogues' => 'projectCatalogues',
+        'catalogueReferences' => 'catalogueReferences',
+        'elementTypeDiscriminator' => 'elementTypeDiscriminator'
     ];
 
     /**
@@ -198,11 +198,11 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'gaeb_xml_id' => 'setGaebXmlId',
-        'addendum_number' => 'setAddendumNumber',
-        'project_catalogues' => 'setProjectCatalogues',
-        'catalogue_references' => 'setCatalogueReferences',
-        'element_type_discriminator' => 'setElementTypeDiscriminator'
+        'gaebXmlId' => 'setGaebXmlId',
+        'addendumNumber' => 'setAddendumNumber',
+        'projectCatalogues' => 'setProjectCatalogues',
+        'catalogueReferences' => 'setCatalogueReferences',
+        'elementTypeDiscriminator' => 'setElementTypeDiscriminator'
     ];
 
     /**
@@ -212,11 +212,11 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'gaeb_xml_id' => 'getGaebXmlId',
-        'addendum_number' => 'getAddendumNumber',
-        'project_catalogues' => 'getProjectCatalogues',
-        'catalogue_references' => 'getCatalogueReferences',
-        'element_type_discriminator' => 'getElementTypeDiscriminator'
+        'gaebXmlId' => 'getGaebXmlId',
+        'addendumNumber' => 'getAddendumNumber',
+        'projectCatalogues' => 'getProjectCatalogues',
+        'catalogueReferences' => 'getCatalogueReferences',
+        'elementTypeDiscriminator' => 'getElementTypeDiscriminator'
     ];
 
     /**
@@ -277,14 +277,14 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('gaeb_xml_id', $data ?? [], null);
-        $this->setIfExists('addendum_number', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
-        $this->setIfExists('catalogue_references', $data ?? [], null);
-        $this->setIfExists('element_type_discriminator', $data ?? [], null);
+        $this->setIfExists('gaebXmlId', $data ?? [], null);
+        $this->setIfExists('addendumNumber', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
+        $this->setIfExists('catalogueReferences', $data ?? [], null);
+        $this->setIfExists('elementTypeDiscriminator', $data ?? [], null);
 
         // Initialize discriminator property with the model name.
-        $this->container['element_type_discriminator'] = static::$openAPIModelName;
+        $this->container['elementTypeDiscriminator'] = static::$openAPIModelName;
     }
 
     /**
@@ -317,8 +317,8 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['element_type_discriminator'] === null) {
-            $invalidProperties[] = "'element_type_discriminator' can't be null";
+        if ($this->container['elementTypeDiscriminator'] === null) {
+            $invalidProperties[] = "'elementTypeDiscriminator' can't be null";
         }
         return $invalidProperties;
     }
@@ -363,136 +363,136 @@ class IElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets gaeb_xml_id
+     * Gets gaebXmlId
      *
      * @return string|null
      */
     public function getGaebXmlId()
     {
-        return $this->container['gaeb_xml_id'];
+        return $this->container['gaebXmlId'];
     }
 
     /**
-     * Sets gaeb_xml_id
+     * Sets gaebXmlId
      *
-     * @param string|null $gaeb_xml_id This is used to store the GAEB XML Id within this IElement. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
+     * @param string|null $gaebXmlId This is used to store the GAEB XML Id within this IElement. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
      *
      * @return self
      */
-    public function setGaebXmlId($gaeb_xml_id)
+    public function setGaebXmlId($gaebXmlId)
     {
-        if (is_null($gaeb_xml_id)) {
-            throw new \InvalidArgumentException('non-nullable gaeb_xml_id cannot be null');
+        if (is_null($gaebXmlId)) {
+            throw new \InvalidArgumentException('non-nullable gaebXmlId cannot be null');
         }
-        $this->container['gaeb_xml_id'] = $gaeb_xml_id;
+        $this->container['gaebXmlId'] = $gaebXmlId;
 
         return $this;
     }
 
     /**
-     * Gets addendum_number
+     * Gets addendumNumber
      *
      * @return string|null
      */
     public function getAddendumNumber()
     {
-        return $this->container['addendum_number'];
+        return $this->container['addendumNumber'];
     }
 
     /**
-     * Sets addendum_number
+     * Sets addendumNumber
      *
-     * @param string|null $addendum_number This optional string property is shared by all IElements, and indicates if the element is part of an addendum, a 'Nachtrag' in German.
+     * @param string|null $addendumNumber This optional string property is shared by all IElements, and indicates if the element is part of an addendum, a 'Nachtrag' in German.
      *
      * @return self
      */
-    public function setAddendumNumber($addendum_number)
+    public function setAddendumNumber($addendumNumber)
     {
-        if (is_null($addendum_number)) {
-            throw new \InvalidArgumentException('non-nullable addendum_number cannot be null');
+        if (is_null($addendumNumber)) {
+            throw new \InvalidArgumentException('non-nullable addendumNumber cannot be null');
         }
-        $this->container['addendum_number'] = $addendum_number;
+        $this->container['addendumNumber'] = $addendumNumber;
 
         return $this;
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues project_catalogues
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues projectCatalogues
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_references
+     * Gets catalogueReferences
      *
      * @return \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null
      */
     public function getCatalogueReferences()
     {
-        return $this->container['catalogue_references'];
+        return $this->container['catalogueReferences'];
     }
 
     /**
-     * Sets catalogue_references
+     * Sets catalogueReferences
      *
-     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogue_references catalogue_references
+     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogueReferences catalogueReferences
      *
      * @return self
      */
-    public function setCatalogueReferences($catalogue_references)
+    public function setCatalogueReferences($catalogueReferences)
     {
-        if (is_null($catalogue_references)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_references cannot be null');
+        if (is_null($catalogueReferences)) {
+            throw new \InvalidArgumentException('non-nullable catalogueReferences cannot be null');
         }
-        $this->container['catalogue_references'] = $catalogue_references;
+        $this->container['catalogueReferences'] = $catalogueReferences;
 
         return $this;
     }
 
     /**
-     * Gets element_type_discriminator
+     * Gets elementTypeDiscriminator
      *
      * @return string
      */
     public function getElementTypeDiscriminator()
     {
-        return $this->container['element_type_discriminator'];
+        return $this->container['elementTypeDiscriminator'];
     }
 
     /**
-     * Sets element_type_discriminator
+     * Sets elementTypeDiscriminator
      *
-     * @param string $element_type_discriminator element_type_discriminator
+     * @param string $elementTypeDiscriminator elementTypeDiscriminator
      *
      * @return self
      */
-    public function setElementTypeDiscriminator($element_type_discriminator)
+    public function setElementTypeDiscriminator($elementTypeDiscriminator)
     {
-        if (is_null($element_type_discriminator)) {
-            throw new \InvalidArgumentException('non-nullable element_type_discriminator cannot be null');
+        if (is_null($elementTypeDiscriminator)) {
+            throw new \InvalidArgumentException('non-nullable elementTypeDiscriminator cannot be null');
         }
-        $this->container['element_type_discriminator'] = $element_type_discriminator;
+        $this->container['elementTypeDiscriminator'] = $elementTypeDiscriminator;
 
         return $this;
     }

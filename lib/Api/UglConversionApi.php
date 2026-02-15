@@ -134,18 +134,18 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function uglConversionConvertToAva($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
+    public function uglConversionConvertToAva($uglFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
     {
-        list($response) = $this->uglConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $ugl_file, $contentType);
+        list($response) = $this->uglConversionConvertToAvaWithHttpInfo($uglFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -154,18 +154,18 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function uglConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
+    public function uglConversionConvertToAvaWithHttpInfo($uglFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
     {
-        $request = $this->uglConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $ugl_file, $contentType);
+        $request = $this->uglConversionConvertToAvaRequest($uglFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -255,17 +255,17 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uglConversionConvertToAvaAsync($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
+    public function uglConversionConvertToAvaAsync($uglFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
     {
-        return $this->uglConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $ugl_file, $contentType)
+        return $this->uglConversionConvertToAvaAsyncWithHttpInfo($uglFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -278,18 +278,18 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uglConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
+    public function uglConversionConvertToAvaAsyncWithHttpInfo($uglFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->uglConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $ugl_file, $contentType);
+        $request = $this->uglConversionConvertToAvaRequest($uglFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -330,15 +330,15 @@ class UglConversionApi
     /**
      * Create request for operation 'uglConversionConvertToAva'
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uglConversionConvertToAvaRequest($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
+    public function uglConversionConvertToAvaRequest($uglFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['uglConversionConvertToAva'][0])
     {
 
 
@@ -354,7 +354,7 @@ class UglConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -363,7 +363,7 @@ class UglConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -377,7 +377,7 @@ class UglConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'ugl_file' => $ugl_file,
+            'uglFile' => $uglFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -446,16 +446,16 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function uglConversionConvertToFlatAva($ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
+    public function uglConversionConvertToFlatAva($uglFile = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->uglConversionConvertToFlatAvaWithHttpInfo($ugl_file, $contentType);
+        list($response) = $this->uglConversionConvertToFlatAvaWithHttpInfo($uglFile, $contentType);
         return $response;
     }
 
@@ -464,16 +464,16 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function uglConversionConvertToFlatAvaWithHttpInfo($ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
+    public function uglConversionConvertToFlatAvaWithHttpInfo($uglFile = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
     {
-        $request = $this->uglConversionConvertToFlatAvaRequest($ugl_file, $contentType);
+        $request = $this->uglConversionConvertToFlatAvaRequest($uglFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -563,15 +563,15 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uglConversionConvertToFlatAvaAsync($ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
+    public function uglConversionConvertToFlatAvaAsync($uglFile = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
     {
-        return $this->uglConversionConvertToFlatAvaAsyncWithHttpInfo($ugl_file, $contentType)
+        return $this->uglConversionConvertToFlatAvaAsyncWithHttpInfo($uglFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -584,16 +584,16 @@ class UglConversionApi
      *
      * Converts Ugl files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uglConversionConvertToFlatAvaAsyncWithHttpInfo($ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
+    public function uglConversionConvertToFlatAvaAsyncWithHttpInfo($uglFile = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->uglConversionConvertToFlatAvaRequest($ugl_file, $contentType);
+        $request = $this->uglConversionConvertToFlatAvaRequest($uglFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -634,13 +634,13 @@ class UglConversionApi
     /**
      * Create request for operation 'uglConversionConvertToFlatAva'
      *
-     * @param  \SplFileObject|null $ugl_file The input file (optional)
+     * @param  \SplFileObject|null $uglFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uglConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uglConversionConvertToFlatAvaRequest($ugl_file = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
+    public function uglConversionConvertToFlatAvaRequest($uglFile = null, string $contentType = self::contentTypes['uglConversionConvertToFlatAva'][0])
     {
 
 
@@ -659,7 +659,7 @@ class UglConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'ugl_file' => $ugl_file,
+            'uglFile' => $uglFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

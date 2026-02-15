@@ -134,18 +134,18 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function datanormConversionConvertToAva($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
+    public function datanormConversionConvertToAva($datanormFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
     {
-        list($response) = $this->datanormConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $datanorm_file, $contentType);
+        list($response) = $this->datanormConversionConvertToAvaWithHttpInfo($datanormFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -154,18 +154,18 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function datanormConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
+    public function datanormConversionConvertToAvaWithHttpInfo($datanormFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
     {
-        $request = $this->datanormConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $datanorm_file, $contentType);
+        $request = $this->datanormConversionConvertToAvaRequest($datanormFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -255,17 +255,17 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function datanormConversionConvertToAvaAsync($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
+    public function datanormConversionConvertToAvaAsync($datanormFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
     {
-        return $this->datanormConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $datanorm_file, $contentType)
+        return $this->datanormConversionConvertToAvaAsyncWithHttpInfo($datanormFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -278,18 +278,18 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function datanormConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
+    public function datanormConversionConvertToAvaAsyncWithHttpInfo($datanormFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->datanormConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $datanorm_file, $contentType);
+        $request = $this->datanormConversionConvertToAvaRequest($datanormFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -330,15 +330,15 @@ class DatanormConversionApi
     /**
      * Create request for operation 'datanormConversionConvertToAva'
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function datanormConversionConvertToAvaRequest($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
+    public function datanormConversionConvertToAvaRequest($datanormFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['datanormConversionConvertToAva'][0])
     {
 
 
@@ -354,7 +354,7 @@ class DatanormConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -363,7 +363,7 @@ class DatanormConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -377,7 +377,7 @@ class DatanormConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'datanorm_file' => $datanorm_file,
+            'datanormFile' => $datanormFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -446,16 +446,16 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function datanormConversionConvertToFlatAva($datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
+    public function datanormConversionConvertToFlatAva($datanormFile = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->datanormConversionConvertToFlatAvaWithHttpInfo($datanorm_file, $contentType);
+        list($response) = $this->datanormConversionConvertToFlatAvaWithHttpInfo($datanormFile, $contentType);
         return $response;
     }
 
@@ -464,16 +464,16 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function datanormConversionConvertToFlatAvaWithHttpInfo($datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
+    public function datanormConversionConvertToFlatAvaWithHttpInfo($datanormFile = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
     {
-        $request = $this->datanormConversionConvertToFlatAvaRequest($datanorm_file, $contentType);
+        $request = $this->datanormConversionConvertToFlatAvaRequest($datanormFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -563,15 +563,15 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function datanormConversionConvertToFlatAvaAsync($datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
+    public function datanormConversionConvertToFlatAvaAsync($datanormFile = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
     {
-        return $this->datanormConversionConvertToFlatAvaAsyncWithHttpInfo($datanorm_file, $contentType)
+        return $this->datanormConversionConvertToFlatAvaAsyncWithHttpInfo($datanormFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -584,16 +584,16 @@ class DatanormConversionApi
      *
      * Converts Datanorm files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function datanormConversionConvertToFlatAvaAsyncWithHttpInfo($datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
+    public function datanormConversionConvertToFlatAvaAsyncWithHttpInfo($datanormFile = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->datanormConversionConvertToFlatAvaRequest($datanorm_file, $contentType);
+        $request = $this->datanormConversionConvertToFlatAvaRequest($datanormFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -634,13 +634,13 @@ class DatanormConversionApi
     /**
      * Create request for operation 'datanormConversionConvertToFlatAva'
      *
-     * @param  \SplFileObject|null $datanorm_file The input file (optional)
+     * @param  \SplFileObject|null $datanormFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['datanormConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function datanormConversionConvertToFlatAvaRequest($datanorm_file = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
+    public function datanormConversionConvertToFlatAvaRequest($datanormFile = null, string $contentType = self::contentTypes['datanormConversionConvertToFlatAva'][0])
     {
 
 
@@ -659,7 +659,7 @@ class DatanormConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'datanorm_file' => $datanorm_file,
+            'datanormFile' => $datanormFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

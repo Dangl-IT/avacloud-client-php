@@ -60,10 +60,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'description' => 'string',
-        'payment_type_code' => 'string',
-        'payment_type' => '\Dangl\AVACloud\Model\PaymentType',
-        'payment_creditor_identifier' => 'string',
-        'payment_means' => '\Dangl\AVACloud\Model\PaymentMeans[]'
+        'paymentTypeCode' => 'string',
+        'paymentType' => '\Dangl\AVACloud\Model\PaymentType',
+        'paymentCreditorIdentifier' => 'string',
+        'paymentMeans' => '\Dangl\AVACloud\Model\PaymentMeans[]'
     ];
 
     /**
@@ -75,10 +75,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'description' => null,
-        'payment_type_code' => null,
-        'payment_type' => null,
-        'payment_creditor_identifier' => null,
-        'payment_means' => null
+        'paymentTypeCode' => null,
+        'paymentType' => null,
+        'paymentCreditorIdentifier' => null,
+        'paymentMeans' => null
     ];
 
     /**
@@ -88,10 +88,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'description' => false,
-        'payment_type_code' => false,
-        'payment_type' => false,
-        'payment_creditor_identifier' => false,
-        'payment_means' => false
+        'paymentTypeCode' => false,
+        'paymentType' => false,
+        'paymentCreditorIdentifier' => false,
+        'paymentMeans' => false
     ];
 
     /**
@@ -181,10 +181,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'description' => 'description',
-        'payment_type_code' => 'paymentTypeCode',
-        'payment_type' => 'paymentType',
-        'payment_creditor_identifier' => 'paymentCreditorIdentifier',
-        'payment_means' => 'paymentMeans'
+        'paymentTypeCode' => 'paymentTypeCode',
+        'paymentType' => 'paymentType',
+        'paymentCreditorIdentifier' => 'paymentCreditorIdentifier',
+        'paymentMeans' => 'paymentMeans'
     ];
 
     /**
@@ -194,10 +194,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'description' => 'setDescription',
-        'payment_type_code' => 'setPaymentTypeCode',
-        'payment_type' => 'setPaymentType',
-        'payment_creditor_identifier' => 'setPaymentCreditorIdentifier',
-        'payment_means' => 'setPaymentMeans'
+        'paymentTypeCode' => 'setPaymentTypeCode',
+        'paymentType' => 'setPaymentType',
+        'paymentCreditorIdentifier' => 'setPaymentCreditorIdentifier',
+        'paymentMeans' => 'setPaymentMeans'
     ];
 
     /**
@@ -207,10 +207,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'description' => 'getDescription',
-        'payment_type_code' => 'getPaymentTypeCode',
-        'payment_type' => 'getPaymentType',
-        'payment_creditor_identifier' => 'getPaymentCreditorIdentifier',
-        'payment_means' => 'getPaymentMeans'
+        'paymentTypeCode' => 'getPaymentTypeCode',
+        'paymentType' => 'getPaymentType',
+        'paymentCreditorIdentifier' => 'getPaymentCreditorIdentifier',
+        'paymentMeans' => 'getPaymentMeans'
     ];
 
     /**
@@ -271,10 +271,10 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(?array $data = null)
     {
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('payment_type_code', $data ?? [], null);
-        $this->setIfExists('payment_type', $data ?? [], null);
-        $this->setIfExists('payment_creditor_identifier', $data ?? [], null);
-        $this->setIfExists('payment_means', $data ?? [], null);
+        $this->setIfExists('paymentTypeCode', $data ?? [], null);
+        $this->setIfExists('paymentType', $data ?? [], null);
+        $this->setIfExists('paymentCreditorIdentifier', $data ?? [], null);
+        $this->setIfExists('paymentMeans', $data ?? [], null);
     }
 
     /**
@@ -347,109 +347,109 @@ class PaymentInstructions implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets payment_type_code
+     * Gets paymentTypeCode
      *
      * @return string|null
      */
     public function getPaymentTypeCode()
     {
-        return $this->container['payment_type_code'];
+        return $this->container['paymentTypeCode'];
     }
 
     /**
-     * Sets payment_type_code
+     * Sets paymentTypeCode
      *
-     * @param string|null $payment_type_code BT-81 This should be a code according to UNCL 4461 to identify the type of payment. For example, code \"58\" means SEPA Credit Transfer, and code \"30\" means non-SEPA Credit Transfer. See this list: https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/
+     * @param string|null $paymentTypeCode BT-81 This should be a code according to UNCL 4461 to identify the type of payment. For example, code \"58\" means SEPA Credit Transfer, and code \"30\" means non-SEPA Credit Transfer. See this list: https://docs.peppol.eu/poacc/billing/3.0/codelist/UNCL4461/
      *
      * @return self
      */
-    public function setPaymentTypeCode($payment_type_code)
+    public function setPaymentTypeCode($paymentTypeCode)
     {
-        if (is_null($payment_type_code)) {
-            throw new \InvalidArgumentException('non-nullable payment_type_code cannot be null');
+        if (is_null($paymentTypeCode)) {
+            throw new \InvalidArgumentException('non-nullable paymentTypeCode cannot be null');
         }
-        $this->container['payment_type_code'] = $payment_type_code;
+        $this->container['paymentTypeCode'] = $paymentTypeCode;
 
         return $this;
     }
 
     /**
-     * Gets payment_type
+     * Gets paymentType
      *
      * @return \Dangl\AVACloud\Model\PaymentType|null
      */
     public function getPaymentType()
     {
-        return $this->container['payment_type'];
+        return $this->container['paymentType'];
     }
 
     /**
-     * Sets payment_type
+     * Sets paymentType
      *
-     * @param \Dangl\AVACloud\Model\PaymentType|null $payment_type payment_type
+     * @param \Dangl\AVACloud\Model\PaymentType|null $paymentType paymentType
      *
      * @return self
      */
-    public function setPaymentType($payment_type)
+    public function setPaymentType($paymentType)
     {
-        if (is_null($payment_type)) {
-            throw new \InvalidArgumentException('non-nullable payment_type cannot be null');
+        if (is_null($paymentType)) {
+            throw new \InvalidArgumentException('non-nullable paymentType cannot be null');
         }
-        $this->container['payment_type'] = $payment_type;
+        $this->container['paymentType'] = $paymentType;
 
         return $this;
     }
 
     /**
-     * Gets payment_creditor_identifier
+     * Gets paymentCreditorIdentifier
      *
      * @return string|null
      */
     public function getPaymentCreditorIdentifier()
     {
-        return $this->container['payment_creditor_identifier'];
+        return $this->container['paymentCreditorIdentifier'];
     }
 
     /**
-     * Sets payment_creditor_identifier
+     * Sets paymentCreditorIdentifier
      *
-     * @param string|null $payment_creditor_identifier BT-90 If a SEPA direct debit payment mean is used, then this reference should be provided. It's the creditor identifier in SEPA, in German \"Gläubiger-Identifikationsnummer\". Field BT-90 in XRechnung.
+     * @param string|null $paymentCreditorIdentifier BT-90 If a SEPA direct debit payment mean is used, then this reference should be provided. It's the creditor identifier in SEPA, in German \"Gläubiger-Identifikationsnummer\". Field BT-90 in XRechnung.
      *
      * @return self
      */
-    public function setPaymentCreditorIdentifier($payment_creditor_identifier)
+    public function setPaymentCreditorIdentifier($paymentCreditorIdentifier)
     {
-        if (is_null($payment_creditor_identifier)) {
-            throw new \InvalidArgumentException('non-nullable payment_creditor_identifier cannot be null');
+        if (is_null($paymentCreditorIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable paymentCreditorIdentifier cannot be null');
         }
-        $this->container['payment_creditor_identifier'] = $payment_creditor_identifier;
+        $this->container['paymentCreditorIdentifier'] = $paymentCreditorIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets payment_means
+     * Gets paymentMeans
      *
      * @return \Dangl\AVACloud\Model\PaymentMeans[]|null
      */
     public function getPaymentMeans()
     {
-        return $this->container['payment_means'];
+        return $this->container['paymentMeans'];
     }
 
     /**
-     * Sets payment_means
+     * Sets paymentMeans
      *
-     * @param \Dangl\AVACloud\Model\PaymentMeans[]|null $payment_means BG-16 A list of payment means that can be used to pay the invoice.
+     * @param \Dangl\AVACloud\Model\PaymentMeans[]|null $paymentMeans BG-16 A list of payment means that can be used to pay the invoice.
      *
      * @return self
      */
-    public function setPaymentMeans($payment_means)
+    public function setPaymentMeans($paymentMeans)
     {
-        if (is_null($payment_means)) {
-            throw new \InvalidArgumentException('non-nullable payment_means cannot be null');
+        if (is_null($paymentMeans)) {
+            throw new \InvalidArgumentException('non-nullable paymentMeans cannot be null');
         }
-        $this->container['payment_means'] = $payment_means;
+        $this->container['paymentMeans'] = $paymentMeans;
 
         return $this;
     }

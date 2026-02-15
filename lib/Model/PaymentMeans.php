@@ -59,15 +59,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'account_identifier' => 'string',
-        'account_name' => 'string',
-        'service_provider_identifier' => 'string',
-        'direct_debit_mandate_id' => 'string',
-        'direct_debit_iban' => 'string',
-        'payment_id' => 'string',
-        'payment_card_holder_name' => 'string',
-        'payment_card_primary_account_number' => 'string',
-        'payment_card_network_id' => 'string'
+        'accountIdentifier' => 'string',
+        'accountName' => 'string',
+        'serviceProviderIdentifier' => 'string',
+        'directDebitMandateId' => 'string',
+        'directDebitIban' => 'string',
+        'paymentId' => 'string',
+        'paymentCardHolderName' => 'string',
+        'paymentCardPrimaryAccountNumber' => 'string',
+        'paymentCardNetworkId' => 'string'
     ];
 
     /**
@@ -78,15 +78,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'account_identifier' => null,
-        'account_name' => null,
-        'service_provider_identifier' => null,
-        'direct_debit_mandate_id' => null,
-        'direct_debit_iban' => null,
-        'payment_id' => null,
-        'payment_card_holder_name' => null,
-        'payment_card_primary_account_number' => null,
-        'payment_card_network_id' => null
+        'accountIdentifier' => null,
+        'accountName' => null,
+        'serviceProviderIdentifier' => null,
+        'directDebitMandateId' => null,
+        'directDebitIban' => null,
+        'paymentId' => null,
+        'paymentCardHolderName' => null,
+        'paymentCardPrimaryAccountNumber' => null,
+        'paymentCardNetworkId' => null
     ];
 
     /**
@@ -95,15 +95,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'account_identifier' => false,
-        'account_name' => false,
-        'service_provider_identifier' => false,
-        'direct_debit_mandate_id' => false,
-        'direct_debit_iban' => false,
-        'payment_id' => false,
-        'payment_card_holder_name' => false,
-        'payment_card_primary_account_number' => false,
-        'payment_card_network_id' => false
+        'accountIdentifier' => false,
+        'accountName' => false,
+        'serviceProviderIdentifier' => false,
+        'directDebitMandateId' => false,
+        'directDebitIban' => false,
+        'paymentId' => false,
+        'paymentCardHolderName' => false,
+        'paymentCardPrimaryAccountNumber' => false,
+        'paymentCardNetworkId' => false
     ];
 
     /**
@@ -192,15 +192,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'account_identifier' => 'accountIdentifier',
-        'account_name' => 'accountName',
-        'service_provider_identifier' => 'serviceProviderIdentifier',
-        'direct_debit_mandate_id' => 'directDebitMandateId',
-        'direct_debit_iban' => 'directDebitIban',
-        'payment_id' => 'paymentId',
-        'payment_card_holder_name' => 'paymentCardHolderName',
-        'payment_card_primary_account_number' => 'paymentCardPrimaryAccountNumber',
-        'payment_card_network_id' => 'paymentCardNetworkId'
+        'accountIdentifier' => 'accountIdentifier',
+        'accountName' => 'accountName',
+        'serviceProviderIdentifier' => 'serviceProviderIdentifier',
+        'directDebitMandateId' => 'directDebitMandateId',
+        'directDebitIban' => 'directDebitIban',
+        'paymentId' => 'paymentId',
+        'paymentCardHolderName' => 'paymentCardHolderName',
+        'paymentCardPrimaryAccountNumber' => 'paymentCardPrimaryAccountNumber',
+        'paymentCardNetworkId' => 'paymentCardNetworkId'
     ];
 
     /**
@@ -209,15 +209,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'account_identifier' => 'setAccountIdentifier',
-        'account_name' => 'setAccountName',
-        'service_provider_identifier' => 'setServiceProviderIdentifier',
-        'direct_debit_mandate_id' => 'setDirectDebitMandateId',
-        'direct_debit_iban' => 'setDirectDebitIban',
-        'payment_id' => 'setPaymentId',
-        'payment_card_holder_name' => 'setPaymentCardHolderName',
-        'payment_card_primary_account_number' => 'setPaymentCardPrimaryAccountNumber',
-        'payment_card_network_id' => 'setPaymentCardNetworkId'
+        'accountIdentifier' => 'setAccountIdentifier',
+        'accountName' => 'setAccountName',
+        'serviceProviderIdentifier' => 'setServiceProviderIdentifier',
+        'directDebitMandateId' => 'setDirectDebitMandateId',
+        'directDebitIban' => 'setDirectDebitIban',
+        'paymentId' => 'setPaymentId',
+        'paymentCardHolderName' => 'setPaymentCardHolderName',
+        'paymentCardPrimaryAccountNumber' => 'setPaymentCardPrimaryAccountNumber',
+        'paymentCardNetworkId' => 'setPaymentCardNetworkId'
     ];
 
     /**
@@ -226,15 +226,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'account_identifier' => 'getAccountIdentifier',
-        'account_name' => 'getAccountName',
-        'service_provider_identifier' => 'getServiceProviderIdentifier',
-        'direct_debit_mandate_id' => 'getDirectDebitMandateId',
-        'direct_debit_iban' => 'getDirectDebitIban',
-        'payment_id' => 'getPaymentId',
-        'payment_card_holder_name' => 'getPaymentCardHolderName',
-        'payment_card_primary_account_number' => 'getPaymentCardPrimaryAccountNumber',
-        'payment_card_network_id' => 'getPaymentCardNetworkId'
+        'accountIdentifier' => 'getAccountIdentifier',
+        'accountName' => 'getAccountName',
+        'serviceProviderIdentifier' => 'getServiceProviderIdentifier',
+        'directDebitMandateId' => 'getDirectDebitMandateId',
+        'directDebitIban' => 'getDirectDebitIban',
+        'paymentId' => 'getPaymentId',
+        'paymentCardHolderName' => 'getPaymentCardHolderName',
+        'paymentCardPrimaryAccountNumber' => 'getPaymentCardPrimaryAccountNumber',
+        'paymentCardNetworkId' => 'getPaymentCardNetworkId'
     ];
 
     /**
@@ -294,15 +294,15 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('account_identifier', $data ?? [], null);
-        $this->setIfExists('account_name', $data ?? [], null);
-        $this->setIfExists('service_provider_identifier', $data ?? [], null);
-        $this->setIfExists('direct_debit_mandate_id', $data ?? [], null);
-        $this->setIfExists('direct_debit_iban', $data ?? [], null);
-        $this->setIfExists('payment_id', $data ?? [], null);
-        $this->setIfExists('payment_card_holder_name', $data ?? [], null);
-        $this->setIfExists('payment_card_primary_account_number', $data ?? [], null);
-        $this->setIfExists('payment_card_network_id', $data ?? [], null);
+        $this->setIfExists('accountIdentifier', $data ?? [], null);
+        $this->setIfExists('accountName', $data ?? [], null);
+        $this->setIfExists('serviceProviderIdentifier', $data ?? [], null);
+        $this->setIfExists('directDebitMandateId', $data ?? [], null);
+        $this->setIfExists('directDebitIban', $data ?? [], null);
+        $this->setIfExists('paymentId', $data ?? [], null);
+        $this->setIfExists('paymentCardHolderName', $data ?? [], null);
+        $this->setIfExists('paymentCardPrimaryAccountNumber', $data ?? [], null);
+        $this->setIfExists('paymentCardNetworkId', $data ?? [], null);
     }
 
     /**
@@ -348,244 +348,244 @@ class PaymentMeans implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets account_identifier
+     * Gets accountIdentifier
      *
      * @return string|null
      */
     public function getAccountIdentifier()
     {
-        return $this->container['account_identifier'];
+        return $this->container['accountIdentifier'];
     }
 
     /**
-     * Sets account_identifier
+     * Sets accountIdentifier
      *
-     * @param string|null $account_identifier BT-84 This is typically the IBAN or account number BT-84 in XRechnung.
+     * @param string|null $accountIdentifier BT-84 This is typically the IBAN or account number BT-84 in XRechnung.
      *
      * @return self
      */
-    public function setAccountIdentifier($account_identifier)
+    public function setAccountIdentifier($accountIdentifier)
     {
-        if (is_null($account_identifier)) {
-            throw new \InvalidArgumentException('non-nullable account_identifier cannot be null');
+        if (is_null($accountIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable accountIdentifier cannot be null');
         }
-        $this->container['account_identifier'] = $account_identifier;
+        $this->container['accountIdentifier'] = $accountIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets account_name
+     * Gets accountName
      *
      * @return string|null
      */
     public function getAccountName()
     {
-        return $this->container['account_name'];
+        return $this->container['accountName'];
     }
 
     /**
-     * Sets account_name
+     * Sets accountName
      *
-     * @param string|null $account_name BT-85 The name for the account, typically the name of the owner for a bank account. BT-85 in XRechnung.
+     * @param string|null $accountName BT-85 The name for the account, typically the name of the owner for a bank account. BT-85 in XRechnung.
      *
      * @return self
      */
-    public function setAccountName($account_name)
+    public function setAccountName($accountName)
     {
-        if (is_null($account_name)) {
-            throw new \InvalidArgumentException('non-nullable account_name cannot be null');
+        if (is_null($accountName)) {
+            throw new \InvalidArgumentException('non-nullable accountName cannot be null');
         }
-        $this->container['account_name'] = $account_name;
+        $this->container['accountName'] = $accountName;
 
         return $this;
     }
 
     /**
-     * Gets service_provider_identifier
+     * Gets serviceProviderIdentifier
      *
      * @return string|null
      */
     public function getServiceProviderIdentifier()
     {
-        return $this->container['service_provider_identifier'];
+        return $this->container['serviceProviderIdentifier'];
     }
 
     /**
-     * Sets service_provider_identifier
+     * Sets serviceProviderIdentifier
      *
-     * @param string|null $service_provider_identifier BT-86 This can be the BIC BT-86 in XRechnung. This will be saved in BG-17.
+     * @param string|null $serviceProviderIdentifier BT-86 This can be the BIC BT-86 in XRechnung. This will be saved in BG-17.
      *
      * @return self
      */
-    public function setServiceProviderIdentifier($service_provider_identifier)
+    public function setServiceProviderIdentifier($serviceProviderIdentifier)
     {
-        if (is_null($service_provider_identifier)) {
-            throw new \InvalidArgumentException('non-nullable service_provider_identifier cannot be null');
+        if (is_null($serviceProviderIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable serviceProviderIdentifier cannot be null');
         }
-        $this->container['service_provider_identifier'] = $service_provider_identifier;
+        $this->container['serviceProviderIdentifier'] = $serviceProviderIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets direct_debit_mandate_id
+     * Gets directDebitMandateId
      *
      * @return string|null
      */
     public function getDirectDebitMandateId()
     {
-        return $this->container['direct_debit_mandate_id'];
+        return $this->container['directDebitMandateId'];
     }
 
     /**
-     * Sets direct_debit_mandate_id
+     * Sets directDebitMandateId
      *
-     * @param string|null $direct_debit_mandate_id BT-89 If used, this is the mandate id for direct debit under which the direct debit will be performed BT-89 in XRechnung. This will be saved in BG-19.
+     * @param string|null $directDebitMandateId BT-89 If used, this is the mandate id for direct debit under which the direct debit will be performed BT-89 in XRechnung. This will be saved in BG-19.
      *
      * @return self
      */
-    public function setDirectDebitMandateId($direct_debit_mandate_id)
+    public function setDirectDebitMandateId($directDebitMandateId)
     {
-        if (is_null($direct_debit_mandate_id)) {
-            throw new \InvalidArgumentException('non-nullable direct_debit_mandate_id cannot be null');
+        if (is_null($directDebitMandateId)) {
+            throw new \InvalidArgumentException('non-nullable directDebitMandateId cannot be null');
         }
-        $this->container['direct_debit_mandate_id'] = $direct_debit_mandate_id;
+        $this->container['directDebitMandateId'] = $directDebitMandateId;
 
         return $this;
     }
 
     /**
-     * Gets direct_debit_iban
+     * Gets directDebitIban
      *
      * @return string|null
      */
     public function getDirectDebitIban()
     {
-        return $this->container['direct_debit_iban'];
+        return $this->container['directDebitIban'];
     }
 
     /**
-     * Sets direct_debit_iban
+     * Sets directDebitIban
      *
-     * @param string|null $direct_debit_iban BT-91 If used, this is the IBAN for direct debit BT-91 in XRechnung.
+     * @param string|null $directDebitIban BT-91 If used, this is the IBAN for direct debit BT-91 in XRechnung.
      *
      * @return self
      */
-    public function setDirectDebitIban($direct_debit_iban)
+    public function setDirectDebitIban($directDebitIban)
     {
-        if (is_null($direct_debit_iban)) {
-            throw new \InvalidArgumentException('non-nullable direct_debit_iban cannot be null');
+        if (is_null($directDebitIban)) {
+            throw new \InvalidArgumentException('non-nullable directDebitIban cannot be null');
         }
-        $this->container['direct_debit_iban'] = $direct_debit_iban;
+        $this->container['directDebitIban'] = $directDebitIban;
 
         return $this;
     }
 
     /**
-     * Gets payment_id
+     * Gets paymentId
      *
      * @return string|null
      */
     public function getPaymentId()
     {
-        return $this->container['payment_id'];
+        return $this->container['paymentId'];
     }
 
     /**
-     * Sets payment_id
+     * Sets paymentId
      *
-     * @param string|null $payment_id BT-83 The payment id, e.g. a reference number for the payment. In German, this would be called \"Verwendungszweck\". BT-83 in XRechnung.
+     * @param string|null $paymentId BT-83 The payment id, e.g. a reference number for the payment. In German, this would be called \"Verwendungszweck\". BT-83 in XRechnung.
      *
      * @return self
      */
-    public function setPaymentId($payment_id)
+    public function setPaymentId($paymentId)
     {
-        if (is_null($payment_id)) {
-            throw new \InvalidArgumentException('non-nullable payment_id cannot be null');
+        if (is_null($paymentId)) {
+            throw new \InvalidArgumentException('non-nullable paymentId cannot be null');
         }
-        $this->container['payment_id'] = $payment_id;
+        $this->container['paymentId'] = $paymentId;
 
         return $this;
     }
 
     /**
-     * Gets payment_card_holder_name
+     * Gets paymentCardHolderName
      *
      * @return string|null
      */
     public function getPaymentCardHolderName()
     {
-        return $this->container['payment_card_holder_name'];
+        return $this->container['paymentCardHolderName'];
     }
 
     /**
-     * Sets payment_card_holder_name
+     * Sets paymentCardHolderName
      *
-     * @param string|null $payment_card_holder_name BT-88 If this is a card payment, then this is the name of the cardholder. BT-88 in XRechnung.
+     * @param string|null $paymentCardHolderName BT-88 If this is a card payment, then this is the name of the cardholder. BT-88 in XRechnung.
      *
      * @return self
      */
-    public function setPaymentCardHolderName($payment_card_holder_name)
+    public function setPaymentCardHolderName($paymentCardHolderName)
     {
-        if (is_null($payment_card_holder_name)) {
-            throw new \InvalidArgumentException('non-nullable payment_card_holder_name cannot be null');
+        if (is_null($paymentCardHolderName)) {
+            throw new \InvalidArgumentException('non-nullable paymentCardHolderName cannot be null');
         }
-        $this->container['payment_card_holder_name'] = $payment_card_holder_name;
+        $this->container['paymentCardHolderName'] = $paymentCardHolderName;
 
         return $this;
     }
 
     /**
-     * Gets payment_card_primary_account_number
+     * Gets paymentCardPrimaryAccountNumber
      *
      * @return string|null
      */
     public function getPaymentCardPrimaryAccountNumber()
     {
-        return $this->container['payment_card_primary_account_number'];
+        return $this->container['paymentCardPrimaryAccountNumber'];
     }
 
     /**
-     * Sets payment_card_primary_account_number
+     * Sets paymentCardPrimaryAccountNumber
      *
-     * @param string|null $payment_card_primary_account_number BT-87 If this is a card payment, then this is the type of card. BT-87 in XRechnung. This will be saved in BG-18.
+     * @param string|null $paymentCardPrimaryAccountNumber BT-87 If this is a card payment, then this is the type of card. BT-87 in XRechnung. This will be saved in BG-18.
      *
      * @return self
      */
-    public function setPaymentCardPrimaryAccountNumber($payment_card_primary_account_number)
+    public function setPaymentCardPrimaryAccountNumber($paymentCardPrimaryAccountNumber)
     {
-        if (is_null($payment_card_primary_account_number)) {
-            throw new \InvalidArgumentException('non-nullable payment_card_primary_account_number cannot be null');
+        if (is_null($paymentCardPrimaryAccountNumber)) {
+            throw new \InvalidArgumentException('non-nullable paymentCardPrimaryAccountNumber cannot be null');
         }
-        $this->container['payment_card_primary_account_number'] = $payment_card_primary_account_number;
+        $this->container['paymentCardPrimaryAccountNumber'] = $paymentCardPrimaryAccountNumber;
 
         return $this;
     }
 
     /**
-     * Gets payment_card_network_id
+     * Gets paymentCardNetworkId
      *
      * @return string|null
      */
     public function getPaymentCardNetworkId()
     {
-        return $this->container['payment_card_network_id'];
+        return $this->container['paymentCardNetworkId'];
     }
 
     /**
-     * Sets payment_card_network_id
+     * Sets paymentCardNetworkId
      *
-     * @param string|null $payment_card_network_id If this is a card payment, then this is the type of card. This has no mapping yet in XRechnung, see: https://github.com/itplr-kosit/validator-configuration-xrechnung/issues/53
+     * @param string|null $paymentCardNetworkId If this is a card payment, then this is the type of card. This has no mapping yet in XRechnung, see: https://github.com/itplr-kosit/validator-configuration-xrechnung/issues/53
      *
      * @return self
      */
-    public function setPaymentCardNetworkId($payment_card_network_id)
+    public function setPaymentCardNetworkId($paymentCardNetworkId)
     {
-        if (is_null($payment_card_network_id)) {
-            throw new \InvalidArgumentException('non-nullable payment_card_network_id cannot be null');
+        if (is_null($paymentCardNetworkId)) {
+            throw new \InvalidArgumentException('non-nullable paymentCardNetworkId cannot be null');
         }
-        $this->container['payment_card_network_id'] = $payment_card_network_id;
+        $this->container['paymentCardNetworkId'] = $paymentCardNetworkId;
 
         return $this;
     }

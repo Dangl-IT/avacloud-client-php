@@ -137,17 +137,17 @@ class ValidationApi
      *
      * This endpoint validates AVA files, typically GAEB or ÖNorm. The type of file needs to be provided as a query parameter, since there is no auto detection of the uploaded file type.
      *
-     * @param  string|null $file_validation_source_type You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
-     * @param  \SplFileObject|null $ava_file The file to validate (optional)
+     * @param  \SplFileObject|null $avaFile The file to validate (optional)
+     * @param  string|null $fileValidationSourceType You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateFile'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\Dangl\AVACloud\Model\ValidationResult
      */
-    public function validationValidateFile($file_validation_source_type = null, $ava_file = null, string $contentType = self::contentTypes['validationValidateFile'][0])
+    public function validationValidateFile($avaFile = null, $fileValidationSourceType = null, string $contentType = self::contentTypes['validationValidateFile'][0])
     {
-        list($response) = $this->validationValidateFileWithHttpInfo($file_validation_source_type, $ava_file, $contentType);
+        list($response) = $this->validationValidateFileWithHttpInfo($avaFile, $fileValidationSourceType, $contentType);
         return $response;
     }
 
@@ -156,17 +156,17 @@ class ValidationApi
      *
      * This endpoint validates AVA files, typically GAEB or ÖNorm. The type of file needs to be provided as a query parameter, since there is no auto detection of the uploaded file type.
      *
-     * @param  string|null $file_validation_source_type You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
-     * @param  \SplFileObject|null $ava_file The file to validate (optional)
+     * @param  \SplFileObject|null $avaFile The file to validate (optional)
+     * @param  string|null $fileValidationSourceType You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateFile'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\Dangl\AVACloud\Model\ValidationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function validationValidateFileWithHttpInfo($file_validation_source_type = null, $ava_file = null, string $contentType = self::contentTypes['validationValidateFile'][0])
+    public function validationValidateFileWithHttpInfo($avaFile = null, $fileValidationSourceType = null, string $contentType = self::contentTypes['validationValidateFile'][0])
     {
-        $request = $this->validationValidateFileRequest($file_validation_source_type, $ava_file, $contentType);
+        $request = $this->validationValidateFileRequest($avaFile, $fileValidationSourceType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -256,16 +256,16 @@ class ValidationApi
      *
      * This endpoint validates AVA files, typically GAEB or ÖNorm. The type of file needs to be provided as a query parameter, since there is no auto detection of the uploaded file type.
      *
-     * @param  string|null $file_validation_source_type You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
-     * @param  \SplFileObject|null $ava_file The file to validate (optional)
+     * @param  \SplFileObject|null $avaFile The file to validate (optional)
+     * @param  string|null $fileValidationSourceType You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function validationValidateFileAsync($file_validation_source_type = null, $ava_file = null, string $contentType = self::contentTypes['validationValidateFile'][0])
+    public function validationValidateFileAsync($avaFile = null, $fileValidationSourceType = null, string $contentType = self::contentTypes['validationValidateFile'][0])
     {
-        return $this->validationValidateFileAsyncWithHttpInfo($file_validation_source_type, $ava_file, $contentType)
+        return $this->validationValidateFileAsyncWithHttpInfo($avaFile, $fileValidationSourceType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -278,17 +278,17 @@ class ValidationApi
      *
      * This endpoint validates AVA files, typically GAEB or ÖNorm. The type of file needs to be provided as a query parameter, since there is no auto detection of the uploaded file type.
      *
-     * @param  string|null $file_validation_source_type You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
-     * @param  \SplFileObject|null $ava_file The file to validate (optional)
+     * @param  \SplFileObject|null $avaFile The file to validate (optional)
+     * @param  string|null $fileValidationSourceType You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function validationValidateFileAsyncWithHttpInfo($file_validation_source_type = null, $ava_file = null, string $contentType = self::contentTypes['validationValidateFile'][0])
+    public function validationValidateFileAsyncWithHttpInfo($avaFile = null, $fileValidationSourceType = null, string $contentType = self::contentTypes['validationValidateFile'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ValidationResult';
-        $request = $this->validationValidateFileRequest($file_validation_source_type, $ava_file, $contentType);
+        $request = $this->validationValidateFileRequest($avaFile, $fileValidationSourceType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -329,14 +329,14 @@ class ValidationApi
     /**
      * Create request for operation 'validationValidateFile'
      *
-     * @param  string|null $file_validation_source_type You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
-     * @param  \SplFileObject|null $ava_file The file to validate (optional)
+     * @param  \SplFileObject|null $avaFile The file to validate (optional)
+     * @param  string|null $fileValidationSourceType You need to indicate which type of file is being provided, there is no auto detection mechanism (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateFile'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function validationValidateFileRequest($file_validation_source_type = null, $ava_file = null, string $contentType = self::contentTypes['validationValidateFile'][0])
+    public function validationValidateFileRequest($avaFile = null, $fileValidationSourceType = null, string $contentType = self::contentTypes['validationValidateFile'][0])
     {
 
 
@@ -351,7 +351,7 @@ class ValidationApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $file_validation_source_type,
+            $fileValidationSourceType,
             'fileValidationSourceType', // param base name
             'string', // openApiType
             '', // style
@@ -365,7 +365,7 @@ class ValidationApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'ava_file' => $ava_file,
+            'avaFile' => $avaFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -434,16 +434,16 @@ class ValidationApi
      *
      * This endpoint provides a full validation of a provided ProjectDto. It will take the given exchange phase into account and do some general project validation. Optionally, a conversion to a desired target can also be done, in which case the target file will also be validated.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $ava_project_validation_source_options The options used for the validation operation (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $avaProjectValidationSourceOptions The options used for the validation operation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateProject'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\Dangl\AVACloud\Model\ValidationResult
      */
-    public function validationValidateProject($ava_project_validation_source_options, string $contentType = self::contentTypes['validationValidateProject'][0])
+    public function validationValidateProject($avaProjectValidationSourceOptions, string $contentType = self::contentTypes['validationValidateProject'][0])
     {
-        list($response) = $this->validationValidateProjectWithHttpInfo($ava_project_validation_source_options, $contentType);
+        list($response) = $this->validationValidateProjectWithHttpInfo($avaProjectValidationSourceOptions, $contentType);
         return $response;
     }
 
@@ -452,16 +452,16 @@ class ValidationApi
      *
      * This endpoint provides a full validation of a provided ProjectDto. It will take the given exchange phase into account and do some general project validation. Optionally, a conversion to a desired target can also be done, in which case the target file will also be validated.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $ava_project_validation_source_options The options used for the validation operation (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $avaProjectValidationSourceOptions The options used for the validation operation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateProject'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\Dangl\AVACloud\Model\ValidationResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function validationValidateProjectWithHttpInfo($ava_project_validation_source_options, string $contentType = self::contentTypes['validationValidateProject'][0])
+    public function validationValidateProjectWithHttpInfo($avaProjectValidationSourceOptions, string $contentType = self::contentTypes['validationValidateProject'][0])
     {
-        $request = $this->validationValidateProjectRequest($ava_project_validation_source_options, $contentType);
+        $request = $this->validationValidateProjectRequest($avaProjectValidationSourceOptions, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -551,15 +551,15 @@ class ValidationApi
      *
      * This endpoint provides a full validation of a provided ProjectDto. It will take the given exchange phase into account and do some general project validation. Optionally, a conversion to a desired target can also be done, in which case the target file will also be validated.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $ava_project_validation_source_options The options used for the validation operation (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $avaProjectValidationSourceOptions The options used for the validation operation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateProject'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function validationValidateProjectAsync($ava_project_validation_source_options, string $contentType = self::contentTypes['validationValidateProject'][0])
+    public function validationValidateProjectAsync($avaProjectValidationSourceOptions, string $contentType = self::contentTypes['validationValidateProject'][0])
     {
-        return $this->validationValidateProjectAsyncWithHttpInfo($ava_project_validation_source_options, $contentType)
+        return $this->validationValidateProjectAsyncWithHttpInfo($avaProjectValidationSourceOptions, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -572,16 +572,16 @@ class ValidationApi
      *
      * This endpoint provides a full validation of a provided ProjectDto. It will take the given exchange phase into account and do some general project validation. Optionally, a conversion to a desired target can also be done, in which case the target file will also be validated.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $ava_project_validation_source_options The options used for the validation operation (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $avaProjectValidationSourceOptions The options used for the validation operation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateProject'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function validationValidateProjectAsyncWithHttpInfo($ava_project_validation_source_options, string $contentType = self::contentTypes['validationValidateProject'][0])
+    public function validationValidateProjectAsyncWithHttpInfo($avaProjectValidationSourceOptions, string $contentType = self::contentTypes['validationValidateProject'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ValidationResult';
-        $request = $this->validationValidateProjectRequest($ava_project_validation_source_options, $contentType);
+        $request = $this->validationValidateProjectRequest($avaProjectValidationSourceOptions, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -622,19 +622,19 @@ class ValidationApi
     /**
      * Create request for operation 'validationValidateProject'
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $ava_project_validation_source_options The options used for the validation operation (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectValidationSourceOptions $avaProjectValidationSourceOptions The options used for the validation operation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['validationValidateProject'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function validationValidateProjectRequest($ava_project_validation_source_options, string $contentType = self::contentTypes['validationValidateProject'][0])
+    public function validationValidateProjectRequest($avaProjectValidationSourceOptions, string $contentType = self::contentTypes['validationValidateProject'][0])
     {
 
-        // verify the required parameter 'ava_project_validation_source_options' is set
-        if ($ava_project_validation_source_options === null || (is_array($ava_project_validation_source_options) && count($ava_project_validation_source_options) === 0)) {
+        // verify the required parameter 'avaProjectValidationSourceOptions' is set
+        if ($avaProjectValidationSourceOptions === null || (is_array($avaProjectValidationSourceOptions) && count($avaProjectValidationSourceOptions) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $ava_project_validation_source_options when calling validationValidateProject'
+                'Missing the required parameter $avaProjectValidationSourceOptions when calling validationValidateProject'
             );
         }
 
@@ -657,12 +657,12 @@ class ValidationApi
         );
 
         // for model (json/xml)
-        if (isset($ava_project_validation_source_options)) {
+        if (isset($avaProjectValidationSourceOptions)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($ava_project_validation_source_options));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($avaProjectValidationSourceOptions));
             } else {
-                $httpBody = $ava_project_validation_source_options;
+                $httpBody = $avaProjectValidationSourceOptions;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

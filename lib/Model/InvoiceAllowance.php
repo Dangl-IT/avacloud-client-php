@@ -59,14 +59,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'net_amount' => 'float',
-        'relative_allowance_base_amount' => 'float',
-        'relative_allowance_percentage' => 'float',
-        'vat_category' => '\Dangl\AVACloud\Model\VatCategory',
-        'vat_rate' => 'float',
+        'netAmount' => 'float',
+        'relativeAllowanceBaseAmount' => 'float',
+        'relativeAllowancePercentage' => 'float',
+        'vatCategory' => '\Dangl\AVACloud\Model\VatCategory',
+        'vatRate' => 'float',
         'reason' => 'string',
-        'reason_code' => 'string',
-        'reason_type' => '\Dangl\AVACloud\Model\AllowanceReasonType'
+        'reasonCode' => 'string',
+        'reasonType' => '\Dangl\AVACloud\Model\AllowanceReasonType'
     ];
 
     /**
@@ -77,14 +77,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'net_amount' => 'decimal',
-        'relative_allowance_base_amount' => 'decimal',
-        'relative_allowance_percentage' => 'decimal',
-        'vat_category' => null,
-        'vat_rate' => 'decimal',
+        'netAmount' => 'decimal',
+        'relativeAllowanceBaseAmount' => 'decimal',
+        'relativeAllowancePercentage' => 'decimal',
+        'vatCategory' => null,
+        'vatRate' => 'decimal',
         'reason' => null,
-        'reason_code' => null,
-        'reason_type' => null
+        'reasonCode' => null,
+        'reasonType' => null
     ];
 
     /**
@@ -93,14 +93,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'net_amount' => false,
-        'relative_allowance_base_amount' => false,
-        'relative_allowance_percentage' => false,
-        'vat_category' => false,
-        'vat_rate' => false,
+        'netAmount' => false,
+        'relativeAllowanceBaseAmount' => false,
+        'relativeAllowancePercentage' => false,
+        'vatCategory' => false,
+        'vatRate' => false,
         'reason' => false,
-        'reason_code' => false,
-        'reason_type' => false
+        'reasonCode' => false,
+        'reasonType' => false
     ];
 
     /**
@@ -189,14 +189,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'net_amount' => 'netAmount',
-        'relative_allowance_base_amount' => 'relativeAllowanceBaseAmount',
-        'relative_allowance_percentage' => 'relativeAllowancePercentage',
-        'vat_category' => 'vatCategory',
-        'vat_rate' => 'vatRate',
+        'netAmount' => 'netAmount',
+        'relativeAllowanceBaseAmount' => 'relativeAllowanceBaseAmount',
+        'relativeAllowancePercentage' => 'relativeAllowancePercentage',
+        'vatCategory' => 'vatCategory',
+        'vatRate' => 'vatRate',
         'reason' => 'reason',
-        'reason_code' => 'reasonCode',
-        'reason_type' => 'reasonType'
+        'reasonCode' => 'reasonCode',
+        'reasonType' => 'reasonType'
     ];
 
     /**
@@ -205,14 +205,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'net_amount' => 'setNetAmount',
-        'relative_allowance_base_amount' => 'setRelativeAllowanceBaseAmount',
-        'relative_allowance_percentage' => 'setRelativeAllowancePercentage',
-        'vat_category' => 'setVatCategory',
-        'vat_rate' => 'setVatRate',
+        'netAmount' => 'setNetAmount',
+        'relativeAllowanceBaseAmount' => 'setRelativeAllowanceBaseAmount',
+        'relativeAllowancePercentage' => 'setRelativeAllowancePercentage',
+        'vatCategory' => 'setVatCategory',
+        'vatRate' => 'setVatRate',
         'reason' => 'setReason',
-        'reason_code' => 'setReasonCode',
-        'reason_type' => 'setReasonType'
+        'reasonCode' => 'setReasonCode',
+        'reasonType' => 'setReasonType'
     ];
 
     /**
@@ -221,14 +221,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'net_amount' => 'getNetAmount',
-        'relative_allowance_base_amount' => 'getRelativeAllowanceBaseAmount',
-        'relative_allowance_percentage' => 'getRelativeAllowancePercentage',
-        'vat_category' => 'getVatCategory',
-        'vat_rate' => 'getVatRate',
+        'netAmount' => 'getNetAmount',
+        'relativeAllowanceBaseAmount' => 'getRelativeAllowanceBaseAmount',
+        'relativeAllowancePercentage' => 'getRelativeAllowancePercentage',
+        'vatCategory' => 'getVatCategory',
+        'vatRate' => 'getVatRate',
         'reason' => 'getReason',
-        'reason_code' => 'getReasonCode',
-        'reason_type' => 'getReasonType'
+        'reasonCode' => 'getReasonCode',
+        'reasonType' => 'getReasonType'
     ];
 
     /**
@@ -288,14 +288,14 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('net_amount', $data ?? [], null);
-        $this->setIfExists('relative_allowance_base_amount', $data ?? [], null);
-        $this->setIfExists('relative_allowance_percentage', $data ?? [], null);
-        $this->setIfExists('vat_category', $data ?? [], null);
-        $this->setIfExists('vat_rate', $data ?? [], null);
+        $this->setIfExists('netAmount', $data ?? [], null);
+        $this->setIfExists('relativeAllowanceBaseAmount', $data ?? [], null);
+        $this->setIfExists('relativeAllowancePercentage', $data ?? [], null);
+        $this->setIfExists('vatCategory', $data ?? [], null);
+        $this->setIfExists('vatRate', $data ?? [], null);
         $this->setIfExists('reason', $data ?? [], null);
-        $this->setIfExists('reason_code', $data ?? [], null);
-        $this->setIfExists('reason_type', $data ?? [], null);
+        $this->setIfExists('reasonCode', $data ?? [], null);
+        $this->setIfExists('reasonType', $data ?? [], null);
     }
 
     /**
@@ -325,8 +325,8 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['vat_category'] === null) {
-            $invalidProperties[] = "'vat_category' can't be null";
+        if ($this->container['vatCategory'] === null) {
+            $invalidProperties[] = "'vatCategory' can't be null";
         }
         return $invalidProperties;
     }
@@ -344,136 +344,136 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets net_amount
+     * Gets netAmount
      *
      * @return float|null
      */
     public function getNetAmount()
     {
-        return $this->container['net_amount'];
+        return $this->container['netAmount'];
     }
 
     /**
-     * Sets net_amount
+     * Sets netAmount
      *
-     * @param float|null $net_amount BT-92 The net amount of the allowance
+     * @param float|null $netAmount BT-92 The net amount of the allowance
      *
      * @return self
      */
-    public function setNetAmount($net_amount)
+    public function setNetAmount($netAmount)
     {
-        if (is_null($net_amount)) {
-            throw new \InvalidArgumentException('non-nullable net_amount cannot be null');
+        if (is_null($netAmount)) {
+            throw new \InvalidArgumentException('non-nullable netAmount cannot be null');
         }
-        $this->container['net_amount'] = $net_amount;
+        $this->container['netAmount'] = $netAmount;
 
         return $this;
     }
 
     /**
-     * Gets relative_allowance_base_amount
+     * Gets relativeAllowanceBaseAmount
      *
      * @return float|null
      */
     public function getRelativeAllowanceBaseAmount()
     {
-        return $this->container['relative_allowance_base_amount'];
+        return $this->container['relativeAllowanceBaseAmount'];
     }
 
     /**
-     * Sets relative_allowance_base_amount
+     * Sets relativeAllowanceBaseAmount
      *
-     * @param float|null $relative_allowance_base_amount BT-93 If this is a relative / percentage allowance, this should be set and give the base amount that is being used for the calculation
+     * @param float|null $relativeAllowanceBaseAmount BT-93 If this is a relative / percentage allowance, this should be set and give the base amount that is being used for the calculation
      *
      * @return self
      */
-    public function setRelativeAllowanceBaseAmount($relative_allowance_base_amount)
+    public function setRelativeAllowanceBaseAmount($relativeAllowanceBaseAmount)
     {
-        if (is_null($relative_allowance_base_amount)) {
-            throw new \InvalidArgumentException('non-nullable relative_allowance_base_amount cannot be null');
+        if (is_null($relativeAllowanceBaseAmount)) {
+            throw new \InvalidArgumentException('non-nullable relativeAllowanceBaseAmount cannot be null');
         }
-        $this->container['relative_allowance_base_amount'] = $relative_allowance_base_amount;
+        $this->container['relativeAllowanceBaseAmount'] = $relativeAllowanceBaseAmount;
 
         return $this;
     }
 
     /**
-     * Gets relative_allowance_percentage
+     * Gets relativeAllowancePercentage
      *
      * @return float|null
      */
     public function getRelativeAllowancePercentage()
     {
-        return $this->container['relative_allowance_percentage'];
+        return $this->container['relativeAllowancePercentage'];
     }
 
     /**
-     * Sets relative_allowance_percentage
+     * Sets relativeAllowancePercentage
      *
-     * @param float|null $relative_allowance_percentage BT-94 If this is a relative / percentage allowance, this should be set and be given in decimal representation, meaning 19% would be 0.19
+     * @param float|null $relativeAllowancePercentage BT-94 If this is a relative / percentage allowance, this should be set and be given in decimal representation, meaning 19% would be 0.19
      *
      * @return self
      */
-    public function setRelativeAllowancePercentage($relative_allowance_percentage)
+    public function setRelativeAllowancePercentage($relativeAllowancePercentage)
     {
-        if (is_null($relative_allowance_percentage)) {
-            throw new \InvalidArgumentException('non-nullable relative_allowance_percentage cannot be null');
+        if (is_null($relativeAllowancePercentage)) {
+            throw new \InvalidArgumentException('non-nullable relativeAllowancePercentage cannot be null');
         }
-        $this->container['relative_allowance_percentage'] = $relative_allowance_percentage;
+        $this->container['relativeAllowancePercentage'] = $relativeAllowancePercentage;
 
         return $this;
     }
 
     /**
-     * Gets vat_category
+     * Gets vatCategory
      *
      * @return \Dangl\AVACloud\Model\VatCategory
      */
     public function getVatCategory()
     {
-        return $this->container['vat_category'];
+        return $this->container['vatCategory'];
     }
 
     /**
-     * Sets vat_category
+     * Sets vatCategory
      *
-     * @param \Dangl\AVACloud\Model\VatCategory $vat_category vat_category
+     * @param \Dangl\AVACloud\Model\VatCategory $vatCategory vatCategory
      *
      * @return self
      */
-    public function setVatCategory($vat_category)
+    public function setVatCategory($vatCategory)
     {
-        if (is_null($vat_category)) {
-            throw new \InvalidArgumentException('non-nullable vat_category cannot be null');
+        if (is_null($vatCategory)) {
+            throw new \InvalidArgumentException('non-nullable vatCategory cannot be null');
         }
-        $this->container['vat_category'] = $vat_category;
+        $this->container['vatCategory'] = $vatCategory;
 
         return $this;
     }
 
     /**
-     * Gets vat_rate
+     * Gets vatRate
      *
      * @return float|null
      */
     public function getVatRate()
     {
-        return $this->container['vat_rate'];
+        return $this->container['vatRate'];
     }
 
     /**
-     * Sets vat_rate
+     * Sets vatRate
      *
-     * @param float|null $vat_rate BT-96 The actual tax rate as a decimal value, meaning 19% would be 0.19
+     * @param float|null $vatRate BT-96 The actual tax rate as a decimal value, meaning 19% would be 0.19
      *
      * @return self
      */
-    public function setVatRate($vat_rate)
+    public function setVatRate($vatRate)
     {
-        if (is_null($vat_rate)) {
-            throw new \InvalidArgumentException('non-nullable vat_rate cannot be null');
+        if (is_null($vatRate)) {
+            throw new \InvalidArgumentException('non-nullable vatRate cannot be null');
         }
-        $this->container['vat_rate'] = $vat_rate;
+        $this->container['vatRate'] = $vatRate;
 
         return $this;
     }
@@ -506,55 +506,55 @@ class InvoiceAllowance implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets reason_code
+     * Gets reasonCode
      *
      * @return string|null
      */
     public function getReasonCode()
     {
-        return $this->container['reason_code'];
+        return $this->container['reasonCode'];
     }
 
     /**
-     * Sets reason_code
+     * Sets reasonCode
      *
-     * @param string|null $reason_code BT-98 A reason code for the allowance according to UNTDID 5189. See this list: https://unece.org/fileadmin/DAM/trade/untdid/d16b/tred/tred5189.htm
+     * @param string|null $reasonCode BT-98 A reason code for the allowance according to UNTDID 5189. See this list: https://unece.org/fileadmin/DAM/trade/untdid/d16b/tred/tred5189.htm
      *
      * @return self
      */
-    public function setReasonCode($reason_code)
+    public function setReasonCode($reasonCode)
     {
-        if (is_null($reason_code)) {
-            throw new \InvalidArgumentException('non-nullable reason_code cannot be null');
+        if (is_null($reasonCode)) {
+            throw new \InvalidArgumentException('non-nullable reasonCode cannot be null');
         }
-        $this->container['reason_code'] = $reason_code;
+        $this->container['reasonCode'] = $reasonCode;
 
         return $this;
     }
 
     /**
-     * Gets reason_type
+     * Gets reasonType
      *
      * @return \Dangl\AVACloud\Model\AllowanceReasonType|null
      */
     public function getReasonType()
     {
-        return $this->container['reason_type'];
+        return $this->container['reasonType'];
     }
 
     /**
-     * Sets reason_type
+     * Sets reasonType
      *
-     * @param \Dangl\AVACloud\Model\AllowanceReasonType|null $reason_type reason_type
+     * @param \Dangl\AVACloud\Model\AllowanceReasonType|null $reasonType reasonType
      *
      * @return self
      */
-    public function setReasonType($reason_type)
+    public function setReasonType($reasonType)
     {
-        if (is_null($reason_type)) {
-            throw new \InvalidArgumentException('non-nullable reason_type cannot be null');
+        if (is_null($reasonType)) {
+            throw new \InvalidArgumentException('non-nullable reasonType cannot be null');
         }
-        $this->container['reason_type'] = $reason_type;
+        $this->container['reasonType'] = $reasonType;
 
         return $this;
     }

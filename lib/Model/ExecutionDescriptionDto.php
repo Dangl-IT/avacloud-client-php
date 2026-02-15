@@ -59,7 +59,7 @@ class ExecutionDescriptionDto extends IElementDto
         'blocks' => '\Dangl\AVACloud\Model\NoteTextDto[]',
         'label' => 'string',
         'identifier' => 'string',
-        'element_type' => 'string'
+        'elementType' => 'string'
     ];
 
     /**
@@ -73,7 +73,7 @@ class ExecutionDescriptionDto extends IElementDto
         'blocks' => null,
         'label' => null,
         'identifier' => null,
-        'element_type' => null
+        'elementType' => null
     ];
 
     /**
@@ -85,7 +85,7 @@ class ExecutionDescriptionDto extends IElementDto
         'blocks' => false,
         'label' => false,
         'identifier' => false,
-        'element_type' => false
+        'elementType' => false
     ];
 
     /**
@@ -177,7 +177,7 @@ class ExecutionDescriptionDto extends IElementDto
         'blocks' => 'blocks',
         'label' => 'label',
         'identifier' => 'identifier',
-        'element_type' => 'elementType'
+        'elementType' => 'elementType'
     ];
 
     /**
@@ -189,7 +189,7 @@ class ExecutionDescriptionDto extends IElementDto
         'blocks' => 'setBlocks',
         'label' => 'setLabel',
         'identifier' => 'setIdentifier',
-        'element_type' => 'setElementType'
+        'elementType' => 'setElementType'
     ];
 
     /**
@@ -201,7 +201,7 @@ class ExecutionDescriptionDto extends IElementDto
         'blocks' => 'getBlocks',
         'label' => 'getLabel',
         'identifier' => 'getIdentifier',
-        'element_type' => 'getElementType'
+        'elementType' => 'getElementType'
     ];
 
     /**
@@ -260,7 +260,7 @@ class ExecutionDescriptionDto extends IElementDto
         $this->setIfExists('blocks', $data ?? [], null);
         $this->setIfExists('label', $data ?? [], null);
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('element_type', $data ?? [], null);
+        $this->setIfExists('elementType', $data ?? [], null);
     }
 
     /**
@@ -387,28 +387,28 @@ class ExecutionDescriptionDto extends IElementDto
     }
 
     /**
-     * Gets element_type
+     * Gets elementType
      *
      * @return string|null
      */
     public function getElementType()
     {
-        return $this->container['element_type'];
+        return $this->container['elementType'];
     }
 
     /**
-     * Sets element_type
+     * Sets elementType
      *
-     * @param string|null $element_type element_type
+     * @param string|null $elementType elementType
      *
      * @return self
      */
-    public function setElementType($element_type)
+    public function setElementType($elementType)
     {
-        if (is_null($element_type)) {
-            throw new \InvalidArgumentException('non-nullable element_type cannot be null');
+        if (is_null($elementType)) {
+            throw new \InvalidArgumentException('non-nullable elementType cannot be null');
         }
-        $this->container['element_type'] = $element_type;
+        $this->container['elementType'] = $elementType;
 
         return $this;
     }

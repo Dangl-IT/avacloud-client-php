@@ -81,7 +81,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "account_identifier"
+     * Test attribute "accountIdentifier"
      */
     public function testPropertyAccountIdentifier()
     {
@@ -90,7 +90,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "account_name"
+     * Test attribute "accountName"
      */
     public function testPropertyAccountName()
     {
@@ -99,7 +99,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "service_provider_identifier"
+     * Test attribute "serviceProviderIdentifier"
      */
     public function testPropertyServiceProviderIdentifier()
     {
@@ -108,7 +108,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "direct_debit_mandate_id"
+     * Test attribute "directDebitMandateId"
      */
     public function testPropertyDirectDebitMandateId()
     {
@@ -117,7 +117,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "direct_debit_iban"
+     * Test attribute "directDebitIban"
      */
     public function testPropertyDirectDebitIban()
     {
@@ -126,7 +126,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_id"
+     * Test attribute "paymentId"
      */
     public function testPropertyPaymentId()
     {
@@ -135,7 +135,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_card_holder_name"
+     * Test attribute "paymentCardHolderName"
      */
     public function testPropertyPaymentCardHolderName()
     {
@@ -144,7 +144,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_card_primary_account_number"
+     * Test attribute "paymentCardPrimaryAccountNumber"
      */
     public function testPropertyPaymentCardPrimaryAccountNumber()
     {
@@ -153,7 +153,7 @@ class PaymentMeansTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_card_network_id"
+     * Test attribute "paymentCardNetworkId"
      */
     public function testPropertyPaymentCardNetworkId()
     {

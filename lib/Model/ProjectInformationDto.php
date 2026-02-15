@@ -61,21 +61,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'buyer' => '\Dangl\AVACloud\Model\PartyInformationDto',
         'description' => 'string',
-        'description_short' => 'string',
+        'descriptionShort' => 'string',
         'name' => 'string',
         'site' => '\Dangl\AVACloud\Model\PartyInformationDto',
-        'item_number_schema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
-        'currency_short' => 'string',
-        'currency_long' => 'string',
-        'labour_time_label' => 'string',
-        'price_components' => 'string[]',
-        'price_component_types' => 'array<string,\Dangl\AVACloud\Model\PriceComponentTypeDto>',
-        'bidder_comment_allowed' => 'bool',
-        'side_offers_allowed' => 'bool',
-        'award_type' => '\Dangl\AVACloud\Model\AwardTypeDto',
-        'special_award_kind' => '\Dangl\AVACloud\Model\SpecialAwardKindDto',
+        'itemNumberSchema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
+        'currencyShort' => 'string',
+        'currencyLong' => 'string',
+        'labourTimeLabel' => 'string',
+        'priceComponents' => 'string[]',
+        'priceComponentTypes' => 'array<string,\Dangl\AVACloud\Model\PriceComponentTypeDto>',
+        'bidderCommentAllowed' => 'bool',
+        'sideOffersAllowed' => 'bool',
+        'awardType' => '\Dangl\AVACloud\Model\AwardTypeDto',
+        'specialAwardKind' => '\Dangl\AVACloud\Model\SpecialAwardKindDto',
         'requesters' => '\Dangl\AVACloud\Model\PartyInformationDto[]',
-        'notification_sites' => '\Dangl\AVACloud\Model\PartyInformationDto[]'
+        'notificationSites' => '\Dangl\AVACloud\Model\PartyInformationDto[]'
     ];
 
     /**
@@ -88,21 +88,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPIFormats = [
         'buyer' => null,
         'description' => null,
-        'description_short' => null,
+        'descriptionShort' => null,
         'name' => null,
         'site' => null,
-        'item_number_schema' => null,
-        'currency_short' => null,
-        'currency_long' => null,
-        'labour_time_label' => null,
-        'price_components' => null,
-        'price_component_types' => null,
-        'bidder_comment_allowed' => null,
-        'side_offers_allowed' => null,
-        'award_type' => null,
-        'special_award_kind' => null,
+        'itemNumberSchema' => null,
+        'currencyShort' => null,
+        'currencyLong' => null,
+        'labourTimeLabel' => null,
+        'priceComponents' => null,
+        'priceComponentTypes' => null,
+        'bidderCommentAllowed' => null,
+        'sideOffersAllowed' => null,
+        'awardType' => null,
+        'specialAwardKind' => null,
         'requesters' => null,
-        'notification_sites' => null
+        'notificationSites' => null
     ];
 
     /**
@@ -113,21 +113,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static array $openAPINullables = [
         'buyer' => false,
         'description' => false,
-        'description_short' => false,
+        'descriptionShort' => false,
         'name' => false,
         'site' => false,
-        'item_number_schema' => false,
-        'currency_short' => false,
-        'currency_long' => false,
-        'labour_time_label' => false,
-        'price_components' => false,
-        'price_component_types' => false,
-        'bidder_comment_allowed' => false,
-        'side_offers_allowed' => false,
-        'award_type' => false,
-        'special_award_kind' => false,
+        'itemNumberSchema' => false,
+        'currencyShort' => false,
+        'currencyLong' => false,
+        'labourTimeLabel' => false,
+        'priceComponents' => false,
+        'priceComponentTypes' => false,
+        'bidderCommentAllowed' => false,
+        'sideOffersAllowed' => false,
+        'awardType' => false,
+        'specialAwardKind' => false,
         'requesters' => false,
-        'notification_sites' => false
+        'notificationSites' => false
     ];
 
     /**
@@ -218,21 +218,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $attributeMap = [
         'buyer' => 'buyer',
         'description' => 'description',
-        'description_short' => 'descriptionShort',
+        'descriptionShort' => 'descriptionShort',
         'name' => 'name',
         'site' => 'site',
-        'item_number_schema' => 'itemNumberSchema',
-        'currency_short' => 'currencyShort',
-        'currency_long' => 'currencyLong',
-        'labour_time_label' => 'labourTimeLabel',
-        'price_components' => 'priceComponents',
-        'price_component_types' => 'priceComponentTypes',
-        'bidder_comment_allowed' => 'bidderCommentAllowed',
-        'side_offers_allowed' => 'sideOffersAllowed',
-        'award_type' => 'awardType',
-        'special_award_kind' => 'specialAwardKind',
+        'itemNumberSchema' => 'itemNumberSchema',
+        'currencyShort' => 'currencyShort',
+        'currencyLong' => 'currencyLong',
+        'labourTimeLabel' => 'labourTimeLabel',
+        'priceComponents' => 'priceComponents',
+        'priceComponentTypes' => 'priceComponentTypes',
+        'bidderCommentAllowed' => 'bidderCommentAllowed',
+        'sideOffersAllowed' => 'sideOffersAllowed',
+        'awardType' => 'awardType',
+        'specialAwardKind' => 'specialAwardKind',
         'requesters' => 'requesters',
-        'notification_sites' => 'notificationSites'
+        'notificationSites' => 'notificationSites'
     ];
 
     /**
@@ -243,21 +243,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $setters = [
         'buyer' => 'setBuyer',
         'description' => 'setDescription',
-        'description_short' => 'setDescriptionShort',
+        'descriptionShort' => 'setDescriptionShort',
         'name' => 'setName',
         'site' => 'setSite',
-        'item_number_schema' => 'setItemNumberSchema',
-        'currency_short' => 'setCurrencyShort',
-        'currency_long' => 'setCurrencyLong',
-        'labour_time_label' => 'setLabourTimeLabel',
-        'price_components' => 'setPriceComponents',
-        'price_component_types' => 'setPriceComponentTypes',
-        'bidder_comment_allowed' => 'setBidderCommentAllowed',
-        'side_offers_allowed' => 'setSideOffersAllowed',
-        'award_type' => 'setAwardType',
-        'special_award_kind' => 'setSpecialAwardKind',
+        'itemNumberSchema' => 'setItemNumberSchema',
+        'currencyShort' => 'setCurrencyShort',
+        'currencyLong' => 'setCurrencyLong',
+        'labourTimeLabel' => 'setLabourTimeLabel',
+        'priceComponents' => 'setPriceComponents',
+        'priceComponentTypes' => 'setPriceComponentTypes',
+        'bidderCommentAllowed' => 'setBidderCommentAllowed',
+        'sideOffersAllowed' => 'setSideOffersAllowed',
+        'awardType' => 'setAwardType',
+        'specialAwardKind' => 'setSpecialAwardKind',
         'requesters' => 'setRequesters',
-        'notification_sites' => 'setNotificationSites'
+        'notificationSites' => 'setNotificationSites'
     ];
 
     /**
@@ -268,21 +268,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $getters = [
         'buyer' => 'getBuyer',
         'description' => 'getDescription',
-        'description_short' => 'getDescriptionShort',
+        'descriptionShort' => 'getDescriptionShort',
         'name' => 'getName',
         'site' => 'getSite',
-        'item_number_schema' => 'getItemNumberSchema',
-        'currency_short' => 'getCurrencyShort',
-        'currency_long' => 'getCurrencyLong',
-        'labour_time_label' => 'getLabourTimeLabel',
-        'price_components' => 'getPriceComponents',
-        'price_component_types' => 'getPriceComponentTypes',
-        'bidder_comment_allowed' => 'getBidderCommentAllowed',
-        'side_offers_allowed' => 'getSideOffersAllowed',
-        'award_type' => 'getAwardType',
-        'special_award_kind' => 'getSpecialAwardKind',
+        'itemNumberSchema' => 'getItemNumberSchema',
+        'currencyShort' => 'getCurrencyShort',
+        'currencyLong' => 'getCurrencyLong',
+        'labourTimeLabel' => 'getLabourTimeLabel',
+        'priceComponents' => 'getPriceComponents',
+        'priceComponentTypes' => 'getPriceComponentTypes',
+        'bidderCommentAllowed' => 'getBidderCommentAllowed',
+        'sideOffersAllowed' => 'getSideOffersAllowed',
+        'awardType' => 'getAwardType',
+        'specialAwardKind' => 'getSpecialAwardKind',
         'requesters' => 'getRequesters',
-        'notification_sites' => 'getNotificationSites'
+        'notificationSites' => 'getNotificationSites'
     ];
 
     /**
@@ -344,21 +344,21 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $this->setIfExists('buyer', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('description_short', $data ?? [], null);
+        $this->setIfExists('descriptionShort', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('site', $data ?? [], null);
-        $this->setIfExists('item_number_schema', $data ?? [], null);
-        $this->setIfExists('currency_short', $data ?? [], null);
-        $this->setIfExists('currency_long', $data ?? [], null);
-        $this->setIfExists('labour_time_label', $data ?? [], null);
-        $this->setIfExists('price_components', $data ?? [], null);
-        $this->setIfExists('price_component_types', $data ?? [], null);
-        $this->setIfExists('bidder_comment_allowed', $data ?? [], null);
-        $this->setIfExists('side_offers_allowed', $data ?? [], null);
-        $this->setIfExists('award_type', $data ?? [], null);
-        $this->setIfExists('special_award_kind', $data ?? [], null);
+        $this->setIfExists('itemNumberSchema', $data ?? [], null);
+        $this->setIfExists('currencyShort', $data ?? [], null);
+        $this->setIfExists('currencyLong', $data ?? [], null);
+        $this->setIfExists('labourTimeLabel', $data ?? [], null);
+        $this->setIfExists('priceComponents', $data ?? [], null);
+        $this->setIfExists('priceComponentTypes', $data ?? [], null);
+        $this->setIfExists('bidderCommentAllowed', $data ?? [], null);
+        $this->setIfExists('sideOffersAllowed', $data ?? [], null);
+        $this->setIfExists('awardType', $data ?? [], null);
+        $this->setIfExists('specialAwardKind', $data ?? [], null);
         $this->setIfExists('requesters', $data ?? [], null);
-        $this->setIfExists('notification_sites', $data ?? [], null);
+        $this->setIfExists('notificationSites', $data ?? [], null);
     }
 
     /**
@@ -388,17 +388,17 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $invalidProperties = [];
 
-        if ($this->container['bidder_comment_allowed'] === null) {
-            $invalidProperties[] = "'bidder_comment_allowed' can't be null";
+        if ($this->container['bidderCommentAllowed'] === null) {
+            $invalidProperties[] = "'bidderCommentAllowed' can't be null";
         }
-        if ($this->container['side_offers_allowed'] === null) {
-            $invalidProperties[] = "'side_offers_allowed' can't be null";
+        if ($this->container['sideOffersAllowed'] === null) {
+            $invalidProperties[] = "'sideOffersAllowed' can't be null";
         }
-        if ($this->container['award_type'] === null) {
-            $invalidProperties[] = "'award_type' can't be null";
+        if ($this->container['awardType'] === null) {
+            $invalidProperties[] = "'awardType' can't be null";
         }
-        if ($this->container['special_award_kind'] === null) {
-            $invalidProperties[] = "'special_award_kind' can't be null";
+        if ($this->container['specialAwardKind'] === null) {
+            $invalidProperties[] = "'specialAwardKind' can't be null";
         }
         return $invalidProperties;
     }
@@ -470,28 +470,28 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets description_short
+     * Gets descriptionShort
      *
      * @return string|null
      */
     public function getDescriptionShort()
     {
-        return $this->container['description_short'];
+        return $this->container['descriptionShort'];
     }
 
     /**
-     * Sets description_short
+     * Sets descriptionShort
      *
-     * @param string|null $description_short Short description for the project.
+     * @param string|null $descriptionShort Short description for the project.
      *
      * @return self
      */
-    public function setDescriptionShort($description_short)
+    public function setDescriptionShort($descriptionShort)
     {
-        if (is_null($description_short)) {
-            throw new \InvalidArgumentException('non-nullable description_short cannot be null');
+        if (is_null($descriptionShort)) {
+            throw new \InvalidArgumentException('non-nullable descriptionShort cannot be null');
         }
-        $this->container['description_short'] = $description_short;
+        $this->container['descriptionShort'] = $descriptionShort;
 
         return $this;
     }
@@ -551,271 +551,271 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets item_number_schema
+     * Gets itemNumberSchema
      *
      * @return \Dangl\AVACloud\Model\ItemNumberSchemaDto|null
      */
     public function getItemNumberSchema()
     {
-        return $this->container['item_number_schema'];
+        return $this->container['itemNumberSchema'];
     }
 
     /**
-     * Sets item_number_schema
+     * Sets itemNumberSchema
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $item_number_schema item_number_schema
+     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $itemNumberSchema itemNumberSchema
      *
      * @return self
      */
-    public function setItemNumberSchema($item_number_schema)
+    public function setItemNumberSchema($itemNumberSchema)
     {
-        if (is_null($item_number_schema)) {
-            throw new \InvalidArgumentException('non-nullable item_number_schema cannot be null');
+        if (is_null($itemNumberSchema)) {
+            throw new \InvalidArgumentException('non-nullable itemNumberSchema cannot be null');
         }
-        $this->container['item_number_schema'] = $item_number_schema;
+        $this->container['itemNumberSchema'] = $itemNumberSchema;
 
         return $this;
     }
 
     /**
-     * Gets currency_short
+     * Gets currencyShort
      *
      * @return string|null
      */
     public function getCurrencyShort()
     {
-        return $this->container['currency_short'];
+        return $this->container['currencyShort'];
     }
 
     /**
-     * Sets currency_short
+     * Sets currencyShort
      *
-     * @param string|null $currency_short Short label for the currency used.
+     * @param string|null $currencyShort Short label for the currency used.
      *
      * @return self
      */
-    public function setCurrencyShort($currency_short)
+    public function setCurrencyShort($currencyShort)
     {
-        if (is_null($currency_short)) {
-            throw new \InvalidArgumentException('non-nullable currency_short cannot be null');
+        if (is_null($currencyShort)) {
+            throw new \InvalidArgumentException('non-nullable currencyShort cannot be null');
         }
-        $this->container['currency_short'] = $currency_short;
+        $this->container['currencyShort'] = $currencyShort;
 
         return $this;
     }
 
     /**
-     * Gets currency_long
+     * Gets currencyLong
      *
      * @return string|null
      */
     public function getCurrencyLong()
     {
-        return $this->container['currency_long'];
+        return $this->container['currencyLong'];
     }
 
     /**
-     * Sets currency_long
+     * Sets currencyLong
      *
-     * @param string|null $currency_long Full label of the currency used.
+     * @param string|null $currencyLong Full label of the currency used.
      *
      * @return self
      */
-    public function setCurrencyLong($currency_long)
+    public function setCurrencyLong($currencyLong)
     {
-        if (is_null($currency_long)) {
-            throw new \InvalidArgumentException('non-nullable currency_long cannot be null');
+        if (is_null($currencyLong)) {
+            throw new \InvalidArgumentException('non-nullable currencyLong cannot be null');
         }
-        $this->container['currency_long'] = $currency_long;
+        $this->container['currencyLong'] = $currencyLong;
 
         return $this;
     }
 
     /**
-     * Gets labour_time_label
+     * Gets labourTimeLabel
      *
      * @return string|null
      */
     public function getLabourTimeLabel()
     {
-        return $this->container['labour_time_label'];
+        return $this->container['labourTimeLabel'];
     }
 
     /**
-     * Sets labour_time_label
+     * Sets labourTimeLabel
      *
-     * @param string|null $labour_time_label Label for the labour time part of prices used in the project.
+     * @param string|null $labourTimeLabel Label for the labour time part of prices used in the project.
      *
      * @return self
      */
-    public function setLabourTimeLabel($labour_time_label)
+    public function setLabourTimeLabel($labourTimeLabel)
     {
-        if (is_null($labour_time_label)) {
-            throw new \InvalidArgumentException('non-nullable labour_time_label cannot be null');
+        if (is_null($labourTimeLabel)) {
+            throw new \InvalidArgumentException('non-nullable labourTimeLabel cannot be null');
         }
-        $this->container['labour_time_label'] = $labour_time_label;
+        $this->container['labourTimeLabel'] = $labourTimeLabel;
 
         return $this;
     }
 
     /**
-     * Gets price_components
+     * Gets priceComponents
      *
      * @return string[]|null
      */
     public function getPriceComponents()
     {
-        return $this->container['price_components'];
+        return $this->container['priceComponents'];
     }
 
     /**
-     * Sets price_components
+     * Sets priceComponents
      *
-     * @param string[]|null $price_components Labels for the price components used in the project. Caution: Removal of a price component will trigger to have dependent price informations be deleted in IElements that use this property. If this property is changed or altered after the project has already been used, it is strongly advised to do operations step by step, e.g. if renaming and reordering multiple price components, this should be done one by one. Otherwise, a combination of rename and reordering will not be correctly propagated downwards to child objects in this Project.
+     * @param string[]|null $priceComponents Labels for the price components used in the project. Caution: Removal of a price component will trigger to have dependent price informations be deleted in IElements that use this property. If this property is changed or altered after the project has already been used, it is strongly advised to do operations step by step, e.g. if renaming and reordering multiple price components, this should be done one by one. Otherwise, a combination of rename and reordering will not be correctly propagated downwards to child objects in this Project.
      *
      * @return self
      */
-    public function setPriceComponents($price_components)
+    public function setPriceComponents($priceComponents)
     {
-        if (is_null($price_components)) {
-            throw new \InvalidArgumentException('non-nullable price_components cannot be null');
+        if (is_null($priceComponents)) {
+            throw new \InvalidArgumentException('non-nullable priceComponents cannot be null');
         }
-        $this->container['price_components'] = $price_components;
+        $this->container['priceComponents'] = $priceComponents;
 
         return $this;
     }
 
     /**
-     * Gets price_component_types
+     * Gets priceComponentTypes
      *
      * @return array<string,\Dangl\AVACloud\Model\PriceComponentTypeDto>|null
      */
     public function getPriceComponentTypes()
     {
-        return $this->container['price_component_types'];
+        return $this->container['priceComponentTypes'];
     }
 
     /**
-     * Sets price_component_types
+     * Sets priceComponentTypes
      *
-     * @param array<string,\Dangl\AVACloud\Model\PriceComponentTypeDto>|null $price_component_types This dictionary specifies actual types used for the PriceComponents. For example, a single price component might have the name 'Material' as a string, ans this dictionary would then have a key 'Material' and a value of Materials. You can not add keys here that are not also present in the PriceComponents property, and removing price components will also remove them from this dictionary here.
+     * @param array<string,\Dangl\AVACloud\Model\PriceComponentTypeDto>|null $priceComponentTypes This dictionary specifies actual types used for the PriceComponents. For example, a single price component might have the name 'Material' as a string, ans this dictionary would then have a key 'Material' and a value of Materials. You can not add keys here that are not also present in the PriceComponents property, and removing price components will also remove them from this dictionary here.
      *
      * @return self
      */
-    public function setPriceComponentTypes($price_component_types)
+    public function setPriceComponentTypes($priceComponentTypes)
     {
-        if (is_null($price_component_types)) {
-            throw new \InvalidArgumentException('non-nullable price_component_types cannot be null');
+        if (is_null($priceComponentTypes)) {
+            throw new \InvalidArgumentException('non-nullable priceComponentTypes cannot be null');
         }
-        $this->container['price_component_types'] = $price_component_types;
+        $this->container['priceComponentTypes'] = $priceComponentTypes;
 
         return $this;
     }
 
     /**
-     * Gets bidder_comment_allowed
+     * Gets bidderCommentAllowed
      *
      * @return bool
      */
     public function getBidderCommentAllowed()
     {
-        return $this->container['bidder_comment_allowed'];
+        return $this->container['bidderCommentAllowed'];
     }
 
     /**
-     * Sets bidder_comment_allowed
+     * Sets bidderCommentAllowed
      *
-     * @param bool $bidder_comment_allowed This bool indicates if this project allows the bidder to add bidder comments. Bidder comments are a way to attach clarifying information when submitting an offer.
+     * @param bool $bidderCommentAllowed This bool indicates if this project allows the bidder to add bidder comments. Bidder comments are a way to attach clarifying information when submitting an offer.
      *
      * @return self
      */
-    public function setBidderCommentAllowed($bidder_comment_allowed)
+    public function setBidderCommentAllowed($bidderCommentAllowed)
     {
-        if (is_null($bidder_comment_allowed)) {
-            throw new \InvalidArgumentException('non-nullable bidder_comment_allowed cannot be null');
+        if (is_null($bidderCommentAllowed)) {
+            throw new \InvalidArgumentException('non-nullable bidderCommentAllowed cannot be null');
         }
-        $this->container['bidder_comment_allowed'] = $bidder_comment_allowed;
+        $this->container['bidderCommentAllowed'] = $bidderCommentAllowed;
 
         return $this;
     }
 
     /**
-     * Gets side_offers_allowed
+     * Gets sideOffersAllowed
      *
      * @return bool
      */
     public function getSideOffersAllowed()
     {
-        return $this->container['side_offers_allowed'];
+        return $this->container['sideOffersAllowed'];
     }
 
     /**
-     * Sets side_offers_allowed
+     * Sets sideOffersAllowed
      *
-     * @param bool $side_offers_allowed This property indicates if the project should allow side offers from contractors. In GAEB, a side offer would typically be in exchange phase 85.
+     * @param bool $sideOffersAllowed This property indicates if the project should allow side offers from contractors. In GAEB, a side offer would typically be in exchange phase 85.
      *
      * @return self
      */
-    public function setSideOffersAllowed($side_offers_allowed)
+    public function setSideOffersAllowed($sideOffersAllowed)
     {
-        if (is_null($side_offers_allowed)) {
-            throw new \InvalidArgumentException('non-nullable side_offers_allowed cannot be null');
+        if (is_null($sideOffersAllowed)) {
+            throw new \InvalidArgumentException('non-nullable sideOffersAllowed cannot be null');
         }
-        $this->container['side_offers_allowed'] = $side_offers_allowed;
+        $this->container['sideOffersAllowed'] = $sideOffersAllowed;
 
         return $this;
     }
 
     /**
-     * Gets award_type
+     * Gets awardType
      *
      * @return \Dangl\AVACloud\Model\AwardTypeDto
      */
     public function getAwardType()
     {
-        return $this->container['award_type'];
+        return $this->container['awardType'];
     }
 
     /**
-     * Sets award_type
+     * Sets awardType
      *
-     * @param \Dangl\AVACloud\Model\AwardTypeDto $award_type award_type
+     * @param \Dangl\AVACloud\Model\AwardTypeDto $awardType awardType
      *
      * @return self
      */
-    public function setAwardType($award_type)
+    public function setAwardType($awardType)
     {
-        if (is_null($award_type)) {
-            throw new \InvalidArgumentException('non-nullable award_type cannot be null');
+        if (is_null($awardType)) {
+            throw new \InvalidArgumentException('non-nullable awardType cannot be null');
         }
-        $this->container['award_type'] = $award_type;
+        $this->container['awardType'] = $awardType;
 
         return $this;
     }
 
     /**
-     * Gets special_award_kind
+     * Gets specialAwardKind
      *
      * @return \Dangl\AVACloud\Model\SpecialAwardKindDto
      */
     public function getSpecialAwardKind()
     {
-        return $this->container['special_award_kind'];
+        return $this->container['specialAwardKind'];
     }
 
     /**
-     * Sets special_award_kind
+     * Sets specialAwardKind
      *
-     * @param \Dangl\AVACloud\Model\SpecialAwardKindDto $special_award_kind special_award_kind
+     * @param \Dangl\AVACloud\Model\SpecialAwardKindDto $specialAwardKind specialAwardKind
      *
      * @return self
      */
-    public function setSpecialAwardKind($special_award_kind)
+    public function setSpecialAwardKind($specialAwardKind)
     {
-        if (is_null($special_award_kind)) {
-            throw new \InvalidArgumentException('non-nullable special_award_kind cannot be null');
+        if (is_null($specialAwardKind)) {
+            throw new \InvalidArgumentException('non-nullable specialAwardKind cannot be null');
         }
-        $this->container['special_award_kind'] = $special_award_kind;
+        $this->container['specialAwardKind'] = $specialAwardKind;
 
         return $this;
     }
@@ -848,28 +848,28 @@ class ProjectInformationDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets notification_sites
+     * Gets notificationSites
      *
      * @return \Dangl\AVACloud\Model\PartyInformationDto[]|null
      */
     public function getNotificationSites()
     {
-        return $this->container['notification_sites'];
+        return $this->container['notificationSites'];
     }
 
     /**
-     * Sets notification_sites
+     * Sets notificationSites
      *
-     * @param \Dangl\AVACloud\Model\PartyInformationDto[]|null $notification_sites Notification sites are addresses that are used for delivering messages in the context of construction projects.
+     * @param \Dangl\AVACloud\Model\PartyInformationDto[]|null $notificationSites Notification sites are addresses that are used for delivering messages in the context of construction projects.
      *
      * @return self
      */
-    public function setNotificationSites($notification_sites)
+    public function setNotificationSites($notificationSites)
     {
-        if (is_null($notification_sites)) {
-            throw new \InvalidArgumentException('non-nullable notification_sites cannot be null');
+        if (is_null($notificationSites)) {
+            throw new \InvalidArgumentException('non-nullable notificationSites cannot be null');
         }
-        $this->container['notification_sites'] = $notification_sites;
+        $this->container['notificationSites'] = $notificationSites;
 
         return $this;
     }

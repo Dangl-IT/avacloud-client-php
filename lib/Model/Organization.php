@@ -60,21 +60,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'identifier' => 'string',
-        'identifier_scheme' => 'string',
+        'identifierScheme' => 'string',
         'name' => 'string',
-        'registration_number' => 'string',
-        'vat_id' => 'string',
-        'tax_id' => 'string',
+        'registrationNumber' => 'string',
+        'vatId' => 'string',
+        'taxId' => 'string',
         'email' => 'string',
-        'contact_person_name' => 'string',
-        'contact_person_phone' => 'string',
-        'contact_person_email' => 'string',
+        'contactPersonName' => 'string',
+        'contactPersonPhone' => 'string',
+        'contactPersonEmail' => 'string',
         'address' => 'string',
         'city' => 'string',
-        'zip_code' => 'string',
-        'country_code' => 'string',
+        'zipCode' => 'string',
+        'countryCode' => 'string',
         'state' => 'string',
-        'additional_legal_information' => 'string'
+        'additionalLegalInformation' => 'string'
     ];
 
     /**
@@ -86,21 +86,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'identifier' => null,
-        'identifier_scheme' => null,
+        'identifierScheme' => null,
         'name' => null,
-        'registration_number' => null,
-        'vat_id' => null,
-        'tax_id' => null,
+        'registrationNumber' => null,
+        'vatId' => null,
+        'taxId' => null,
         'email' => null,
-        'contact_person_name' => null,
-        'contact_person_phone' => null,
-        'contact_person_email' => null,
+        'contactPersonName' => null,
+        'contactPersonPhone' => null,
+        'contactPersonEmail' => null,
         'address' => null,
         'city' => null,
-        'zip_code' => null,
-        'country_code' => null,
+        'zipCode' => null,
+        'countryCode' => null,
         'state' => null,
-        'additional_legal_information' => null
+        'additionalLegalInformation' => null
     ];
 
     /**
@@ -110,21 +110,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'identifier' => false,
-        'identifier_scheme' => false,
+        'identifierScheme' => false,
         'name' => false,
-        'registration_number' => false,
-        'vat_id' => false,
-        'tax_id' => false,
+        'registrationNumber' => false,
+        'vatId' => false,
+        'taxId' => false,
         'email' => false,
-        'contact_person_name' => false,
-        'contact_person_phone' => false,
-        'contact_person_email' => false,
+        'contactPersonName' => false,
+        'contactPersonPhone' => false,
+        'contactPersonEmail' => false,
         'address' => false,
         'city' => false,
-        'zip_code' => false,
-        'country_code' => false,
+        'zipCode' => false,
+        'countryCode' => false,
         'state' => false,
-        'additional_legal_information' => false
+        'additionalLegalInformation' => false
     ];
 
     /**
@@ -214,21 +214,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'identifier' => 'identifier',
-        'identifier_scheme' => 'identifierScheme',
+        'identifierScheme' => 'identifierScheme',
         'name' => 'name',
-        'registration_number' => 'registrationNumber',
-        'vat_id' => 'vatId',
-        'tax_id' => 'taxId',
+        'registrationNumber' => 'registrationNumber',
+        'vatId' => 'vatId',
+        'taxId' => 'taxId',
         'email' => 'email',
-        'contact_person_name' => 'contactPersonName',
-        'contact_person_phone' => 'contactPersonPhone',
-        'contact_person_email' => 'contactPersonEmail',
+        'contactPersonName' => 'contactPersonName',
+        'contactPersonPhone' => 'contactPersonPhone',
+        'contactPersonEmail' => 'contactPersonEmail',
         'address' => 'address',
         'city' => 'city',
-        'zip_code' => 'zipCode',
-        'country_code' => 'countryCode',
+        'zipCode' => 'zipCode',
+        'countryCode' => 'countryCode',
         'state' => 'state',
-        'additional_legal_information' => 'additionalLegalInformation'
+        'additionalLegalInformation' => 'additionalLegalInformation'
     ];
 
     /**
@@ -238,21 +238,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'identifier' => 'setIdentifier',
-        'identifier_scheme' => 'setIdentifierScheme',
+        'identifierScheme' => 'setIdentifierScheme',
         'name' => 'setName',
-        'registration_number' => 'setRegistrationNumber',
-        'vat_id' => 'setVatId',
-        'tax_id' => 'setTaxId',
+        'registrationNumber' => 'setRegistrationNumber',
+        'vatId' => 'setVatId',
+        'taxId' => 'setTaxId',
         'email' => 'setEmail',
-        'contact_person_name' => 'setContactPersonName',
-        'contact_person_phone' => 'setContactPersonPhone',
-        'contact_person_email' => 'setContactPersonEmail',
+        'contactPersonName' => 'setContactPersonName',
+        'contactPersonPhone' => 'setContactPersonPhone',
+        'contactPersonEmail' => 'setContactPersonEmail',
         'address' => 'setAddress',
         'city' => 'setCity',
-        'zip_code' => 'setZipCode',
-        'country_code' => 'setCountryCode',
+        'zipCode' => 'setZipCode',
+        'countryCode' => 'setCountryCode',
         'state' => 'setState',
-        'additional_legal_information' => 'setAdditionalLegalInformation'
+        'additionalLegalInformation' => 'setAdditionalLegalInformation'
     ];
 
     /**
@@ -262,21 +262,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'identifier' => 'getIdentifier',
-        'identifier_scheme' => 'getIdentifierScheme',
+        'identifierScheme' => 'getIdentifierScheme',
         'name' => 'getName',
-        'registration_number' => 'getRegistrationNumber',
-        'vat_id' => 'getVatId',
-        'tax_id' => 'getTaxId',
+        'registrationNumber' => 'getRegistrationNumber',
+        'vatId' => 'getVatId',
+        'taxId' => 'getTaxId',
         'email' => 'getEmail',
-        'contact_person_name' => 'getContactPersonName',
-        'contact_person_phone' => 'getContactPersonPhone',
-        'contact_person_email' => 'getContactPersonEmail',
+        'contactPersonName' => 'getContactPersonName',
+        'contactPersonPhone' => 'getContactPersonPhone',
+        'contactPersonEmail' => 'getContactPersonEmail',
         'address' => 'getAddress',
         'city' => 'getCity',
-        'zip_code' => 'getZipCode',
-        'country_code' => 'getCountryCode',
+        'zipCode' => 'getZipCode',
+        'countryCode' => 'getCountryCode',
         'state' => 'getState',
-        'additional_legal_information' => 'getAdditionalLegalInformation'
+        'additionalLegalInformation' => 'getAdditionalLegalInformation'
     ];
 
     /**
@@ -337,21 +337,21 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('identifier_scheme', $data ?? [], null);
+        $this->setIfExists('identifierScheme', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('registration_number', $data ?? [], null);
-        $this->setIfExists('vat_id', $data ?? [], null);
-        $this->setIfExists('tax_id', $data ?? [], null);
+        $this->setIfExists('registrationNumber', $data ?? [], null);
+        $this->setIfExists('vatId', $data ?? [], null);
+        $this->setIfExists('taxId', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('contact_person_name', $data ?? [], null);
-        $this->setIfExists('contact_person_phone', $data ?? [], null);
-        $this->setIfExists('contact_person_email', $data ?? [], null);
+        $this->setIfExists('contactPersonName', $data ?? [], null);
+        $this->setIfExists('contactPersonPhone', $data ?? [], null);
+        $this->setIfExists('contactPersonEmail', $data ?? [], null);
         $this->setIfExists('address', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('zip_code', $data ?? [], null);
-        $this->setIfExists('country_code', $data ?? [], null);
+        $this->setIfExists('zipCode', $data ?? [], null);
+        $this->setIfExists('countryCode', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
-        $this->setIfExists('additional_legal_information', $data ?? [], null);
+        $this->setIfExists('additionalLegalInformation', $data ?? [], null);
     }
 
     /**
@@ -424,28 +424,28 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets identifier_scheme
+     * Gets identifierScheme
      *
      * @return string|null
      */
     public function getIdentifierScheme()
     {
-        return $this->container['identifier_scheme'];
+        return $this->container['identifierScheme'];
     }
 
     /**
-     * Sets identifier_scheme
+     * Sets identifierScheme
      *
-     * @param string|null $identifier_scheme BT-46 (BT-29 for the Seller) If a Identifier is used, this indicates the scheme used for the identifier. This works in conjunction with the Identifier property.
+     * @param string|null $identifierScheme BT-46 (BT-29 for the Seller) If a Identifier is used, this indicates the scheme used for the identifier. This works in conjunction with the Identifier property.
      *
      * @return self
      */
-    public function setIdentifierScheme($identifier_scheme)
+    public function setIdentifierScheme($identifierScheme)
     {
-        if (is_null($identifier_scheme)) {
-            throw new \InvalidArgumentException('non-nullable identifier_scheme cannot be null');
+        if (is_null($identifierScheme)) {
+            throw new \InvalidArgumentException('non-nullable identifierScheme cannot be null');
         }
-        $this->container['identifier_scheme'] = $identifier_scheme;
+        $this->container['identifierScheme'] = $identifierScheme;
 
         return $this;
     }
@@ -478,82 +478,82 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets registration_number
+     * Gets registrationNumber
      *
      * @return string|null
      */
     public function getRegistrationNumber()
     {
-        return $this->container['registration_number'];
+        return $this->container['registrationNumber'];
     }
 
     /**
-     * Sets registration_number
+     * Sets registrationNumber
      *
-     * @param string|null $registration_number BT-30, for the seller, doesn't exist in the buyer actually A registration number, e.g. a Handelsregisternummer in Germany
+     * @param string|null $registrationNumber BT-30, for the seller, doesn't exist in the buyer actually A registration number, e.g. a Handelsregisternummer in Germany
      *
      * @return self
      */
-    public function setRegistrationNumber($registration_number)
+    public function setRegistrationNumber($registrationNumber)
     {
-        if (is_null($registration_number)) {
-            throw new \InvalidArgumentException('non-nullable registration_number cannot be null');
+        if (is_null($registrationNumber)) {
+            throw new \InvalidArgumentException('non-nullable registrationNumber cannot be null');
         }
-        $this->container['registration_number'] = $registration_number;
+        $this->container['registrationNumber'] = $registrationNumber;
 
         return $this;
     }
 
     /**
-     * Gets vat_id
+     * Gets vatId
      *
      * @return string|null
      */
     public function getVatId()
     {
-        return $this->container['vat_id'];
+        return $this->container['vatId'];
     }
 
     /**
-     * Sets vat_id
+     * Sets vatId
      *
-     * @param string|null $vat_id BT-48, BT-32 for the seller, BT-63 for the seller tax representative The VAT ID for the organization
+     * @param string|null $vatId BT-48, BT-32 for the seller, BT-63 for the seller tax representative The VAT ID for the organization
      *
      * @return self
      */
-    public function setVatId($vat_id)
+    public function setVatId($vatId)
     {
-        if (is_null($vat_id)) {
-            throw new \InvalidArgumentException('non-nullable vat_id cannot be null');
+        if (is_null($vatId)) {
+            throw new \InvalidArgumentException('non-nullable vatId cannot be null');
         }
-        $this->container['vat_id'] = $vat_id;
+        $this->container['vatId'] = $vatId;
 
         return $this;
     }
 
     /**
-     * Gets tax_id
+     * Gets taxId
      *
      * @return string|null
      */
     public function getTaxId()
     {
-        return $this->container['tax_id'];
+        return $this->container['taxId'];
     }
 
     /**
-     * Sets tax_id
+     * Sets taxId
      *
-     * @param string|null $tax_id BT-32 for the seller, does not exist for the buyer The tax ID for the organization
+     * @param string|null $taxId BT-32 for the seller, does not exist for the buyer The tax ID for the organization
      *
      * @return self
      */
-    public function setTaxId($tax_id)
+    public function setTaxId($taxId)
     {
-        if (is_null($tax_id)) {
-            throw new \InvalidArgumentException('non-nullable tax_id cannot be null');
+        if (is_null($taxId)) {
+            throw new \InvalidArgumentException('non-nullable taxId cannot be null');
         }
-        $this->container['tax_id'] = $tax_id;
+        $this->container['taxId'] = $taxId;
 
         return $this;
     }
@@ -586,82 +586,82 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets contact_person_name
+     * Gets contactPersonName
      *
      * @return string|null
      */
     public function getContactPersonName()
     {
-        return $this->container['contact_person_name'];
+        return $this->container['contactPersonName'];
     }
 
     /**
-     * Sets contact_person_name
+     * Sets contactPersonName
      *
-     * @param string|null $contact_person_name BT-56 The name of a contact person
+     * @param string|null $contactPersonName BT-56 The name of a contact person
      *
      * @return self
      */
-    public function setContactPersonName($contact_person_name)
+    public function setContactPersonName($contactPersonName)
     {
-        if (is_null($contact_person_name)) {
-            throw new \InvalidArgumentException('non-nullable contact_person_name cannot be null');
+        if (is_null($contactPersonName)) {
+            throw new \InvalidArgumentException('non-nullable contactPersonName cannot be null');
         }
-        $this->container['contact_person_name'] = $contact_person_name;
+        $this->container['contactPersonName'] = $contactPersonName;
 
         return $this;
     }
 
     /**
-     * Gets contact_person_phone
+     * Gets contactPersonPhone
      *
      * @return string|null
      */
     public function getContactPersonPhone()
     {
-        return $this->container['contact_person_phone'];
+        return $this->container['contactPersonPhone'];
     }
 
     /**
-     * Sets contact_person_phone
+     * Sets contactPersonPhone
      *
-     * @param string|null $contact_person_phone BT-57 The phone of a contact person
+     * @param string|null $contactPersonPhone BT-57 The phone of a contact person
      *
      * @return self
      */
-    public function setContactPersonPhone($contact_person_phone)
+    public function setContactPersonPhone($contactPersonPhone)
     {
-        if (is_null($contact_person_phone)) {
-            throw new \InvalidArgumentException('non-nullable contact_person_phone cannot be null');
+        if (is_null($contactPersonPhone)) {
+            throw new \InvalidArgumentException('non-nullable contactPersonPhone cannot be null');
         }
-        $this->container['contact_person_phone'] = $contact_person_phone;
+        $this->container['contactPersonPhone'] = $contactPersonPhone;
 
         return $this;
     }
 
     /**
-     * Gets contact_person_email
+     * Gets contactPersonEmail
      *
      * @return string|null
      */
     public function getContactPersonEmail()
     {
-        return $this->container['contact_person_email'];
+        return $this->container['contactPersonEmail'];
     }
 
     /**
-     * Sets contact_person_email
+     * Sets contactPersonEmail
      *
-     * @param string|null $contact_person_email BT-58 The email of a contact person
+     * @param string|null $contactPersonEmail BT-58 The email of a contact person
      *
      * @return self
      */
-    public function setContactPersonEmail($contact_person_email)
+    public function setContactPersonEmail($contactPersonEmail)
     {
-        if (is_null($contact_person_email)) {
-            throw new \InvalidArgumentException('non-nullable contact_person_email cannot be null');
+        if (is_null($contactPersonEmail)) {
+            throw new \InvalidArgumentException('non-nullable contactPersonEmail cannot be null');
         }
-        $this->container['contact_person_email'] = $contact_person_email;
+        $this->container['contactPersonEmail'] = $contactPersonEmail;
 
         return $this;
     }
@@ -721,55 +721,55 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets zip_code
+     * Gets zipCode
      *
      * @return string|null
      */
     public function getZipCode()
     {
-        return $this->container['zip_code'];
+        return $this->container['zipCode'];
     }
 
     /**
-     * Sets zip_code
+     * Sets zipCode
      *
-     * @param string|null $zip_code BT-53, BT-38 for the seller, BT-67 for the seller tax representative The zip code of the organization
+     * @param string|null $zipCode BT-53, BT-38 for the seller, BT-67 for the seller tax representative The zip code of the organization
      *
      * @return self
      */
-    public function setZipCode($zip_code)
+    public function setZipCode($zipCode)
     {
-        if (is_null($zip_code)) {
-            throw new \InvalidArgumentException('non-nullable zip_code cannot be null');
+        if (is_null($zipCode)) {
+            throw new \InvalidArgumentException('non-nullable zipCode cannot be null');
         }
-        $this->container['zip_code'] = $zip_code;
+        $this->container['zipCode'] = $zipCode;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      *
      * @return string|null
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
+     * Sets countryCode
      *
-     * @param string|null $country_code BT-55, BT-40 for the seller, BT-69 for the seller tax representative The ISO 3166-1 2 letter country code
+     * @param string|null $countryCode BT-55, BT-40 for the seller, BT-69 for the seller tax representative The ISO 3166-1 2 letter country code
      *
      * @return self
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        if (is_null($country_code)) {
-            throw new \InvalidArgumentException('non-nullable country_code cannot be null');
+        if (is_null($countryCode)) {
+            throw new \InvalidArgumentException('non-nullable countryCode cannot be null');
         }
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }
@@ -802,28 +802,28 @@ class Organization implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets additional_legal_information
+     * Gets additionalLegalInformation
      *
      * @return string|null
      */
     public function getAdditionalLegalInformation()
     {
-        return $this->container['additional_legal_information'];
+        return $this->container['additionalLegalInformation'];
     }
 
     /**
-     * Sets additional_legal_information
+     * Sets additionalLegalInformation
      *
-     * @param string|null $additional_legal_information BT-33 This provides some additional legal information. BT-33 in XRechnung, and this is only used for the seller.
+     * @param string|null $additionalLegalInformation BT-33 This provides some additional legal information. BT-33 in XRechnung, and this is only used for the seller.
      *
      * @return self
      */
-    public function setAdditionalLegalInformation($additional_legal_information)
+    public function setAdditionalLegalInformation($additionalLegalInformation)
     {
-        if (is_null($additional_legal_information)) {
-            throw new \InvalidArgumentException('non-nullable additional_legal_information cannot be null');
+        if (is_null($additionalLegalInformation)) {
+            throw new \InvalidArgumentException('non-nullable additionalLegalInformation cannot be null');
         }
-        $this->container['additional_legal_information'] = $additional_legal_information;
+        $this->container['additionalLegalInformation'] = $additionalLegalInformation;
 
         return $this;
     }

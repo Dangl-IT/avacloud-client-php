@@ -58,7 +58,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'refresh_token' => 'string'
+        'refreshToken' => 'string'
     ];
 
     /**
@@ -69,7 +69,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'refresh_token' => null
+        'refreshToken' => null
     ];
 
     /**
@@ -78,7 +78,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'refresh_token' => false
+        'refreshToken' => false
     ];
 
     /**
@@ -167,7 +167,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'refresh_token' => 'refreshToken'
+        'refreshToken' => 'refreshToken'
     ];
 
     /**
@@ -176,7 +176,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'refresh_token' => 'setRefreshToken'
+        'refreshToken' => 'setRefreshToken'
     ];
 
     /**
@@ -185,7 +185,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'refresh_token' => 'getRefreshToken'
+        'refreshToken' => 'getRefreshToken'
     ];
 
     /**
@@ -245,7 +245,7 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('refresh_token', $data ?? [], null);
+        $this->setIfExists('refreshToken', $data ?? [], null);
     }
 
     /**
@@ -275,11 +275,11 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['refresh_token'] === null) {
-            $invalidProperties[] = "'refresh_token' can't be null";
+        if ($this->container['refreshToken'] === null) {
+            $invalidProperties[] = "'refreshToken' can't be null";
         }
-        if ((mb_strlen($this->container['refresh_token']) < 1)) {
-            $invalidProperties[] = "invalid value for 'refresh_token', the character length must be bigger than or equal to 1.";
+        if ((mb_strlen($this->container['refreshToken']) < 1)) {
+            $invalidProperties[] = "invalid value for 'refreshToken', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -298,33 +298,33 @@ class TokenRefreshPost implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets refresh_token
+     * Gets refreshToken
      *
      * @return string
      */
     public function getRefreshToken()
     {
-        return $this->container['refresh_token'];
+        return $this->container['refreshToken'];
     }
 
     /**
-     * Sets refresh_token
+     * Sets refreshToken
      *
-     * @param string $refresh_token refresh_token
+     * @param string $refreshToken refreshToken
      *
      * @return self
      */
-    public function setRefreshToken($refresh_token)
+    public function setRefreshToken($refreshToken)
     {
-        if (is_null($refresh_token)) {
-            throw new \InvalidArgumentException('non-nullable refresh_token cannot be null');
+        if (is_null($refreshToken)) {
+            throw new \InvalidArgumentException('non-nullable refreshToken cannot be null');
         }
 
-        if ((mb_strlen($refresh_token) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $refresh_token when calling TokenRefreshPost., must be bigger than or equal to 1.');
+        if ((mb_strlen($refreshToken) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $refreshToken when calling TokenRefreshPost., must be bigger than or equal to 1.');
         }
 
-        $this->container['refresh_token'] = $refresh_token;
+        $this->container['refreshToken'] = $refreshToken;
 
         return $this;
     }

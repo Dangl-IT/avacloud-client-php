@@ -59,8 +59,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'origin_code' => '\Dangl\AVACloud\Model\OenormOriginCodeDto',
-        'opening_text_is_free_text' => 'bool'
+        'originCode' => '\Dangl\AVACloud\Model\OenormOriginCodeDto',
+        'openingTextIsFreeText' => 'bool'
     ];
 
     /**
@@ -71,8 +71,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'origin_code' => null,
-        'opening_text_is_free_text' => null
+        'originCode' => null,
+        'openingTextIsFreeText' => null
     ];
 
     /**
@@ -81,8 +81,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'origin_code' => false,
-        'opening_text_is_free_text' => false
+        'originCode' => false,
+        'openingTextIsFreeText' => false
     ];
 
     /**
@@ -171,8 +171,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'origin_code' => 'originCode',
-        'opening_text_is_free_text' => 'openingTextIsFreeText'
+        'originCode' => 'originCode',
+        'openingTextIsFreeText' => 'openingTextIsFreeText'
     ];
 
     /**
@@ -181,8 +181,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'origin_code' => 'setOriginCode',
-        'opening_text_is_free_text' => 'setOpeningTextIsFreeText'
+        'originCode' => 'setOriginCode',
+        'openingTextIsFreeText' => 'setOpeningTextIsFreeText'
     ];
 
     /**
@@ -191,8 +191,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'origin_code' => 'getOriginCode',
-        'opening_text_is_free_text' => 'getOpeningTextIsFreeText'
+        'originCode' => 'getOriginCode',
+        'openingTextIsFreeText' => 'getOpeningTextIsFreeText'
     ];
 
     /**
@@ -252,8 +252,8 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('origin_code', $data ?? [], null);
-        $this->setIfExists('opening_text_is_free_text', $data ?? [], null);
+        $this->setIfExists('originCode', $data ?? [], null);
+        $this->setIfExists('openingTextIsFreeText', $data ?? [], null);
     }
 
     /**
@@ -283,11 +283,11 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['origin_code'] === null) {
-            $invalidProperties[] = "'origin_code' can't be null";
+        if ($this->container['originCode'] === null) {
+            $invalidProperties[] = "'originCode' can't be null";
         }
-        if ($this->container['opening_text_is_free_text'] === null) {
-            $invalidProperties[] = "'opening_text_is_free_text' can't be null";
+        if ($this->container['openingTextIsFreeText'] === null) {
+            $invalidProperties[] = "'openingTextIsFreeText' can't be null";
         }
         return $invalidProperties;
     }
@@ -305,55 +305,55 @@ class OenormPropertiesDto implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets origin_code
+     * Gets originCode
      *
      * @return \Dangl\AVACloud\Model\OenormOriginCodeDto
      */
     public function getOriginCode()
     {
-        return $this->container['origin_code'];
+        return $this->container['originCode'];
     }
 
     /**
-     * Sets origin_code
+     * Sets originCode
      *
-     * @param \Dangl\AVACloud\Model\OenormOriginCodeDto $origin_code origin_code
+     * @param \Dangl\AVACloud\Model\OenormOriginCodeDto $originCode originCode
      *
      * @return self
      */
-    public function setOriginCode($origin_code)
+    public function setOriginCode($originCode)
     {
-        if (is_null($origin_code)) {
-            throw new \InvalidArgumentException('non-nullable origin_code cannot be null');
+        if (is_null($originCode)) {
+            throw new \InvalidArgumentException('non-nullable originCode cannot be null');
         }
-        $this->container['origin_code'] = $origin_code;
+        $this->container['originCode'] = $originCode;
 
         return $this;
     }
 
     /**
-     * Gets opening_text_is_free_text
+     * Gets openingTextIsFreeText
      *
      * @return bool
      */
     public function getOpeningTextIsFreeText()
     {
-        return $this->container['opening_text_is_free_text'];
+        return $this->container['openingTextIsFreeText'];
     }
 
     /**
-     * Sets opening_text_is_free_text
+     * Sets openingTextIsFreeText
      *
-     * @param bool $opening_text_is_free_text This marks if the opening texts within this element are considered free text. It corresponds to 'vorbemerkungskennzeichen' in ÖNorm.
+     * @param bool $openingTextIsFreeText This marks if the opening texts within this element are considered free text. It corresponds to 'vorbemerkungskennzeichen' in ÖNorm.
      *
      * @return self
      */
-    public function setOpeningTextIsFreeText($opening_text_is_free_text)
+    public function setOpeningTextIsFreeText($openingTextIsFreeText)
     {
-        if (is_null($opening_text_is_free_text)) {
-            throw new \InvalidArgumentException('non-nullable opening_text_is_free_text cannot be null');
+        if (is_null($openingTextIsFreeText)) {
+            throw new \InvalidArgumentException('non-nullable openingTextIsFreeText cannot be null');
         }
-        $this->container['opening_text_is_free_text'] = $opening_text_is_free_text;
+        $this->container['openingTextIsFreeText'] = $openingTextIsFreeText;
 
         return $this;
     }

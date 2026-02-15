@@ -81,7 +81,7 @@ class FlatElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "previous_element_id"
+     * Test attribute "previousElementId"
      */
     public function testPropertyPreviousElementId()
     {
@@ -90,7 +90,7 @@ class FlatElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "parent_element_id"
+     * Test attribute "parentElementId"
      */
     public function testPropertyParentElementId()
     {

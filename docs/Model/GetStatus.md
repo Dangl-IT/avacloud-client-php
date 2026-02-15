@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_healthy** | **bool** | If any problems in the service health are known, this is set to false |
+**isHealthy** | **bool** | If any problems in the service health are known, this is set to false |
 **version** | **string** | The current version of the AVACloud service | [optional]
 **environment** | **string** | The environment of the current instance | [optional]
 

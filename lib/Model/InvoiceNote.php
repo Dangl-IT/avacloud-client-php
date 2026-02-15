@@ -59,9 +59,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'short_text' => 'string',
-        'short_text_type' => '\Dangl\AVACloud\Model\ShortTextType',
-        'long_text' => 'string'
+        'shortText' => 'string',
+        'shortTextType' => '\Dangl\AVACloud\Model\ShortTextType',
+        'longText' => 'string'
     ];
 
     /**
@@ -72,9 +72,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'short_text' => null,
-        'short_text_type' => null,
-        'long_text' => null
+        'shortText' => null,
+        'shortTextType' => null,
+        'longText' => null
     ];
 
     /**
@@ -83,9 +83,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'short_text' => false,
-        'short_text_type' => false,
-        'long_text' => false
+        'shortText' => false,
+        'shortTextType' => false,
+        'longText' => false
     ];
 
     /**
@@ -174,9 +174,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'short_text' => 'shortText',
-        'short_text_type' => 'shortTextType',
-        'long_text' => 'longText'
+        'shortText' => 'shortText',
+        'shortTextType' => 'shortTextType',
+        'longText' => 'longText'
     ];
 
     /**
@@ -185,9 +185,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'short_text' => 'setShortText',
-        'short_text_type' => 'setShortTextType',
-        'long_text' => 'setLongText'
+        'shortText' => 'setShortText',
+        'shortTextType' => 'setShortTextType',
+        'longText' => 'setLongText'
     ];
 
     /**
@@ -196,9 +196,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'short_text' => 'getShortText',
-        'short_text_type' => 'getShortTextType',
-        'long_text' => 'getLongText'
+        'shortText' => 'getShortText',
+        'shortTextType' => 'getShortTextType',
+        'longText' => 'getLongText'
     ];
 
     /**
@@ -258,9 +258,9 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('short_text_type', $data ?? [], null);
-        $this->setIfExists('long_text', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('shortTextType', $data ?? [], null);
+        $this->setIfExists('longText', $data ?? [], null);
     }
 
     /**
@@ -306,82 +306,82 @@ class InvoiceNote implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text BT-21 Short summary / heading. Should be a text code from this list: https://unece.org/fileadmin/DAM/trade/untdid/d16b/tred/tred4451.htm Field BT-21
+     * @param string|null $shortText BT-21 Short summary / heading. Should be a text code from this list: https://unece.org/fileadmin/DAM/trade/untdid/d16b/tred/tred4451.htm Field BT-21
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets short_text_type
+     * Gets shortTextType
      *
      * @return \Dangl\AVACloud\Model\ShortTextType|null
      */
     public function getShortTextType()
     {
-        return $this->container['short_text_type'];
+        return $this->container['shortTextType'];
     }
 
     /**
-     * Sets short_text_type
+     * Sets shortTextType
      *
-     * @param \Dangl\AVACloud\Model\ShortTextType|null $short_text_type short_text_type
+     * @param \Dangl\AVACloud\Model\ShortTextType|null $shortTextType shortTextType
      *
      * @return self
      */
-    public function setShortTextType($short_text_type)
+    public function setShortTextType($shortTextType)
     {
-        if (is_null($short_text_type)) {
-            throw new \InvalidArgumentException('non-nullable short_text_type cannot be null');
+        if (is_null($shortTextType)) {
+            throw new \InvalidArgumentException('non-nullable shortTextType cannot be null');
         }
-        $this->container['short_text_type'] = $short_text_type;
+        $this->container['shortTextType'] = $shortTextType;
 
         return $this;
     }
 
     /**
-     * Gets long_text
+     * Gets longText
      *
      * @return string|null
      */
     public function getLongText()
     {
-        return $this->container['long_text'];
+        return $this->container['longText'];
     }
 
     /**
-     * Sets long_text
+     * Sets longText
      *
-     * @param string|null $long_text BT-22 Explanation of this note Field BT-22
+     * @param string|null $longText BT-22 Explanation of this note Field BT-22
      *
      * @return self
      */
-    public function setLongText($long_text)
+    public function setLongText($longText)
     {
-        if (is_null($long_text)) {
-            throw new \InvalidArgumentException('non-nullable long_text cannot be null');
+        if (is_null($longText)) {
+            throw new \InvalidArgumentException('non-nullable longText cannot be null');
         }
-        $this->container['long_text'] = $long_text;
+        $this->container['longText'] = $longText;
 
         return $this;
     }

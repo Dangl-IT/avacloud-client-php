@@ -59,14 +59,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tax_rate' => 'float',
-        'deduction_factor' => 'float',
-        'total_net' => 'float',
-        'total_deducted' => 'float',
-        'total_tax' => 'float',
-        'total_gross' => 'float',
-        'total_gross_deducted' => 'float',
-        'total_tax_deducted' => 'float'
+        'taxRate' => 'float',
+        'deductionFactor' => 'float',
+        'totalNet' => 'float',
+        'totalDeducted' => 'float',
+        'totalTax' => 'float',
+        'totalGross' => 'float',
+        'totalGrossDeducted' => 'float',
+        'totalTaxDeducted' => 'float'
     ];
 
     /**
@@ -77,14 +77,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tax_rate' => 'decimal',
-        'deduction_factor' => 'decimal',
-        'total_net' => 'decimal',
-        'total_deducted' => 'decimal',
-        'total_tax' => 'decimal',
-        'total_gross' => 'decimal',
-        'total_gross_deducted' => 'decimal',
-        'total_tax_deducted' => 'decimal'
+        'taxRate' => 'decimal',
+        'deductionFactor' => 'decimal',
+        'totalNet' => 'decimal',
+        'totalDeducted' => 'decimal',
+        'totalTax' => 'decimal',
+        'totalGross' => 'decimal',
+        'totalGrossDeducted' => 'decimal',
+        'totalTaxDeducted' => 'decimal'
     ];
 
     /**
@@ -93,14 +93,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'tax_rate' => false,
-        'deduction_factor' => false,
-        'total_net' => false,
-        'total_deducted' => false,
-        'total_tax' => false,
-        'total_gross' => false,
-        'total_gross_deducted' => false,
-        'total_tax_deducted' => false
+        'taxRate' => false,
+        'deductionFactor' => false,
+        'totalNet' => false,
+        'totalDeducted' => false,
+        'totalTax' => false,
+        'totalGross' => false,
+        'totalGrossDeducted' => false,
+        'totalTaxDeducted' => false
     ];
 
     /**
@@ -189,14 +189,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'tax_rate' => 'taxRate',
-        'deduction_factor' => 'deductionFactor',
-        'total_net' => 'totalNet',
-        'total_deducted' => 'totalDeducted',
-        'total_tax' => 'totalTax',
-        'total_gross' => 'totalGross',
-        'total_gross_deducted' => 'totalGrossDeducted',
-        'total_tax_deducted' => 'totalTaxDeducted'
+        'taxRate' => 'taxRate',
+        'deductionFactor' => 'deductionFactor',
+        'totalNet' => 'totalNet',
+        'totalDeducted' => 'totalDeducted',
+        'totalTax' => 'totalTax',
+        'totalGross' => 'totalGross',
+        'totalGrossDeducted' => 'totalGrossDeducted',
+        'totalTaxDeducted' => 'totalTaxDeducted'
     ];
 
     /**
@@ -205,14 +205,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'tax_rate' => 'setTaxRate',
-        'deduction_factor' => 'setDeductionFactor',
-        'total_net' => 'setTotalNet',
-        'total_deducted' => 'setTotalDeducted',
-        'total_tax' => 'setTotalTax',
-        'total_gross' => 'setTotalGross',
-        'total_gross_deducted' => 'setTotalGrossDeducted',
-        'total_tax_deducted' => 'setTotalTaxDeducted'
+        'taxRate' => 'setTaxRate',
+        'deductionFactor' => 'setDeductionFactor',
+        'totalNet' => 'setTotalNet',
+        'totalDeducted' => 'setTotalDeducted',
+        'totalTax' => 'setTotalTax',
+        'totalGross' => 'setTotalGross',
+        'totalGrossDeducted' => 'setTotalGrossDeducted',
+        'totalTaxDeducted' => 'setTotalTaxDeducted'
     ];
 
     /**
@@ -221,14 +221,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'tax_rate' => 'getTaxRate',
-        'deduction_factor' => 'getDeductionFactor',
-        'total_net' => 'getTotalNet',
-        'total_deducted' => 'getTotalDeducted',
-        'total_tax' => 'getTotalTax',
-        'total_gross' => 'getTotalGross',
-        'total_gross_deducted' => 'getTotalGrossDeducted',
-        'total_tax_deducted' => 'getTotalTaxDeducted'
+        'taxRate' => 'getTaxRate',
+        'deductionFactor' => 'getDeductionFactor',
+        'totalNet' => 'getTotalNet',
+        'totalDeducted' => 'getTotalDeducted',
+        'totalTax' => 'getTotalTax',
+        'totalGross' => 'getTotalGross',
+        'totalGrossDeducted' => 'getTotalGrossDeducted',
+        'totalTaxDeducted' => 'getTotalTaxDeducted'
     ];
 
     /**
@@ -288,14 +288,14 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('tax_rate', $data ?? [], null);
-        $this->setIfExists('deduction_factor', $data ?? [], null);
-        $this->setIfExists('total_net', $data ?? [], null);
-        $this->setIfExists('total_deducted', $data ?? [], null);
-        $this->setIfExists('total_tax', $data ?? [], null);
-        $this->setIfExists('total_gross', $data ?? [], null);
-        $this->setIfExists('total_gross_deducted', $data ?? [], null);
-        $this->setIfExists('total_tax_deducted', $data ?? [], null);
+        $this->setIfExists('taxRate', $data ?? [], null);
+        $this->setIfExists('deductionFactor', $data ?? [], null);
+        $this->setIfExists('totalNet', $data ?? [], null);
+        $this->setIfExists('totalDeducted', $data ?? [], null);
+        $this->setIfExists('totalTax', $data ?? [], null);
+        $this->setIfExists('totalGross', $data ?? [], null);
+        $this->setIfExists('totalGrossDeducted', $data ?? [], null);
+        $this->setIfExists('totalTaxDeducted', $data ?? [], null);
     }
 
     /**
@@ -325,29 +325,29 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['tax_rate'] === null) {
-            $invalidProperties[] = "'tax_rate' can't be null";
+        if ($this->container['taxRate'] === null) {
+            $invalidProperties[] = "'taxRate' can't be null";
         }
-        if ($this->container['deduction_factor'] === null) {
-            $invalidProperties[] = "'deduction_factor' can't be null";
+        if ($this->container['deductionFactor'] === null) {
+            $invalidProperties[] = "'deductionFactor' can't be null";
         }
-        if ($this->container['total_net'] === null) {
-            $invalidProperties[] = "'total_net' can't be null";
+        if ($this->container['totalNet'] === null) {
+            $invalidProperties[] = "'totalNet' can't be null";
         }
-        if ($this->container['total_deducted'] === null) {
-            $invalidProperties[] = "'total_deducted' can't be null";
+        if ($this->container['totalDeducted'] === null) {
+            $invalidProperties[] = "'totalDeducted' can't be null";
         }
-        if ($this->container['total_tax'] === null) {
-            $invalidProperties[] = "'total_tax' can't be null";
+        if ($this->container['totalTax'] === null) {
+            $invalidProperties[] = "'totalTax' can't be null";
         }
-        if ($this->container['total_gross'] === null) {
-            $invalidProperties[] = "'total_gross' can't be null";
+        if ($this->container['totalGross'] === null) {
+            $invalidProperties[] = "'totalGross' can't be null";
         }
-        if ($this->container['total_gross_deducted'] === null) {
-            $invalidProperties[] = "'total_gross_deducted' can't be null";
+        if ($this->container['totalGrossDeducted'] === null) {
+            $invalidProperties[] = "'totalGrossDeducted' can't be null";
         }
-        if ($this->container['total_tax_deducted'] === null) {
-            $invalidProperties[] = "'total_tax_deducted' can't be null";
+        if ($this->container['totalTaxDeducted'] === null) {
+            $invalidProperties[] = "'totalTaxDeducted' can't be null";
         }
         return $invalidProperties;
     }
@@ -365,217 +365,217 @@ class GrossPriceComponentDto implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets tax_rate
+     * Gets taxRate
      *
      * @return float
      */
     public function getTaxRate()
     {
-        return $this->container['tax_rate'];
+        return $this->container['taxRate'];
     }
 
     /**
-     * Sets tax_rate
+     * Sets taxRate
      *
-     * @param float $tax_rate This components tax rate.
+     * @param float $taxRate This components tax rate.
      *
      * @return self
      */
-    public function setTaxRate($tax_rate)
+    public function setTaxRate($taxRate)
     {
-        if (is_null($tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable tax_rate cannot be null');
+        if (is_null($taxRate)) {
+            throw new \InvalidArgumentException('non-nullable taxRate cannot be null');
         }
-        $this->container['tax_rate'] = $tax_rate;
+        $this->container['taxRate'] = $taxRate;
 
         return $this;
     }
 
     /**
-     * Gets deduction_factor
+     * Gets deductionFactor
      *
      * @return float
      */
     public function getDeductionFactor()
     {
-        return $this->container['deduction_factor'];
+        return $this->container['deductionFactor'];
     }
 
     /**
-     * Sets deduction_factor
+     * Sets deductionFactor
      *
-     * @param float $deduction_factor This is the factor of applied deductions for this component
+     * @param float $deductionFactor This is the factor of applied deductions for this component
      *
      * @return self
      */
-    public function setDeductionFactor($deduction_factor)
+    public function setDeductionFactor($deductionFactor)
     {
-        if (is_null($deduction_factor)) {
-            throw new \InvalidArgumentException('non-nullable deduction_factor cannot be null');
+        if (is_null($deductionFactor)) {
+            throw new \InvalidArgumentException('non-nullable deductionFactor cannot be null');
         }
-        $this->container['deduction_factor'] = $deduction_factor;
+        $this->container['deductionFactor'] = $deductionFactor;
 
         return $this;
     }
 
     /**
-     * Gets total_net
+     * Gets totalNet
      *
      * @return float
      */
     public function getTotalNet()
     {
-        return $this->container['total_net'];
+        return $this->container['totalNet'];
     }
 
     /**
-     * Sets total_net
+     * Sets totalNet
      *
-     * @param float $total_net The total net price for all components of a given tax rate.
+     * @param float $totalNet The total net price for all components of a given tax rate.
      *
      * @return self
      */
-    public function setTotalNet($total_net)
+    public function setTotalNet($totalNet)
     {
-        if (is_null($total_net)) {
-            throw new \InvalidArgumentException('non-nullable total_net cannot be null');
+        if (is_null($totalNet)) {
+            throw new \InvalidArgumentException('non-nullable totalNet cannot be null');
         }
-        $this->container['total_net'] = $total_net;
+        $this->container['totalNet'] = $totalNet;
 
         return $this;
     }
 
     /**
-     * Gets total_deducted
+     * Gets totalDeducted
      *
      * @return float
      */
     public function getTotalDeducted()
     {
-        return $this->container['total_deducted'];
+        return $this->container['totalDeducted'];
     }
 
     /**
-     * Sets total_deducted
+     * Sets totalDeducted
      *
-     * @param float $total_deducted The resulting price component after applied deductions
+     * @param float $totalDeducted The resulting price component after applied deductions
      *
      * @return self
      */
-    public function setTotalDeducted($total_deducted)
+    public function setTotalDeducted($totalDeducted)
     {
-        if (is_null($total_deducted)) {
-            throw new \InvalidArgumentException('non-nullable total_deducted cannot be null');
+        if (is_null($totalDeducted)) {
+            throw new \InvalidArgumentException('non-nullable totalDeducted cannot be null');
         }
-        $this->container['total_deducted'] = $total_deducted;
+        $this->container['totalDeducted'] = $totalDeducted;
 
         return $this;
     }
 
     /**
-     * Gets total_tax
+     * Gets totalTax
      *
      * @return float
      */
     public function getTotalTax()
     {
-        return $this->container['total_tax'];
+        return $this->container['totalTax'];
     }
 
     /**
-     * Sets total_tax
+     * Sets totalTax
      *
-     * @param float $total_tax The total tax amount for all components of a given tax rate.
+     * @param float $totalTax The total tax amount for all components of a given tax rate.
      *
      * @return self
      */
-    public function setTotalTax($total_tax)
+    public function setTotalTax($totalTax)
     {
-        if (is_null($total_tax)) {
-            throw new \InvalidArgumentException('non-nullable total_tax cannot be null');
+        if (is_null($totalTax)) {
+            throw new \InvalidArgumentException('non-nullable totalTax cannot be null');
         }
-        $this->container['total_tax'] = $total_tax;
+        $this->container['totalTax'] = $totalTax;
 
         return $this;
     }
 
     /**
-     * Gets total_gross
+     * Gets totalGross
      *
      * @return float
      */
     public function getTotalGross()
     {
-        return $this->container['total_gross'];
+        return $this->container['totalGross'];
     }
 
     /**
-     * Sets total_gross
+     * Sets totalGross
      *
-     * @param float $total_gross The total gross price for all components of a given tax rate.
+     * @param float $totalGross The total gross price for all components of a given tax rate.
      *
      * @return self
      */
-    public function setTotalGross($total_gross)
+    public function setTotalGross($totalGross)
     {
-        if (is_null($total_gross)) {
-            throw new \InvalidArgumentException('non-nullable total_gross cannot be null');
+        if (is_null($totalGross)) {
+            throw new \InvalidArgumentException('non-nullable totalGross cannot be null');
         }
-        $this->container['total_gross'] = $total_gross;
+        $this->container['totalGross'] = $totalGross;
 
         return $this;
     }
 
     /**
-     * Gets total_gross_deducted
+     * Gets totalGrossDeducted
      *
      * @return float
      */
     public function getTotalGrossDeducted()
     {
-        return $this->container['total_gross_deducted'];
+        return $this->container['totalGrossDeducted'];
     }
 
     /**
-     * Sets total_gross_deducted
+     * Sets totalGrossDeducted
      *
-     * @param float $total_gross_deducted The total gross price for all components of a given tax rate, after applied deductions.
+     * @param float $totalGrossDeducted The total gross price for all components of a given tax rate, after applied deductions.
      *
      * @return self
      */
-    public function setTotalGrossDeducted($total_gross_deducted)
+    public function setTotalGrossDeducted($totalGrossDeducted)
     {
-        if (is_null($total_gross_deducted)) {
-            throw new \InvalidArgumentException('non-nullable total_gross_deducted cannot be null');
+        if (is_null($totalGrossDeducted)) {
+            throw new \InvalidArgumentException('non-nullable totalGrossDeducted cannot be null');
         }
-        $this->container['total_gross_deducted'] = $total_gross_deducted;
+        $this->container['totalGrossDeducted'] = $totalGrossDeducted;
 
         return $this;
     }
 
     /**
-     * Gets total_tax_deducted
+     * Gets totalTaxDeducted
      *
      * @return float
      */
     public function getTotalTaxDeducted()
     {
-        return $this->container['total_tax_deducted'];
+        return $this->container['totalTaxDeducted'];
     }
 
     /**
-     * Sets total_tax_deducted
+     * Sets totalTaxDeducted
      *
-     * @param float $total_tax_deducted The total tax amount for all components of a given tax rate, after applied deductions.
+     * @param float $totalTaxDeducted The total tax amount for all components of a given tax rate, after applied deductions.
      *
      * @return self
      */
-    public function setTotalTaxDeducted($total_tax_deducted)
+    public function setTotalTaxDeducted($totalTaxDeducted)
     {
-        if (is_null($total_tax_deducted)) {
-            throw new \InvalidArgumentException('non-nullable total_tax_deducted cannot be null');
+        if (is_null($totalTaxDeducted)) {
+            throw new \InvalidArgumentException('non-nullable totalTaxDeducted cannot be null');
         }
-        $this->container['total_tax_deducted'] = $total_tax_deducted;
+        $this->container['totalTaxDeducted'] = $totalTaxDeducted;
 
         return $this;
     }

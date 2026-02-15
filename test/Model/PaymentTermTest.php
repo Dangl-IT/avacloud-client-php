@@ -99,7 +99,7 @@ class PaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "base_amount"
+     * Test attribute "baseAmount"
      */
     public function testPropertyBaseAmount()
     {

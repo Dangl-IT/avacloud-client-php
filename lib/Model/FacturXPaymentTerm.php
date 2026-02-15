@@ -60,13 +60,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'description' => 'string',
-        'due_date' => '\DateTime',
-        'base_amount' => 'float',
-        'actual_discount_amount' => 'float',
-        'base_date' => '\DateTime',
-        'period_measure' => 'float',
-        'period_measure_unit_code' => 'string',
-        'calculation_percent' => 'float'
+        'dueDate' => '\DateTime',
+        'baseAmount' => 'float',
+        'actualDiscountAmount' => 'float',
+        'baseDate' => '\DateTime',
+        'periodMeasure' => 'float',
+        'periodMeasureUnitCode' => 'string',
+        'calculationPercent' => 'float'
     ];
 
     /**
@@ -78,13 +78,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'description' => null,
-        'due_date' => 'date-time',
-        'base_amount' => 'decimal',
-        'actual_discount_amount' => 'decimal',
-        'base_date' => 'date-time',
-        'period_measure' => 'decimal',
-        'period_measure_unit_code' => null,
-        'calculation_percent' => 'decimal'
+        'dueDate' => 'date-time',
+        'baseAmount' => 'decimal',
+        'actualDiscountAmount' => 'decimal',
+        'baseDate' => 'date-time',
+        'periodMeasure' => 'decimal',
+        'periodMeasureUnitCode' => null,
+        'calculationPercent' => 'decimal'
     ];
 
     /**
@@ -94,13 +94,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static array $openAPINullables = [
         'description' => false,
-        'due_date' => false,
-        'base_amount' => false,
-        'actual_discount_amount' => false,
-        'base_date' => false,
-        'period_measure' => false,
-        'period_measure_unit_code' => false,
-        'calculation_percent' => false
+        'dueDate' => false,
+        'baseAmount' => false,
+        'actualDiscountAmount' => false,
+        'baseDate' => false,
+        'periodMeasure' => false,
+        'periodMeasureUnitCode' => false,
+        'calculationPercent' => false
     ];
 
     /**
@@ -190,13 +190,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'description' => 'description',
-        'due_date' => 'dueDate',
-        'base_amount' => 'baseAmount',
-        'actual_discount_amount' => 'actualDiscountAmount',
-        'base_date' => 'baseDate',
-        'period_measure' => 'periodMeasure',
-        'period_measure_unit_code' => 'periodMeasureUnitCode',
-        'calculation_percent' => 'calculationPercent'
+        'dueDate' => 'dueDate',
+        'baseAmount' => 'baseAmount',
+        'actualDiscountAmount' => 'actualDiscountAmount',
+        'baseDate' => 'baseDate',
+        'periodMeasure' => 'periodMeasure',
+        'periodMeasureUnitCode' => 'periodMeasureUnitCode',
+        'calculationPercent' => 'calculationPercent'
     ];
 
     /**
@@ -206,13 +206,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'description' => 'setDescription',
-        'due_date' => 'setDueDate',
-        'base_amount' => 'setBaseAmount',
-        'actual_discount_amount' => 'setActualDiscountAmount',
-        'base_date' => 'setBaseDate',
-        'period_measure' => 'setPeriodMeasure',
-        'period_measure_unit_code' => 'setPeriodMeasureUnitCode',
-        'calculation_percent' => 'setCalculationPercent'
+        'dueDate' => 'setDueDate',
+        'baseAmount' => 'setBaseAmount',
+        'actualDiscountAmount' => 'setActualDiscountAmount',
+        'baseDate' => 'setBaseDate',
+        'periodMeasure' => 'setPeriodMeasure',
+        'periodMeasureUnitCode' => 'setPeriodMeasureUnitCode',
+        'calculationPercent' => 'setCalculationPercent'
     ];
 
     /**
@@ -222,13 +222,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'description' => 'getDescription',
-        'due_date' => 'getDueDate',
-        'base_amount' => 'getBaseAmount',
-        'actual_discount_amount' => 'getActualDiscountAmount',
-        'base_date' => 'getBaseDate',
-        'period_measure' => 'getPeriodMeasure',
-        'period_measure_unit_code' => 'getPeriodMeasureUnitCode',
-        'calculation_percent' => 'getCalculationPercent'
+        'dueDate' => 'getDueDate',
+        'baseAmount' => 'getBaseAmount',
+        'actualDiscountAmount' => 'getActualDiscountAmount',
+        'baseDate' => 'getBaseDate',
+        'periodMeasure' => 'getPeriodMeasure',
+        'periodMeasureUnitCode' => 'getPeriodMeasureUnitCode',
+        'calculationPercent' => 'getCalculationPercent'
     ];
 
     /**
@@ -289,13 +289,13 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
     public function __construct(?array $data = null)
     {
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('due_date', $data ?? [], null);
-        $this->setIfExists('base_amount', $data ?? [], null);
-        $this->setIfExists('actual_discount_amount', $data ?? [], null);
-        $this->setIfExists('base_date', $data ?? [], null);
-        $this->setIfExists('period_measure', $data ?? [], null);
-        $this->setIfExists('period_measure_unit_code', $data ?? [], null);
-        $this->setIfExists('calculation_percent', $data ?? [], null);
+        $this->setIfExists('dueDate', $data ?? [], null);
+        $this->setIfExists('baseAmount', $data ?? [], null);
+        $this->setIfExists('actualDiscountAmount', $data ?? [], null);
+        $this->setIfExists('baseDate', $data ?? [], null);
+        $this->setIfExists('periodMeasure', $data ?? [], null);
+        $this->setIfExists('periodMeasureUnitCode', $data ?? [], null);
+        $this->setIfExists('calculationPercent', $data ?? [], null);
     }
 
     /**
@@ -368,190 +368,190 @@ class FacturXPaymentTerm implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets due_date
+     * Gets dueDate
      *
      * @return \DateTime|null
      */
     public function getDueDate()
     {
-        return $this->container['due_date'];
+        return $this->container['dueDate'];
     }
 
     /**
-     * Sets due_date
+     * Sets dueDate
      *
-     * @param \DateTime|null $due_date The date until which the payment term applies.
+     * @param \DateTime|null $dueDate The date until which the payment term applies.
      *
      * @return self
      */
-    public function setDueDate($due_date)
+    public function setDueDate($dueDate)
     {
-        if (is_null($due_date)) {
-            throw new \InvalidArgumentException('non-nullable due_date cannot be null');
+        if (is_null($dueDate)) {
+            throw new \InvalidArgumentException('non-nullable dueDate cannot be null');
         }
-        $this->container['due_date'] = $due_date;
+        $this->container['dueDate'] = $dueDate;
 
         return $this;
     }
 
     /**
-     * Gets base_amount
+     * Gets baseAmount
      *
      * @return float|null
      */
     public function getBaseAmount()
     {
-        return $this->container['base_amount'];
+        return $this->container['baseAmount'];
     }
 
     /**
-     * Sets base_amount
+     * Sets baseAmount
      *
-     * @param float|null $base_amount The base amount unto which the discount applies.
+     * @param float|null $baseAmount The base amount unto which the discount applies.
      *
      * @return self
      */
-    public function setBaseAmount($base_amount)
+    public function setBaseAmount($baseAmount)
     {
-        if (is_null($base_amount)) {
-            throw new \InvalidArgumentException('non-nullable base_amount cannot be null');
+        if (is_null($baseAmount)) {
+            throw new \InvalidArgumentException('non-nullable baseAmount cannot be null');
         }
-        $this->container['base_amount'] = $base_amount;
+        $this->container['baseAmount'] = $baseAmount;
 
         return $this;
     }
 
     /**
-     * Gets actual_discount_amount
+     * Gets actualDiscountAmount
      *
      * @return float|null
      */
     public function getActualDiscountAmount()
     {
-        return $this->container['actual_discount_amount'];
+        return $this->container['actualDiscountAmount'];
     }
 
     /**
-     * Sets actual_discount_amount
+     * Sets actualDiscountAmount
      *
-     * @param float|null $actual_discount_amount The actual discount amount that will be deducted if the payment is done within the specified period.
+     * @param float|null $actualDiscountAmount The actual discount amount that will be deducted if the payment is done within the specified period.
      *
      * @return self
      */
-    public function setActualDiscountAmount($actual_discount_amount)
+    public function setActualDiscountAmount($actualDiscountAmount)
     {
-        if (is_null($actual_discount_amount)) {
-            throw new \InvalidArgumentException('non-nullable actual_discount_amount cannot be null');
+        if (is_null($actualDiscountAmount)) {
+            throw new \InvalidArgumentException('non-nullable actualDiscountAmount cannot be null');
         }
-        $this->container['actual_discount_amount'] = $actual_discount_amount;
+        $this->container['actualDiscountAmount'] = $actualDiscountAmount;
 
         return $this;
     }
 
     /**
-     * Gets base_date
+     * Gets baseDate
      *
      * @return \DateTime|null
      */
     public function getBaseDate()
     {
-        return $this->container['base_date'];
+        return $this->container['baseDate'];
     }
 
     /**
-     * Sets base_date
+     * Sets baseDate
      *
-     * @param \DateTime|null $base_date The base date for calculating the discount period. This is typically the invoice date.
+     * @param \DateTime|null $baseDate The base date for calculating the discount period. This is typically the invoice date.
      *
      * @return self
      */
-    public function setBaseDate($base_date)
+    public function setBaseDate($baseDate)
     {
-        if (is_null($base_date)) {
-            throw new \InvalidArgumentException('non-nullable base_date cannot be null');
+        if (is_null($baseDate)) {
+            throw new \InvalidArgumentException('non-nullable baseDate cannot be null');
         }
-        $this->container['base_date'] = $base_date;
+        $this->container['baseDate'] = $baseDate;
 
         return $this;
     }
 
     /**
-     * Gets period_measure
+     * Gets periodMeasure
      *
      * @return float|null
      */
     public function getPeriodMeasure()
     {
-        return $this->container['period_measure'];
+        return $this->container['periodMeasure'];
     }
 
     /**
-     * Sets period_measure
+     * Sets periodMeasure
      *
-     * @param float|null $period_measure The duration of the discount period, e.g. \"30\" for 30 days.
+     * @param float|null $periodMeasure The duration of the discount period, e.g. \"30\" for 30 days.
      *
      * @return self
      */
-    public function setPeriodMeasure($period_measure)
+    public function setPeriodMeasure($periodMeasure)
     {
-        if (is_null($period_measure)) {
-            throw new \InvalidArgumentException('non-nullable period_measure cannot be null');
+        if (is_null($periodMeasure)) {
+            throw new \InvalidArgumentException('non-nullable periodMeasure cannot be null');
         }
-        $this->container['period_measure'] = $period_measure;
+        $this->container['periodMeasure'] = $periodMeasure;
 
         return $this;
     }
 
     /**
-     * Gets period_measure_unit_code
+     * Gets periodMeasureUnitCode
      *
      * @return string|null
      */
     public function getPeriodMeasureUnitCode()
     {
-        return $this->container['period_measure_unit_code'];
+        return $this->container['periodMeasureUnitCode'];
     }
 
     /**
-     * Sets period_measure_unit_code
+     * Sets periodMeasureUnitCode
      *
-     * @param string|null $period_measure_unit_code The unit in which the period is specified, e.g. \"DAY\".
+     * @param string|null $periodMeasureUnitCode The unit in which the period is specified, e.g. \"DAY\".
      *
      * @return self
      */
-    public function setPeriodMeasureUnitCode($period_measure_unit_code)
+    public function setPeriodMeasureUnitCode($periodMeasureUnitCode)
     {
-        if (is_null($period_measure_unit_code)) {
-            throw new \InvalidArgumentException('non-nullable period_measure_unit_code cannot be null');
+        if (is_null($periodMeasureUnitCode)) {
+            throw new \InvalidArgumentException('non-nullable periodMeasureUnitCode cannot be null');
         }
-        $this->container['period_measure_unit_code'] = $period_measure_unit_code;
+        $this->container['periodMeasureUnitCode'] = $periodMeasureUnitCode;
 
         return $this;
     }
 
     /**
-     * Gets calculation_percent
+     * Gets calculationPercent
      *
      * @return float|null
      */
     public function getCalculationPercent()
     {
-        return $this->container['calculation_percent'];
+        return $this->container['calculationPercent'];
     }
 
     /**
-     * Sets calculation_percent
+     * Sets calculationPercent
      *
-     * @param float|null $calculation_percent The percentage of the discount, e.g. \".02\" for 2%.
+     * @param float|null $calculationPercent The percentage of the discount, e.g. \".02\" for 2%.
      *
      * @return self
      */
-    public function setCalculationPercent($calculation_percent)
+    public function setCalculationPercent($calculationPercent)
     {
-        if (is_null($calculation_percent)) {
-            throw new \InvalidArgumentException('non-nullable calculation_percent cannot be null');
+        if (is_null($calculationPercent)) {
+            throw new \InvalidArgumentException('non-nullable calculationPercent cannot be null');
         }
-        $this->container['calculation_percent'] = $calculation_percent;
+        $this->container['calculationPercent'] = $calculationPercent;
 
         return $this;
     }

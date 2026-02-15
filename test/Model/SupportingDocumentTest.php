@@ -81,7 +81,7 @@ class SupportingDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "document_reference"
+     * Test attribute "documentReference"
      */
     public function testPropertyDocumentReference()
     {
@@ -99,7 +99,7 @@ class SupportingDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "external_document_url"
+     * Test attribute "externalDocumentUrl"
      */
     public function testPropertyExternalDocumentUrl()
     {
@@ -108,7 +108,7 @@ class SupportingDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "document_base64"
+     * Test attribute "documentBase64"
      */
     public function testPropertyDocumentBase64()
     {
@@ -117,7 +117,7 @@ class SupportingDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "file_name"
+     * Test attribute "fileName"
      */
     public function testPropertyFileName()
     {
@@ -126,7 +126,7 @@ class SupportingDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "document_mime_type"
+     * Test attribute "documentMimeType"
      */
     public function testPropertyDocumentMimeType()
     {
@@ -135,7 +135,7 @@ class SupportingDocumentTest extends TestCase
     }
 
     /**
-     * Test attribute "placeholder_id"
+     * Test attribute "placeholderId"
      */
     public function testPropertyPlaceholderId()
     {

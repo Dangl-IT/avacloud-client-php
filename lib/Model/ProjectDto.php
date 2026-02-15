@@ -60,13 +60,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'price_accuracy' => 'int',
-        'unit_price_accuracy' => 'int',
-        'force_strict_totals' => 'bool',
-        'price_rounding_mode' => '\Dangl\AVACloud\Model\PriceRoundingModeDto',
-        'project_information' => '\Dangl\AVACloud\Model\ProjectInformationDto',
-        'service_specifications' => '\Dangl\AVACloud\Model\ServiceSpecificationDto[]',
-        'gaeb_xml_id' => 'string'
+        'priceAccuracy' => 'int',
+        'unitPriceAccuracy' => 'int',
+        'forceStrictTotals' => 'bool',
+        'priceRoundingMode' => '\Dangl\AVACloud\Model\PriceRoundingModeDto',
+        'projectInformation' => '\Dangl\AVACloud\Model\ProjectInformationDto',
+        'serviceSpecifications' => '\Dangl\AVACloud\Model\ServiceSpecificationDto[]',
+        'gaebXmlId' => 'string'
     ];
 
     /**
@@ -78,13 +78,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'price_accuracy' => 'int32',
-        'unit_price_accuracy' => 'int32',
-        'force_strict_totals' => null,
-        'price_rounding_mode' => null,
-        'project_information' => null,
-        'service_specifications' => null,
-        'gaeb_xml_id' => null
+        'priceAccuracy' => 'int32',
+        'unitPriceAccuracy' => 'int32',
+        'forceStrictTotals' => null,
+        'priceRoundingMode' => null,
+        'projectInformation' => null,
+        'serviceSpecifications' => null,
+        'gaebXmlId' => null
     ];
 
     /**
@@ -94,13 +94,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'price_accuracy' => false,
-        'unit_price_accuracy' => false,
-        'force_strict_totals' => false,
-        'price_rounding_mode' => false,
-        'project_information' => false,
-        'service_specifications' => false,
-        'gaeb_xml_id' => false
+        'priceAccuracy' => false,
+        'unitPriceAccuracy' => false,
+        'forceStrictTotals' => false,
+        'priceRoundingMode' => false,
+        'projectInformation' => false,
+        'serviceSpecifications' => false,
+        'gaebXmlId' => false
     ];
 
     /**
@@ -190,13 +190,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'price_accuracy' => 'priceAccuracy',
-        'unit_price_accuracy' => 'unitPriceAccuracy',
-        'force_strict_totals' => 'forceStrictTotals',
-        'price_rounding_mode' => 'priceRoundingMode',
-        'project_information' => 'projectInformation',
-        'service_specifications' => 'serviceSpecifications',
-        'gaeb_xml_id' => 'gaebXmlId'
+        'priceAccuracy' => 'priceAccuracy',
+        'unitPriceAccuracy' => 'unitPriceAccuracy',
+        'forceStrictTotals' => 'forceStrictTotals',
+        'priceRoundingMode' => 'priceRoundingMode',
+        'projectInformation' => 'projectInformation',
+        'serviceSpecifications' => 'serviceSpecifications',
+        'gaebXmlId' => 'gaebXmlId'
     ];
 
     /**
@@ -206,13 +206,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'price_accuracy' => 'setPriceAccuracy',
-        'unit_price_accuracy' => 'setUnitPriceAccuracy',
-        'force_strict_totals' => 'setForceStrictTotals',
-        'price_rounding_mode' => 'setPriceRoundingMode',
-        'project_information' => 'setProjectInformation',
-        'service_specifications' => 'setServiceSpecifications',
-        'gaeb_xml_id' => 'setGaebXmlId'
+        'priceAccuracy' => 'setPriceAccuracy',
+        'unitPriceAccuracy' => 'setUnitPriceAccuracy',
+        'forceStrictTotals' => 'setForceStrictTotals',
+        'priceRoundingMode' => 'setPriceRoundingMode',
+        'projectInformation' => 'setProjectInformation',
+        'serviceSpecifications' => 'setServiceSpecifications',
+        'gaebXmlId' => 'setGaebXmlId'
     ];
 
     /**
@@ -222,13 +222,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'price_accuracy' => 'getPriceAccuracy',
-        'unit_price_accuracy' => 'getUnitPriceAccuracy',
-        'force_strict_totals' => 'getForceStrictTotals',
-        'price_rounding_mode' => 'getPriceRoundingMode',
-        'project_information' => 'getProjectInformation',
-        'service_specifications' => 'getServiceSpecifications',
-        'gaeb_xml_id' => 'getGaebXmlId'
+        'priceAccuracy' => 'getPriceAccuracy',
+        'unitPriceAccuracy' => 'getUnitPriceAccuracy',
+        'forceStrictTotals' => 'getForceStrictTotals',
+        'priceRoundingMode' => 'getPriceRoundingMode',
+        'projectInformation' => 'getProjectInformation',
+        'serviceSpecifications' => 'getServiceSpecifications',
+        'gaebXmlId' => 'getGaebXmlId'
     ];
 
     /**
@@ -289,13 +289,13 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('price_accuracy', $data ?? [], null);
-        $this->setIfExists('unit_price_accuracy', $data ?? [], null);
-        $this->setIfExists('force_strict_totals', $data ?? [], null);
-        $this->setIfExists('price_rounding_mode', $data ?? [], null);
-        $this->setIfExists('project_information', $data ?? [], null);
-        $this->setIfExists('service_specifications', $data ?? [], null);
-        $this->setIfExists('gaeb_xml_id', $data ?? [], null);
+        $this->setIfExists('priceAccuracy', $data ?? [], null);
+        $this->setIfExists('unitPriceAccuracy', $data ?? [], null);
+        $this->setIfExists('forceStrictTotals', $data ?? [], null);
+        $this->setIfExists('priceRoundingMode', $data ?? [], null);
+        $this->setIfExists('projectInformation', $data ?? [], null);
+        $this->setIfExists('serviceSpecifications', $data ?? [], null);
+        $this->setIfExists('gaebXmlId', $data ?? [], null);
     }
 
     /**
@@ -328,14 +328,14 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['price_accuracy'] === null) {
-            $invalidProperties[] = "'price_accuracy' can't be null";
+        if ($this->container['priceAccuracy'] === null) {
+            $invalidProperties[] = "'priceAccuracy' can't be null";
         }
-        if ($this->container['force_strict_totals'] === null) {
-            $invalidProperties[] = "'force_strict_totals' can't be null";
+        if ($this->container['forceStrictTotals'] === null) {
+            $invalidProperties[] = "'forceStrictTotals' can't be null";
         }
-        if ($this->container['price_rounding_mode'] === null) {
-            $invalidProperties[] = "'price_rounding_mode' can't be null";
+        if ($this->container['priceRoundingMode'] === null) {
+            $invalidProperties[] = "'priceRoundingMode' can't be null";
         }
         return $invalidProperties;
     }
@@ -380,190 +380,190 @@ class ProjectDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets price_accuracy
+     * Gets priceAccuracy
      *
      * @return int
      */
     public function getPriceAccuracy()
     {
-        return $this->container['price_accuracy'];
+        return $this->container['priceAccuracy'];
     }
 
     /**
-     * Sets price_accuracy
+     * Sets priceAccuracy
      *
-     * @param int $price_accuracy This property controls the accuracy of all price properties, meaning how many decimal places are preserved in calculations. It defaults to DEFAULT_PRICE_ACCURACY. Please see the Dangl.AVA documentation for further information about decimal precision. If UnitPriceAccuracy is set, then this property is ignored for unit prices.
+     * @param int $priceAccuracy This property controls the accuracy of all price properties, meaning how many decimal places are preserved in calculations. It defaults to DEFAULT_PRICE_ACCURACY. Please see the Dangl.AVA documentation for further information about decimal precision. If UnitPriceAccuracy is set, then this property is ignored for unit prices.
      *
      * @return self
      */
-    public function setPriceAccuracy($price_accuracy)
+    public function setPriceAccuracy($priceAccuracy)
     {
-        if (is_null($price_accuracy)) {
-            throw new \InvalidArgumentException('non-nullable price_accuracy cannot be null');
+        if (is_null($priceAccuracy)) {
+            throw new \InvalidArgumentException('non-nullable priceAccuracy cannot be null');
         }
-        $this->container['price_accuracy'] = $price_accuracy;
+        $this->container['priceAccuracy'] = $priceAccuracy;
 
         return $this;
     }
 
     /**
-     * Gets unit_price_accuracy
+     * Gets unitPriceAccuracy
      *
      * @return int|null
      */
     public function getUnitPriceAccuracy()
     {
-        return $this->container['unit_price_accuracy'];
+        return $this->container['unitPriceAccuracy'];
     }
 
     /**
-     * Sets unit_price_accuracy
+     * Sets unitPriceAccuracy
      *
-     * @param int|null $unit_price_accuracy This property controls the accuracy of position unit price properties, meaning how many decimal places are preserved in calculations. Please see the Dangl.AVA documentation for further information about decimal precision. This can be separately set from PriceAccuracy, and it only controls the accuracy of the unit price of positions, not the total price. It defaults to null, which means the standard PriceAccuracy is used for unit prices.
+     * @param int|null $unitPriceAccuracy This property controls the accuracy of position unit price properties, meaning how many decimal places are preserved in calculations. Please see the Dangl.AVA documentation for further information about decimal precision. This can be separately set from PriceAccuracy, and it only controls the accuracy of the unit price of positions, not the total price. It defaults to null, which means the standard PriceAccuracy is used for unit prices.
      *
      * @return self
      */
-    public function setUnitPriceAccuracy($unit_price_accuracy)
+    public function setUnitPriceAccuracy($unitPriceAccuracy)
     {
-        if (is_null($unit_price_accuracy)) {
-            throw new \InvalidArgumentException('non-nullable unit_price_accuracy cannot be null');
+        if (is_null($unitPriceAccuracy)) {
+            throw new \InvalidArgumentException('non-nullable unitPriceAccuracy cannot be null');
         }
-        $this->container['unit_price_accuracy'] = $unit_price_accuracy;
+        $this->container['unitPriceAccuracy'] = $unitPriceAccuracy;
 
         return $this;
     }
 
     /**
-     * Gets force_strict_totals
+     * Gets forceStrictTotals
      *
      * @return bool
      */
     public function getForceStrictTotals()
     {
-        return $this->container['force_strict_totals'];
+        return $this->container['forceStrictTotals'];
     }
 
     /**
-     * Sets force_strict_totals
+     * Sets forceStrictTotals
      *
-     * @param bool $force_strict_totals This forces total prices to be the strict product of quantities times unit price in positions. It is enabled by default. If this is disabled, both the unit price and the total price of positions is calculated from the non-rounded values. Please see the documentation for a more detailed explanation of this setting.
+     * @param bool $forceStrictTotals This forces total prices to be the strict product of quantities times unit price in positions. It is enabled by default. If this is disabled, both the unit price and the total price of positions is calculated from the non-rounded values. Please see the documentation for a more detailed explanation of this setting.
      *
      * @return self
      */
-    public function setForceStrictTotals($force_strict_totals)
+    public function setForceStrictTotals($forceStrictTotals)
     {
-        if (is_null($force_strict_totals)) {
-            throw new \InvalidArgumentException('non-nullable force_strict_totals cannot be null');
+        if (is_null($forceStrictTotals)) {
+            throw new \InvalidArgumentException('non-nullable forceStrictTotals cannot be null');
         }
-        $this->container['force_strict_totals'] = $force_strict_totals;
+        $this->container['forceStrictTotals'] = $forceStrictTotals;
 
         return $this;
     }
 
     /**
-     * Gets price_rounding_mode
+     * Gets priceRoundingMode
      *
      * @return \Dangl\AVACloud\Model\PriceRoundingModeDto
      */
     public function getPriceRoundingMode()
     {
-        return $this->container['price_rounding_mode'];
+        return $this->container['priceRoundingMode'];
     }
 
     /**
-     * Sets price_rounding_mode
+     * Sets priceRoundingMode
      *
-     * @param \Dangl\AVACloud\Model\PriceRoundingModeDto $price_rounding_mode price_rounding_mode
+     * @param \Dangl\AVACloud\Model\PriceRoundingModeDto $priceRoundingMode priceRoundingMode
      *
      * @return self
      */
-    public function setPriceRoundingMode($price_rounding_mode)
+    public function setPriceRoundingMode($priceRoundingMode)
     {
-        if (is_null($price_rounding_mode)) {
-            throw new \InvalidArgumentException('non-nullable price_rounding_mode cannot be null');
+        if (is_null($priceRoundingMode)) {
+            throw new \InvalidArgumentException('non-nullable priceRoundingMode cannot be null');
         }
-        $this->container['price_rounding_mode'] = $price_rounding_mode;
+        $this->container['priceRoundingMode'] = $priceRoundingMode;
 
         return $this;
     }
 
     /**
-     * Gets project_information
+     * Gets projectInformation
      *
      * @return \Dangl\AVACloud\Model\ProjectInformationDto|null
      */
     public function getProjectInformation()
     {
-        return $this->container['project_information'];
+        return $this->container['projectInformation'];
     }
 
     /**
-     * Sets project_information
+     * Sets projectInformation
      *
-     * @param \Dangl\AVACloud\Model\ProjectInformationDto|null $project_information project_information
+     * @param \Dangl\AVACloud\Model\ProjectInformationDto|null $projectInformation projectInformation
      *
      * @return self
      */
-    public function setProjectInformation($project_information)
+    public function setProjectInformation($projectInformation)
     {
-        if (is_null($project_information)) {
-            throw new \InvalidArgumentException('non-nullable project_information cannot be null');
+        if (is_null($projectInformation)) {
+            throw new \InvalidArgumentException('non-nullable projectInformation cannot be null');
         }
-        $this->container['project_information'] = $project_information;
+        $this->container['projectInformation'] = $projectInformation;
 
         return $this;
     }
 
     /**
-     * Gets service_specifications
+     * Gets serviceSpecifications
      *
      * @return \Dangl\AVACloud\Model\ServiceSpecificationDto[]|null
      */
     public function getServiceSpecifications()
     {
-        return $this->container['service_specifications'];
+        return $this->container['serviceSpecifications'];
     }
 
     /**
-     * Sets service_specifications
+     * Sets serviceSpecifications
      *
-     * @param \Dangl\AVACloud\Model\ServiceSpecificationDto[]|null $service_specifications The ServiceSpecifications in this Project.
+     * @param \Dangl\AVACloud\Model\ServiceSpecificationDto[]|null $serviceSpecifications The ServiceSpecifications in this Project.
      *
      * @return self
      */
-    public function setServiceSpecifications($service_specifications)
+    public function setServiceSpecifications($serviceSpecifications)
     {
-        if (is_null($service_specifications)) {
-            throw new \InvalidArgumentException('non-nullable service_specifications cannot be null');
+        if (is_null($serviceSpecifications)) {
+            throw new \InvalidArgumentException('non-nullable serviceSpecifications cannot be null');
         }
-        $this->container['service_specifications'] = $service_specifications;
+        $this->container['serviceSpecifications'] = $serviceSpecifications;
 
         return $this;
     }
 
     /**
-     * Gets gaeb_xml_id
+     * Gets gaebXmlId
      *
      * @return string|null
      */
     public function getGaebXmlId()
     {
-        return $this->container['gaeb_xml_id'];
+        return $this->container['gaebXmlId'];
     }
 
     /**
-     * Sets gaeb_xml_id
+     * Sets gaebXmlId
      *
-     * @param string|null $gaeb_xml_id This is used to store the GAEB XML Id within this Project. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
+     * @param string|null $gaebXmlId This is used to store the GAEB XML Id within this Project. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
      *
      * @return self
      */
-    public function setGaebXmlId($gaeb_xml_id)
+    public function setGaebXmlId($gaebXmlId)
     {
-        if (is_null($gaeb_xml_id)) {
-            throw new \InvalidArgumentException('non-nullable gaeb_xml_id cannot be null');
+        if (is_null($gaebXmlId)) {
+            throw new \InvalidArgumentException('non-nullable gaebXmlId cannot be null');
         }
-        $this->container['gaeb_xml_id'] = $gaeb_xml_id;
+        $this->container['gaebXmlId'] = $gaebXmlId;
 
         return $this;
     }

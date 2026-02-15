@@ -59,14 +59,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'article_number' => 'string',
-        'ean_gtin_article_number' => 'string',
-        'iln_article_number' => 'string',
-        'catalogue_number' => 'string',
-        'catalogue_article_number' => 'string',
-        'price_basis' => 'float',
-        'sub_position_identifier' => 'string',
-        'customer_base_item_number' => 'string'
+        'articleNumber' => 'string',
+        'eanGtinArticleNumber' => 'string',
+        'ilnArticleNumber' => 'string',
+        'catalogueNumber' => 'string',
+        'catalogueArticleNumber' => 'string',
+        'priceBasis' => 'float',
+        'subPositionIdentifier' => 'string',
+        'customerBaseItemNumber' => 'string'
     ];
 
     /**
@@ -77,14 +77,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'article_number' => null,
-        'ean_gtin_article_number' => null,
-        'iln_article_number' => null,
-        'catalogue_number' => null,
-        'catalogue_article_number' => null,
-        'price_basis' => 'decimal',
-        'sub_position_identifier' => null,
-        'customer_base_item_number' => null
+        'articleNumber' => null,
+        'eanGtinArticleNumber' => null,
+        'ilnArticleNumber' => null,
+        'catalogueNumber' => null,
+        'catalogueArticleNumber' => null,
+        'priceBasis' => 'decimal',
+        'subPositionIdentifier' => null,
+        'customerBaseItemNumber' => null
     ];
 
     /**
@@ -93,14 +93,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'article_number' => false,
-        'ean_gtin_article_number' => false,
-        'iln_article_number' => false,
-        'catalogue_number' => false,
-        'catalogue_article_number' => false,
-        'price_basis' => false,
-        'sub_position_identifier' => false,
-        'customer_base_item_number' => false
+        'articleNumber' => false,
+        'eanGtinArticleNumber' => false,
+        'ilnArticleNumber' => false,
+        'catalogueNumber' => false,
+        'catalogueArticleNumber' => false,
+        'priceBasis' => false,
+        'subPositionIdentifier' => false,
+        'customerBaseItemNumber' => false
     ];
 
     /**
@@ -189,14 +189,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'article_number' => 'articleNumber',
-        'ean_gtin_article_number' => 'eanGtinArticleNumber',
-        'iln_article_number' => 'ilnArticleNumber',
-        'catalogue_number' => 'catalogueNumber',
-        'catalogue_article_number' => 'catalogueArticleNumber',
-        'price_basis' => 'priceBasis',
-        'sub_position_identifier' => 'subPositionIdentifier',
-        'customer_base_item_number' => 'customerBaseItemNumber'
+        'articleNumber' => 'articleNumber',
+        'eanGtinArticleNumber' => 'eanGtinArticleNumber',
+        'ilnArticleNumber' => 'ilnArticleNumber',
+        'catalogueNumber' => 'catalogueNumber',
+        'catalogueArticleNumber' => 'catalogueArticleNumber',
+        'priceBasis' => 'priceBasis',
+        'subPositionIdentifier' => 'subPositionIdentifier',
+        'customerBaseItemNumber' => 'customerBaseItemNumber'
     ];
 
     /**
@@ -205,14 +205,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'article_number' => 'setArticleNumber',
-        'ean_gtin_article_number' => 'setEanGtinArticleNumber',
-        'iln_article_number' => 'setIlnArticleNumber',
-        'catalogue_number' => 'setCatalogueNumber',
-        'catalogue_article_number' => 'setCatalogueArticleNumber',
-        'price_basis' => 'setPriceBasis',
-        'sub_position_identifier' => 'setSubPositionIdentifier',
-        'customer_base_item_number' => 'setCustomerBaseItemNumber'
+        'articleNumber' => 'setArticleNumber',
+        'eanGtinArticleNumber' => 'setEanGtinArticleNumber',
+        'ilnArticleNumber' => 'setIlnArticleNumber',
+        'catalogueNumber' => 'setCatalogueNumber',
+        'catalogueArticleNumber' => 'setCatalogueArticleNumber',
+        'priceBasis' => 'setPriceBasis',
+        'subPositionIdentifier' => 'setSubPositionIdentifier',
+        'customerBaseItemNumber' => 'setCustomerBaseItemNumber'
     ];
 
     /**
@@ -221,14 +221,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'article_number' => 'getArticleNumber',
-        'ean_gtin_article_number' => 'getEanGtinArticleNumber',
-        'iln_article_number' => 'getIlnArticleNumber',
-        'catalogue_number' => 'getCatalogueNumber',
-        'catalogue_article_number' => 'getCatalogueArticleNumber',
-        'price_basis' => 'getPriceBasis',
-        'sub_position_identifier' => 'getSubPositionIdentifier',
-        'customer_base_item_number' => 'getCustomerBaseItemNumber'
+        'articleNumber' => 'getArticleNumber',
+        'eanGtinArticleNumber' => 'getEanGtinArticleNumber',
+        'ilnArticleNumber' => 'getIlnArticleNumber',
+        'catalogueNumber' => 'getCatalogueNumber',
+        'catalogueArticleNumber' => 'getCatalogueArticleNumber',
+        'priceBasis' => 'getPriceBasis',
+        'subPositionIdentifier' => 'getSubPositionIdentifier',
+        'customerBaseItemNumber' => 'getCustomerBaseItemNumber'
     ];
 
     /**
@@ -288,14 +288,14 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('article_number', $data ?? [], null);
-        $this->setIfExists('ean_gtin_article_number', $data ?? [], null);
-        $this->setIfExists('iln_article_number', $data ?? [], null);
-        $this->setIfExists('catalogue_number', $data ?? [], null);
-        $this->setIfExists('catalogue_article_number', $data ?? [], null);
-        $this->setIfExists('price_basis', $data ?? [], null);
-        $this->setIfExists('sub_position_identifier', $data ?? [], null);
-        $this->setIfExists('customer_base_item_number', $data ?? [], null);
+        $this->setIfExists('articleNumber', $data ?? [], null);
+        $this->setIfExists('eanGtinArticleNumber', $data ?? [], null);
+        $this->setIfExists('ilnArticleNumber', $data ?? [], null);
+        $this->setIfExists('catalogueNumber', $data ?? [], null);
+        $this->setIfExists('catalogueArticleNumber', $data ?? [], null);
+        $this->setIfExists('priceBasis', $data ?? [], null);
+        $this->setIfExists('subPositionIdentifier', $data ?? [], null);
+        $this->setIfExists('customerBaseItemNumber', $data ?? [], null);
     }
 
     /**
@@ -341,217 +341,217 @@ class CommercePropertiesDto implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets article_number
+     * Gets articleNumber
      *
      * @return string|null
      */
     public function getArticleNumber()
     {
-        return $this->container['article_number'];
+        return $this->container['articleNumber'];
     }
 
     /**
-     * Sets article_number
+     * Sets articleNumber
      *
-     * @param string|null $article_number This maps to ArtNo in GAEB XML and represents an article number given by the supplier.
+     * @param string|null $articleNumber This maps to ArtNo in GAEB XML and represents an article number given by the supplier.
      *
      * @return self
      */
-    public function setArticleNumber($article_number)
+    public function setArticleNumber($articleNumber)
     {
-        if (is_null($article_number)) {
-            throw new \InvalidArgumentException('non-nullable article_number cannot be null');
+        if (is_null($articleNumber)) {
+            throw new \InvalidArgumentException('non-nullable articleNumber cannot be null');
         }
-        $this->container['article_number'] = $article_number;
+        $this->container['articleNumber'] = $articleNumber;
 
         return $this;
     }
 
     /**
-     * Gets ean_gtin_article_number
+     * Gets eanGtinArticleNumber
      *
      * @return string|null
      */
     public function getEanGtinArticleNumber()
     {
-        return $this->container['ean_gtin_article_number'];
+        return $this->container['eanGtinArticleNumber'];
     }
 
     /**
-     * Sets ean_gtin_article_number
+     * Sets eanGtinArticleNumber
      *
-     * @param string|null $ean_gtin_article_number This maps to EAN in GAEB XML and represents an GTIN (formerly EAN) article number.
+     * @param string|null $eanGtinArticleNumber This maps to EAN in GAEB XML and represents an GTIN (formerly EAN) article number.
      *
      * @return self
      */
-    public function setEanGtinArticleNumber($ean_gtin_article_number)
+    public function setEanGtinArticleNumber($eanGtinArticleNumber)
     {
-        if (is_null($ean_gtin_article_number)) {
-            throw new \InvalidArgumentException('non-nullable ean_gtin_article_number cannot be null');
+        if (is_null($eanGtinArticleNumber)) {
+            throw new \InvalidArgumentException('non-nullable eanGtinArticleNumber cannot be null');
         }
-        $this->container['ean_gtin_article_number'] = $ean_gtin_article_number;
+        $this->container['eanGtinArticleNumber'] = $eanGtinArticleNumber;
 
         return $this;
     }
 
     /**
-     * Gets iln_article_number
+     * Gets ilnArticleNumber
      *
      * @return string|null
      */
     public function getIlnArticleNumber()
     {
-        return $this->container['iln_article_number'];
+        return $this->container['ilnArticleNumber'];
     }
 
     /**
-     * Sets iln_article_number
+     * Sets ilnArticleNumber
      *
-     * @param string|null $iln_article_number This maps to ArtNoID in GAEB XML and represents an ILN article number.
+     * @param string|null $ilnArticleNumber This maps to ArtNoID in GAEB XML and represents an ILN article number.
      *
      * @return self
      */
-    public function setIlnArticleNumber($iln_article_number)
+    public function setIlnArticleNumber($ilnArticleNumber)
     {
-        if (is_null($iln_article_number)) {
-            throw new \InvalidArgumentException('non-nullable iln_article_number cannot be null');
+        if (is_null($ilnArticleNumber)) {
+            throw new \InvalidArgumentException('non-nullable ilnArticleNumber cannot be null');
         }
-        $this->container['iln_article_number'] = $iln_article_number;
+        $this->container['ilnArticleNumber'] = $ilnArticleNumber;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_number
+     * Gets catalogueNumber
      *
      * @return string|null
      */
     public function getCatalogueNumber()
     {
-        return $this->container['catalogue_number'];
+        return $this->container['catalogueNumber'];
     }
 
     /**
-     * Sets catalogue_number
+     * Sets catalogueNumber
      *
-     * @param string|null $catalogue_number This maps to CatalogNo in GAEB XML and represents an identifier of a specific catalogue. The referenced catalogue is usually a customer specific one, not related to CatalogueReferences.
+     * @param string|null $catalogueNumber This maps to CatalogNo in GAEB XML and represents an identifier of a specific catalogue. The referenced catalogue is usually a customer specific one, not related to CatalogueReferences.
      *
      * @return self
      */
-    public function setCatalogueNumber($catalogue_number)
+    public function setCatalogueNumber($catalogueNumber)
     {
-        if (is_null($catalogue_number)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_number cannot be null');
+        if (is_null($catalogueNumber)) {
+            throw new \InvalidArgumentException('non-nullable catalogueNumber cannot be null');
         }
-        $this->container['catalogue_number'] = $catalogue_number;
+        $this->container['catalogueNumber'] = $catalogueNumber;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_article_number
+     * Gets catalogueArticleNumber
      *
      * @return string|null
      */
     public function getCatalogueArticleNumber()
     {
-        return $this->container['catalogue_article_number'];
+        return $this->container['catalogueArticleNumber'];
     }
 
     /**
-     * Sets catalogue_article_number
+     * Sets catalogueArticleNumber
      *
-     * @param string|null $catalogue_article_number This maps to CatalogArtNo in GAEB XML and represents a key that maps to an entry in a specific catalogue. The referenced catalogue is usually a customer specific one, not related to CatalogueReferences.
+     * @param string|null $catalogueArticleNumber This maps to CatalogArtNo in GAEB XML and represents a key that maps to an entry in a specific catalogue. The referenced catalogue is usually a customer specific one, not related to CatalogueReferences.
      *
      * @return self
      */
-    public function setCatalogueArticleNumber($catalogue_article_number)
+    public function setCatalogueArticleNumber($catalogueArticleNumber)
     {
-        if (is_null($catalogue_article_number)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_article_number cannot be null');
+        if (is_null($catalogueArticleNumber)) {
+            throw new \InvalidArgumentException('non-nullable catalogueArticleNumber cannot be null');
         }
-        $this->container['catalogue_article_number'] = $catalogue_article_number;
+        $this->container['catalogueArticleNumber'] = $catalogueArticleNumber;
 
         return $this;
     }
 
     /**
-     * Gets price_basis
+     * Gets priceBasis
      *
      * @return float|null
      */
     public function getPriceBasis()
     {
-        return $this->container['price_basis'];
+        return $this->container['priceBasis'];
     }
 
     /**
-     * Sets price_basis
+     * Sets priceBasis
      *
-     * @param float|null $price_basis This optional property can be used to indicate the basis for prices for a single position. Price basis means that the price is given per unit of the basis, e.g. per a pack of five when this property is set to '5'.
+     * @param float|null $priceBasis This optional property can be used to indicate the basis for prices for a single position. Price basis means that the price is given per unit of the basis, e.g. per a pack of five when this property is set to '5'.
      *
      * @return self
      */
-    public function setPriceBasis($price_basis)
+    public function setPriceBasis($priceBasis)
     {
-        if (is_null($price_basis)) {
-            throw new \InvalidArgumentException('non-nullable price_basis cannot be null');
+        if (is_null($priceBasis)) {
+            throw new \InvalidArgumentException('non-nullable priceBasis cannot be null');
         }
-        $this->container['price_basis'] = $price_basis;
+        $this->container['priceBasis'] = $priceBasis;
 
         return $this;
     }
 
     /**
-     * Gets sub_position_identifier
+     * Gets subPositionIdentifier
      *
      * @return string|null
      */
     public function getSubPositionIdentifier()
     {
-        return $this->container['sub_position_identifier'];
+        return $this->container['subPositionIdentifier'];
     }
 
     /**
-     * Sets sub_position_identifier
+     * Sets subPositionIdentifier
      *
-     * @param string|null $sub_position_identifier This optional property can be used to indicate a sub position identifier specific for the commerce exchange
+     * @param string|null $subPositionIdentifier This optional property can be used to indicate a sub position identifier specific for the commerce exchange
      *
      * @return self
      */
-    public function setSubPositionIdentifier($sub_position_identifier)
+    public function setSubPositionIdentifier($subPositionIdentifier)
     {
-        if (is_null($sub_position_identifier)) {
-            throw new \InvalidArgumentException('non-nullable sub_position_identifier cannot be null');
+        if (is_null($subPositionIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable subPositionIdentifier cannot be null');
         }
-        $this->container['sub_position_identifier'] = $sub_position_identifier;
+        $this->container['subPositionIdentifier'] = $subPositionIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets customer_base_item_number
+     * Gets customerBaseItemNumber
      *
      * @return string|null
      */
     public function getCustomerBaseItemNumber()
     {
-        return $this->container['customer_base_item_number'];
+        return $this->container['customerBaseItemNumber'];
     }
 
     /**
-     * Sets customer_base_item_number
+     * Sets customerBaseItemNumber
      *
-     * @param string|null $customer_base_item_number In a commerce exchange, this property is usually used to reference the base item number of an underlying phase 83 exchange file
+     * @param string|null $customerBaseItemNumber In a commerce exchange, this property is usually used to reference the base item number of an underlying phase 83 exchange file
      *
      * @return self
      */
-    public function setCustomerBaseItemNumber($customer_base_item_number)
+    public function setCustomerBaseItemNumber($customerBaseItemNumber)
     {
-        if (is_null($customer_base_item_number)) {
-            throw new \InvalidArgumentException('non-nullable customer_base_item_number cannot be null');
+        if (is_null($customerBaseItemNumber)) {
+            throw new \InvalidArgumentException('non-nullable customerBaseItemNumber cannot be null');
         }
-        $this->container['customer_base_item_number'] = $customer_base_item_number;
+        $this->container['customerBaseItemNumber'] = $customerBaseItemNumber;
 
         return $this;
     }

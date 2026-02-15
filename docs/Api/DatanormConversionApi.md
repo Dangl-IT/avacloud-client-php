@@ -13,7 +13,7 @@ All URIs are relative to https://avacloud-api.dangl-it.com, except if the operat
 ## `datanormConversionConvertToAva()`
 
 ```php
-datanormConversionConvertToAva($remove_plain_text_long_texts, $remove_html_long_texts, $datanorm_file): \Dangl\AVACloud\Model\ProjectDto
+datanormConversionConvertToAva($datanormFile, $removePlainTextLongTexts, $removeHtmlLongTexts): \Dangl\AVACloud\Model\ProjectDto
 ```
 
 Converts Datanorm files to Dangl.AVA projects
@@ -36,12 +36,12 @@ $apiInstance = new Dangl\AVACloud\Api\DatanormConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$remove_plain_text_long_texts = True; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
-$remove_html_long_texts = True; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
-$datanorm_file = '/path/to/file.txt'; // \SplFileObject | The input file
+$datanormFile = '/path/to/file.txt'; // \SplFileObject | The input file
+$removePlainTextLongTexts = True; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
+$removeHtmlLongTexts = True; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
 
 try {
-    $result = $apiInstance->datanormConversionConvertToAva($remove_plain_text_long_texts, $remove_html_long_texts, $datanorm_file);
+    $result = $apiInstance->datanormConversionConvertToAva($datanormFile, $removePlainTextLongTexts, $removeHtmlLongTexts);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DatanormConversionApi->datanormConversionConvertToAva: ', $e->getMessage(), PHP_EOL;
@@ -52,9 +52,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **remove_plain_text_long_texts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional] |
-| **remove_html_long_texts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional] |
-| **datanorm_file** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
+| **datanormFile** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
+| **removePlainTextLongTexts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional] |
+| **removeHtmlLongTexts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional] |
 
 ### Return type
 
@@ -76,7 +76,7 @@ try {
 ## `datanormConversionConvertToFlatAva()`
 
 ```php
-datanormConversionConvertToFlatAva($datanorm_file): \Dangl\AVACloud\Model\FlatAvaProject
+datanormConversionConvertToFlatAva($datanormFile): \Dangl\AVACloud\Model\FlatAvaProject
 ```
 
 Converts Datanorm files to Dangl.AVA projects
@@ -99,10 +99,10 @@ $apiInstance = new Dangl\AVACloud\Api\DatanormConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$datanorm_file = '/path/to/file.txt'; // \SplFileObject | The input file
+$datanormFile = '/path/to/file.txt'; // \SplFileObject | The input file
 
 try {
-    $result = $apiInstance->datanormConversionConvertToFlatAva($datanorm_file);
+    $result = $apiInstance->datanormConversionConvertToFlatAva($datanormFile);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DatanormConversionApi->datanormConversionConvertToFlatAva: ', $e->getMessage(), PHP_EOL;
@@ -113,7 +113,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datanorm_file** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
+| **datanormFile** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
 
 ### Return type
 

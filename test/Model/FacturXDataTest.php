@@ -81,7 +81,7 @@ class FacturXDataTest extends TestCase
     }
 
     /**
-     * Test attribute "routing_id"
+     * Test attribute "routingId"
      */
     public function testPropertyRoutingId()
     {
@@ -90,7 +90,7 @@ class FacturXDataTest extends TestCase
     }
 
     /**
-     * Test attribute "factur_x_payment_terms"
+     * Test attribute "facturXPaymentTerms"
      */
     public function testPropertyFacturXPaymentTerms()
     {

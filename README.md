@@ -62,12 +62,12 @@ $apiInstance = new Dangl\AVACloud\Api\AslvConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$remove_plain_text_long_texts = True; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
-$remove_html_long_texts = True; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
-$aslv_file = '/path/to/file.txt'; // \SplFileObject | The input file
+$aslvFile = '/path/to/file.txt'; // \SplFileObject | The input file
+$removePlainTextLongTexts = True; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
+$removeHtmlLongTexts = True; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
 
 try {
-    $result = $apiInstance->aslvConversionConvertToAva($remove_plain_text_long_texts, $remove_html_long_texts, $aslv_file);
+    $result = $apiInstance->aslvConversionConvertToAva($aslvFile, $removePlainTextLongTexts, $removeHtmlLongTexts);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AslvConversionApi->aslvConversionConvertToAva: ', $e->getMessage(), PHP_EOL;

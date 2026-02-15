@@ -62,9 +62,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'vendor' => '\Dangl\AVACloud\Model\PartyInformationDto',
         'articles' => '\Dangl\AVACloud\Model\ArticleDataDto[]',
-        'short_text' => 'string',
-        'long_text' => 'string',
-        'html_long_text' => 'string'
+        'shortText' => 'string',
+        'longText' => 'string',
+        'htmlLongText' => 'string'
     ];
 
     /**
@@ -78,9 +78,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'guid',
         'vendor' => null,
         'articles' => null,
-        'short_text' => null,
-        'long_text' => null,
-        'html_long_text' => null
+        'shortText' => null,
+        'longText' => null,
+        'htmlLongText' => null
     ];
 
     /**
@@ -92,9 +92,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => false,
         'vendor' => false,
         'articles' => false,
-        'short_text' => false,
-        'long_text' => false,
-        'html_long_text' => false
+        'shortText' => false,
+        'longText' => false,
+        'htmlLongText' => false
     ];
 
     /**
@@ -186,9 +186,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'vendor' => 'vendor',
         'articles' => 'articles',
-        'short_text' => 'shortText',
-        'long_text' => 'longText',
-        'html_long_text' => 'htmlLongText'
+        'shortText' => 'shortText',
+        'longText' => 'longText',
+        'htmlLongText' => 'htmlLongText'
     ];
 
     /**
@@ -200,9 +200,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'vendor' => 'setVendor',
         'articles' => 'setArticles',
-        'short_text' => 'setShortText',
-        'long_text' => 'setLongText',
-        'html_long_text' => 'setHtmlLongText'
+        'shortText' => 'setShortText',
+        'longText' => 'setLongText',
+        'htmlLongText' => 'setHtmlLongText'
     ];
 
     /**
@@ -214,9 +214,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'vendor' => 'getVendor',
         'articles' => 'getArticles',
-        'short_text' => 'getShortText',
-        'long_text' => 'getLongText',
-        'html_long_text' => 'getHtmlLongText'
+        'shortText' => 'getShortText',
+        'longText' => 'getLongText',
+        'htmlLongText' => 'getHtmlLongText'
     ];
 
     /**
@@ -279,9 +279,9 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('vendor', $data ?? [], null);
         $this->setIfExists('articles', $data ?? [], null);
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('long_text', $data ?? [], null);
-        $this->setIfExists('html_long_text', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('longText', $data ?? [], null);
+        $this->setIfExists('htmlLongText', $data ?? [], null);
     }
 
     /**
@@ -411,82 +411,82 @@ class ProductDataDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text Short description for this ITextElement element.
+     * @param string|null $shortText Short description for this ITextElement element.
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets long_text
+     * Gets longText
      *
      * @return string|null
      */
     public function getLongText()
     {
-        return $this->container['long_text'];
+        return $this->container['longText'];
     }
 
     /**
-     * Sets long_text
+     * Sets longText
      *
-     * @param string|null $long_text Detailed description for this ITextElement element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
+     * @param string|null $longText Detailed description for this ITextElement element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
      *
      * @return self
      */
-    public function setLongText($long_text)
+    public function setLongText($longText)
     {
-        if (is_null($long_text)) {
-            throw new \InvalidArgumentException('non-nullable long_text cannot be null');
+        if (is_null($longText)) {
+            throw new \InvalidArgumentException('non-nullable longText cannot be null');
         }
-        $this->container['long_text'] = $long_text;
+        $this->container['longText'] = $longText;
 
         return $this;
     }
 
     /**
-     * Gets html_long_text
+     * Gets htmlLongText
      *
      * @return string|null
      */
     public function getHtmlLongText()
     {
-        return $this->container['html_long_text'];
+        return $this->container['htmlLongText'];
     }
 
     /**
-     * Sets html_long_text
+     * Sets htmlLongText
      *
-     * @param string|null $html_long_text This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
+     * @param string|null $htmlLongText This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
      *
      * @return self
      */
-    public function setHtmlLongText($html_long_text)
+    public function setHtmlLongText($htmlLongText)
     {
-        if (is_null($html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable html_long_text cannot be null');
+        if (is_null($htmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable htmlLongText cannot be null');
         }
-        $this->container['html_long_text'] = $html_long_text;
+        $this->container['htmlLongText'] = $htmlLongText;
 
         return $this;
     }

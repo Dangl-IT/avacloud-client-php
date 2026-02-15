@@ -60,11 +60,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'severity' => '\Dangl\AVACloud\Model\ValidationSeverity',
-        'check_type' => '\Dangl\AVACloud\Model\ValidationCheckType',
+        'checkType' => '\Dangl\AVACloud\Model\ValidationCheckType',
         'message' => 'string',
-        'object_validation_check_details' => '\Dangl\AVACloud\Model\ObjectValidationCheckDetails',
-        'xml_schema_validation_check_details' => '\Dangl\AVACloud\Model\XmlSchemaValidationCheckDetails',
-        'project_validation_check_details' => '\Dangl\AVACloud\Model\ProjectValidationCheckDetails'
+        'objectValidationCheckDetails' => '\Dangl\AVACloud\Model\ObjectValidationCheckDetails',
+        'xmlSchemaValidationCheckDetails' => '\Dangl\AVACloud\Model\XmlSchemaValidationCheckDetails',
+        'projectValidationCheckDetails' => '\Dangl\AVACloud\Model\ProjectValidationCheckDetails'
     ];
 
     /**
@@ -76,11 +76,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPIFormats = [
         'severity' => null,
-        'check_type' => null,
+        'checkType' => null,
         'message' => null,
-        'object_validation_check_details' => null,
-        'xml_schema_validation_check_details' => null,
-        'project_validation_check_details' => null
+        'objectValidationCheckDetails' => null,
+        'xmlSchemaValidationCheckDetails' => null,
+        'projectValidationCheckDetails' => null
     ];
 
     /**
@@ -90,11 +90,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static array $openAPINullables = [
         'severity' => false,
-        'check_type' => false,
+        'checkType' => false,
         'message' => false,
-        'object_validation_check_details' => false,
-        'xml_schema_validation_check_details' => false,
-        'project_validation_check_details' => false
+        'objectValidationCheckDetails' => false,
+        'xmlSchemaValidationCheckDetails' => false,
+        'projectValidationCheckDetails' => false
     ];
 
     /**
@@ -184,11 +184,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $attributeMap = [
         'severity' => 'severity',
-        'check_type' => 'checkType',
+        'checkType' => 'checkType',
         'message' => 'message',
-        'object_validation_check_details' => 'objectValidationCheckDetails',
-        'xml_schema_validation_check_details' => 'xmlSchemaValidationCheckDetails',
-        'project_validation_check_details' => 'projectValidationCheckDetails'
+        'objectValidationCheckDetails' => 'objectValidationCheckDetails',
+        'xmlSchemaValidationCheckDetails' => 'xmlSchemaValidationCheckDetails',
+        'projectValidationCheckDetails' => 'projectValidationCheckDetails'
     ];
 
     /**
@@ -198,11 +198,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $setters = [
         'severity' => 'setSeverity',
-        'check_type' => 'setCheckType',
+        'checkType' => 'setCheckType',
         'message' => 'setMessage',
-        'object_validation_check_details' => 'setObjectValidationCheckDetails',
-        'xml_schema_validation_check_details' => 'setXmlSchemaValidationCheckDetails',
-        'project_validation_check_details' => 'setProjectValidationCheckDetails'
+        'objectValidationCheckDetails' => 'setObjectValidationCheckDetails',
+        'xmlSchemaValidationCheckDetails' => 'setXmlSchemaValidationCheckDetails',
+        'projectValidationCheckDetails' => 'setProjectValidationCheckDetails'
     ];
 
     /**
@@ -212,11 +212,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     protected static $getters = [
         'severity' => 'getSeverity',
-        'check_type' => 'getCheckType',
+        'checkType' => 'getCheckType',
         'message' => 'getMessage',
-        'object_validation_check_details' => 'getObjectValidationCheckDetails',
-        'xml_schema_validation_check_details' => 'getXmlSchemaValidationCheckDetails',
-        'project_validation_check_details' => 'getProjectValidationCheckDetails'
+        'objectValidationCheckDetails' => 'getObjectValidationCheckDetails',
+        'xmlSchemaValidationCheckDetails' => 'getXmlSchemaValidationCheckDetails',
+        'projectValidationCheckDetails' => 'getProjectValidationCheckDetails'
     ];
 
     /**
@@ -277,11 +277,11 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('severity', $data ?? [], null);
-        $this->setIfExists('check_type', $data ?? [], null);
+        $this->setIfExists('checkType', $data ?? [], null);
         $this->setIfExists('message', $data ?? [], null);
-        $this->setIfExists('object_validation_check_details', $data ?? [], null);
-        $this->setIfExists('xml_schema_validation_check_details', $data ?? [], null);
-        $this->setIfExists('project_validation_check_details', $data ?? [], null);
+        $this->setIfExists('objectValidationCheckDetails', $data ?? [], null);
+        $this->setIfExists('xmlSchemaValidationCheckDetails', $data ?? [], null);
+        $this->setIfExists('projectValidationCheckDetails', $data ?? [], null);
     }
 
     /**
@@ -314,8 +314,8 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
         if ($this->container['severity'] === null) {
             $invalidProperties[] = "'severity' can't be null";
         }
-        if ($this->container['check_type'] === null) {
-            $invalidProperties[] = "'check_type' can't be null";
+        if ($this->container['checkType'] === null) {
+            $invalidProperties[] = "'checkType' can't be null";
         }
         return $invalidProperties;
     }
@@ -360,28 +360,28 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets check_type
+     * Gets checkType
      *
      * @return \Dangl\AVACloud\Model\ValidationCheckType
      */
     public function getCheckType()
     {
-        return $this->container['check_type'];
+        return $this->container['checkType'];
     }
 
     /**
-     * Sets check_type
+     * Sets checkType
      *
-     * @param \Dangl\AVACloud\Model\ValidationCheckType $check_type check_type
+     * @param \Dangl\AVACloud\Model\ValidationCheckType $checkType checkType
      *
      * @return self
      */
-    public function setCheckType($check_type)
+    public function setCheckType($checkType)
     {
-        if (is_null($check_type)) {
-            throw new \InvalidArgumentException('non-nullable check_type cannot be null');
+        if (is_null($checkType)) {
+            throw new \InvalidArgumentException('non-nullable checkType cannot be null');
         }
-        $this->container['check_type'] = $check_type;
+        $this->container['checkType'] = $checkType;
 
         return $this;
     }
@@ -414,82 +414,82 @@ class ValidationCheckResult implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets object_validation_check_details
+     * Gets objectValidationCheckDetails
      *
      * @return \Dangl\AVACloud\Model\ObjectValidationCheckDetails|null
      */
     public function getObjectValidationCheckDetails()
     {
-        return $this->container['object_validation_check_details'];
+        return $this->container['objectValidationCheckDetails'];
     }
 
     /**
-     * Sets object_validation_check_details
+     * Sets objectValidationCheckDetails
      *
-     * @param \Dangl\AVACloud\Model\ObjectValidationCheckDetails|null $object_validation_check_details object_validation_check_details
+     * @param \Dangl\AVACloud\Model\ObjectValidationCheckDetails|null $objectValidationCheckDetails objectValidationCheckDetails
      *
      * @return self
      */
-    public function setObjectValidationCheckDetails($object_validation_check_details)
+    public function setObjectValidationCheckDetails($objectValidationCheckDetails)
     {
-        if (is_null($object_validation_check_details)) {
-            throw new \InvalidArgumentException('non-nullable object_validation_check_details cannot be null');
+        if (is_null($objectValidationCheckDetails)) {
+            throw new \InvalidArgumentException('non-nullable objectValidationCheckDetails cannot be null');
         }
-        $this->container['object_validation_check_details'] = $object_validation_check_details;
+        $this->container['objectValidationCheckDetails'] = $objectValidationCheckDetails;
 
         return $this;
     }
 
     /**
-     * Gets xml_schema_validation_check_details
+     * Gets xmlSchemaValidationCheckDetails
      *
      * @return \Dangl\AVACloud\Model\XmlSchemaValidationCheckDetails|null
      */
     public function getXmlSchemaValidationCheckDetails()
     {
-        return $this->container['xml_schema_validation_check_details'];
+        return $this->container['xmlSchemaValidationCheckDetails'];
     }
 
     /**
-     * Sets xml_schema_validation_check_details
+     * Sets xmlSchemaValidationCheckDetails
      *
-     * @param \Dangl\AVACloud\Model\XmlSchemaValidationCheckDetails|null $xml_schema_validation_check_details xml_schema_validation_check_details
+     * @param \Dangl\AVACloud\Model\XmlSchemaValidationCheckDetails|null $xmlSchemaValidationCheckDetails xmlSchemaValidationCheckDetails
      *
      * @return self
      */
-    public function setXmlSchemaValidationCheckDetails($xml_schema_validation_check_details)
+    public function setXmlSchemaValidationCheckDetails($xmlSchemaValidationCheckDetails)
     {
-        if (is_null($xml_schema_validation_check_details)) {
-            throw new \InvalidArgumentException('non-nullable xml_schema_validation_check_details cannot be null');
+        if (is_null($xmlSchemaValidationCheckDetails)) {
+            throw new \InvalidArgumentException('non-nullable xmlSchemaValidationCheckDetails cannot be null');
         }
-        $this->container['xml_schema_validation_check_details'] = $xml_schema_validation_check_details;
+        $this->container['xmlSchemaValidationCheckDetails'] = $xmlSchemaValidationCheckDetails;
 
         return $this;
     }
 
     /**
-     * Gets project_validation_check_details
+     * Gets projectValidationCheckDetails
      *
      * @return \Dangl\AVACloud\Model\ProjectValidationCheckDetails|null
      */
     public function getProjectValidationCheckDetails()
     {
-        return $this->container['project_validation_check_details'];
+        return $this->container['projectValidationCheckDetails'];
     }
 
     /**
-     * Sets project_validation_check_details
+     * Sets projectValidationCheckDetails
      *
-     * @param \Dangl\AVACloud\Model\ProjectValidationCheckDetails|null $project_validation_check_details project_validation_check_details
+     * @param \Dangl\AVACloud\Model\ProjectValidationCheckDetails|null $projectValidationCheckDetails projectValidationCheckDetails
      *
      * @return self
      */
-    public function setProjectValidationCheckDetails($project_validation_check_details)
+    public function setProjectValidationCheckDetails($projectValidationCheckDetails)
     {
-        if (is_null($project_validation_check_details)) {
-            throw new \InvalidArgumentException('non-nullable project_validation_check_details cannot be null');
+        if (is_null($projectValidationCheckDetails)) {
+            throw new \InvalidArgumentException('non-nullable projectValidationCheckDetails cannot be null');
         }
-        $this->container['project_validation_check_details'] = $project_validation_check_details;
+        $this->container['projectValidationCheckDetails'] = $projectValidationCheckDetails;
 
         return $this;
     }

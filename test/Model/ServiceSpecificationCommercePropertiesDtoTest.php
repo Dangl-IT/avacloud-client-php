@@ -81,7 +81,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "fixed_price_date"
+     * Test attribute "fixedPriceDate"
      */
     public function testPropertyFixedPriceDate()
     {
@@ -90,7 +90,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_voucher_date"
+     * Test attribute "deliveryVoucherDate"
      */
     public function testPropertyDeliveryVoucherDate()
     {
@@ -99,7 +99,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_date"
+     * Test attribute "deliveryDate"
      */
     public function testPropertyDeliveryDate()
     {
@@ -108,7 +108,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "inquiry_number"
+     * Test attribute "inquiryNumber"
      */
     public function testPropertyInquiryNumber()
     {
@@ -117,7 +117,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "offer_number"
+     * Test attribute "offerNumber"
      */
     public function testPropertyOfferNumber()
     {
@@ -126,7 +126,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "order_number"
+     * Test attribute "orderNumber"
      */
     public function testPropertyOrderNumber()
     {
@@ -135,7 +135,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "order_confirmation_number"
+     * Test attribute "orderConfirmationNumber"
      */
     public function testPropertyOrderConfirmationNumber()
     {
@@ -144,7 +144,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_number"
+     * Test attribute "deliveryNumber"
      */
     public function testPropertyDeliveryNumber()
     {
@@ -153,7 +153,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "customer_reference_number"
+     * Test attribute "customerReferenceNumber"
      */
     public function testPropertyCustomerReferenceNumber()
     {
@@ -162,7 +162,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "supplier_reference_number"
+     * Test attribute "supplierReferenceNumber"
      */
     public function testPropertySupplierReferenceNumber()
     {
@@ -171,7 +171,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "shipping_type"
+     * Test attribute "shippingType"
      */
     public function testPropertyShippingType()
     {
@@ -180,7 +180,7 @@ class ServiceSpecificationCommercePropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "inquiry_type"
+     * Test attribute "inquiryType"
      */
     public function testPropertyInquiryType()
     {

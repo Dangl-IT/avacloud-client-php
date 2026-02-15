@@ -59,10 +59,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'destination_oenorm_type' => '\Dangl\AVACloud\Model\DestinationOenormType',
-        'try_repair_project_structure' => 'bool',
-        'skip_try_enforce_schema_compliant_xml_output' => 'bool',
-        'remove_unprintable_characters_from_texts' => 'bool'
+        'destinationOenormType' => '\Dangl\AVACloud\Model\DestinationOenormType',
+        'tryRepairProjectStructure' => 'bool',
+        'skipTryEnforceSchemaCompliantXmlOutput' => 'bool',
+        'removeUnprintableCharactersFromTexts' => 'bool'
     ];
 
     /**
@@ -73,10 +73,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'destination_oenorm_type' => null,
-        'try_repair_project_structure' => null,
-        'skip_try_enforce_schema_compliant_xml_output' => null,
-        'remove_unprintable_characters_from_texts' => null
+        'destinationOenormType' => null,
+        'tryRepairProjectStructure' => null,
+        'skipTryEnforceSchemaCompliantXmlOutput' => null,
+        'removeUnprintableCharactersFromTexts' => null
     ];
 
     /**
@@ -85,10 +85,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'destination_oenorm_type' => false,
-        'try_repair_project_structure' => false,
-        'skip_try_enforce_schema_compliant_xml_output' => false,
-        'remove_unprintable_characters_from_texts' => false
+        'destinationOenormType' => false,
+        'tryRepairProjectStructure' => false,
+        'skipTryEnforceSchemaCompliantXmlOutput' => false,
+        'removeUnprintableCharactersFromTexts' => false
     ];
 
     /**
@@ -177,10 +177,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'destination_oenorm_type' => 'destinationOenormType',
-        'try_repair_project_structure' => 'tryRepairProjectStructure',
-        'skip_try_enforce_schema_compliant_xml_output' => 'skipTryEnforceSchemaCompliantXmlOutput',
-        'remove_unprintable_characters_from_texts' => 'removeUnprintableCharactersFromTexts'
+        'destinationOenormType' => 'destinationOenormType',
+        'tryRepairProjectStructure' => 'tryRepairProjectStructure',
+        'skipTryEnforceSchemaCompliantXmlOutput' => 'skipTryEnforceSchemaCompliantXmlOutput',
+        'removeUnprintableCharactersFromTexts' => 'removeUnprintableCharactersFromTexts'
     ];
 
     /**
@@ -189,10 +189,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'destination_oenorm_type' => 'setDestinationOenormType',
-        'try_repair_project_structure' => 'setTryRepairProjectStructure',
-        'skip_try_enforce_schema_compliant_xml_output' => 'setSkipTryEnforceSchemaCompliantXmlOutput',
-        'remove_unprintable_characters_from_texts' => 'setRemoveUnprintableCharactersFromTexts'
+        'destinationOenormType' => 'setDestinationOenormType',
+        'tryRepairProjectStructure' => 'setTryRepairProjectStructure',
+        'skipTryEnforceSchemaCompliantXmlOutput' => 'setSkipTryEnforceSchemaCompliantXmlOutput',
+        'removeUnprintableCharactersFromTexts' => 'setRemoveUnprintableCharactersFromTexts'
     ];
 
     /**
@@ -201,10 +201,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'destination_oenorm_type' => 'getDestinationOenormType',
-        'try_repair_project_structure' => 'getTryRepairProjectStructure',
-        'skip_try_enforce_schema_compliant_xml_output' => 'getSkipTryEnforceSchemaCompliantXmlOutput',
-        'remove_unprintable_characters_from_texts' => 'getRemoveUnprintableCharactersFromTexts'
+        'destinationOenormType' => 'getDestinationOenormType',
+        'tryRepairProjectStructure' => 'getTryRepairProjectStructure',
+        'skipTryEnforceSchemaCompliantXmlOutput' => 'getSkipTryEnforceSchemaCompliantXmlOutput',
+        'removeUnprintableCharactersFromTexts' => 'getRemoveUnprintableCharactersFromTexts'
     ];
 
     /**
@@ -264,10 +264,10 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('destination_oenorm_type', $data ?? [], null);
-        $this->setIfExists('try_repair_project_structure', $data ?? [], null);
-        $this->setIfExists('skip_try_enforce_schema_compliant_xml_output', $data ?? [], null);
-        $this->setIfExists('remove_unprintable_characters_from_texts', $data ?? [], null);
+        $this->setIfExists('destinationOenormType', $data ?? [], null);
+        $this->setIfExists('tryRepairProjectStructure', $data ?? [], null);
+        $this->setIfExists('skipTryEnforceSchemaCompliantXmlOutput', $data ?? [], null);
+        $this->setIfExists('removeUnprintableCharactersFromTexts', $data ?? [], null);
     }
 
     /**
@@ -297,17 +297,17 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
-        if ($this->container['destination_oenorm_type'] === null) {
-            $invalidProperties[] = "'destination_oenorm_type' can't be null";
+        if ($this->container['destinationOenormType'] === null) {
+            $invalidProperties[] = "'destinationOenormType' can't be null";
         }
-        if ($this->container['try_repair_project_structure'] === null) {
-            $invalidProperties[] = "'try_repair_project_structure' can't be null";
+        if ($this->container['tryRepairProjectStructure'] === null) {
+            $invalidProperties[] = "'tryRepairProjectStructure' can't be null";
         }
-        if ($this->container['skip_try_enforce_schema_compliant_xml_output'] === null) {
-            $invalidProperties[] = "'skip_try_enforce_schema_compliant_xml_output' can't be null";
+        if ($this->container['skipTryEnforceSchemaCompliantXmlOutput'] === null) {
+            $invalidProperties[] = "'skipTryEnforceSchemaCompliantXmlOutput' can't be null";
         }
-        if ($this->container['remove_unprintable_characters_from_texts'] === null) {
-            $invalidProperties[] = "'remove_unprintable_characters_from_texts' can't be null";
+        if ($this->container['removeUnprintableCharactersFromTexts'] === null) {
+            $invalidProperties[] = "'removeUnprintableCharactersFromTexts' can't be null";
         }
         return $invalidProperties;
     }
@@ -325,109 +325,109 @@ class PostOenormDestinationOptions implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets destination_oenorm_type
+     * Gets destinationOenormType
      *
      * @return \Dangl\AVACloud\Model\DestinationOenormType
      */
     public function getDestinationOenormType()
     {
-        return $this->container['destination_oenorm_type'];
+        return $this->container['destinationOenormType'];
     }
 
     /**
-     * Sets destination_oenorm_type
+     * Sets destinationOenormType
      *
-     * @param \Dangl\AVACloud\Model\DestinationOenormType $destination_oenorm_type destination_oenorm_type
+     * @param \Dangl\AVACloud\Model\DestinationOenormType $destinationOenormType destinationOenormType
      *
      * @return self
      */
-    public function setDestinationOenormType($destination_oenorm_type)
+    public function setDestinationOenormType($destinationOenormType)
     {
-        if (is_null($destination_oenorm_type)) {
-            throw new \InvalidArgumentException('non-nullable destination_oenorm_type cannot be null');
+        if (is_null($destinationOenormType)) {
+            throw new \InvalidArgumentException('non-nullable destinationOenormType cannot be null');
         }
-        $this->container['destination_oenorm_type'] = $destination_oenorm_type;
+        $this->container['destinationOenormType'] = $destinationOenormType;
 
         return $this;
     }
 
     /**
-     * Gets try_repair_project_structure
+     * Gets tryRepairProjectStructure
      *
      * @return bool
      */
     public function getTryRepairProjectStructure()
     {
-        return $this->container['try_repair_project_structure'];
+        return $this->container['tryRepairProjectStructure'];
     }
 
     /**
-     * Sets try_repair_project_structure
+     * Sets tryRepairProjectStructure
      *
-     * @param bool $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target
+     * @param bool $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target
      *
      * @return self
      */
-    public function setTryRepairProjectStructure($try_repair_project_structure)
+    public function setTryRepairProjectStructure($tryRepairProjectStructure)
     {
-        if (is_null($try_repair_project_structure)) {
-            throw new \InvalidArgumentException('non-nullable try_repair_project_structure cannot be null');
+        if (is_null($tryRepairProjectStructure)) {
+            throw new \InvalidArgumentException('non-nullable tryRepairProjectStructure cannot be null');
         }
-        $this->container['try_repair_project_structure'] = $try_repair_project_structure;
+        $this->container['tryRepairProjectStructure'] = $tryRepairProjectStructure;
 
         return $this;
     }
 
     /**
-     * Gets skip_try_enforce_schema_compliant_xml_output
+     * Gets skipTryEnforceSchemaCompliantXmlOutput
      *
      * @return bool
      */
     public function getSkipTryEnforceSchemaCompliantXmlOutput()
     {
-        return $this->container['skip_try_enforce_schema_compliant_xml_output'];
+        return $this->container['skipTryEnforceSchemaCompliantXmlOutput'];
     }
 
     /**
-     * Sets skip_try_enforce_schema_compliant_xml_output
+     * Sets skipTryEnforceSchemaCompliantXmlOutput
      *
-     * @param bool $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option.
+     * @param bool $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option.
      *
      * @return self
      */
-    public function setSkipTryEnforceSchemaCompliantXmlOutput($skip_try_enforce_schema_compliant_xml_output)
+    public function setSkipTryEnforceSchemaCompliantXmlOutput($skipTryEnforceSchemaCompliantXmlOutput)
     {
-        if (is_null($skip_try_enforce_schema_compliant_xml_output)) {
-            throw new \InvalidArgumentException('non-nullable skip_try_enforce_schema_compliant_xml_output cannot be null');
+        if (is_null($skipTryEnforceSchemaCompliantXmlOutput)) {
+            throw new \InvalidArgumentException('non-nullable skipTryEnforceSchemaCompliantXmlOutput cannot be null');
         }
-        $this->container['skip_try_enforce_schema_compliant_xml_output'] = $skip_try_enforce_schema_compliant_xml_output;
+        $this->container['skipTryEnforceSchemaCompliantXmlOutput'] = $skipTryEnforceSchemaCompliantXmlOutput;
 
         return $this;
     }
 
     /**
-     * Gets remove_unprintable_characters_from_texts
+     * Gets removeUnprintableCharactersFromTexts
      *
      * @return bool
      */
     public function getRemoveUnprintableCharactersFromTexts()
     {
-        return $this->container['remove_unprintable_characters_from_texts'];
+        return $this->container['removeUnprintableCharactersFromTexts'];
     }
 
     /**
-     * Sets remove_unprintable_characters_from_texts
+     * Sets removeUnprintableCharactersFromTexts
      *
-     * @param bool $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
+     * @param bool $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true.
      *
      * @return self
      */
-    public function setRemoveUnprintableCharactersFromTexts($remove_unprintable_characters_from_texts)
+    public function setRemoveUnprintableCharactersFromTexts($removeUnprintableCharactersFromTexts)
     {
-        if (is_null($remove_unprintable_characters_from_texts)) {
-            throw new \InvalidArgumentException('non-nullable remove_unprintable_characters_from_texts cannot be null');
+        if (is_null($removeUnprintableCharactersFromTexts)) {
+            throw new \InvalidArgumentException('non-nullable removeUnprintableCharactersFromTexts cannot be null');
         }
-        $this->container['remove_unprintable_characters_from_texts'] = $remove_unprintable_characters_from_texts;
+        $this->container['removeUnprintableCharactersFromTexts'] = $removeUnprintableCharactersFromTexts;
 
         return $this;
     }

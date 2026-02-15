@@ -99,7 +99,7 @@ class LoginPostTest extends TestCase
     }
 
     /**
-     * Test attribute "stay_signed_in"
+     * Test attribute "staySignedIn"
      */
     public function testPropertyStaySignedIn()
     {

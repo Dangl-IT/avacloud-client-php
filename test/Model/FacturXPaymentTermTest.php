@@ -90,7 +90,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "due_date"
+     * Test attribute "dueDate"
      */
     public function testPropertyDueDate()
     {
@@ -99,7 +99,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "base_amount"
+     * Test attribute "baseAmount"
      */
     public function testPropertyBaseAmount()
     {
@@ -108,7 +108,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "actual_discount_amount"
+     * Test attribute "actualDiscountAmount"
      */
     public function testPropertyActualDiscountAmount()
     {
@@ -117,7 +117,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "base_date"
+     * Test attribute "baseDate"
      */
     public function testPropertyBaseDate()
     {
@@ -126,7 +126,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "period_measure"
+     * Test attribute "periodMeasure"
      */
     public function testPropertyPeriodMeasure()
     {
@@ -135,7 +135,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "period_measure_unit_code"
+     * Test attribute "periodMeasureUnitCode"
      */
     public function testPropertyPeriodMeasureUnitCode()
     {
@@ -144,7 +144,7 @@ class FacturXPaymentTermTest extends TestCase
     }
 
     /**
-     * Test attribute "calculation_percent"
+     * Test attribute "calculationPercent"
      */
     public function testPropertyCalculationPercent()
     {

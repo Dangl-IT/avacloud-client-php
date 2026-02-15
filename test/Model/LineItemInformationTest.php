@@ -99,7 +99,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "seller_identifier"
+     * Test attribute "sellerIdentifier"
      */
     public function testPropertySellerIdentifier()
     {
@@ -108,7 +108,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "buyer_identifier"
+     * Test attribute "buyerIdentifier"
      */
     public function testPropertyBuyerIdentifier()
     {
@@ -117,7 +117,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "standard_identifier"
+     * Test attribute "standardIdentifier"
      */
     public function testPropertyStandardIdentifier()
     {
@@ -126,7 +126,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "standard_scheme_id"
+     * Test attribute "standardSchemeId"
      */
     public function testPropertyStandardSchemeId()
     {
@@ -135,7 +135,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "classification_identifiers"
+     * Test attribute "classificationIdentifiers"
      */
     public function testPropertyClassificationIdentifiers()
     {
@@ -144,7 +144,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "classification_types"
+     * Test attribute "classificationTypes"
      */
     public function testPropertyClassificationTypes()
     {
@@ -153,7 +153,7 @@ class LineItemInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "country_of_origin"
+     * Test attribute "countryOfOrigin"
      */
     public function testPropertyCountryOfOrigin()
     {

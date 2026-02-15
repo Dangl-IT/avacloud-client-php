@@ -81,7 +81,7 @@ class InvoiceNoteTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text"
+     * Test attribute "shortText"
      */
     public function testPropertyShortText()
     {
@@ -90,7 +90,7 @@ class InvoiceNoteTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text_type"
+     * Test attribute "shortTextType"
      */
     public function testPropertyShortTextType()
     {
@@ -99,7 +99,7 @@ class InvoiceNoteTest extends TestCase
     }
 
     /**
-     * Test attribute "long_text"
+     * Test attribute "longText"
      */
     public function testPropertyLongText()
     {

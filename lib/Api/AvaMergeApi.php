@@ -134,16 +134,16 @@ class AvaMergeApi
      *
      * This will merge two AVA projects into one. Typically this is used for merging offers into a base project, which preserves the base projects structure and adds prices and text additions from the offer project. This is currently in a preview phase, and the endpoint and its models are subject to change in the next versions of AVACloud.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $merge_configuration merge_configuration (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $mergeConfiguration mergeConfiguration (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['avaMergeConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\GetProjectMergeResult|\Dangl\AVACloud\Model\ApiError
      */
-    public function avaMergeConvertToAva($merge_configuration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
+    public function avaMergeConvertToAva($mergeConfiguration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
     {
-        list($response) = $this->avaMergeConvertToAvaWithHttpInfo($merge_configuration, $contentType);
+        list($response) = $this->avaMergeConvertToAvaWithHttpInfo($mergeConfiguration, $contentType);
         return $response;
     }
 
@@ -152,16 +152,16 @@ class AvaMergeApi
      *
      * This will merge two AVA projects into one. Typically this is used for merging offers into a base project, which preserves the base projects structure and adds prices and text additions from the offer project. This is currently in a preview phase, and the endpoint and its models are subject to change in the next versions of AVACloud.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $merge_configuration (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $mergeConfiguration (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['avaMergeConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\GetProjectMergeResult|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function avaMergeConvertToAvaWithHttpInfo($merge_configuration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
+    public function avaMergeConvertToAvaWithHttpInfo($mergeConfiguration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
     {
-        $request = $this->avaMergeConvertToAvaRequest($merge_configuration, $contentType);
+        $request = $this->avaMergeConvertToAvaRequest($mergeConfiguration, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -251,15 +251,15 @@ class AvaMergeApi
      *
      * This will merge two AVA projects into one. Typically this is used for merging offers into a base project, which preserves the base projects structure and adds prices and text additions from the offer project. This is currently in a preview phase, and the endpoint and its models are subject to change in the next versions of AVACloud.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $merge_configuration (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $mergeConfiguration (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['avaMergeConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function avaMergeConvertToAvaAsync($merge_configuration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
+    public function avaMergeConvertToAvaAsync($mergeConfiguration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
     {
-        return $this->avaMergeConvertToAvaAsyncWithHttpInfo($merge_configuration, $contentType)
+        return $this->avaMergeConvertToAvaAsyncWithHttpInfo($mergeConfiguration, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -272,16 +272,16 @@ class AvaMergeApi
      *
      * This will merge two AVA projects into one. Typically this is used for merging offers into a base project, which preserves the base projects structure and adds prices and text additions from the offer project. This is currently in a preview phase, and the endpoint and its models are subject to change in the next versions of AVACloud.
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $merge_configuration (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $mergeConfiguration (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['avaMergeConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function avaMergeConvertToAvaAsyncWithHttpInfo($merge_configuration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
+    public function avaMergeConvertToAvaAsyncWithHttpInfo($mergeConfiguration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\GetProjectMergeResult';
-        $request = $this->avaMergeConvertToAvaRequest($merge_configuration, $contentType);
+        $request = $this->avaMergeConvertToAvaRequest($mergeConfiguration, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -322,19 +322,19 @@ class AvaMergeApi
     /**
      * Create request for operation 'avaMergeConvertToAva'
      *
-     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $merge_configuration (required)
+     * @param  \Dangl\AVACloud\Model\PostAvaProjectMerge $mergeConfiguration (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['avaMergeConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function avaMergeConvertToAvaRequest($merge_configuration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
+    public function avaMergeConvertToAvaRequest($mergeConfiguration, string $contentType = self::contentTypes['avaMergeConvertToAva'][0])
     {
 
-        // verify the required parameter 'merge_configuration' is set
-        if ($merge_configuration === null || (is_array($merge_configuration) && count($merge_configuration) === 0)) {
+        // verify the required parameter 'mergeConfiguration' is set
+        if ($mergeConfiguration === null || (is_array($mergeConfiguration) && count($mergeConfiguration) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $merge_configuration when calling avaMergeConvertToAva'
+                'Missing the required parameter $mergeConfiguration when calling avaMergeConvertToAva'
             );
         }
 
@@ -357,12 +357,12 @@ class AvaMergeApi
         );
 
         // for model (json/xml)
-        if (isset($merge_configuration)) {
+        if (isset($mergeConfiguration)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($merge_configuration));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($mergeConfiguration));
             } else {
-                $httpBody = $merge_configuration;
+                $httpBody = $mergeConfiguration;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

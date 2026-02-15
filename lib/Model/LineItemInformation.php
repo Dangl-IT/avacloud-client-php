@@ -61,13 +61,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'name' => 'string',
         'description' => 'string',
-        'seller_identifier' => 'string',
-        'buyer_identifier' => 'string',
-        'standard_identifier' => 'string',
-        'standard_scheme_id' => 'string',
-        'classification_identifiers' => 'string[]',
-        'classification_types' => 'string[]',
-        'country_of_origin' => 'string',
+        'sellerIdentifier' => 'string',
+        'buyerIdentifier' => 'string',
+        'standardIdentifier' => 'string',
+        'standardSchemeId' => 'string',
+        'classificationIdentifiers' => 'string[]',
+        'classificationTypes' => 'string[]',
+        'countryOfOrigin' => 'string',
         'attributes' => '\Dangl\AVACloud\Model\LineItemAttribute[]'
     ];
 
@@ -81,13 +81,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
-        'seller_identifier' => null,
-        'buyer_identifier' => null,
-        'standard_identifier' => null,
-        'standard_scheme_id' => null,
-        'classification_identifiers' => null,
-        'classification_types' => null,
-        'country_of_origin' => null,
+        'sellerIdentifier' => null,
+        'buyerIdentifier' => null,
+        'standardIdentifier' => null,
+        'standardSchemeId' => null,
+        'classificationIdentifiers' => null,
+        'classificationTypes' => null,
+        'countryOfOrigin' => null,
         'attributes' => null
     ];
 
@@ -99,13 +99,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static array $openAPINullables = [
         'name' => false,
         'description' => false,
-        'seller_identifier' => false,
-        'buyer_identifier' => false,
-        'standard_identifier' => false,
-        'standard_scheme_id' => false,
-        'classification_identifiers' => false,
-        'classification_types' => false,
-        'country_of_origin' => false,
+        'sellerIdentifier' => false,
+        'buyerIdentifier' => false,
+        'standardIdentifier' => false,
+        'standardSchemeId' => false,
+        'classificationIdentifiers' => false,
+        'classificationTypes' => false,
+        'countryOfOrigin' => false,
         'attributes' => false
     ];
 
@@ -197,13 +197,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $attributeMap = [
         'name' => 'name',
         'description' => 'description',
-        'seller_identifier' => 'sellerIdentifier',
-        'buyer_identifier' => 'buyerIdentifier',
-        'standard_identifier' => 'standardIdentifier',
-        'standard_scheme_id' => 'standardSchemeId',
-        'classification_identifiers' => 'classificationIdentifiers',
-        'classification_types' => 'classificationTypes',
-        'country_of_origin' => 'countryOfOrigin',
+        'sellerIdentifier' => 'sellerIdentifier',
+        'buyerIdentifier' => 'buyerIdentifier',
+        'standardIdentifier' => 'standardIdentifier',
+        'standardSchemeId' => 'standardSchemeId',
+        'classificationIdentifiers' => 'classificationIdentifiers',
+        'classificationTypes' => 'classificationTypes',
+        'countryOfOrigin' => 'countryOfOrigin',
         'attributes' => 'attributes'
     ];
 
@@ -215,13 +215,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $setters = [
         'name' => 'setName',
         'description' => 'setDescription',
-        'seller_identifier' => 'setSellerIdentifier',
-        'buyer_identifier' => 'setBuyerIdentifier',
-        'standard_identifier' => 'setStandardIdentifier',
-        'standard_scheme_id' => 'setStandardSchemeId',
-        'classification_identifiers' => 'setClassificationIdentifiers',
-        'classification_types' => 'setClassificationTypes',
-        'country_of_origin' => 'setCountryOfOrigin',
+        'sellerIdentifier' => 'setSellerIdentifier',
+        'buyerIdentifier' => 'setBuyerIdentifier',
+        'standardIdentifier' => 'setStandardIdentifier',
+        'standardSchemeId' => 'setStandardSchemeId',
+        'classificationIdentifiers' => 'setClassificationIdentifiers',
+        'classificationTypes' => 'setClassificationTypes',
+        'countryOfOrigin' => 'setCountryOfOrigin',
         'attributes' => 'setAttributes'
     ];
 
@@ -233,13 +233,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $getters = [
         'name' => 'getName',
         'description' => 'getDescription',
-        'seller_identifier' => 'getSellerIdentifier',
-        'buyer_identifier' => 'getBuyerIdentifier',
-        'standard_identifier' => 'getStandardIdentifier',
-        'standard_scheme_id' => 'getStandardSchemeId',
-        'classification_identifiers' => 'getClassificationIdentifiers',
-        'classification_types' => 'getClassificationTypes',
-        'country_of_origin' => 'getCountryOfOrigin',
+        'sellerIdentifier' => 'getSellerIdentifier',
+        'buyerIdentifier' => 'getBuyerIdentifier',
+        'standardIdentifier' => 'getStandardIdentifier',
+        'standardSchemeId' => 'getStandardSchemeId',
+        'classificationIdentifiers' => 'getClassificationIdentifiers',
+        'classificationTypes' => 'getClassificationTypes',
+        'countryOfOrigin' => 'getCountryOfOrigin',
         'attributes' => 'getAttributes'
     ];
 
@@ -302,13 +302,13 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('seller_identifier', $data ?? [], null);
-        $this->setIfExists('buyer_identifier', $data ?? [], null);
-        $this->setIfExists('standard_identifier', $data ?? [], null);
-        $this->setIfExists('standard_scheme_id', $data ?? [], null);
-        $this->setIfExists('classification_identifiers', $data ?? [], null);
-        $this->setIfExists('classification_types', $data ?? [], null);
-        $this->setIfExists('country_of_origin', $data ?? [], null);
+        $this->setIfExists('sellerIdentifier', $data ?? [], null);
+        $this->setIfExists('buyerIdentifier', $data ?? [], null);
+        $this->setIfExists('standardIdentifier', $data ?? [], null);
+        $this->setIfExists('standardSchemeId', $data ?? [], null);
+        $this->setIfExists('classificationIdentifiers', $data ?? [], null);
+        $this->setIfExists('classificationTypes', $data ?? [], null);
+        $this->setIfExists('countryOfOrigin', $data ?? [], null);
         $this->setIfExists('attributes', $data ?? [], null);
     }
 
@@ -409,190 +409,190 @@ class LineItemInformation implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets seller_identifier
+     * Gets sellerIdentifier
      *
      * @return string|null
      */
     public function getSellerIdentifier()
     {
-        return $this->container['seller_identifier'];
+        return $this->container['sellerIdentifier'];
     }
 
     /**
-     * Sets seller_identifier
+     * Sets sellerIdentifier
      *
-     * @param string|null $seller_identifier BT-155 An identifier assigned by the seller, e.g. an internal article number
+     * @param string|null $sellerIdentifier BT-155 An identifier assigned by the seller, e.g. an internal article number
      *
      * @return self
      */
-    public function setSellerIdentifier($seller_identifier)
+    public function setSellerIdentifier($sellerIdentifier)
     {
-        if (is_null($seller_identifier)) {
-            throw new \InvalidArgumentException('non-nullable seller_identifier cannot be null');
+        if (is_null($sellerIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable sellerIdentifier cannot be null');
         }
-        $this->container['seller_identifier'] = $seller_identifier;
+        $this->container['sellerIdentifier'] = $sellerIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets buyer_identifier
+     * Gets buyerIdentifier
      *
      * @return string|null
      */
     public function getBuyerIdentifier()
     {
-        return $this->container['buyer_identifier'];
+        return $this->container['buyerIdentifier'];
     }
 
     /**
-     * Sets buyer_identifier
+     * Sets buyerIdentifier
      *
-     * @param string|null $buyer_identifier BT-156 An identifier assigned by the buyer, e.g. an internal article number
+     * @param string|null $buyerIdentifier BT-156 An identifier assigned by the buyer, e.g. an internal article number
      *
      * @return self
      */
-    public function setBuyerIdentifier($buyer_identifier)
+    public function setBuyerIdentifier($buyerIdentifier)
     {
-        if (is_null($buyer_identifier)) {
-            throw new \InvalidArgumentException('non-nullable buyer_identifier cannot be null');
+        if (is_null($buyerIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable buyerIdentifier cannot be null');
         }
-        $this->container['buyer_identifier'] = $buyer_identifier;
+        $this->container['buyerIdentifier'] = $buyerIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets standard_identifier
+     * Gets standardIdentifier
      *
      * @return string|null
      */
     public function getStandardIdentifier()
     {
-        return $this->container['standard_identifier'];
+        return $this->container['standardIdentifier'];
     }
 
     /**
-     * Sets standard_identifier
+     * Sets standardIdentifier
      *
-     * @param string|null $standard_identifier BT-157 A standard identifier for the line item, e.g. an EAN or a GTIN
+     * @param string|null $standardIdentifier BT-157 A standard identifier for the line item, e.g. an EAN or a GTIN
      *
      * @return self
      */
-    public function setStandardIdentifier($standard_identifier)
+    public function setStandardIdentifier($standardIdentifier)
     {
-        if (is_null($standard_identifier)) {
-            throw new \InvalidArgumentException('non-nullable standard_identifier cannot be null');
+        if (is_null($standardIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable standardIdentifier cannot be null');
         }
-        $this->container['standard_identifier'] = $standard_identifier;
+        $this->container['standardIdentifier'] = $standardIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets standard_scheme_id
+     * Gets standardSchemeId
      *
      * @return string|null
      */
     public function getStandardSchemeId()
     {
-        return $this->container['standard_scheme_id'];
+        return $this->container['standardSchemeId'];
     }
 
     /**
-     * Sets standard_scheme_id
+     * Sets standardSchemeId
      *
-     * @param string|null $standard_scheme_id BT-157 If used together with StandardIdentifier, this is the scheme identifier for which standard is used.
+     * @param string|null $standardSchemeId BT-157 If used together with StandardIdentifier, this is the scheme identifier for which standard is used.
      *
      * @return self
      */
-    public function setStandardSchemeId($standard_scheme_id)
+    public function setStandardSchemeId($standardSchemeId)
     {
-        if (is_null($standard_scheme_id)) {
-            throw new \InvalidArgumentException('non-nullable standard_scheme_id cannot be null');
+        if (is_null($standardSchemeId)) {
+            throw new \InvalidArgumentException('non-nullable standardSchemeId cannot be null');
         }
-        $this->container['standard_scheme_id'] = $standard_scheme_id;
+        $this->container['standardSchemeId'] = $standardSchemeId;
 
         return $this;
     }
 
     /**
-     * Gets classification_identifiers
+     * Gets classificationIdentifiers
      *
      * @return string[]|null
      */
     public function getClassificationIdentifiers()
     {
-        return $this->container['classification_identifiers'];
+        return $this->container['classificationIdentifiers'];
     }
 
     /**
-     * Sets classification_identifiers
+     * Sets classificationIdentifiers
      *
-     * @param string[]|null $classification_identifiers BT-158 A list of classification identifiers for the line item. You can further use ClassificationTypes to specify the scheme identifier for each classification identifier.
+     * @param string[]|null $classificationIdentifiers BT-158 A list of classification identifiers for the line item. You can further use ClassificationTypes to specify the scheme identifier for each classification identifier.
      *
      * @return self
      */
-    public function setClassificationIdentifiers($classification_identifiers)
+    public function setClassificationIdentifiers($classificationIdentifiers)
     {
-        if (is_null($classification_identifiers)) {
-            throw new \InvalidArgumentException('non-nullable classification_identifiers cannot be null');
+        if (is_null($classificationIdentifiers)) {
+            throw new \InvalidArgumentException('non-nullable classificationIdentifiers cannot be null');
         }
-        $this->container['classification_identifiers'] = $classification_identifiers;
+        $this->container['classificationIdentifiers'] = $classificationIdentifiers;
 
         return $this;
     }
 
     /**
-     * Gets classification_types
+     * Gets classificationTypes
      *
      * @return string[]|null
      */
     public function getClassificationTypes()
     {
-        return $this->container['classification_types'];
+        return $this->container['classificationTypes'];
     }
 
     /**
-     * Sets classification_types
+     * Sets classificationTypes
      *
-     * @param string[]|null $classification_types BT-158 This is used in connection with ClassificationIdentifiers. It is the scheme identifier for each identifier. If this list is used, it should have the same length as ClassificationIdentifiers, with null or empty values used for non-existing scheme identifiers.
+     * @param string[]|null $classificationTypes BT-158 This is used in connection with ClassificationIdentifiers. It is the scheme identifier for each identifier. If this list is used, it should have the same length as ClassificationIdentifiers, with null or empty values used for non-existing scheme identifiers.
      *
      * @return self
      */
-    public function setClassificationTypes($classification_types)
+    public function setClassificationTypes($classificationTypes)
     {
-        if (is_null($classification_types)) {
-            throw new \InvalidArgumentException('non-nullable classification_types cannot be null');
+        if (is_null($classificationTypes)) {
+            throw new \InvalidArgumentException('non-nullable classificationTypes cannot be null');
         }
-        $this->container['classification_types'] = $classification_types;
+        $this->container['classificationTypes'] = $classificationTypes;
 
         return $this;
     }
 
     /**
-     * Gets country_of_origin
+     * Gets countryOfOrigin
      *
      * @return string|null
      */
     public function getCountryOfOrigin()
     {
-        return $this->container['country_of_origin'];
+        return $this->container['countryOfOrigin'];
     }
 
     /**
-     * Sets country_of_origin
+     * Sets countryOfOrigin
      *
-     * @param string|null $country_of_origin BT-159 The origin country code according to ISO 3166-1 in 2 letter format
+     * @param string|null $countryOfOrigin BT-159 The origin country code according to ISO 3166-1 in 2 letter format
      *
      * @return self
      */
-    public function setCountryOfOrigin($country_of_origin)
+    public function setCountryOfOrigin($countryOfOrigin)
     {
-        if (is_null($country_of_origin)) {
-            throw new \InvalidArgumentException('non-nullable country_of_origin cannot be null');
+        if (is_null($countryOfOrigin)) {
+            throw new \InvalidArgumentException('non-nullable countryOfOrigin cannot be null');
         }
-        $this->container['country_of_origin'] = $country_of_origin;
+        $this->container['countryOfOrigin'] = $countryOfOrigin;
 
         return $this;
     }

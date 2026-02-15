@@ -60,11 +60,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'gaeb_xml_id' => 'string',
+        'gaebXmlId' => 'string',
         'name' => 'string',
         'description' => 'string',
-        'catalogue_type' => '\Dangl\AVACloud\Model\CatalogueTypeDto',
-        'catalogue_type_detail' => 'string'
+        'catalogueType' => '\Dangl\AVACloud\Model\CatalogueTypeDto',
+        'catalogueTypeDetail' => 'string'
     ];
 
     /**
@@ -76,11 +76,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'gaeb_xml_id' => null,
+        'gaebXmlId' => null,
         'name' => null,
         'description' => null,
-        'catalogue_type' => null,
-        'catalogue_type_detail' => null
+        'catalogueType' => null,
+        'catalogueTypeDetail' => null
     ];
 
     /**
@@ -90,11 +90,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'gaeb_xml_id' => false,
+        'gaebXmlId' => false,
         'name' => false,
         'description' => false,
-        'catalogue_type' => false,
-        'catalogue_type_detail' => false
+        'catalogueType' => false,
+        'catalogueTypeDetail' => false
     ];
 
     /**
@@ -184,11 +184,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'gaeb_xml_id' => 'gaebXmlId',
+        'gaebXmlId' => 'gaebXmlId',
         'name' => 'name',
         'description' => 'description',
-        'catalogue_type' => 'catalogueType',
-        'catalogue_type_detail' => 'catalogueTypeDetail'
+        'catalogueType' => 'catalogueType',
+        'catalogueTypeDetail' => 'catalogueTypeDetail'
     ];
 
     /**
@@ -198,11 +198,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'gaeb_xml_id' => 'setGaebXmlId',
+        'gaebXmlId' => 'setGaebXmlId',
         'name' => 'setName',
         'description' => 'setDescription',
-        'catalogue_type' => 'setCatalogueType',
-        'catalogue_type_detail' => 'setCatalogueTypeDetail'
+        'catalogueType' => 'setCatalogueType',
+        'catalogueTypeDetail' => 'setCatalogueTypeDetail'
     ];
 
     /**
@@ -212,11 +212,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'gaeb_xml_id' => 'getGaebXmlId',
+        'gaebXmlId' => 'getGaebXmlId',
         'name' => 'getName',
         'description' => 'getDescription',
-        'catalogue_type' => 'getCatalogueType',
-        'catalogue_type_detail' => 'getCatalogueTypeDetail'
+        'catalogueType' => 'getCatalogueType',
+        'catalogueTypeDetail' => 'getCatalogueTypeDetail'
     ];
 
     /**
@@ -277,11 +277,11 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('gaeb_xml_id', $data ?? [], null);
+        $this->setIfExists('gaebXmlId', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('catalogue_type', $data ?? [], null);
-        $this->setIfExists('catalogue_type_detail', $data ?? [], null);
+        $this->setIfExists('catalogueType', $data ?? [], null);
+        $this->setIfExists('catalogueTypeDetail', $data ?? [], null);
     }
 
     /**
@@ -314,8 +314,8 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['catalogue_type'] === null) {
-            $invalidProperties[] = "'catalogue_type' can't be null";
+        if ($this->container['catalogueType'] === null) {
+            $invalidProperties[] = "'catalogueType' can't be null";
         }
         return $invalidProperties;
     }
@@ -360,28 +360,28 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets gaeb_xml_id
+     * Gets gaebXmlId
      *
      * @return string|null
      */
     public function getGaebXmlId()
     {
-        return $this->container['gaeb_xml_id'];
+        return $this->container['gaebXmlId'];
     }
 
     /**
-     * Sets gaeb_xml_id
+     * Sets gaebXmlId
      *
-     * @param string|null $gaeb_xml_id This is used to store the GAEB XML Id within this Catalogue. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
+     * @param string|null $gaebXmlId This is used to store the GAEB XML Id within this Catalogue. This data is not used for any calculations or evaluations but only for GAEB serialization and deserialization.
      *
      * @return self
      */
-    public function setGaebXmlId($gaeb_xml_id)
+    public function setGaebXmlId($gaebXmlId)
     {
-        if (is_null($gaeb_xml_id)) {
-            throw new \InvalidArgumentException('non-nullable gaeb_xml_id cannot be null');
+        if (is_null($gaebXmlId)) {
+            throw new \InvalidArgumentException('non-nullable gaebXmlId cannot be null');
         }
-        $this->container['gaeb_xml_id'] = $gaeb_xml_id;
+        $this->container['gaebXmlId'] = $gaebXmlId;
 
         return $this;
     }
@@ -441,55 +441,55 @@ class CatalogueDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets catalogue_type
+     * Gets catalogueType
      *
      * @return \Dangl\AVACloud\Model\CatalogueTypeDto
      */
     public function getCatalogueType()
     {
-        return $this->container['catalogue_type'];
+        return $this->container['catalogueType'];
     }
 
     /**
-     * Sets catalogue_type
+     * Sets catalogueType
      *
-     * @param \Dangl\AVACloud\Model\CatalogueTypeDto $catalogue_type catalogue_type
+     * @param \Dangl\AVACloud\Model\CatalogueTypeDto $catalogueType catalogueType
      *
      * @return self
      */
-    public function setCatalogueType($catalogue_type)
+    public function setCatalogueType($catalogueType)
     {
-        if (is_null($catalogue_type)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_type cannot be null');
+        if (is_null($catalogueType)) {
+            throw new \InvalidArgumentException('non-nullable catalogueType cannot be null');
         }
-        $this->container['catalogue_type'] = $catalogue_type;
+        $this->container['catalogueType'] = $catalogueType;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_type_detail
+     * Gets catalogueTypeDetail
      *
      * @return string|null
      */
     public function getCatalogueTypeDetail()
     {
-        return $this->container['catalogue_type_detail'];
+        return $this->container['catalogueTypeDetail'];
     }
 
     /**
-     * Sets catalogue_type_detail
+     * Sets catalogueTypeDetail
      *
-     * @param string|null $catalogue_type_detail This property may hold additional information about the catalogue type. It is currently only used in GAEB XML exchange to carry detailed information about a catalogue type, but it's otherwise just a free text field.
+     * @param string|null $catalogueTypeDetail This property may hold additional information about the catalogue type. It is currently only used in GAEB XML exchange to carry detailed information about a catalogue type, but it's otherwise just a free text field.
      *
      * @return self
      */
-    public function setCatalogueTypeDetail($catalogue_type_detail)
+    public function setCatalogueTypeDetail($catalogueTypeDetail)
     {
-        if (is_null($catalogue_type_detail)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_type_detail cannot be null');
+        if (is_null($catalogueTypeDetail)) {
+            throw new \InvalidArgumentException('non-nullable catalogueTypeDetail cannot be null');
         }
-        $this->container['catalogue_type_detail'] = $catalogue_type_detail;
+        $this->container['catalogueTypeDetail'] = $catalogueTypeDetail;
 
         return $this;
     }

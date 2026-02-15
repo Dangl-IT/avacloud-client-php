@@ -108,7 +108,7 @@ class RegisterPostTest extends TestCase
     }
 
     /**
-     * Test attribute "preferred_languages"
+     * Test attribute "preferredLanguages"
      */
     public function testPropertyPreferredLanguages()
     {
@@ -117,7 +117,7 @@ class RegisterPostTest extends TestCase
     }
 
     /**
-     * Test attribute "service_login_redirect_uri"
+     * Test attribute "serviceLoginRedirectUri"
      */
     public function testPropertyServiceLoginRedirectUri()
     {

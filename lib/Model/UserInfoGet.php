@@ -58,15 +58,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_is_authenticated' => 'bool',
-        'client_is_authenticated' => 'bool',
-        'current_user_id' => 'string',
-        'current_user_identicon_id' => 'string',
-        'current_user_name' => 'string',
-        'current_user_email' => 'string',
-        'current_client_id' => 'string',
-        'user_claims' => '\Dangl\AVACloud\Model\ClaimGet[]',
-        'client_claims' => '\Dangl\AVACloud\Model\ClaimGet[]'
+        'userIsAuthenticated' => 'bool',
+        'clientIsAuthenticated' => 'bool',
+        'currentUserId' => 'string',
+        'currentUserIdenticonId' => 'string',
+        'currentUserName' => 'string',
+        'currentUserEmail' => 'string',
+        'currentClientId' => 'string',
+        'userClaims' => '\Dangl\AVACloud\Model\ClaimGet[]',
+        'clientClaims' => '\Dangl\AVACloud\Model\ClaimGet[]'
     ];
 
     /**
@@ -77,15 +77,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_is_authenticated' => null,
-        'client_is_authenticated' => null,
-        'current_user_id' => 'guid',
-        'current_user_identicon_id' => 'guid',
-        'current_user_name' => null,
-        'current_user_email' => null,
-        'current_client_id' => null,
-        'user_claims' => null,
-        'client_claims' => null
+        'userIsAuthenticated' => null,
+        'clientIsAuthenticated' => null,
+        'currentUserId' => 'guid',
+        'currentUserIdenticonId' => 'guid',
+        'currentUserName' => null,
+        'currentUserEmail' => null,
+        'currentClientId' => null,
+        'userClaims' => null,
+        'clientClaims' => null
     ];
 
     /**
@@ -94,15 +94,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_is_authenticated' => false,
-        'client_is_authenticated' => false,
-        'current_user_id' => false,
-        'current_user_identicon_id' => false,
-        'current_user_name' => false,
-        'current_user_email' => false,
-        'current_client_id' => false,
-        'user_claims' => false,
-        'client_claims' => false
+        'userIsAuthenticated' => false,
+        'clientIsAuthenticated' => false,
+        'currentUserId' => false,
+        'currentUserIdenticonId' => false,
+        'currentUserName' => false,
+        'currentUserEmail' => false,
+        'currentClientId' => false,
+        'userClaims' => false,
+        'clientClaims' => false
     ];
 
     /**
@@ -191,15 +191,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_is_authenticated' => 'userIsAuthenticated',
-        'client_is_authenticated' => 'clientIsAuthenticated',
-        'current_user_id' => 'currentUserId',
-        'current_user_identicon_id' => 'currentUserIdenticonId',
-        'current_user_name' => 'currentUserName',
-        'current_user_email' => 'currentUserEmail',
-        'current_client_id' => 'currentClientId',
-        'user_claims' => 'userClaims',
-        'client_claims' => 'clientClaims'
+        'userIsAuthenticated' => 'userIsAuthenticated',
+        'clientIsAuthenticated' => 'clientIsAuthenticated',
+        'currentUserId' => 'currentUserId',
+        'currentUserIdenticonId' => 'currentUserIdenticonId',
+        'currentUserName' => 'currentUserName',
+        'currentUserEmail' => 'currentUserEmail',
+        'currentClientId' => 'currentClientId',
+        'userClaims' => 'userClaims',
+        'clientClaims' => 'clientClaims'
     ];
 
     /**
@@ -208,15 +208,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'user_is_authenticated' => 'setUserIsAuthenticated',
-        'client_is_authenticated' => 'setClientIsAuthenticated',
-        'current_user_id' => 'setCurrentUserId',
-        'current_user_identicon_id' => 'setCurrentUserIdenticonId',
-        'current_user_name' => 'setCurrentUserName',
-        'current_user_email' => 'setCurrentUserEmail',
-        'current_client_id' => 'setCurrentClientId',
-        'user_claims' => 'setUserClaims',
-        'client_claims' => 'setClientClaims'
+        'userIsAuthenticated' => 'setUserIsAuthenticated',
+        'clientIsAuthenticated' => 'setClientIsAuthenticated',
+        'currentUserId' => 'setCurrentUserId',
+        'currentUserIdenticonId' => 'setCurrentUserIdenticonId',
+        'currentUserName' => 'setCurrentUserName',
+        'currentUserEmail' => 'setCurrentUserEmail',
+        'currentClientId' => 'setCurrentClientId',
+        'userClaims' => 'setUserClaims',
+        'clientClaims' => 'setClientClaims'
     ];
 
     /**
@@ -225,15 +225,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'user_is_authenticated' => 'getUserIsAuthenticated',
-        'client_is_authenticated' => 'getClientIsAuthenticated',
-        'current_user_id' => 'getCurrentUserId',
-        'current_user_identicon_id' => 'getCurrentUserIdenticonId',
-        'current_user_name' => 'getCurrentUserName',
-        'current_user_email' => 'getCurrentUserEmail',
-        'current_client_id' => 'getCurrentClientId',
-        'user_claims' => 'getUserClaims',
-        'client_claims' => 'getClientClaims'
+        'userIsAuthenticated' => 'getUserIsAuthenticated',
+        'clientIsAuthenticated' => 'getClientIsAuthenticated',
+        'currentUserId' => 'getCurrentUserId',
+        'currentUserIdenticonId' => 'getCurrentUserIdenticonId',
+        'currentUserName' => 'getCurrentUserName',
+        'currentUserEmail' => 'getCurrentUserEmail',
+        'currentClientId' => 'getCurrentClientId',
+        'userClaims' => 'getUserClaims',
+        'clientClaims' => 'getClientClaims'
     ];
 
     /**
@@ -293,15 +293,15 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('user_is_authenticated', $data ?? [], null);
-        $this->setIfExists('client_is_authenticated', $data ?? [], null);
-        $this->setIfExists('current_user_id', $data ?? [], null);
-        $this->setIfExists('current_user_identicon_id', $data ?? [], null);
-        $this->setIfExists('current_user_name', $data ?? [], null);
-        $this->setIfExists('current_user_email', $data ?? [], null);
-        $this->setIfExists('current_client_id', $data ?? [], null);
-        $this->setIfExists('user_claims', $data ?? [], null);
-        $this->setIfExists('client_claims', $data ?? [], null);
+        $this->setIfExists('userIsAuthenticated', $data ?? [], null);
+        $this->setIfExists('clientIsAuthenticated', $data ?? [], null);
+        $this->setIfExists('currentUserId', $data ?? [], null);
+        $this->setIfExists('currentUserIdenticonId', $data ?? [], null);
+        $this->setIfExists('currentUserName', $data ?? [], null);
+        $this->setIfExists('currentUserEmail', $data ?? [], null);
+        $this->setIfExists('currentClientId', $data ?? [], null);
+        $this->setIfExists('userClaims', $data ?? [], null);
+        $this->setIfExists('clientClaims', $data ?? [], null);
     }
 
     /**
@@ -331,11 +331,11 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['user_is_authenticated'] === null) {
-            $invalidProperties[] = "'user_is_authenticated' can't be null";
+        if ($this->container['userIsAuthenticated'] === null) {
+            $invalidProperties[] = "'userIsAuthenticated' can't be null";
         }
-        if ($this->container['client_is_authenticated'] === null) {
-            $invalidProperties[] = "'client_is_authenticated' can't be null";
+        if ($this->container['clientIsAuthenticated'] === null) {
+            $invalidProperties[] = "'clientIsAuthenticated' can't be null";
         }
         return $invalidProperties;
     }
@@ -353,244 +353,244 @@ class UserInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets user_is_authenticated
+     * Gets userIsAuthenticated
      *
      * @return bool
      */
     public function getUserIsAuthenticated()
     {
-        return $this->container['user_is_authenticated'];
+        return $this->container['userIsAuthenticated'];
     }
 
     /**
-     * Sets user_is_authenticated
+     * Sets userIsAuthenticated
      *
-     * @param bool $user_is_authenticated user_is_authenticated
+     * @param bool $userIsAuthenticated userIsAuthenticated
      *
      * @return self
      */
-    public function setUserIsAuthenticated($user_is_authenticated)
+    public function setUserIsAuthenticated($userIsAuthenticated)
     {
-        if (is_null($user_is_authenticated)) {
-            throw new \InvalidArgumentException('non-nullable user_is_authenticated cannot be null');
+        if (is_null($userIsAuthenticated)) {
+            throw new \InvalidArgumentException('non-nullable userIsAuthenticated cannot be null');
         }
-        $this->container['user_is_authenticated'] = $user_is_authenticated;
+        $this->container['userIsAuthenticated'] = $userIsAuthenticated;
 
         return $this;
     }
 
     /**
-     * Gets client_is_authenticated
+     * Gets clientIsAuthenticated
      *
      * @return bool
      */
     public function getClientIsAuthenticated()
     {
-        return $this->container['client_is_authenticated'];
+        return $this->container['clientIsAuthenticated'];
     }
 
     /**
-     * Sets client_is_authenticated
+     * Sets clientIsAuthenticated
      *
-     * @param bool $client_is_authenticated client_is_authenticated
+     * @param bool $clientIsAuthenticated clientIsAuthenticated
      *
      * @return self
      */
-    public function setClientIsAuthenticated($client_is_authenticated)
+    public function setClientIsAuthenticated($clientIsAuthenticated)
     {
-        if (is_null($client_is_authenticated)) {
-            throw new \InvalidArgumentException('non-nullable client_is_authenticated cannot be null');
+        if (is_null($clientIsAuthenticated)) {
+            throw new \InvalidArgumentException('non-nullable clientIsAuthenticated cannot be null');
         }
-        $this->container['client_is_authenticated'] = $client_is_authenticated;
+        $this->container['clientIsAuthenticated'] = $clientIsAuthenticated;
 
         return $this;
     }
 
     /**
-     * Gets current_user_id
+     * Gets currentUserId
      *
      * @return string|null
      */
     public function getCurrentUserId()
     {
-        return $this->container['current_user_id'];
+        return $this->container['currentUserId'];
     }
 
     /**
-     * Sets current_user_id
+     * Sets currentUserId
      *
-     * @param string|null $current_user_id current_user_id
+     * @param string|null $currentUserId currentUserId
      *
      * @return self
      */
-    public function setCurrentUserId($current_user_id)
+    public function setCurrentUserId($currentUserId)
     {
-        if (is_null($current_user_id)) {
-            throw new \InvalidArgumentException('non-nullable current_user_id cannot be null');
+        if (is_null($currentUserId)) {
+            throw new \InvalidArgumentException('non-nullable currentUserId cannot be null');
         }
-        $this->container['current_user_id'] = $current_user_id;
+        $this->container['currentUserId'] = $currentUserId;
 
         return $this;
     }
 
     /**
-     * Gets current_user_identicon_id
+     * Gets currentUserIdenticonId
      *
      * @return string|null
      */
     public function getCurrentUserIdenticonId()
     {
-        return $this->container['current_user_identicon_id'];
+        return $this->container['currentUserIdenticonId'];
     }
 
     /**
-     * Sets current_user_identicon_id
+     * Sets currentUserIdenticonId
      *
-     * @param string|null $current_user_identicon_id current_user_identicon_id
+     * @param string|null $currentUserIdenticonId currentUserIdenticonId
      *
      * @return self
      */
-    public function setCurrentUserIdenticonId($current_user_identicon_id)
+    public function setCurrentUserIdenticonId($currentUserIdenticonId)
     {
-        if (is_null($current_user_identicon_id)) {
-            throw new \InvalidArgumentException('non-nullable current_user_identicon_id cannot be null');
+        if (is_null($currentUserIdenticonId)) {
+            throw new \InvalidArgumentException('non-nullable currentUserIdenticonId cannot be null');
         }
-        $this->container['current_user_identicon_id'] = $current_user_identicon_id;
+        $this->container['currentUserIdenticonId'] = $currentUserIdenticonId;
 
         return $this;
     }
 
     /**
-     * Gets current_user_name
+     * Gets currentUserName
      *
      * @return string|null
      */
     public function getCurrentUserName()
     {
-        return $this->container['current_user_name'];
+        return $this->container['currentUserName'];
     }
 
     /**
-     * Sets current_user_name
+     * Sets currentUserName
      *
-     * @param string|null $current_user_name current_user_name
+     * @param string|null $currentUserName currentUserName
      *
      * @return self
      */
-    public function setCurrentUserName($current_user_name)
+    public function setCurrentUserName($currentUserName)
     {
-        if (is_null($current_user_name)) {
-            throw new \InvalidArgumentException('non-nullable current_user_name cannot be null');
+        if (is_null($currentUserName)) {
+            throw new \InvalidArgumentException('non-nullable currentUserName cannot be null');
         }
-        $this->container['current_user_name'] = $current_user_name;
+        $this->container['currentUserName'] = $currentUserName;
 
         return $this;
     }
 
     /**
-     * Gets current_user_email
+     * Gets currentUserEmail
      *
      * @return string|null
      */
     public function getCurrentUserEmail()
     {
-        return $this->container['current_user_email'];
+        return $this->container['currentUserEmail'];
     }
 
     /**
-     * Sets current_user_email
+     * Sets currentUserEmail
      *
-     * @param string|null $current_user_email current_user_email
+     * @param string|null $currentUserEmail currentUserEmail
      *
      * @return self
      */
-    public function setCurrentUserEmail($current_user_email)
+    public function setCurrentUserEmail($currentUserEmail)
     {
-        if (is_null($current_user_email)) {
-            throw new \InvalidArgumentException('non-nullable current_user_email cannot be null');
+        if (is_null($currentUserEmail)) {
+            throw new \InvalidArgumentException('non-nullable currentUserEmail cannot be null');
         }
-        $this->container['current_user_email'] = $current_user_email;
+        $this->container['currentUserEmail'] = $currentUserEmail;
 
         return $this;
     }
 
     /**
-     * Gets current_client_id
+     * Gets currentClientId
      *
      * @return string|null
      */
     public function getCurrentClientId()
     {
-        return $this->container['current_client_id'];
+        return $this->container['currentClientId'];
     }
 
     /**
-     * Sets current_client_id
+     * Sets currentClientId
      *
-     * @param string|null $current_client_id current_client_id
+     * @param string|null $currentClientId currentClientId
      *
      * @return self
      */
-    public function setCurrentClientId($current_client_id)
+    public function setCurrentClientId($currentClientId)
     {
-        if (is_null($current_client_id)) {
-            throw new \InvalidArgumentException('non-nullable current_client_id cannot be null');
+        if (is_null($currentClientId)) {
+            throw new \InvalidArgumentException('non-nullable currentClientId cannot be null');
         }
-        $this->container['current_client_id'] = $current_client_id;
+        $this->container['currentClientId'] = $currentClientId;
 
         return $this;
     }
 
     /**
-     * Gets user_claims
+     * Gets userClaims
      *
      * @return \Dangl\AVACloud\Model\ClaimGet[]|null
      */
     public function getUserClaims()
     {
-        return $this->container['user_claims'];
+        return $this->container['userClaims'];
     }
 
     /**
-     * Sets user_claims
+     * Sets userClaims
      *
-     * @param \Dangl\AVACloud\Model\ClaimGet[]|null $user_claims user_claims
+     * @param \Dangl\AVACloud\Model\ClaimGet[]|null $userClaims userClaims
      *
      * @return self
      */
-    public function setUserClaims($user_claims)
+    public function setUserClaims($userClaims)
     {
-        if (is_null($user_claims)) {
-            throw new \InvalidArgumentException('non-nullable user_claims cannot be null');
+        if (is_null($userClaims)) {
+            throw new \InvalidArgumentException('non-nullable userClaims cannot be null');
         }
-        $this->container['user_claims'] = $user_claims;
+        $this->container['userClaims'] = $userClaims;
 
         return $this;
     }
 
     /**
-     * Gets client_claims
+     * Gets clientClaims
      *
      * @return \Dangl\AVACloud\Model\ClaimGet[]|null
      */
     public function getClientClaims()
     {
-        return $this->container['client_claims'];
+        return $this->container['clientClaims'];
     }
 
     /**
-     * Sets client_claims
+     * Sets clientClaims
      *
-     * @param \Dangl\AVACloud\Model\ClaimGet[]|null $client_claims client_claims
+     * @param \Dangl\AVACloud\Model\ClaimGet[]|null $clientClaims clientClaims
      *
      * @return self
      */
-    public function setClientClaims($client_claims)
+    public function setClientClaims($clientClaims)
     {
-        if (is_null($client_claims)) {
-            throw new \InvalidArgumentException('non-nullable client_claims cannot be null');
+        if (is_null($clientClaims)) {
+            throw new \InvalidArgumentException('non-nullable clientClaims cannot be null');
         }
-        $this->container['client_claims'] = $client_claims;
+        $this->container['clientClaims'] = $clientClaims;
 
         return $this;
     }

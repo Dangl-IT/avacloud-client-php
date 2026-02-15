@@ -62,10 +62,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         'length' => 'int',
         'type' => '\Dangl\AVACloud\Model\ItemNumberTypeDto',
         'alignment' => '\Dangl\AVACloud\Model\ItemNumberSchemaTierAlignmentDto',
-        'tier_type' => '\Dangl\AVACloud\Model\ItemNumberSchemaTierTypeDto',
-        'is_lot' => 'bool',
+        'tierType' => '\Dangl\AVACloud\Model\ItemNumberSchemaTierTypeDto',
+        'isLot' => 'bool',
         'increment' => 'int',
-        'tier_name' => 'string'
+        'tierName' => 'string'
     ];
 
     /**
@@ -79,10 +79,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         'length' => 'int32',
         'type' => null,
         'alignment' => null,
-        'tier_type' => null,
-        'is_lot' => null,
+        'tierType' => null,
+        'isLot' => null,
         'increment' => 'int32',
-        'tier_name' => null
+        'tierName' => null
     ];
 
     /**
@@ -94,10 +94,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         'length' => false,
         'type' => false,
         'alignment' => false,
-        'tier_type' => false,
-        'is_lot' => false,
+        'tierType' => false,
+        'isLot' => false,
         'increment' => false,
-        'tier_name' => false
+        'tierName' => false
     ];
 
     /**
@@ -189,10 +189,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         'length' => 'length',
         'type' => 'type',
         'alignment' => 'alignment',
-        'tier_type' => 'tierType',
-        'is_lot' => 'isLot',
+        'tierType' => 'tierType',
+        'isLot' => 'isLot',
         'increment' => 'increment',
-        'tier_name' => 'tierName'
+        'tierName' => 'tierName'
     ];
 
     /**
@@ -204,10 +204,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         'length' => 'setLength',
         'type' => 'setType',
         'alignment' => 'setAlignment',
-        'tier_type' => 'setTierType',
-        'is_lot' => 'setIsLot',
+        'tierType' => 'setTierType',
+        'isLot' => 'setIsLot',
         'increment' => 'setIncrement',
-        'tier_name' => 'setTierName'
+        'tierName' => 'setTierName'
     ];
 
     /**
@@ -219,10 +219,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         'length' => 'getLength',
         'type' => 'getType',
         'alignment' => 'getAlignment',
-        'tier_type' => 'getTierType',
-        'is_lot' => 'getIsLot',
+        'tierType' => 'getTierType',
+        'isLot' => 'getIsLot',
         'increment' => 'getIncrement',
-        'tier_name' => 'getTierName'
+        'tierName' => 'getTierName'
     ];
 
     /**
@@ -285,10 +285,10 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('length', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('alignment', $data ?? [], null);
-        $this->setIfExists('tier_type', $data ?? [], null);
-        $this->setIfExists('is_lot', $data ?? [], null);
+        $this->setIfExists('tierType', $data ?? [], null);
+        $this->setIfExists('isLot', $data ?? [], null);
         $this->setIfExists('increment', $data ?? [], null);
-        $this->setIfExists('tier_name', $data ?? [], null);
+        $this->setIfExists('tierName', $data ?? [], null);
     }
 
     /**
@@ -324,11 +324,11 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['tier_type'] === null) {
-            $invalidProperties[] = "'tier_type' can't be null";
+        if ($this->container['tierType'] === null) {
+            $invalidProperties[] = "'tierType' can't be null";
         }
-        if ($this->container['is_lot'] === null) {
-            $invalidProperties[] = "'is_lot' can't be null";
+        if ($this->container['isLot'] === null) {
+            $invalidProperties[] = "'isLot' can't be null";
         }
         if ($this->container['increment'] === null) {
             $invalidProperties[] = "'increment' can't be null";
@@ -430,55 +430,55 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets tier_type
+     * Gets tierType
      *
      * @return \Dangl\AVACloud\Model\ItemNumberSchemaTierTypeDto
      */
     public function getTierType()
     {
-        return $this->container['tier_type'];
+        return $this->container['tierType'];
     }
 
     /**
-     * Sets tier_type
+     * Sets tierType
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberSchemaTierTypeDto $tier_type tier_type
+     * @param \Dangl\AVACloud\Model\ItemNumberSchemaTierTypeDto $tierType tierType
      *
      * @return self
      */
-    public function setTierType($tier_type)
+    public function setTierType($tierType)
     {
-        if (is_null($tier_type)) {
-            throw new \InvalidArgumentException('non-nullable tier_type cannot be null');
+        if (is_null($tierType)) {
+            throw new \InvalidArgumentException('non-nullable tierType cannot be null');
         }
-        $this->container['tier_type'] = $tier_type;
+        $this->container['tierType'] = $tierType;
 
         return $this;
     }
 
     /**
-     * Gets is_lot
+     * Gets isLot
      *
      * @return bool
      */
     public function getIsLot()
     {
-        return $this->container['is_lot'];
+        return $this->container['isLot'];
     }
 
     /**
-     * Sets is_lot
+     * Sets isLot
      *
-     * @param bool $is_lot Indicates if this tier represents a lot. See the documentation for more information about lots.
+     * @param bool $isLot Indicates if this tier represents a lot. See the documentation for more information about lots.
      *
      * @return self
      */
-    public function setIsLot($is_lot)
+    public function setIsLot($isLot)
     {
-        if (is_null($is_lot)) {
-            throw new \InvalidArgumentException('non-nullable is_lot cannot be null');
+        if (is_null($isLot)) {
+            throw new \InvalidArgumentException('non-nullable isLot cannot be null');
         }
-        $this->container['is_lot'] = $is_lot;
+        $this->container['isLot'] = $isLot;
 
         return $this;
     }
@@ -511,28 +511,28 @@ class ItemNumberSchemaTierDto implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets tier_name
+     * Gets tierName
      *
      * @return string|null
      */
     public function getTierName()
     {
-        return $this->container['tier_name'];
+        return $this->container['tierName'];
     }
 
     /**
-     * Sets tier_name
+     * Sets tierName
      *
-     * @param string|null $tier_name This is an optional name for the given tier
+     * @param string|null $tierName This is an optional name for the given tier
      *
      * @return self
      */
-    public function setTierName($tier_name)
+    public function setTierName($tierName)
     {
-        if (is_null($tier_name)) {
-            throw new \InvalidArgumentException('non-nullable tier_name cannot be null');
+        if (is_null($tierName)) {
+            throw new \InvalidArgumentException('non-nullable tierName cannot be null');
         }
-        $this->container['tier_name'] = $tier_name;
+        $this->container['tierName'] = $tierName;
 
         return $this;
     }

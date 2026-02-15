@@ -143,18 +143,18 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function aslvConversionConvertToAva($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
+    public function aslvConversionConvertToAva($aslvFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
     {
-        list($response) = $this->aslvConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $aslv_file, $contentType);
+        list($response) = $this->aslvConversionConvertToAvaWithHttpInfo($aslvFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -163,18 +163,18 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aslvConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
+    public function aslvConversionConvertToAvaWithHttpInfo($aslvFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
     {
-        $request = $this->aslvConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToAvaRequest($aslvFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -264,17 +264,17 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToAvaAsync($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
+    public function aslvConversionConvertToAvaAsync($aslvFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
     {
-        return $this->aslvConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $aslv_file, $contentType)
+        return $this->aslvConversionConvertToAvaAsyncWithHttpInfo($aslvFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -287,18 +287,18 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
+    public function aslvConversionConvertToAvaAsyncWithHttpInfo($aslvFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->aslvConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToAvaRequest($aslvFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -339,15 +339,15 @@ class AslvConversionApi
     /**
      * Create request for operation 'aslvConversionConvertToAva'
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function aslvConversionConvertToAvaRequest($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
+    public function aslvConversionConvertToAvaRequest($aslvFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToAva'][0])
     {
 
 
@@ -363,7 +363,7 @@ class AslvConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -372,7 +372,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -386,7 +386,7 @@ class AslvConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'aslv_file' => $aslv_file,
+            'aslvFile' => $aslvFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -455,21 +455,21 @@ class AslvConversionApi
      *
      * Converts Aslv files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function aslvConversionConvertToExcel($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
+    public function aslvConversionConvertToExcel($aslvFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
     {
-        list($response) = $this->aslvConversionConvertToExcelWithHttpInfo($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $aslv_file, $contentType);
+        list($response) = $this->aslvConversionConvertToExcelWithHttpInfo($aslvFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
         return $response;
     }
 
@@ -478,21 +478,21 @@ class AslvConversionApi
      *
      * Converts Aslv files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aslvConversionConvertToExcelWithHttpInfo($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
+    public function aslvConversionConvertToExcelWithHttpInfo($aslvFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
     {
-        $request = $this->aslvConversionConvertToExcelRequest($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToExcelRequest($aslvFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -582,20 +582,20 @@ class AslvConversionApi
      *
      * Converts Aslv files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToExcelAsync($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
+    public function aslvConversionConvertToExcelAsync($aslvFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
     {
-        return $this->aslvConversionConvertToExcelAsyncWithHttpInfo($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $aslv_file, $contentType)
+        return $this->aslvConversionConvertToExcelAsyncWithHttpInfo($aslvFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -608,21 +608,21 @@ class AslvConversionApi
      *
      * Converts Aslv files to Excel
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToExcelAsyncWithHttpInfo($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
+    public function aslvConversionConvertToExcelAsyncWithHttpInfo($aslvFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->aslvConversionConvertToExcelRequest($write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToExcelRequest($aslvFile, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -663,18 +663,18 @@ class AslvConversionApi
     /**
      * Create request for operation 'aslvConversionConvertToExcel'
      *
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function aslvConversionConvertToExcelRequest($write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
+    public function aslvConversionConvertToExcelRequest($aslvFile = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['aslvConversionConvertToExcel'][0])
     {
 
 
@@ -693,7 +693,7 @@ class AslvConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_prices,
+            $writePrices,
             'WritePrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -702,7 +702,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_long_texts,
+            $writeLongTexts,
             'WriteLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -711,7 +711,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $conversion_culture,
+            $conversionCulture,
             'ConversionCulture', // param base name
             'string', // openApiType
             '', // style
@@ -720,7 +720,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_article_numbers,
+            $includeArticleNumbers,
             'IncludeArticleNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -729,7 +729,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $lock_all_cells_but_prices,
+            $lockAllCellsButPrices,
             'LockAllCellsButPrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -743,7 +743,7 @@ class AslvConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'aslv_file' => $aslv_file,
+            'aslvFile' => $aslvFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -812,16 +812,16 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function aslvConversionConvertToFlatAva($aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
+    public function aslvConversionConvertToFlatAva($aslvFile = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->aslvConversionConvertToFlatAvaWithHttpInfo($aslv_file, $contentType);
+        list($response) = $this->aslvConversionConvertToFlatAvaWithHttpInfo($aslvFile, $contentType);
         return $response;
     }
 
@@ -830,16 +830,16 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aslvConversionConvertToFlatAvaWithHttpInfo($aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
+    public function aslvConversionConvertToFlatAvaWithHttpInfo($aslvFile = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
     {
-        $request = $this->aslvConversionConvertToFlatAvaRequest($aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToFlatAvaRequest($aslvFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -929,15 +929,15 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToFlatAvaAsync($aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
+    public function aslvConversionConvertToFlatAvaAsync($aslvFile = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
     {
-        return $this->aslvConversionConvertToFlatAvaAsyncWithHttpInfo($aslv_file, $contentType)
+        return $this->aslvConversionConvertToFlatAvaAsyncWithHttpInfo($aslvFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -950,16 +950,16 @@ class AslvConversionApi
      *
      * Converts Aslv files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToFlatAvaAsyncWithHttpInfo($aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
+    public function aslvConversionConvertToFlatAvaAsyncWithHttpInfo($aslvFile = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->aslvConversionConvertToFlatAvaRequest($aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToFlatAvaRequest($aslvFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1000,13 +1000,13 @@ class AslvConversionApi
     /**
      * Create request for operation 'aslvConversionConvertToFlatAva'
      *
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function aslvConversionConvertToFlatAvaRequest($aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
+    public function aslvConversionConvertToFlatAvaRequest($aslvFile = null, string $contentType = self::contentTypes['aslvConversionConvertToFlatAva'][0])
     {
 
 
@@ -1025,7 +1025,7 @@ class AslvConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'aslv_file' => $aslv_file,
+            'aslvFile' => $aslvFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1094,23 +1094,23 @@ class AslvConversionApi
      *
      * Converts Aslv files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function aslvConversionConvertToGaeb($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
+    public function aslvConversionConvertToGaeb($aslvFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
     {
-        list($response) = $this->aslvConversionConvertToGaebWithHttpInfo($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $aslv_file, $contentType);
+        list($response) = $this->aslvConversionConvertToGaebWithHttpInfo($aslvFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
         return $response;
     }
 
@@ -1119,23 +1119,23 @@ class AslvConversionApi
      *
      * Converts Aslv files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aslvConversionConvertToGaebWithHttpInfo($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
+    public function aslvConversionConvertToGaebWithHttpInfo($aslvFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
     {
-        $request = $this->aslvConversionConvertToGaebRequest($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToGaebRequest($aslvFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1225,22 +1225,22 @@ class AslvConversionApi
      *
      * Converts Aslv files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToGaebAsync($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
+    public function aslvConversionConvertToGaebAsync($aslvFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
     {
-        return $this->aslvConversionConvertToGaebAsyncWithHttpInfo($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $aslv_file, $contentType)
+        return $this->aslvConversionConvertToGaebAsyncWithHttpInfo($aslvFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1253,23 +1253,23 @@ class AslvConversionApi
      *
      * Converts Aslv files to GAEB files
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToGaebAsyncWithHttpInfo($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
+    public function aslvConversionConvertToGaebAsyncWithHttpInfo($aslvFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->aslvConversionConvertToGaebRequest($destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToGaebRequest($aslvFile, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1310,20 +1310,20 @@ class AslvConversionApi
     /**
      * Create request for operation 'aslvConversionConvertToGaeb'
      *
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function aslvConversionConvertToGaebRequest($destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
+    public function aslvConversionConvertToGaebRequest($aslvFile = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['aslvConversionConvertToGaeb'][0])
     {
 
 
@@ -1344,7 +1344,7 @@ class AslvConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_gaeb_type,
+            $destinationGaebType,
             'DestinationGaebType', // param base name
             'string', // openApiType
             '', // style
@@ -1353,7 +1353,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_exchange_phase_transform,
+            $targetExchangePhaseTransform,
             'TargetExchangePhaseTransform', // param base name
             'string', // openApiType
             '', // style
@@ -1362,7 +1362,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $enforce_strict_offer_phase_long_text_output,
+            $enforceStrictOfferPhaseLongTextOutput,
             'EnforceStrictOfferPhaseLongTextOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1371,7 +1371,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $export_quantity_determination,
+            $exportQuantityDetermination,
             'ExportQuantityDetermination', // param base name
             'boolean', // openApiType
             '', // style
@@ -1380,7 +1380,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1389,7 +1389,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $force_include_descriptions,
+            $forceIncludeDescriptions,
             'ForceIncludeDescriptions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1398,7 +1398,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $treat_null_item_number_schema_as_invalid,
+            $treatNullItemNumberSchemaAsInvalid,
             'TreatNullItemNumberSchemaAsInvalid', // param base name
             'boolean', // openApiType
             '', // style
@@ -1412,7 +1412,7 @@ class AslvConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'aslv_file' => $aslv_file,
+            'aslvFile' => $aslvFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1481,20 +1481,20 @@ class AslvConversionApi
      *
      * Converts Aslv files to Oenorm files
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function aslvConversionConvertToOenorm($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
+    public function aslvConversionConvertToOenorm($aslvFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
     {
-        list($response) = $this->aslvConversionConvertToOenormWithHttpInfo($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $aslv_file, $contentType);
+        list($response) = $this->aslvConversionConvertToOenormWithHttpInfo($aslvFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
         return $response;
     }
 
@@ -1503,20 +1503,20 @@ class AslvConversionApi
      *
      * Converts Aslv files to Oenorm files
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function aslvConversionConvertToOenormWithHttpInfo($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
+    public function aslvConversionConvertToOenormWithHttpInfo($aslvFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
     {
-        $request = $this->aslvConversionConvertToOenormRequest($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToOenormRequest($aslvFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1606,19 +1606,19 @@ class AslvConversionApi
      *
      * Converts Aslv files to Oenorm files
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToOenormAsync($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
+    public function aslvConversionConvertToOenormAsync($aslvFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
     {
-        return $this->aslvConversionConvertToOenormAsyncWithHttpInfo($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $aslv_file, $contentType)
+        return $this->aslvConversionConvertToOenormAsyncWithHttpInfo($aslvFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1631,20 +1631,20 @@ class AslvConversionApi
      *
      * Converts Aslv files to Oenorm files
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function aslvConversionConvertToOenormAsyncWithHttpInfo($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
+    public function aslvConversionConvertToOenormAsyncWithHttpInfo($aslvFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->aslvConversionConvertToOenormRequest($destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $aslv_file, $contentType);
+        $request = $this->aslvConversionConvertToOenormRequest($aslvFile, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1685,17 +1685,17 @@ class AslvConversionApi
     /**
      * Create request for operation 'aslvConversionConvertToOenorm'
      *
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $aslv_file The input file (optional)
+     * @param  \SplFileObject|null $aslvFile The input file (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['aslvConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function aslvConversionConvertToOenormRequest($destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $aslv_file = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
+    public function aslvConversionConvertToOenormRequest($aslvFile = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['aslvConversionConvertToOenorm'][0])
     {
 
 
@@ -1713,7 +1713,7 @@ class AslvConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_oenorm_type,
+            $destinationOenormType,
             'DestinationOenormType', // param base name
             'string', // openApiType
             '', // style
@@ -1722,7 +1722,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_repair_project_structure,
+            $tryRepairProjectStructure,
             'TryRepairProjectStructure', // param base name
             'boolean', // openApiType
             '', // style
@@ -1731,7 +1731,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $skip_try_enforce_schema_compliant_xml_output,
+            $skipTryEnforceSchemaCompliantXmlOutput,
             'SkipTryEnforceSchemaCompliantXmlOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1740,7 +1740,7 @@ class AslvConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1754,7 +1754,7 @@ class AslvConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'aslv_file' => $aslv_file,
+            'aslvFile' => $aslvFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

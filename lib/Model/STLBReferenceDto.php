@@ -59,11 +59,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'version_date' => '\DateTime',
-        'catalogue_name' => 'string',
+        'versionDate' => '\DateTime',
+        'catalogueName' => 'string',
         'group' => 'string',
-        'cost_group' => 'string',
-        'service_area' => 'string',
+        'costGroup' => 'string',
+        'serviceArea' => 'string',
         'keys' => '\Dangl\AVACloud\Model\STLBKeyDto[]'
     ];
 
@@ -75,11 +75,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'version_date' => 'date-time',
-        'catalogue_name' => null,
+        'versionDate' => 'date-time',
+        'catalogueName' => null,
         'group' => null,
-        'cost_group' => null,
-        'service_area' => null,
+        'costGroup' => null,
+        'serviceArea' => null,
         'keys' => null
     ];
 
@@ -89,11 +89,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'version_date' => false,
-        'catalogue_name' => false,
+        'versionDate' => false,
+        'catalogueName' => false,
         'group' => false,
-        'cost_group' => false,
-        'service_area' => false,
+        'costGroup' => false,
+        'serviceArea' => false,
         'keys' => false
     ];
 
@@ -183,11 +183,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'version_date' => 'versionDate',
-        'catalogue_name' => 'catalogueName',
+        'versionDate' => 'versionDate',
+        'catalogueName' => 'catalogueName',
         'group' => 'group',
-        'cost_group' => 'costGroup',
-        'service_area' => 'serviceArea',
+        'costGroup' => 'costGroup',
+        'serviceArea' => 'serviceArea',
         'keys' => 'keys'
     ];
 
@@ -197,11 +197,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'version_date' => 'setVersionDate',
-        'catalogue_name' => 'setCatalogueName',
+        'versionDate' => 'setVersionDate',
+        'catalogueName' => 'setCatalogueName',
         'group' => 'setGroup',
-        'cost_group' => 'setCostGroup',
-        'service_area' => 'setServiceArea',
+        'costGroup' => 'setCostGroup',
+        'serviceArea' => 'setServiceArea',
         'keys' => 'setKeys'
     ];
 
@@ -211,11 +211,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'version_date' => 'getVersionDate',
-        'catalogue_name' => 'getCatalogueName',
+        'versionDate' => 'getVersionDate',
+        'catalogueName' => 'getCatalogueName',
         'group' => 'getGroup',
-        'cost_group' => 'getCostGroup',
-        'service_area' => 'getServiceArea',
+        'costGroup' => 'getCostGroup',
+        'serviceArea' => 'getServiceArea',
         'keys' => 'getKeys'
     ];
 
@@ -276,11 +276,11 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('version_date', $data ?? [], null);
-        $this->setIfExists('catalogue_name', $data ?? [], null);
+        $this->setIfExists('versionDate', $data ?? [], null);
+        $this->setIfExists('catalogueName', $data ?? [], null);
         $this->setIfExists('group', $data ?? [], null);
-        $this->setIfExists('cost_group', $data ?? [], null);
-        $this->setIfExists('service_area', $data ?? [], null);
+        $this->setIfExists('costGroup', $data ?? [], null);
+        $this->setIfExists('serviceArea', $data ?? [], null);
         $this->setIfExists('keys', $data ?? [], null);
     }
 
@@ -327,55 +327,55 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets version_date
+     * Gets versionDate
      *
      * @return \DateTime|null
      */
     public function getVersionDate()
     {
-        return $this->container['version_date'];
+        return $this->container['versionDate'];
     }
 
     /**
-     * Sets version_date
+     * Sets versionDate
      *
-     * @param \DateTime|null $version_date The date of the STLB version. Typically, only the Year and Month are used
+     * @param \DateTime|null $versionDate The date of the STLB version. Typically, only the Year and Month are used
      *
      * @return self
      */
-    public function setVersionDate($version_date)
+    public function setVersionDate($versionDate)
     {
-        if (is_null($version_date)) {
-            throw new \InvalidArgumentException('non-nullable version_date cannot be null');
+        if (is_null($versionDate)) {
+            throw new \InvalidArgumentException('non-nullable versionDate cannot be null');
         }
-        $this->container['version_date'] = $version_date;
+        $this->container['versionDate'] = $versionDate;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_name
+     * Gets catalogueName
      *
      * @return string|null
      */
     public function getCatalogueName()
     {
-        return $this->container['catalogue_name'];
+        return $this->container['catalogueName'];
     }
 
     /**
-     * Sets catalogue_name
+     * Sets catalogueName
      *
-     * @param string|null $catalogue_name The name of the catalogue within the STLB
+     * @param string|null $catalogueName The name of the catalogue within the STLB
      *
      * @return self
      */
-    public function setCatalogueName($catalogue_name)
+    public function setCatalogueName($catalogueName)
     {
-        if (is_null($catalogue_name)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_name cannot be null');
+        if (is_null($catalogueName)) {
+            throw new \InvalidArgumentException('non-nullable catalogueName cannot be null');
         }
-        $this->container['catalogue_name'] = $catalogue_name;
+        $this->container['catalogueName'] = $catalogueName;
 
         return $this;
     }
@@ -408,55 +408,55 @@ class STLBReferenceDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets cost_group
+     * Gets costGroup
      *
      * @return string|null
      */
     public function getCostGroup()
     {
-        return $this->container['cost_group'];
+        return $this->container['costGroup'];
     }
 
     /**
-     * Sets cost_group
+     * Sets costGroup
      *
-     * @param string|null $cost_group The cost group this service is associated with
+     * @param string|null $costGroup The cost group this service is associated with
      *
      * @return self
      */
-    public function setCostGroup($cost_group)
+    public function setCostGroup($costGroup)
     {
-        if (is_null($cost_group)) {
-            throw new \InvalidArgumentException('non-nullable cost_group cannot be null');
+        if (is_null($costGroup)) {
+            throw new \InvalidArgumentException('non-nullable costGroup cannot be null');
         }
-        $this->container['cost_group'] = $cost_group;
+        $this->container['costGroup'] = $costGroup;
 
         return $this;
     }
 
     /**
-     * Gets service_area
+     * Gets serviceArea
      *
      * @return string|null
      */
     public function getServiceArea()
     {
-        return $this->container['service_area'];
+        return $this->container['serviceArea'];
     }
 
     /**
-     * Sets service_area
+     * Sets serviceArea
      *
-     * @param string|null $service_area The service area (or type) in the STLB
+     * @param string|null $serviceArea The service area (or type) in the STLB
      *
      * @return self
      */
-    public function setServiceArea($service_area)
+    public function setServiceArea($serviceArea)
     {
-        if (is_null($service_area)) {
-            throw new \InvalidArgumentException('non-nullable service_area cannot be null');
+        if (is_null($serviceArea)) {
+            throw new \InvalidArgumentException('non-nullable serviceArea cannot be null');
         }
-        $this->container['service_area'] = $service_area;
+        $this->container['serviceArea'] = $serviceArea;
 
         return $this;
     }

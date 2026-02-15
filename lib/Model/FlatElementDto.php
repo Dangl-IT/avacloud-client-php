@@ -59,8 +59,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'previous_element_id' => 'string',
-        'parent_element_id' => 'string',
+        'previousElementId' => 'string',
+        'parentElementId' => 'string',
         'element' => '\Dangl\AVACloud\Model\IElementDto'
     ];
 
@@ -72,8 +72,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'previous_element_id' => 'guid',
-        'parent_element_id' => 'guid',
+        'previousElementId' => 'guid',
+        'parentElementId' => 'guid',
         'element' => null
     ];
 
@@ -83,8 +83,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'previous_element_id' => false,
-        'parent_element_id' => false,
+        'previousElementId' => false,
+        'parentElementId' => false,
         'element' => false
     ];
 
@@ -174,8 +174,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'previous_element_id' => 'previousElementId',
-        'parent_element_id' => 'parentElementId',
+        'previousElementId' => 'previousElementId',
+        'parentElementId' => 'parentElementId',
         'element' => 'element'
     ];
 
@@ -185,8 +185,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'previous_element_id' => 'setPreviousElementId',
-        'parent_element_id' => 'setParentElementId',
+        'previousElementId' => 'setPreviousElementId',
+        'parentElementId' => 'setParentElementId',
         'element' => 'setElement'
     ];
 
@@ -196,8 +196,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'previous_element_id' => 'getPreviousElementId',
-        'parent_element_id' => 'getParentElementId',
+        'previousElementId' => 'getPreviousElementId',
+        'parentElementId' => 'getParentElementId',
         'element' => 'getElement'
     ];
 
@@ -258,8 +258,8 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('previous_element_id', $data ?? [], null);
-        $this->setIfExists('parent_element_id', $data ?? [], null);
+        $this->setIfExists('previousElementId', $data ?? [], null);
+        $this->setIfExists('parentElementId', $data ?? [], null);
         $this->setIfExists('element', $data ?? [], null);
     }
 
@@ -306,55 +306,55 @@ class FlatElementDto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets previous_element_id
+     * Gets previousElementId
      *
      * @return string|null
      */
     public function getPreviousElementId()
     {
-        return $this->container['previous_element_id'];
+        return $this->container['previousElementId'];
     }
 
     /**
-     * Sets previous_element_id
+     * Sets previousElementId
      *
-     * @param string|null $previous_element_id If this is not null, then this contains the id of the previous element in the hierarchy on the same level.
+     * @param string|null $previousElementId If this is not null, then this contains the id of the previous element in the hierarchy on the same level.
      *
      * @return self
      */
-    public function setPreviousElementId($previous_element_id)
+    public function setPreviousElementId($previousElementId)
     {
-        if (is_null($previous_element_id)) {
-            throw new \InvalidArgumentException('non-nullable previous_element_id cannot be null');
+        if (is_null($previousElementId)) {
+            throw new \InvalidArgumentException('non-nullable previousElementId cannot be null');
         }
-        $this->container['previous_element_id'] = $previous_element_id;
+        $this->container['previousElementId'] = $previousElementId;
 
         return $this;
     }
 
     /**
-     * Gets parent_element_id
+     * Gets parentElementId
      *
      * @return string|null
      */
     public function getParentElementId()
     {
-        return $this->container['parent_element_id'];
+        return $this->container['parentElementId'];
     }
 
     /**
-     * Sets parent_element_id
+     * Sets parentElementId
      *
-     * @param string|null $parent_element_id If this is not null, then this contains the id of the parent element.
+     * @param string|null $parentElementId If this is not null, then this contains the id of the parent element.
      *
      * @return self
      */
-    public function setParentElementId($parent_element_id)
+    public function setParentElementId($parentElementId)
     {
-        if (is_null($parent_element_id)) {
-            throw new \InvalidArgumentException('non-nullable parent_element_id cannot be null');
+        if (is_null($parentElementId)) {
+            throw new \InvalidArgumentException('non-nullable parentElementId cannot be null');
         }
-        $this->container['parent_element_id'] = $parent_element_id;
+        $this->container['parentElementId'] = $parentElementId;
 
         return $this;
     }

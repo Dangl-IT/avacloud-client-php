@@ -81,7 +81,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_price"
+     * Test attribute "unitPrice"
      */
     public function testPropertyUnitPrice()
     {
@@ -90,7 +90,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_price_override"
+     * Test attribute "unitPriceOverride"
      */
     public function testPropertyUnitPriceOverride()
     {
@@ -108,7 +108,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "quantity_override"
+     * Test attribute "quantityOverride"
      */
     public function testPropertyQuantityOverride()
     {
@@ -117,7 +117,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_complementing_position"
+     * Test attribute "isComplementingPosition"
      */
     public function testPropertyIsComplementingPosition()
     {
@@ -126,7 +126,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "complements_positions"
+     * Test attribute "complementsPositions"
      */
     public function testPropertyComplementsPositions()
     {
@@ -135,7 +135,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "complementing_price_percentage_override"
+     * Test attribute "complementingPricePercentageOverride"
      */
     public function testPropertyComplementingPricePercentageOverride()
     {
@@ -144,7 +144,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "complementing_price_percentage"
+     * Test attribute "complementingPricePercentage"
      */
     public function testPropertyComplementingPricePercentage()
     {
@@ -153,7 +153,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_tag"
+     * Test attribute "unitTag"
      */
     public function testPropertyUnitTag()
     {
@@ -162,7 +162,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "labour_components"
+     * Test attribute "labourComponents"
      */
     public function testPropertyLabourComponents()
     {
@@ -171,7 +171,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_components"
+     * Test attribute "priceComponents"
      */
     public function testPropertyPriceComponents()
     {
@@ -180,7 +180,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "quantity_components"
+     * Test attribute "quantityComponents"
      */
     public function testPropertyQuantityComponents()
     {
@@ -189,7 +189,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "sub_descriptions"
+     * Test attribute "subDescriptions"
      */
     public function testPropertySubDescriptions()
     {
@@ -198,7 +198,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "comission_status"
+     * Test attribute "comissionStatus"
      */
     public function testPropertyComissionStatus()
     {
@@ -207,7 +207,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "complemented_by"
+     * Test attribute "complementedBy"
      */
     public function testPropertyComplementedBy()
     {
@@ -225,7 +225,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "amount_to_be_entered_by_bidder"
+     * Test attribute "amountToBeEnteredByBidder"
      */
     public function testPropertyAmountToBeEnteredByBidder()
     {
@@ -234,7 +234,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_composition_required"
+     * Test attribute "priceCompositionRequired"
      */
     public function testPropertyPriceCompositionRequired()
     {
@@ -243,7 +243,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "use_different_tax_rate"
+     * Test attribute "useDifferentTaxRate"
      */
     public function testPropertyUseDifferentTaxRate()
     {
@@ -252,7 +252,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_rate"
+     * Test attribute "taxRate"
      */
     public function testPropertyTaxRate()
     {
@@ -261,7 +261,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "item_number"
+     * Test attribute "itemNumber"
      */
     public function testPropertyItemNumber()
     {
@@ -270,7 +270,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "deduction_factor"
+     * Test attribute "deductionFactor"
      */
     public function testPropertyDeductionFactor()
     {
@@ -279,7 +279,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price"
+     * Test attribute "totalPrice"
      */
     public function testPropertyTotalPrice()
     {
@@ -288,7 +288,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price_gross"
+     * Test attribute "totalPriceGross"
      */
     public function testPropertyTotalPriceGross()
     {
@@ -297,7 +297,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price_gross_deducted"
+     * Test attribute "totalPriceGrossDeducted"
      */
     public function testPropertyTotalPriceGrossDeducted()
     {
@@ -306,7 +306,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "deducted_price"
+     * Test attribute "deductedPrice"
      */
     public function testPropertyDeductedPrice()
     {
@@ -315,7 +315,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "position_type"
+     * Test attribute "positionType"
      */
     public function testPropertyPositionType()
     {
@@ -324,7 +324,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_type"
+     * Test attribute "priceType"
      */
     public function testPropertyPriceType()
     {
@@ -333,7 +333,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "service_type"
+     * Test attribute "serviceType"
      */
     public function testPropertyServiceType()
     {
@@ -342,7 +342,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "product_data"
+     * Test attribute "productData"
      */
     public function testPropertyProductData()
     {
@@ -351,7 +351,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text"
+     * Test attribute "shortText"
      */
     public function testPropertyShortText()
     {
@@ -360,7 +360,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_short_text"
+     * Test attribute "htmlShortText"
      */
     public function testPropertyHtmlShortText()
     {
@@ -369,7 +369,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "long_text"
+     * Test attribute "longText"
      */
     public function testPropertyLongText()
     {
@@ -378,7 +378,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_long_text"
+     * Test attribute "htmlLongText"
      */
     public function testPropertyHtmlLongText()
     {
@@ -387,7 +387,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addition_type"
+     * Test attribute "additionType"
      */
     public function testPropertyAdditionType()
     {
@@ -396,7 +396,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "element_type"
+     * Test attribute "elementType"
      */
     public function testPropertyElementType()
     {
@@ -405,7 +405,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "quantity_assignments"
+     * Test attribute "quantityAssignments"
      */
     public function testPropertyQuantityAssignments()
     {
@@ -414,7 +414,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "commerce_properties"
+     * Test attribute "commerceProperties"
      */
     public function testPropertyCommerceProperties()
     {
@@ -423,7 +423,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "alternative_to"
+     * Test attribute "alternativeTo"
      */
     public function testPropertyAlternativeTo()
     {
@@ -432,7 +432,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "alternative_identifier"
+     * Test attribute "alternativeIdentifier"
      */
     public function testPropertyAlternativeIdentifier()
     {
@@ -441,7 +441,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "alternative_group_identifier"
+     * Test attribute "alternativeGroupIdentifier"
      */
     public function testPropertyAlternativeGroupIdentifier()
     {
@@ -450,7 +450,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_lump_sum"
+     * Test attribute "isLumpSum"
      */
     public function testPropertyIsLumpSum()
     {
@@ -459,7 +459,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "repetition_to"
+     * Test attribute "repetitionTo"
      */
     public function testPropertyRepetitionTo()
     {
@@ -468,7 +468,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "standardized_description"
+     * Test attribute "standardizedDescription"
      */
     public function testPropertyStandardizedDescription()
     {
@@ -477,7 +477,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "complemented_by_quantities"
+     * Test attribute "complementedByQuantities"
      */
     public function testPropertyComplementedByQuantities()
     {
@@ -486,7 +486,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "execution_description_reference"
+     * Test attribute "executionDescriptionReference"
      */
     public function testPropertyExecutionDescriptionReference()
     {
@@ -495,7 +495,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "not_offered"
+     * Test attribute "notOffered"
      */
     public function testPropertyNotOffered()
     {
@@ -504,7 +504,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "oenorm_position_properties"
+     * Test attribute "oenormPositionProperties"
      */
     public function testPropertyOenormPositionProperties()
     {
@@ -513,7 +513,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "description_id"
+     * Test attribute "descriptionId"
      */
     public function testPropertyDescriptionId()
     {
@@ -522,7 +522,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hierarchy_level"
+     * Test attribute "hierarchyLevel"
      */
     public function testPropertyHierarchyLevel()
     {
@@ -531,7 +531,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addendum_status"
+     * Test attribute "addendumStatus"
      */
     public function testPropertyAddendumStatus()
     {
@@ -540,7 +540,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "has_bidder_comment_in_html_long_text"
+     * Test attribute "hasBidderCommentInHtmlLongText"
      */
     public function testPropertyHasBidderCommentInHtmlLongText()
     {
@@ -549,7 +549,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "gaeb_complementing_type"
+     * Test attribute "gaebComplementingType"
      */
     public function testPropertyGaebComplementingType()
     {
@@ -558,7 +558,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hold_out_properties"
+     * Test attribute "holdOutProperties"
      */
     public function testPropertyHoldOutProperties()
     {
@@ -567,7 +567,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "estimated_quantity"
+     * Test attribute "estimatedQuantity"
      */
     public function testPropertyEstimatedQuantity()
     {
@@ -576,7 +576,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_catalogue_data"
+     * Test attribute "priceCatalogueData"
      */
     public function testPropertyPriceCatalogueData()
     {
@@ -585,7 +585,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_project_catalogue_propagation"
+     * Test attribute "ignoreProjectCataloguePropagation"
      */
     public function testPropertyIgnoreProjectCataloguePropagation()
     {
@@ -594,7 +594,7 @@ class PositionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_main_position"
+     * Test attribute "isMainPosition"
      */
     public function testPropertyIsMainPosition()
     {

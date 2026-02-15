@@ -81,7 +81,7 @@ class GetStatusTest extends TestCase
     }
 
     /**
-     * Test attribute "is_healthy"
+     * Test attribute "isHealthy"
      */
     public function testPropertyIsHealthy()
     {

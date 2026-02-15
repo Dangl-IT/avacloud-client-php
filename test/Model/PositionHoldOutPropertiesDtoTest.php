@@ -90,7 +90,7 @@ class PositionHoldOutPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hold_out_type"
+     * Test attribute "holdOutType"
      */
     public function testPropertyHoldOutType()
     {
@@ -99,7 +99,7 @@ class PositionHoldOutPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hold_out_duration"
+     * Test attribute "holdOutDuration"
      */
     public function testPropertyHoldOutDuration()
     {
@@ -108,7 +108,7 @@ class PositionHoldOutPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hold_out_duration_unit"
+     * Test attribute "holdOutDurationUnit"
      */
     public function testPropertyHoldOutDurationUnit()
     {
@@ -117,7 +117,7 @@ class PositionHoldOutPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "base_position_references"
+     * Test attribute "basePositionReferences"
      */
     public function testPropertyBasePositionReferences()
     {

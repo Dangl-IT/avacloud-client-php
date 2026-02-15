@@ -56,37 +56,37 @@ class ServiceSpecificationGroupDto extends IElementDto
       * @var string[]
       */
     protected static $openAPITypes = [
-        'project_hourly_wage' => 'float',
-        'project_tax_rate' => 'float',
-        'project_price_components' => 'string[]',
-        'project_item_number_schema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
+        'projectHourlyWage' => 'float',
+        'projectTaxRate' => 'float',
+        'projectPriceComponents' => 'string[]',
+        'projectItemNumberSchema' => '\Dangl\AVACloud\Model\ItemNumberSchemaDto',
         'elements' => '\Dangl\AVACloud\Model\IElementDto[]',
-        'project_labour_time_label' => 'string',
-        'contains_duplicate_item_numbers' => 'bool',
-        'contains_duplicate_element_ids' => 'bool',
-        'ignore_duplicate_item_numbers' => 'bool',
-        'ignore_project_catalogue_propagation' => 'bool',
-        'ignore_duplicate_element_ids' => 'bool',
-        'total_price_gross_by_tax_rate' => '\Dangl\AVACloud\Model\GrossPriceComponentDto[]',
-        'ignore_child_price_updates' => 'bool',
-        'deducted_price' => 'float',
-        'deduction_factor' => 'float',
-        'absolute_deduction' => 'float',
-        'total_price' => 'float',
-        'total_price_gross' => 'float',
-        'total_price_gross_deducted' => 'float',
-        'price_type' => '\Dangl\AVACloud\Model\PriceTypeDto',
-        'short_text' => 'string',
-        'comission_status' => '\Dangl\AVACloud\Model\ComissionStatusDto',
-        'item_number' => '\Dangl\AVACloud\Model\ItemNumberDto',
-        'element_type' => 'string',
-        'is_lot' => 'bool',
-        'alternative_to' => 'string',
-        'oenorm_properties' => '\Dangl\AVACloud\Model\OenormPropertiesDto',
-        'hierarchy_level' => 'int',
-        'addendum_status' => '\Dangl\AVACloud\Model\AddendumStatusDto',
-        'alternative_identifier' => 'int',
-        'alternative_group_identifier' => 'int'
+        'projectLabourTimeLabel' => 'string',
+        'containsDuplicateItemNumbers' => 'bool',
+        'containsDuplicateElementIds' => 'bool',
+        'ignoreDuplicateItemNumbers' => 'bool',
+        'ignoreProjectCataloguePropagation' => 'bool',
+        'ignoreDuplicateElementIds' => 'bool',
+        'totalPriceGrossByTaxRate' => '\Dangl\AVACloud\Model\GrossPriceComponentDto[]',
+        'ignoreChildPriceUpdates' => 'bool',
+        'deductedPrice' => 'float',
+        'deductionFactor' => 'float',
+        'absoluteDeduction' => 'float',
+        'totalPrice' => 'float',
+        'totalPriceGross' => 'float',
+        'totalPriceGrossDeducted' => 'float',
+        'priceType' => '\Dangl\AVACloud\Model\PriceTypeDto',
+        'shortText' => 'string',
+        'comissionStatus' => '\Dangl\AVACloud\Model\ComissionStatusDto',
+        'itemNumber' => '\Dangl\AVACloud\Model\ItemNumberDto',
+        'elementType' => 'string',
+        'isLot' => 'bool',
+        'alternativeTo' => 'string',
+        'oenormProperties' => '\Dangl\AVACloud\Model\OenormPropertiesDto',
+        'hierarchyLevel' => 'int',
+        'addendumStatus' => '\Dangl\AVACloud\Model\AddendumStatusDto',
+        'alternativeIdentifier' => 'int',
+        'alternativeGroupIdentifier' => 'int'
     ];
 
     /**
@@ -97,37 +97,37 @@ class ServiceSpecificationGroupDto extends IElementDto
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'project_hourly_wage' => 'decimal',
-        'project_tax_rate' => 'decimal',
-        'project_price_components' => null,
-        'project_item_number_schema' => null,
+        'projectHourlyWage' => 'decimal',
+        'projectTaxRate' => 'decimal',
+        'projectPriceComponents' => null,
+        'projectItemNumberSchema' => null,
         'elements' => null,
-        'project_labour_time_label' => null,
-        'contains_duplicate_item_numbers' => null,
-        'contains_duplicate_element_ids' => null,
-        'ignore_duplicate_item_numbers' => null,
-        'ignore_project_catalogue_propagation' => null,
-        'ignore_duplicate_element_ids' => null,
-        'total_price_gross_by_tax_rate' => null,
-        'ignore_child_price_updates' => null,
-        'deducted_price' => 'decimal',
-        'deduction_factor' => 'decimal',
-        'absolute_deduction' => 'decimal',
-        'total_price' => 'decimal',
-        'total_price_gross' => 'decimal',
-        'total_price_gross_deducted' => 'decimal',
-        'price_type' => null,
-        'short_text' => null,
-        'comission_status' => null,
-        'item_number' => null,
-        'element_type' => null,
-        'is_lot' => null,
-        'alternative_to' => 'guid',
-        'oenorm_properties' => null,
-        'hierarchy_level' => 'int32',
-        'addendum_status' => null,
-        'alternative_identifier' => 'int32',
-        'alternative_group_identifier' => 'int32'
+        'projectLabourTimeLabel' => null,
+        'containsDuplicateItemNumbers' => null,
+        'containsDuplicateElementIds' => null,
+        'ignoreDuplicateItemNumbers' => null,
+        'ignoreProjectCataloguePropagation' => null,
+        'ignoreDuplicateElementIds' => null,
+        'totalPriceGrossByTaxRate' => null,
+        'ignoreChildPriceUpdates' => null,
+        'deductedPrice' => 'decimal',
+        'deductionFactor' => 'decimal',
+        'absoluteDeduction' => 'decimal',
+        'totalPrice' => 'decimal',
+        'totalPriceGross' => 'decimal',
+        'totalPriceGrossDeducted' => 'decimal',
+        'priceType' => null,
+        'shortText' => null,
+        'comissionStatus' => null,
+        'itemNumber' => null,
+        'elementType' => null,
+        'isLot' => null,
+        'alternativeTo' => 'guid',
+        'oenormProperties' => null,
+        'hierarchyLevel' => 'int32',
+        'addendumStatus' => null,
+        'alternativeIdentifier' => 'int32',
+        'alternativeGroupIdentifier' => 'int32'
     ];
 
     /**
@@ -136,37 +136,37 @@ class ServiceSpecificationGroupDto extends IElementDto
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'project_hourly_wage' => false,
-        'project_tax_rate' => false,
-        'project_price_components' => false,
-        'project_item_number_schema' => false,
+        'projectHourlyWage' => false,
+        'projectTaxRate' => false,
+        'projectPriceComponents' => false,
+        'projectItemNumberSchema' => false,
         'elements' => false,
-        'project_labour_time_label' => false,
-        'contains_duplicate_item_numbers' => false,
-        'contains_duplicate_element_ids' => false,
-        'ignore_duplicate_item_numbers' => false,
-        'ignore_project_catalogue_propagation' => false,
-        'ignore_duplicate_element_ids' => false,
-        'total_price_gross_by_tax_rate' => false,
-        'ignore_child_price_updates' => false,
-        'deducted_price' => false,
-        'deduction_factor' => false,
-        'absolute_deduction' => false,
-        'total_price' => false,
-        'total_price_gross' => false,
-        'total_price_gross_deducted' => false,
-        'price_type' => false,
-        'short_text' => false,
-        'comission_status' => false,
-        'item_number' => false,
-        'element_type' => false,
-        'is_lot' => false,
-        'alternative_to' => false,
-        'oenorm_properties' => false,
-        'hierarchy_level' => false,
-        'addendum_status' => false,
-        'alternative_identifier' => false,
-        'alternative_group_identifier' => false
+        'projectLabourTimeLabel' => false,
+        'containsDuplicateItemNumbers' => false,
+        'containsDuplicateElementIds' => false,
+        'ignoreDuplicateItemNumbers' => false,
+        'ignoreProjectCataloguePropagation' => false,
+        'ignoreDuplicateElementIds' => false,
+        'totalPriceGrossByTaxRate' => false,
+        'ignoreChildPriceUpdates' => false,
+        'deductedPrice' => false,
+        'deductionFactor' => false,
+        'absoluteDeduction' => false,
+        'totalPrice' => false,
+        'totalPriceGross' => false,
+        'totalPriceGrossDeducted' => false,
+        'priceType' => false,
+        'shortText' => false,
+        'comissionStatus' => false,
+        'itemNumber' => false,
+        'elementType' => false,
+        'isLot' => false,
+        'alternativeTo' => false,
+        'oenormProperties' => false,
+        'hierarchyLevel' => false,
+        'addendumStatus' => false,
+        'alternativeIdentifier' => false,
+        'alternativeGroupIdentifier' => false
     ];
 
     /**
@@ -255,37 +255,37 @@ class ServiceSpecificationGroupDto extends IElementDto
      * @var string[]
      */
     protected static $attributeMap = [
-        'project_hourly_wage' => 'projectHourlyWage',
-        'project_tax_rate' => 'projectTaxRate',
-        'project_price_components' => 'projectPriceComponents',
-        'project_item_number_schema' => 'projectItemNumberSchema',
+        'projectHourlyWage' => 'projectHourlyWage',
+        'projectTaxRate' => 'projectTaxRate',
+        'projectPriceComponents' => 'projectPriceComponents',
+        'projectItemNumberSchema' => 'projectItemNumberSchema',
         'elements' => 'elements',
-        'project_labour_time_label' => 'projectLabourTimeLabel',
-        'contains_duplicate_item_numbers' => 'containsDuplicateItemNumbers',
-        'contains_duplicate_element_ids' => 'containsDuplicateElementIds',
-        'ignore_duplicate_item_numbers' => 'ignoreDuplicateItemNumbers',
-        'ignore_project_catalogue_propagation' => 'ignoreProjectCataloguePropagation',
-        'ignore_duplicate_element_ids' => 'ignoreDuplicateElementIds',
-        'total_price_gross_by_tax_rate' => 'totalPriceGrossByTaxRate',
-        'ignore_child_price_updates' => 'ignoreChildPriceUpdates',
-        'deducted_price' => 'deductedPrice',
-        'deduction_factor' => 'deductionFactor',
-        'absolute_deduction' => 'absoluteDeduction',
-        'total_price' => 'totalPrice',
-        'total_price_gross' => 'totalPriceGross',
-        'total_price_gross_deducted' => 'totalPriceGrossDeducted',
-        'price_type' => 'priceType',
-        'short_text' => 'shortText',
-        'comission_status' => 'comissionStatus',
-        'item_number' => 'itemNumber',
-        'element_type' => 'elementType',
-        'is_lot' => 'isLot',
-        'alternative_to' => 'alternativeTo',
-        'oenorm_properties' => 'oenormProperties',
-        'hierarchy_level' => 'hierarchyLevel',
-        'addendum_status' => 'addendumStatus',
-        'alternative_identifier' => 'alternativeIdentifier',
-        'alternative_group_identifier' => 'alternativeGroupIdentifier'
+        'projectLabourTimeLabel' => 'projectLabourTimeLabel',
+        'containsDuplicateItemNumbers' => 'containsDuplicateItemNumbers',
+        'containsDuplicateElementIds' => 'containsDuplicateElementIds',
+        'ignoreDuplicateItemNumbers' => 'ignoreDuplicateItemNumbers',
+        'ignoreProjectCataloguePropagation' => 'ignoreProjectCataloguePropagation',
+        'ignoreDuplicateElementIds' => 'ignoreDuplicateElementIds',
+        'totalPriceGrossByTaxRate' => 'totalPriceGrossByTaxRate',
+        'ignoreChildPriceUpdates' => 'ignoreChildPriceUpdates',
+        'deductedPrice' => 'deductedPrice',
+        'deductionFactor' => 'deductionFactor',
+        'absoluteDeduction' => 'absoluteDeduction',
+        'totalPrice' => 'totalPrice',
+        'totalPriceGross' => 'totalPriceGross',
+        'totalPriceGrossDeducted' => 'totalPriceGrossDeducted',
+        'priceType' => 'priceType',
+        'shortText' => 'shortText',
+        'comissionStatus' => 'comissionStatus',
+        'itemNumber' => 'itemNumber',
+        'elementType' => 'elementType',
+        'isLot' => 'isLot',
+        'alternativeTo' => 'alternativeTo',
+        'oenormProperties' => 'oenormProperties',
+        'hierarchyLevel' => 'hierarchyLevel',
+        'addendumStatus' => 'addendumStatus',
+        'alternativeIdentifier' => 'alternativeIdentifier',
+        'alternativeGroupIdentifier' => 'alternativeGroupIdentifier'
     ];
 
     /**
@@ -294,37 +294,37 @@ class ServiceSpecificationGroupDto extends IElementDto
      * @var string[]
      */
     protected static $setters = [
-        'project_hourly_wage' => 'setProjectHourlyWage',
-        'project_tax_rate' => 'setProjectTaxRate',
-        'project_price_components' => 'setProjectPriceComponents',
-        'project_item_number_schema' => 'setProjectItemNumberSchema',
+        'projectHourlyWage' => 'setProjectHourlyWage',
+        'projectTaxRate' => 'setProjectTaxRate',
+        'projectPriceComponents' => 'setProjectPriceComponents',
+        'projectItemNumberSchema' => 'setProjectItemNumberSchema',
         'elements' => 'setElements',
-        'project_labour_time_label' => 'setProjectLabourTimeLabel',
-        'contains_duplicate_item_numbers' => 'setContainsDuplicateItemNumbers',
-        'contains_duplicate_element_ids' => 'setContainsDuplicateElementIds',
-        'ignore_duplicate_item_numbers' => 'setIgnoreDuplicateItemNumbers',
-        'ignore_project_catalogue_propagation' => 'setIgnoreProjectCataloguePropagation',
-        'ignore_duplicate_element_ids' => 'setIgnoreDuplicateElementIds',
-        'total_price_gross_by_tax_rate' => 'setTotalPriceGrossByTaxRate',
-        'ignore_child_price_updates' => 'setIgnoreChildPriceUpdates',
-        'deducted_price' => 'setDeductedPrice',
-        'deduction_factor' => 'setDeductionFactor',
-        'absolute_deduction' => 'setAbsoluteDeduction',
-        'total_price' => 'setTotalPrice',
-        'total_price_gross' => 'setTotalPriceGross',
-        'total_price_gross_deducted' => 'setTotalPriceGrossDeducted',
-        'price_type' => 'setPriceType',
-        'short_text' => 'setShortText',
-        'comission_status' => 'setComissionStatus',
-        'item_number' => 'setItemNumber',
-        'element_type' => 'setElementType',
-        'is_lot' => 'setIsLot',
-        'alternative_to' => 'setAlternativeTo',
-        'oenorm_properties' => 'setOenormProperties',
-        'hierarchy_level' => 'setHierarchyLevel',
-        'addendum_status' => 'setAddendumStatus',
-        'alternative_identifier' => 'setAlternativeIdentifier',
-        'alternative_group_identifier' => 'setAlternativeGroupIdentifier'
+        'projectLabourTimeLabel' => 'setProjectLabourTimeLabel',
+        'containsDuplicateItemNumbers' => 'setContainsDuplicateItemNumbers',
+        'containsDuplicateElementIds' => 'setContainsDuplicateElementIds',
+        'ignoreDuplicateItemNumbers' => 'setIgnoreDuplicateItemNumbers',
+        'ignoreProjectCataloguePropagation' => 'setIgnoreProjectCataloguePropagation',
+        'ignoreDuplicateElementIds' => 'setIgnoreDuplicateElementIds',
+        'totalPriceGrossByTaxRate' => 'setTotalPriceGrossByTaxRate',
+        'ignoreChildPriceUpdates' => 'setIgnoreChildPriceUpdates',
+        'deductedPrice' => 'setDeductedPrice',
+        'deductionFactor' => 'setDeductionFactor',
+        'absoluteDeduction' => 'setAbsoluteDeduction',
+        'totalPrice' => 'setTotalPrice',
+        'totalPriceGross' => 'setTotalPriceGross',
+        'totalPriceGrossDeducted' => 'setTotalPriceGrossDeducted',
+        'priceType' => 'setPriceType',
+        'shortText' => 'setShortText',
+        'comissionStatus' => 'setComissionStatus',
+        'itemNumber' => 'setItemNumber',
+        'elementType' => 'setElementType',
+        'isLot' => 'setIsLot',
+        'alternativeTo' => 'setAlternativeTo',
+        'oenormProperties' => 'setOenormProperties',
+        'hierarchyLevel' => 'setHierarchyLevel',
+        'addendumStatus' => 'setAddendumStatus',
+        'alternativeIdentifier' => 'setAlternativeIdentifier',
+        'alternativeGroupIdentifier' => 'setAlternativeGroupIdentifier'
     ];
 
     /**
@@ -333,37 +333,37 @@ class ServiceSpecificationGroupDto extends IElementDto
      * @var string[]
      */
     protected static $getters = [
-        'project_hourly_wage' => 'getProjectHourlyWage',
-        'project_tax_rate' => 'getProjectTaxRate',
-        'project_price_components' => 'getProjectPriceComponents',
-        'project_item_number_schema' => 'getProjectItemNumberSchema',
+        'projectHourlyWage' => 'getProjectHourlyWage',
+        'projectTaxRate' => 'getProjectTaxRate',
+        'projectPriceComponents' => 'getProjectPriceComponents',
+        'projectItemNumberSchema' => 'getProjectItemNumberSchema',
         'elements' => 'getElements',
-        'project_labour_time_label' => 'getProjectLabourTimeLabel',
-        'contains_duplicate_item_numbers' => 'getContainsDuplicateItemNumbers',
-        'contains_duplicate_element_ids' => 'getContainsDuplicateElementIds',
-        'ignore_duplicate_item_numbers' => 'getIgnoreDuplicateItemNumbers',
-        'ignore_project_catalogue_propagation' => 'getIgnoreProjectCataloguePropagation',
-        'ignore_duplicate_element_ids' => 'getIgnoreDuplicateElementIds',
-        'total_price_gross_by_tax_rate' => 'getTotalPriceGrossByTaxRate',
-        'ignore_child_price_updates' => 'getIgnoreChildPriceUpdates',
-        'deducted_price' => 'getDeductedPrice',
-        'deduction_factor' => 'getDeductionFactor',
-        'absolute_deduction' => 'getAbsoluteDeduction',
-        'total_price' => 'getTotalPrice',
-        'total_price_gross' => 'getTotalPriceGross',
-        'total_price_gross_deducted' => 'getTotalPriceGrossDeducted',
-        'price_type' => 'getPriceType',
-        'short_text' => 'getShortText',
-        'comission_status' => 'getComissionStatus',
-        'item_number' => 'getItemNumber',
-        'element_type' => 'getElementType',
-        'is_lot' => 'getIsLot',
-        'alternative_to' => 'getAlternativeTo',
-        'oenorm_properties' => 'getOenormProperties',
-        'hierarchy_level' => 'getHierarchyLevel',
-        'addendum_status' => 'getAddendumStatus',
-        'alternative_identifier' => 'getAlternativeIdentifier',
-        'alternative_group_identifier' => 'getAlternativeGroupIdentifier'
+        'projectLabourTimeLabel' => 'getProjectLabourTimeLabel',
+        'containsDuplicateItemNumbers' => 'getContainsDuplicateItemNumbers',
+        'containsDuplicateElementIds' => 'getContainsDuplicateElementIds',
+        'ignoreDuplicateItemNumbers' => 'getIgnoreDuplicateItemNumbers',
+        'ignoreProjectCataloguePropagation' => 'getIgnoreProjectCataloguePropagation',
+        'ignoreDuplicateElementIds' => 'getIgnoreDuplicateElementIds',
+        'totalPriceGrossByTaxRate' => 'getTotalPriceGrossByTaxRate',
+        'ignoreChildPriceUpdates' => 'getIgnoreChildPriceUpdates',
+        'deductedPrice' => 'getDeductedPrice',
+        'deductionFactor' => 'getDeductionFactor',
+        'absoluteDeduction' => 'getAbsoluteDeduction',
+        'totalPrice' => 'getTotalPrice',
+        'totalPriceGross' => 'getTotalPriceGross',
+        'totalPriceGrossDeducted' => 'getTotalPriceGrossDeducted',
+        'priceType' => 'getPriceType',
+        'shortText' => 'getShortText',
+        'comissionStatus' => 'getComissionStatus',
+        'itemNumber' => 'getItemNumber',
+        'elementType' => 'getElementType',
+        'isLot' => 'getIsLot',
+        'alternativeTo' => 'getAlternativeTo',
+        'oenormProperties' => 'getOenormProperties',
+        'hierarchyLevel' => 'getHierarchyLevel',
+        'addendumStatus' => 'getAddendumStatus',
+        'alternativeIdentifier' => 'getAlternativeIdentifier',
+        'alternativeGroupIdentifier' => 'getAlternativeGroupIdentifier'
     ];
 
     /**
@@ -419,37 +419,37 @@ class ServiceSpecificationGroupDto extends IElementDto
     {
         parent::__construct($data);
 
-        $this->setIfExists('project_hourly_wage', $data ?? [], null);
-        $this->setIfExists('project_tax_rate', $data ?? [], null);
-        $this->setIfExists('project_price_components', $data ?? [], null);
-        $this->setIfExists('project_item_number_schema', $data ?? [], null);
+        $this->setIfExists('projectHourlyWage', $data ?? [], null);
+        $this->setIfExists('projectTaxRate', $data ?? [], null);
+        $this->setIfExists('projectPriceComponents', $data ?? [], null);
+        $this->setIfExists('projectItemNumberSchema', $data ?? [], null);
         $this->setIfExists('elements', $data ?? [], null);
-        $this->setIfExists('project_labour_time_label', $data ?? [], null);
-        $this->setIfExists('contains_duplicate_item_numbers', $data ?? [], null);
-        $this->setIfExists('contains_duplicate_element_ids', $data ?? [], null);
-        $this->setIfExists('ignore_duplicate_item_numbers', $data ?? [], null);
-        $this->setIfExists('ignore_project_catalogue_propagation', $data ?? [], null);
-        $this->setIfExists('ignore_duplicate_element_ids', $data ?? [], null);
-        $this->setIfExists('total_price_gross_by_tax_rate', $data ?? [], null);
-        $this->setIfExists('ignore_child_price_updates', $data ?? [], null);
-        $this->setIfExists('deducted_price', $data ?? [], null);
-        $this->setIfExists('deduction_factor', $data ?? [], null);
-        $this->setIfExists('absolute_deduction', $data ?? [], null);
-        $this->setIfExists('total_price', $data ?? [], null);
-        $this->setIfExists('total_price_gross', $data ?? [], null);
-        $this->setIfExists('total_price_gross_deducted', $data ?? [], null);
-        $this->setIfExists('price_type', $data ?? [], null);
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('comission_status', $data ?? [], null);
-        $this->setIfExists('item_number', $data ?? [], null);
-        $this->setIfExists('element_type', $data ?? [], null);
-        $this->setIfExists('is_lot', $data ?? [], null);
-        $this->setIfExists('alternative_to', $data ?? [], null);
-        $this->setIfExists('oenorm_properties', $data ?? [], null);
-        $this->setIfExists('hierarchy_level', $data ?? [], null);
-        $this->setIfExists('addendum_status', $data ?? [], null);
-        $this->setIfExists('alternative_identifier', $data ?? [], null);
-        $this->setIfExists('alternative_group_identifier', $data ?? [], null);
+        $this->setIfExists('projectLabourTimeLabel', $data ?? [], null);
+        $this->setIfExists('containsDuplicateItemNumbers', $data ?? [], null);
+        $this->setIfExists('containsDuplicateElementIds', $data ?? [], null);
+        $this->setIfExists('ignoreDuplicateItemNumbers', $data ?? [], null);
+        $this->setIfExists('ignoreProjectCataloguePropagation', $data ?? [], null);
+        $this->setIfExists('ignoreDuplicateElementIds', $data ?? [], null);
+        $this->setIfExists('totalPriceGrossByTaxRate', $data ?? [], null);
+        $this->setIfExists('ignoreChildPriceUpdates', $data ?? [], null);
+        $this->setIfExists('deductedPrice', $data ?? [], null);
+        $this->setIfExists('deductionFactor', $data ?? [], null);
+        $this->setIfExists('absoluteDeduction', $data ?? [], null);
+        $this->setIfExists('totalPrice', $data ?? [], null);
+        $this->setIfExists('totalPriceGross', $data ?? [], null);
+        $this->setIfExists('totalPriceGrossDeducted', $data ?? [], null);
+        $this->setIfExists('priceType', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('comissionStatus', $data ?? [], null);
+        $this->setIfExists('itemNumber', $data ?? [], null);
+        $this->setIfExists('elementType', $data ?? [], null);
+        $this->setIfExists('isLot', $data ?? [], null);
+        $this->setIfExists('alternativeTo', $data ?? [], null);
+        $this->setIfExists('oenormProperties', $data ?? [], null);
+        $this->setIfExists('hierarchyLevel', $data ?? [], null);
+        $this->setIfExists('addendumStatus', $data ?? [], null);
+        $this->setIfExists('alternativeIdentifier', $data ?? [], null);
+        $this->setIfExists('alternativeGroupIdentifier', $data ?? [], null);
     }
 
     /**
@@ -479,56 +479,56 @@ class ServiceSpecificationGroupDto extends IElementDto
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['project_hourly_wage'] === null) {
-            $invalidProperties[] = "'project_hourly_wage' can't be null";
+        if ($this->container['projectHourlyWage'] === null) {
+            $invalidProperties[] = "'projectHourlyWage' can't be null";
         }
-        if ($this->container['project_tax_rate'] === null) {
-            $invalidProperties[] = "'project_tax_rate' can't be null";
+        if ($this->container['projectTaxRate'] === null) {
+            $invalidProperties[] = "'projectTaxRate' can't be null";
         }
-        if ($this->container['contains_duplicate_item_numbers'] === null) {
-            $invalidProperties[] = "'contains_duplicate_item_numbers' can't be null";
+        if ($this->container['containsDuplicateItemNumbers'] === null) {
+            $invalidProperties[] = "'containsDuplicateItemNumbers' can't be null";
         }
-        if ($this->container['contains_duplicate_element_ids'] === null) {
-            $invalidProperties[] = "'contains_duplicate_element_ids' can't be null";
+        if ($this->container['containsDuplicateElementIds'] === null) {
+            $invalidProperties[] = "'containsDuplicateElementIds' can't be null";
         }
-        if ($this->container['ignore_duplicate_item_numbers'] === null) {
-            $invalidProperties[] = "'ignore_duplicate_item_numbers' can't be null";
+        if ($this->container['ignoreDuplicateItemNumbers'] === null) {
+            $invalidProperties[] = "'ignoreDuplicateItemNumbers' can't be null";
         }
-        if ($this->container['ignore_project_catalogue_propagation'] === null) {
-            $invalidProperties[] = "'ignore_project_catalogue_propagation' can't be null";
+        if ($this->container['ignoreProjectCataloguePropagation'] === null) {
+            $invalidProperties[] = "'ignoreProjectCataloguePropagation' can't be null";
         }
-        if ($this->container['ignore_duplicate_element_ids'] === null) {
-            $invalidProperties[] = "'ignore_duplicate_element_ids' can't be null";
+        if ($this->container['ignoreDuplicateElementIds'] === null) {
+            $invalidProperties[] = "'ignoreDuplicateElementIds' can't be null";
         }
-        if ($this->container['ignore_child_price_updates'] === null) {
-            $invalidProperties[] = "'ignore_child_price_updates' can't be null";
+        if ($this->container['ignoreChildPriceUpdates'] === null) {
+            $invalidProperties[] = "'ignoreChildPriceUpdates' can't be null";
         }
-        if ($this->container['deducted_price'] === null) {
-            $invalidProperties[] = "'deducted_price' can't be null";
+        if ($this->container['deductedPrice'] === null) {
+            $invalidProperties[] = "'deductedPrice' can't be null";
         }
-        if ($this->container['deduction_factor'] === null) {
-            $invalidProperties[] = "'deduction_factor' can't be null";
+        if ($this->container['deductionFactor'] === null) {
+            $invalidProperties[] = "'deductionFactor' can't be null";
         }
-        if ($this->container['total_price'] === null) {
-            $invalidProperties[] = "'total_price' can't be null";
+        if ($this->container['totalPrice'] === null) {
+            $invalidProperties[] = "'totalPrice' can't be null";
         }
-        if ($this->container['total_price_gross'] === null) {
-            $invalidProperties[] = "'total_price_gross' can't be null";
+        if ($this->container['totalPriceGross'] === null) {
+            $invalidProperties[] = "'totalPriceGross' can't be null";
         }
-        if ($this->container['total_price_gross_deducted'] === null) {
-            $invalidProperties[] = "'total_price_gross_deducted' can't be null";
+        if ($this->container['totalPriceGrossDeducted'] === null) {
+            $invalidProperties[] = "'totalPriceGrossDeducted' can't be null";
         }
-        if ($this->container['price_type'] === null) {
-            $invalidProperties[] = "'price_type' can't be null";
+        if ($this->container['priceType'] === null) {
+            $invalidProperties[] = "'priceType' can't be null";
         }
-        if ($this->container['comission_status'] === null) {
-            $invalidProperties[] = "'comission_status' can't be null";
+        if ($this->container['comissionStatus'] === null) {
+            $invalidProperties[] = "'comissionStatus' can't be null";
         }
-        if ($this->container['is_lot'] === null) {
-            $invalidProperties[] = "'is_lot' can't be null";
+        if ($this->container['isLot'] === null) {
+            $invalidProperties[] = "'isLot' can't be null";
         }
-        if ($this->container['hierarchy_level'] === null) {
-            $invalidProperties[] = "'hierarchy_level' can't be null";
+        if ($this->container['hierarchyLevel'] === null) {
+            $invalidProperties[] = "'hierarchyLevel' can't be null";
         }
         return $invalidProperties;
     }
@@ -546,109 +546,109 @@ class ServiceSpecificationGroupDto extends IElementDto
 
 
     /**
-     * Gets project_hourly_wage
+     * Gets projectHourlyWage
      *
      * @return float
      */
     public function getProjectHourlyWage()
     {
-        return $this->container['project_hourly_wage'];
+        return $this->container['projectHourlyWage'];
     }
 
     /**
-     * Sets project_hourly_wage
+     * Sets projectHourlyWage
      *
-     * @param float $project_hourly_wage The hourly wage that is used within this ElementContainerBase. Will be propagated to child elements.
+     * @param float $projectHourlyWage The hourly wage that is used within this ElementContainerBase. Will be propagated to child elements.
      *
      * @return self
      */
-    public function setProjectHourlyWage($project_hourly_wage)
+    public function setProjectHourlyWage($projectHourlyWage)
     {
-        if (is_null($project_hourly_wage)) {
-            throw new \InvalidArgumentException('non-nullable project_hourly_wage cannot be null');
+        if (is_null($projectHourlyWage)) {
+            throw new \InvalidArgumentException('non-nullable projectHourlyWage cannot be null');
         }
-        $this->container['project_hourly_wage'] = $project_hourly_wage;
+        $this->container['projectHourlyWage'] = $projectHourlyWage;
 
         return $this;
     }
 
     /**
-     * Gets project_tax_rate
+     * Gets projectTaxRate
      *
      * @return float
      */
     public function getProjectTaxRate()
     {
-        return $this->container['project_tax_rate'];
+        return $this->container['projectTaxRate'];
     }
 
     /**
-     * Sets project_tax_rate
+     * Sets projectTaxRate
      *
-     * @param float $project_tax_rate The tax rate that is used within this ElementContainerBase. Will be propagated to child elements.
+     * @param float $projectTaxRate The tax rate that is used within this ElementContainerBase. Will be propagated to child elements.
      *
      * @return self
      */
-    public function setProjectTaxRate($project_tax_rate)
+    public function setProjectTaxRate($projectTaxRate)
     {
-        if (is_null($project_tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable project_tax_rate cannot be null');
+        if (is_null($projectTaxRate)) {
+            throw new \InvalidArgumentException('non-nullable projectTaxRate cannot be null');
         }
-        $this->container['project_tax_rate'] = $project_tax_rate;
+        $this->container['projectTaxRate'] = $projectTaxRate;
 
         return $this;
     }
 
     /**
-     * Gets project_price_components
+     * Gets projectPriceComponents
      *
      * @return string[]|null
      */
     public function getProjectPriceComponents()
     {
-        return $this->container['project_price_components'];
+        return $this->container['projectPriceComponents'];
     }
 
     /**
-     * Sets project_price_components
+     * Sets projectPriceComponents
      *
-     * @param string[]|null $project_price_components The price components that are used within this project. They are ignored during Json deserialization because they will be set from the parent project.
+     * @param string[]|null $projectPriceComponents The price components that are used within this project. They are ignored during Json deserialization because they will be set from the parent project.
      *
      * @return self
      */
-    public function setProjectPriceComponents($project_price_components)
+    public function setProjectPriceComponents($projectPriceComponents)
     {
-        if (is_null($project_price_components)) {
-            throw new \InvalidArgumentException('non-nullable project_price_components cannot be null');
+        if (is_null($projectPriceComponents)) {
+            throw new \InvalidArgumentException('non-nullable projectPriceComponents cannot be null');
         }
-        $this->container['project_price_components'] = $project_price_components;
+        $this->container['projectPriceComponents'] = $projectPriceComponents;
 
         return $this;
     }
 
     /**
-     * Gets project_item_number_schema
+     * Gets projectItemNumberSchema
      *
      * @return \Dangl\AVACloud\Model\ItemNumberSchemaDto|null
      */
     public function getProjectItemNumberSchema()
     {
-        return $this->container['project_item_number_schema'];
+        return $this->container['projectItemNumberSchema'];
     }
 
     /**
-     * Sets project_item_number_schema
+     * Sets projectItemNumberSchema
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $project_item_number_schema project_item_number_schema
+     * @param \Dangl\AVACloud\Model\ItemNumberSchemaDto|null $projectItemNumberSchema projectItemNumberSchema
      *
      * @return self
      */
-    public function setProjectItemNumberSchema($project_item_number_schema)
+    public function setProjectItemNumberSchema($projectItemNumberSchema)
     {
-        if (is_null($project_item_number_schema)) {
-            throw new \InvalidArgumentException('non-nullable project_item_number_schema cannot be null');
+        if (is_null($projectItemNumberSchema)) {
+            throw new \InvalidArgumentException('non-nullable projectItemNumberSchema cannot be null');
         }
-        $this->container['project_item_number_schema'] = $project_item_number_schema;
+        $this->container['projectItemNumberSchema'] = $projectItemNumberSchema;
 
         return $this;
     }
@@ -681,703 +681,703 @@ class ServiceSpecificationGroupDto extends IElementDto
     }
 
     /**
-     * Gets project_labour_time_label
+     * Gets projectLabourTimeLabel
      *
      * @return string|null
      */
     public function getProjectLabourTimeLabel()
     {
-        return $this->container['project_labour_time_label'];
+        return $this->container['projectLabourTimeLabel'];
     }
 
     /**
-     * Sets project_labour_time_label
+     * Sets projectLabourTimeLabel
      *
-     * @param string|null $project_labour_time_label The label used in the parent Project to mark labour time, e.g. \"Hours\" or \"Stunden\".
+     * @param string|null $projectLabourTimeLabel The label used in the parent Project to mark labour time, e.g. \"Hours\" or \"Stunden\".
      *
      * @return self
      */
-    public function setProjectLabourTimeLabel($project_labour_time_label)
+    public function setProjectLabourTimeLabel($projectLabourTimeLabel)
     {
-        if (is_null($project_labour_time_label)) {
-            throw new \InvalidArgumentException('non-nullable project_labour_time_label cannot be null');
+        if (is_null($projectLabourTimeLabel)) {
+            throw new \InvalidArgumentException('non-nullable projectLabourTimeLabel cannot be null');
         }
-        $this->container['project_labour_time_label'] = $project_labour_time_label;
+        $this->container['projectLabourTimeLabel'] = $projectLabourTimeLabel;
 
         return $this;
     }
 
     /**
-     * Gets contains_duplicate_item_numbers
+     * Gets containsDuplicateItemNumbers
      *
      * @return bool
      */
     public function getContainsDuplicateItemNumbers()
     {
-        return $this->container['contains_duplicate_item_numbers'];
+        return $this->container['containsDuplicateItemNumbers'];
     }
 
     /**
-     * Sets contains_duplicate_item_numbers
+     * Sets containsDuplicateItemNumbers
      *
-     * @param bool $contains_duplicate_item_numbers Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers.
+     * @param bool $containsDuplicateItemNumbers Indicates if there are child IElements that have conflicting, duplicated ItemNumbers or if any child ElementContainerBase elements themselves contain duplicate ItemNumber s. Will always indicate false when told to ignore duplicate item numbers.
      *
      * @return self
      */
-    public function setContainsDuplicateItemNumbers($contains_duplicate_item_numbers)
+    public function setContainsDuplicateItemNumbers($containsDuplicateItemNumbers)
     {
-        if (is_null($contains_duplicate_item_numbers)) {
-            throw new \InvalidArgumentException('non-nullable contains_duplicate_item_numbers cannot be null');
+        if (is_null($containsDuplicateItemNumbers)) {
+            throw new \InvalidArgumentException('non-nullable containsDuplicateItemNumbers cannot be null');
         }
-        $this->container['contains_duplicate_item_numbers'] = $contains_duplicate_item_numbers;
+        $this->container['containsDuplicateItemNumbers'] = $containsDuplicateItemNumbers;
 
         return $this;
     }
 
     /**
-     * Gets contains_duplicate_element_ids
+     * Gets containsDuplicateElementIds
      *
      * @return bool
      */
     public function getContainsDuplicateElementIds()
     {
-        return $this->container['contains_duplicate_element_ids'];
+        return $this->container['containsDuplicateElementIds'];
     }
 
     /**
-     * Sets contains_duplicate_element_ids
+     * Sets containsDuplicateElementIds
      *
-     * @param bool $contains_duplicate_element_ids Indicates if there are child IElements that have conflicting, duplicated Ids or if any child ElementContainerBase elements themselves contain duplicate Id s. Will always indicate false when told to ignore duplicate item numbers.
+     * @param bool $containsDuplicateElementIds Indicates if there are child IElements that have conflicting, duplicated Ids or if any child ElementContainerBase elements themselves contain duplicate Id s. Will always indicate false when told to ignore duplicate item numbers.
      *
      * @return self
      */
-    public function setContainsDuplicateElementIds($contains_duplicate_element_ids)
+    public function setContainsDuplicateElementIds($containsDuplicateElementIds)
     {
-        if (is_null($contains_duplicate_element_ids)) {
-            throw new \InvalidArgumentException('non-nullable contains_duplicate_element_ids cannot be null');
+        if (is_null($containsDuplicateElementIds)) {
+            throw new \InvalidArgumentException('non-nullable containsDuplicateElementIds cannot be null');
         }
-        $this->container['contains_duplicate_element_ids'] = $contains_duplicate_element_ids;
+        $this->container['containsDuplicateElementIds'] = $containsDuplicateElementIds;
 
         return $this;
     }
 
     /**
-     * Gets ignore_duplicate_item_numbers
+     * Gets ignoreDuplicateItemNumbers
      *
      * @return bool
      */
     public function getIgnoreDuplicateItemNumbers()
     {
-        return $this->container['ignore_duplicate_item_numbers'];
+        return $this->container['ignoreDuplicateItemNumbers'];
     }
 
     /**
-     * Sets ignore_duplicate_item_numbers
+     * Sets ignoreDuplicateItemNumbers
      *
-     * @param bool $ignore_duplicate_item_numbers Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes.
+     * @param bool $ignoreDuplicateItemNumbers Indicate if duplicated ItemNumbers within child elements are to be ignored. Will not perform checks for duplicates if yes.
      *
      * @return self
      */
-    public function setIgnoreDuplicateItemNumbers($ignore_duplicate_item_numbers)
+    public function setIgnoreDuplicateItemNumbers($ignoreDuplicateItemNumbers)
     {
-        if (is_null($ignore_duplicate_item_numbers)) {
-            throw new \InvalidArgumentException('non-nullable ignore_duplicate_item_numbers cannot be null');
+        if (is_null($ignoreDuplicateItemNumbers)) {
+            throw new \InvalidArgumentException('non-nullable ignoreDuplicateItemNumbers cannot be null');
         }
-        $this->container['ignore_duplicate_item_numbers'] = $ignore_duplicate_item_numbers;
+        $this->container['ignoreDuplicateItemNumbers'] = $ignoreDuplicateItemNumbers;
 
         return $this;
     }
 
     /**
-     * Gets ignore_project_catalogue_propagation
+     * Gets ignoreProjectCataloguePropagation
      *
      * @return bool
      */
     public function getIgnoreProjectCataloguePropagation()
     {
-        return $this->container['ignore_project_catalogue_propagation'];
+        return $this->container['ignoreProjectCataloguePropagation'];
     }
 
     /**
-     * Sets ignore_project_catalogue_propagation
+     * Sets ignoreProjectCataloguePropagation
      *
-     * @param bool $ignore_project_catalogue_propagation If this is set to true, the ProjectCatalogues property will not be propagated to child elements. This is useful in mapping scenarios, where you want to disable propagation for multiple changes, and only enable it once you have mapped all properties
+     * @param bool $ignoreProjectCataloguePropagation If this is set to true, the ProjectCatalogues property will not be propagated to child elements. This is useful in mapping scenarios, where you want to disable propagation for multiple changes, and only enable it once you have mapped all properties
      *
      * @return self
      */
-    public function setIgnoreProjectCataloguePropagation($ignore_project_catalogue_propagation)
+    public function setIgnoreProjectCataloguePropagation($ignoreProjectCataloguePropagation)
     {
-        if (is_null($ignore_project_catalogue_propagation)) {
-            throw new \InvalidArgumentException('non-nullable ignore_project_catalogue_propagation cannot be null');
+        if (is_null($ignoreProjectCataloguePropagation)) {
+            throw new \InvalidArgumentException('non-nullable ignoreProjectCataloguePropagation cannot be null');
         }
-        $this->container['ignore_project_catalogue_propagation'] = $ignore_project_catalogue_propagation;
+        $this->container['ignoreProjectCataloguePropagation'] = $ignoreProjectCataloguePropagation;
 
         return $this;
     }
 
     /**
-     * Gets ignore_duplicate_element_ids
+     * Gets ignoreDuplicateElementIds
      *
      * @return bool
      */
     public function getIgnoreDuplicateElementIds()
     {
-        return $this->container['ignore_duplicate_element_ids'];
+        return $this->container['ignoreDuplicateElementIds'];
     }
 
     /**
-     * Sets ignore_duplicate_element_ids
+     * Sets ignoreDuplicateElementIds
      *
-     * @param bool $ignore_duplicate_element_ids Indicate if duplicated Ids within child elements are to be ignored. Will not perform checks for duplicates if yes.
+     * @param bool $ignoreDuplicateElementIds Indicate if duplicated Ids within child elements are to be ignored. Will not perform checks for duplicates if yes.
      *
      * @return self
      */
-    public function setIgnoreDuplicateElementIds($ignore_duplicate_element_ids)
+    public function setIgnoreDuplicateElementIds($ignoreDuplicateElementIds)
     {
-        if (is_null($ignore_duplicate_element_ids)) {
-            throw new \InvalidArgumentException('non-nullable ignore_duplicate_element_ids cannot be null');
+        if (is_null($ignoreDuplicateElementIds)) {
+            throw new \InvalidArgumentException('non-nullable ignoreDuplicateElementIds cannot be null');
         }
-        $this->container['ignore_duplicate_element_ids'] = $ignore_duplicate_element_ids;
+        $this->container['ignoreDuplicateElementIds'] = $ignoreDuplicateElementIds;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross_by_tax_rate
+     * Gets totalPriceGrossByTaxRate
      *
      * @return \Dangl\AVACloud\Model\GrossPriceComponentDto[]|null
      */
     public function getTotalPriceGrossByTaxRate()
     {
-        return $this->container['total_price_gross_by_tax_rate'];
+        return $this->container['totalPriceGrossByTaxRate'];
     }
 
     /**
-     * Sets total_price_gross_by_tax_rate
+     * Sets totalPriceGrossByTaxRate
      *
-     * @param \Dangl\AVACloud\Model\GrossPriceComponentDto[]|null $total_price_gross_by_tax_rate Price composition by tax rate.
+     * @param \Dangl\AVACloud\Model\GrossPriceComponentDto[]|null $totalPriceGrossByTaxRate Price composition by tax rate.
      *
      * @return self
      */
-    public function setTotalPriceGrossByTaxRate($total_price_gross_by_tax_rate)
+    public function setTotalPriceGrossByTaxRate($totalPriceGrossByTaxRate)
     {
-        if (is_null($total_price_gross_by_tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross_by_tax_rate cannot be null');
+        if (is_null($totalPriceGrossByTaxRate)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGrossByTaxRate cannot be null');
         }
-        $this->container['total_price_gross_by_tax_rate'] = $total_price_gross_by_tax_rate;
+        $this->container['totalPriceGrossByTaxRate'] = $totalPriceGrossByTaxRate;
 
         return $this;
     }
 
     /**
-     * Gets ignore_child_price_updates
+     * Gets ignoreChildPriceUpdates
      *
      * @return bool
      */
     public function getIgnoreChildPriceUpdates()
     {
-        return $this->container['ignore_child_price_updates'];
+        return $this->container['ignoreChildPriceUpdates'];
     }
 
     /**
-     * Sets ignore_child_price_updates
+     * Sets ignoreChildPriceUpdates
      *
-     * @param bool $ignore_child_price_updates Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once.
+     * @param bool $ignoreChildPriceUpdates Internally used to indicate that a propagation is currently done, this is done to not recalculate every single result from a lot of changes when it is sufficient to calculate the total price at once.
      *
      * @return self
      */
-    public function setIgnoreChildPriceUpdates($ignore_child_price_updates)
+    public function setIgnoreChildPriceUpdates($ignoreChildPriceUpdates)
     {
-        if (is_null($ignore_child_price_updates)) {
-            throw new \InvalidArgumentException('non-nullable ignore_child_price_updates cannot be null');
+        if (is_null($ignoreChildPriceUpdates)) {
+            throw new \InvalidArgumentException('non-nullable ignoreChildPriceUpdates cannot be null');
         }
-        $this->container['ignore_child_price_updates'] = $ignore_child_price_updates;
+        $this->container['ignoreChildPriceUpdates'] = $ignoreChildPriceUpdates;
 
         return $this;
     }
 
     /**
-     * Gets deducted_price
+     * Gets deductedPrice
      *
      * @return float
      */
     public function getDeductedPrice()
     {
-        return $this->container['deducted_price'];
+        return $this->container['deductedPrice'];
     }
 
     /**
-     * Sets deducted_price
+     * Sets deductedPrice
      *
-     * @param float $deducted_price Net price after applied deductions.
+     * @param float $deductedPrice Net price after applied deductions.
      *
      * @return self
      */
-    public function setDeductedPrice($deducted_price)
+    public function setDeductedPrice($deductedPrice)
     {
-        if (is_null($deducted_price)) {
-            throw new \InvalidArgumentException('non-nullable deducted_price cannot be null');
+        if (is_null($deductedPrice)) {
+            throw new \InvalidArgumentException('non-nullable deductedPrice cannot be null');
         }
-        $this->container['deducted_price'] = $deducted_price;
+        $this->container['deductedPrice'] = $deductedPrice;
 
         return $this;
     }
 
     /**
-     * Gets deduction_factor
+     * Gets deductionFactor
      *
      * @return float
      */
     public function getDeductionFactor()
     {
-        return $this->container['deduction_factor'];
+        return $this->container['deductionFactor'];
     }
 
     /**
-     * Sets deduction_factor
+     * Sets deductionFactor
      *
-     * @param float $deduction_factor Factor of applied deductions to the total price. For example, \"0.03\" means that a 3% deduction is to be applied.
+     * @param float $deductionFactor Factor of applied deductions to the total price. For example, \"0.03\" means that a 3% deduction is to be applied.
      *
      * @return self
      */
-    public function setDeductionFactor($deduction_factor)
+    public function setDeductionFactor($deductionFactor)
     {
-        if (is_null($deduction_factor)) {
-            throw new \InvalidArgumentException('non-nullable deduction_factor cannot be null');
+        if (is_null($deductionFactor)) {
+            throw new \InvalidArgumentException('non-nullable deductionFactor cannot be null');
         }
-        $this->container['deduction_factor'] = $deduction_factor;
+        $this->container['deductionFactor'] = $deductionFactor;
 
         return $this;
     }
 
     /**
-     * Gets absolute_deduction
+     * Gets absoluteDeduction
      *
      * @return float|null
      */
     public function getAbsoluteDeduction()
     {
-        return $this->container['absolute_deduction'];
+        return $this->container['absoluteDeduction'];
     }
 
     /**
-     * Sets absolute_deduction
+     * Sets absoluteDeduction
      *
-     * @param float|null $absolute_deduction The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum.
+     * @param float|null $absoluteDeduction The exact amount of the discount as an absolute value. For backwards compatibility reasons, setting this value will also set a calculated value to DeductionFactor, which will also be updated in case the total price is changed to reflect a relative value of the absolute discount sum.
      *
      * @return self
      */
-    public function setAbsoluteDeduction($absolute_deduction)
+    public function setAbsoluteDeduction($absoluteDeduction)
     {
-        if (is_null($absolute_deduction)) {
-            throw new \InvalidArgumentException('non-nullable absolute_deduction cannot be null');
+        if (is_null($absoluteDeduction)) {
+            throw new \InvalidArgumentException('non-nullable absoluteDeduction cannot be null');
         }
-        $this->container['absolute_deduction'] = $absolute_deduction;
+        $this->container['absoluteDeduction'] = $absoluteDeduction;
 
         return $this;
     }
 
     /**
-     * Gets total_price
+     * Gets totalPrice
      *
      * @return float
      */
     public function getTotalPrice()
     {
-        return $this->container['total_price'];
+        return $this->container['totalPrice'];
     }
 
     /**
-     * Sets total_price
+     * Sets totalPrice
      *
-     * @param float $total_price Will return this ElementContainerBase's total price.
+     * @param float $totalPrice Will return this ElementContainerBase's total price.
      *
      * @return self
      */
-    public function setTotalPrice($total_price)
+    public function setTotalPrice($totalPrice)
     {
-        if (is_null($total_price)) {
-            throw new \InvalidArgumentException('non-nullable total_price cannot be null');
+        if (is_null($totalPrice)) {
+            throw new \InvalidArgumentException('non-nullable totalPrice cannot be null');
         }
-        $this->container['total_price'] = $total_price;
+        $this->container['totalPrice'] = $totalPrice;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross
+     * Gets totalPriceGross
      *
      * @return float
      */
     public function getTotalPriceGross()
     {
-        return $this->container['total_price_gross'];
+        return $this->container['totalPriceGross'];
     }
 
     /**
-     * Sets total_price_gross
+     * Sets totalPriceGross
      *
-     * @param float $total_price_gross The total gross price for this ElementContainerBase including all child elements.
+     * @param float $totalPriceGross The total gross price for this ElementContainerBase including all child elements.
      *
      * @return self
      */
-    public function setTotalPriceGross($total_price_gross)
+    public function setTotalPriceGross($totalPriceGross)
     {
-        if (is_null($total_price_gross)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross cannot be null');
+        if (is_null($totalPriceGross)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGross cannot be null');
         }
-        $this->container['total_price_gross'] = $total_price_gross;
+        $this->container['totalPriceGross'] = $totalPriceGross;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross_deducted
+     * Gets totalPriceGrossDeducted
      *
      * @return float
      */
     public function getTotalPriceGrossDeducted()
     {
-        return $this->container['total_price_gross_deducted'];
+        return $this->container['totalPriceGrossDeducted'];
     }
 
     /**
-     * Sets total_price_gross_deducted
+     * Sets totalPriceGrossDeducted
      *
-     * @param float $total_price_gross_deducted Total gross price after applied deductions.
+     * @param float $totalPriceGrossDeducted Total gross price after applied deductions.
      *
      * @return self
      */
-    public function setTotalPriceGrossDeducted($total_price_gross_deducted)
+    public function setTotalPriceGrossDeducted($totalPriceGrossDeducted)
     {
-        if (is_null($total_price_gross_deducted)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross_deducted cannot be null');
+        if (is_null($totalPriceGrossDeducted)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGrossDeducted cannot be null');
         }
-        $this->container['total_price_gross_deducted'] = $total_price_gross_deducted;
+        $this->container['totalPriceGrossDeducted'] = $totalPriceGrossDeducted;
 
         return $this;
     }
 
     /**
-     * Gets price_type
+     * Gets priceType
      *
      * @return \Dangl\AVACloud\Model\PriceTypeDto
      */
     public function getPriceType()
     {
-        return $this->container['price_type'];
+        return $this->container['priceType'];
     }
 
     /**
-     * Sets price_type
+     * Sets priceType
      *
-     * @param \Dangl\AVACloud\Model\PriceTypeDto $price_type price_type
+     * @param \Dangl\AVACloud\Model\PriceTypeDto $priceType priceType
      *
      * @return self
      */
-    public function setPriceType($price_type)
+    public function setPriceType($priceType)
     {
-        if (is_null($price_type)) {
-            throw new \InvalidArgumentException('non-nullable price_type cannot be null');
+        if (is_null($priceType)) {
+            throw new \InvalidArgumentException('non-nullable priceType cannot be null');
         }
-        $this->container['price_type'] = $price_type;
+        $this->container['priceType'] = $priceType;
 
         return $this;
     }
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text Description for this ServiceSpecificationGroup.
+     * @param string|null $shortText Description for this ServiceSpecificationGroup.
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets comission_status
+     * Gets comissionStatus
      *
      * @return \Dangl\AVACloud\Model\ComissionStatusDto
      */
     public function getComissionStatus()
     {
-        return $this->container['comission_status'];
+        return $this->container['comissionStatus'];
     }
 
     /**
-     * Sets comission_status
+     * Sets comissionStatus
      *
-     * @param \Dangl\AVACloud\Model\ComissionStatusDto $comission_status comission_status
+     * @param \Dangl\AVACloud\Model\ComissionStatusDto $comissionStatus comissionStatus
      *
      * @return self
      */
-    public function setComissionStatus($comission_status)
+    public function setComissionStatus($comissionStatus)
     {
-        if (is_null($comission_status)) {
-            throw new \InvalidArgumentException('non-nullable comission_status cannot be null');
+        if (is_null($comissionStatus)) {
+            throw new \InvalidArgumentException('non-nullable comissionStatus cannot be null');
         }
-        $this->container['comission_status'] = $comission_status;
+        $this->container['comissionStatus'] = $comissionStatus;
 
         return $this;
     }
 
     /**
-     * Gets item_number
+     * Gets itemNumber
      *
      * @return \Dangl\AVACloud\Model\ItemNumberDto|null
      */
     public function getItemNumber()
     {
-        return $this->container['item_number'];
+        return $this->container['itemNumber'];
     }
 
     /**
-     * Sets item_number
+     * Sets itemNumber
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberDto|null $item_number item_number
+     * @param \Dangl\AVACloud\Model\ItemNumberDto|null $itemNumber itemNumber
      *
      * @return self
      */
-    public function setItemNumber($item_number)
+    public function setItemNumber($itemNumber)
     {
-        if (is_null($item_number)) {
-            throw new \InvalidArgumentException('non-nullable item_number cannot be null');
+        if (is_null($itemNumber)) {
+            throw new \InvalidArgumentException('non-nullable itemNumber cannot be null');
         }
-        $this->container['item_number'] = $item_number;
+        $this->container['itemNumber'] = $itemNumber;
 
         return $this;
     }
 
     /**
-     * Gets element_type
+     * Gets elementType
      *
      * @return string|null
      */
     public function getElementType()
     {
-        return $this->container['element_type'];
+        return $this->container['elementType'];
     }
 
     /**
-     * Sets element_type
+     * Sets elementType
      *
-     * @param string|null $element_type element_type
+     * @param string|null $elementType elementType
      *
      * @return self
      */
-    public function setElementType($element_type)
+    public function setElementType($elementType)
     {
-        if (is_null($element_type)) {
-            throw new \InvalidArgumentException('non-nullable element_type cannot be null');
+        if (is_null($elementType)) {
+            throw new \InvalidArgumentException('non-nullable elementType cannot be null');
         }
-        $this->container['element_type'] = $element_type;
+        $this->container['elementType'] = $elementType;
 
         return $this;
     }
 
     /**
-     * Gets is_lot
+     * Gets isLot
      *
      * @return bool
      */
     public function getIsLot()
     {
-        return $this->container['is_lot'];
+        return $this->container['isLot'];
     }
 
     /**
-     * Sets is_lot
+     * Sets isLot
      *
-     * @param bool $is_lot This indicates if this group is the parent of a lot. See the documentation for more information about working with lots.
+     * @param bool $isLot This indicates if this group is the parent of a lot. See the documentation for more information about working with lots.
      *
      * @return self
      */
-    public function setIsLot($is_lot)
+    public function setIsLot($isLot)
     {
-        if (is_null($is_lot)) {
-            throw new \InvalidArgumentException('non-nullable is_lot cannot be null');
+        if (is_null($isLot)) {
+            throw new \InvalidArgumentException('non-nullable isLot cannot be null');
         }
-        $this->container['is_lot'] = $is_lot;
+        $this->container['isLot'] = $isLot;
 
         return $this;
     }
 
     /**
-     * Gets alternative_to
+     * Gets alternativeTo
      *
      * @return string|null
      */
     public function getAlternativeTo()
     {
-        return $this->container['alternative_to'];
+        return $this->container['alternativeTo'];
     }
 
     /**
-     * Sets alternative_to
+     * Sets alternativeTo
      *
-     * @param string|null $alternative_to If this group is an alternative for a base group, then this property should point to the id of the group in this service specification that it can replace. If this is an alternative group to a base group, the PriceType should typically be set to \"WithoutTotal\" so this group does not factor into total costs. The PriceType is not changed when this property is set
+     * @param string|null $alternativeTo If this group is an alternative for a base group, then this property should point to the id of the group in this service specification that it can replace. If this is an alternative group to a base group, the PriceType should typically be set to \"WithoutTotal\" so this group does not factor into total costs. The PriceType is not changed when this property is set
      *
      * @return self
      */
-    public function setAlternativeTo($alternative_to)
+    public function setAlternativeTo($alternativeTo)
     {
-        if (is_null($alternative_to)) {
-            throw new \InvalidArgumentException('non-nullable alternative_to cannot be null');
+        if (is_null($alternativeTo)) {
+            throw new \InvalidArgumentException('non-nullable alternativeTo cannot be null');
         }
-        $this->container['alternative_to'] = $alternative_to;
+        $this->container['alternativeTo'] = $alternativeTo;
 
         return $this;
     }
 
     /**
-     * Gets oenorm_properties
+     * Gets oenormProperties
      *
      * @return \Dangl\AVACloud\Model\OenormPropertiesDto|null
      */
     public function getOenormProperties()
     {
-        return $this->container['oenorm_properties'];
+        return $this->container['oenormProperties'];
     }
 
     /**
-     * Sets oenorm_properties
+     * Sets oenormProperties
      *
-     * @param \Dangl\AVACloud\Model\OenormPropertiesDto|null $oenorm_properties oenorm_properties
+     * @param \Dangl\AVACloud\Model\OenormPropertiesDto|null $oenormProperties oenormProperties
      *
      * @return self
      */
-    public function setOenormProperties($oenorm_properties)
+    public function setOenormProperties($oenormProperties)
     {
-        if (is_null($oenorm_properties)) {
-            throw new \InvalidArgumentException('non-nullable oenorm_properties cannot be null');
+        if (is_null($oenormProperties)) {
+            throw new \InvalidArgumentException('non-nullable oenormProperties cannot be null');
         }
-        $this->container['oenorm_properties'] = $oenorm_properties;
+        $this->container['oenormProperties'] = $oenormProperties;
 
         return $this;
     }
 
     /**
-     * Gets hierarchy_level
+     * Gets hierarchyLevel
      *
      * @return int
      */
     public function getHierarchyLevel()
     {
-        return $this->container['hierarchy_level'];
+        return $this->container['hierarchyLevel'];
     }
 
     /**
-     * Sets hierarchy_level
+     * Sets hierarchyLevel
      *
-     * @param int $hierarchy_level This is a zero based hierarchy level. It's set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element.
+     * @param int $hierarchyLevel This is a zero based hierarchy level. It's set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element.
      *
      * @return self
      */
-    public function setHierarchyLevel($hierarchy_level)
+    public function setHierarchyLevel($hierarchyLevel)
     {
-        if (is_null($hierarchy_level)) {
-            throw new \InvalidArgumentException('non-nullable hierarchy_level cannot be null');
+        if (is_null($hierarchyLevel)) {
+            throw new \InvalidArgumentException('non-nullable hierarchyLevel cannot be null');
         }
-        $this->container['hierarchy_level'] = $hierarchy_level;
+        $this->container['hierarchyLevel'] = $hierarchyLevel;
 
         return $this;
     }
 
     /**
-     * Gets addendum_status
+     * Gets addendumStatus
      *
      * @return \Dangl\AVACloud\Model\AddendumStatusDto|null
      */
     public function getAddendumStatus()
     {
-        return $this->container['addendum_status'];
+        return $this->container['addendumStatus'];
     }
 
     /**
-     * Sets addendum_status
+     * Sets addendumStatus
      *
-     * @param \Dangl\AVACloud\Model\AddendumStatusDto|null $addendum_status addendum_status
+     * @param \Dangl\AVACloud\Model\AddendumStatusDto|null $addendumStatus addendumStatus
      *
      * @return self
      */
-    public function setAddendumStatus($addendum_status)
+    public function setAddendumStatus($addendumStatus)
     {
-        if (is_null($addendum_status)) {
-            throw new \InvalidArgumentException('non-nullable addendum_status cannot be null');
+        if (is_null($addendumStatus)) {
+            throw new \InvalidArgumentException('non-nullable addendumStatus cannot be null');
         }
-        $this->container['addendum_status'] = $addendum_status;
+        $this->container['addendumStatus'] = $addendumStatus;
 
         return $this;
     }
 
     /**
-     * Gets alternative_identifier
+     * Gets alternativeIdentifier
      *
      * @return int|null
      */
     public function getAlternativeIdentifier()
     {
-        return $this->container['alternative_identifier'];
+        return $this->container['alternativeIdentifier'];
     }
 
     /**
-     * Sets alternative_identifier
+     * Sets alternativeIdentifier
      *
-     * @param int|null $alternative_identifier This is an optional property that can be used together with AlternativeTo. If this is set, you can indicate which alternative group a specific group is assigned to. That way, if you specifiy multiple alternative ServiceSpecificationGroups with the same AlternativeIdentifier, you can indicate that to replace a single base ServiceSpecificationGroup, multiple alternative ServiceSpecificationGroups should be used. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base group via AlternativeTo.
+     * @param int|null $alternativeIdentifier This is an optional property that can be used together with AlternativeTo. If this is set, you can indicate which alternative group a specific group is assigned to. That way, if you specifiy multiple alternative ServiceSpecificationGroups with the same AlternativeIdentifier, you can indicate that to replace a single base ServiceSpecificationGroup, multiple alternative ServiceSpecificationGroups should be used. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base group via AlternativeTo.
      *
      * @return self
      */
-    public function setAlternativeIdentifier($alternative_identifier)
+    public function setAlternativeIdentifier($alternativeIdentifier)
     {
-        if (is_null($alternative_identifier)) {
-            throw new \InvalidArgumentException('non-nullable alternative_identifier cannot be null');
+        if (is_null($alternativeIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable alternativeIdentifier cannot be null');
         }
-        $this->container['alternative_identifier'] = $alternative_identifier;
+        $this->container['alternativeIdentifier'] = $alternativeIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets alternative_group_identifier
+     * Gets alternativeGroupIdentifier
      *
      * @return int|null
      */
     public function getAlternativeGroupIdentifier()
     {
-        return $this->container['alternative_group_identifier'];
+        return $this->container['alternativeGroupIdentifier'];
     }
 
     /**
-     * Sets alternative_group_identifier
+     * Sets alternativeGroupIdentifier
      *
-     * @param int|null $alternative_group_identifier This is an optional property that can be used together with AlternativeTo and AlternativeGroupIdentifier. If this is set, you can indicate which alternative group a specific group is assigned to. That way, you can specify the id (in integer format) for the alternative group this group belongs to. It's different to AlternativeIdentifier in that the other property describes the id of the group, while this property here describes the group itself. If a group only has set AlternativeGroupIdentifier but not AlternativeIdentifier, then it likely is a base group for a specific group. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base group via AlternativeTo.
+     * @param int|null $alternativeGroupIdentifier This is an optional property that can be used together with AlternativeTo and AlternativeGroupIdentifier. If this is set, you can indicate which alternative group a specific group is assigned to. That way, you can specify the id (in integer format) for the alternative group this group belongs to. It's different to AlternativeIdentifier in that the other property describes the id of the group, while this property here describes the group itself. If a group only has set AlternativeGroupIdentifier but not AlternativeIdentifier, then it likely is a base group for a specific group. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base group via AlternativeTo.
      *
      * @return self
      */
-    public function setAlternativeGroupIdentifier($alternative_group_identifier)
+    public function setAlternativeGroupIdentifier($alternativeGroupIdentifier)
     {
-        if (is_null($alternative_group_identifier)) {
-            throw new \InvalidArgumentException('non-nullable alternative_group_identifier cannot be null');
+        if (is_null($alternativeGroupIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable alternativeGroupIdentifier cannot be null');
         }
-        $this->container['alternative_group_identifier'] = $alternative_group_identifier;
+        $this->container['alternativeGroupIdentifier'] = $alternativeGroupIdentifier;
 
         return $this;
     }

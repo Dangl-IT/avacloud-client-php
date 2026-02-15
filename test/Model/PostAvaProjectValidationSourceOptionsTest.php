@@ -81,7 +81,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "ava_project"
+     * Test attribute "avaProject"
      */
     public function testPropertyAvaProject()
     {
@@ -90,7 +90,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "service_specification_index"
+     * Test attribute "serviceSpecificationIndex"
      */
     public function testPropertyServiceSpecificationIndex()
     {
@@ -99,7 +99,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "validation_type"
+     * Test attribute "validationType"
      */
     public function testPropertyValidationType()
     {
@@ -108,7 +108,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "exchange_phase"
+     * Test attribute "exchangePhase"
      */
     public function testPropertyExchangePhase()
     {
@@ -117,7 +117,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "ava_source_options"
+     * Test attribute "avaSourceOptions"
      */
     public function testPropertyAvaSourceOptions()
     {
@@ -126,7 +126,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "oenorm_destination_options"
+     * Test attribute "oenormDestinationOptions"
      */
     public function testPropertyOenormDestinationOptions()
     {
@@ -135,7 +135,7 @@ class PostAvaProjectValidationSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "gaeb_destination_options"
+     * Test attribute "gaebDestinationOptions"
      */
     public function testPropertyGaebDestinationOptions()
     {

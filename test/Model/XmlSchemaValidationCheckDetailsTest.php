@@ -81,7 +81,7 @@ class XmlSchemaValidationCheckDetailsTest extends TestCase
     }
 
     /**
-     * Test attribute "line_number"
+     * Test attribute "lineNumber"
      */
     public function testPropertyLineNumber()
     {
@@ -90,7 +90,7 @@ class XmlSchemaValidationCheckDetailsTest extends TestCase
     }
 
     /**
-     * Test attribute "line_position"
+     * Test attribute "linePosition"
      */
     public function testPropertyLinePosition()
     {
@@ -99,7 +99,7 @@ class XmlSchemaValidationCheckDetailsTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_data_point_id"
+     * Test attribute "invoiceDataPointId"
      */
     public function testPropertyInvoiceDataPointId()
     {

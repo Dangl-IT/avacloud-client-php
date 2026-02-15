@@ -59,8 +59,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'source_project' => '\Dangl\AVACloud\Model\ProjectDto',
-        'target_project' => '\Dangl\AVACloud\Model\ProjectDto'
+        'sourceProject' => '\Dangl\AVACloud\Model\ProjectDto',
+        'targetProject' => '\Dangl\AVACloud\Model\ProjectDto'
     ];
 
     /**
@@ -71,8 +71,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'source_project' => null,
-        'target_project' => null
+        'sourceProject' => null,
+        'targetProject' => null
     ];
 
     /**
@@ -81,8 +81,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'source_project' => false,
-        'target_project' => false
+        'sourceProject' => false,
+        'targetProject' => false
     ];
 
     /**
@@ -171,8 +171,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'source_project' => 'sourceProject',
-        'target_project' => 'targetProject'
+        'sourceProject' => 'sourceProject',
+        'targetProject' => 'targetProject'
     ];
 
     /**
@@ -181,8 +181,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'source_project' => 'setSourceProject',
-        'target_project' => 'setTargetProject'
+        'sourceProject' => 'setSourceProject',
+        'targetProject' => 'setTargetProject'
     ];
 
     /**
@@ -191,8 +191,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'source_project' => 'getSourceProject',
-        'target_project' => 'getTargetProject'
+        'sourceProject' => 'getSourceProject',
+        'targetProject' => 'getTargetProject'
     ];
 
     /**
@@ -252,8 +252,8 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('source_project', $data ?? [], null);
-        $this->setIfExists('target_project', $data ?? [], null);
+        $this->setIfExists('sourceProject', $data ?? [], null);
+        $this->setIfExists('targetProject', $data ?? [], null);
     }
 
     /**
@@ -299,55 +299,55 @@ class PostAvaProjectMerge implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets source_project
+     * Gets sourceProject
      *
      * @return \Dangl\AVACloud\Model\ProjectDto|null
      */
     public function getSourceProject()
     {
-        return $this->container['source_project'];
+        return $this->container['sourceProject'];
     }
 
     /**
-     * Sets source_project
+     * Sets sourceProject
      *
-     * @param \Dangl\AVACloud\Model\ProjectDto|null $source_project source_project
+     * @param \Dangl\AVACloud\Model\ProjectDto|null $sourceProject sourceProject
      *
      * @return self
      */
-    public function setSourceProject($source_project)
+    public function setSourceProject($sourceProject)
     {
-        if (is_null($source_project)) {
-            throw new \InvalidArgumentException('non-nullable source_project cannot be null');
+        if (is_null($sourceProject)) {
+            throw new \InvalidArgumentException('non-nullable sourceProject cannot be null');
         }
-        $this->container['source_project'] = $source_project;
+        $this->container['sourceProject'] = $sourceProject;
 
         return $this;
     }
 
     /**
-     * Gets target_project
+     * Gets targetProject
      *
      * @return \Dangl\AVACloud\Model\ProjectDto|null
      */
     public function getTargetProject()
     {
-        return $this->container['target_project'];
+        return $this->container['targetProject'];
     }
 
     /**
-     * Sets target_project
+     * Sets targetProject
      *
-     * @param \Dangl\AVACloud\Model\ProjectDto|null $target_project target_project
+     * @param \Dangl\AVACloud\Model\ProjectDto|null $targetProject targetProject
      *
      * @return self
      */
-    public function setTargetProject($target_project)
+    public function setTargetProject($targetProject)
     {
-        if (is_null($target_project)) {
-            throw new \InvalidArgumentException('non-nullable target_project cannot be null');
+        if (is_null($targetProject)) {
+            throw new \InvalidArgumentException('non-nullable targetProject cannot be null');
         }
-        $this->container['target_project'] = $target_project;
+        $this->container['targetProject'] = $targetProject;
 
         return $this;
     }

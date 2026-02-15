@@ -81,7 +81,7 @@ class OenormNoteTextPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "origin_code"
+     * Test attribute "originCode"
      */
     public function testPropertyOriginCode()
     {
@@ -90,7 +90,7 @@ class OenormNoteTextPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "opening_text_is_free_text"
+     * Test attribute "openingTextIsFreeText"
      */
     public function testPropertyOpeningTextIsFreeText()
     {
@@ -99,7 +99,7 @@ class OenormNoteTextPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_undivided_position"
+     * Test attribute "isUndividedPosition"
      */
     public function testPropertyIsUndividedPosition()
     {

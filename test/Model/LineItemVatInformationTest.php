@@ -81,7 +81,7 @@ class LineItemVatInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_category"
+     * Test attribute "vatCategory"
      */
     public function testPropertyVatCategory()
     {
@@ -90,7 +90,7 @@ class LineItemVatInformationTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_rate"
+     * Test attribute "vatRate"
      */
     public function testPropertyVatRate()
     {

@@ -90,7 +90,7 @@ class PriceInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hourly_wage"
+     * Test attribute "hourlyWage"
      */
     public function testPropertyHourlyWage()
     {
@@ -99,7 +99,7 @@ class PriceInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "deduction_factor"
+     * Test attribute "deductionFactor"
      */
     public function testPropertyDeductionFactor()
     {
@@ -108,7 +108,7 @@ class PriceInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "flat_sum"
+     * Test attribute "flatSum"
      */
     public function testPropertyFlatSum()
     {
@@ -117,7 +117,7 @@ class PriceInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_rate"
+     * Test attribute "taxRate"
      */
     public function testPropertyTaxRate()
     {
@@ -126,7 +126,7 @@ class PriceInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "has_unset_tax_rate"
+     * Test attribute "hasUnsetTaxRate"
      */
     public function testPropertyHasUnsetTaxRate()
     {
@@ -135,7 +135,7 @@ class PriceInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "trade_discounts"
+     * Test attribute "tradeDiscounts"
      */
     public function testPropertyTradeDiscounts()
     {

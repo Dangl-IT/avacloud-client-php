@@ -143,20 +143,20 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\Dangl\AVACloud\Model\ProjectDto
      */
-    public function excelConversionConvertToAva($read_new_elements = null, $rebuild_item_number_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
+    public function excelConversionConvertToAva($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
     {
-        list($response) = $this->excelConversionConvertToAvaWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $excel_file, $contentType);
+        list($response) = $this->excelConversionConvertToAvaWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -165,20 +165,20 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\Dangl\AVACloud\Model\ProjectDto, HTTP status code, HTTP response headers (array of strings)
      */
-    public function excelConversionConvertToAvaWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
+    public function excelConversionConvertToAvaWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
     {
-        $request = $this->excelConversionConvertToAvaRequest($read_new_elements, $rebuild_item_number_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToAvaRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -268,19 +268,19 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToAvaAsync($read_new_elements = null, $rebuild_item_number_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
+    public function excelConversionConvertToAvaAsync($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
     {
-        return $this->excelConversionConvertToAvaAsyncWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $excel_file, $contentType)
+        return $this->excelConversionConvertToAvaAsyncWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -293,20 +293,20 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToAvaAsyncWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
+    public function excelConversionConvertToAvaAsyncWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->excelConversionConvertToAvaRequest($read_new_elements, $rebuild_item_number_schema, $remove_plain_text_long_texts, $remove_html_long_texts, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToAvaRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -347,17 +347,17 @@ class ExcelConversionApi
     /**
      * Create request for operation 'excelConversionConvertToAva'
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function excelConversionConvertToAvaRequest($read_new_elements = null, $rebuild_item_number_schema = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
+    public function excelConversionConvertToAvaRequest($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['excelConversionConvertToAva'][0])
     {
 
 
@@ -375,7 +375,7 @@ class ExcelConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $read_new_elements,
+            $readNewElements,
             'ReadNewElements', // param base name
             'boolean', // openApiType
             '', // style
@@ -384,7 +384,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $rebuild_item_number_schema,
+            $rebuildItemNumberSchema,
             'RebuildItemNumberSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -393,7 +393,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -402,7 +402,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -416,7 +416,7 @@ class ExcelConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'excel_file' => $excel_file,
+            'excelFile' => $excelFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -485,23 +485,23 @@ class ExcelConversionApi
      *
      * Converts Excel files to Excel files. Used, for example, when elements were added in excel to generate or modify a project. The Excel file can then be shared containing the full project with all formattings, formulas and styles applied.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function excelConversionConvertToExcel($read_new_elements = null, $rebuild_item_number_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
+    public function excelConversionConvertToExcel($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
     {
-        list($response) = $this->excelConversionConvertToExcelWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $excel_file, $contentType);
+        list($response) = $this->excelConversionConvertToExcelWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
         return $response;
     }
 
@@ -510,23 +510,23 @@ class ExcelConversionApi
      *
      * Converts Excel files to Excel files. Used, for example, when elements were added in excel to generate or modify a project. The Excel file can then be shared containing the full project with all formattings, formulas and styles applied.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function excelConversionConvertToExcelWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
+    public function excelConversionConvertToExcelWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
     {
-        $request = $this->excelConversionConvertToExcelRequest($read_new_elements, $rebuild_item_number_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToExcelRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -616,22 +616,22 @@ class ExcelConversionApi
      *
      * Converts Excel files to Excel files. Used, for example, when elements were added in excel to generate or modify a project. The Excel file can then be shared containing the full project with all formattings, formulas and styles applied.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToExcelAsync($read_new_elements = null, $rebuild_item_number_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
+    public function excelConversionConvertToExcelAsync($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
     {
-        return $this->excelConversionConvertToExcelAsyncWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $excel_file, $contentType)
+        return $this->excelConversionConvertToExcelAsyncWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -644,23 +644,23 @@ class ExcelConversionApi
      *
      * Converts Excel files to Excel files. Used, for example, when elements were added in excel to generate or modify a project. The Excel file can then be shared containing the full project with all formattings, formulas and styles applied.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToExcelAsyncWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
+    public function excelConversionConvertToExcelAsyncWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->excelConversionConvertToExcelRequest($read_new_elements, $rebuild_item_number_schema, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToExcelRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -701,20 +701,20 @@ class ExcelConversionApi
     /**
      * Create request for operation 'excelConversionConvertToExcel'
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function excelConversionConvertToExcelRequest($read_new_elements = null, $rebuild_item_number_schema = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
+    public function excelConversionConvertToExcelRequest($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, string $contentType = self::contentTypes['excelConversionConvertToExcel'][0])
     {
 
 
@@ -735,7 +735,7 @@ class ExcelConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $read_new_elements,
+            $readNewElements,
             'ReadNewElements', // param base name
             'boolean', // openApiType
             '', // style
@@ -744,7 +744,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $rebuild_item_number_schema,
+            $rebuildItemNumberSchema,
             'RebuildItemNumberSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -753,7 +753,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_prices,
+            $writePrices,
             'WritePrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -762,7 +762,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_long_texts,
+            $writeLongTexts,
             'WriteLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -771,7 +771,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $conversion_culture,
+            $conversionCulture,
             'ConversionCulture', // param base name
             'string', // openApiType
             '', // style
@@ -780,7 +780,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_article_numbers,
+            $includeArticleNumbers,
             'IncludeArticleNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -789,7 +789,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $lock_all_cells_but_prices,
+            $lockAllCellsButPrices,
             'LockAllCellsButPrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -803,7 +803,7 @@ class ExcelConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'excel_file' => $excel_file,
+            'excelFile' => $excelFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -872,18 +872,18 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function excelConversionConvertToFlatAva($read_new_elements = null, $rebuild_item_number_schema = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
+    public function excelConversionConvertToFlatAva($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->excelConversionConvertToFlatAvaWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $excel_file, $contentType);
+        list($response) = $this->excelConversionConvertToFlatAvaWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $contentType);
         return $response;
     }
 
@@ -892,18 +892,18 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function excelConversionConvertToFlatAvaWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
+    public function excelConversionConvertToFlatAvaWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
     {
-        $request = $this->excelConversionConvertToFlatAvaRequest($read_new_elements, $rebuild_item_number_schema, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToFlatAvaRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -993,17 +993,17 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToFlatAvaAsync($read_new_elements = null, $rebuild_item_number_schema = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
+    public function excelConversionConvertToFlatAvaAsync($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
     {
-        return $this->excelConversionConvertToFlatAvaAsyncWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $excel_file, $contentType)
+        return $this->excelConversionConvertToFlatAvaAsyncWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1016,18 +1016,18 @@ class ExcelConversionApi
      *
      * Converts Excel files to Dangl.AVA projects.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToFlatAvaAsyncWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
+    public function excelConversionConvertToFlatAvaAsyncWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->excelConversionConvertToFlatAvaRequest($read_new_elements, $rebuild_item_number_schema, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToFlatAvaRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1068,15 +1068,15 @@ class ExcelConversionApi
     /**
      * Create request for operation 'excelConversionConvertToFlatAva'
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function excelConversionConvertToFlatAvaRequest($read_new_elements = null, $rebuild_item_number_schema = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
+    public function excelConversionConvertToFlatAvaRequest($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, string $contentType = self::contentTypes['excelConversionConvertToFlatAva'][0])
     {
 
 
@@ -1092,7 +1092,7 @@ class ExcelConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $read_new_elements,
+            $readNewElements,
             'ReadNewElements', // param base name
             'boolean', // openApiType
             '', // style
@@ -1101,7 +1101,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $rebuild_item_number_schema,
+            $rebuildItemNumberSchema,
             'RebuildItemNumberSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -1115,7 +1115,7 @@ class ExcelConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'excel_file' => $excel_file,
+            'excelFile' => $excelFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1184,25 +1184,25 @@ class ExcelConversionApi
      *
      * Converts Excel files to GAEB files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function excelConversionConvertToGaeb($read_new_elements = null, $rebuild_item_number_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
+    public function excelConversionConvertToGaeb($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
     {
-        list($response) = $this->excelConversionConvertToGaebWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $excel_file, $contentType);
+        list($response) = $this->excelConversionConvertToGaebWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
         return $response;
     }
 
@@ -1211,25 +1211,25 @@ class ExcelConversionApi
      *
      * Converts Excel files to GAEB files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function excelConversionConvertToGaebWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
+    public function excelConversionConvertToGaebWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
     {
-        $request = $this->excelConversionConvertToGaebRequest($read_new_elements, $rebuild_item_number_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToGaebRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1319,24 +1319,24 @@ class ExcelConversionApi
      *
      * Converts Excel files to GAEB files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToGaebAsync($read_new_elements = null, $rebuild_item_number_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
+    public function excelConversionConvertToGaebAsync($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
     {
-        return $this->excelConversionConvertToGaebAsyncWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $excel_file, $contentType)
+        return $this->excelConversionConvertToGaebAsyncWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1349,25 +1349,25 @@ class ExcelConversionApi
      *
      * Converts Excel files to GAEB files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToGaebAsyncWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
+    public function excelConversionConvertToGaebAsyncWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->excelConversionConvertToGaebRequest($read_new_elements, $rebuild_item_number_schema, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToGaebRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1408,22 +1408,22 @@ class ExcelConversionApi
     /**
      * Create request for operation 'excelConversionConvertToGaeb'
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function excelConversionConvertToGaebRequest($read_new_elements = null, $rebuild_item_number_schema = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
+    public function excelConversionConvertToGaebRequest($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, string $contentType = self::contentTypes['excelConversionConvertToGaeb'][0])
     {
 
 
@@ -1446,7 +1446,7 @@ class ExcelConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $read_new_elements,
+            $readNewElements,
             'ReadNewElements', // param base name
             'boolean', // openApiType
             '', // style
@@ -1455,7 +1455,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $rebuild_item_number_schema,
+            $rebuildItemNumberSchema,
             'RebuildItemNumberSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -1464,7 +1464,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_gaeb_type,
+            $destinationGaebType,
             'DestinationGaebType', // param base name
             'string', // openApiType
             '', // style
@@ -1473,7 +1473,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_exchange_phase_transform,
+            $targetExchangePhaseTransform,
             'TargetExchangePhaseTransform', // param base name
             'string', // openApiType
             '', // style
@@ -1482,7 +1482,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $enforce_strict_offer_phase_long_text_output,
+            $enforceStrictOfferPhaseLongTextOutput,
             'EnforceStrictOfferPhaseLongTextOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1491,7 +1491,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $export_quantity_determination,
+            $exportQuantityDetermination,
             'ExportQuantityDetermination', // param base name
             'boolean', // openApiType
             '', // style
@@ -1500,7 +1500,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1509,7 +1509,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $force_include_descriptions,
+            $forceIncludeDescriptions,
             'ForceIncludeDescriptions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1518,7 +1518,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $treat_null_item_number_schema_as_invalid,
+            $treatNullItemNumberSchemaAsInvalid,
             'TreatNullItemNumberSchemaAsInvalid', // param base name
             'boolean', // openApiType
             '', // style
@@ -1532,7 +1532,7 @@ class ExcelConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'excel_file' => $excel_file,
+            'excelFile' => $excelFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1601,22 +1601,22 @@ class ExcelConversionApi
      *
      * Converts Excel files to Oenorm files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function excelConversionConvertToOenorm($read_new_elements = null, $rebuild_item_number_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
+    public function excelConversionConvertToOenorm($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
     {
-        list($response) = $this->excelConversionConvertToOenormWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $excel_file, $contentType);
+        list($response) = $this->excelConversionConvertToOenormWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
         return $response;
     }
 
@@ -1625,22 +1625,22 @@ class ExcelConversionApi
      *
      * Converts Excel files to Oenorm files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function excelConversionConvertToOenormWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
+    public function excelConversionConvertToOenormWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
     {
-        $request = $this->excelConversionConvertToOenormRequest($read_new_elements, $rebuild_item_number_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToOenormRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1730,21 +1730,21 @@ class ExcelConversionApi
      *
      * Converts Excel files to Oenorm files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToOenormAsync($read_new_elements = null, $rebuild_item_number_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
+    public function excelConversionConvertToOenormAsync($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
     {
-        return $this->excelConversionConvertToOenormAsyncWithHttpInfo($read_new_elements, $rebuild_item_number_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $excel_file, $contentType)
+        return $this->excelConversionConvertToOenormAsyncWithHttpInfo($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1757,22 +1757,22 @@ class ExcelConversionApi
      *
      * Converts Excel files to Oenorm files.
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function excelConversionConvertToOenormAsyncWithHttpInfo($read_new_elements = null, $rebuild_item_number_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
+    public function excelConversionConvertToOenormAsyncWithHttpInfo($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->excelConversionConvertToOenormRequest($read_new_elements, $rebuild_item_number_schema, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $excel_file, $contentType);
+        $request = $this->excelConversionConvertToOenormRequest($excelFile, $readNewElements, $rebuildItemNumberSchema, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1813,19 +1813,19 @@ class ExcelConversionApi
     /**
      * Create request for operation 'excelConversionConvertToOenorm'
      *
-     * @param  bool|null $read_new_elements Defaults to false (optional)
-     * @param  bool|null $rebuild_item_number_schema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  \SplFileObject|null $excel_file The input file (optional)
+     * @param  \SplFileObject|null $excelFile The input file (optional)
+     * @param  bool|null $readNewElements Defaults to false (optional)
+     * @param  bool|null $rebuildItemNumberSchema When importing new elements from Excel, sometimes the ItemNumberSchema in the file is not in compliance with the GAEB requirements. Enabling this option tries to repair the ItemNumberSchema. Defaults to false. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['excelConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function excelConversionConvertToOenormRequest($read_new_elements = null, $rebuild_item_number_schema = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $excel_file = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
+    public function excelConversionConvertToOenormRequest($excelFile = null, $readNewElements = null, $rebuildItemNumberSchema = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, string $contentType = self::contentTypes['excelConversionConvertToOenorm'][0])
     {
 
 
@@ -1845,7 +1845,7 @@ class ExcelConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $read_new_elements,
+            $readNewElements,
             'ReadNewElements', // param base name
             'boolean', // openApiType
             '', // style
@@ -1854,7 +1854,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $rebuild_item_number_schema,
+            $rebuildItemNumberSchema,
             'RebuildItemNumberSchema', // param base name
             'boolean', // openApiType
             '', // style
@@ -1863,7 +1863,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_oenorm_type,
+            $destinationOenormType,
             'DestinationOenormType', // param base name
             'string', // openApiType
             '', // style
@@ -1872,7 +1872,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_repair_project_structure,
+            $tryRepairProjectStructure,
             'TryRepairProjectStructure', // param base name
             'boolean', // openApiType
             '', // style
@@ -1881,7 +1881,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $skip_try_enforce_schema_compliant_xml_output,
+            $skipTryEnforceSchemaCompliantXmlOutput,
             'SkipTryEnforceSchemaCompliantXmlOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1890,7 +1890,7 @@ class ExcelConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1904,7 +1904,7 @@ class ExcelConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'excel_file' => $excel_file,
+            'excelFile' => $excelFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

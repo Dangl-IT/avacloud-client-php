@@ -59,11 +59,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'net_price' => 'float',
-        'absolute_discount_per_item' => 'float',
-        'gross_price' => 'float',
-        'base_quantity' => 'float',
-        'base_quantity_unit_code' => 'string'
+        'netPrice' => 'float',
+        'absoluteDiscountPerItem' => 'float',
+        'grossPrice' => 'float',
+        'baseQuantity' => 'float',
+        'baseQuantityUnitCode' => 'string'
     ];
 
     /**
@@ -74,11 +74,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'net_price' => 'decimal',
-        'absolute_discount_per_item' => 'decimal',
-        'gross_price' => 'decimal',
-        'base_quantity' => 'decimal',
-        'base_quantity_unit_code' => null
+        'netPrice' => 'decimal',
+        'absoluteDiscountPerItem' => 'decimal',
+        'grossPrice' => 'decimal',
+        'baseQuantity' => 'decimal',
+        'baseQuantityUnitCode' => null
     ];
 
     /**
@@ -87,11 +87,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'net_price' => false,
-        'absolute_discount_per_item' => false,
-        'gross_price' => false,
-        'base_quantity' => false,
-        'base_quantity_unit_code' => false
+        'netPrice' => false,
+        'absoluteDiscountPerItem' => false,
+        'grossPrice' => false,
+        'baseQuantity' => false,
+        'baseQuantityUnitCode' => false
     ];
 
     /**
@@ -180,11 +180,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'net_price' => 'netPrice',
-        'absolute_discount_per_item' => 'absoluteDiscountPerItem',
-        'gross_price' => 'grossPrice',
-        'base_quantity' => 'baseQuantity',
-        'base_quantity_unit_code' => 'baseQuantityUnitCode'
+        'netPrice' => 'netPrice',
+        'absoluteDiscountPerItem' => 'absoluteDiscountPerItem',
+        'grossPrice' => 'grossPrice',
+        'baseQuantity' => 'baseQuantity',
+        'baseQuantityUnitCode' => 'baseQuantityUnitCode'
     ];
 
     /**
@@ -193,11 +193,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'net_price' => 'setNetPrice',
-        'absolute_discount_per_item' => 'setAbsoluteDiscountPerItem',
-        'gross_price' => 'setGrossPrice',
-        'base_quantity' => 'setBaseQuantity',
-        'base_quantity_unit_code' => 'setBaseQuantityUnitCode'
+        'netPrice' => 'setNetPrice',
+        'absoluteDiscountPerItem' => 'setAbsoluteDiscountPerItem',
+        'grossPrice' => 'setGrossPrice',
+        'baseQuantity' => 'setBaseQuantity',
+        'baseQuantityUnitCode' => 'setBaseQuantityUnitCode'
     ];
 
     /**
@@ -206,11 +206,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'net_price' => 'getNetPrice',
-        'absolute_discount_per_item' => 'getAbsoluteDiscountPerItem',
-        'gross_price' => 'getGrossPrice',
-        'base_quantity' => 'getBaseQuantity',
-        'base_quantity_unit_code' => 'getBaseQuantityUnitCode'
+        'netPrice' => 'getNetPrice',
+        'absoluteDiscountPerItem' => 'getAbsoluteDiscountPerItem',
+        'grossPrice' => 'getGrossPrice',
+        'baseQuantity' => 'getBaseQuantity',
+        'baseQuantityUnitCode' => 'getBaseQuantityUnitCode'
     ];
 
     /**
@@ -270,11 +270,11 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('net_price', $data ?? [], null);
-        $this->setIfExists('absolute_discount_per_item', $data ?? [], null);
-        $this->setIfExists('gross_price', $data ?? [], null);
-        $this->setIfExists('base_quantity', $data ?? [], null);
-        $this->setIfExists('base_quantity_unit_code', $data ?? [], null);
+        $this->setIfExists('netPrice', $data ?? [], null);
+        $this->setIfExists('absoluteDiscountPerItem', $data ?? [], null);
+        $this->setIfExists('grossPrice', $data ?? [], null);
+        $this->setIfExists('baseQuantity', $data ?? [], null);
+        $this->setIfExists('baseQuantityUnitCode', $data ?? [], null);
     }
 
     /**
@@ -320,136 +320,136 @@ class LineItemPriceDetail implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets net_price
+     * Gets netPrice
      *
      * @return float|null
      */
     public function getNetPrice()
     {
-        return $this->container['net_price'];
+        return $this->container['netPrice'];
     }
 
     /**
-     * Sets net_price
+     * Sets netPrice
      *
-     * @param float|null $net_price BT-146 The net price of this line item. This is the unit price
+     * @param float|null $netPrice BT-146 The net price of this line item. This is the unit price
      *
      * @return self
      */
-    public function setNetPrice($net_price)
+    public function setNetPrice($netPrice)
     {
-        if (is_null($net_price)) {
-            throw new \InvalidArgumentException('non-nullable net_price cannot be null');
+        if (is_null($netPrice)) {
+            throw new \InvalidArgumentException('non-nullable netPrice cannot be null');
         }
-        $this->container['net_price'] = $net_price;
+        $this->container['netPrice'] = $netPrice;
 
         return $this;
     }
 
     /**
-     * Gets absolute_discount_per_item
+     * Gets absoluteDiscountPerItem
      *
      * @return float|null
      */
     public function getAbsoluteDiscountPerItem()
     {
-        return $this->container['absolute_discount_per_item'];
+        return $this->container['absoluteDiscountPerItem'];
     }
 
     /**
-     * Sets absolute_discount_per_item
+     * Sets absoluteDiscountPerItem
      *
-     * @param float|null $absolute_discount_per_item BT-147 A discount for this line item, given as an absolute value. It is essentially the difference between NetPrice (or the list price) and the actual invoiced price GrossPrice.
+     * @param float|null $absoluteDiscountPerItem BT-147 A discount for this line item, given as an absolute value. It is essentially the difference between NetPrice (or the list price) and the actual invoiced price GrossPrice.
      *
      * @return self
      */
-    public function setAbsoluteDiscountPerItem($absolute_discount_per_item)
+    public function setAbsoluteDiscountPerItem($absoluteDiscountPerItem)
     {
-        if (is_null($absolute_discount_per_item)) {
-            throw new \InvalidArgumentException('non-nullable absolute_discount_per_item cannot be null');
+        if (is_null($absoluteDiscountPerItem)) {
+            throw new \InvalidArgumentException('non-nullable absoluteDiscountPerItem cannot be null');
         }
-        $this->container['absolute_discount_per_item'] = $absolute_discount_per_item;
+        $this->container['absoluteDiscountPerItem'] = $absoluteDiscountPerItem;
 
         return $this;
     }
 
     /**
-     * Gets gross_price
+     * Gets grossPrice
      *
      * @return float|null
      */
     public function getGrossPrice()
     {
-        return $this->container['gross_price'];
+        return $this->container['grossPrice'];
     }
 
     /**
-     * Sets gross_price
+     * Sets grossPrice
      *
-     * @param float|null $gross_price BT-148 The gross price of this line item, meaning the price without taxes that will be invoiced
+     * @param float|null $grossPrice BT-148 The gross price of this line item, meaning the price without taxes that will be invoiced
      *
      * @return self
      */
-    public function setGrossPrice($gross_price)
+    public function setGrossPrice($grossPrice)
     {
-        if (is_null($gross_price)) {
-            throw new \InvalidArgumentException('non-nullable gross_price cannot be null');
+        if (is_null($grossPrice)) {
+            throw new \InvalidArgumentException('non-nullable grossPrice cannot be null');
         }
-        $this->container['gross_price'] = $gross_price;
+        $this->container['grossPrice'] = $grossPrice;
 
         return $this;
     }
 
     /**
-     * Gets base_quantity
+     * Gets baseQuantity
      *
      * @return float|null
      */
     public function getBaseQuantity()
     {
-        return $this->container['base_quantity'];
+        return $this->container['baseQuantity'];
     }
 
     /**
-     * Sets base_quantity
+     * Sets baseQuantity
      *
-     * @param float|null $base_quantity BT-149 The quantity for which this price is valid. In combination with the NetPrice, you basically specify the denominator of the unit price for a line item.
+     * @param float|null $baseQuantity BT-149 The quantity for which this price is valid. In combination with the NetPrice, you basically specify the denominator of the unit price for a line item.
      *
      * @return self
      */
-    public function setBaseQuantity($base_quantity)
+    public function setBaseQuantity($baseQuantity)
     {
-        if (is_null($base_quantity)) {
-            throw new \InvalidArgumentException('non-nullable base_quantity cannot be null');
+        if (is_null($baseQuantity)) {
+            throw new \InvalidArgumentException('non-nullable baseQuantity cannot be null');
         }
-        $this->container['base_quantity'] = $base_quantity;
+        $this->container['baseQuantity'] = $baseQuantity;
 
         return $this;
     }
 
     /**
-     * Gets base_quantity_unit_code
+     * Gets baseQuantityUnitCode
      *
      * @return string|null
      */
     public function getBaseQuantityUnitCode()
     {
-        return $this->container['base_quantity_unit_code'];
+        return $this->container['baseQuantityUnitCode'];
     }
 
     /**
-     * Sets base_quantity_unit_code
+     * Sets baseQuantityUnitCode
      *
-     * @param string|null $base_quantity_unit_code BT-150 A code representing the unit for the base quantity
+     * @param string|null $baseQuantityUnitCode BT-150 A code representing the unit for the base quantity
      *
      * @return self
      */
-    public function setBaseQuantityUnitCode($base_quantity_unit_code)
+    public function setBaseQuantityUnitCode($baseQuantityUnitCode)
     {
-        if (is_null($base_quantity_unit_code)) {
-            throw new \InvalidArgumentException('non-nullable base_quantity_unit_code cannot be null');
+        if (is_null($baseQuantityUnitCode)) {
+            throw new \InvalidArgumentException('non-nullable baseQuantityUnitCode cannot be null');
         }
-        $this->container['base_quantity_unit_code'] = $base_quantity_unit_code;
+        $this->container['baseQuantityUnitCode'] = $baseQuantityUnitCode;
 
         return $this;
     }

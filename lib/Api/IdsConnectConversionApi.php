@@ -134,18 +134,18 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function idsConnectConversionConvertToAva($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
+    public function idsConnectConversionConvertToAva($idsConnectFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
     {
-        list($response) = $this->idsConnectConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $ids_connect_file, $contentType);
+        list($response) = $this->idsConnectConversionConvertToAvaWithHttpInfo($idsConnectFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
         return $response;
     }
 
@@ -154,18 +154,18 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function idsConnectConversionConvertToAvaWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
+    public function idsConnectConversionConvertToAvaWithHttpInfo($idsConnectFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
     {
-        $request = $this->idsConnectConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $ids_connect_file, $contentType);
+        $request = $this->idsConnectConversionConvertToAvaRequest($idsConnectFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -255,17 +255,17 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function idsConnectConversionConvertToAvaAsync($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
+    public function idsConnectConversionConvertToAvaAsync($idsConnectFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
     {
-        return $this->idsConnectConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts, $remove_html_long_texts, $ids_connect_file, $contentType)
+        return $this->idsConnectConversionConvertToAvaAsyncWithHttpInfo($idsConnectFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -278,18 +278,18 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function idsConnectConversionConvertToAvaAsyncWithHttpInfo($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
+    public function idsConnectConversionConvertToAvaAsyncWithHttpInfo($idsConnectFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->idsConnectConversionConvertToAvaRequest($remove_plain_text_long_texts, $remove_html_long_texts, $ids_connect_file, $contentType);
+        $request = $this->idsConnectConversionConvertToAvaRequest($idsConnectFile, $removePlainTextLongTexts, $removeHtmlLongTexts, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -330,15 +330,15 @@ class IdsConnectConversionApi
     /**
      * Create request for operation 'idsConnectConversionConvertToAva'
      *
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function idsConnectConversionConvertToAvaRequest($remove_plain_text_long_texts = null, $remove_html_long_texts = null, $ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
+    public function idsConnectConversionConvertToAvaRequest($idsConnectFile = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, string $contentType = self::contentTypes['idsConnectConversionConvertToAva'][0])
     {
 
 
@@ -354,7 +354,7 @@ class IdsConnectConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -363,7 +363,7 @@ class IdsConnectConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -377,7 +377,7 @@ class IdsConnectConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'ids_connect_file' => $ids_connect_file,
+            'idsConnectFile' => $idsConnectFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -446,16 +446,16 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function idsConnectConversionConvertToFlatAva($ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
+    public function idsConnectConversionConvertToFlatAva($idsConnectFile = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->idsConnectConversionConvertToFlatAvaWithHttpInfo($ids_connect_file, $contentType);
+        list($response) = $this->idsConnectConversionConvertToFlatAvaWithHttpInfo($idsConnectFile, $contentType);
         return $response;
     }
 
@@ -464,16 +464,16 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function idsConnectConversionConvertToFlatAvaWithHttpInfo($ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
+    public function idsConnectConversionConvertToFlatAvaWithHttpInfo($idsConnectFile = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
     {
-        $request = $this->idsConnectConversionConvertToFlatAvaRequest($ids_connect_file, $contentType);
+        $request = $this->idsConnectConversionConvertToFlatAvaRequest($idsConnectFile, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -563,15 +563,15 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function idsConnectConversionConvertToFlatAvaAsync($ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
+    public function idsConnectConversionConvertToFlatAvaAsync($idsConnectFile = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
     {
-        return $this->idsConnectConversionConvertToFlatAvaAsyncWithHttpInfo($ids_connect_file, $contentType)
+        return $this->idsConnectConversionConvertToFlatAvaAsyncWithHttpInfo($idsConnectFile, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -584,16 +584,16 @@ class IdsConnectConversionApi
      *
      * Converts IDS Connect files to Dangl.AVA projects
      *
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function idsConnectConversionConvertToFlatAvaAsyncWithHttpInfo($ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
+    public function idsConnectConversionConvertToFlatAvaAsyncWithHttpInfo($idsConnectFile = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->idsConnectConversionConvertToFlatAvaRequest($ids_connect_file, $contentType);
+        $request = $this->idsConnectConversionConvertToFlatAvaRequest($idsConnectFile, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -634,13 +634,13 @@ class IdsConnectConversionApi
     /**
      * Create request for operation 'idsConnectConversionConvertToFlatAva'
      *
-     * @param  \SplFileObject|null $ids_connect_file The input file (optional)
+     * @param  \SplFileObject|null $idsConnectFile The input file (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['idsConnectConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function idsConnectConversionConvertToFlatAvaRequest($ids_connect_file = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
+    public function idsConnectConversionConvertToFlatAvaRequest($idsConnectFile = null, string $contentType = self::contentTypes['idsConnectConversionConvertToFlatAva'][0])
     {
 
 
@@ -659,7 +659,7 @@ class IdsConnectConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'ids_connect_file' => $ids_connect_file,
+            'idsConnectFile' => $idsConnectFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

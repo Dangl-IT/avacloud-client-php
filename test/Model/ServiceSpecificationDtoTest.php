@@ -90,7 +90,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_hourly_wage"
+     * Test attribute "projectHourlyWage"
      */
     public function testPropertyProjectHourlyWage()
     {
@@ -99,7 +99,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_tax_rate"
+     * Test attribute "projectTaxRate"
      */
     public function testPropertyProjectTaxRate()
     {
@@ -108,7 +108,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_price_components"
+     * Test attribute "projectPriceComponents"
      */
     public function testPropertyProjectPriceComponents()
     {
@@ -117,7 +117,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_item_number_schema"
+     * Test attribute "projectItemNumberSchema"
      */
     public function testPropertyProjectItemNumberSchema()
     {
@@ -135,7 +135,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_labour_time_label"
+     * Test attribute "projectLabourTimeLabel"
      */
     public function testPropertyProjectLabourTimeLabel()
     {
@@ -144,7 +144,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "contains_duplicate_item_numbers"
+     * Test attribute "containsDuplicateItemNumbers"
      */
     public function testPropertyContainsDuplicateItemNumbers()
     {
@@ -153,7 +153,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "contains_duplicate_element_ids"
+     * Test attribute "containsDuplicateElementIds"
      */
     public function testPropertyContainsDuplicateElementIds()
     {
@@ -162,7 +162,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_duplicate_item_numbers"
+     * Test attribute "ignoreDuplicateItemNumbers"
      */
     public function testPropertyIgnoreDuplicateItemNumbers()
     {
@@ -171,7 +171,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_project_catalogue_propagation"
+     * Test attribute "ignoreProjectCataloguePropagation"
      */
     public function testPropertyIgnoreProjectCataloguePropagation()
     {
@@ -180,7 +180,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_duplicate_element_ids"
+     * Test attribute "ignoreDuplicateElementIds"
      */
     public function testPropertyIgnoreDuplicateElementIds()
     {
@@ -189,7 +189,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price_gross_by_tax_rate"
+     * Test attribute "totalPriceGrossByTaxRate"
      */
     public function testPropertyTotalPriceGrossByTaxRate()
     {
@@ -198,7 +198,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "ignore_child_price_updates"
+     * Test attribute "ignoreChildPriceUpdates"
      */
     public function testPropertyIgnoreChildPriceUpdates()
     {
@@ -207,7 +207,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "deducted_price"
+     * Test attribute "deductedPrice"
      */
     public function testPropertyDeductedPrice()
     {
@@ -216,7 +216,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "deduction_factor"
+     * Test attribute "deductionFactor"
      */
     public function testPropertyDeductionFactor()
     {
@@ -225,7 +225,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "absolute_deduction"
+     * Test attribute "absoluteDeduction"
      */
     public function testPropertyAbsoluteDeduction()
     {
@@ -234,7 +234,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price"
+     * Test attribute "totalPrice"
      */
     public function testPropertyTotalPrice()
     {
@@ -243,7 +243,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price_gross"
+     * Test attribute "totalPriceGross"
      */
     public function testPropertyTotalPriceGross()
     {
@@ -252,7 +252,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_price_gross_deducted"
+     * Test attribute "totalPriceGrossDeducted"
      */
     public function testPropertyTotalPriceGrossDeducted()
     {
@@ -261,7 +261,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_type"
+     * Test attribute "priceType"
      */
     public function testPropertyPriceType()
     {
@@ -279,7 +279,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "bidder_discriminator"
+     * Test attribute "bidderDiscriminator"
      */
     public function testPropertyBidderDiscriminator()
     {
@@ -288,7 +288,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "gaeb_xml_id"
+     * Test attribute "gaebXmlId"
      */
     public function testPropertyGaebXmlId()
     {
@@ -297,7 +297,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_information"
+     * Test attribute "projectInformation"
      */
     public function testPropertyProjectInformation()
     {
@@ -306,7 +306,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "exchange_phase"
+     * Test attribute "exchangePhase"
      */
     public function testPropertyExchangePhase()
     {
@@ -324,7 +324,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "origin_detail"
+     * Test attribute "originDetail"
      */
     public function testPropertyOriginDetail()
     {
@@ -333,7 +333,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "creation_date"
+     * Test attribute "creationDate"
      */
     public function testPropertyCreationDate()
     {
@@ -342,7 +342,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "offer_by_date"
+     * Test attribute "offerByDate"
      */
     public function testPropertyOfferByDate()
     {
@@ -351,7 +351,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "decision_date"
+     * Test attribute "decisionDate"
      */
     public function testPropertyDecisionDate()
     {
@@ -360,7 +360,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "bid_date"
+     * Test attribute "bidDate"
      */
     public function testPropertyBidDate()
     {
@@ -369,7 +369,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "warranty_bond_percentage"
+     * Test attribute "warrantyBondPercentage"
      */
     public function testPropertyWarrantyBondPercentage()
     {
@@ -378,7 +378,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "execution_guarantee_percentage"
+     * Test attribute "executionGuaranteePercentage"
      */
     public function testPropertyExecutionGuaranteePercentage()
     {
@@ -387,7 +387,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "submission_location"
+     * Test attribute "submissionLocation"
      */
     public function testPropertySubmissionLocation()
     {
@@ -414,7 +414,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_information"
+     * Test attribute "priceInformation"
      */
     public function testPropertyPriceInformation()
     {
@@ -423,7 +423,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {
@@ -432,7 +432,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_references"
+     * Test attribute "catalogueReferences"
      */
     public function testPropertyCatalogueReferences()
     {
@@ -441,7 +441,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "planned_execution_start"
+     * Test attribute "plannedExecutionStart"
      */
     public function testPropertyPlannedExecutionStart()
     {
@@ -450,7 +450,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "planned_execution_end"
+     * Test attribute "plannedExecutionEnd"
      */
     public function testPropertyPlannedExecutionEnd()
     {
@@ -459,7 +459,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "contract_date"
+     * Test attribute "contractDate"
      */
     public function testPropertyContractDate()
     {
@@ -468,7 +468,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "contract_identifier"
+     * Test attribute "contractIdentifier"
      */
     public function testPropertyContractIdentifier()
     {
@@ -477,7 +477,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "warranty_duration"
+     * Test attribute "warrantyDuration"
      */
     public function testPropertyWarrantyDuration()
     {
@@ -486,7 +486,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "warranty_end"
+     * Test attribute "warrantyEnd"
      */
     public function testPropertyWarrantyEnd()
     {
@@ -495,7 +495,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "approval_date"
+     * Test attribute "approvalDate"
      */
     public function testPropertyApprovalDate()
     {
@@ -504,7 +504,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "type_of_approval"
+     * Test attribute "typeOfApproval"
      */
     public function testPropertyTypeOfApproval()
     {
@@ -513,7 +513,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addendum_number"
+     * Test attribute "addendumNumber"
      */
     public function testPropertyAddendumNumber()
     {
@@ -522,7 +522,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addendum_status"
+     * Test attribute "addendumStatus"
      */
     public function testPropertyAddendumStatus()
     {
@@ -531,7 +531,7 @@ class ServiceSpecificationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "commerce_properties"
+     * Test attribute "commerceProperties"
      */
     public function testPropertyCommerceProperties()
     {

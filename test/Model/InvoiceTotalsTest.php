@@ -81,7 +81,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_net"
+     * Test attribute "totalNet"
      */
     public function testPropertyTotalNet()
     {
@@ -90,7 +90,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_allowances"
+     * Test attribute "totalAllowances"
      */
     public function testPropertyTotalAllowances()
     {
@@ -99,7 +99,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_charges"
+     * Test attribute "totalCharges"
      */
     public function testPropertyTotalCharges()
     {
@@ -108,7 +108,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_after_deductions"
+     * Test attribute "totalAfterDeductions"
      */
     public function testPropertyTotalAfterDeductions()
     {
@@ -117,7 +117,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_vat_amount"
+     * Test attribute "totalVatAmount"
      */
     public function testPropertyTotalVatAmount()
     {
@@ -126,7 +126,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_gross"
+     * Test attribute "totalGross"
      */
     public function testPropertyTotalGross()
     {
@@ -135,7 +135,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "already_paid_total"
+     * Test attribute "alreadyPaidTotal"
      */
     public function testPropertyAlreadyPaidTotal()
     {
@@ -144,7 +144,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "payable_rounding_amount"
+     * Test attribute "payableRoundingAmount"
      */
     public function testPropertyPayableRoundingAmount()
     {
@@ -153,7 +153,7 @@ class InvoiceTotalsTest extends TestCase
     }
 
     /**
-     * Test attribute "total_to_be_paid"
+     * Test attribute "totalToBePaid"
      */
     public function testPropertyTotalToBePaid()
     {

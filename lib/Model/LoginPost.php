@@ -60,7 +60,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'identifier' => 'string',
         'password' => 'string',
-        'stay_signed_in' => 'bool'
+        'staySignedIn' => 'bool'
     ];
 
     /**
@@ -73,7 +73,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'identifier' => null,
         'password' => null,
-        'stay_signed_in' => null
+        'staySignedIn' => null
     ];
 
     /**
@@ -84,7 +84,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'identifier' => false,
         'password' => false,
-        'stay_signed_in' => false
+        'staySignedIn' => false
     ];
 
     /**
@@ -175,7 +175,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'identifier' => 'identifier',
         'password' => 'password',
-        'stay_signed_in' => 'staySignedIn'
+        'staySignedIn' => 'staySignedIn'
     ];
 
     /**
@@ -186,7 +186,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'identifier' => 'setIdentifier',
         'password' => 'setPassword',
-        'stay_signed_in' => 'setStaySignedIn'
+        'staySignedIn' => 'setStaySignedIn'
     ];
 
     /**
@@ -197,7 +197,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'identifier' => 'getIdentifier',
         'password' => 'getPassword',
-        'stay_signed_in' => 'getStaySignedIn'
+        'staySignedIn' => 'getStaySignedIn'
     ];
 
     /**
@@ -259,7 +259,7 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('identifier', $data ?? [], null);
         $this->setIfExists('password', $data ?? [], null);
-        $this->setIfExists('stay_signed_in', $data ?? [], null);
+        $this->setIfExists('staySignedIn', $data ?? [], null);
     }
 
     /**
@@ -303,8 +303,8 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
             $invalidProperties[] = "invalid value for 'password', the character length must be bigger than or equal to 1.";
         }
 
-        if ($this->container['stay_signed_in'] === null) {
-            $invalidProperties[] = "'stay_signed_in' can't be null";
+        if ($this->container['staySignedIn'] === null) {
+            $invalidProperties[] = "'staySignedIn' can't be null";
         }
         return $invalidProperties;
     }
@@ -386,28 +386,28 @@ class LoginPost implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets stay_signed_in
+     * Gets staySignedIn
      *
      * @return bool
      */
     public function getStaySignedIn()
     {
-        return $this->container['stay_signed_in'];
+        return $this->container['staySignedIn'];
     }
 
     /**
-     * Sets stay_signed_in
+     * Sets staySignedIn
      *
-     * @param bool $stay_signed_in stay_signed_in
+     * @param bool $staySignedIn staySignedIn
      *
      * @return self
      */
-    public function setStaySignedIn($stay_signed_in)
+    public function setStaySignedIn($staySignedIn)
     {
-        if (is_null($stay_signed_in)) {
-            throw new \InvalidArgumentException('non-nullable stay_signed_in cannot be null');
+        if (is_null($staySignedIn)) {
+            throw new \InvalidArgumentException('non-nullable staySignedIn cannot be null');
         }
-        $this->container['stay_signed_in'] = $stay_signed_in;
+        $this->container['staySignedIn'] = $staySignedIn;
 
         return $this;
     }

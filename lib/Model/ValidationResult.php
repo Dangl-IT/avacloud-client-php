@@ -59,10 +59,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_schema_compliant' => 'bool',
-        'check_results' => '\Dangl\AVACloud\Model\ValidationCheckResult[]',
-        'validation_type' => '\Dangl\AVACloud\Model\ValidationType',
-        'file_name' => 'string'
+        'isSchemaCompliant' => 'bool',
+        'checkResults' => '\Dangl\AVACloud\Model\ValidationCheckResult[]',
+        'validationType' => '\Dangl\AVACloud\Model\ValidationType',
+        'fileName' => 'string'
     ];
 
     /**
@@ -73,10 +73,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_schema_compliant' => null,
-        'check_results' => null,
-        'validation_type' => null,
-        'file_name' => null
+        'isSchemaCompliant' => null,
+        'checkResults' => null,
+        'validationType' => null,
+        'fileName' => null
     ];
 
     /**
@@ -85,10 +85,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'is_schema_compliant' => false,
-        'check_results' => false,
-        'validation_type' => false,
-        'file_name' => false
+        'isSchemaCompliant' => false,
+        'checkResults' => false,
+        'validationType' => false,
+        'fileName' => false
     ];
 
     /**
@@ -177,10 +177,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_schema_compliant' => 'isSchemaCompliant',
-        'check_results' => 'checkResults',
-        'validation_type' => 'validationType',
-        'file_name' => 'fileName'
+        'isSchemaCompliant' => 'isSchemaCompliant',
+        'checkResults' => 'checkResults',
+        'validationType' => 'validationType',
+        'fileName' => 'fileName'
     ];
 
     /**
@@ -189,10 +189,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'is_schema_compliant' => 'setIsSchemaCompliant',
-        'check_results' => 'setCheckResults',
-        'validation_type' => 'setValidationType',
-        'file_name' => 'setFileName'
+        'isSchemaCompliant' => 'setIsSchemaCompliant',
+        'checkResults' => 'setCheckResults',
+        'validationType' => 'setValidationType',
+        'fileName' => 'setFileName'
     ];
 
     /**
@@ -201,10 +201,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'is_schema_compliant' => 'getIsSchemaCompliant',
-        'check_results' => 'getCheckResults',
-        'validation_type' => 'getValidationType',
-        'file_name' => 'getFileName'
+        'isSchemaCompliant' => 'getIsSchemaCompliant',
+        'checkResults' => 'getCheckResults',
+        'validationType' => 'getValidationType',
+        'fileName' => 'getFileName'
     ];
 
     /**
@@ -264,10 +264,10 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('is_schema_compliant', $data ?? [], null);
-        $this->setIfExists('check_results', $data ?? [], null);
-        $this->setIfExists('validation_type', $data ?? [], null);
-        $this->setIfExists('file_name', $data ?? [], null);
+        $this->setIfExists('isSchemaCompliant', $data ?? [], null);
+        $this->setIfExists('checkResults', $data ?? [], null);
+        $this->setIfExists('validationType', $data ?? [], null);
+        $this->setIfExists('fileName', $data ?? [], null);
     }
 
     /**
@@ -297,11 +297,11 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['is_schema_compliant'] === null) {
-            $invalidProperties[] = "'is_schema_compliant' can't be null";
+        if ($this->container['isSchemaCompliant'] === null) {
+            $invalidProperties[] = "'isSchemaCompliant' can't be null";
         }
-        if ($this->container['validation_type'] === null) {
-            $invalidProperties[] = "'validation_type' can't be null";
+        if ($this->container['validationType'] === null) {
+            $invalidProperties[] = "'validationType' can't be null";
         }
         return $invalidProperties;
     }
@@ -319,109 +319,109 @@ class ValidationResult implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets is_schema_compliant
+     * Gets isSchemaCompliant
      *
      * @return bool
      */
     public function getIsSchemaCompliant()
     {
-        return $this->container['is_schema_compliant'];
+        return $this->container['isSchemaCompliant'];
     }
 
     /**
-     * Sets is_schema_compliant
+     * Sets isSchemaCompliant
      *
-     * @param bool $is_schema_compliant Indicates if the validation produced no errors
+     * @param bool $isSchemaCompliant Indicates if the validation produced no errors
      *
      * @return self
      */
-    public function setIsSchemaCompliant($is_schema_compliant)
+    public function setIsSchemaCompliant($isSchemaCompliant)
     {
-        if (is_null($is_schema_compliant)) {
-            throw new \InvalidArgumentException('non-nullable is_schema_compliant cannot be null');
+        if (is_null($isSchemaCompliant)) {
+            throw new \InvalidArgumentException('non-nullable isSchemaCompliant cannot be null');
         }
-        $this->container['is_schema_compliant'] = $is_schema_compliant;
+        $this->container['isSchemaCompliant'] = $isSchemaCompliant;
 
         return $this;
     }
 
     /**
-     * Gets check_results
+     * Gets checkResults
      *
      * @return \Dangl\AVACloud\Model\ValidationCheckResult[]|null
      */
     public function getCheckResults()
     {
-        return $this->container['check_results'];
+        return $this->container['checkResults'];
     }
 
     /**
-     * Sets check_results
+     * Sets checkResults
      *
-     * @param \Dangl\AVACloud\Model\ValidationCheckResult[]|null $check_results List of validation check results, which are usually errors
+     * @param \Dangl\AVACloud\Model\ValidationCheckResult[]|null $checkResults List of validation check results, which are usually errors
      *
      * @return self
      */
-    public function setCheckResults($check_results)
+    public function setCheckResults($checkResults)
     {
-        if (is_null($check_results)) {
-            throw new \InvalidArgumentException('non-nullable check_results cannot be null');
+        if (is_null($checkResults)) {
+            throw new \InvalidArgumentException('non-nullable checkResults cannot be null');
         }
-        $this->container['check_results'] = $check_results;
+        $this->container['checkResults'] = $checkResults;
 
         return $this;
     }
 
     /**
-     * Gets validation_type
+     * Gets validationType
      *
      * @return \Dangl\AVACloud\Model\ValidationType
      */
     public function getValidationType()
     {
-        return $this->container['validation_type'];
+        return $this->container['validationType'];
     }
 
     /**
-     * Sets validation_type
+     * Sets validationType
      *
-     * @param \Dangl\AVACloud\Model\ValidationType $validation_type validation_type
+     * @param \Dangl\AVACloud\Model\ValidationType $validationType validationType
      *
      * @return self
      */
-    public function setValidationType($validation_type)
+    public function setValidationType($validationType)
     {
-        if (is_null($validation_type)) {
-            throw new \InvalidArgumentException('non-nullable validation_type cannot be null');
+        if (is_null($validationType)) {
+            throw new \InvalidArgumentException('non-nullable validationType cannot be null');
         }
-        $this->container['validation_type'] = $validation_type;
+        $this->container['validationType'] = $validationType;
 
         return $this;
     }
 
     /**
-     * Gets file_name
+     * Gets fileName
      *
      * @return string|null
      */
     public function getFileName()
     {
-        return $this->container['file_name'];
+        return $this->container['fileName'];
     }
 
     /**
-     * Sets file_name
+     * Sets fileName
      *
-     * @param string|null $file_name Name of the validated file
+     * @param string|null $fileName Name of the validated file
      *
      * @return self
      */
-    public function setFileName($file_name)
+    public function setFileName($fileName)
     {
-        if (is_null($file_name)) {
-            throw new \InvalidArgumentException('non-nullable file_name cannot be null');
+        if (is_null($fileName)) {
+            throw new \InvalidArgumentException('non-nullable fileName cannot be null');
         }
-        $this->container['file_name'] = $file_name;
+        $this->container['fileName'] = $fileName;
 
         return $this;
     }

@@ -59,9 +59,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'merged_project' => '\Dangl\AVACloud\Model\ProjectDto',
-        'non_matched_source_elements' => '\Dangl\AVACloud\Model\IElementDto[]',
-        'non_matched_target_elements' => '\Dangl\AVACloud\Model\IElementDto[]'
+        'mergedProject' => '\Dangl\AVACloud\Model\ProjectDto',
+        'nonMatchedSourceElements' => '\Dangl\AVACloud\Model\IElementDto[]',
+        'nonMatchedTargetElements' => '\Dangl\AVACloud\Model\IElementDto[]'
     ];
 
     /**
@@ -72,9 +72,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'merged_project' => null,
-        'non_matched_source_elements' => null,
-        'non_matched_target_elements' => null
+        'mergedProject' => null,
+        'nonMatchedSourceElements' => null,
+        'nonMatchedTargetElements' => null
     ];
 
     /**
@@ -83,9 +83,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'merged_project' => false,
-        'non_matched_source_elements' => false,
-        'non_matched_target_elements' => false
+        'mergedProject' => false,
+        'nonMatchedSourceElements' => false,
+        'nonMatchedTargetElements' => false
     ];
 
     /**
@@ -174,9 +174,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'merged_project' => 'mergedProject',
-        'non_matched_source_elements' => 'nonMatchedSourceElements',
-        'non_matched_target_elements' => 'nonMatchedTargetElements'
+        'mergedProject' => 'mergedProject',
+        'nonMatchedSourceElements' => 'nonMatchedSourceElements',
+        'nonMatchedTargetElements' => 'nonMatchedTargetElements'
     ];
 
     /**
@@ -185,9 +185,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'merged_project' => 'setMergedProject',
-        'non_matched_source_elements' => 'setNonMatchedSourceElements',
-        'non_matched_target_elements' => 'setNonMatchedTargetElements'
+        'mergedProject' => 'setMergedProject',
+        'nonMatchedSourceElements' => 'setNonMatchedSourceElements',
+        'nonMatchedTargetElements' => 'setNonMatchedTargetElements'
     ];
 
     /**
@@ -196,9 +196,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'merged_project' => 'getMergedProject',
-        'non_matched_source_elements' => 'getNonMatchedSourceElements',
-        'non_matched_target_elements' => 'getNonMatchedTargetElements'
+        'mergedProject' => 'getMergedProject',
+        'nonMatchedSourceElements' => 'getNonMatchedSourceElements',
+        'nonMatchedTargetElements' => 'getNonMatchedTargetElements'
     ];
 
     /**
@@ -258,9 +258,9 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('merged_project', $data ?? [], null);
-        $this->setIfExists('non_matched_source_elements', $data ?? [], null);
-        $this->setIfExists('non_matched_target_elements', $data ?? [], null);
+        $this->setIfExists('mergedProject', $data ?? [], null);
+        $this->setIfExists('nonMatchedSourceElements', $data ?? [], null);
+        $this->setIfExists('nonMatchedTargetElements', $data ?? [], null);
     }
 
     /**
@@ -306,82 +306,82 @@ class GetProjectMergeResult implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets merged_project
+     * Gets mergedProject
      *
      * @return \Dangl\AVACloud\Model\ProjectDto|null
      */
     public function getMergedProject()
     {
-        return $this->container['merged_project'];
+        return $this->container['mergedProject'];
     }
 
     /**
-     * Sets merged_project
+     * Sets mergedProject
      *
-     * @param \Dangl\AVACloud\Model\ProjectDto|null $merged_project merged_project
+     * @param \Dangl\AVACloud\Model\ProjectDto|null $mergedProject mergedProject
      *
      * @return self
      */
-    public function setMergedProject($merged_project)
+    public function setMergedProject($mergedProject)
     {
-        if (is_null($merged_project)) {
-            throw new \InvalidArgumentException('non-nullable merged_project cannot be null');
+        if (is_null($mergedProject)) {
+            throw new \InvalidArgumentException('non-nullable mergedProject cannot be null');
         }
-        $this->container['merged_project'] = $merged_project;
+        $this->container['mergedProject'] = $mergedProject;
 
         return $this;
     }
 
     /**
-     * Gets non_matched_source_elements
+     * Gets nonMatchedSourceElements
      *
      * @return \Dangl\AVACloud\Model\IElementDto[]|null
      */
     public function getNonMatchedSourceElements()
     {
-        return $this->container['non_matched_source_elements'];
+        return $this->container['nonMatchedSourceElements'];
     }
 
     /**
-     * Sets non_matched_source_elements
+     * Sets nonMatchedSourceElements
      *
-     * @param \Dangl\AVACloud\Model\IElementDto[]|null $non_matched_source_elements Elements that were present in the source project, but could not be matched to any element in the target project.
+     * @param \Dangl\AVACloud\Model\IElementDto[]|null $nonMatchedSourceElements Elements that were present in the source project, but could not be matched to any element in the target project.
      *
      * @return self
      */
-    public function setNonMatchedSourceElements($non_matched_source_elements)
+    public function setNonMatchedSourceElements($nonMatchedSourceElements)
     {
-        if (is_null($non_matched_source_elements)) {
-            throw new \InvalidArgumentException('non-nullable non_matched_source_elements cannot be null');
+        if (is_null($nonMatchedSourceElements)) {
+            throw new \InvalidArgumentException('non-nullable nonMatchedSourceElements cannot be null');
         }
-        $this->container['non_matched_source_elements'] = $non_matched_source_elements;
+        $this->container['nonMatchedSourceElements'] = $nonMatchedSourceElements;
 
         return $this;
     }
 
     /**
-     * Gets non_matched_target_elements
+     * Gets nonMatchedTargetElements
      *
      * @return \Dangl\AVACloud\Model\IElementDto[]|null
      */
     public function getNonMatchedTargetElements()
     {
-        return $this->container['non_matched_target_elements'];
+        return $this->container['nonMatchedTargetElements'];
     }
 
     /**
-     * Sets non_matched_target_elements
+     * Sets nonMatchedTargetElements
      *
-     * @param \Dangl\AVACloud\Model\IElementDto[]|null $non_matched_target_elements Elements that were present in the target project, but could not be matched to any element in the source project.
+     * @param \Dangl\AVACloud\Model\IElementDto[]|null $nonMatchedTargetElements Elements that were present in the target project, but could not be matched to any element in the source project.
      *
      * @return self
      */
-    public function setNonMatchedTargetElements($non_matched_target_elements)
+    public function setNonMatchedTargetElements($nonMatchedTargetElements)
     {
-        if (is_null($non_matched_target_elements)) {
-            throw new \InvalidArgumentException('non-nullable non_matched_target_elements cannot be null');
+        if (is_null($nonMatchedTargetElements)) {
+            throw new \InvalidArgumentException('non-nullable nonMatchedTargetElements cannot be null');
         }
-        $this->container['non_matched_target_elements'] = $non_matched_target_elements;
+        $this->container['nonMatchedTargetElements'] = $nonMatchedTargetElements;
 
         return $this;
     }

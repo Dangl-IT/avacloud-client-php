@@ -108,7 +108,7 @@ class ProductDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text"
+     * Test attribute "shortText"
      */
     public function testPropertyShortText()
     {
@@ -117,7 +117,7 @@ class ProductDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "long_text"
+     * Test attribute "longText"
      */
     public function testPropertyLongText()
     {
@@ -126,7 +126,7 @@ class ProductDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_long_text"
+     * Test attribute "htmlLongText"
      */
     public function testPropertyHtmlLongText()
     {

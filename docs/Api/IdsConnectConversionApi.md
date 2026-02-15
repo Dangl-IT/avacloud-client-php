@@ -13,7 +13,7 @@ All URIs are relative to https://avacloud-api.dangl-it.com, except if the operat
 ## `idsConnectConversionConvertToAva()`
 
 ```php
-idsConnectConversionConvertToAva($remove_plain_text_long_texts, $remove_html_long_texts, $ids_connect_file): \Dangl\AVACloud\Model\ProjectDto
+idsConnectConversionConvertToAva($idsConnectFile, $removePlainTextLongTexts, $removeHtmlLongTexts): \Dangl\AVACloud\Model\ProjectDto
 ```
 
 Converts IDS Connect files to Dangl.AVA projects
@@ -36,12 +36,12 @@ $apiInstance = new Dangl\AVACloud\Api\IdsConnectConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$remove_plain_text_long_texts = True; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
-$remove_html_long_texts = True; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
-$ids_connect_file = '/path/to/file.txt'; // \SplFileObject | The input file
+$idsConnectFile = '/path/to/file.txt'; // \SplFileObject | The input file
+$removePlainTextLongTexts = True; // bool | If set to true, plain text long texts will be removed from the output to reduce response sizes
+$removeHtmlLongTexts = True; // bool | If set to true, html long texts will be removed from the output to reduce response sizes
 
 try {
-    $result = $apiInstance->idsConnectConversionConvertToAva($remove_plain_text_long_texts, $remove_html_long_texts, $ids_connect_file);
+    $result = $apiInstance->idsConnectConversionConvertToAva($idsConnectFile, $removePlainTextLongTexts, $removeHtmlLongTexts);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IdsConnectConversionApi->idsConnectConversionConvertToAva: ', $e->getMessage(), PHP_EOL;
@@ -52,9 +52,9 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **remove_plain_text_long_texts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional] |
-| **remove_html_long_texts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional] |
-| **ids_connect_file** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
+| **idsConnectFile** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
+| **removePlainTextLongTexts** | **bool**| If set to true, plain text long texts will be removed from the output to reduce response sizes | [optional] |
+| **removeHtmlLongTexts** | **bool**| If set to true, html long texts will be removed from the output to reduce response sizes | [optional] |
 
 ### Return type
 
@@ -76,7 +76,7 @@ try {
 ## `idsConnectConversionConvertToFlatAva()`
 
 ```php
-idsConnectConversionConvertToFlatAva($ids_connect_file): \Dangl\AVACloud\Model\FlatAvaProject
+idsConnectConversionConvertToFlatAva($idsConnectFile): \Dangl\AVACloud\Model\FlatAvaProject
 ```
 
 Converts IDS Connect files to Dangl.AVA projects
@@ -99,10 +99,10 @@ $apiInstance = new Dangl\AVACloud\Api\IdsConnectConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ids_connect_file = '/path/to/file.txt'; // \SplFileObject | The input file
+$idsConnectFile = '/path/to/file.txt'; // \SplFileObject | The input file
 
 try {
-    $result = $apiInstance->idsConnectConversionConvertToFlatAva($ids_connect_file);
+    $result = $apiInstance->idsConnectConversionConvertToFlatAva($idsConnectFile);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IdsConnectConversionApi->idsConnectConversionConvertToFlatAva: ', $e->getMessage(), PHP_EOL;
@@ -113,7 +113,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ids_connect_file** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
+| **idsConnectFile** | **\SplFileObject****\SplFileObject**| The input file | [optional] |
 
 ### Return type
 

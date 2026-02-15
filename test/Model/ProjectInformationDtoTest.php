@@ -99,7 +99,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "description_short"
+     * Test attribute "descriptionShort"
      */
     public function testPropertyDescriptionShort()
     {
@@ -126,7 +126,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "item_number_schema"
+     * Test attribute "itemNumberSchema"
      */
     public function testPropertyItemNumberSchema()
     {
@@ -135,7 +135,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "currency_short"
+     * Test attribute "currencyShort"
      */
     public function testPropertyCurrencyShort()
     {
@@ -144,7 +144,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "currency_long"
+     * Test attribute "currencyLong"
      */
     public function testPropertyCurrencyLong()
     {
@@ -153,7 +153,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "labour_time_label"
+     * Test attribute "labourTimeLabel"
      */
     public function testPropertyLabourTimeLabel()
     {
@@ -162,7 +162,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_components"
+     * Test attribute "priceComponents"
      */
     public function testPropertyPriceComponents()
     {
@@ -171,7 +171,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "price_component_types"
+     * Test attribute "priceComponentTypes"
      */
     public function testPropertyPriceComponentTypes()
     {
@@ -180,7 +180,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "bidder_comment_allowed"
+     * Test attribute "bidderCommentAllowed"
      */
     public function testPropertyBidderCommentAllowed()
     {
@@ -189,7 +189,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "side_offers_allowed"
+     * Test attribute "sideOffersAllowed"
      */
     public function testPropertySideOffersAllowed()
     {
@@ -198,7 +198,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "award_type"
+     * Test attribute "awardType"
      */
     public function testPropertyAwardType()
     {
@@ -207,7 +207,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "special_award_kind"
+     * Test attribute "specialAwardKind"
      */
     public function testPropertySpecialAwardKind()
     {
@@ -225,7 +225,7 @@ class ProjectInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "notification_sites"
+     * Test attribute "notificationSites"
      */
     public function testPropertyNotificationSites()
     {

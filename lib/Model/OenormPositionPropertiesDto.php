@@ -59,12 +59,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'origin_code' => '\Dangl\AVACloud\Model\OenormOriginCodeDto',
-        'opening_text_is_free_text' => 'bool',
-        'is_main_position' => 'bool',
-        'is_undivided_position' => 'bool',
-        'oenorm_short_text' => 'string',
-        'oenorm_short_text_addition' => 'string'
+        'originCode' => '\Dangl\AVACloud\Model\OenormOriginCodeDto',
+        'openingTextIsFreeText' => 'bool',
+        'isMainPosition' => 'bool',
+        'isUndividedPosition' => 'bool',
+        'oenormShortText' => 'string',
+        'oenormShortTextAddition' => 'string'
     ];
 
     /**
@@ -75,12 +75,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'origin_code' => null,
-        'opening_text_is_free_text' => null,
-        'is_main_position' => null,
-        'is_undivided_position' => null,
-        'oenorm_short_text' => null,
-        'oenorm_short_text_addition' => null
+        'originCode' => null,
+        'openingTextIsFreeText' => null,
+        'isMainPosition' => null,
+        'isUndividedPosition' => null,
+        'oenormShortText' => null,
+        'oenormShortTextAddition' => null
     ];
 
     /**
@@ -89,12 +89,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'origin_code' => false,
-        'opening_text_is_free_text' => false,
-        'is_main_position' => false,
-        'is_undivided_position' => false,
-        'oenorm_short_text' => false,
-        'oenorm_short_text_addition' => false
+        'originCode' => false,
+        'openingTextIsFreeText' => false,
+        'isMainPosition' => false,
+        'isUndividedPosition' => false,
+        'oenormShortText' => false,
+        'oenormShortTextAddition' => false
     ];
 
     /**
@@ -183,12 +183,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'origin_code' => 'originCode',
-        'opening_text_is_free_text' => 'openingTextIsFreeText',
-        'is_main_position' => 'isMainPosition',
-        'is_undivided_position' => 'isUndividedPosition',
-        'oenorm_short_text' => 'oenormShortText',
-        'oenorm_short_text_addition' => 'oenormShortTextAddition'
+        'originCode' => 'originCode',
+        'openingTextIsFreeText' => 'openingTextIsFreeText',
+        'isMainPosition' => 'isMainPosition',
+        'isUndividedPosition' => 'isUndividedPosition',
+        'oenormShortText' => 'oenormShortText',
+        'oenormShortTextAddition' => 'oenormShortTextAddition'
     ];
 
     /**
@@ -197,12 +197,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'origin_code' => 'setOriginCode',
-        'opening_text_is_free_text' => 'setOpeningTextIsFreeText',
-        'is_main_position' => 'setIsMainPosition',
-        'is_undivided_position' => 'setIsUndividedPosition',
-        'oenorm_short_text' => 'setOenormShortText',
-        'oenorm_short_text_addition' => 'setOenormShortTextAddition'
+        'originCode' => 'setOriginCode',
+        'openingTextIsFreeText' => 'setOpeningTextIsFreeText',
+        'isMainPosition' => 'setIsMainPosition',
+        'isUndividedPosition' => 'setIsUndividedPosition',
+        'oenormShortText' => 'setOenormShortText',
+        'oenormShortTextAddition' => 'setOenormShortTextAddition'
     ];
 
     /**
@@ -211,12 +211,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'origin_code' => 'getOriginCode',
-        'opening_text_is_free_text' => 'getOpeningTextIsFreeText',
-        'is_main_position' => 'getIsMainPosition',
-        'is_undivided_position' => 'getIsUndividedPosition',
-        'oenorm_short_text' => 'getOenormShortText',
-        'oenorm_short_text_addition' => 'getOenormShortTextAddition'
+        'originCode' => 'getOriginCode',
+        'openingTextIsFreeText' => 'getOpeningTextIsFreeText',
+        'isMainPosition' => 'getIsMainPosition',
+        'isUndividedPosition' => 'getIsUndividedPosition',
+        'oenormShortText' => 'getOenormShortText',
+        'oenormShortTextAddition' => 'getOenormShortTextAddition'
     ];
 
     /**
@@ -276,12 +276,12 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('origin_code', $data ?? [], null);
-        $this->setIfExists('opening_text_is_free_text', $data ?? [], null);
-        $this->setIfExists('is_main_position', $data ?? [], null);
-        $this->setIfExists('is_undivided_position', $data ?? [], null);
-        $this->setIfExists('oenorm_short_text', $data ?? [], null);
-        $this->setIfExists('oenorm_short_text_addition', $data ?? [], null);
+        $this->setIfExists('originCode', $data ?? [], null);
+        $this->setIfExists('openingTextIsFreeText', $data ?? [], null);
+        $this->setIfExists('isMainPosition', $data ?? [], null);
+        $this->setIfExists('isUndividedPosition', $data ?? [], null);
+        $this->setIfExists('oenormShortText', $data ?? [], null);
+        $this->setIfExists('oenormShortTextAddition', $data ?? [], null);
     }
 
     /**
@@ -311,17 +311,17 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
-        if ($this->container['origin_code'] === null) {
-            $invalidProperties[] = "'origin_code' can't be null";
+        if ($this->container['originCode'] === null) {
+            $invalidProperties[] = "'originCode' can't be null";
         }
-        if ($this->container['opening_text_is_free_text'] === null) {
-            $invalidProperties[] = "'opening_text_is_free_text' can't be null";
+        if ($this->container['openingTextIsFreeText'] === null) {
+            $invalidProperties[] = "'openingTextIsFreeText' can't be null";
         }
-        if ($this->container['is_main_position'] === null) {
-            $invalidProperties[] = "'is_main_position' can't be null";
+        if ($this->container['isMainPosition'] === null) {
+            $invalidProperties[] = "'isMainPosition' can't be null";
         }
-        if ($this->container['is_undivided_position'] === null) {
-            $invalidProperties[] = "'is_undivided_position' can't be null";
+        if ($this->container['isUndividedPosition'] === null) {
+            $invalidProperties[] = "'isUndividedPosition' can't be null";
         }
         return $invalidProperties;
     }
@@ -339,163 +339,163 @@ class OenormPositionPropertiesDto implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets origin_code
+     * Gets originCode
      *
      * @return \Dangl\AVACloud\Model\OenormOriginCodeDto
      */
     public function getOriginCode()
     {
-        return $this->container['origin_code'];
+        return $this->container['originCode'];
     }
 
     /**
-     * Sets origin_code
+     * Sets originCode
      *
-     * @param \Dangl\AVACloud\Model\OenormOriginCodeDto $origin_code origin_code
+     * @param \Dangl\AVACloud\Model\OenormOriginCodeDto $originCode originCode
      *
      * @return self
      */
-    public function setOriginCode($origin_code)
+    public function setOriginCode($originCode)
     {
-        if (is_null($origin_code)) {
-            throw new \InvalidArgumentException('non-nullable origin_code cannot be null');
+        if (is_null($originCode)) {
+            throw new \InvalidArgumentException('non-nullable originCode cannot be null');
         }
-        $this->container['origin_code'] = $origin_code;
+        $this->container['originCode'] = $originCode;
 
         return $this;
     }
 
     /**
-     * Gets opening_text_is_free_text
+     * Gets openingTextIsFreeText
      *
      * @return bool
      */
     public function getOpeningTextIsFreeText()
     {
-        return $this->container['opening_text_is_free_text'];
+        return $this->container['openingTextIsFreeText'];
     }
 
     /**
-     * Sets opening_text_is_free_text
+     * Sets openingTextIsFreeText
      *
-     * @param bool $opening_text_is_free_text This marks if the opening texts within this element are considered free text. It corresponds to 'vorbemerkungskennzeichen' in ÖNorm.
+     * @param bool $openingTextIsFreeText This marks if the opening texts within this element are considered free text. It corresponds to 'vorbemerkungskennzeichen' in ÖNorm.
      *
      * @return self
      */
-    public function setOpeningTextIsFreeText($opening_text_is_free_text)
+    public function setOpeningTextIsFreeText($openingTextIsFreeText)
     {
-        if (is_null($opening_text_is_free_text)) {
-            throw new \InvalidArgumentException('non-nullable opening_text_is_free_text cannot be null');
+        if (is_null($openingTextIsFreeText)) {
+            throw new \InvalidArgumentException('non-nullable openingTextIsFreeText cannot be null');
         }
-        $this->container['opening_text_is_free_text'] = $opening_text_is_free_text;
+        $this->container['openingTextIsFreeText'] = $openingTextIsFreeText;
 
         return $this;
     }
 
     /**
-     * Gets is_main_position
+     * Gets isMainPosition
      *
      * @return bool
      */
     public function getIsMainPosition()
     {
-        return $this->container['is_main_position'];
+        return $this->container['isMainPosition'];
     }
 
     /**
-     * Sets is_main_position
+     * Sets isMainPosition
      *
-     * @param bool $is_main_position This indicates if the ÖNorm 'wesentliche position' mark is set. This should no longer be used, please use the IsMainPosition property on the parent position instead.
+     * @param bool $isMainPosition This indicates if the ÖNorm 'wesentliche position' mark is set. This should no longer be used, please use the IsMainPosition property on the parent position instead.
      *
      * @return self
      */
-    public function setIsMainPosition($is_main_position)
+    public function setIsMainPosition($isMainPosition)
     {
-        if (is_null($is_main_position)) {
-            throw new \InvalidArgumentException('non-nullable is_main_position cannot be null');
+        if (is_null($isMainPosition)) {
+            throw new \InvalidArgumentException('non-nullable isMainPosition cannot be null');
         }
-        $this->container['is_main_position'] = $is_main_position;
+        $this->container['isMainPosition'] = $isMainPosition;
 
         return $this;
     }
 
     /**
-     * Gets is_undivided_position
+     * Gets isUndividedPosition
      *
      * @return bool
      */
     public function getIsUndividedPosition()
     {
-        return $this->container['is_undivided_position'];
+        return $this->container['isUndividedPosition'];
     }
 
     /**
-     * Sets is_undivided_position
+     * Sets isUndividedPosition
      *
-     * @param bool $is_undivided_position This indicates if the ÖNorm position was a 'ungeteilteposition' (undivided position). This will only be taken into account when the position is also the sole element inside it's parent group
+     * @param bool $isUndividedPosition This indicates if the ÖNorm position was a 'ungeteilteposition' (undivided position). This will only be taken into account when the position is also the sole element inside it's parent group
      *
      * @return self
      */
-    public function setIsUndividedPosition($is_undivided_position)
+    public function setIsUndividedPosition($isUndividedPosition)
     {
-        if (is_null($is_undivided_position)) {
-            throw new \InvalidArgumentException('non-nullable is_undivided_position cannot be null');
+        if (is_null($isUndividedPosition)) {
+            throw new \InvalidArgumentException('non-nullable isUndividedPosition cannot be null');
         }
-        $this->container['is_undivided_position'] = $is_undivided_position;
+        $this->container['isUndividedPosition'] = $isUndividedPosition;
 
         return $this;
     }
 
     /**
-     * Gets oenorm_short_text
+     * Gets oenormShortText
      *
      * @return string|null
      */
     public function getOenormShortText()
     {
-        return $this->container['oenorm_short_text'];
+        return $this->container['oenormShortText'];
     }
 
     /**
-     * Sets oenorm_short_text
+     * Sets oenormShortText
      *
-     * @param string|null $oenorm_short_text In some ÖNorm formats, the short text can have it's own addition, so the text is split up in OenormShortText and OenormShortTextAddition To serialize this, either the ShortText property of the parent position needs to be null, or OenormShortText ' ' OenormShortTextAddition needs to match the ShortText.
+     * @param string|null $oenormShortText In some ÖNorm formats, the short text can have it's own addition, so the text is split up in OenormShortText and OenormShortTextAddition To serialize this, either the ShortText property of the parent position needs to be null, or OenormShortText ' ' OenormShortTextAddition needs to match the ShortText.
      *
      * @return self
      */
-    public function setOenormShortText($oenorm_short_text)
+    public function setOenormShortText($oenormShortText)
     {
-        if (is_null($oenorm_short_text)) {
-            throw new \InvalidArgumentException('non-nullable oenorm_short_text cannot be null');
+        if (is_null($oenormShortText)) {
+            throw new \InvalidArgumentException('non-nullable oenormShortText cannot be null');
         }
-        $this->container['oenorm_short_text'] = $oenorm_short_text;
+        $this->container['oenormShortText'] = $oenormShortText;
 
         return $this;
     }
 
     /**
-     * Gets oenorm_short_text_addition
+     * Gets oenormShortTextAddition
      *
      * @return string|null
      */
     public function getOenormShortTextAddition()
     {
-        return $this->container['oenorm_short_text_addition'];
+        return $this->container['oenormShortTextAddition'];
     }
 
     /**
-     * Sets oenorm_short_text_addition
+     * Sets oenormShortTextAddition
      *
-     * @param string|null $oenorm_short_text_addition In some ÖNorm formats, the short text can have it's own addition, so the text is split up in OenormShortText and OenormShortTextAddition To serialize this, either the ShortText property of the parent position needs to be null, or OenormShortText ' ' OenormShortTextAddition needs to match the ShortText.
+     * @param string|null $oenormShortTextAddition In some ÖNorm formats, the short text can have it's own addition, so the text is split up in OenormShortText and OenormShortTextAddition To serialize this, either the ShortText property of the parent position needs to be null, or OenormShortText ' ' OenormShortTextAddition needs to match the ShortText.
      *
      * @return self
      */
-    public function setOenormShortTextAddition($oenorm_short_text_addition)
+    public function setOenormShortTextAddition($oenormShortTextAddition)
     {
-        if (is_null($oenorm_short_text_addition)) {
-            throw new \InvalidArgumentException('non-nullable oenorm_short_text_addition cannot be null');
+        if (is_null($oenormShortTextAddition)) {
+            throw new \InvalidArgumentException('non-nullable oenormShortTextAddition cannot be null');
         }
-        $this->container['oenorm_short_text_addition'] = $oenorm_short_text_addition;
+        $this->container['oenormShortTextAddition'] = $oenormShortTextAddition;
 
         return $this;
     }

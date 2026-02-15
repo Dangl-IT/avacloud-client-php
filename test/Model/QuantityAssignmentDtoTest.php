@@ -99,7 +99,7 @@ class QuantityAssignmentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {
@@ -108,7 +108,7 @@ class QuantityAssignmentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_references"
+     * Test attribute "catalogueReferences"
      */
     public function testPropertyCatalogueReferences()
     {

@@ -60,7 +60,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'invoice' => '\Dangl\AVACloud\Model\Invoice',
-        'pdf_file_base64' => 'string'
+        'pdfFileBase64' => 'string'
     ];
 
     /**
@@ -72,7 +72,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPIFormats = [
         'invoice' => null,
-        'pdf_file_base64' => null
+        'pdfFileBase64' => null
     ];
 
     /**
@@ -82,7 +82,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static array $openAPINullables = [
         'invoice' => false,
-        'pdf_file_base64' => false
+        'pdfFileBase64' => false
     ];
 
     /**
@@ -172,7 +172,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $attributeMap = [
         'invoice' => 'invoice',
-        'pdf_file_base64' => 'pdfFileBase64'
+        'pdfFileBase64' => 'pdfFileBase64'
     ];
 
     /**
@@ -182,7 +182,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $setters = [
         'invoice' => 'setInvoice',
-        'pdf_file_base64' => 'setPdfFileBase64'
+        'pdfFileBase64' => 'setPdfFileBase64'
     ];
 
     /**
@@ -192,7 +192,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
      */
     protected static $getters = [
         'invoice' => 'getInvoice',
-        'pdf_file_base64' => 'getPdfFileBase64'
+        'pdfFileBase64' => 'getPdfFileBase64'
     ];
 
     /**
@@ -253,7 +253,7 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
     public function __construct(?array $data = null)
     {
         $this->setIfExists('invoice', $data ?? [], null);
-        $this->setIfExists('pdf_file_base64', $data ?? [], null);
+        $this->setIfExists('pdfFileBase64', $data ?? [], null);
     }
 
     /**
@@ -286,11 +286,11 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
         if ($this->container['invoice'] === null) {
             $invalidProperties[] = "'invoice' can't be null";
         }
-        if ($this->container['pdf_file_base64'] === null) {
-            $invalidProperties[] = "'pdf_file_base64' can't be null";
+        if ($this->container['pdfFileBase64'] === null) {
+            $invalidProperties[] = "'pdfFileBase64' can't be null";
         }
-        if ((mb_strlen($this->container['pdf_file_base64']) < 1)) {
-            $invalidProperties[] = "invalid value for 'pdf_file_base64', the character length must be bigger than or equal to 1.";
+        if ((mb_strlen($this->container['pdfFileBase64']) < 1)) {
+            $invalidProperties[] = "invalid value for 'pdfFileBase64', the character length must be bigger than or equal to 1.";
         }
 
         return $invalidProperties;
@@ -336,33 +336,33 @@ class PostXRechnungPdfEmbedd implements ModelInterface, ArrayAccess, \JsonSerial
     }
 
     /**
-     * Gets pdf_file_base64
+     * Gets pdfFileBase64
      *
      * @return string
      */
     public function getPdfFileBase64()
     {
-        return $this->container['pdf_file_base64'];
+        return $this->container['pdfFileBase64'];
     }
 
     /**
-     * Sets pdf_file_base64
+     * Sets pdfFileBase64
      *
-     * @param string $pdf_file_base64 The PDF file as Base64 string
+     * @param string $pdfFileBase64 The PDF file as Base64 string
      *
      * @return self
      */
-    public function setPdfFileBase64($pdf_file_base64)
+    public function setPdfFileBase64($pdfFileBase64)
     {
-        if (is_null($pdf_file_base64)) {
-            throw new \InvalidArgumentException('non-nullable pdf_file_base64 cannot be null');
+        if (is_null($pdfFileBase64)) {
+            throw new \InvalidArgumentException('non-nullable pdfFileBase64 cannot be null');
         }
 
-        if ((mb_strlen($pdf_file_base64) < 1)) {
-            throw new \InvalidArgumentException('invalid length for $pdf_file_base64 when calling PostXRechnungPdfEmbedd., must be bigger than or equal to 1.');
+        if ((mb_strlen($pdfFileBase64) < 1)) {
+            throw new \InvalidArgumentException('invalid length for $pdfFileBase64 when calling PostXRechnungPdfEmbedd., must be bigger than or equal to 1.');
         }
 
-        $this->container['pdf_file_base64'] = $pdf_file_base64;
+        $this->container['pdfFileBase64'] = $pdfFileBase64;
 
         return $this;
     }

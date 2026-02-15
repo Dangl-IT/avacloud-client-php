@@ -63,9 +63,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'formula' => 'string',
         'result' => 'float',
         'valid' => 'bool',
-        'error_position_in_line' => 'int',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
-        'catalogue_references' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]'
+        'errorPositionInLine' => 'int',
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
+        'catalogueReferences' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]'
     ];
 
     /**
@@ -80,9 +80,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'formula' => null,
         'result' => 'double',
         'valid' => null,
-        'error_position_in_line' => 'int32',
-        'project_catalogues' => null,
-        'catalogue_references' => null
+        'errorPositionInLine' => 'int32',
+        'projectCatalogues' => null,
+        'catalogueReferences' => null
     ];
 
     /**
@@ -95,9 +95,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'formula' => false,
         'result' => false,
         'valid' => false,
-        'error_position_in_line' => false,
-        'project_catalogues' => false,
-        'catalogue_references' => false
+        'errorPositionInLine' => false,
+        'projectCatalogues' => false,
+        'catalogueReferences' => false
     ];
 
     /**
@@ -190,9 +190,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'formula' => 'formula',
         'result' => 'result',
         'valid' => 'valid',
-        'error_position_in_line' => 'errorPositionInLine',
-        'project_catalogues' => 'projectCatalogues',
-        'catalogue_references' => 'catalogueReferences'
+        'errorPositionInLine' => 'errorPositionInLine',
+        'projectCatalogues' => 'projectCatalogues',
+        'catalogueReferences' => 'catalogueReferences'
     ];
 
     /**
@@ -205,9 +205,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'formula' => 'setFormula',
         'result' => 'setResult',
         'valid' => 'setValid',
-        'error_position_in_line' => 'setErrorPositionInLine',
-        'project_catalogues' => 'setProjectCatalogues',
-        'catalogue_references' => 'setCatalogueReferences'
+        'errorPositionInLine' => 'setErrorPositionInLine',
+        'projectCatalogues' => 'setProjectCatalogues',
+        'catalogueReferences' => 'setCatalogueReferences'
     ];
 
     /**
@@ -220,9 +220,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         'formula' => 'getFormula',
         'result' => 'getResult',
         'valid' => 'getValid',
-        'error_position_in_line' => 'getErrorPositionInLine',
-        'project_catalogues' => 'getProjectCatalogues',
-        'catalogue_references' => 'getCatalogueReferences'
+        'errorPositionInLine' => 'getErrorPositionInLine',
+        'projectCatalogues' => 'getProjectCatalogues',
+        'catalogueReferences' => 'getCatalogueReferences'
     ];
 
     /**
@@ -286,9 +286,9 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('formula', $data ?? [], null);
         $this->setIfExists('result', $data ?? [], null);
         $this->setIfExists('valid', $data ?? [], null);
-        $this->setIfExists('error_position_in_line', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
-        $this->setIfExists('catalogue_references', $data ?? [], null);
+        $this->setIfExists('errorPositionInLine', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
+        $this->setIfExists('catalogueReferences', $data ?? [], null);
     }
 
     /**
@@ -324,8 +324,8 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['valid'] === null) {
             $invalidProperties[] = "'valid' can't be null";
         }
-        if ($this->container['error_position_in_line'] === null) {
-            $invalidProperties[] = "'error_position_in_line' can't be null";
+        if ($this->container['errorPositionInLine'] === null) {
+            $invalidProperties[] = "'errorPositionInLine' can't be null";
         }
         return $invalidProperties;
     }
@@ -451,82 +451,82 @@ class CalculationDto implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets error_position_in_line
+     * Gets errorPositionInLine
      *
      * @return int
      */
     public function getErrorPositionInLine()
     {
-        return $this->container['error_position_in_line'];
+        return $this->container['errorPositionInLine'];
     }
 
     /**
-     * Sets error_position_in_line
+     * Sets errorPositionInLine
      *
-     * @param int $error_position_in_line Will be -1 if the Formula is correct, else it will show the position in the formula where an error was encountered. This is a zero based index.
+     * @param int $errorPositionInLine Will be -1 if the Formula is correct, else it will show the position in the formula where an error was encountered. This is a zero based index.
      *
      * @return self
      */
-    public function setErrorPositionInLine($error_position_in_line)
+    public function setErrorPositionInLine($errorPositionInLine)
     {
-        if (is_null($error_position_in_line)) {
-            throw new \InvalidArgumentException('non-nullable error_position_in_line cannot be null');
+        if (is_null($errorPositionInLine)) {
+            throw new \InvalidArgumentException('non-nullable errorPositionInLine cannot be null');
         }
-        $this->container['error_position_in_line'] = $error_position_in_line;
+        $this->container['errorPositionInLine'] = $errorPositionInLine;
 
         return $this;
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues These are Catalogues that are used within this Calculation. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues These are Catalogues that are used within this Calculation. Catalogues are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves. They are propagate to all child elements, e.g. other containers and QuantityAssignments. In the context of a ServiceSpecification, all elements share the same instance of the collection.
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_references
+     * Gets catalogueReferences
      *
      * @return \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null
      */
     public function getCatalogueReferences()
     {
-        return $this->container['catalogue_references'];
+        return $this->container['catalogueReferences'];
     }
 
     /**
-     * Sets catalogue_references
+     * Sets catalogueReferences
      *
-     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogue_references Referenced catalogues for this Calculation.
+     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogueReferences Referenced catalogues for this Calculation.
      *
      * @return self
      */
-    public function setCatalogueReferences($catalogue_references)
+    public function setCatalogueReferences($catalogueReferences)
     {
-        if (is_null($catalogue_references)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_references cannot be null');
+        if (is_null($catalogueReferences)) {
+            throw new \InvalidArgumentException('non-nullable catalogueReferences cannot be null');
         }
-        $this->container['catalogue_references'] = $catalogue_references;
+        $this->container['catalogueReferences'] = $catalogueReferences;
 
         return $this;
     }

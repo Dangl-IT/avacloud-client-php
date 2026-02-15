@@ -143,24 +143,24 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError
      */
-    public function gaebConversionConvertToAva($support_skipped_item_number_levels_in_positions = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
+    public function gaebConversionConvertToAva($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
     {
-        list($response) = $this->gaebConversionConvertToAvaWithHttpInfo($support_skipped_item_number_levels_in_positions, $remove_plain_text_long_texts, $remove_html_long_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        list($response) = $this->gaebConversionConvertToAvaWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $removePlainTextLongTexts, $removeHtmlLongTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
         return $response;
     }
 
@@ -169,24 +169,24 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ProjectDto|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gaebConversionConvertToAvaWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
+    public function gaebConversionConvertToAvaWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
     {
-        $request = $this->gaebConversionConvertToAvaRequest($support_skipped_item_number_levels_in_positions, $remove_plain_text_long_texts, $remove_html_long_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToAvaRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $removePlainTextLongTexts, $removeHtmlLongTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -276,23 +276,23 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToAvaAsync($support_skipped_item_number_levels_in_positions = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
+    public function gaebConversionConvertToAvaAsync($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
     {
-        return $this->gaebConversionConvertToAvaAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions, $remove_plain_text_long_texts, $remove_html_long_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType)
+        return $this->gaebConversionConvertToAvaAsyncWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $removePlainTextLongTexts, $removeHtmlLongTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -305,24 +305,24 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToAvaAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
+    public function gaebConversionConvertToAvaAsyncWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\ProjectDto';
-        $request = $this->gaebConversionConvertToAvaRequest($support_skipped_item_number_levels_in_positions, $remove_plain_text_long_texts, $remove_html_long_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToAvaRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $removePlainTextLongTexts, $removeHtmlLongTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -363,21 +363,21 @@ class GaebConversionApi
     /**
      * Create request for operation 'gaebConversionConvertToAva'
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $remove_plain_text_long_texts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $remove_html_long_texts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $removePlainTextLongTexts If set to true, plain text long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $removeHtmlLongTexts If set to true, html long texts will be removed from the output to reduce response sizes (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gaebConversionConvertToAvaRequest($support_skipped_item_number_levels_in_positions = null, $remove_plain_text_long_texts = null, $remove_html_long_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
+    public function gaebConversionConvertToAvaRequest($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $removePlainTextLongTexts = null, $removeHtmlLongTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToAva'][0])
     {
 
 
@@ -399,7 +399,7 @@ class GaebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $support_skipped_item_number_levels_in_positions,
+            $supportSkippedItemNumberLevelsInPositions,
             'SupportSkippedItemNumberLevelsInPositions', // param base name
             'boolean', // openApiType
             '', // style
@@ -408,7 +408,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_plain_text_long_texts,
+            $removePlainTextLongTexts,
             'RemovePlainTextLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -417,7 +417,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_html_long_texts,
+            $removeHtmlLongTexts,
             'RemoveHtmlLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -426,7 +426,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $output_html_as_xml,
+            $outputHtmlAsXml,
             'OutputHtmlAsXml', // param base name
             'boolean', // openApiType
             '', // style
@@ -435,7 +435,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $keep_empty_html_text,
+            $keepEmptyHtmlText,
             'KeepEmptyHtmlText', // param base name
             'boolean', // openApiType
             '', // style
@@ -444,7 +444,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_upper_case_item_numbers,
+            $allowUpperCaseItemNumbers,
             'AllowUpperCaseItemNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -453,7 +453,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_lump_sum_items_with_differing_quantities,
+            $allowLumpSumItemsWithDifferingQuantities,
             'AllowLumpSumItemsWithDifferingQuantities', // param base name
             'boolean', // openApiType
             '', // style
@@ -462,7 +462,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_item_number_identifier_transformations,
+            $disableItemNumberIdentifierTransformations,
             'DisableItemNumberIdentifierTransformations', // param base name
             'boolean', // openApiType
             '', // style
@@ -476,7 +476,7 @@ class GaebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'gaeb_file' => $gaeb_file,
+            'gaebFile' => $gaebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -545,27 +545,27 @@ class GaebConversionApi
      *
      * Converts GAEB files to Excel
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function gaebConversionConvertToExcel($support_skipped_item_number_levels_in_positions = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
+    public function gaebConversionConvertToExcel($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
     {
-        list($response) = $this->gaebConversionConvertToExcelWithHttpInfo($support_skipped_item_number_levels_in_positions, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        list($response) = $this->gaebConversionConvertToExcelWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
         return $response;
     }
 
@@ -574,27 +574,27 @@ class GaebConversionApi
      *
      * Converts GAEB files to Excel
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gaebConversionConvertToExcelWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
+    public function gaebConversionConvertToExcelWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
     {
-        $request = $this->gaebConversionConvertToExcelRequest($support_skipped_item_number_levels_in_positions, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToExcelRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -684,26 +684,26 @@ class GaebConversionApi
      *
      * Converts GAEB files to Excel
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToExcelAsync($support_skipped_item_number_levels_in_positions = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
+    public function gaebConversionConvertToExcelAsync($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
     {
-        return $this->gaebConversionConvertToExcelAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType)
+        return $this->gaebConversionConvertToExcelAsyncWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -716,27 +716,27 @@ class GaebConversionApi
      *
      * Converts GAEB files to Excel
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToExcelAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
+    public function gaebConversionConvertToExcelAsyncWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->gaebConversionConvertToExcelRequest($support_skipped_item_number_levels_in_positions, $write_prices, $write_long_texts, $conversion_culture, $include_article_numbers, $lock_all_cells_but_prices, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToExcelRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $writePrices, $writeLongTexts, $conversionCulture, $includeArticleNumbers, $lockAllCellsButPrices, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -777,24 +777,24 @@ class GaebConversionApi
     /**
      * Create request for operation 'gaebConversionConvertToExcel'
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $write_prices Defaults to true (optional)
-     * @param  bool|null $write_long_texts Defaults to true (optional)
-     * @param  string|null $conversion_culture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
-     * @param  bool|null $include_article_numbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
-     * @param  bool|null $lock_all_cells_but_prices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $writePrices Defaults to true (optional)
+     * @param  bool|null $writeLongTexts Defaults to true (optional)
+     * @param  string|null $conversionCulture The culture that should be used for the conversion process, to have localized Excel files. The following conversion cultures are available: &#39;en&#39; for English, &#39;de&#39; for German, &#39;fr&#39; for French, &#39; it&#39; for Italian and &#39; es&#39; for Spanish. If the culture is not supported, &#39;en&#39; will be used. (optional)
+     * @param  bool|null $includeArticleNumbers If this is enabled, then a new column will be created in the overview worksheet that contains the article numbers for positions. Article numbers will be read from &#39;position.commerceProperties.articleNumber&#39; (optional)
+     * @param  bool|null $lockAllCellsButPrices If this is enabled, then all cells except the unit price cells will be locked, so users can not accidentally modify other fields. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToExcel'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gaebConversionConvertToExcelRequest($support_skipped_item_number_levels_in_positions = null, $write_prices = null, $write_long_texts = null, $conversion_culture = null, $include_article_numbers = null, $lock_all_cells_but_prices = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
+    public function gaebConversionConvertToExcelRequest($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $writePrices = null, $writeLongTexts = null, $conversionCulture = null, $includeArticleNumbers = null, $lockAllCellsButPrices = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToExcel'][0])
     {
 
 
@@ -819,7 +819,7 @@ class GaebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $support_skipped_item_number_levels_in_positions,
+            $supportSkippedItemNumberLevelsInPositions,
             'SupportSkippedItemNumberLevelsInPositions', // param base name
             'boolean', // openApiType
             '', // style
@@ -828,7 +828,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_prices,
+            $writePrices,
             'WritePrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -837,7 +837,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $write_long_texts,
+            $writeLongTexts,
             'WriteLongTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -846,7 +846,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $conversion_culture,
+            $conversionCulture,
             'ConversionCulture', // param base name
             'string', // openApiType
             '', // style
@@ -855,7 +855,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $include_article_numbers,
+            $includeArticleNumbers,
             'IncludeArticleNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -864,7 +864,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $lock_all_cells_but_prices,
+            $lockAllCellsButPrices,
             'LockAllCellsButPrices', // param base name
             'boolean', // openApiType
             '', // style
@@ -873,7 +873,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $output_html_as_xml,
+            $outputHtmlAsXml,
             'OutputHtmlAsXml', // param base name
             'boolean', // openApiType
             '', // style
@@ -882,7 +882,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $keep_empty_html_text,
+            $keepEmptyHtmlText,
             'KeepEmptyHtmlText', // param base name
             'boolean', // openApiType
             '', // style
@@ -891,7 +891,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_upper_case_item_numbers,
+            $allowUpperCaseItemNumbers,
             'AllowUpperCaseItemNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -900,7 +900,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_lump_sum_items_with_differing_quantities,
+            $allowLumpSumItemsWithDifferingQuantities,
             'AllowLumpSumItemsWithDifferingQuantities', // param base name
             'boolean', // openApiType
             '', // style
@@ -909,7 +909,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_item_number_identifier_transformations,
+            $disableItemNumberIdentifierTransformations,
             'DisableItemNumberIdentifierTransformations', // param base name
             'boolean', // openApiType
             '', // style
@@ -923,7 +923,7 @@ class GaebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'gaeb_file' => $gaeb_file,
+            'gaebFile' => $gaebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -992,22 +992,22 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError
      */
-    public function gaebConversionConvertToFlatAva($support_skipped_item_number_levels_in_positions = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
+    public function gaebConversionConvertToFlatAva($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
     {
-        list($response) = $this->gaebConversionConvertToFlatAvaWithHttpInfo($support_skipped_item_number_levels_in_positions, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        list($response) = $this->gaebConversionConvertToFlatAvaWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
         return $response;
     }
 
@@ -1016,22 +1016,22 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\FlatAvaProject|\Dangl\AVACloud\Model\ApiError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gaebConversionConvertToFlatAvaWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
+    public function gaebConversionConvertToFlatAvaWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
     {
-        $request = $this->gaebConversionConvertToFlatAvaRequest($support_skipped_item_number_levels_in_positions, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToFlatAvaRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1121,21 +1121,21 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToFlatAvaAsync($support_skipped_item_number_levels_in_positions = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
+    public function gaebConversionConvertToFlatAvaAsync($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
     {
-        return $this->gaebConversionConvertToFlatAvaAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType)
+        return $this->gaebConversionConvertToFlatAvaAsyncWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1148,22 +1148,22 @@ class GaebConversionApi
      *
      * Converts GAEB files to Dangl.AVA projects
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToFlatAvaAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
+    public function gaebConversionConvertToFlatAvaAsyncWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
     {
         $returnType = '\Dangl\AVACloud\Model\FlatAvaProject';
-        $request = $this->gaebConversionConvertToFlatAvaRequest($support_skipped_item_number_levels_in_positions, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToFlatAvaRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1204,19 +1204,19 @@ class GaebConversionApi
     /**
      * Create request for operation 'gaebConversionConvertToFlatAva'
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToFlatAva'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gaebConversionConvertToFlatAvaRequest($support_skipped_item_number_levels_in_positions = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
+    public function gaebConversionConvertToFlatAvaRequest($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToFlatAva'][0])
     {
 
 
@@ -1236,7 +1236,7 @@ class GaebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $support_skipped_item_number_levels_in_positions,
+            $supportSkippedItemNumberLevelsInPositions,
             'SupportSkippedItemNumberLevelsInPositions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1245,7 +1245,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $output_html_as_xml,
+            $outputHtmlAsXml,
             'OutputHtmlAsXml', // param base name
             'boolean', // openApiType
             '', // style
@@ -1254,7 +1254,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $keep_empty_html_text,
+            $keepEmptyHtmlText,
             'KeepEmptyHtmlText', // param base name
             'boolean', // openApiType
             '', // style
@@ -1263,7 +1263,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_upper_case_item_numbers,
+            $allowUpperCaseItemNumbers,
             'AllowUpperCaseItemNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -1272,7 +1272,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_lump_sum_items_with_differing_quantities,
+            $allowLumpSumItemsWithDifferingQuantities,
             'AllowLumpSumItemsWithDifferingQuantities', // param base name
             'boolean', // openApiType
             '', // style
@@ -1281,7 +1281,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_item_number_identifier_transformations,
+            $disableItemNumberIdentifierTransformations,
             'DisableItemNumberIdentifierTransformations', // param base name
             'boolean', // openApiType
             '', // style
@@ -1295,7 +1295,7 @@ class GaebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'gaeb_file' => $gaeb_file,
+            'gaebFile' => $gaebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1364,29 +1364,29 @@ class GaebConversionApi
      *
      * Converts GAEB files to GAEB files. Used for example when transforming or repairing GAEB files.
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function gaebConversionConvertToGaeb($support_skipped_item_number_levels_in_positions = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
+    public function gaebConversionConvertToGaeb($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
     {
-        list($response) = $this->gaebConversionConvertToGaebWithHttpInfo($support_skipped_item_number_levels_in_positions, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        list($response) = $this->gaebConversionConvertToGaebWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
         return $response;
     }
 
@@ -1395,29 +1395,29 @@ class GaebConversionApi
      *
      * Converts GAEB files to GAEB files. Used for example when transforming or repairing GAEB files.
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gaebConversionConvertToGaebWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
+    public function gaebConversionConvertToGaebWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
     {
-        $request = $this->gaebConversionConvertToGaebRequest($support_skipped_item_number_levels_in_positions, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToGaebRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1507,28 +1507,28 @@ class GaebConversionApi
      *
      * Converts GAEB files to GAEB files. Used for example when transforming or repairing GAEB files.
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToGaebAsync($support_skipped_item_number_levels_in_positions = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
+    public function gaebConversionConvertToGaebAsync($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
     {
-        return $this->gaebConversionConvertToGaebAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType)
+        return $this->gaebConversionConvertToGaebAsyncWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1541,29 +1541,29 @@ class GaebConversionApi
      *
      * Converts GAEB files to GAEB files. Used for example when transforming or repairing GAEB files.
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToGaebAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
+    public function gaebConversionConvertToGaebAsyncWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->gaebConversionConvertToGaebRequest($support_skipped_item_number_levels_in_positions, $destination_gaeb_type, $target_exchange_phase_transform, $enforce_strict_offer_phase_long_text_output, $export_quantity_determination, $remove_unprintable_characters_from_texts, $force_include_descriptions, $treat_null_item_number_schema_as_invalid, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToGaebRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationGaebType, $targetExchangePhaseTransform, $enforceStrictOfferPhaseLongTextOutput, $exportQuantityDetermination, $removeUnprintableCharactersFromTexts, $forceIncludeDescriptions, $treatNullItemNumberSchemaAsInvalid, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1604,26 +1604,26 @@ class GaebConversionApi
     /**
      * Create request for operation 'gaebConversionConvertToGaeb'
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_gaeb_type Defaults to GAEB XML V3.2 (optional)
-     * @param  string|null $target_exchange_phase_transform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
-     * @param  bool|null $enforce_strict_offer_phase_long_text_output Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
-     * @param  bool|null $export_quantity_determination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $force_include_descriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
-     * @param  bool|null $treat_null_item_number_schema_as_invalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationGaebType Defaults to GAEB XML V3.2 (optional)
+     * @param  string|null $targetExchangePhaseTransform Defaults to none, meaning no transformation will be done. The phases are: Base &#x3D; 81 CostEstimate &#x3D; 82 OfferRequest &#x3D; 83 Offer &#x3D; 84 SideOffer &#x3D; 85 Grant &#x3D; 86 (optional)
+     * @param  bool|null $enforceStrictOfferPhaseLongTextOutput Defaults to false. If this is enabled, exported long texts to GAEB XML that use text additions will be strictly schema compliant. If this is not enabled, any text that is marked to contain a text addition is exported in full to ensure that incorrectly used text additions are still preserved in the export. (optional)
+     * @param  bool|null $exportQuantityDetermination Defaults to false. If this is enabled, quantities are exported in detail in GAEB XML targets via the &#39;QtyDeterm&#39; (Quantity Determination, or Quantity Take Off) fields. To control this, you can set custom quantity calculations in the &#39;QuantityComponents&#39; property of positions. Please see the entry for &#39;Quantity Determination&#39; in the Dangl.AVA HowTo documentation section. Please be advised that enabling this might export data that was not intended to be exported, like internal quantity calculation details, depending on what data you put in the &#39;QuantityComponents&#39; property. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $forceIncludeDescriptions If this is enabled, all description elements like texts and execution descriptions will be output to the result. This is mostly only applicable to GAEB exports to phase 84 - Offer, which does typically not include descriptions. (optional)
+     * @param  bool|null $treatNullItemNumberSchemaAsInvalid When exporting to GAEB, an item number schema is usually required. AVACloud will try to fix invalid item number schemas. With this setting, you can also tell AVACloud to treat a null value as invalid. Otherwise, null schemas will simply be ignored and not lead to any schema being generated. It is recommended to enable this option, but it is disabled by default for compatibility reasons. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToGaeb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gaebConversionConvertToGaebRequest($support_skipped_item_number_levels_in_positions = null, $destination_gaeb_type = null, $target_exchange_phase_transform = null, $enforce_strict_offer_phase_long_text_output = null, $export_quantity_determination = null, $remove_unprintable_characters_from_texts = null, $force_include_descriptions = null, $treat_null_item_number_schema_as_invalid = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
+    public function gaebConversionConvertToGaebRequest($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationGaebType = null, $targetExchangePhaseTransform = null, $enforceStrictOfferPhaseLongTextOutput = null, $exportQuantityDetermination = null, $removeUnprintableCharactersFromTexts = null, $forceIncludeDescriptions = null, $treatNullItemNumberSchemaAsInvalid = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToGaeb'][0])
     {
 
 
@@ -1650,7 +1650,7 @@ class GaebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $support_skipped_item_number_levels_in_positions,
+            $supportSkippedItemNumberLevelsInPositions,
             'SupportSkippedItemNumberLevelsInPositions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1659,7 +1659,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_gaeb_type,
+            $destinationGaebType,
             'DestinationGaebType', // param base name
             'string', // openApiType
             '', // style
@@ -1668,7 +1668,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $target_exchange_phase_transform,
+            $targetExchangePhaseTransform,
             'TargetExchangePhaseTransform', // param base name
             'string', // openApiType
             '', // style
@@ -1677,7 +1677,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $enforce_strict_offer_phase_long_text_output,
+            $enforceStrictOfferPhaseLongTextOutput,
             'EnforceStrictOfferPhaseLongTextOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -1686,7 +1686,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $export_quantity_determination,
+            $exportQuantityDetermination,
             'ExportQuantityDetermination', // param base name
             'boolean', // openApiType
             '', // style
@@ -1695,7 +1695,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -1704,7 +1704,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $force_include_descriptions,
+            $forceIncludeDescriptions,
             'ForceIncludeDescriptions', // param base name
             'boolean', // openApiType
             '', // style
@@ -1713,7 +1713,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $treat_null_item_number_schema_as_invalid,
+            $treatNullItemNumberSchemaAsInvalid,
             'TreatNullItemNumberSchemaAsInvalid', // param base name
             'boolean', // openApiType
             '', // style
@@ -1722,7 +1722,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $output_html_as_xml,
+            $outputHtmlAsXml,
             'OutputHtmlAsXml', // param base name
             'boolean', // openApiType
             '', // style
@@ -1731,7 +1731,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $keep_empty_html_text,
+            $keepEmptyHtmlText,
             'KeepEmptyHtmlText', // param base name
             'boolean', // openApiType
             '', // style
@@ -1740,7 +1740,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_upper_case_item_numbers,
+            $allowUpperCaseItemNumbers,
             'AllowUpperCaseItemNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -1749,7 +1749,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_lump_sum_items_with_differing_quantities,
+            $allowLumpSumItemsWithDifferingQuantities,
             'AllowLumpSumItemsWithDifferingQuantities', // param base name
             'boolean', // openApiType
             '', // style
@@ -1758,7 +1758,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_item_number_identifier_transformations,
+            $disableItemNumberIdentifierTransformations,
             'DisableItemNumberIdentifierTransformations', // param base name
             'boolean', // openApiType
             '', // style
@@ -1772,7 +1772,7 @@ class GaebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'gaeb_file' => $gaeb_file,
+            'gaebFile' => $gaebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);
@@ -1841,26 +1841,26 @@ class GaebConversionApi
      *
      * Converts GAEB files to Oenorm files
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Dangl\AVACloud\Model\ApiError|\SplFileObject
      */
-    public function gaebConversionConvertToOenorm($support_skipped_item_number_levels_in_positions = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
+    public function gaebConversionConvertToOenorm($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
     {
-        list($response) = $this->gaebConversionConvertToOenormWithHttpInfo($support_skipped_item_number_levels_in_positions, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        list($response) = $this->gaebConversionConvertToOenormWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
         return $response;
     }
 
@@ -1869,26 +1869,26 @@ class GaebConversionApi
      *
      * Converts GAEB files to Oenorm files
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \Dangl\AVACloud\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Dangl\AVACloud\Model\ApiError|\SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gaebConversionConvertToOenormWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
+    public function gaebConversionConvertToOenormWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
     {
-        $request = $this->gaebConversionConvertToOenormRequest($support_skipped_item_number_levels_in_positions, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToOenormRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1978,25 +1978,25 @@ class GaebConversionApi
      *
      * Converts GAEB files to Oenorm files
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToOenormAsync($support_skipped_item_number_levels_in_positions = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
+    public function gaebConversionConvertToOenormAsync($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
     {
-        return $this->gaebConversionConvertToOenormAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType)
+        return $this->gaebConversionConvertToOenormAsyncWithHttpInfo($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2009,26 +2009,26 @@ class GaebConversionApi
      *
      * Converts GAEB files to Oenorm files
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gaebConversionConvertToOenormAsyncWithHttpInfo($support_skipped_item_number_levels_in_positions = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
+    public function gaebConversionConvertToOenormAsyncWithHttpInfo($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->gaebConversionConvertToOenormRequest($support_skipped_item_number_levels_in_positions, $destination_oenorm_type, $try_repair_project_structure, $skip_try_enforce_schema_compliant_xml_output, $remove_unprintable_characters_from_texts, $output_html_as_xml, $keep_empty_html_text, $allow_upper_case_item_numbers, $allow_lump_sum_items_with_differing_quantities, $disable_item_number_identifier_transformations, $gaeb_file, $contentType);
+        $request = $this->gaebConversionConvertToOenormRequest($gaebFile, $supportSkippedItemNumberLevelsInPositions, $destinationOenormType, $tryRepairProjectStructure, $skipTryEnforceSchemaCompliantXmlOutput, $removeUnprintableCharactersFromTexts, $outputHtmlAsXml, $keepEmptyHtmlText, $allowUpperCaseItemNumbers, $allowLumpSumItemsWithDifferingQuantities, $disableItemNumberIdentifierTransformations, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2069,23 +2069,23 @@ class GaebConversionApi
     /**
      * Create request for operation 'gaebConversionConvertToOenorm'
      *
-     * @param  bool|null $support_skipped_item_number_levels_in_positions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
-     * @param  string|null $destination_oenorm_type Defaults to Lv2015 (optional)
-     * @param  bool|null $try_repair_project_structure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
-     * @param  bool|null $skip_try_enforce_schema_compliant_xml_output If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
-     * @param  bool|null $remove_unprintable_characters_from_texts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
-     * @param  bool|null $output_html_as_xml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
-     * @param  bool|null $keep_empty_html_text Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
-     * @param  bool|null $allow_upper_case_item_numbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
-     * @param  bool|null $allow_lump_sum_items_with_differing_quantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
-     * @param  bool|null $disable_item_number_identifier_transformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
-     * @param  \SplFileObject|null $gaeb_file The input file (optional)
+     * @param  \SplFileObject|null $gaebFile The input file (optional)
+     * @param  bool|null $supportSkippedItemNumberLevelsInPositions Defaults to &#39;false&#39;. This controls if, when deserializing GAEB files, skipped levels in position item numbers should be supported. For example, if an ItemNumberSchema defines three levels - two group levels and one position level - but the ItemNumber of the position is just &#39;01.02&#39;, then it will be displayed as &#39;01.__.02&#39; if this is set to true. (optional)
+     * @param  string|null $destinationOenormType Defaults to Lv2015 (optional)
+     * @param  bool|null $tryRepairProjectStructure Defaults to false. If this is enabled, the converter will try to ensure that the project structure can be mapped to Oenorm. It might introduce additional group levels to ensure a compatible target (optional)
+     * @param  bool|null $skipTryEnforceSchemaCompliantXmlOutput If this option is enabled, AVACloud will not attempt to force a schema-compliant Xml output for ÖNorm targets that are Xml based. By default, AVACloud will try to add required fields, even if no data is present, with sensible defaults. This behavior can be disabled with this option. (optional)
+     * @param  bool|null $removeUnprintableCharactersFromTexts If this is enabled, unprintable characters are removed from text elements. Otherwise, the conversion might fail in case some text content contains characters that are not allowed in XML output formats. Defaults to true. (optional)
+     * @param  bool|null $outputHtmlAsXml Defaults to &#39;false&#39;. If this is enabled, then Html text will be output as XML in the output. This means that e.g. void Html tags will always be output with their closing tag, e.g. it will produce &#39;&lt;br /&gt;&#39; instead of &#39;&lt;br&gt;&#39;. (optional)
+     * @param  bool|null $keepEmptyHtmlText Defaults to &#39;false&#39;. If this is enabled, then Html text that is empty will be kept in the output. Otherwise, Html text without any plain text will be removed. This is useful for example if you want to keep texts that only consist of empty paragraphs in the output. (optional)
+     * @param  bool|null $allowUpperCaseItemNumbers Defaults to &#39;false&#39;. If this is enabled, then the ItemNumber of positions will be in uppercase format if the source file has them. By default, all item numbers will be converted to lowercase, but this option will enable the option to support uppercase item numbers as well. (optional)
+     * @param  bool|null $allowLumpSumItemsWithDifferingQuantities Defaults to &#39;false&#39;. By default, the GAEB standard requires lump sum items (&#39;Pauschalpositionen&#39; in German) to have a quantity of exactly 1. AVACloud does enforce this convention, but if you set this property to &#39;true&#39;, then differing quantities will be kept during the import. (optional)
+     * @param  bool|null $disableItemNumberIdentifierTransformations If this is enabled, single item number tiers will only be left padded with spaces  to their respective length, but spaces will not be filled with zeroes at the  beginning. Defaults to &#39;false&#39;. This can be used to preserve item numbers exactly as they are in the source file, but it is not recommended to use this option since it may also allow incorrect or non schema compliant item numbers to be imported. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gaebConversionConvertToOenorm'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gaebConversionConvertToOenormRequest($support_skipped_item_number_levels_in_positions = null, $destination_oenorm_type = null, $try_repair_project_structure = null, $skip_try_enforce_schema_compliant_xml_output = null, $remove_unprintable_characters_from_texts = null, $output_html_as_xml = null, $keep_empty_html_text = null, $allow_upper_case_item_numbers = null, $allow_lump_sum_items_with_differing_quantities = null, $disable_item_number_identifier_transformations = null, $gaeb_file = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
+    public function gaebConversionConvertToOenormRequest($gaebFile = null, $supportSkippedItemNumberLevelsInPositions = null, $destinationOenormType = null, $tryRepairProjectStructure = null, $skipTryEnforceSchemaCompliantXmlOutput = null, $removeUnprintableCharactersFromTexts = null, $outputHtmlAsXml = null, $keepEmptyHtmlText = null, $allowUpperCaseItemNumbers = null, $allowLumpSumItemsWithDifferingQuantities = null, $disableItemNumberIdentifierTransformations = null, string $contentType = self::contentTypes['gaebConversionConvertToOenorm'][0])
     {
 
 
@@ -2109,7 +2109,7 @@ class GaebConversionApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $support_skipped_item_number_levels_in_positions,
+            $supportSkippedItemNumberLevelsInPositions,
             'SupportSkippedItemNumberLevelsInPositions', // param base name
             'boolean', // openApiType
             '', // style
@@ -2118,7 +2118,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $destination_oenorm_type,
+            $destinationOenormType,
             'DestinationOenormType', // param base name
             'string', // openApiType
             '', // style
@@ -2127,7 +2127,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $try_repair_project_structure,
+            $tryRepairProjectStructure,
             'TryRepairProjectStructure', // param base name
             'boolean', // openApiType
             '', // style
@@ -2136,7 +2136,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $skip_try_enforce_schema_compliant_xml_output,
+            $skipTryEnforceSchemaCompliantXmlOutput,
             'SkipTryEnforceSchemaCompliantXmlOutput', // param base name
             'boolean', // openApiType
             '', // style
@@ -2145,7 +2145,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $remove_unprintable_characters_from_texts,
+            $removeUnprintableCharactersFromTexts,
             'RemoveUnprintableCharactersFromTexts', // param base name
             'boolean', // openApiType
             '', // style
@@ -2154,7 +2154,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $output_html_as_xml,
+            $outputHtmlAsXml,
             'OutputHtmlAsXml', // param base name
             'boolean', // openApiType
             '', // style
@@ -2163,7 +2163,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $keep_empty_html_text,
+            $keepEmptyHtmlText,
             'KeepEmptyHtmlText', // param base name
             'boolean', // openApiType
             '', // style
@@ -2172,7 +2172,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_upper_case_item_numbers,
+            $allowUpperCaseItemNumbers,
             'AllowUpperCaseItemNumbers', // param base name
             'boolean', // openApiType
             '', // style
@@ -2181,7 +2181,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $allow_lump_sum_items_with_differing_quantities,
+            $allowLumpSumItemsWithDifferingQuantities,
             'AllowLumpSumItemsWithDifferingQuantities', // param base name
             'boolean', // openApiType
             '', // style
@@ -2190,7 +2190,7 @@ class GaebConversionApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $disable_item_number_identifier_transformations,
+            $disableItemNumberIdentifierTransformations,
             'DisableItemNumberIdentifierTransformations', // param base name
             'boolean', // openApiType
             '', // style
@@ -2204,7 +2204,7 @@ class GaebConversionApi
         $formDataProcessor = new FormDataProcessor();
 
         $formData = $formDataProcessor->prepare([
-            'gaeb_file' => $gaeb_file,
+            'gaebFile' => $gaebFile,
         ]);
 
         $formParams = $formDataProcessor->flatten($formData);

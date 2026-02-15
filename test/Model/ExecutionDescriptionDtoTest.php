@@ -108,7 +108,7 @@ class ExecutionDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "element_type"
+     * Test attribute "elementType"
      */
     public function testPropertyElementType()
     {

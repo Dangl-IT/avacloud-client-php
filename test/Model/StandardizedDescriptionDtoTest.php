@@ -81,7 +81,7 @@ class StandardizedDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "standard_reference_type"
+     * Test attribute "standardReferenceType"
      */
     public function testPropertyStandardReferenceType()
     {
@@ -90,7 +90,7 @@ class StandardizedDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "standard_reference"
+     * Test attribute "standardReference"
      */
     public function testPropertyStandardReference()
     {
@@ -99,7 +99,7 @@ class StandardizedDescriptionDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "stlb_reference"
+     * Test attribute "stlbReference"
      */
     public function testPropertyStlbReference()
     {

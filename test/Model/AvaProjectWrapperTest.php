@@ -90,7 +90,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_number"
+     * Test attribute "invoiceNumber"
      */
     public function testPropertyInvoiceNumber()
     {
@@ -108,7 +108,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_period"
+     * Test attribute "invoicePeriod"
      */
     public function testPropertyInvoicePeriod()
     {
@@ -117,7 +117,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_instructions"
+     * Test attribute "paymentInstructions"
      */
     public function testPropertyPaymentInstructions()
     {
@@ -126,7 +126,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_type"
+     * Test attribute "invoiceType"
      */
     public function testPropertyInvoiceType()
     {
@@ -135,7 +135,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "is_eu_reverse_charge_invoice"
+     * Test attribute "isEuReverseChargeInvoice"
      */
     public function testPropertyIsEuReverseChargeInvoice()
     {
@@ -144,7 +144,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_due_date"
+     * Test attribute "paymentDueDate"
      */
     public function testPropertyPaymentDueDate()
     {
@@ -153,7 +153,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_terms"
+     * Test attribute "paymentTerms"
      */
     public function testPropertyPaymentTerms()
     {
@@ -162,7 +162,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "previous_invoices"
+     * Test attribute "previousInvoices"
      */
     public function testPropertyPreviousInvoices()
     {
@@ -171,7 +171,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "already_paid_total_gross"
+     * Test attribute "alreadyPaidTotalGross"
      */
     public function testPropertyAlreadyPaidTotalGross()
     {
@@ -207,7 +207,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_information"
+     * Test attribute "deliveryInformation"
      */
     public function testPropertyDeliveryInformation()
     {
@@ -216,7 +216,7 @@ class AvaProjectWrapperTest extends TestCase
     }
 
     /**
-     * Test attribute "seller_tax_representative"
+     * Test attribute "sellerTaxRepresentative"
      */
     public function testPropertySellerTaxRepresentative()
     {

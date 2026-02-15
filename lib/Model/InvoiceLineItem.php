@@ -61,18 +61,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'identifier' => 'string',
         'note' => 'string',
-        'object_identifier' => 'string',
+        'objectIdentifier' => 'string',
         'quantity' => 'float',
-        'unit_code' => 'string',
-        'net_amount' => 'float',
-        'purchase_order_reference' => 'string',
-        'line_item_period' => '\Dangl\AVACloud\Model\InvoicePeriod',
+        'unitCode' => 'string',
+        'netAmount' => 'float',
+        'purchaseOrderReference' => 'string',
+        'lineItemPeriod' => '\Dangl\AVACloud\Model\InvoicePeriod',
         'allowances' => '\Dangl\AVACloud\Model\LineItemAllowance[]',
         'charges' => '\Dangl\AVACloud\Model\LineItemCharge[]',
-        'price_details' => '\Dangl\AVACloud\Model\LineItemPriceDetail',
-        'vat_information' => '\Dangl\AVACloud\Model\LineItemVatInformation[]',
-        'item_information' => '\Dangl\AVACloud\Model\LineItemInformation',
-        'sub_items' => '\Dangl\AVACloud\Model\InvoiceLineItem[]'
+        'priceDetails' => '\Dangl\AVACloud\Model\LineItemPriceDetail',
+        'vatInformation' => '\Dangl\AVACloud\Model\LineItemVatInformation[]',
+        'itemInformation' => '\Dangl\AVACloud\Model\LineItemInformation',
+        'subItems' => '\Dangl\AVACloud\Model\InvoiceLineItem[]'
     ];
 
     /**
@@ -85,18 +85,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'identifier' => null,
         'note' => null,
-        'object_identifier' => null,
+        'objectIdentifier' => null,
         'quantity' => 'decimal',
-        'unit_code' => null,
-        'net_amount' => 'decimal',
-        'purchase_order_reference' => null,
-        'line_item_period' => null,
+        'unitCode' => null,
+        'netAmount' => 'decimal',
+        'purchaseOrderReference' => null,
+        'lineItemPeriod' => null,
         'allowances' => null,
         'charges' => null,
-        'price_details' => null,
-        'vat_information' => null,
-        'item_information' => null,
-        'sub_items' => null
+        'priceDetails' => null,
+        'vatInformation' => null,
+        'itemInformation' => null,
+        'subItems' => null
     ];
 
     /**
@@ -107,18 +107,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'identifier' => false,
         'note' => false,
-        'object_identifier' => false,
+        'objectIdentifier' => false,
         'quantity' => false,
-        'unit_code' => false,
-        'net_amount' => false,
-        'purchase_order_reference' => false,
-        'line_item_period' => false,
+        'unitCode' => false,
+        'netAmount' => false,
+        'purchaseOrderReference' => false,
+        'lineItemPeriod' => false,
         'allowances' => false,
         'charges' => false,
-        'price_details' => false,
-        'vat_information' => false,
-        'item_information' => false,
-        'sub_items' => false
+        'priceDetails' => false,
+        'vatInformation' => false,
+        'itemInformation' => false,
+        'subItems' => false
     ];
 
     /**
@@ -209,18 +209,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'identifier' => 'identifier',
         'note' => 'note',
-        'object_identifier' => 'objectIdentifier',
+        'objectIdentifier' => 'objectIdentifier',
         'quantity' => 'quantity',
-        'unit_code' => 'unitCode',
-        'net_amount' => 'netAmount',
-        'purchase_order_reference' => 'purchaseOrderReference',
-        'line_item_period' => 'lineItemPeriod',
+        'unitCode' => 'unitCode',
+        'netAmount' => 'netAmount',
+        'purchaseOrderReference' => 'purchaseOrderReference',
+        'lineItemPeriod' => 'lineItemPeriod',
         'allowances' => 'allowances',
         'charges' => 'charges',
-        'price_details' => 'priceDetails',
-        'vat_information' => 'vatInformation',
-        'item_information' => 'itemInformation',
-        'sub_items' => 'subItems'
+        'priceDetails' => 'priceDetails',
+        'vatInformation' => 'vatInformation',
+        'itemInformation' => 'itemInformation',
+        'subItems' => 'subItems'
     ];
 
     /**
@@ -231,18 +231,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'identifier' => 'setIdentifier',
         'note' => 'setNote',
-        'object_identifier' => 'setObjectIdentifier',
+        'objectIdentifier' => 'setObjectIdentifier',
         'quantity' => 'setQuantity',
-        'unit_code' => 'setUnitCode',
-        'net_amount' => 'setNetAmount',
-        'purchase_order_reference' => 'setPurchaseOrderReference',
-        'line_item_period' => 'setLineItemPeriod',
+        'unitCode' => 'setUnitCode',
+        'netAmount' => 'setNetAmount',
+        'purchaseOrderReference' => 'setPurchaseOrderReference',
+        'lineItemPeriod' => 'setLineItemPeriod',
         'allowances' => 'setAllowances',
         'charges' => 'setCharges',
-        'price_details' => 'setPriceDetails',
-        'vat_information' => 'setVatInformation',
-        'item_information' => 'setItemInformation',
-        'sub_items' => 'setSubItems'
+        'priceDetails' => 'setPriceDetails',
+        'vatInformation' => 'setVatInformation',
+        'itemInformation' => 'setItemInformation',
+        'subItems' => 'setSubItems'
     ];
 
     /**
@@ -253,18 +253,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'identifier' => 'getIdentifier',
         'note' => 'getNote',
-        'object_identifier' => 'getObjectIdentifier',
+        'objectIdentifier' => 'getObjectIdentifier',
         'quantity' => 'getQuantity',
-        'unit_code' => 'getUnitCode',
-        'net_amount' => 'getNetAmount',
-        'purchase_order_reference' => 'getPurchaseOrderReference',
-        'line_item_period' => 'getLineItemPeriod',
+        'unitCode' => 'getUnitCode',
+        'netAmount' => 'getNetAmount',
+        'purchaseOrderReference' => 'getPurchaseOrderReference',
+        'lineItemPeriod' => 'getLineItemPeriod',
         'allowances' => 'getAllowances',
         'charges' => 'getCharges',
-        'price_details' => 'getPriceDetails',
-        'vat_information' => 'getVatInformation',
-        'item_information' => 'getItemInformation',
-        'sub_items' => 'getSubItems'
+        'priceDetails' => 'getPriceDetails',
+        'vatInformation' => 'getVatInformation',
+        'itemInformation' => 'getItemInformation',
+        'subItems' => 'getSubItems'
     ];
 
     /**
@@ -326,18 +326,18 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('identifier', $data ?? [], null);
         $this->setIfExists('note', $data ?? [], null);
-        $this->setIfExists('object_identifier', $data ?? [], null);
+        $this->setIfExists('objectIdentifier', $data ?? [], null);
         $this->setIfExists('quantity', $data ?? [], null);
-        $this->setIfExists('unit_code', $data ?? [], null);
-        $this->setIfExists('net_amount', $data ?? [], null);
-        $this->setIfExists('purchase_order_reference', $data ?? [], null);
-        $this->setIfExists('line_item_period', $data ?? [], null);
+        $this->setIfExists('unitCode', $data ?? [], null);
+        $this->setIfExists('netAmount', $data ?? [], null);
+        $this->setIfExists('purchaseOrderReference', $data ?? [], null);
+        $this->setIfExists('lineItemPeriod', $data ?? [], null);
         $this->setIfExists('allowances', $data ?? [], null);
         $this->setIfExists('charges', $data ?? [], null);
-        $this->setIfExists('price_details', $data ?? [], null);
-        $this->setIfExists('vat_information', $data ?? [], null);
-        $this->setIfExists('item_information', $data ?? [], null);
-        $this->setIfExists('sub_items', $data ?? [], null);
+        $this->setIfExists('priceDetails', $data ?? [], null);
+        $this->setIfExists('vatInformation', $data ?? [], null);
+        $this->setIfExists('itemInformation', $data ?? [], null);
+        $this->setIfExists('subItems', $data ?? [], null);
     }
 
     /**
@@ -437,28 +437,28 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets object_identifier
+     * Gets objectIdentifier
      *
      * @return string|null
      */
     public function getObjectIdentifier()
     {
-        return $this->container['object_identifier'];
+        return $this->container['objectIdentifier'];
     }
 
     /**
-     * Sets object_identifier
+     * Sets objectIdentifier
      *
-     * @param string|null $object_identifier BT-128 A seller-defined object identifier for this line item, meaning an identifier for the actual line. This could be a numbering sequence or a reference to a product.
+     * @param string|null $objectIdentifier BT-128 A seller-defined object identifier for this line item, meaning an identifier for the actual line. This could be a numbering sequence or a reference to a product.
      *
      * @return self
      */
-    public function setObjectIdentifier($object_identifier)
+    public function setObjectIdentifier($objectIdentifier)
     {
-        if (is_null($object_identifier)) {
-            throw new \InvalidArgumentException('non-nullable object_identifier cannot be null');
+        if (is_null($objectIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable objectIdentifier cannot be null');
         }
-        $this->container['object_identifier'] = $object_identifier;
+        $this->container['objectIdentifier'] = $objectIdentifier;
 
         return $this;
     }
@@ -491,109 +491,109 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets unit_code
+     * Gets unitCode
      *
      * @return string|null
      */
     public function getUnitCode()
     {
-        return $this->container['unit_code'];
+        return $this->container['unitCode'];
     }
 
     /**
-     * Sets unit_code
+     * Sets unitCode
      *
-     * @param string|null $unit_code BT-130 A code for the unit of the quantity. This should be a code as defined in UN/ECE Recommendation No. 20 „Codes for Units of Measure Used in  International Trade“ und UN/ECE Recommendation No 21 „Codes for Passengers, Types of Cargo, Packages and Packaging Materials(with Complementary Codes for Package Names). See here: https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931
+     * @param string|null $unitCode BT-130 A code for the unit of the quantity. This should be a code as defined in UN/ECE Recommendation No. 20 „Codes for Units of Measure Used in  International Trade“ und UN/ECE Recommendation No 21 „Codes for Passengers, Types of Cargo, Packages and Packaging Materials(with Complementary Codes for Package Names). See here: https://ec.europa.eu/digital-building-blocks/sites/display/DIGITAL/Registry+of+supporting+artefacts+to+implement+EN16931
      *
      * @return self
      */
-    public function setUnitCode($unit_code)
+    public function setUnitCode($unitCode)
     {
-        if (is_null($unit_code)) {
-            throw new \InvalidArgumentException('non-nullable unit_code cannot be null');
+        if (is_null($unitCode)) {
+            throw new \InvalidArgumentException('non-nullable unitCode cannot be null');
         }
-        $this->container['unit_code'] = $unit_code;
+        $this->container['unitCode'] = $unitCode;
 
         return $this;
     }
 
     /**
-     * Gets net_amount
+     * Gets netAmount
      *
      * @return float|null
      */
     public function getNetAmount()
     {
-        return $this->container['net_amount'];
+        return $this->container['netAmount'];
     }
 
     /**
-     * Sets net_amount
+     * Sets netAmount
      *
-     * @param float|null $net_amount BT-131 The net amount for this line item. This is the total price for positions
+     * @param float|null $netAmount BT-131 The net amount for this line item. This is the total price for positions
      *
      * @return self
      */
-    public function setNetAmount($net_amount)
+    public function setNetAmount($netAmount)
     {
-        if (is_null($net_amount)) {
-            throw new \InvalidArgumentException('non-nullable net_amount cannot be null');
+        if (is_null($netAmount)) {
+            throw new \InvalidArgumentException('non-nullable netAmount cannot be null');
         }
-        $this->container['net_amount'] = $net_amount;
+        $this->container['netAmount'] = $netAmount;
 
         return $this;
     }
 
     /**
-     * Gets purchase_order_reference
+     * Gets purchaseOrderReference
      *
      * @return string|null
      */
     public function getPurchaseOrderReference()
     {
-        return $this->container['purchase_order_reference'];
+        return $this->container['purchaseOrderReference'];
     }
 
     /**
-     * Sets purchase_order_reference
+     * Sets purchaseOrderReference
      *
-     * @param string|null $purchase_order_reference BT-132 A reference to an item in the buyers purachase order
+     * @param string|null $purchaseOrderReference BT-132 A reference to an item in the buyers purachase order
      *
      * @return self
      */
-    public function setPurchaseOrderReference($purchase_order_reference)
+    public function setPurchaseOrderReference($purchaseOrderReference)
     {
-        if (is_null($purchase_order_reference)) {
-            throw new \InvalidArgumentException('non-nullable purchase_order_reference cannot be null');
+        if (is_null($purchaseOrderReference)) {
+            throw new \InvalidArgumentException('non-nullable purchaseOrderReference cannot be null');
         }
-        $this->container['purchase_order_reference'] = $purchase_order_reference;
+        $this->container['purchaseOrderReference'] = $purchaseOrderReference;
 
         return $this;
     }
 
     /**
-     * Gets line_item_period
+     * Gets lineItemPeriod
      *
      * @return \Dangl\AVACloud\Model\InvoicePeriod|null
      */
     public function getLineItemPeriod()
     {
-        return $this->container['line_item_period'];
+        return $this->container['lineItemPeriod'];
     }
 
     /**
-     * Sets line_item_period
+     * Sets lineItemPeriod
      *
-     * @param \Dangl\AVACloud\Model\InvoicePeriod|null $line_item_period line_item_period
+     * @param \Dangl\AVACloud\Model\InvoicePeriod|null $lineItemPeriod lineItemPeriod
      *
      * @return self
      */
-    public function setLineItemPeriod($line_item_period)
+    public function setLineItemPeriod($lineItemPeriod)
     {
-        if (is_null($line_item_period)) {
-            throw new \InvalidArgumentException('non-nullable line_item_period cannot be null');
+        if (is_null($lineItemPeriod)) {
+            throw new \InvalidArgumentException('non-nullable lineItemPeriod cannot be null');
         }
-        $this->container['line_item_period'] = $line_item_period;
+        $this->container['lineItemPeriod'] = $lineItemPeriod;
 
         return $this;
     }
@@ -653,109 +653,109 @@ class InvoiceLineItem implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets price_details
+     * Gets priceDetails
      *
      * @return \Dangl\AVACloud\Model\LineItemPriceDetail|null
      */
     public function getPriceDetails()
     {
-        return $this->container['price_details'];
+        return $this->container['priceDetails'];
     }
 
     /**
-     * Sets price_details
+     * Sets priceDetails
      *
-     * @param \Dangl\AVACloud\Model\LineItemPriceDetail|null $price_details price_details
+     * @param \Dangl\AVACloud\Model\LineItemPriceDetail|null $priceDetails priceDetails
      *
      * @return self
      */
-    public function setPriceDetails($price_details)
+    public function setPriceDetails($priceDetails)
     {
-        if (is_null($price_details)) {
-            throw new \InvalidArgumentException('non-nullable price_details cannot be null');
+        if (is_null($priceDetails)) {
+            throw new \InvalidArgumentException('non-nullable priceDetails cannot be null');
         }
-        $this->container['price_details'] = $price_details;
+        $this->container['priceDetails'] = $priceDetails;
 
         return $this;
     }
 
     /**
-     * Gets vat_information
+     * Gets vatInformation
      *
      * @return \Dangl\AVACloud\Model\LineItemVatInformation[]|null
      */
     public function getVatInformation()
     {
-        return $this->container['vat_information'];
+        return $this->container['vatInformation'];
     }
 
     /**
-     * Sets vat_information
+     * Sets vatInformation
      *
-     * @param \Dangl\AVACloud\Model\LineItemVatInformation[]|null $vat_information BG-30 VAT information for this line item
+     * @param \Dangl\AVACloud\Model\LineItemVatInformation[]|null $vatInformation BG-30 VAT information for this line item
      *
      * @return self
      */
-    public function setVatInformation($vat_information)
+    public function setVatInformation($vatInformation)
     {
-        if (is_null($vat_information)) {
-            throw new \InvalidArgumentException('non-nullable vat_information cannot be null');
+        if (is_null($vatInformation)) {
+            throw new \InvalidArgumentException('non-nullable vatInformation cannot be null');
         }
-        $this->container['vat_information'] = $vat_information;
+        $this->container['vatInformation'] = $vatInformation;
 
         return $this;
     }
 
     /**
-     * Gets item_information
+     * Gets itemInformation
      *
      * @return \Dangl\AVACloud\Model\LineItemInformation|null
      */
     public function getItemInformation()
     {
-        return $this->container['item_information'];
+        return $this->container['itemInformation'];
     }
 
     /**
-     * Sets item_information
+     * Sets itemInformation
      *
-     * @param \Dangl\AVACloud\Model\LineItemInformation|null $item_information item_information
+     * @param \Dangl\AVACloud\Model\LineItemInformation|null $itemInformation itemInformation
      *
      * @return self
      */
-    public function setItemInformation($item_information)
+    public function setItemInformation($itemInformation)
     {
-        if (is_null($item_information)) {
-            throw new \InvalidArgumentException('non-nullable item_information cannot be null');
+        if (is_null($itemInformation)) {
+            throw new \InvalidArgumentException('non-nullable itemInformation cannot be null');
         }
-        $this->container['item_information'] = $item_information;
+        $this->container['itemInformation'] = $itemInformation;
 
         return $this;
     }
 
     /**
-     * Gets sub_items
+     * Gets subItems
      *
      * @return \Dangl\AVACloud\Model\InvoiceLineItem[]|null
      */
     public function getSubItems()
     {
-        return $this->container['sub_items'];
+        return $this->container['subItems'];
     }
 
     /**
-     * Sets sub_items
+     * Sets subItems
      *
-     * @param \Dangl\AVACloud\Model\InvoiceLineItem[]|null $sub_items BG-DEX-01 Line items can be nested, in which case this property holds the sub items
+     * @param \Dangl\AVACloud\Model\InvoiceLineItem[]|null $subItems BG-DEX-01 Line items can be nested, in which case this property holds the sub items
      *
      * @return self
      */
-    public function setSubItems($sub_items)
+    public function setSubItems($subItems)
     {
-        if (is_null($sub_items)) {
-            throw new \InvalidArgumentException('non-nullable sub_items cannot be null');
+        if (is_null($subItems)) {
+            throw new \InvalidArgumentException('non-nullable subItems cannot be null');
         }
-        $this->container['sub_items'] = $sub_items;
+        $this->container['subItems'] = $subItems;
 
         return $this;
     }

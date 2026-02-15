@@ -60,10 +60,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'hold_out_type' => '\Dangl\AVACloud\Model\HoldOutTypeDto',
-        'hold_out_duration' => 'float',
-        'hold_out_duration_unit' => '\Dangl\AVACloud\Model\HoldOutDurationUnitDto',
-        'base_position_references' => 'string[]'
+        'holdOutType' => '\Dangl\AVACloud\Model\HoldOutTypeDto',
+        'holdOutDuration' => 'float',
+        'holdOutDurationUnit' => '\Dangl\AVACloud\Model\HoldOutDurationUnitDto',
+        'basePositionReferences' => 'string[]'
     ];
 
     /**
@@ -75,10 +75,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPIFormats = [
         'id' => 'guid',
-        'hold_out_type' => null,
-        'hold_out_duration' => 'decimal',
-        'hold_out_duration_unit' => null,
-        'base_position_references' => 'guid'
+        'holdOutType' => null,
+        'holdOutDuration' => 'decimal',
+        'holdOutDurationUnit' => null,
+        'basePositionReferences' => 'guid'
     ];
 
     /**
@@ -88,10 +88,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'hold_out_type' => false,
-        'hold_out_duration' => false,
-        'hold_out_duration_unit' => false,
-        'base_position_references' => false
+        'holdOutType' => false,
+        'holdOutDuration' => false,
+        'holdOutDurationUnit' => false,
+        'basePositionReferences' => false
     ];
 
     /**
@@ -181,10 +181,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'hold_out_type' => 'holdOutType',
-        'hold_out_duration' => 'holdOutDuration',
-        'hold_out_duration_unit' => 'holdOutDurationUnit',
-        'base_position_references' => 'basePositionReferences'
+        'holdOutType' => 'holdOutType',
+        'holdOutDuration' => 'holdOutDuration',
+        'holdOutDurationUnit' => 'holdOutDurationUnit',
+        'basePositionReferences' => 'basePositionReferences'
     ];
 
     /**
@@ -194,10 +194,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
      */
     protected static $setters = [
         'id' => 'setId',
-        'hold_out_type' => 'setHoldOutType',
-        'hold_out_duration' => 'setHoldOutDuration',
-        'hold_out_duration_unit' => 'setHoldOutDurationUnit',
-        'base_position_references' => 'setBasePositionReferences'
+        'holdOutType' => 'setHoldOutType',
+        'holdOutDuration' => 'setHoldOutDuration',
+        'holdOutDurationUnit' => 'setHoldOutDurationUnit',
+        'basePositionReferences' => 'setBasePositionReferences'
     ];
 
     /**
@@ -207,10 +207,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
      */
     protected static $getters = [
         'id' => 'getId',
-        'hold_out_type' => 'getHoldOutType',
-        'hold_out_duration' => 'getHoldOutDuration',
-        'hold_out_duration_unit' => 'getHoldOutDurationUnit',
-        'base_position_references' => 'getBasePositionReferences'
+        'holdOutType' => 'getHoldOutType',
+        'holdOutDuration' => 'getHoldOutDuration',
+        'holdOutDurationUnit' => 'getHoldOutDurationUnit',
+        'basePositionReferences' => 'getBasePositionReferences'
     ];
 
     /**
@@ -271,10 +271,10 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('hold_out_type', $data ?? [], null);
-        $this->setIfExists('hold_out_duration', $data ?? [], null);
-        $this->setIfExists('hold_out_duration_unit', $data ?? [], null);
-        $this->setIfExists('base_position_references', $data ?? [], null);
+        $this->setIfExists('holdOutType', $data ?? [], null);
+        $this->setIfExists('holdOutDuration', $data ?? [], null);
+        $this->setIfExists('holdOutDurationUnit', $data ?? [], null);
+        $this->setIfExists('basePositionReferences', $data ?? [], null);
     }
 
     /**
@@ -307,14 +307,14 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['hold_out_type'] === null) {
-            $invalidProperties[] = "'hold_out_type' can't be null";
+        if ($this->container['holdOutType'] === null) {
+            $invalidProperties[] = "'holdOutType' can't be null";
         }
-        if ($this->container['hold_out_duration'] === null) {
-            $invalidProperties[] = "'hold_out_duration' can't be null";
+        if ($this->container['holdOutDuration'] === null) {
+            $invalidProperties[] = "'holdOutDuration' can't be null";
         }
-        if ($this->container['hold_out_duration_unit'] === null) {
-            $invalidProperties[] = "'hold_out_duration_unit' can't be null";
+        if ($this->container['holdOutDurationUnit'] === null) {
+            $invalidProperties[] = "'holdOutDurationUnit' can't be null";
         }
         return $invalidProperties;
     }
@@ -359,109 +359,109 @@ class PositionHoldOutPropertiesDto implements ModelInterface, ArrayAccess, \Json
     }
 
     /**
-     * Gets hold_out_type
+     * Gets holdOutType
      *
      * @return \Dangl\AVACloud\Model\HoldOutTypeDto
      */
     public function getHoldOutType()
     {
-        return $this->container['hold_out_type'];
+        return $this->container['holdOutType'];
     }
 
     /**
-     * Sets hold_out_type
+     * Sets holdOutType
      *
-     * @param \Dangl\AVACloud\Model\HoldOutTypeDto $hold_out_type hold_out_type
+     * @param \Dangl\AVACloud\Model\HoldOutTypeDto $holdOutType holdOutType
      *
      * @return self
      */
-    public function setHoldOutType($hold_out_type)
+    public function setHoldOutType($holdOutType)
     {
-        if (is_null($hold_out_type)) {
-            throw new \InvalidArgumentException('non-nullable hold_out_type cannot be null');
+        if (is_null($holdOutType)) {
+            throw new \InvalidArgumentException('non-nullable holdOutType cannot be null');
         }
-        $this->container['hold_out_type'] = $hold_out_type;
+        $this->container['holdOutType'] = $holdOutType;
 
         return $this;
     }
 
     /**
-     * Gets hold_out_duration
+     * Gets holdOutDuration
      *
      * @return float
      */
     public function getHoldOutDuration()
     {
-        return $this->container['hold_out_duration'];
+        return $this->container['holdOutDuration'];
     }
 
     /**
-     * Sets hold_out_duration
+     * Sets holdOutDuration
      *
-     * @param float $hold_out_duration The duration of the period
+     * @param float $holdOutDuration The duration of the period
      *
      * @return self
      */
-    public function setHoldOutDuration($hold_out_duration)
+    public function setHoldOutDuration($holdOutDuration)
     {
-        if (is_null($hold_out_duration)) {
-            throw new \InvalidArgumentException('non-nullable hold_out_duration cannot be null');
+        if (is_null($holdOutDuration)) {
+            throw new \InvalidArgumentException('non-nullable holdOutDuration cannot be null');
         }
-        $this->container['hold_out_duration'] = $hold_out_duration;
+        $this->container['holdOutDuration'] = $holdOutDuration;
 
         return $this;
     }
 
     /**
-     * Gets hold_out_duration_unit
+     * Gets holdOutDurationUnit
      *
      * @return \Dangl\AVACloud\Model\HoldOutDurationUnitDto
      */
     public function getHoldOutDurationUnit()
     {
-        return $this->container['hold_out_duration_unit'];
+        return $this->container['holdOutDurationUnit'];
     }
 
     /**
-     * Sets hold_out_duration_unit
+     * Sets holdOutDurationUnit
      *
-     * @param \Dangl\AVACloud\Model\HoldOutDurationUnitDto $hold_out_duration_unit hold_out_duration_unit
+     * @param \Dangl\AVACloud\Model\HoldOutDurationUnitDto $holdOutDurationUnit holdOutDurationUnit
      *
      * @return self
      */
-    public function setHoldOutDurationUnit($hold_out_duration_unit)
+    public function setHoldOutDurationUnit($holdOutDurationUnit)
     {
-        if (is_null($hold_out_duration_unit)) {
-            throw new \InvalidArgumentException('non-nullable hold_out_duration_unit cannot be null');
+        if (is_null($holdOutDurationUnit)) {
+            throw new \InvalidArgumentException('non-nullable holdOutDurationUnit cannot be null');
         }
-        $this->container['hold_out_duration_unit'] = $hold_out_duration_unit;
+        $this->container['holdOutDurationUnit'] = $holdOutDurationUnit;
 
         return $this;
     }
 
     /**
-     * Gets base_position_references
+     * Gets basePositionReferences
      *
      * @return string[]|null
      */
     public function getBasePositionReferences()
     {
-        return $this->container['base_position_references'];
+        return $this->container['basePositionReferences'];
     }
 
     /**
-     * Sets base_position_references
+     * Sets basePositionReferences
      *
-     * @param string[]|null $base_position_references References to base positions
+     * @param string[]|null $basePositionReferences References to base positions
      *
      * @return self
      */
-    public function setBasePositionReferences($base_position_references)
+    public function setBasePositionReferences($basePositionReferences)
     {
-        if (is_null($base_position_references)) {
-            throw new \InvalidArgumentException('non-nullable base_position_references cannot be null');
+        if (is_null($basePositionReferences)) {
+            throw new \InvalidArgumentException('non-nullable basePositionReferences cannot be null');
         }
-        $this->container['base_position_references'] = $base_position_references;
+        $this->container['basePositionReferences'] = $basePositionReferences;
 
         return $this;
     }

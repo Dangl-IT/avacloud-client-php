@@ -59,18 +59,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'total_length' => 'int',
+        'totalLength' => 'int',
         'tiers' => '\Dangl\AVACloud\Model\ItemNumberSchemaTierDto[]',
         'separator' => 'string',
         'filler' => 'string',
         'identifier' => 'string',
-        'skip_non_existing_levels_in_position_item_numbers' => 'bool',
-        'skipped_tiers_filler' => 'string',
-        'schema_is_correctly_defined' => 'bool',
-        'allow_upper_case_lettering' => 'bool',
-        'disable_left_padding_tiers_with_filler' => 'bool',
-        'disable_item_number_identifier_transformations' => 'bool',
-        'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' => 'bool'
+        'skipNonExistingLevelsInPositionItemNumbers' => 'bool',
+        'skippedTiersFiller' => 'string',
+        'schemaIsCorrectlyDefined' => 'bool',
+        'allowUpperCaseLettering' => 'bool',
+        'disableLeftPaddingTiersWithFiller' => 'bool',
+        'disableItemNumberIdentifierTransformations' => 'bool',
+        'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' => 'bool'
     ];
 
     /**
@@ -81,18 +81,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'total_length' => 'int32',
+        'totalLength' => 'int32',
         'tiers' => null,
         'separator' => null,
         'filler' => null,
         'identifier' => null,
-        'skip_non_existing_levels_in_position_item_numbers' => null,
-        'skipped_tiers_filler' => null,
-        'schema_is_correctly_defined' => null,
-        'allow_upper_case_lettering' => null,
-        'disable_left_padding_tiers_with_filler' => null,
-        'disable_item_number_identifier_transformations' => null,
-        'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' => null
+        'skipNonExistingLevelsInPositionItemNumbers' => null,
+        'skippedTiersFiller' => null,
+        'schemaIsCorrectlyDefined' => null,
+        'allowUpperCaseLettering' => null,
+        'disableLeftPaddingTiersWithFiller' => null,
+        'disableItemNumberIdentifierTransformations' => null,
+        'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' => null
     ];
 
     /**
@@ -101,18 +101,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'total_length' => false,
+        'totalLength' => false,
         'tiers' => false,
         'separator' => false,
         'filler' => false,
         'identifier' => false,
-        'skip_non_existing_levels_in_position_item_numbers' => false,
-        'skipped_tiers_filler' => false,
-        'schema_is_correctly_defined' => false,
-        'allow_upper_case_lettering' => false,
-        'disable_left_padding_tiers_with_filler' => false,
-        'disable_item_number_identifier_transformations' => false,
-        'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' => false
+        'skipNonExistingLevelsInPositionItemNumbers' => false,
+        'skippedTiersFiller' => false,
+        'schemaIsCorrectlyDefined' => false,
+        'allowUpperCaseLettering' => false,
+        'disableLeftPaddingTiersWithFiller' => false,
+        'disableItemNumberIdentifierTransformations' => false,
+        'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' => false
     ];
 
     /**
@@ -201,18 +201,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'total_length' => 'totalLength',
+        'totalLength' => 'totalLength',
         'tiers' => 'tiers',
         'separator' => 'separator',
         'filler' => 'filler',
         'identifier' => 'identifier',
-        'skip_non_existing_levels_in_position_item_numbers' => 'skipNonExistingLevelsInPositionItemNumbers',
-        'skipped_tiers_filler' => 'skippedTiersFiller',
-        'schema_is_correctly_defined' => 'schemaIsCorrectlyDefined',
-        'allow_upper_case_lettering' => 'allowUpperCaseLettering',
-        'disable_left_padding_tiers_with_filler' => 'disableLeftPaddingTiersWithFiller',
-        'disable_item_number_identifier_transformations' => 'disableItemNumberIdentifierTransformations',
-        'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' => 'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'
+        'skipNonExistingLevelsInPositionItemNumbers' => 'skipNonExistingLevelsInPositionItemNumbers',
+        'skippedTiersFiller' => 'skippedTiersFiller',
+        'schemaIsCorrectlyDefined' => 'schemaIsCorrectlyDefined',
+        'allowUpperCaseLettering' => 'allowUpperCaseLettering',
+        'disableLeftPaddingTiersWithFiller' => 'disableLeftPaddingTiersWithFiller',
+        'disableItemNumberIdentifierTransformations' => 'disableItemNumberIdentifierTransformations',
+        'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' => 'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'
     ];
 
     /**
@@ -221,18 +221,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'total_length' => 'setTotalLength',
+        'totalLength' => 'setTotalLength',
         'tiers' => 'setTiers',
         'separator' => 'setSeparator',
         'filler' => 'setFiller',
         'identifier' => 'setIdentifier',
-        'skip_non_existing_levels_in_position_item_numbers' => 'setSkipNonExistingLevelsInPositionItemNumbers',
-        'skipped_tiers_filler' => 'setSkippedTiersFiller',
-        'schema_is_correctly_defined' => 'setSchemaIsCorrectlyDefined',
-        'allow_upper_case_lettering' => 'setAllowUpperCaseLettering',
-        'disable_left_padding_tiers_with_filler' => 'setDisableLeftPaddingTiersWithFiller',
-        'disable_item_number_identifier_transformations' => 'setDisableItemNumberIdentifierTransformations',
-        'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' => 'setDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'
+        'skipNonExistingLevelsInPositionItemNumbers' => 'setSkipNonExistingLevelsInPositionItemNumbers',
+        'skippedTiersFiller' => 'setSkippedTiersFiller',
+        'schemaIsCorrectlyDefined' => 'setSchemaIsCorrectlyDefined',
+        'allowUpperCaseLettering' => 'setAllowUpperCaseLettering',
+        'disableLeftPaddingTiersWithFiller' => 'setDisableLeftPaddingTiersWithFiller',
+        'disableItemNumberIdentifierTransformations' => 'setDisableItemNumberIdentifierTransformations',
+        'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' => 'setDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'
     ];
 
     /**
@@ -241,18 +241,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'total_length' => 'getTotalLength',
+        'totalLength' => 'getTotalLength',
         'tiers' => 'getTiers',
         'separator' => 'getSeparator',
         'filler' => 'getFiller',
         'identifier' => 'getIdentifier',
-        'skip_non_existing_levels_in_position_item_numbers' => 'getSkipNonExistingLevelsInPositionItemNumbers',
-        'skipped_tiers_filler' => 'getSkippedTiersFiller',
-        'schema_is_correctly_defined' => 'getSchemaIsCorrectlyDefined',
-        'allow_upper_case_lettering' => 'getAllowUpperCaseLettering',
-        'disable_left_padding_tiers_with_filler' => 'getDisableLeftPaddingTiersWithFiller',
-        'disable_item_number_identifier_transformations' => 'getDisableItemNumberIdentifierTransformations',
-        'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' => 'getDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'
+        'skipNonExistingLevelsInPositionItemNumbers' => 'getSkipNonExistingLevelsInPositionItemNumbers',
+        'skippedTiersFiller' => 'getSkippedTiersFiller',
+        'schemaIsCorrectlyDefined' => 'getSchemaIsCorrectlyDefined',
+        'allowUpperCaseLettering' => 'getAllowUpperCaseLettering',
+        'disableLeftPaddingTiersWithFiller' => 'getDisableLeftPaddingTiersWithFiller',
+        'disableItemNumberIdentifierTransformations' => 'getDisableItemNumberIdentifierTransformations',
+        'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' => 'getDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'
     ];
 
     /**
@@ -312,18 +312,18 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('total_length', $data ?? [], null);
+        $this->setIfExists('totalLength', $data ?? [], null);
         $this->setIfExists('tiers', $data ?? [], null);
         $this->setIfExists('separator', $data ?? [], null);
         $this->setIfExists('filler', $data ?? [], null);
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('skip_non_existing_levels_in_position_item_numbers', $data ?? [], null);
-        $this->setIfExists('skipped_tiers_filler', $data ?? [], null);
-        $this->setIfExists('schema_is_correctly_defined', $data ?? [], null);
-        $this->setIfExists('allow_upper_case_lettering', $data ?? [], null);
-        $this->setIfExists('disable_left_padding_tiers_with_filler', $data ?? [], null);
-        $this->setIfExists('disable_item_number_identifier_transformations', $data ?? [], null);
-        $this->setIfExists('disable_item_number_identifier_transformations_only_for_alphanumeric_tiers', $data ?? [], null);
+        $this->setIfExists('skipNonExistingLevelsInPositionItemNumbers', $data ?? [], null);
+        $this->setIfExists('skippedTiersFiller', $data ?? [], null);
+        $this->setIfExists('schemaIsCorrectlyDefined', $data ?? [], null);
+        $this->setIfExists('allowUpperCaseLettering', $data ?? [], null);
+        $this->setIfExists('disableLeftPaddingTiersWithFiller', $data ?? [], null);
+        $this->setIfExists('disableItemNumberIdentifierTransformations', $data ?? [], null);
+        $this->setIfExists('disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers', $data ?? [], null);
     }
 
     /**
@@ -353,26 +353,26 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
     {
         $invalidProperties = [];
 
-        if ($this->container['total_length'] === null) {
-            $invalidProperties[] = "'total_length' can't be null";
+        if ($this->container['totalLength'] === null) {
+            $invalidProperties[] = "'totalLength' can't be null";
         }
-        if ($this->container['skip_non_existing_levels_in_position_item_numbers'] === null) {
-            $invalidProperties[] = "'skip_non_existing_levels_in_position_item_numbers' can't be null";
+        if ($this->container['skipNonExistingLevelsInPositionItemNumbers'] === null) {
+            $invalidProperties[] = "'skipNonExistingLevelsInPositionItemNumbers' can't be null";
         }
-        if ($this->container['schema_is_correctly_defined'] === null) {
-            $invalidProperties[] = "'schema_is_correctly_defined' can't be null";
+        if ($this->container['schemaIsCorrectlyDefined'] === null) {
+            $invalidProperties[] = "'schemaIsCorrectlyDefined' can't be null";
         }
-        if ($this->container['allow_upper_case_lettering'] === null) {
-            $invalidProperties[] = "'allow_upper_case_lettering' can't be null";
+        if ($this->container['allowUpperCaseLettering'] === null) {
+            $invalidProperties[] = "'allowUpperCaseLettering' can't be null";
         }
-        if ($this->container['disable_left_padding_tiers_with_filler'] === null) {
-            $invalidProperties[] = "'disable_left_padding_tiers_with_filler' can't be null";
+        if ($this->container['disableLeftPaddingTiersWithFiller'] === null) {
+            $invalidProperties[] = "'disableLeftPaddingTiersWithFiller' can't be null";
         }
-        if ($this->container['disable_item_number_identifier_transformations'] === null) {
-            $invalidProperties[] = "'disable_item_number_identifier_transformations' can't be null";
+        if ($this->container['disableItemNumberIdentifierTransformations'] === null) {
+            $invalidProperties[] = "'disableItemNumberIdentifierTransformations' can't be null";
         }
-        if ($this->container['disable_item_number_identifier_transformations_only_for_alphanumeric_tiers'] === null) {
-            $invalidProperties[] = "'disable_item_number_identifier_transformations_only_for_alphanumeric_tiers' can't be null";
+        if ($this->container['disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'] === null) {
+            $invalidProperties[] = "'disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers' can't be null";
         }
         return $invalidProperties;
     }
@@ -390,28 +390,28 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets total_length
+     * Gets totalLength
      *
      * @return int
      */
     public function getTotalLength()
     {
-        return $this->container['total_length'];
+        return $this->container['totalLength'];
     }
 
     /**
-     * Sets total_length
+     * Sets totalLength
      *
-     * @param int $total_length The count of tiers in the ItemNumberSchema
+     * @param int $totalLength The count of tiers in the ItemNumberSchema
      *
      * @return self
      */
-    public function setTotalLength($total_length)
+    public function setTotalLength($totalLength)
     {
-        if (is_null($total_length)) {
-            throw new \InvalidArgumentException('non-nullable total_length cannot be null');
+        if (is_null($totalLength)) {
+            throw new \InvalidArgumentException('non-nullable totalLength cannot be null');
         }
-        $this->container['total_length'] = $total_length;
+        $this->container['totalLength'] = $totalLength;
 
         return $this;
     }
@@ -525,190 +525,190 @@ class ItemNumberSchemaDto implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets skip_non_existing_levels_in_position_item_numbers
+     * Gets skipNonExistingLevelsInPositionItemNumbers
      *
      * @return bool
      */
     public function getSkipNonExistingLevelsInPositionItemNumbers()
     {
-        return $this->container['skip_non_existing_levels_in_position_item_numbers'];
+        return $this->container['skipNonExistingLevelsInPositionItemNumbers'];
     }
 
     /**
-     * Sets skip_non_existing_levels_in_position_item_numbers
+     * Sets skipNonExistingLevelsInPositionItemNumbers
      *
-     * @param bool $skip_non_existing_levels_in_position_item_numbers This property indicates if ItemNumbers using this ItemNumberSchema should skip empty group levels. This is commonly only used in GAEB files, where there might be gaps in the hierarchy of elements and position identifiers should be placed at the end of the string representation.
+     * @param bool $skipNonExistingLevelsInPositionItemNumbers This property indicates if ItemNumbers using this ItemNumberSchema should skip empty group levels. This is commonly only used in GAEB files, where there might be gaps in the hierarchy of elements and position identifiers should be placed at the end of the string representation.
      *
      * @return self
      */
-    public function setSkipNonExistingLevelsInPositionItemNumbers($skip_non_existing_levels_in_position_item_numbers)
+    public function setSkipNonExistingLevelsInPositionItemNumbers($skipNonExistingLevelsInPositionItemNumbers)
     {
-        if (is_null($skip_non_existing_levels_in_position_item_numbers)) {
-            throw new \InvalidArgumentException('non-nullable skip_non_existing_levels_in_position_item_numbers cannot be null');
+        if (is_null($skipNonExistingLevelsInPositionItemNumbers)) {
+            throw new \InvalidArgumentException('non-nullable skipNonExistingLevelsInPositionItemNumbers cannot be null');
         }
-        $this->container['skip_non_existing_levels_in_position_item_numbers'] = $skip_non_existing_levels_in_position_item_numbers;
+        $this->container['skipNonExistingLevelsInPositionItemNumbers'] = $skipNonExistingLevelsInPositionItemNumbers;
 
         return $this;
     }
 
     /**
-     * Gets skipped_tiers_filler
+     * Gets skippedTiersFiller
      *
      * @return string|null
      */
     public function getSkippedTiersFiller()
     {
-        return $this->container['skipped_tiers_filler'];
+        return $this->container['skippedTiersFiller'];
     }
 
     /**
-     * Sets skipped_tiers_filler
+     * Sets skippedTiersFiller
      *
-     * @param string|null $skipped_tiers_filler This string is used only when the property SkipNonExistingLevelsInPositionItemNumbers in this ItemNumberSchema is also set to true. It defaults to DEFAULT_SKIPPED_TIERS_FILLER, but can be set to any string with a lenght of one. Null values or values with a longer length will lead to this property reverting back to the default value. This is used to fill skipped tiers in item numbers where a position is placed in a higher hierarchy level than what would be defined in the Tiers. For example, it could produce an item number like '01.__.02', which would indicate a skipped second level. This should be using different values than Filler and Separator, since that could cause ambiguities in the code that generates the actual item numbers. No attempt is done by the code to recover from such ambiguous configurations.
+     * @param string|null $skippedTiersFiller This string is used only when the property SkipNonExistingLevelsInPositionItemNumbers in this ItemNumberSchema is also set to true. It defaults to DEFAULT_SKIPPED_TIERS_FILLER, but can be set to any string with a lenght of one. Null values or values with a longer length will lead to this property reverting back to the default value. This is used to fill skipped tiers in item numbers where a position is placed in a higher hierarchy level than what would be defined in the Tiers. For example, it could produce an item number like '01.__.02', which would indicate a skipped second level. This should be using different values than Filler and Separator, since that could cause ambiguities in the code that generates the actual item numbers. No attempt is done by the code to recover from such ambiguous configurations.
      *
      * @return self
      */
-    public function setSkippedTiersFiller($skipped_tiers_filler)
+    public function setSkippedTiersFiller($skippedTiersFiller)
     {
-        if (is_null($skipped_tiers_filler)) {
-            throw new \InvalidArgumentException('non-nullable skipped_tiers_filler cannot be null');
+        if (is_null($skippedTiersFiller)) {
+            throw new \InvalidArgumentException('non-nullable skippedTiersFiller cannot be null');
         }
-        $this->container['skipped_tiers_filler'] = $skipped_tiers_filler;
+        $this->container['skippedTiersFiller'] = $skippedTiersFiller;
 
         return $this;
     }
 
     /**
-     * Gets schema_is_correctly_defined
+     * Gets schemaIsCorrectlyDefined
      *
      * @return bool
      */
     public function getSchemaIsCorrectlyDefined()
     {
-        return $this->container['schema_is_correctly_defined'];
+        return $this->container['schemaIsCorrectlyDefined'];
     }
 
     /**
-     * Sets schema_is_correctly_defined
+     * Sets schemaIsCorrectlyDefined
      *
-     * @param bool $schema_is_correctly_defined This is a read-only property that indicates if this schema has a valid structure. It internally just returns the result from IsCorrectlyDefined. This will return if the ItemNumberSchema is correctly defined. For it to be correctly defined, the following conditions must be true: There may only be one lot group, if there is one, it must be at the top. Following lot levels, there may be at least one group level. After the group levels, there must be one position level. After the position level, there may be one index level. If no tiers are defined at all, this will also return false.
+     * @param bool $schemaIsCorrectlyDefined This is a read-only property that indicates if this schema has a valid structure. It internally just returns the result from IsCorrectlyDefined. This will return if the ItemNumberSchema is correctly defined. For it to be correctly defined, the following conditions must be true: There may only be one lot group, if there is one, it must be at the top. Following lot levels, there may be at least one group level. After the group levels, there must be one position level. After the position level, there may be one index level. If no tiers are defined at all, this will also return false.
      *
      * @return self
      */
-    public function setSchemaIsCorrectlyDefined($schema_is_correctly_defined)
+    public function setSchemaIsCorrectlyDefined($schemaIsCorrectlyDefined)
     {
-        if (is_null($schema_is_correctly_defined)) {
-            throw new \InvalidArgumentException('non-nullable schema_is_correctly_defined cannot be null');
+        if (is_null($schemaIsCorrectlyDefined)) {
+            throw new \InvalidArgumentException('non-nullable schemaIsCorrectlyDefined cannot be null');
         }
-        $this->container['schema_is_correctly_defined'] = $schema_is_correctly_defined;
+        $this->container['schemaIsCorrectlyDefined'] = $schemaIsCorrectlyDefined;
 
         return $this;
     }
 
     /**
-     * Gets allow_upper_case_lettering
+     * Gets allowUpperCaseLettering
      *
      * @return bool
      */
     public function getAllowUpperCaseLettering()
     {
-        return $this->container['allow_upper_case_lettering'];
+        return $this->container['allowUpperCaseLettering'];
     }
 
     /**
-     * Sets allow_upper_case_lettering
+     * Sets allowUpperCaseLettering
      *
-     * @param bool $allow_upper_case_lettering Defaults to false. If this is disabled, all letters in the ItemNumber string representations will be transformed to their lowercase representation.
+     * @param bool $allowUpperCaseLettering Defaults to false. If this is disabled, all letters in the ItemNumber string representations will be transformed to their lowercase representation.
      *
      * @return self
      */
-    public function setAllowUpperCaseLettering($allow_upper_case_lettering)
+    public function setAllowUpperCaseLettering($allowUpperCaseLettering)
     {
-        if (is_null($allow_upper_case_lettering)) {
-            throw new \InvalidArgumentException('non-nullable allow_upper_case_lettering cannot be null');
+        if (is_null($allowUpperCaseLettering)) {
+            throw new \InvalidArgumentException('non-nullable allowUpperCaseLettering cannot be null');
         }
-        $this->container['allow_upper_case_lettering'] = $allow_upper_case_lettering;
+        $this->container['allowUpperCaseLettering'] = $allowUpperCaseLettering;
 
         return $this;
     }
 
     /**
-     * Gets disable_left_padding_tiers_with_filler
+     * Gets disableLeftPaddingTiersWithFiller
      *
      * @return bool
      */
     public function getDisableLeftPaddingTiersWithFiller()
     {
-        return $this->container['disable_left_padding_tiers_with_filler'];
+        return $this->container['disableLeftPaddingTiersWithFiller'];
     }
 
     /**
-     * Sets disable_left_padding_tiers_with_filler
+     * Sets disableLeftPaddingTiersWithFiller
      *
-     * @param bool $disable_left_padding_tiers_with_filler If this is set to true, single identifiers in an item number will not be left padded to fill the length of the tier. This is useful for allowing custom formats in item numbers, without following the GAEB standard. Defaults to false.
+     * @param bool $disableLeftPaddingTiersWithFiller If this is set to true, single identifiers in an item number will not be left padded to fill the length of the tier. This is useful for allowing custom formats in item numbers, without following the GAEB standard. Defaults to false.
      *
      * @return self
      */
-    public function setDisableLeftPaddingTiersWithFiller($disable_left_padding_tiers_with_filler)
+    public function setDisableLeftPaddingTiersWithFiller($disableLeftPaddingTiersWithFiller)
     {
-        if (is_null($disable_left_padding_tiers_with_filler)) {
-            throw new \InvalidArgumentException('non-nullable disable_left_padding_tiers_with_filler cannot be null');
+        if (is_null($disableLeftPaddingTiersWithFiller)) {
+            throw new \InvalidArgumentException('non-nullable disableLeftPaddingTiersWithFiller cannot be null');
         }
-        $this->container['disable_left_padding_tiers_with_filler'] = $disable_left_padding_tiers_with_filler;
+        $this->container['disableLeftPaddingTiersWithFiller'] = $disableLeftPaddingTiersWithFiller;
 
         return $this;
     }
 
     /**
-     * Gets disable_item_number_identifier_transformations
+     * Gets disableItemNumberIdentifierTransformations
      *
      * @return bool
      */
     public function getDisableItemNumberIdentifierTransformations()
     {
-        return $this->container['disable_item_number_identifier_transformations'];
+        return $this->container['disableItemNumberIdentifierTransformations'];
     }
 
     /**
-     * Sets disable_item_number_identifier_transformations
+     * Sets disableItemNumberIdentifierTransformations
      *
-     * @param bool $disable_item_number_identifier_transformations If this is enabled, then item numbers will not be transformed, except padded. This makes it possible to represent item numbers as-is from e.g. a GAEB file, and also mixing padded and non-padded segments in an item number. This is not recommonded to use by default, since it will lead to inconsistent item numbers in the project.
+     * @param bool $disableItemNumberIdentifierTransformations If this is enabled, then item numbers will not be transformed, except padded. This makes it possible to represent item numbers as-is from e.g. a GAEB file, and also mixing padded and non-padded segments in an item number. This is not recommonded to use by default, since it will lead to inconsistent item numbers in the project.
      *
      * @return self
      */
-    public function setDisableItemNumberIdentifierTransformations($disable_item_number_identifier_transformations)
+    public function setDisableItemNumberIdentifierTransformations($disableItemNumberIdentifierTransformations)
     {
-        if (is_null($disable_item_number_identifier_transformations)) {
-            throw new \InvalidArgumentException('non-nullable disable_item_number_identifier_transformations cannot be null');
+        if (is_null($disableItemNumberIdentifierTransformations)) {
+            throw new \InvalidArgumentException('non-nullable disableItemNumberIdentifierTransformations cannot be null');
         }
-        $this->container['disable_item_number_identifier_transformations'] = $disable_item_number_identifier_transformations;
+        $this->container['disableItemNumberIdentifierTransformations'] = $disableItemNumberIdentifierTransformations;
 
         return $this;
     }
 
     /**
-     * Gets disable_item_number_identifier_transformations_only_for_alphanumeric_tiers
+     * Gets disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers
      *
      * @return bool
      */
     public function getDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers()
     {
-        return $this->container['disable_item_number_identifier_transformations_only_for_alphanumeric_tiers'];
+        return $this->container['disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'];
     }
 
     /**
-     * Sets disable_item_number_identifier_transformations_only_for_alphanumeric_tiers
+     * Sets disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers
      *
-     * @param bool $disable_item_number_identifier_transformations_only_for_alphanumeric_tiers This property is used in combination with DisableItemNumberIdentifierTransformations. If this is enabled, then the transformation of item numbers is only disabled for alphanumeric tiers. This means that numeric tiers will still be padded with the filler character, but alphanumeric tiers will not be transformed
+     * @param bool $disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers This property is used in combination with DisableItemNumberIdentifierTransformations. If this is enabled, then the transformation of item numbers is only disabled for alphanumeric tiers. This means that numeric tiers will still be padded with the filler character, but alphanumeric tiers will not be transformed
      *
      * @return self
      */
-    public function setDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers($disable_item_number_identifier_transformations_only_for_alphanumeric_tiers)
+    public function setDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers($disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers)
     {
-        if (is_null($disable_item_number_identifier_transformations_only_for_alphanumeric_tiers)) {
-            throw new \InvalidArgumentException('non-nullable disable_item_number_identifier_transformations_only_for_alphanumeric_tiers cannot be null');
+        if (is_null($disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers)) {
+            throw new \InvalidArgumentException('non-nullable disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers cannot be null');
         }
-        $this->container['disable_item_number_identifier_transformations_only_for_alphanumeric_tiers'] = $disable_item_number_identifier_transformations_only_for_alphanumeric_tiers;
+        $this->container['disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers'] = $disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers;
 
         return $this;
     }

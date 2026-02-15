@@ -59,31 +59,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoice_number' => 'string',
-        'invoice_date' => '\DateTime',
-        'invoice_type' => '\Dangl\AVACloud\Model\InvoiceType',
-        'currency_code' => 'string',
-        'payment_due_date' => '\DateTime',
+        'invoiceNumber' => 'string',
+        'invoiceDate' => '\DateTime',
+        'invoiceType' => '\Dangl\AVACloud\Model\InvoiceType',
+        'currencyCode' => 'string',
+        'paymentDueDate' => '\DateTime',
         'references' => '\Dangl\AVACloud\Model\References',
-        'payment_terms' => 'string',
-        'parsed_payment_terms' => '\Dangl\AVACloud\Model\PaymentTerm[]',
-        'previous_invoices' => '\Dangl\AVACloud\Model\PreviousInvoice[]',
+        'paymentTerms' => 'string',
+        'parsedPaymentTerms' => '\Dangl\AVACloud\Model\PaymentTerm[]',
+        'previousInvoices' => '\Dangl\AVACloud\Model\PreviousInvoice[]',
         'buyer' => '\Dangl\AVACloud\Model\Organization',
         'seller' => '\Dangl\AVACloud\Model\Organization',
-        'seller_tax_representative' => '\Dangl\AVACloud\Model\Organization',
+        'sellerTaxRepresentative' => '\Dangl\AVACloud\Model\Organization',
         'payee' => '\Dangl\AVACloud\Model\Payee',
-        'invoice_notes' => '\Dangl\AVACloud\Model\InvoiceNote[]',
-        'invoice_period' => '\Dangl\AVACloud\Model\InvoicePeriod',
-        'delivery_information' => '\Dangl\AVACloud\Model\DeliveryInformation',
+        'invoiceNotes' => '\Dangl\AVACloud\Model\InvoiceNote[]',
+        'invoicePeriod' => '\Dangl\AVACloud\Model\InvoicePeriod',
+        'deliveryInformation' => '\Dangl\AVACloud\Model\DeliveryInformation',
         'totals' => '\Dangl\AVACloud\Model\InvoiceTotals',
-        'payment_instructions' => '\Dangl\AVACloud\Model\PaymentInstructions',
+        'paymentInstructions' => '\Dangl\AVACloud\Model\PaymentInstructions',
         'documents' => '\Dangl\AVACloud\Model\SupportingDocument[]',
-        'vat_breakdown' => '\Dangl\AVACloud\Model\VatBreakdown[]',
+        'vatBreakdown' => '\Dangl\AVACloud\Model\VatBreakdown[]',
         'allowances' => '\Dangl\AVACloud\Model\InvoiceAllowance[]',
         'charges' => '\Dangl\AVACloud\Model\InvoiceCharge[]',
-        'line_items' => '\Dangl\AVACloud\Model\InvoiceLineItem[]',
-        'source_type' => '\Dangl\AVACloud\Model\SourceType',
-        'factur_x_data' => '\Dangl\AVACloud\Model\FacturXData'
+        'lineItems' => '\Dangl\AVACloud\Model\InvoiceLineItem[]',
+        'sourceType' => '\Dangl\AVACloud\Model\SourceType',
+        'facturXData' => '\Dangl\AVACloud\Model\FacturXData'
     ];
 
     /**
@@ -94,31 +94,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'invoice_number' => null,
-        'invoice_date' => 'date-time',
-        'invoice_type' => null,
-        'currency_code' => null,
-        'payment_due_date' => 'date-time',
+        'invoiceNumber' => null,
+        'invoiceDate' => 'date-time',
+        'invoiceType' => null,
+        'currencyCode' => null,
+        'paymentDueDate' => 'date-time',
         'references' => null,
-        'payment_terms' => null,
-        'parsed_payment_terms' => null,
-        'previous_invoices' => null,
+        'paymentTerms' => null,
+        'parsedPaymentTerms' => null,
+        'previousInvoices' => null,
         'buyer' => null,
         'seller' => null,
-        'seller_tax_representative' => null,
+        'sellerTaxRepresentative' => null,
         'payee' => null,
-        'invoice_notes' => null,
-        'invoice_period' => null,
-        'delivery_information' => null,
+        'invoiceNotes' => null,
+        'invoicePeriod' => null,
+        'deliveryInformation' => null,
         'totals' => null,
-        'payment_instructions' => null,
+        'paymentInstructions' => null,
         'documents' => null,
-        'vat_breakdown' => null,
+        'vatBreakdown' => null,
         'allowances' => null,
         'charges' => null,
-        'line_items' => null,
-        'source_type' => null,
-        'factur_x_data' => null
+        'lineItems' => null,
+        'sourceType' => null,
+        'facturXData' => null
     ];
 
     /**
@@ -127,31 +127,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'invoice_number' => false,
-        'invoice_date' => false,
-        'invoice_type' => false,
-        'currency_code' => false,
-        'payment_due_date' => false,
+        'invoiceNumber' => false,
+        'invoiceDate' => false,
+        'invoiceType' => false,
+        'currencyCode' => false,
+        'paymentDueDate' => false,
         'references' => false,
-        'payment_terms' => false,
-        'parsed_payment_terms' => false,
-        'previous_invoices' => false,
+        'paymentTerms' => false,
+        'parsedPaymentTerms' => false,
+        'previousInvoices' => false,
         'buyer' => false,
         'seller' => false,
-        'seller_tax_representative' => false,
+        'sellerTaxRepresentative' => false,
         'payee' => false,
-        'invoice_notes' => false,
-        'invoice_period' => false,
-        'delivery_information' => false,
+        'invoiceNotes' => false,
+        'invoicePeriod' => false,
+        'deliveryInformation' => false,
         'totals' => false,
-        'payment_instructions' => false,
+        'paymentInstructions' => false,
         'documents' => false,
-        'vat_breakdown' => false,
+        'vatBreakdown' => false,
         'allowances' => false,
         'charges' => false,
-        'line_items' => false,
-        'source_type' => false,
-        'factur_x_data' => false
+        'lineItems' => false,
+        'sourceType' => false,
+        'facturXData' => false
     ];
 
     /**
@@ -240,31 +240,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'invoice_number' => 'invoiceNumber',
-        'invoice_date' => 'invoiceDate',
-        'invoice_type' => 'invoiceType',
-        'currency_code' => 'currencyCode',
-        'payment_due_date' => 'paymentDueDate',
+        'invoiceNumber' => 'invoiceNumber',
+        'invoiceDate' => 'invoiceDate',
+        'invoiceType' => 'invoiceType',
+        'currencyCode' => 'currencyCode',
+        'paymentDueDate' => 'paymentDueDate',
         'references' => 'references',
-        'payment_terms' => 'paymentTerms',
-        'parsed_payment_terms' => 'parsedPaymentTerms',
-        'previous_invoices' => 'previousInvoices',
+        'paymentTerms' => 'paymentTerms',
+        'parsedPaymentTerms' => 'parsedPaymentTerms',
+        'previousInvoices' => 'previousInvoices',
         'buyer' => 'buyer',
         'seller' => 'seller',
-        'seller_tax_representative' => 'sellerTaxRepresentative',
+        'sellerTaxRepresentative' => 'sellerTaxRepresentative',
         'payee' => 'payee',
-        'invoice_notes' => 'invoiceNotes',
-        'invoice_period' => 'invoicePeriod',
-        'delivery_information' => 'deliveryInformation',
+        'invoiceNotes' => 'invoiceNotes',
+        'invoicePeriod' => 'invoicePeriod',
+        'deliveryInformation' => 'deliveryInformation',
         'totals' => 'totals',
-        'payment_instructions' => 'paymentInstructions',
+        'paymentInstructions' => 'paymentInstructions',
         'documents' => 'documents',
-        'vat_breakdown' => 'vatBreakdown',
+        'vatBreakdown' => 'vatBreakdown',
         'allowances' => 'allowances',
         'charges' => 'charges',
-        'line_items' => 'lineItems',
-        'source_type' => 'sourceType',
-        'factur_x_data' => 'facturXData'
+        'lineItems' => 'lineItems',
+        'sourceType' => 'sourceType',
+        'facturXData' => 'facturXData'
     ];
 
     /**
@@ -273,31 +273,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'invoice_number' => 'setInvoiceNumber',
-        'invoice_date' => 'setInvoiceDate',
-        'invoice_type' => 'setInvoiceType',
-        'currency_code' => 'setCurrencyCode',
-        'payment_due_date' => 'setPaymentDueDate',
+        'invoiceNumber' => 'setInvoiceNumber',
+        'invoiceDate' => 'setInvoiceDate',
+        'invoiceType' => 'setInvoiceType',
+        'currencyCode' => 'setCurrencyCode',
+        'paymentDueDate' => 'setPaymentDueDate',
         'references' => 'setReferences',
-        'payment_terms' => 'setPaymentTerms',
-        'parsed_payment_terms' => 'setParsedPaymentTerms',
-        'previous_invoices' => 'setPreviousInvoices',
+        'paymentTerms' => 'setPaymentTerms',
+        'parsedPaymentTerms' => 'setParsedPaymentTerms',
+        'previousInvoices' => 'setPreviousInvoices',
         'buyer' => 'setBuyer',
         'seller' => 'setSeller',
-        'seller_tax_representative' => 'setSellerTaxRepresentative',
+        'sellerTaxRepresentative' => 'setSellerTaxRepresentative',
         'payee' => 'setPayee',
-        'invoice_notes' => 'setInvoiceNotes',
-        'invoice_period' => 'setInvoicePeriod',
-        'delivery_information' => 'setDeliveryInformation',
+        'invoiceNotes' => 'setInvoiceNotes',
+        'invoicePeriod' => 'setInvoicePeriod',
+        'deliveryInformation' => 'setDeliveryInformation',
         'totals' => 'setTotals',
-        'payment_instructions' => 'setPaymentInstructions',
+        'paymentInstructions' => 'setPaymentInstructions',
         'documents' => 'setDocuments',
-        'vat_breakdown' => 'setVatBreakdown',
+        'vatBreakdown' => 'setVatBreakdown',
         'allowances' => 'setAllowances',
         'charges' => 'setCharges',
-        'line_items' => 'setLineItems',
-        'source_type' => 'setSourceType',
-        'factur_x_data' => 'setFacturXData'
+        'lineItems' => 'setLineItems',
+        'sourceType' => 'setSourceType',
+        'facturXData' => 'setFacturXData'
     ];
 
     /**
@@ -306,31 +306,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'invoice_number' => 'getInvoiceNumber',
-        'invoice_date' => 'getInvoiceDate',
-        'invoice_type' => 'getInvoiceType',
-        'currency_code' => 'getCurrencyCode',
-        'payment_due_date' => 'getPaymentDueDate',
+        'invoiceNumber' => 'getInvoiceNumber',
+        'invoiceDate' => 'getInvoiceDate',
+        'invoiceType' => 'getInvoiceType',
+        'currencyCode' => 'getCurrencyCode',
+        'paymentDueDate' => 'getPaymentDueDate',
         'references' => 'getReferences',
-        'payment_terms' => 'getPaymentTerms',
-        'parsed_payment_terms' => 'getParsedPaymentTerms',
-        'previous_invoices' => 'getPreviousInvoices',
+        'paymentTerms' => 'getPaymentTerms',
+        'parsedPaymentTerms' => 'getParsedPaymentTerms',
+        'previousInvoices' => 'getPreviousInvoices',
         'buyer' => 'getBuyer',
         'seller' => 'getSeller',
-        'seller_tax_representative' => 'getSellerTaxRepresentative',
+        'sellerTaxRepresentative' => 'getSellerTaxRepresentative',
         'payee' => 'getPayee',
-        'invoice_notes' => 'getInvoiceNotes',
-        'invoice_period' => 'getInvoicePeriod',
-        'delivery_information' => 'getDeliveryInformation',
+        'invoiceNotes' => 'getInvoiceNotes',
+        'invoicePeriod' => 'getInvoicePeriod',
+        'deliveryInformation' => 'getDeliveryInformation',
         'totals' => 'getTotals',
-        'payment_instructions' => 'getPaymentInstructions',
+        'paymentInstructions' => 'getPaymentInstructions',
         'documents' => 'getDocuments',
-        'vat_breakdown' => 'getVatBreakdown',
+        'vatBreakdown' => 'getVatBreakdown',
         'allowances' => 'getAllowances',
         'charges' => 'getCharges',
-        'line_items' => 'getLineItems',
-        'source_type' => 'getSourceType',
-        'factur_x_data' => 'getFacturXData'
+        'lineItems' => 'getLineItems',
+        'sourceType' => 'getSourceType',
+        'facturXData' => 'getFacturXData'
     ];
 
     /**
@@ -390,31 +390,31 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('invoice_number', $data ?? [], null);
-        $this->setIfExists('invoice_date', $data ?? [], null);
-        $this->setIfExists('invoice_type', $data ?? [], null);
-        $this->setIfExists('currency_code', $data ?? [], null);
-        $this->setIfExists('payment_due_date', $data ?? [], null);
+        $this->setIfExists('invoiceNumber', $data ?? [], null);
+        $this->setIfExists('invoiceDate', $data ?? [], null);
+        $this->setIfExists('invoiceType', $data ?? [], null);
+        $this->setIfExists('currencyCode', $data ?? [], null);
+        $this->setIfExists('paymentDueDate', $data ?? [], null);
         $this->setIfExists('references', $data ?? [], null);
-        $this->setIfExists('payment_terms', $data ?? [], null);
-        $this->setIfExists('parsed_payment_terms', $data ?? [], null);
-        $this->setIfExists('previous_invoices', $data ?? [], null);
+        $this->setIfExists('paymentTerms', $data ?? [], null);
+        $this->setIfExists('parsedPaymentTerms', $data ?? [], null);
+        $this->setIfExists('previousInvoices', $data ?? [], null);
         $this->setIfExists('buyer', $data ?? [], null);
         $this->setIfExists('seller', $data ?? [], null);
-        $this->setIfExists('seller_tax_representative', $data ?? [], null);
+        $this->setIfExists('sellerTaxRepresentative', $data ?? [], null);
         $this->setIfExists('payee', $data ?? [], null);
-        $this->setIfExists('invoice_notes', $data ?? [], null);
-        $this->setIfExists('invoice_period', $data ?? [], null);
-        $this->setIfExists('delivery_information', $data ?? [], null);
+        $this->setIfExists('invoiceNotes', $data ?? [], null);
+        $this->setIfExists('invoicePeriod', $data ?? [], null);
+        $this->setIfExists('deliveryInformation', $data ?? [], null);
         $this->setIfExists('totals', $data ?? [], null);
-        $this->setIfExists('payment_instructions', $data ?? [], null);
+        $this->setIfExists('paymentInstructions', $data ?? [], null);
         $this->setIfExists('documents', $data ?? [], null);
-        $this->setIfExists('vat_breakdown', $data ?? [], null);
+        $this->setIfExists('vatBreakdown', $data ?? [], null);
         $this->setIfExists('allowances', $data ?? [], null);
         $this->setIfExists('charges', $data ?? [], null);
-        $this->setIfExists('line_items', $data ?? [], null);
-        $this->setIfExists('source_type', $data ?? [], null);
-        $this->setIfExists('factur_x_data', $data ?? [], null);
+        $this->setIfExists('lineItems', $data ?? [], null);
+        $this->setIfExists('sourceType', $data ?? [], null);
+        $this->setIfExists('facturXData', $data ?? [], null);
     }
 
     /**
@@ -444,8 +444,8 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['source_type'] === null) {
-            $invalidProperties[] = "'source_type' can't be null";
+        if ($this->container['sourceType'] === null) {
+            $invalidProperties[] = "'sourceType' can't be null";
         }
         return $invalidProperties;
     }
@@ -463,136 +463,136 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets invoice_number
+     * Gets invoiceNumber
      *
      * @return string|null
      */
     public function getInvoiceNumber()
     {
-        return $this->container['invoice_number'];
+        return $this->container['invoiceNumber'];
     }
 
     /**
-     * Sets invoice_number
+     * Sets invoiceNumber
      *
-     * @param string|null $invoice_number BT-1 The number of the invoice
+     * @param string|null $invoiceNumber BT-1 The number of the invoice
      *
      * @return self
      */
-    public function setInvoiceNumber($invoice_number)
+    public function setInvoiceNumber($invoiceNumber)
     {
-        if (is_null($invoice_number)) {
-            throw new \InvalidArgumentException('non-nullable invoice_number cannot be null');
+        if (is_null($invoiceNumber)) {
+            throw new \InvalidArgumentException('non-nullable invoiceNumber cannot be null');
         }
-        $this->container['invoice_number'] = $invoice_number;
+        $this->container['invoiceNumber'] = $invoiceNumber;
 
         return $this;
     }
 
     /**
-     * Gets invoice_date
+     * Gets invoiceDate
      *
      * @return \DateTime|null
      */
     public function getInvoiceDate()
     {
-        return $this->container['invoice_date'];
+        return $this->container['invoiceDate'];
     }
 
     /**
-     * Sets invoice_date
+     * Sets invoiceDate
      *
-     * @param \DateTime|null $invoice_date BT-2 The date of the invoice
+     * @param \DateTime|null $invoiceDate BT-2 The date of the invoice
      *
      * @return self
      */
-    public function setInvoiceDate($invoice_date)
+    public function setInvoiceDate($invoiceDate)
     {
-        if (is_null($invoice_date)) {
-            throw new \InvalidArgumentException('non-nullable invoice_date cannot be null');
+        if (is_null($invoiceDate)) {
+            throw new \InvalidArgumentException('non-nullable invoiceDate cannot be null');
         }
-        $this->container['invoice_date'] = $invoice_date;
+        $this->container['invoiceDate'] = $invoiceDate;
 
         return $this;
     }
 
     /**
-     * Gets invoice_type
+     * Gets invoiceType
      *
      * @return \Dangl\AVACloud\Model\InvoiceType|null
      */
     public function getInvoiceType()
     {
-        return $this->container['invoice_type'];
+        return $this->container['invoiceType'];
     }
 
     /**
-     * Sets invoice_type
+     * Sets invoiceType
      *
-     * @param \Dangl\AVACloud\Model\InvoiceType|null $invoice_type invoice_type
+     * @param \Dangl\AVACloud\Model\InvoiceType|null $invoiceType invoiceType
      *
      * @return self
      */
-    public function setInvoiceType($invoice_type)
+    public function setInvoiceType($invoiceType)
     {
-        if (is_null($invoice_type)) {
-            throw new \InvalidArgumentException('non-nullable invoice_type cannot be null');
+        if (is_null($invoiceType)) {
+            throw new \InvalidArgumentException('non-nullable invoiceType cannot be null');
         }
-        $this->container['invoice_type'] = $invoice_type;
+        $this->container['invoiceType'] = $invoiceType;
 
         return $this;
     }
 
     /**
-     * Gets currency_code
+     * Gets currencyCode
      *
      * @return string|null
      */
     public function getCurrencyCode()
     {
-        return $this->container['currency_code'];
+        return $this->container['currencyCode'];
     }
 
     /**
-     * Sets currency_code
+     * Sets currencyCode
      *
-     * @param string|null $currency_code BT-5 The three letter ISO currency code
+     * @param string|null $currencyCode BT-5 The three letter ISO currency code
      *
      * @return self
      */
-    public function setCurrencyCode($currency_code)
+    public function setCurrencyCode($currencyCode)
     {
-        if (is_null($currency_code)) {
-            throw new \InvalidArgumentException('non-nullable currency_code cannot be null');
+        if (is_null($currencyCode)) {
+            throw new \InvalidArgumentException('non-nullable currencyCode cannot be null');
         }
-        $this->container['currency_code'] = $currency_code;
+        $this->container['currencyCode'] = $currencyCode;
 
         return $this;
     }
 
     /**
-     * Gets payment_due_date
+     * Gets paymentDueDate
      *
      * @return \DateTime|null
      */
     public function getPaymentDueDate()
     {
-        return $this->container['payment_due_date'];
+        return $this->container['paymentDueDate'];
     }
 
     /**
-     * Sets payment_due_date
+     * Sets paymentDueDate
      *
-     * @param \DateTime|null $payment_due_date BT-9 Until when the payment is due
+     * @param \DateTime|null $paymentDueDate BT-9 Until when the payment is due
      *
      * @return self
      */
-    public function setPaymentDueDate($payment_due_date)
+    public function setPaymentDueDate($paymentDueDate)
     {
-        if (is_null($payment_due_date)) {
-            throw new \InvalidArgumentException('non-nullable payment_due_date cannot be null');
+        if (is_null($paymentDueDate)) {
+            throw new \InvalidArgumentException('non-nullable paymentDueDate cannot be null');
         }
-        $this->container['payment_due_date'] = $payment_due_date;
+        $this->container['paymentDueDate'] = $paymentDueDate;
 
         return $this;
     }
@@ -625,82 +625,82 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets payment_terms
+     * Gets paymentTerms
      *
      * @return string|null
      */
     public function getPaymentTerms()
     {
-        return $this->container['payment_terms'];
+        return $this->container['paymentTerms'];
     }
 
     /**
-     * Sets payment_terms
+     * Sets paymentTerms
      *
-     * @param string|null $payment_terms BT-20 A text description of payment terms, e.g. cash discounts or payment conditions
+     * @param string|null $paymentTerms BT-20 A text description of payment terms, e.g. cash discounts or payment conditions
      *
      * @return self
      */
-    public function setPaymentTerms($payment_terms)
+    public function setPaymentTerms($paymentTerms)
     {
-        if (is_null($payment_terms)) {
-            throw new \InvalidArgumentException('non-nullable payment_terms cannot be null');
+        if (is_null($paymentTerms)) {
+            throw new \InvalidArgumentException('non-nullable paymentTerms cannot be null');
         }
-        $this->container['payment_terms'] = $payment_terms;
+        $this->container['paymentTerms'] = $paymentTerms;
 
         return $this;
     }
 
     /**
-     * Gets parsed_payment_terms
+     * Gets parsedPaymentTerms
      *
      * @return \Dangl\AVACloud\Model\PaymentTerm[]|null
      */
     public function getParsedPaymentTerms()
     {
-        return $this->container['parsed_payment_terms'];
+        return $this->container['parsedPaymentTerms'];
     }
 
     /**
-     * Sets parsed_payment_terms
+     * Sets parsedPaymentTerms
      *
-     * @param \Dangl\AVACloud\Model\PaymentTerm[]|null $parsed_payment_terms If the PaymentTerms are present and in a correct format, this read-only property can be used to get the actual parsed payment terms in a deserialized and structured format. This will be null if PaymentTerms are not present or not in the correct format
+     * @param \Dangl\AVACloud\Model\PaymentTerm[]|null $parsedPaymentTerms If the PaymentTerms are present and in a correct format, this read-only property can be used to get the actual parsed payment terms in a deserialized and structured format. This will be null if PaymentTerms are not present or not in the correct format
      *
      * @return self
      */
-    public function setParsedPaymentTerms($parsed_payment_terms)
+    public function setParsedPaymentTerms($parsedPaymentTerms)
     {
-        if (is_null($parsed_payment_terms)) {
-            throw new \InvalidArgumentException('non-nullable parsed_payment_terms cannot be null');
+        if (is_null($parsedPaymentTerms)) {
+            throw new \InvalidArgumentException('non-nullable parsedPaymentTerms cannot be null');
         }
-        $this->container['parsed_payment_terms'] = $parsed_payment_terms;
+        $this->container['parsedPaymentTerms'] = $parsedPaymentTerms;
 
         return $this;
     }
 
     /**
-     * Gets previous_invoices
+     * Gets previousInvoices
      *
      * @return \Dangl\AVACloud\Model\PreviousInvoice[]|null
      */
     public function getPreviousInvoices()
     {
-        return $this->container['previous_invoices'];
+        return $this->container['previousInvoices'];
     }
 
     /**
-     * Sets previous_invoices
+     * Sets previousInvoices
      *
-     * @param \Dangl\AVACloud\Model\PreviousInvoice[]|null $previous_invoices BG-3 In case of partial or final invoices, it's possible to reference the previous invoice numbers
+     * @param \Dangl\AVACloud\Model\PreviousInvoice[]|null $previousInvoices BG-3 In case of partial or final invoices, it's possible to reference the previous invoice numbers
      *
      * @return self
      */
-    public function setPreviousInvoices($previous_invoices)
+    public function setPreviousInvoices($previousInvoices)
     {
-        if (is_null($previous_invoices)) {
-            throw new \InvalidArgumentException('non-nullable previous_invoices cannot be null');
+        if (is_null($previousInvoices)) {
+            throw new \InvalidArgumentException('non-nullable previousInvoices cannot be null');
         }
-        $this->container['previous_invoices'] = $previous_invoices;
+        $this->container['previousInvoices'] = $previousInvoices;
 
         return $this;
     }
@@ -760,28 +760,28 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets seller_tax_representative
+     * Gets sellerTaxRepresentative
      *
      * @return \Dangl\AVACloud\Model\Organization|null
      */
     public function getSellerTaxRepresentative()
     {
-        return $this->container['seller_tax_representative'];
+        return $this->container['sellerTaxRepresentative'];
     }
 
     /**
-     * Sets seller_tax_representative
+     * Sets sellerTaxRepresentative
      *
-     * @param \Dangl\AVACloud\Model\Organization|null $seller_tax_representative seller_tax_representative
+     * @param \Dangl\AVACloud\Model\Organization|null $sellerTaxRepresentative sellerTaxRepresentative
      *
      * @return self
      */
-    public function setSellerTaxRepresentative($seller_tax_representative)
+    public function setSellerTaxRepresentative($sellerTaxRepresentative)
     {
-        if (is_null($seller_tax_representative)) {
-            throw new \InvalidArgumentException('non-nullable seller_tax_representative cannot be null');
+        if (is_null($sellerTaxRepresentative)) {
+            throw new \InvalidArgumentException('non-nullable sellerTaxRepresentative cannot be null');
         }
-        $this->container['seller_tax_representative'] = $seller_tax_representative;
+        $this->container['sellerTaxRepresentative'] = $sellerTaxRepresentative;
 
         return $this;
     }
@@ -814,82 +814,82 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets invoice_notes
+     * Gets invoiceNotes
      *
      * @return \Dangl\AVACloud\Model\InvoiceNote[]|null
      */
     public function getInvoiceNotes()
     {
-        return $this->container['invoice_notes'];
+        return $this->container['invoiceNotes'];
     }
 
     /**
-     * Sets invoice_notes
+     * Sets invoiceNotes
      *
-     * @param \Dangl\AVACloud\Model\InvoiceNote[]|null $invoice_notes BG-1 If present, this is an unstructured text that can be used to give additional information about the invoice. Field BG-1
+     * @param \Dangl\AVACloud\Model\InvoiceNote[]|null $invoiceNotes BG-1 If present, this is an unstructured text that can be used to give additional information about the invoice. Field BG-1
      *
      * @return self
      */
-    public function setInvoiceNotes($invoice_notes)
+    public function setInvoiceNotes($invoiceNotes)
     {
-        if (is_null($invoice_notes)) {
-            throw new \InvalidArgumentException('non-nullable invoice_notes cannot be null');
+        if (is_null($invoiceNotes)) {
+            throw new \InvalidArgumentException('non-nullable invoiceNotes cannot be null');
         }
-        $this->container['invoice_notes'] = $invoice_notes;
+        $this->container['invoiceNotes'] = $invoiceNotes;
 
         return $this;
     }
 
     /**
-     * Gets invoice_period
+     * Gets invoicePeriod
      *
      * @return \Dangl\AVACloud\Model\InvoicePeriod|null
      */
     public function getInvoicePeriod()
     {
-        return $this->container['invoice_period'];
+        return $this->container['invoicePeriod'];
     }
 
     /**
-     * Sets invoice_period
+     * Sets invoicePeriod
      *
-     * @param \Dangl\AVACloud\Model\InvoicePeriod|null $invoice_period invoice_period
+     * @param \Dangl\AVACloud\Model\InvoicePeriod|null $invoicePeriod invoicePeriod
      *
      * @return self
      */
-    public function setInvoicePeriod($invoice_period)
+    public function setInvoicePeriod($invoicePeriod)
     {
-        if (is_null($invoice_period)) {
-            throw new \InvalidArgumentException('non-nullable invoice_period cannot be null');
+        if (is_null($invoicePeriod)) {
+            throw new \InvalidArgumentException('non-nullable invoicePeriod cannot be null');
         }
-        $this->container['invoice_period'] = $invoice_period;
+        $this->container['invoicePeriod'] = $invoicePeriod;
 
         return $this;
     }
 
     /**
-     * Gets delivery_information
+     * Gets deliveryInformation
      *
      * @return \Dangl\AVACloud\Model\DeliveryInformation|null
      */
     public function getDeliveryInformation()
     {
-        return $this->container['delivery_information'];
+        return $this->container['deliveryInformation'];
     }
 
     /**
-     * Sets delivery_information
+     * Sets deliveryInformation
      *
-     * @param \Dangl\AVACloud\Model\DeliveryInformation|null $delivery_information delivery_information
+     * @param \Dangl\AVACloud\Model\DeliveryInformation|null $deliveryInformation deliveryInformation
      *
      * @return self
      */
-    public function setDeliveryInformation($delivery_information)
+    public function setDeliveryInformation($deliveryInformation)
     {
-        if (is_null($delivery_information)) {
-            throw new \InvalidArgumentException('non-nullable delivery_information cannot be null');
+        if (is_null($deliveryInformation)) {
+            throw new \InvalidArgumentException('non-nullable deliveryInformation cannot be null');
         }
-        $this->container['delivery_information'] = $delivery_information;
+        $this->container['deliveryInformation'] = $deliveryInformation;
 
         return $this;
     }
@@ -922,28 +922,28 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets payment_instructions
+     * Gets paymentInstructions
      *
      * @return \Dangl\AVACloud\Model\PaymentInstructions|null
      */
     public function getPaymentInstructions()
     {
-        return $this->container['payment_instructions'];
+        return $this->container['paymentInstructions'];
     }
 
     /**
-     * Sets payment_instructions
+     * Sets paymentInstructions
      *
-     * @param \Dangl\AVACloud\Model\PaymentInstructions|null $payment_instructions payment_instructions
+     * @param \Dangl\AVACloud\Model\PaymentInstructions|null $paymentInstructions paymentInstructions
      *
      * @return self
      */
-    public function setPaymentInstructions($payment_instructions)
+    public function setPaymentInstructions($paymentInstructions)
     {
-        if (is_null($payment_instructions)) {
-            throw new \InvalidArgumentException('non-nullable payment_instructions cannot be null');
+        if (is_null($paymentInstructions)) {
+            throw new \InvalidArgumentException('non-nullable paymentInstructions cannot be null');
         }
-        $this->container['payment_instructions'] = $payment_instructions;
+        $this->container['paymentInstructions'] = $paymentInstructions;
 
         return $this;
     }
@@ -976,28 +976,28 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets vat_breakdown
+     * Gets vatBreakdown
      *
      * @return \Dangl\AVACloud\Model\VatBreakdown[]|null
      */
     public function getVatBreakdown()
     {
-        return $this->container['vat_breakdown'];
+        return $this->container['vatBreakdown'];
     }
 
     /**
-     * Sets vat_breakdown
+     * Sets vatBreakdown
      *
-     * @param \Dangl\AVACloud\Model\VatBreakdown[]|null $vat_breakdown BG-23 This is used to list VAT by category, e.g. for invoices where parts are in different VAT categories
+     * @param \Dangl\AVACloud\Model\VatBreakdown[]|null $vatBreakdown BG-23 This is used to list VAT by category, e.g. for invoices where parts are in different VAT categories
      *
      * @return self
      */
-    public function setVatBreakdown($vat_breakdown)
+    public function setVatBreakdown($vatBreakdown)
     {
-        if (is_null($vat_breakdown)) {
-            throw new \InvalidArgumentException('non-nullable vat_breakdown cannot be null');
+        if (is_null($vatBreakdown)) {
+            throw new \InvalidArgumentException('non-nullable vatBreakdown cannot be null');
         }
-        $this->container['vat_breakdown'] = $vat_breakdown;
+        $this->container['vatBreakdown'] = $vatBreakdown;
 
         return $this;
     }
@@ -1057,82 +1057,82 @@ class Invoice implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets line_items
+     * Gets lineItems
      *
      * @return \Dangl\AVACloud\Model\InvoiceLineItem[]|null
      */
     public function getLineItems()
     {
-        return $this->container['line_items'];
+        return $this->container['lineItems'];
     }
 
     /**
-     * Sets line_items
+     * Sets lineItems
      *
-     * @param \Dangl\AVACloud\Model\InvoiceLineItem[]|null $line_items BG-25 Single line items in the invoice
+     * @param \Dangl\AVACloud\Model\InvoiceLineItem[]|null $lineItems BG-25 Single line items in the invoice
      *
      * @return self
      */
-    public function setLineItems($line_items)
+    public function setLineItems($lineItems)
     {
-        if (is_null($line_items)) {
-            throw new \InvalidArgumentException('non-nullable line_items cannot be null');
+        if (is_null($lineItems)) {
+            throw new \InvalidArgumentException('non-nullable lineItems cannot be null');
         }
-        $this->container['line_items'] = $line_items;
+        $this->container['lineItems'] = $lineItems;
 
         return $this;
     }
 
     /**
-     * Gets source_type
+     * Gets sourceType
      *
      * @return \Dangl\AVACloud\Model\SourceType
      */
     public function getSourceType()
     {
-        return $this->container['source_type'];
+        return $this->container['sourceType'];
     }
 
     /**
-     * Sets source_type
+     * Sets sourceType
      *
-     * @param \Dangl\AVACloud\Model\SourceType $source_type source_type
+     * @param \Dangl\AVACloud\Model\SourceType $sourceType sourceType
      *
      * @return self
      */
-    public function setSourceType($source_type)
+    public function setSourceType($sourceType)
     {
-        if (is_null($source_type)) {
-            throw new \InvalidArgumentException('non-nullable source_type cannot be null');
+        if (is_null($sourceType)) {
+            throw new \InvalidArgumentException('non-nullable sourceType cannot be null');
         }
-        $this->container['source_type'] = $source_type;
+        $this->container['sourceType'] = $sourceType;
 
         return $this;
     }
 
     /**
-     * Gets factur_x_data
+     * Gets facturXData
      *
      * @return \Dangl\AVACloud\Model\FacturXData|null
      */
     public function getFacturXData()
     {
-        return $this->container['factur_x_data'];
+        return $this->container['facturXData'];
     }
 
     /**
-     * Sets factur_x_data
+     * Sets facturXData
      *
-     * @param \Dangl\AVACloud\Model\FacturXData|null $factur_x_data factur_x_data
+     * @param \Dangl\AVACloud\Model\FacturXData|null $facturXData facturXData
      *
      * @return self
      */
-    public function setFacturXData($factur_x_data)
+    public function setFacturXData($facturXData)
     {
-        if (is_null($factur_x_data)) {
-            throw new \InvalidArgumentException('non-nullable factur_x_data cannot be null');
+        if (is_null($facturXData)) {
+            throw new \InvalidArgumentException('non-nullable facturXData cannot be null');
         }
-        $this->container['factur_x_data'] = $factur_x_data;
+        $this->container['facturXData'] = $facturXData;
 
         return $this;
     }

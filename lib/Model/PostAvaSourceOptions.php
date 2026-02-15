@@ -59,7 +59,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'try_auto_generate_item_numbers_and_schema' => 'bool'
+        'tryAutoGenerateItemNumbersAndSchema' => 'bool'
     ];
 
     /**
@@ -70,7 +70,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'try_auto_generate_item_numbers_and_schema' => null
+        'tryAutoGenerateItemNumbersAndSchema' => null
     ];
 
     /**
@@ -79,7 +79,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'try_auto_generate_item_numbers_and_schema' => false
+        'tryAutoGenerateItemNumbersAndSchema' => false
     ];
 
     /**
@@ -168,7 +168,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'try_auto_generate_item_numbers_and_schema' => 'tryAutoGenerateItemNumbersAndSchema'
+        'tryAutoGenerateItemNumbersAndSchema' => 'tryAutoGenerateItemNumbersAndSchema'
     ];
 
     /**
@@ -177,7 +177,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'try_auto_generate_item_numbers_and_schema' => 'setTryAutoGenerateItemNumbersAndSchema'
+        'tryAutoGenerateItemNumbersAndSchema' => 'setTryAutoGenerateItemNumbersAndSchema'
     ];
 
     /**
@@ -186,7 +186,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'try_auto_generate_item_numbers_and_schema' => 'getTryAutoGenerateItemNumbersAndSchema'
+        'tryAutoGenerateItemNumbersAndSchema' => 'getTryAutoGenerateItemNumbersAndSchema'
     ];
 
     /**
@@ -246,7 +246,7 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('try_auto_generate_item_numbers_and_schema', $data ?? [], null);
+        $this->setIfExists('tryAutoGenerateItemNumbersAndSchema', $data ?? [], null);
     }
 
     /**
@@ -276,8 +276,8 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['try_auto_generate_item_numbers_and_schema'] === null) {
-            $invalidProperties[] = "'try_auto_generate_item_numbers_and_schema' can't be null";
+        if ($this->container['tryAutoGenerateItemNumbersAndSchema'] === null) {
+            $invalidProperties[] = "'tryAutoGenerateItemNumbersAndSchema' can't be null";
         }
         return $invalidProperties;
     }
@@ -295,28 +295,28 @@ class PostAvaSourceOptions implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets try_auto_generate_item_numbers_and_schema
+     * Gets tryAutoGenerateItemNumbersAndSchema
      *
      * @return bool
      */
     public function getTryAutoGenerateItemNumbersAndSchema()
     {
-        return $this->container['try_auto_generate_item_numbers_and_schema'];
+        return $this->container['tryAutoGenerateItemNumbersAndSchema'];
     }
 
     /**
-     * Sets try_auto_generate_item_numbers_and_schema
+     * Sets tryAutoGenerateItemNumbersAndSchema
      *
-     * @param bool $try_auto_generate_item_numbers_and_schema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number.
+     * @param bool $tryAutoGenerateItemNumbersAndSchema If this is set to true, AVACloud will try to generate item numbers and an item number schema automatically for the input project. The operation will not have any effect if either an item number schema is already present, or if any of the elements already has an item number.
      *
      * @return self
      */
-    public function setTryAutoGenerateItemNumbersAndSchema($try_auto_generate_item_numbers_and_schema)
+    public function setTryAutoGenerateItemNumbersAndSchema($tryAutoGenerateItemNumbersAndSchema)
     {
-        if (is_null($try_auto_generate_item_numbers_and_schema)) {
-            throw new \InvalidArgumentException('non-nullable try_auto_generate_item_numbers_and_schema cannot be null');
+        if (is_null($tryAutoGenerateItemNumbersAndSchema)) {
+            throw new \InvalidArgumentException('non-nullable tryAutoGenerateItemNumbersAndSchema cannot be null');
         }
-        $this->container['try_auto_generate_item_numbers_and_schema'] = $try_auto_generate_item_numbers_and_schema;
+        $this->container['tryAutoGenerateItemNumbersAndSchema'] = $tryAutoGenerateItemNumbersAndSchema;
 
         return $this;
     }

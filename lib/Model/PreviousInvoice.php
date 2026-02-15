@@ -59,8 +59,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'invoice_date' => '\DateTime',
-        'invoice_number' => 'string'
+        'invoiceDate' => '\DateTime',
+        'invoiceNumber' => 'string'
     ];
 
     /**
@@ -71,8 +71,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'invoice_date' => 'date-time',
-        'invoice_number' => null
+        'invoiceDate' => 'date-time',
+        'invoiceNumber' => null
     ];
 
     /**
@@ -81,8 +81,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'invoice_date' => false,
-        'invoice_number' => false
+        'invoiceDate' => false,
+        'invoiceNumber' => false
     ];
 
     /**
@@ -171,8 +171,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'invoice_date' => 'invoiceDate',
-        'invoice_number' => 'invoiceNumber'
+        'invoiceDate' => 'invoiceDate',
+        'invoiceNumber' => 'invoiceNumber'
     ];
 
     /**
@@ -181,8 +181,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'invoice_date' => 'setInvoiceDate',
-        'invoice_number' => 'setInvoiceNumber'
+        'invoiceDate' => 'setInvoiceDate',
+        'invoiceNumber' => 'setInvoiceNumber'
     ];
 
     /**
@@ -191,8 +191,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'invoice_date' => 'getInvoiceDate',
-        'invoice_number' => 'getInvoiceNumber'
+        'invoiceDate' => 'getInvoiceDate',
+        'invoiceNumber' => 'getInvoiceNumber'
     ];
 
     /**
@@ -252,8 +252,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('invoice_date', $data ?? [], null);
-        $this->setIfExists('invoice_number', $data ?? [], null);
+        $this->setIfExists('invoiceDate', $data ?? [], null);
+        $this->setIfExists('invoiceNumber', $data ?? [], null);
     }
 
     /**
@@ -283,8 +283,8 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['invoice_number'] === null) {
-            $invalidProperties[] = "'invoice_number' can't be null";
+        if ($this->container['invoiceNumber'] === null) {
+            $invalidProperties[] = "'invoiceNumber' can't be null";
         }
         return $invalidProperties;
     }
@@ -302,55 +302,55 @@ class PreviousInvoice implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets invoice_date
+     * Gets invoiceDate
      *
      * @return \DateTime|null
      */
     public function getInvoiceDate()
     {
-        return $this->container['invoice_date'];
+        return $this->container['invoiceDate'];
     }
 
     /**
-     * Sets invoice_date
+     * Sets invoiceDate
      *
-     * @param \DateTime|null $invoice_date BT-26 The date of the previous invoice
+     * @param \DateTime|null $invoiceDate BT-26 The date of the previous invoice
      *
      * @return self
      */
-    public function setInvoiceDate($invoice_date)
+    public function setInvoiceDate($invoiceDate)
     {
-        if (is_null($invoice_date)) {
-            throw new \InvalidArgumentException('non-nullable invoice_date cannot be null');
+        if (is_null($invoiceDate)) {
+            throw new \InvalidArgumentException('non-nullable invoiceDate cannot be null');
         }
-        $this->container['invoice_date'] = $invoice_date;
+        $this->container['invoiceDate'] = $invoiceDate;
 
         return $this;
     }
 
     /**
-     * Gets invoice_number
+     * Gets invoiceNumber
      *
      * @return string
      */
     public function getInvoiceNumber()
     {
-        return $this->container['invoice_number'];
+        return $this->container['invoiceNumber'];
     }
 
     /**
-     * Sets invoice_number
+     * Sets invoiceNumber
      *
-     * @param string $invoice_number BT-25 The number of the previous invoice
+     * @param string $invoiceNumber BT-25 The number of the previous invoice
      *
      * @return self
      */
-    public function setInvoiceNumber($invoice_number)
+    public function setInvoiceNumber($invoiceNumber)
     {
-        if (is_null($invoice_number)) {
-            throw new \InvalidArgumentException('non-nullable invoice_number cannot be null');
+        if (is_null($invoiceNumber)) {
+            throw new \InvalidArgumentException('non-nullable invoiceNumber cannot be null');
         }
-        $this->container['invoice_number'] = $invoice_number;
+        $this->container['invoiceNumber'] = $invoiceNumber;
 
         return $this;
     }

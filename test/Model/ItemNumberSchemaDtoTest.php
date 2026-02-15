@@ -81,7 +81,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_length"
+     * Test attribute "totalLength"
      */
     public function testPropertyTotalLength()
     {
@@ -126,7 +126,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "skip_non_existing_levels_in_position_item_numbers"
+     * Test attribute "skipNonExistingLevelsInPositionItemNumbers"
      */
     public function testPropertySkipNonExistingLevelsInPositionItemNumbers()
     {
@@ -135,7 +135,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "skipped_tiers_filler"
+     * Test attribute "skippedTiersFiller"
      */
     public function testPropertySkippedTiersFiller()
     {
@@ -144,7 +144,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "schema_is_correctly_defined"
+     * Test attribute "schemaIsCorrectlyDefined"
      */
     public function testPropertySchemaIsCorrectlyDefined()
     {
@@ -153,7 +153,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "allow_upper_case_lettering"
+     * Test attribute "allowUpperCaseLettering"
      */
     public function testPropertyAllowUpperCaseLettering()
     {
@@ -162,7 +162,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "disable_left_padding_tiers_with_filler"
+     * Test attribute "disableLeftPaddingTiersWithFiller"
      */
     public function testPropertyDisableLeftPaddingTiersWithFiller()
     {
@@ -171,7 +171,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "disable_item_number_identifier_transformations"
+     * Test attribute "disableItemNumberIdentifierTransformations"
      */
     public function testPropertyDisableItemNumberIdentifierTransformations()
     {
@@ -180,7 +180,7 @@ class ItemNumberSchemaDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "disable_item_number_identifier_transformations_only_for_alphanumeric_tiers"
+     * Test attribute "disableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers"
      */
     public function testPropertyDisableItemNumberIdentifierTransformationsOnlyForAlphanumericTiers()
     {

@@ -90,7 +90,7 @@ class ItemNumberDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "string_representation"
+     * Test attribute "stringRepresentation"
      */
     public function testPropertyStringRepresentation()
     {
@@ -99,7 +99,7 @@ class ItemNumberDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_schema_compliant"
+     * Test attribute "isSchemaCompliant"
      */
     public function testPropertyIsSchemaCompliant()
     {
@@ -108,7 +108,7 @@ class ItemNumberDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "item_number_schema"
+     * Test attribute "itemNumberSchema"
      */
     public function testPropertyItemNumberSchema()
     {
@@ -126,7 +126,7 @@ class ItemNumberDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_lot"
+     * Test attribute "isLot"
      */
     public function testPropertyIsLot()
     {
@@ -135,7 +135,7 @@ class ItemNumberDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hierarchy_level"
+     * Test attribute "hierarchyLevel"
      */
     public function testPropertyHierarchyLevel()
     {
@@ -144,7 +144,7 @@ class ItemNumberDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_attached_to_position"
+     * Test attribute "isAttachedToPosition"
      */
     public function testPropertyIsAttachedToPosition()
     {

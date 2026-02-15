@@ -81,7 +81,7 @@ class OenormPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "origin_code"
+     * Test attribute "originCode"
      */
     public function testPropertyOriginCode()
     {
@@ -90,7 +90,7 @@ class OenormPropertiesDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "opening_text_is_free_text"
+     * Test attribute "openingTextIsFreeText"
      */
     public function testPropertyOpeningTextIsFreeText()
     {

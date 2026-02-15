@@ -90,7 +90,7 @@ class CatalogueDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "gaeb_xml_id"
+     * Test attribute "gaebXmlId"
      */
     public function testPropertyGaebXmlId()
     {
@@ -117,7 +117,7 @@ class CatalogueDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_type"
+     * Test attribute "catalogueType"
      */
     public function testPropertyCatalogueType()
     {
@@ -126,7 +126,7 @@ class CatalogueDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_type_detail"
+     * Test attribute "catalogueTypeDetail"
      */
     public function testPropertyCatalogueTypeDetail()
     {

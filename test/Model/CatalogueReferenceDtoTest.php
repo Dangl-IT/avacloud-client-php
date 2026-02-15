@@ -90,7 +90,7 @@ class CatalogueReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_reference_key"
+     * Test attribute "catalogueReferenceKey"
      */
     public function testPropertyCatalogueReferenceKey()
     {
@@ -99,7 +99,7 @@ class CatalogueReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_reference_id"
+     * Test attribute "catalogueReferenceId"
      */
     public function testPropertyCatalogueReferenceId()
     {
@@ -108,7 +108,7 @@ class CatalogueReferenceDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {

@@ -99,7 +99,7 @@ class LabourPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "hourly_wage"
+     * Test attribute "hourlyWage"
      */
     public function testPropertyHourlyWage()
     {
@@ -117,7 +117,7 @@ class LabourPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "use_own_hourly_wage"
+     * Test attribute "useOwnHourlyWage"
      */
     public function testPropertyUseOwnHourlyWage()
     {
@@ -126,7 +126,7 @@ class LabourPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "total_time"
+     * Test attribute "totalTime"
      */
     public function testPropertyTotalTime()
     {
@@ -135,7 +135,7 @@ class LabourPriceComponentDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {

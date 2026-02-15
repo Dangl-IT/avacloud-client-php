@@ -56,19 +56,19 @@ class NoteTextDto extends IElementDto
       * @var string[]
       */
     protected static $openAPITypes = [
-        'is_opening_text' => 'bool',
-        'is_closing_text' => 'bool',
-        'short_text' => 'string',
-        'html_short_text' => 'string',
-        'addition_type' => '\Dangl\AVACloud\Model\AdditionTypeDto',
-        'long_text' => 'string',
-        'html_long_text' => 'string',
+        'isOpeningText' => 'bool',
+        'isClosingText' => 'bool',
+        'shortText' => 'string',
+        'htmlShortText' => 'string',
+        'additionType' => '\Dangl\AVACloud\Model\AdditionTypeDto',
+        'longText' => 'string',
+        'htmlLongText' => 'string',
         'identifier' => 'string',
-        'standardized_description' => '\Dangl\AVACloud\Model\StandardizedDescriptionDto',
-        'element_type' => 'string',
-        'description_id' => 'string',
-        'oenorm_note_text_properties' => '\Dangl\AVACloud\Model\OenormNoteTextPropertiesDto',
-        'has_bidder_comment_in_html_long_text' => 'bool'
+        'standardizedDescription' => '\Dangl\AVACloud\Model\StandardizedDescriptionDto',
+        'elementType' => 'string',
+        'descriptionId' => 'string',
+        'oenormNoteTextProperties' => '\Dangl\AVACloud\Model\OenormNoteTextPropertiesDto',
+        'hasBidderCommentInHtmlLongText' => 'bool'
     ];
 
     /**
@@ -79,19 +79,19 @@ class NoteTextDto extends IElementDto
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'is_opening_text' => null,
-        'is_closing_text' => null,
-        'short_text' => null,
-        'html_short_text' => null,
-        'addition_type' => null,
-        'long_text' => null,
-        'html_long_text' => null,
+        'isOpeningText' => null,
+        'isClosingText' => null,
+        'shortText' => null,
+        'htmlShortText' => null,
+        'additionType' => null,
+        'longText' => null,
+        'htmlLongText' => null,
         'identifier' => null,
-        'standardized_description' => null,
-        'element_type' => null,
-        'description_id' => null,
-        'oenorm_note_text_properties' => null,
-        'has_bidder_comment_in_html_long_text' => null
+        'standardizedDescription' => null,
+        'elementType' => null,
+        'descriptionId' => null,
+        'oenormNoteTextProperties' => null,
+        'hasBidderCommentInHtmlLongText' => null
     ];
 
     /**
@@ -100,19 +100,19 @@ class NoteTextDto extends IElementDto
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'is_opening_text' => false,
-        'is_closing_text' => false,
-        'short_text' => false,
-        'html_short_text' => false,
-        'addition_type' => false,
-        'long_text' => false,
-        'html_long_text' => false,
+        'isOpeningText' => false,
+        'isClosingText' => false,
+        'shortText' => false,
+        'htmlShortText' => false,
+        'additionType' => false,
+        'longText' => false,
+        'htmlLongText' => false,
         'identifier' => false,
-        'standardized_description' => false,
-        'element_type' => false,
-        'description_id' => false,
-        'oenorm_note_text_properties' => false,
-        'has_bidder_comment_in_html_long_text' => false
+        'standardizedDescription' => false,
+        'elementType' => false,
+        'descriptionId' => false,
+        'oenormNoteTextProperties' => false,
+        'hasBidderCommentInHtmlLongText' => false
     ];
 
     /**
@@ -201,19 +201,19 @@ class NoteTextDto extends IElementDto
      * @var string[]
      */
     protected static $attributeMap = [
-        'is_opening_text' => 'isOpeningText',
-        'is_closing_text' => 'isClosingText',
-        'short_text' => 'shortText',
-        'html_short_text' => 'htmlShortText',
-        'addition_type' => 'additionType',
-        'long_text' => 'longText',
-        'html_long_text' => 'htmlLongText',
+        'isOpeningText' => 'isOpeningText',
+        'isClosingText' => 'isClosingText',
+        'shortText' => 'shortText',
+        'htmlShortText' => 'htmlShortText',
+        'additionType' => 'additionType',
+        'longText' => 'longText',
+        'htmlLongText' => 'htmlLongText',
         'identifier' => 'identifier',
-        'standardized_description' => 'standardizedDescription',
-        'element_type' => 'elementType',
-        'description_id' => 'descriptionId',
-        'oenorm_note_text_properties' => 'oenormNoteTextProperties',
-        'has_bidder_comment_in_html_long_text' => 'hasBidderCommentInHtmlLongText'
+        'standardizedDescription' => 'standardizedDescription',
+        'elementType' => 'elementType',
+        'descriptionId' => 'descriptionId',
+        'oenormNoteTextProperties' => 'oenormNoteTextProperties',
+        'hasBidderCommentInHtmlLongText' => 'hasBidderCommentInHtmlLongText'
     ];
 
     /**
@@ -222,19 +222,19 @@ class NoteTextDto extends IElementDto
      * @var string[]
      */
     protected static $setters = [
-        'is_opening_text' => 'setIsOpeningText',
-        'is_closing_text' => 'setIsClosingText',
-        'short_text' => 'setShortText',
-        'html_short_text' => 'setHtmlShortText',
-        'addition_type' => 'setAdditionType',
-        'long_text' => 'setLongText',
-        'html_long_text' => 'setHtmlLongText',
+        'isOpeningText' => 'setIsOpeningText',
+        'isClosingText' => 'setIsClosingText',
+        'shortText' => 'setShortText',
+        'htmlShortText' => 'setHtmlShortText',
+        'additionType' => 'setAdditionType',
+        'longText' => 'setLongText',
+        'htmlLongText' => 'setHtmlLongText',
         'identifier' => 'setIdentifier',
-        'standardized_description' => 'setStandardizedDescription',
-        'element_type' => 'setElementType',
-        'description_id' => 'setDescriptionId',
-        'oenorm_note_text_properties' => 'setOenormNoteTextProperties',
-        'has_bidder_comment_in_html_long_text' => 'setHasBidderCommentInHtmlLongText'
+        'standardizedDescription' => 'setStandardizedDescription',
+        'elementType' => 'setElementType',
+        'descriptionId' => 'setDescriptionId',
+        'oenormNoteTextProperties' => 'setOenormNoteTextProperties',
+        'hasBidderCommentInHtmlLongText' => 'setHasBidderCommentInHtmlLongText'
     ];
 
     /**
@@ -243,19 +243,19 @@ class NoteTextDto extends IElementDto
      * @var string[]
      */
     protected static $getters = [
-        'is_opening_text' => 'getIsOpeningText',
-        'is_closing_text' => 'getIsClosingText',
-        'short_text' => 'getShortText',
-        'html_short_text' => 'getHtmlShortText',
-        'addition_type' => 'getAdditionType',
-        'long_text' => 'getLongText',
-        'html_long_text' => 'getHtmlLongText',
+        'isOpeningText' => 'getIsOpeningText',
+        'isClosingText' => 'getIsClosingText',
+        'shortText' => 'getShortText',
+        'htmlShortText' => 'getHtmlShortText',
+        'additionType' => 'getAdditionType',
+        'longText' => 'getLongText',
+        'htmlLongText' => 'getHtmlLongText',
         'identifier' => 'getIdentifier',
-        'standardized_description' => 'getStandardizedDescription',
-        'element_type' => 'getElementType',
-        'description_id' => 'getDescriptionId',
-        'oenorm_note_text_properties' => 'getOenormNoteTextProperties',
-        'has_bidder_comment_in_html_long_text' => 'getHasBidderCommentInHtmlLongText'
+        'standardizedDescription' => 'getStandardizedDescription',
+        'elementType' => 'getElementType',
+        'descriptionId' => 'getDescriptionId',
+        'oenormNoteTextProperties' => 'getOenormNoteTextProperties',
+        'hasBidderCommentInHtmlLongText' => 'getHasBidderCommentInHtmlLongText'
     ];
 
     /**
@@ -311,19 +311,19 @@ class NoteTextDto extends IElementDto
     {
         parent::__construct($data);
 
-        $this->setIfExists('is_opening_text', $data ?? [], null);
-        $this->setIfExists('is_closing_text', $data ?? [], null);
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('html_short_text', $data ?? [], null);
-        $this->setIfExists('addition_type', $data ?? [], null);
-        $this->setIfExists('long_text', $data ?? [], null);
-        $this->setIfExists('html_long_text', $data ?? [], null);
+        $this->setIfExists('isOpeningText', $data ?? [], null);
+        $this->setIfExists('isClosingText', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('htmlShortText', $data ?? [], null);
+        $this->setIfExists('additionType', $data ?? [], null);
+        $this->setIfExists('longText', $data ?? [], null);
+        $this->setIfExists('htmlLongText', $data ?? [], null);
         $this->setIfExists('identifier', $data ?? [], null);
-        $this->setIfExists('standardized_description', $data ?? [], null);
-        $this->setIfExists('element_type', $data ?? [], null);
-        $this->setIfExists('description_id', $data ?? [], null);
-        $this->setIfExists('oenorm_note_text_properties', $data ?? [], null);
-        $this->setIfExists('has_bidder_comment_in_html_long_text', $data ?? [], null);
+        $this->setIfExists('standardizedDescription', $data ?? [], null);
+        $this->setIfExists('elementType', $data ?? [], null);
+        $this->setIfExists('descriptionId', $data ?? [], null);
+        $this->setIfExists('oenormNoteTextProperties', $data ?? [], null);
+        $this->setIfExists('hasBidderCommentInHtmlLongText', $data ?? [], null);
     }
 
     /**
@@ -353,17 +353,17 @@ class NoteTextDto extends IElementDto
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['is_opening_text'] === null) {
-            $invalidProperties[] = "'is_opening_text' can't be null";
+        if ($this->container['isOpeningText'] === null) {
+            $invalidProperties[] = "'isOpeningText' can't be null";
         }
-        if ($this->container['is_closing_text'] === null) {
-            $invalidProperties[] = "'is_closing_text' can't be null";
+        if ($this->container['isClosingText'] === null) {
+            $invalidProperties[] = "'isClosingText' can't be null";
         }
-        if ($this->container['addition_type'] === null) {
-            $invalidProperties[] = "'addition_type' can't be null";
+        if ($this->container['additionType'] === null) {
+            $invalidProperties[] = "'additionType' can't be null";
         }
-        if ($this->container['has_bidder_comment_in_html_long_text'] === null) {
-            $invalidProperties[] = "'has_bidder_comment_in_html_long_text' can't be null";
+        if ($this->container['hasBidderCommentInHtmlLongText'] === null) {
+            $invalidProperties[] = "'hasBidderCommentInHtmlLongText' can't be null";
         }
         return $invalidProperties;
     }
@@ -381,190 +381,190 @@ class NoteTextDto extends IElementDto
 
 
     /**
-     * Gets is_opening_text
+     * Gets isOpeningText
      *
      * @return bool
      */
     public function getIsOpeningText()
     {
-        return $this->container['is_opening_text'];
+        return $this->container['isOpeningText'];
     }
 
     /**
-     * Sets is_opening_text
+     * Sets isOpeningText
      *
-     * @param bool $is_opening_text If this is set to true, this text is meant to not be seen as part of the regular elements hierarchy but as a special opening text at the beginning of the project. For example, in GAEB XML, this would map to the GAEB.Award.AddText. Typically, such texts describe project-wide contractual definitions. If this is set to true, this NoteText should be placed at the top of the elements hierarchy directly in the ServiceSpecification.Elements group, otherwise it will likely not be treated correctly when exporting to GAEB. You can only set IsOpeningText or IsClosingText to true.
+     * @param bool $isOpeningText If this is set to true, this text is meant to not be seen as part of the regular elements hierarchy but as a special opening text at the beginning of the project. For example, in GAEB XML, this would map to the GAEB.Award.AddText. Typically, such texts describe project-wide contractual definitions. If this is set to true, this NoteText should be placed at the top of the elements hierarchy directly in the ServiceSpecification.Elements group, otherwise it will likely not be treated correctly when exporting to GAEB. You can only set IsOpeningText or IsClosingText to true.
      *
      * @return self
      */
-    public function setIsOpeningText($is_opening_text)
+    public function setIsOpeningText($isOpeningText)
     {
-        if (is_null($is_opening_text)) {
-            throw new \InvalidArgumentException('non-nullable is_opening_text cannot be null');
+        if (is_null($isOpeningText)) {
+            throw new \InvalidArgumentException('non-nullable isOpeningText cannot be null');
         }
-        $this->container['is_opening_text'] = $is_opening_text;
+        $this->container['isOpeningText'] = $isOpeningText;
 
         return $this;
     }
 
     /**
-     * Gets is_closing_text
+     * Gets isClosingText
      *
      * @return bool
      */
     public function getIsClosingText()
     {
-        return $this->container['is_closing_text'];
+        return $this->container['isClosingText'];
     }
 
     /**
-     * Sets is_closing_text
+     * Sets isClosingText
      *
-     * @param bool $is_closing_text If this is set to true, this text is meant to not be seen as part of the regular elements hierarchy but as a special closing text at the end of the project. For Example, in GAEB XML, this would map to the GAEB.AddText. Typically, such texts are used to describe project wide finishing descriptions. If this is set to true, this NoteText should be placed at the top of the elements hierarchy directly in the ServiceSpecification.Elements group, otherwise it will likely not be treated correctly when exporting to GAEB. You can only set IsOpeningText or IsClosingText to true.
+     * @param bool $isClosingText If this is set to true, this text is meant to not be seen as part of the regular elements hierarchy but as a special closing text at the end of the project. For Example, in GAEB XML, this would map to the GAEB.AddText. Typically, such texts are used to describe project wide finishing descriptions. If this is set to true, this NoteText should be placed at the top of the elements hierarchy directly in the ServiceSpecification.Elements group, otherwise it will likely not be treated correctly when exporting to GAEB. You can only set IsOpeningText or IsClosingText to true.
      *
      * @return self
      */
-    public function setIsClosingText($is_closing_text)
+    public function setIsClosingText($isClosingText)
     {
-        if (is_null($is_closing_text)) {
-            throw new \InvalidArgumentException('non-nullable is_closing_text cannot be null');
+        if (is_null($isClosingText)) {
+            throw new \InvalidArgumentException('non-nullable isClosingText cannot be null');
         }
-        $this->container['is_closing_text'] = $is_closing_text;
+        $this->container['isClosingText'] = $isClosingText;
 
         return $this;
     }
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text Short description for this DescriptionBase element. Please note that by default, this property takes precedence over the `HtmlShortText` property. If you want to convert from DTO objects, and you want to work with the `HtmlShortText` property, you need to set this property to null.
+     * @param string|null $shortText Short description for this DescriptionBase element. Please note that by default, this property takes precedence over the `HtmlShortText` property. If you want to convert from DTO objects, and you want to work with the `HtmlShortText` property, you need to set this property to null.
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets html_short_text
+     * Gets htmlShortText
      *
      * @return string|null
      */
     public function getHtmlShortText()
     {
-        return $this->container['html_short_text'];
+        return $this->container['htmlShortText'];
     }
 
     /**
-     * Sets html_short_text
+     * Sets htmlShortText
      *
-     * @param string|null $html_short_text This contains the Html representation of the Shorttext. When the ShortText is set, this property will be set to contain the plain text representation of the Html text and vice versa. In practice, it's recommended to always use the plain text representations for short texts. This property is used to store the short text in HTML format. If you want to convert from DTO objects, and you want to use this property, then you need to ensure that `ShortText` is set to null, otherwise the plain text takes precedence over the HTML text.
+     * @param string|null $htmlShortText This contains the Html representation of the Shorttext. When the ShortText is set, this property will be set to contain the plain text representation of the Html text and vice versa. In practice, it's recommended to always use the plain text representations for short texts. This property is used to store the short text in HTML format. If you want to convert from DTO objects, and you want to use this property, then you need to ensure that `ShortText` is set to null, otherwise the plain text takes precedence over the HTML text.
      *
      * @return self
      */
-    public function setHtmlShortText($html_short_text)
+    public function setHtmlShortText($htmlShortText)
     {
-        if (is_null($html_short_text)) {
-            throw new \InvalidArgumentException('non-nullable html_short_text cannot be null');
+        if (is_null($htmlShortText)) {
+            throw new \InvalidArgumentException('non-nullable htmlShortText cannot be null');
         }
-        $this->container['html_short_text'] = $html_short_text;
+        $this->container['htmlShortText'] = $htmlShortText;
 
         return $this;
     }
 
     /**
-     * Gets addition_type
+     * Gets additionType
      *
      * @return \Dangl\AVACloud\Model\AdditionTypeDto
      */
     public function getAdditionType()
     {
-        return $this->container['addition_type'];
+        return $this->container['additionType'];
     }
 
     /**
-     * Sets addition_type
+     * Sets additionType
      *
-     * @param \Dangl\AVACloud\Model\AdditionTypeDto $addition_type addition_type
+     * @param \Dangl\AVACloud\Model\AdditionTypeDto $additionType additionType
      *
      * @return self
      */
-    public function setAdditionType($addition_type)
+    public function setAdditionType($additionType)
     {
-        if (is_null($addition_type)) {
-            throw new \InvalidArgumentException('non-nullable addition_type cannot be null');
+        if (is_null($additionType)) {
+            throw new \InvalidArgumentException('non-nullable additionType cannot be null');
         }
-        $this->container['addition_type'] = $addition_type;
+        $this->container['additionType'] = $additionType;
 
         return $this;
     }
 
     /**
-     * Gets long_text
+     * Gets longText
      *
      * @return string|null
      */
     public function getLongText()
     {
-        return $this->container['long_text'];
+        return $this->container['longText'];
     }
 
     /**
-     * Sets long_text
+     * Sets longText
      *
-     * @param string|null $long_text Detailed description for this DescriptionBase element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
+     * @param string|null $longText Detailed description for this DescriptionBase element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
      *
      * @return self
      */
-    public function setLongText($long_text)
+    public function setLongText($longText)
     {
-        if (is_null($long_text)) {
-            throw new \InvalidArgumentException('non-nullable long_text cannot be null');
+        if (is_null($longText)) {
+            throw new \InvalidArgumentException('non-nullable longText cannot be null');
         }
-        $this->container['long_text'] = $long_text;
+        $this->container['longText'] = $longText;
 
         return $this;
     }
 
     /**
-     * Gets html_long_text
+     * Gets htmlLongText
      *
      * @return string|null
      */
     public function getHtmlLongText()
     {
-        return $this->container['html_long_text'];
+        return $this->container['htmlLongText'];
     }
 
     /**
-     * Sets html_long_text
+     * Sets htmlLongText
      *
-     * @param string|null $html_long_text This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
+     * @param string|null $htmlLongText This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
      *
      * @return self
      */
-    public function setHtmlLongText($html_long_text)
+    public function setHtmlLongText($htmlLongText)
     {
-        if (is_null($html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable html_long_text cannot be null');
+        if (is_null($htmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable htmlLongText cannot be null');
         }
-        $this->container['html_long_text'] = $html_long_text;
+        $this->container['htmlLongText'] = $htmlLongText;
 
         return $this;
     }
@@ -597,136 +597,136 @@ class NoteTextDto extends IElementDto
     }
 
     /**
-     * Gets standardized_description
+     * Gets standardizedDescription
      *
      * @return \Dangl\AVACloud\Model\StandardizedDescriptionDto|null
      */
     public function getStandardizedDescription()
     {
-        return $this->container['standardized_description'];
+        return $this->container['standardizedDescription'];
     }
 
     /**
-     * Sets standardized_description
+     * Sets standardizedDescription
      *
-     * @param \Dangl\AVACloud\Model\StandardizedDescriptionDto|null $standardized_description standardized_description
+     * @param \Dangl\AVACloud\Model\StandardizedDescriptionDto|null $standardizedDescription standardizedDescription
      *
      * @return self
      */
-    public function setStandardizedDescription($standardized_description)
+    public function setStandardizedDescription($standardizedDescription)
     {
-        if (is_null($standardized_description)) {
-            throw new \InvalidArgumentException('non-nullable standardized_description cannot be null');
+        if (is_null($standardizedDescription)) {
+            throw new \InvalidArgumentException('non-nullable standardizedDescription cannot be null');
         }
-        $this->container['standardized_description'] = $standardized_description;
+        $this->container['standardizedDescription'] = $standardizedDescription;
 
         return $this;
     }
 
     /**
-     * Gets element_type
+     * Gets elementType
      *
      * @return string|null
      */
     public function getElementType()
     {
-        return $this->container['element_type'];
+        return $this->container['elementType'];
     }
 
     /**
-     * Sets element_type
+     * Sets elementType
      *
-     * @param string|null $element_type element_type
+     * @param string|null $elementType elementType
      *
      * @return self
      */
-    public function setElementType($element_type)
+    public function setElementType($elementType)
     {
-        if (is_null($element_type)) {
-            throw new \InvalidArgumentException('non-nullable element_type cannot be null');
+        if (is_null($elementType)) {
+            throw new \InvalidArgumentException('non-nullable elementType cannot be null');
         }
-        $this->container['element_type'] = $element_type;
+        $this->container['elementType'] = $elementType;
 
         return $this;
     }
 
     /**
-     * Gets description_id
+     * Gets descriptionId
      *
      * @return string|null
      */
     public function getDescriptionId()
     {
-        return $this->container['description_id'];
+        return $this->container['descriptionId'];
     }
 
     /**
-     * Sets description_id
+     * Sets descriptionId
      *
-     * @param string|null $description_id This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It's different to an elements identifier in that it should only apply to the description component, meaning the text itself.
+     * @param string|null $descriptionId This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It's different to an elements identifier in that it should only apply to the description component, meaning the text itself.
      *
      * @return self
      */
-    public function setDescriptionId($description_id)
+    public function setDescriptionId($descriptionId)
     {
-        if (is_null($description_id)) {
-            throw new \InvalidArgumentException('non-nullable description_id cannot be null');
+        if (is_null($descriptionId)) {
+            throw new \InvalidArgumentException('non-nullable descriptionId cannot be null');
         }
-        $this->container['description_id'] = $description_id;
+        $this->container['descriptionId'] = $descriptionId;
 
         return $this;
     }
 
     /**
-     * Gets oenorm_note_text_properties
+     * Gets oenormNoteTextProperties
      *
      * @return \Dangl\AVACloud\Model\OenormNoteTextPropertiesDto|null
      */
     public function getOenormNoteTextProperties()
     {
-        return $this->container['oenorm_note_text_properties'];
+        return $this->container['oenormNoteTextProperties'];
     }
 
     /**
-     * Sets oenorm_note_text_properties
+     * Sets oenormNoteTextProperties
      *
-     * @param \Dangl\AVACloud\Model\OenormNoteTextPropertiesDto|null $oenorm_note_text_properties oenorm_note_text_properties
+     * @param \Dangl\AVACloud\Model\OenormNoteTextPropertiesDto|null $oenormNoteTextProperties oenormNoteTextProperties
      *
      * @return self
      */
-    public function setOenormNoteTextProperties($oenorm_note_text_properties)
+    public function setOenormNoteTextProperties($oenormNoteTextProperties)
     {
-        if (is_null($oenorm_note_text_properties)) {
-            throw new \InvalidArgumentException('non-nullable oenorm_note_text_properties cannot be null');
+        if (is_null($oenormNoteTextProperties)) {
+            throw new \InvalidArgumentException('non-nullable oenormNoteTextProperties cannot be null');
         }
-        $this->container['oenorm_note_text_properties'] = $oenorm_note_text_properties;
+        $this->container['oenormNoteTextProperties'] = $oenormNoteTextProperties;
 
         return $this;
     }
 
     /**
-     * Gets has_bidder_comment_in_html_long_text
+     * Gets hasBidderCommentInHtmlLongText
      *
      * @return bool
      */
     public function getHasBidderCommentInHtmlLongText()
     {
-        return $this->container['has_bidder_comment_in_html_long_text'];
+        return $this->container['hasBidderCommentInHtmlLongText'];
     }
 
     /**
-     * Sets has_bidder_comment_in_html_long_text
+     * Sets hasBidderCommentInHtmlLongText
      *
-     * @param bool $has_bidder_comment_in_html_long_text has_bidder_comment_in_html_long_text
+     * @param bool $hasBidderCommentInHtmlLongText hasBidderCommentInHtmlLongText
      *
      * @return self
      */
-    public function setHasBidderCommentInHtmlLongText($has_bidder_comment_in_html_long_text)
+    public function setHasBidderCommentInHtmlLongText($hasBidderCommentInHtmlLongText)
     {
-        if (is_null($has_bidder_comment_in_html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable has_bidder_comment_in_html_long_text cannot be null');
+        if (is_null($hasBidderCommentInHtmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable hasBidderCommentInHtmlLongText cannot be null');
         }
-        $this->container['has_bidder_comment_in_html_long_text'] = $has_bidder_comment_in_html_long_text;
+        $this->container['hasBidderCommentInHtmlLongText'] = $hasBidderCommentInHtmlLongText;
 
         return $this;
     }

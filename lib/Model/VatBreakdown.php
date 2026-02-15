@@ -59,12 +59,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'net_taxable_amount' => 'float',
-        'vat_amount' => 'float',
-        'vat_category' => '\Dangl\AVACloud\Model\VatCategory',
-        'tax_rate' => 'float',
-        'vat_exemption_reason_text' => 'string',
-        'vat_exemption_reason_code' => 'string'
+        'netTaxableAmount' => 'float',
+        'vatAmount' => 'float',
+        'vatCategory' => '\Dangl\AVACloud\Model\VatCategory',
+        'taxRate' => 'float',
+        'vatExemptionReasonText' => 'string',
+        'vatExemptionReasonCode' => 'string'
     ];
 
     /**
@@ -75,12 +75,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'net_taxable_amount' => 'decimal',
-        'vat_amount' => 'decimal',
-        'vat_category' => null,
-        'tax_rate' => 'decimal',
-        'vat_exemption_reason_text' => null,
-        'vat_exemption_reason_code' => null
+        'netTaxableAmount' => 'decimal',
+        'vatAmount' => 'decimal',
+        'vatCategory' => null,
+        'taxRate' => 'decimal',
+        'vatExemptionReasonText' => null,
+        'vatExemptionReasonCode' => null
     ];
 
     /**
@@ -89,12 +89,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'net_taxable_amount' => false,
-        'vat_amount' => false,
-        'vat_category' => false,
-        'tax_rate' => false,
-        'vat_exemption_reason_text' => false,
-        'vat_exemption_reason_code' => false
+        'netTaxableAmount' => false,
+        'vatAmount' => false,
+        'vatCategory' => false,
+        'taxRate' => false,
+        'vatExemptionReasonText' => false,
+        'vatExemptionReasonCode' => false
     ];
 
     /**
@@ -183,12 +183,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'net_taxable_amount' => 'netTaxableAmount',
-        'vat_amount' => 'vatAmount',
-        'vat_category' => 'vatCategory',
-        'tax_rate' => 'taxRate',
-        'vat_exemption_reason_text' => 'vatExemptionReasonText',
-        'vat_exemption_reason_code' => 'vatExemptionReasonCode'
+        'netTaxableAmount' => 'netTaxableAmount',
+        'vatAmount' => 'vatAmount',
+        'vatCategory' => 'vatCategory',
+        'taxRate' => 'taxRate',
+        'vatExemptionReasonText' => 'vatExemptionReasonText',
+        'vatExemptionReasonCode' => 'vatExemptionReasonCode'
     ];
 
     /**
@@ -197,12 +197,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'net_taxable_amount' => 'setNetTaxableAmount',
-        'vat_amount' => 'setVatAmount',
-        'vat_category' => 'setVatCategory',
-        'tax_rate' => 'setTaxRate',
-        'vat_exemption_reason_text' => 'setVatExemptionReasonText',
-        'vat_exemption_reason_code' => 'setVatExemptionReasonCode'
+        'netTaxableAmount' => 'setNetTaxableAmount',
+        'vatAmount' => 'setVatAmount',
+        'vatCategory' => 'setVatCategory',
+        'taxRate' => 'setTaxRate',
+        'vatExemptionReasonText' => 'setVatExemptionReasonText',
+        'vatExemptionReasonCode' => 'setVatExemptionReasonCode'
     ];
 
     /**
@@ -211,12 +211,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'net_taxable_amount' => 'getNetTaxableAmount',
-        'vat_amount' => 'getVatAmount',
-        'vat_category' => 'getVatCategory',
-        'tax_rate' => 'getTaxRate',
-        'vat_exemption_reason_text' => 'getVatExemptionReasonText',
-        'vat_exemption_reason_code' => 'getVatExemptionReasonCode'
+        'netTaxableAmount' => 'getNetTaxableAmount',
+        'vatAmount' => 'getVatAmount',
+        'vatCategory' => 'getVatCategory',
+        'taxRate' => 'getTaxRate',
+        'vatExemptionReasonText' => 'getVatExemptionReasonText',
+        'vatExemptionReasonCode' => 'getVatExemptionReasonCode'
     ];
 
     /**
@@ -276,12 +276,12 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('net_taxable_amount', $data ?? [], null);
-        $this->setIfExists('vat_amount', $data ?? [], null);
-        $this->setIfExists('vat_category', $data ?? [], null);
-        $this->setIfExists('tax_rate', $data ?? [], null);
-        $this->setIfExists('vat_exemption_reason_text', $data ?? [], null);
-        $this->setIfExists('vat_exemption_reason_code', $data ?? [], null);
+        $this->setIfExists('netTaxableAmount', $data ?? [], null);
+        $this->setIfExists('vatAmount', $data ?? [], null);
+        $this->setIfExists('vatCategory', $data ?? [], null);
+        $this->setIfExists('taxRate', $data ?? [], null);
+        $this->setIfExists('vatExemptionReasonText', $data ?? [], null);
+        $this->setIfExists('vatExemptionReasonCode', $data ?? [], null);
     }
 
     /**
@@ -311,8 +311,8 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['vat_category'] === null) {
-            $invalidProperties[] = "'vat_category' can't be null";
+        if ($this->container['vatCategory'] === null) {
+            $invalidProperties[] = "'vatCategory' can't be null";
         }
         return $invalidProperties;
     }
@@ -330,163 +330,163 @@ class VatBreakdown implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets net_taxable_amount
+     * Gets netTaxableAmount
      *
      * @return float|null
      */
     public function getNetTaxableAmount()
     {
-        return $this->container['net_taxable_amount'];
+        return $this->container['netTaxableAmount'];
     }
 
     /**
-     * Sets net_taxable_amount
+     * Sets netTaxableAmount
      *
-     * @param float|null $net_taxable_amount BT-116 The total net amount of this VAT category
+     * @param float|null $netTaxableAmount BT-116 The total net amount of this VAT category
      *
      * @return self
      */
-    public function setNetTaxableAmount($net_taxable_amount)
+    public function setNetTaxableAmount($netTaxableAmount)
     {
-        if (is_null($net_taxable_amount)) {
-            throw new \InvalidArgumentException('non-nullable net_taxable_amount cannot be null');
+        if (is_null($netTaxableAmount)) {
+            throw new \InvalidArgumentException('non-nullable netTaxableAmount cannot be null');
         }
-        $this->container['net_taxable_amount'] = $net_taxable_amount;
+        $this->container['netTaxableAmount'] = $netTaxableAmount;
 
         return $this;
     }
 
     /**
-     * Gets vat_amount
+     * Gets vatAmount
      *
      * @return float|null
      */
     public function getVatAmount()
     {
-        return $this->container['vat_amount'];
+        return $this->container['vatAmount'];
     }
 
     /**
-     * Sets vat_amount
+     * Sets vatAmount
      *
-     * @param float|null $vat_amount BT-117 The total VAT
+     * @param float|null $vatAmount BT-117 The total VAT
      *
      * @return self
      */
-    public function setVatAmount($vat_amount)
+    public function setVatAmount($vatAmount)
     {
-        if (is_null($vat_amount)) {
-            throw new \InvalidArgumentException('non-nullable vat_amount cannot be null');
+        if (is_null($vatAmount)) {
+            throw new \InvalidArgumentException('non-nullable vatAmount cannot be null');
         }
-        $this->container['vat_amount'] = $vat_amount;
+        $this->container['vatAmount'] = $vatAmount;
 
         return $this;
     }
 
     /**
-     * Gets vat_category
+     * Gets vatCategory
      *
      * @return \Dangl\AVACloud\Model\VatCategory
      */
     public function getVatCategory()
     {
-        return $this->container['vat_category'];
+        return $this->container['vatCategory'];
     }
 
     /**
-     * Sets vat_category
+     * Sets vatCategory
      *
-     * @param \Dangl\AVACloud\Model\VatCategory $vat_category vat_category
+     * @param \Dangl\AVACloud\Model\VatCategory $vatCategory vatCategory
      *
      * @return self
      */
-    public function setVatCategory($vat_category)
+    public function setVatCategory($vatCategory)
     {
-        if (is_null($vat_category)) {
-            throw new \InvalidArgumentException('non-nullable vat_category cannot be null');
+        if (is_null($vatCategory)) {
+            throw new \InvalidArgumentException('non-nullable vatCategory cannot be null');
         }
-        $this->container['vat_category'] = $vat_category;
+        $this->container['vatCategory'] = $vatCategory;
 
         return $this;
     }
 
     /**
-     * Gets tax_rate
+     * Gets taxRate
      *
      * @return float|null
      */
     public function getTaxRate()
     {
-        return $this->container['tax_rate'];
+        return $this->container['taxRate'];
     }
 
     /**
-     * Sets tax_rate
+     * Sets taxRate
      *
-     * @param float|null $tax_rate BT-119 The actual tax rate as a decimal value, e.g. 19% would be 0.19
+     * @param float|null $taxRate BT-119 The actual tax rate as a decimal value, e.g. 19% would be 0.19
      *
      * @return self
      */
-    public function setTaxRate($tax_rate)
+    public function setTaxRate($taxRate)
     {
-        if (is_null($tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable tax_rate cannot be null');
+        if (is_null($taxRate)) {
+            throw new \InvalidArgumentException('non-nullable taxRate cannot be null');
         }
-        $this->container['tax_rate'] = $tax_rate;
+        $this->container['taxRate'] = $taxRate;
 
         return $this;
     }
 
     /**
-     * Gets vat_exemption_reason_text
+     * Gets vatExemptionReasonText
      *
      * @return string|null
      */
     public function getVatExemptionReasonText()
     {
-        return $this->container['vat_exemption_reason_text'];
+        return $this->container['vatExemptionReasonText'];
     }
 
     /**
-     * Sets vat_exemption_reason_text
+     * Sets vatExemptionReasonText
      *
-     * @param string|null $vat_exemption_reason_text BT-120 If the VAT is exempt, there should be a description here. For example, in reverse charge scenarios, this text should contain a reference to \"Reverse charge according to ...\".
+     * @param string|null $vatExemptionReasonText BT-120 If the VAT is exempt, there should be a description here. For example, in reverse charge scenarios, this text should contain a reference to \"Reverse charge according to ...\".
      *
      * @return self
      */
-    public function setVatExemptionReasonText($vat_exemption_reason_text)
+    public function setVatExemptionReasonText($vatExemptionReasonText)
     {
-        if (is_null($vat_exemption_reason_text)) {
-            throw new \InvalidArgumentException('non-nullable vat_exemption_reason_text cannot be null');
+        if (is_null($vatExemptionReasonText)) {
+            throw new \InvalidArgumentException('non-nullable vatExemptionReasonText cannot be null');
         }
-        $this->container['vat_exemption_reason_text'] = $vat_exemption_reason_text;
+        $this->container['vatExemptionReasonText'] = $vatExemptionReasonText;
 
         return $this;
     }
 
     /**
-     * Gets vat_exemption_reason_code
+     * Gets vatExemptionReasonCode
      *
      * @return string|null
      */
     public function getVatExemptionReasonCode()
     {
-        return $this->container['vat_exemption_reason_code'];
+        return $this->container['vatExemptionReasonCode'];
     }
 
     /**
-     * Sets vat_exemption_reason_code
+     * Sets vatExemptionReasonCode
      *
-     * @param string|null $vat_exemption_reason_code BT-121 A code from the VAT exemption reason code list(VATEX)“
+     * @param string|null $vatExemptionReasonCode BT-121 A code from the VAT exemption reason code list(VATEX)“
      *
      * @return self
      */
-    public function setVatExemptionReasonCode($vat_exemption_reason_code)
+    public function setVatExemptionReasonCode($vatExemptionReasonCode)
     {
-        if (is_null($vat_exemption_reason_code)) {
-            throw new \InvalidArgumentException('non-nullable vat_exemption_reason_code cannot be null');
+        if (is_null($vatExemptionReasonCode)) {
+            throw new \InvalidArgumentException('non-nullable vatExemptionReasonCode cannot be null');
         }
-        $this->container['vat_exemption_reason_code'] = $vat_exemption_reason_code;
+        $this->container['vatExemptionReasonCode'] = $vatExemptionReasonCode;
 
         return $this;
     }

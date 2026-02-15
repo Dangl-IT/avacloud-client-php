@@ -56,64 +56,64 @@ class PositionDto extends IElementDto
       * @var string[]
       */
     protected static $openAPITypes = [
-        'unit_price' => 'float',
-        'unit_price_override' => 'float',
+        'unitPrice' => 'float',
+        'unitPriceOverride' => 'float',
         'quantity' => 'float',
-        'quantity_override' => 'float',
-        'is_complementing_position' => 'bool',
-        'complements_positions' => 'string[]',
-        'complementing_price_percentage_override' => 'float',
-        'complementing_price_percentage' => 'float',
-        'unit_tag' => 'string',
-        'labour_components' => '\Dangl\AVACloud\Model\LabourPriceComponentDto',
-        'price_components' => '\Dangl\AVACloud\Model\PriceComponentDto[]',
-        'quantity_components' => '\Dangl\AVACloud\Model\CalculationDto[]',
-        'sub_descriptions' => '\Dangl\AVACloud\Model\SubDescriptionDto[]',
-        'comission_status' => '\Dangl\AVACloud\Model\ComissionStatusDto',
-        'complemented_by' => 'string[]',
+        'quantityOverride' => 'float',
+        'isComplementingPosition' => 'bool',
+        'complementsPositions' => 'string[]',
+        'complementingPricePercentageOverride' => 'float',
+        'complementingPricePercentage' => 'float',
+        'unitTag' => 'string',
+        'labourComponents' => '\Dangl\AVACloud\Model\LabourPriceComponentDto',
+        'priceComponents' => '\Dangl\AVACloud\Model\PriceComponentDto[]',
+        'quantityComponents' => '\Dangl\AVACloud\Model\CalculationDto[]',
+        'subDescriptions' => '\Dangl\AVACloud\Model\SubDescriptionDto[]',
+        'comissionStatus' => '\Dangl\AVACloud\Model\ComissionStatusDto',
+        'complementedBy' => 'string[]',
         'complemented' => 'bool',
-        'amount_to_be_entered_by_bidder' => 'bool',
-        'price_composition_required' => 'bool',
-        'use_different_tax_rate' => 'bool',
-        'tax_rate' => 'float',
-        'item_number' => '\Dangl\AVACloud\Model\ItemNumberDto',
-        'deduction_factor' => 'float',
-        'total_price' => 'float',
-        'total_price_gross' => 'float',
-        'total_price_gross_deducted' => 'float',
-        'deducted_price' => 'float',
-        'position_type' => '\Dangl\AVACloud\Model\PositionTypeDto',
-        'price_type' => '\Dangl\AVACloud\Model\PriceTypeDto',
-        'service_type' => '\Dangl\AVACloud\Model\ServiceTypeDto',
-        'product_data' => '\Dangl\AVACloud\Model\ProductDataDto',
-        'short_text' => 'string',
-        'html_short_text' => 'string',
-        'long_text' => 'string',
-        'html_long_text' => 'string',
-        'addition_type' => '\Dangl\AVACloud\Model\AdditionTypeDto',
-        'element_type' => 'string',
-        'quantity_assignments' => '\Dangl\AVACloud\Model\QuantityAssignmentDto[]',
-        'commerce_properties' => '\Dangl\AVACloud\Model\CommercePropertiesDto',
-        'alternative_to' => 'string',
-        'alternative_identifier' => 'int',
-        'alternative_group_identifier' => 'int',
-        'is_lump_sum' => 'bool',
-        'repetition_to' => 'string',
-        'standardized_description' => '\Dangl\AVACloud\Model\StandardizedDescriptionDto',
-        'complemented_by_quantities' => '\Dangl\AVACloud\Model\ComplementedByQuantityDto[]',
-        'execution_description_reference' => 'string',
-        'not_offered' => 'bool',
-        'oenorm_position_properties' => '\Dangl\AVACloud\Model\OenormPositionPropertiesDto',
-        'description_id' => 'string',
-        'hierarchy_level' => 'int',
-        'addendum_status' => '\Dangl\AVACloud\Model\AddendumStatusDto',
-        'has_bidder_comment_in_html_long_text' => 'bool',
-        'gaeb_complementing_type' => '\Dangl\AVACloud\Model\PositionComplementingTypeDto',
-        'hold_out_properties' => '\Dangl\AVACloud\Model\PositionHoldOutPropertiesDto',
-        'estimated_quantity' => 'float',
-        'price_catalogue_data' => '\Dangl\AVACloud\Model\PriceCatalogueDataDto',
-        'ignore_project_catalogue_propagation' => 'bool',
-        'is_main_position' => 'bool'
+        'amountToBeEnteredByBidder' => 'bool',
+        'priceCompositionRequired' => 'bool',
+        'useDifferentTaxRate' => 'bool',
+        'taxRate' => 'float',
+        'itemNumber' => '\Dangl\AVACloud\Model\ItemNumberDto',
+        'deductionFactor' => 'float',
+        'totalPrice' => 'float',
+        'totalPriceGross' => 'float',
+        'totalPriceGrossDeducted' => 'float',
+        'deductedPrice' => 'float',
+        'positionType' => '\Dangl\AVACloud\Model\PositionTypeDto',
+        'priceType' => '\Dangl\AVACloud\Model\PriceTypeDto',
+        'serviceType' => '\Dangl\AVACloud\Model\ServiceTypeDto',
+        'productData' => '\Dangl\AVACloud\Model\ProductDataDto',
+        'shortText' => 'string',
+        'htmlShortText' => 'string',
+        'longText' => 'string',
+        'htmlLongText' => 'string',
+        'additionType' => '\Dangl\AVACloud\Model\AdditionTypeDto',
+        'elementType' => 'string',
+        'quantityAssignments' => '\Dangl\AVACloud\Model\QuantityAssignmentDto[]',
+        'commerceProperties' => '\Dangl\AVACloud\Model\CommercePropertiesDto',
+        'alternativeTo' => 'string',
+        'alternativeIdentifier' => 'int',
+        'alternativeGroupIdentifier' => 'int',
+        'isLumpSum' => 'bool',
+        'repetitionTo' => 'string',
+        'standardizedDescription' => '\Dangl\AVACloud\Model\StandardizedDescriptionDto',
+        'complementedByQuantities' => '\Dangl\AVACloud\Model\ComplementedByQuantityDto[]',
+        'executionDescriptionReference' => 'string',
+        'notOffered' => 'bool',
+        'oenormPositionProperties' => '\Dangl\AVACloud\Model\OenormPositionPropertiesDto',
+        'descriptionId' => 'string',
+        'hierarchyLevel' => 'int',
+        'addendumStatus' => '\Dangl\AVACloud\Model\AddendumStatusDto',
+        'hasBidderCommentInHtmlLongText' => 'bool',
+        'gaebComplementingType' => '\Dangl\AVACloud\Model\PositionComplementingTypeDto',
+        'holdOutProperties' => '\Dangl\AVACloud\Model\PositionHoldOutPropertiesDto',
+        'estimatedQuantity' => 'float',
+        'priceCatalogueData' => '\Dangl\AVACloud\Model\PriceCatalogueDataDto',
+        'ignoreProjectCataloguePropagation' => 'bool',
+        'isMainPosition' => 'bool'
     ];
 
     /**
@@ -124,64 +124,64 @@ class PositionDto extends IElementDto
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'unit_price' => 'decimal',
-        'unit_price_override' => 'decimal',
+        'unitPrice' => 'decimal',
+        'unitPriceOverride' => 'decimal',
         'quantity' => 'decimal',
-        'quantity_override' => 'decimal',
-        'is_complementing_position' => null,
-        'complements_positions' => 'guid',
-        'complementing_price_percentage_override' => 'decimal',
-        'complementing_price_percentage' => 'decimal',
-        'unit_tag' => null,
-        'labour_components' => null,
-        'price_components' => null,
-        'quantity_components' => null,
-        'sub_descriptions' => null,
-        'comission_status' => null,
-        'complemented_by' => 'guid',
+        'quantityOverride' => 'decimal',
+        'isComplementingPosition' => null,
+        'complementsPositions' => 'guid',
+        'complementingPricePercentageOverride' => 'decimal',
+        'complementingPricePercentage' => 'decimal',
+        'unitTag' => null,
+        'labourComponents' => null,
+        'priceComponents' => null,
+        'quantityComponents' => null,
+        'subDescriptions' => null,
+        'comissionStatus' => null,
+        'complementedBy' => 'guid',
         'complemented' => null,
-        'amount_to_be_entered_by_bidder' => null,
-        'price_composition_required' => null,
-        'use_different_tax_rate' => null,
-        'tax_rate' => 'decimal',
-        'item_number' => null,
-        'deduction_factor' => 'decimal',
-        'total_price' => 'decimal',
-        'total_price_gross' => 'decimal',
-        'total_price_gross_deducted' => 'decimal',
-        'deducted_price' => 'decimal',
-        'position_type' => null,
-        'price_type' => null,
-        'service_type' => null,
-        'product_data' => null,
-        'short_text' => null,
-        'html_short_text' => null,
-        'long_text' => null,
-        'html_long_text' => null,
-        'addition_type' => null,
-        'element_type' => null,
-        'quantity_assignments' => null,
-        'commerce_properties' => null,
-        'alternative_to' => 'guid',
-        'alternative_identifier' => 'int32',
-        'alternative_group_identifier' => 'int32',
-        'is_lump_sum' => null,
-        'repetition_to' => 'guid',
-        'standardized_description' => null,
-        'complemented_by_quantities' => null,
-        'execution_description_reference' => 'guid',
-        'not_offered' => null,
-        'oenorm_position_properties' => null,
-        'description_id' => null,
-        'hierarchy_level' => 'int32',
-        'addendum_status' => null,
-        'has_bidder_comment_in_html_long_text' => null,
-        'gaeb_complementing_type' => null,
-        'hold_out_properties' => null,
-        'estimated_quantity' => 'decimal',
-        'price_catalogue_data' => null,
-        'ignore_project_catalogue_propagation' => null,
-        'is_main_position' => null
+        'amountToBeEnteredByBidder' => null,
+        'priceCompositionRequired' => null,
+        'useDifferentTaxRate' => null,
+        'taxRate' => 'decimal',
+        'itemNumber' => null,
+        'deductionFactor' => 'decimal',
+        'totalPrice' => 'decimal',
+        'totalPriceGross' => 'decimal',
+        'totalPriceGrossDeducted' => 'decimal',
+        'deductedPrice' => 'decimal',
+        'positionType' => null,
+        'priceType' => null,
+        'serviceType' => null,
+        'productData' => null,
+        'shortText' => null,
+        'htmlShortText' => null,
+        'longText' => null,
+        'htmlLongText' => null,
+        'additionType' => null,
+        'elementType' => null,
+        'quantityAssignments' => null,
+        'commerceProperties' => null,
+        'alternativeTo' => 'guid',
+        'alternativeIdentifier' => 'int32',
+        'alternativeGroupIdentifier' => 'int32',
+        'isLumpSum' => null,
+        'repetitionTo' => 'guid',
+        'standardizedDescription' => null,
+        'complementedByQuantities' => null,
+        'executionDescriptionReference' => 'guid',
+        'notOffered' => null,
+        'oenormPositionProperties' => null,
+        'descriptionId' => null,
+        'hierarchyLevel' => 'int32',
+        'addendumStatus' => null,
+        'hasBidderCommentInHtmlLongText' => null,
+        'gaebComplementingType' => null,
+        'holdOutProperties' => null,
+        'estimatedQuantity' => 'decimal',
+        'priceCatalogueData' => null,
+        'ignoreProjectCataloguePropagation' => null,
+        'isMainPosition' => null
     ];
 
     /**
@@ -190,64 +190,64 @@ class PositionDto extends IElementDto
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'unit_price' => false,
-        'unit_price_override' => false,
+        'unitPrice' => false,
+        'unitPriceOverride' => false,
         'quantity' => false,
-        'quantity_override' => false,
-        'is_complementing_position' => false,
-        'complements_positions' => false,
-        'complementing_price_percentage_override' => false,
-        'complementing_price_percentage' => false,
-        'unit_tag' => false,
-        'labour_components' => false,
-        'price_components' => false,
-        'quantity_components' => false,
-        'sub_descriptions' => false,
-        'comission_status' => false,
-        'complemented_by' => false,
+        'quantityOverride' => false,
+        'isComplementingPosition' => false,
+        'complementsPositions' => false,
+        'complementingPricePercentageOverride' => false,
+        'complementingPricePercentage' => false,
+        'unitTag' => false,
+        'labourComponents' => false,
+        'priceComponents' => false,
+        'quantityComponents' => false,
+        'subDescriptions' => false,
+        'comissionStatus' => false,
+        'complementedBy' => false,
         'complemented' => false,
-        'amount_to_be_entered_by_bidder' => false,
-        'price_composition_required' => false,
-        'use_different_tax_rate' => false,
-        'tax_rate' => false,
-        'item_number' => false,
-        'deduction_factor' => false,
-        'total_price' => false,
-        'total_price_gross' => false,
-        'total_price_gross_deducted' => false,
-        'deducted_price' => false,
-        'position_type' => false,
-        'price_type' => false,
-        'service_type' => false,
-        'product_data' => false,
-        'short_text' => false,
-        'html_short_text' => false,
-        'long_text' => false,
-        'html_long_text' => false,
-        'addition_type' => false,
-        'element_type' => false,
-        'quantity_assignments' => false,
-        'commerce_properties' => false,
-        'alternative_to' => false,
-        'alternative_identifier' => false,
-        'alternative_group_identifier' => false,
-        'is_lump_sum' => false,
-        'repetition_to' => false,
-        'standardized_description' => false,
-        'complemented_by_quantities' => false,
-        'execution_description_reference' => false,
-        'not_offered' => false,
-        'oenorm_position_properties' => false,
-        'description_id' => false,
-        'hierarchy_level' => false,
-        'addendum_status' => false,
-        'has_bidder_comment_in_html_long_text' => false,
-        'gaeb_complementing_type' => false,
-        'hold_out_properties' => false,
-        'estimated_quantity' => false,
-        'price_catalogue_data' => false,
-        'ignore_project_catalogue_propagation' => false,
-        'is_main_position' => false
+        'amountToBeEnteredByBidder' => false,
+        'priceCompositionRequired' => false,
+        'useDifferentTaxRate' => false,
+        'taxRate' => false,
+        'itemNumber' => false,
+        'deductionFactor' => false,
+        'totalPrice' => false,
+        'totalPriceGross' => false,
+        'totalPriceGrossDeducted' => false,
+        'deductedPrice' => false,
+        'positionType' => false,
+        'priceType' => false,
+        'serviceType' => false,
+        'productData' => false,
+        'shortText' => false,
+        'htmlShortText' => false,
+        'longText' => false,
+        'htmlLongText' => false,
+        'additionType' => false,
+        'elementType' => false,
+        'quantityAssignments' => false,
+        'commerceProperties' => false,
+        'alternativeTo' => false,
+        'alternativeIdentifier' => false,
+        'alternativeGroupIdentifier' => false,
+        'isLumpSum' => false,
+        'repetitionTo' => false,
+        'standardizedDescription' => false,
+        'complementedByQuantities' => false,
+        'executionDescriptionReference' => false,
+        'notOffered' => false,
+        'oenormPositionProperties' => false,
+        'descriptionId' => false,
+        'hierarchyLevel' => false,
+        'addendumStatus' => false,
+        'hasBidderCommentInHtmlLongText' => false,
+        'gaebComplementingType' => false,
+        'holdOutProperties' => false,
+        'estimatedQuantity' => false,
+        'priceCatalogueData' => false,
+        'ignoreProjectCataloguePropagation' => false,
+        'isMainPosition' => false
     ];
 
     /**
@@ -336,64 +336,64 @@ class PositionDto extends IElementDto
      * @var string[]
      */
     protected static $attributeMap = [
-        'unit_price' => 'unitPrice',
-        'unit_price_override' => 'unitPriceOverride',
+        'unitPrice' => 'unitPrice',
+        'unitPriceOverride' => 'unitPriceOverride',
         'quantity' => 'quantity',
-        'quantity_override' => 'quantityOverride',
-        'is_complementing_position' => 'isComplementingPosition',
-        'complements_positions' => 'complementsPositions',
-        'complementing_price_percentage_override' => 'complementingPricePercentageOverride',
-        'complementing_price_percentage' => 'complementingPricePercentage',
-        'unit_tag' => 'unitTag',
-        'labour_components' => 'labourComponents',
-        'price_components' => 'priceComponents',
-        'quantity_components' => 'quantityComponents',
-        'sub_descriptions' => 'subDescriptions',
-        'comission_status' => 'comissionStatus',
-        'complemented_by' => 'complementedBy',
+        'quantityOverride' => 'quantityOverride',
+        'isComplementingPosition' => 'isComplementingPosition',
+        'complementsPositions' => 'complementsPositions',
+        'complementingPricePercentageOverride' => 'complementingPricePercentageOverride',
+        'complementingPricePercentage' => 'complementingPricePercentage',
+        'unitTag' => 'unitTag',
+        'labourComponents' => 'labourComponents',
+        'priceComponents' => 'priceComponents',
+        'quantityComponents' => 'quantityComponents',
+        'subDescriptions' => 'subDescriptions',
+        'comissionStatus' => 'comissionStatus',
+        'complementedBy' => 'complementedBy',
         'complemented' => 'complemented',
-        'amount_to_be_entered_by_bidder' => 'amountToBeEnteredByBidder',
-        'price_composition_required' => 'priceCompositionRequired',
-        'use_different_tax_rate' => 'useDifferentTaxRate',
-        'tax_rate' => 'taxRate',
-        'item_number' => 'itemNumber',
-        'deduction_factor' => 'deductionFactor',
-        'total_price' => 'totalPrice',
-        'total_price_gross' => 'totalPriceGross',
-        'total_price_gross_deducted' => 'totalPriceGrossDeducted',
-        'deducted_price' => 'deductedPrice',
-        'position_type' => 'positionType',
-        'price_type' => 'priceType',
-        'service_type' => 'serviceType',
-        'product_data' => 'productData',
-        'short_text' => 'shortText',
-        'html_short_text' => 'htmlShortText',
-        'long_text' => 'longText',
-        'html_long_text' => 'htmlLongText',
-        'addition_type' => 'additionType',
-        'element_type' => 'elementType',
-        'quantity_assignments' => 'quantityAssignments',
-        'commerce_properties' => 'commerceProperties',
-        'alternative_to' => 'alternativeTo',
-        'alternative_identifier' => 'alternativeIdentifier',
-        'alternative_group_identifier' => 'alternativeGroupIdentifier',
-        'is_lump_sum' => 'isLumpSum',
-        'repetition_to' => 'repetitionTo',
-        'standardized_description' => 'standardizedDescription',
-        'complemented_by_quantities' => 'complementedByQuantities',
-        'execution_description_reference' => 'executionDescriptionReference',
-        'not_offered' => 'notOffered',
-        'oenorm_position_properties' => 'oenormPositionProperties',
-        'description_id' => 'descriptionId',
-        'hierarchy_level' => 'hierarchyLevel',
-        'addendum_status' => 'addendumStatus',
-        'has_bidder_comment_in_html_long_text' => 'hasBidderCommentInHtmlLongText',
-        'gaeb_complementing_type' => 'gaebComplementingType',
-        'hold_out_properties' => 'holdOutProperties',
-        'estimated_quantity' => 'estimatedQuantity',
-        'price_catalogue_data' => 'priceCatalogueData',
-        'ignore_project_catalogue_propagation' => 'ignoreProjectCataloguePropagation',
-        'is_main_position' => 'isMainPosition'
+        'amountToBeEnteredByBidder' => 'amountToBeEnteredByBidder',
+        'priceCompositionRequired' => 'priceCompositionRequired',
+        'useDifferentTaxRate' => 'useDifferentTaxRate',
+        'taxRate' => 'taxRate',
+        'itemNumber' => 'itemNumber',
+        'deductionFactor' => 'deductionFactor',
+        'totalPrice' => 'totalPrice',
+        'totalPriceGross' => 'totalPriceGross',
+        'totalPriceGrossDeducted' => 'totalPriceGrossDeducted',
+        'deductedPrice' => 'deductedPrice',
+        'positionType' => 'positionType',
+        'priceType' => 'priceType',
+        'serviceType' => 'serviceType',
+        'productData' => 'productData',
+        'shortText' => 'shortText',
+        'htmlShortText' => 'htmlShortText',
+        'longText' => 'longText',
+        'htmlLongText' => 'htmlLongText',
+        'additionType' => 'additionType',
+        'elementType' => 'elementType',
+        'quantityAssignments' => 'quantityAssignments',
+        'commerceProperties' => 'commerceProperties',
+        'alternativeTo' => 'alternativeTo',
+        'alternativeIdentifier' => 'alternativeIdentifier',
+        'alternativeGroupIdentifier' => 'alternativeGroupIdentifier',
+        'isLumpSum' => 'isLumpSum',
+        'repetitionTo' => 'repetitionTo',
+        'standardizedDescription' => 'standardizedDescription',
+        'complementedByQuantities' => 'complementedByQuantities',
+        'executionDescriptionReference' => 'executionDescriptionReference',
+        'notOffered' => 'notOffered',
+        'oenormPositionProperties' => 'oenormPositionProperties',
+        'descriptionId' => 'descriptionId',
+        'hierarchyLevel' => 'hierarchyLevel',
+        'addendumStatus' => 'addendumStatus',
+        'hasBidderCommentInHtmlLongText' => 'hasBidderCommentInHtmlLongText',
+        'gaebComplementingType' => 'gaebComplementingType',
+        'holdOutProperties' => 'holdOutProperties',
+        'estimatedQuantity' => 'estimatedQuantity',
+        'priceCatalogueData' => 'priceCatalogueData',
+        'ignoreProjectCataloguePropagation' => 'ignoreProjectCataloguePropagation',
+        'isMainPosition' => 'isMainPosition'
     ];
 
     /**
@@ -402,64 +402,64 @@ class PositionDto extends IElementDto
      * @var string[]
      */
     protected static $setters = [
-        'unit_price' => 'setUnitPrice',
-        'unit_price_override' => 'setUnitPriceOverride',
+        'unitPrice' => 'setUnitPrice',
+        'unitPriceOverride' => 'setUnitPriceOverride',
         'quantity' => 'setQuantity',
-        'quantity_override' => 'setQuantityOverride',
-        'is_complementing_position' => 'setIsComplementingPosition',
-        'complements_positions' => 'setComplementsPositions',
-        'complementing_price_percentage_override' => 'setComplementingPricePercentageOverride',
-        'complementing_price_percentage' => 'setComplementingPricePercentage',
-        'unit_tag' => 'setUnitTag',
-        'labour_components' => 'setLabourComponents',
-        'price_components' => 'setPriceComponents',
-        'quantity_components' => 'setQuantityComponents',
-        'sub_descriptions' => 'setSubDescriptions',
-        'comission_status' => 'setComissionStatus',
-        'complemented_by' => 'setComplementedBy',
+        'quantityOverride' => 'setQuantityOverride',
+        'isComplementingPosition' => 'setIsComplementingPosition',
+        'complementsPositions' => 'setComplementsPositions',
+        'complementingPricePercentageOverride' => 'setComplementingPricePercentageOverride',
+        'complementingPricePercentage' => 'setComplementingPricePercentage',
+        'unitTag' => 'setUnitTag',
+        'labourComponents' => 'setLabourComponents',
+        'priceComponents' => 'setPriceComponents',
+        'quantityComponents' => 'setQuantityComponents',
+        'subDescriptions' => 'setSubDescriptions',
+        'comissionStatus' => 'setComissionStatus',
+        'complementedBy' => 'setComplementedBy',
         'complemented' => 'setComplemented',
-        'amount_to_be_entered_by_bidder' => 'setAmountToBeEnteredByBidder',
-        'price_composition_required' => 'setPriceCompositionRequired',
-        'use_different_tax_rate' => 'setUseDifferentTaxRate',
-        'tax_rate' => 'setTaxRate',
-        'item_number' => 'setItemNumber',
-        'deduction_factor' => 'setDeductionFactor',
-        'total_price' => 'setTotalPrice',
-        'total_price_gross' => 'setTotalPriceGross',
-        'total_price_gross_deducted' => 'setTotalPriceGrossDeducted',
-        'deducted_price' => 'setDeductedPrice',
-        'position_type' => 'setPositionType',
-        'price_type' => 'setPriceType',
-        'service_type' => 'setServiceType',
-        'product_data' => 'setProductData',
-        'short_text' => 'setShortText',
-        'html_short_text' => 'setHtmlShortText',
-        'long_text' => 'setLongText',
-        'html_long_text' => 'setHtmlLongText',
-        'addition_type' => 'setAdditionType',
-        'element_type' => 'setElementType',
-        'quantity_assignments' => 'setQuantityAssignments',
-        'commerce_properties' => 'setCommerceProperties',
-        'alternative_to' => 'setAlternativeTo',
-        'alternative_identifier' => 'setAlternativeIdentifier',
-        'alternative_group_identifier' => 'setAlternativeGroupIdentifier',
-        'is_lump_sum' => 'setIsLumpSum',
-        'repetition_to' => 'setRepetitionTo',
-        'standardized_description' => 'setStandardizedDescription',
-        'complemented_by_quantities' => 'setComplementedByQuantities',
-        'execution_description_reference' => 'setExecutionDescriptionReference',
-        'not_offered' => 'setNotOffered',
-        'oenorm_position_properties' => 'setOenormPositionProperties',
-        'description_id' => 'setDescriptionId',
-        'hierarchy_level' => 'setHierarchyLevel',
-        'addendum_status' => 'setAddendumStatus',
-        'has_bidder_comment_in_html_long_text' => 'setHasBidderCommentInHtmlLongText',
-        'gaeb_complementing_type' => 'setGaebComplementingType',
-        'hold_out_properties' => 'setHoldOutProperties',
-        'estimated_quantity' => 'setEstimatedQuantity',
-        'price_catalogue_data' => 'setPriceCatalogueData',
-        'ignore_project_catalogue_propagation' => 'setIgnoreProjectCataloguePropagation',
-        'is_main_position' => 'setIsMainPosition'
+        'amountToBeEnteredByBidder' => 'setAmountToBeEnteredByBidder',
+        'priceCompositionRequired' => 'setPriceCompositionRequired',
+        'useDifferentTaxRate' => 'setUseDifferentTaxRate',
+        'taxRate' => 'setTaxRate',
+        'itemNumber' => 'setItemNumber',
+        'deductionFactor' => 'setDeductionFactor',
+        'totalPrice' => 'setTotalPrice',
+        'totalPriceGross' => 'setTotalPriceGross',
+        'totalPriceGrossDeducted' => 'setTotalPriceGrossDeducted',
+        'deductedPrice' => 'setDeductedPrice',
+        'positionType' => 'setPositionType',
+        'priceType' => 'setPriceType',
+        'serviceType' => 'setServiceType',
+        'productData' => 'setProductData',
+        'shortText' => 'setShortText',
+        'htmlShortText' => 'setHtmlShortText',
+        'longText' => 'setLongText',
+        'htmlLongText' => 'setHtmlLongText',
+        'additionType' => 'setAdditionType',
+        'elementType' => 'setElementType',
+        'quantityAssignments' => 'setQuantityAssignments',
+        'commerceProperties' => 'setCommerceProperties',
+        'alternativeTo' => 'setAlternativeTo',
+        'alternativeIdentifier' => 'setAlternativeIdentifier',
+        'alternativeGroupIdentifier' => 'setAlternativeGroupIdentifier',
+        'isLumpSum' => 'setIsLumpSum',
+        'repetitionTo' => 'setRepetitionTo',
+        'standardizedDescription' => 'setStandardizedDescription',
+        'complementedByQuantities' => 'setComplementedByQuantities',
+        'executionDescriptionReference' => 'setExecutionDescriptionReference',
+        'notOffered' => 'setNotOffered',
+        'oenormPositionProperties' => 'setOenormPositionProperties',
+        'descriptionId' => 'setDescriptionId',
+        'hierarchyLevel' => 'setHierarchyLevel',
+        'addendumStatus' => 'setAddendumStatus',
+        'hasBidderCommentInHtmlLongText' => 'setHasBidderCommentInHtmlLongText',
+        'gaebComplementingType' => 'setGaebComplementingType',
+        'holdOutProperties' => 'setHoldOutProperties',
+        'estimatedQuantity' => 'setEstimatedQuantity',
+        'priceCatalogueData' => 'setPriceCatalogueData',
+        'ignoreProjectCataloguePropagation' => 'setIgnoreProjectCataloguePropagation',
+        'isMainPosition' => 'setIsMainPosition'
     ];
 
     /**
@@ -468,64 +468,64 @@ class PositionDto extends IElementDto
      * @var string[]
      */
     protected static $getters = [
-        'unit_price' => 'getUnitPrice',
-        'unit_price_override' => 'getUnitPriceOverride',
+        'unitPrice' => 'getUnitPrice',
+        'unitPriceOverride' => 'getUnitPriceOverride',
         'quantity' => 'getQuantity',
-        'quantity_override' => 'getQuantityOverride',
-        'is_complementing_position' => 'getIsComplementingPosition',
-        'complements_positions' => 'getComplementsPositions',
-        'complementing_price_percentage_override' => 'getComplementingPricePercentageOverride',
-        'complementing_price_percentage' => 'getComplementingPricePercentage',
-        'unit_tag' => 'getUnitTag',
-        'labour_components' => 'getLabourComponents',
-        'price_components' => 'getPriceComponents',
-        'quantity_components' => 'getQuantityComponents',
-        'sub_descriptions' => 'getSubDescriptions',
-        'comission_status' => 'getComissionStatus',
-        'complemented_by' => 'getComplementedBy',
+        'quantityOverride' => 'getQuantityOverride',
+        'isComplementingPosition' => 'getIsComplementingPosition',
+        'complementsPositions' => 'getComplementsPositions',
+        'complementingPricePercentageOverride' => 'getComplementingPricePercentageOverride',
+        'complementingPricePercentage' => 'getComplementingPricePercentage',
+        'unitTag' => 'getUnitTag',
+        'labourComponents' => 'getLabourComponents',
+        'priceComponents' => 'getPriceComponents',
+        'quantityComponents' => 'getQuantityComponents',
+        'subDescriptions' => 'getSubDescriptions',
+        'comissionStatus' => 'getComissionStatus',
+        'complementedBy' => 'getComplementedBy',
         'complemented' => 'getComplemented',
-        'amount_to_be_entered_by_bidder' => 'getAmountToBeEnteredByBidder',
-        'price_composition_required' => 'getPriceCompositionRequired',
-        'use_different_tax_rate' => 'getUseDifferentTaxRate',
-        'tax_rate' => 'getTaxRate',
-        'item_number' => 'getItemNumber',
-        'deduction_factor' => 'getDeductionFactor',
-        'total_price' => 'getTotalPrice',
-        'total_price_gross' => 'getTotalPriceGross',
-        'total_price_gross_deducted' => 'getTotalPriceGrossDeducted',
-        'deducted_price' => 'getDeductedPrice',
-        'position_type' => 'getPositionType',
-        'price_type' => 'getPriceType',
-        'service_type' => 'getServiceType',
-        'product_data' => 'getProductData',
-        'short_text' => 'getShortText',
-        'html_short_text' => 'getHtmlShortText',
-        'long_text' => 'getLongText',
-        'html_long_text' => 'getHtmlLongText',
-        'addition_type' => 'getAdditionType',
-        'element_type' => 'getElementType',
-        'quantity_assignments' => 'getQuantityAssignments',
-        'commerce_properties' => 'getCommerceProperties',
-        'alternative_to' => 'getAlternativeTo',
-        'alternative_identifier' => 'getAlternativeIdentifier',
-        'alternative_group_identifier' => 'getAlternativeGroupIdentifier',
-        'is_lump_sum' => 'getIsLumpSum',
-        'repetition_to' => 'getRepetitionTo',
-        'standardized_description' => 'getStandardizedDescription',
-        'complemented_by_quantities' => 'getComplementedByQuantities',
-        'execution_description_reference' => 'getExecutionDescriptionReference',
-        'not_offered' => 'getNotOffered',
-        'oenorm_position_properties' => 'getOenormPositionProperties',
-        'description_id' => 'getDescriptionId',
-        'hierarchy_level' => 'getHierarchyLevel',
-        'addendum_status' => 'getAddendumStatus',
-        'has_bidder_comment_in_html_long_text' => 'getHasBidderCommentInHtmlLongText',
-        'gaeb_complementing_type' => 'getGaebComplementingType',
-        'hold_out_properties' => 'getHoldOutProperties',
-        'estimated_quantity' => 'getEstimatedQuantity',
-        'price_catalogue_data' => 'getPriceCatalogueData',
-        'ignore_project_catalogue_propagation' => 'getIgnoreProjectCataloguePropagation',
-        'is_main_position' => 'getIsMainPosition'
+        'amountToBeEnteredByBidder' => 'getAmountToBeEnteredByBidder',
+        'priceCompositionRequired' => 'getPriceCompositionRequired',
+        'useDifferentTaxRate' => 'getUseDifferentTaxRate',
+        'taxRate' => 'getTaxRate',
+        'itemNumber' => 'getItemNumber',
+        'deductionFactor' => 'getDeductionFactor',
+        'totalPrice' => 'getTotalPrice',
+        'totalPriceGross' => 'getTotalPriceGross',
+        'totalPriceGrossDeducted' => 'getTotalPriceGrossDeducted',
+        'deductedPrice' => 'getDeductedPrice',
+        'positionType' => 'getPositionType',
+        'priceType' => 'getPriceType',
+        'serviceType' => 'getServiceType',
+        'productData' => 'getProductData',
+        'shortText' => 'getShortText',
+        'htmlShortText' => 'getHtmlShortText',
+        'longText' => 'getLongText',
+        'htmlLongText' => 'getHtmlLongText',
+        'additionType' => 'getAdditionType',
+        'elementType' => 'getElementType',
+        'quantityAssignments' => 'getQuantityAssignments',
+        'commerceProperties' => 'getCommerceProperties',
+        'alternativeTo' => 'getAlternativeTo',
+        'alternativeIdentifier' => 'getAlternativeIdentifier',
+        'alternativeGroupIdentifier' => 'getAlternativeGroupIdentifier',
+        'isLumpSum' => 'getIsLumpSum',
+        'repetitionTo' => 'getRepetitionTo',
+        'standardizedDescription' => 'getStandardizedDescription',
+        'complementedByQuantities' => 'getComplementedByQuantities',
+        'executionDescriptionReference' => 'getExecutionDescriptionReference',
+        'notOffered' => 'getNotOffered',
+        'oenormPositionProperties' => 'getOenormPositionProperties',
+        'descriptionId' => 'getDescriptionId',
+        'hierarchyLevel' => 'getHierarchyLevel',
+        'addendumStatus' => 'getAddendumStatus',
+        'hasBidderCommentInHtmlLongText' => 'getHasBidderCommentInHtmlLongText',
+        'gaebComplementingType' => 'getGaebComplementingType',
+        'holdOutProperties' => 'getHoldOutProperties',
+        'estimatedQuantity' => 'getEstimatedQuantity',
+        'priceCatalogueData' => 'getPriceCatalogueData',
+        'ignoreProjectCataloguePropagation' => 'getIgnoreProjectCataloguePropagation',
+        'isMainPosition' => 'getIsMainPosition'
     ];
 
     /**
@@ -581,64 +581,64 @@ class PositionDto extends IElementDto
     {
         parent::__construct($data);
 
-        $this->setIfExists('unit_price', $data ?? [], null);
-        $this->setIfExists('unit_price_override', $data ?? [], null);
+        $this->setIfExists('unitPrice', $data ?? [], null);
+        $this->setIfExists('unitPriceOverride', $data ?? [], null);
         $this->setIfExists('quantity', $data ?? [], null);
-        $this->setIfExists('quantity_override', $data ?? [], null);
-        $this->setIfExists('is_complementing_position', $data ?? [], null);
-        $this->setIfExists('complements_positions', $data ?? [], null);
-        $this->setIfExists('complementing_price_percentage_override', $data ?? [], null);
-        $this->setIfExists('complementing_price_percentage', $data ?? [], null);
-        $this->setIfExists('unit_tag', $data ?? [], null);
-        $this->setIfExists('labour_components', $data ?? [], null);
-        $this->setIfExists('price_components', $data ?? [], null);
-        $this->setIfExists('quantity_components', $data ?? [], null);
-        $this->setIfExists('sub_descriptions', $data ?? [], null);
-        $this->setIfExists('comission_status', $data ?? [], null);
-        $this->setIfExists('complemented_by', $data ?? [], null);
+        $this->setIfExists('quantityOverride', $data ?? [], null);
+        $this->setIfExists('isComplementingPosition', $data ?? [], null);
+        $this->setIfExists('complementsPositions', $data ?? [], null);
+        $this->setIfExists('complementingPricePercentageOverride', $data ?? [], null);
+        $this->setIfExists('complementingPricePercentage', $data ?? [], null);
+        $this->setIfExists('unitTag', $data ?? [], null);
+        $this->setIfExists('labourComponents', $data ?? [], null);
+        $this->setIfExists('priceComponents', $data ?? [], null);
+        $this->setIfExists('quantityComponents', $data ?? [], null);
+        $this->setIfExists('subDescriptions', $data ?? [], null);
+        $this->setIfExists('comissionStatus', $data ?? [], null);
+        $this->setIfExists('complementedBy', $data ?? [], null);
         $this->setIfExists('complemented', $data ?? [], null);
-        $this->setIfExists('amount_to_be_entered_by_bidder', $data ?? [], null);
-        $this->setIfExists('price_composition_required', $data ?? [], null);
-        $this->setIfExists('use_different_tax_rate', $data ?? [], null);
-        $this->setIfExists('tax_rate', $data ?? [], null);
-        $this->setIfExists('item_number', $data ?? [], null);
-        $this->setIfExists('deduction_factor', $data ?? [], null);
-        $this->setIfExists('total_price', $data ?? [], null);
-        $this->setIfExists('total_price_gross', $data ?? [], null);
-        $this->setIfExists('total_price_gross_deducted', $data ?? [], null);
-        $this->setIfExists('deducted_price', $data ?? [], null);
-        $this->setIfExists('position_type', $data ?? [], null);
-        $this->setIfExists('price_type', $data ?? [], null);
-        $this->setIfExists('service_type', $data ?? [], null);
-        $this->setIfExists('product_data', $data ?? [], null);
-        $this->setIfExists('short_text', $data ?? [], null);
-        $this->setIfExists('html_short_text', $data ?? [], null);
-        $this->setIfExists('long_text', $data ?? [], null);
-        $this->setIfExists('html_long_text', $data ?? [], null);
-        $this->setIfExists('addition_type', $data ?? [], null);
-        $this->setIfExists('element_type', $data ?? [], null);
-        $this->setIfExists('quantity_assignments', $data ?? [], null);
-        $this->setIfExists('commerce_properties', $data ?? [], null);
-        $this->setIfExists('alternative_to', $data ?? [], null);
-        $this->setIfExists('alternative_identifier', $data ?? [], null);
-        $this->setIfExists('alternative_group_identifier', $data ?? [], null);
-        $this->setIfExists('is_lump_sum', $data ?? [], null);
-        $this->setIfExists('repetition_to', $data ?? [], null);
-        $this->setIfExists('standardized_description', $data ?? [], null);
-        $this->setIfExists('complemented_by_quantities', $data ?? [], null);
-        $this->setIfExists('execution_description_reference', $data ?? [], null);
-        $this->setIfExists('not_offered', $data ?? [], null);
-        $this->setIfExists('oenorm_position_properties', $data ?? [], null);
-        $this->setIfExists('description_id', $data ?? [], null);
-        $this->setIfExists('hierarchy_level', $data ?? [], null);
-        $this->setIfExists('addendum_status', $data ?? [], null);
-        $this->setIfExists('has_bidder_comment_in_html_long_text', $data ?? [], null);
-        $this->setIfExists('gaeb_complementing_type', $data ?? [], null);
-        $this->setIfExists('hold_out_properties', $data ?? [], null);
-        $this->setIfExists('estimated_quantity', $data ?? [], null);
-        $this->setIfExists('price_catalogue_data', $data ?? [], null);
-        $this->setIfExists('ignore_project_catalogue_propagation', $data ?? [], null);
-        $this->setIfExists('is_main_position', $data ?? [], null);
+        $this->setIfExists('amountToBeEnteredByBidder', $data ?? [], null);
+        $this->setIfExists('priceCompositionRequired', $data ?? [], null);
+        $this->setIfExists('useDifferentTaxRate', $data ?? [], null);
+        $this->setIfExists('taxRate', $data ?? [], null);
+        $this->setIfExists('itemNumber', $data ?? [], null);
+        $this->setIfExists('deductionFactor', $data ?? [], null);
+        $this->setIfExists('totalPrice', $data ?? [], null);
+        $this->setIfExists('totalPriceGross', $data ?? [], null);
+        $this->setIfExists('totalPriceGrossDeducted', $data ?? [], null);
+        $this->setIfExists('deductedPrice', $data ?? [], null);
+        $this->setIfExists('positionType', $data ?? [], null);
+        $this->setIfExists('priceType', $data ?? [], null);
+        $this->setIfExists('serviceType', $data ?? [], null);
+        $this->setIfExists('productData', $data ?? [], null);
+        $this->setIfExists('shortText', $data ?? [], null);
+        $this->setIfExists('htmlShortText', $data ?? [], null);
+        $this->setIfExists('longText', $data ?? [], null);
+        $this->setIfExists('htmlLongText', $data ?? [], null);
+        $this->setIfExists('additionType', $data ?? [], null);
+        $this->setIfExists('elementType', $data ?? [], null);
+        $this->setIfExists('quantityAssignments', $data ?? [], null);
+        $this->setIfExists('commerceProperties', $data ?? [], null);
+        $this->setIfExists('alternativeTo', $data ?? [], null);
+        $this->setIfExists('alternativeIdentifier', $data ?? [], null);
+        $this->setIfExists('alternativeGroupIdentifier', $data ?? [], null);
+        $this->setIfExists('isLumpSum', $data ?? [], null);
+        $this->setIfExists('repetitionTo', $data ?? [], null);
+        $this->setIfExists('standardizedDescription', $data ?? [], null);
+        $this->setIfExists('complementedByQuantities', $data ?? [], null);
+        $this->setIfExists('executionDescriptionReference', $data ?? [], null);
+        $this->setIfExists('notOffered', $data ?? [], null);
+        $this->setIfExists('oenormPositionProperties', $data ?? [], null);
+        $this->setIfExists('descriptionId', $data ?? [], null);
+        $this->setIfExists('hierarchyLevel', $data ?? [], null);
+        $this->setIfExists('addendumStatus', $data ?? [], null);
+        $this->setIfExists('hasBidderCommentInHtmlLongText', $data ?? [], null);
+        $this->setIfExists('gaebComplementingType', $data ?? [], null);
+        $this->setIfExists('holdOutProperties', $data ?? [], null);
+        $this->setIfExists('estimatedQuantity', $data ?? [], null);
+        $this->setIfExists('priceCatalogueData', $data ?? [], null);
+        $this->setIfExists('ignoreProjectCataloguePropagation', $data ?? [], null);
+        $this->setIfExists('isMainPosition', $data ?? [], null);
     }
 
     /**
@@ -668,80 +668,80 @@ class PositionDto extends IElementDto
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['unit_price'] === null) {
-            $invalidProperties[] = "'unit_price' can't be null";
+        if ($this->container['unitPrice'] === null) {
+            $invalidProperties[] = "'unitPrice' can't be null";
         }
         if ($this->container['quantity'] === null) {
             $invalidProperties[] = "'quantity' can't be null";
         }
-        if ($this->container['is_complementing_position'] === null) {
-            $invalidProperties[] = "'is_complementing_position' can't be null";
+        if ($this->container['isComplementingPosition'] === null) {
+            $invalidProperties[] = "'isComplementingPosition' can't be null";
         }
-        if ($this->container['comission_status'] === null) {
-            $invalidProperties[] = "'comission_status' can't be null";
+        if ($this->container['comissionStatus'] === null) {
+            $invalidProperties[] = "'comissionStatus' can't be null";
         }
         if ($this->container['complemented'] === null) {
             $invalidProperties[] = "'complemented' can't be null";
         }
-        if ($this->container['amount_to_be_entered_by_bidder'] === null) {
-            $invalidProperties[] = "'amount_to_be_entered_by_bidder' can't be null";
+        if ($this->container['amountToBeEnteredByBidder'] === null) {
+            $invalidProperties[] = "'amountToBeEnteredByBidder' can't be null";
         }
-        if ($this->container['price_composition_required'] === null) {
-            $invalidProperties[] = "'price_composition_required' can't be null";
+        if ($this->container['priceCompositionRequired'] === null) {
+            $invalidProperties[] = "'priceCompositionRequired' can't be null";
         }
-        if ($this->container['use_different_tax_rate'] === null) {
-            $invalidProperties[] = "'use_different_tax_rate' can't be null";
+        if ($this->container['useDifferentTaxRate'] === null) {
+            $invalidProperties[] = "'useDifferentTaxRate' can't be null";
         }
-        if ($this->container['tax_rate'] === null) {
-            $invalidProperties[] = "'tax_rate' can't be null";
+        if ($this->container['taxRate'] === null) {
+            $invalidProperties[] = "'taxRate' can't be null";
         }
-        if ($this->container['deduction_factor'] === null) {
-            $invalidProperties[] = "'deduction_factor' can't be null";
+        if ($this->container['deductionFactor'] === null) {
+            $invalidProperties[] = "'deductionFactor' can't be null";
         }
-        if ($this->container['total_price'] === null) {
-            $invalidProperties[] = "'total_price' can't be null";
+        if ($this->container['totalPrice'] === null) {
+            $invalidProperties[] = "'totalPrice' can't be null";
         }
-        if ($this->container['total_price_gross'] === null) {
-            $invalidProperties[] = "'total_price_gross' can't be null";
+        if ($this->container['totalPriceGross'] === null) {
+            $invalidProperties[] = "'totalPriceGross' can't be null";
         }
-        if ($this->container['total_price_gross_deducted'] === null) {
-            $invalidProperties[] = "'total_price_gross_deducted' can't be null";
+        if ($this->container['totalPriceGrossDeducted'] === null) {
+            $invalidProperties[] = "'totalPriceGrossDeducted' can't be null";
         }
-        if ($this->container['deducted_price'] === null) {
-            $invalidProperties[] = "'deducted_price' can't be null";
+        if ($this->container['deductedPrice'] === null) {
+            $invalidProperties[] = "'deductedPrice' can't be null";
         }
-        if ($this->container['position_type'] === null) {
-            $invalidProperties[] = "'position_type' can't be null";
+        if ($this->container['positionType'] === null) {
+            $invalidProperties[] = "'positionType' can't be null";
         }
-        if ($this->container['price_type'] === null) {
-            $invalidProperties[] = "'price_type' can't be null";
+        if ($this->container['priceType'] === null) {
+            $invalidProperties[] = "'priceType' can't be null";
         }
-        if ($this->container['service_type'] === null) {
-            $invalidProperties[] = "'service_type' can't be null";
+        if ($this->container['serviceType'] === null) {
+            $invalidProperties[] = "'serviceType' can't be null";
         }
-        if ($this->container['addition_type'] === null) {
-            $invalidProperties[] = "'addition_type' can't be null";
+        if ($this->container['additionType'] === null) {
+            $invalidProperties[] = "'additionType' can't be null";
         }
-        if ($this->container['is_lump_sum'] === null) {
-            $invalidProperties[] = "'is_lump_sum' can't be null";
+        if ($this->container['isLumpSum'] === null) {
+            $invalidProperties[] = "'isLumpSum' can't be null";
         }
-        if ($this->container['not_offered'] === null) {
-            $invalidProperties[] = "'not_offered' can't be null";
+        if ($this->container['notOffered'] === null) {
+            $invalidProperties[] = "'notOffered' can't be null";
         }
-        if ($this->container['hierarchy_level'] === null) {
-            $invalidProperties[] = "'hierarchy_level' can't be null";
+        if ($this->container['hierarchyLevel'] === null) {
+            $invalidProperties[] = "'hierarchyLevel' can't be null";
         }
-        if ($this->container['has_bidder_comment_in_html_long_text'] === null) {
-            $invalidProperties[] = "'has_bidder_comment_in_html_long_text' can't be null";
+        if ($this->container['hasBidderCommentInHtmlLongText'] === null) {
+            $invalidProperties[] = "'hasBidderCommentInHtmlLongText' can't be null";
         }
-        if ($this->container['gaeb_complementing_type'] === null) {
-            $invalidProperties[] = "'gaeb_complementing_type' can't be null";
+        if ($this->container['gaebComplementingType'] === null) {
+            $invalidProperties[] = "'gaebComplementingType' can't be null";
         }
-        if ($this->container['ignore_project_catalogue_propagation'] === null) {
-            $invalidProperties[] = "'ignore_project_catalogue_propagation' can't be null";
+        if ($this->container['ignoreProjectCataloguePropagation'] === null) {
+            $invalidProperties[] = "'ignoreProjectCataloguePropagation' can't be null";
         }
-        if ($this->container['is_main_position'] === null) {
-            $invalidProperties[] = "'is_main_position' can't be null";
+        if ($this->container['isMainPosition'] === null) {
+            $invalidProperties[] = "'isMainPosition' can't be null";
         }
         return $invalidProperties;
     }
@@ -759,55 +759,55 @@ class PositionDto extends IElementDto
 
 
     /**
-     * Gets unit_price
+     * Gets unitPrice
      *
      * @return float
      */
     public function getUnitPrice()
     {
-        return $this->container['unit_price'];
+        return $this->container['unitPrice'];
     }
 
     /**
-     * Sets unit_price
+     * Sets unitPrice
      *
-     * @param float $unit_price Will return the price per unit, rounded according to the project settings or the default value of three decimal places
+     * @param float $unitPrice Will return the price per unit, rounded according to the project settings or the default value of three decimal places
      *
      * @return self
      */
-    public function setUnitPrice($unit_price)
+    public function setUnitPrice($unitPrice)
     {
-        if (is_null($unit_price)) {
-            throw new \InvalidArgumentException('non-nullable unit_price cannot be null');
+        if (is_null($unitPrice)) {
+            throw new \InvalidArgumentException('non-nullable unitPrice cannot be null');
         }
-        $this->container['unit_price'] = $unit_price;
+        $this->container['unitPrice'] = $unitPrice;
 
         return $this;
     }
 
     /**
-     * Gets unit_price_override
+     * Gets unitPriceOverride
      *
      * @return float|null
      */
     public function getUnitPriceOverride()
     {
-        return $this->container['unit_price_override'];
+        return $this->container['unitPriceOverride'];
     }
 
     /**
-     * Sets unit_price_override
+     * Sets unitPriceOverride
      *
-     * @param float|null $unit_price_override You can use this property to directly set the unit price for this position. This will override any given PriceComponents
+     * @param float|null $unitPriceOverride You can use this property to directly set the unit price for this position. This will override any given PriceComponents
      *
      * @return self
      */
-    public function setUnitPriceOverride($unit_price_override)
+    public function setUnitPriceOverride($unitPriceOverride)
     {
-        if (is_null($unit_price_override)) {
-            throw new \InvalidArgumentException('non-nullable unit_price_override cannot be null');
+        if (is_null($unitPriceOverride)) {
+            throw new \InvalidArgumentException('non-nullable unitPriceOverride cannot be null');
         }
-        $this->container['unit_price_override'] = $unit_price_override;
+        $this->container['unitPriceOverride'] = $unitPriceOverride;
 
         return $this;
     }
@@ -840,325 +840,325 @@ class PositionDto extends IElementDto
     }
 
     /**
-     * Gets quantity_override
+     * Gets quantityOverride
      *
      * @return float|null
      */
     public function getQuantityOverride()
     {
-        return $this->container['quantity_override'];
+        return $this->container['quantityOverride'];
     }
 
     /**
-     * Sets quantity_override
+     * Sets quantityOverride
      *
-     * @param float|null $quantity_override You can use this property to directly set the quantity for this position. This will override any given QuantityComponents
+     * @param float|null $quantityOverride You can use this property to directly set the quantity for this position. This will override any given QuantityComponents
      *
      * @return self
      */
-    public function setQuantityOverride($quantity_override)
+    public function setQuantityOverride($quantityOverride)
     {
-        if (is_null($quantity_override)) {
-            throw new \InvalidArgumentException('non-nullable quantity_override cannot be null');
+        if (is_null($quantityOverride)) {
+            throw new \InvalidArgumentException('non-nullable quantityOverride cannot be null');
         }
-        $this->container['quantity_override'] = $quantity_override;
+        $this->container['quantityOverride'] = $quantityOverride;
 
         return $this;
     }
 
     /**
-     * Gets is_complementing_position
+     * Gets isComplementingPosition
      *
      * @return bool
      */
     public function getIsComplementingPosition()
     {
-        return $this->container['is_complementing_position'];
+        return $this->container['isComplementingPosition'];
     }
 
     /**
-     * Sets is_complementing_position
+     * Sets isComplementingPosition
      *
-     * @param bool $is_complementing_position This indicates true if this specific position is specified as a complementing position for any base position.
+     * @param bool $isComplementingPosition This indicates true if this specific position is specified as a complementing position for any base position.
      *
      * @return self
      */
-    public function setIsComplementingPosition($is_complementing_position)
+    public function setIsComplementingPosition($isComplementingPosition)
     {
-        if (is_null($is_complementing_position)) {
-            throw new \InvalidArgumentException('non-nullable is_complementing_position cannot be null');
+        if (is_null($isComplementingPosition)) {
+            throw new \InvalidArgumentException('non-nullable isComplementingPosition cannot be null');
         }
-        $this->container['is_complementing_position'] = $is_complementing_position;
+        $this->container['isComplementingPosition'] = $isComplementingPosition;
 
         return $this;
     }
 
     /**
-     * Gets complements_positions
+     * Gets complementsPositions
      *
      * @return string[]|null
      */
     public function getComplementsPositions()
     {
-        return $this->container['complements_positions'];
+        return $this->container['complementsPositions'];
     }
 
     /**
-     * Sets complements_positions
+     * Sets complementsPositions
      *
-     * @param string[]|null $complements_positions If IsComplementingPosition is set to true, this will indicate which base positions are targeted by this complementing position.
+     * @param string[]|null $complementsPositions If IsComplementingPosition is set to true, this will indicate which base positions are targeted by this complementing position.
      *
      * @return self
      */
-    public function setComplementsPositions($complements_positions)
+    public function setComplementsPositions($complementsPositions)
     {
-        if (is_null($complements_positions)) {
-            throw new \InvalidArgumentException('non-nullable complements_positions cannot be null');
+        if (is_null($complementsPositions)) {
+            throw new \InvalidArgumentException('non-nullable complementsPositions cannot be null');
         }
-        $this->container['complements_positions'] = $complements_positions;
+        $this->container['complementsPositions'] = $complementsPositions;
 
         return $this;
     }
 
     /**
-     * Gets complementing_price_percentage_override
+     * Gets complementingPricePercentageOverride
      *
      * @return float|null
      */
     public function getComplementingPricePercentageOverride()
     {
-        return $this->container['complementing_price_percentage_override'];
+        return $this->container['complementingPricePercentageOverride'];
     }
 
     /**
-     * Sets complementing_price_percentage_override
+     * Sets complementingPricePercentageOverride
      *
-     * @param float|null $complementing_price_percentage_override You can use this property to directly specify the total price of this position as a percentage of the sum of the total prices of base positions that this position complements. It will essentially set the total price for this position to the sum of all total prices of the positions specified in ComplementsPositions multiplied by the percentage here. If present, this has precedence over UnitPriceOverride as well as QuantityOverride.
+     * @param float|null $complementingPricePercentageOverride You can use this property to directly specify the total price of this position as a percentage of the sum of the total prices of base positions that this position complements. It will essentially set the total price for this position to the sum of all total prices of the positions specified in ComplementsPositions multiplied by the percentage here. If present, this has precedence over UnitPriceOverride as well as QuantityOverride.
      *
      * @return self
      */
-    public function setComplementingPricePercentageOverride($complementing_price_percentage_override)
+    public function setComplementingPricePercentageOverride($complementingPricePercentageOverride)
     {
-        if (is_null($complementing_price_percentage_override)) {
-            throw new \InvalidArgumentException('non-nullable complementing_price_percentage_override cannot be null');
+        if (is_null($complementingPricePercentageOverride)) {
+            throw new \InvalidArgumentException('non-nullable complementingPricePercentageOverride cannot be null');
         }
-        $this->container['complementing_price_percentage_override'] = $complementing_price_percentage_override;
+        $this->container['complementingPricePercentageOverride'] = $complementingPricePercentageOverride;
 
         return $this;
     }
 
     /**
-     * Gets complementing_price_percentage
+     * Gets complementingPricePercentage
      *
      * @return float|null
      */
     public function getComplementingPricePercentage()
     {
-        return $this->container['complementing_price_percentage'];
+        return $this->container['complementingPricePercentage'];
     }
 
     /**
-     * Sets complementing_price_percentage
+     * Sets complementingPricePercentage
      *
-     * @param float|null $complementing_price_percentage This is a read only property showing the total price of this positions as a percentage of the sum of the total prices of all base positions, in case this position is a complementing positions. If this position is not a complementing position, this will be null. Also, if no prices are present, this will also be null.
+     * @param float|null $complementingPricePercentage This is a read only property showing the total price of this positions as a percentage of the sum of the total prices of all base positions, in case this position is a complementing positions. If this position is not a complementing position, this will be null. Also, if no prices are present, this will also be null.
      *
      * @return self
      */
-    public function setComplementingPricePercentage($complementing_price_percentage)
+    public function setComplementingPricePercentage($complementingPricePercentage)
     {
-        if (is_null($complementing_price_percentage)) {
-            throw new \InvalidArgumentException('non-nullable complementing_price_percentage cannot be null');
+        if (is_null($complementingPricePercentage)) {
+            throw new \InvalidArgumentException('non-nullable complementingPricePercentage cannot be null');
         }
-        $this->container['complementing_price_percentage'] = $complementing_price_percentage;
+        $this->container['complementingPricePercentage'] = $complementingPricePercentage;
 
         return $this;
     }
 
     /**
-     * Gets unit_tag
+     * Gets unitTag
      *
      * @return string|null
      */
     public function getUnitTag()
     {
-        return $this->container['unit_tag'];
+        return $this->container['unitTag'];
     }
 
     /**
-     * Sets unit_tag
+     * Sets unitTag
      *
-     * @param string|null $unit_tag The tag of the unit used for this positions quantity.
+     * @param string|null $unitTag The tag of the unit used for this positions quantity.
      *
      * @return self
      */
-    public function setUnitTag($unit_tag)
+    public function setUnitTag($unitTag)
     {
-        if (is_null($unit_tag)) {
-            throw new \InvalidArgumentException('non-nullable unit_tag cannot be null');
+        if (is_null($unitTag)) {
+            throw new \InvalidArgumentException('non-nullable unitTag cannot be null');
         }
-        $this->container['unit_tag'] = $unit_tag;
+        $this->container['unitTag'] = $unitTag;
 
         return $this;
     }
 
     /**
-     * Gets labour_components
+     * Gets labourComponents
      *
      * @return \Dangl\AVACloud\Model\LabourPriceComponentDto|null
      */
     public function getLabourComponents()
     {
-        return $this->container['labour_components'];
+        return $this->container['labourComponents'];
     }
 
     /**
-     * Sets labour_components
+     * Sets labourComponents
      *
-     * @param \Dangl\AVACloud\Model\LabourPriceComponentDto|null $labour_components labour_components
+     * @param \Dangl\AVACloud\Model\LabourPriceComponentDto|null $labourComponents labourComponents
      *
      * @return self
      */
-    public function setLabourComponents($labour_components)
+    public function setLabourComponents($labourComponents)
     {
-        if (is_null($labour_components)) {
-            throw new \InvalidArgumentException('non-nullable labour_components cannot be null');
+        if (is_null($labourComponents)) {
+            throw new \InvalidArgumentException('non-nullable labourComponents cannot be null');
         }
-        $this->container['labour_components'] = $labour_components;
+        $this->container['labourComponents'] = $labourComponents;
 
         return $this;
     }
 
     /**
-     * Gets price_components
+     * Gets priceComponents
      *
      * @return \Dangl\AVACloud\Model\PriceComponentDto[]|null
      */
     public function getPriceComponents()
     {
-        return $this->container['price_components'];
+        return $this->container['priceComponents'];
     }
 
     /**
-     * Sets price_components
+     * Sets priceComponents
      *
-     * @param \Dangl\AVACloud\Model\PriceComponentDto[]|null $price_components The single price components in this Position. Price components should not be handled directly on a per-position basis but set globally in the parent Projects ProjectInformation.
+     * @param \Dangl\AVACloud\Model\PriceComponentDto[]|null $priceComponents The single price components in this Position. Price components should not be handled directly on a per-position basis but set globally in the parent Projects ProjectInformation.
      *
      * @return self
      */
-    public function setPriceComponents($price_components)
+    public function setPriceComponents($priceComponents)
     {
-        if (is_null($price_components)) {
-            throw new \InvalidArgumentException('non-nullable price_components cannot be null');
+        if (is_null($priceComponents)) {
+            throw new \InvalidArgumentException('non-nullable priceComponents cannot be null');
         }
-        $this->container['price_components'] = $price_components;
+        $this->container['priceComponents'] = $priceComponents;
 
         return $this;
     }
 
     /**
-     * Gets quantity_components
+     * Gets quantityComponents
      *
      * @return \Dangl\AVACloud\Model\CalculationDto[]|null
      */
     public function getQuantityComponents()
     {
-        return $this->container['quantity_components'];
+        return $this->container['quantityComponents'];
     }
 
     /**
-     * Sets quantity_components
+     * Sets quantityComponents
      *
-     * @param \Dangl\AVACloud\Model\CalculationDto[]|null $quantity_components The quantity components of this Position.
+     * @param \Dangl\AVACloud\Model\CalculationDto[]|null $quantityComponents The quantity components of this Position.
      *
      * @return self
      */
-    public function setQuantityComponents($quantity_components)
+    public function setQuantityComponents($quantityComponents)
     {
-        if (is_null($quantity_components)) {
-            throw new \InvalidArgumentException('non-nullable quantity_components cannot be null');
+        if (is_null($quantityComponents)) {
+            throw new \InvalidArgumentException('non-nullable quantityComponents cannot be null');
         }
-        $this->container['quantity_components'] = $quantity_components;
+        $this->container['quantityComponents'] = $quantityComponents;
 
         return $this;
     }
 
     /**
-     * Gets sub_descriptions
+     * Gets subDescriptions
      *
      * @return \Dangl\AVACloud\Model\SubDescriptionDto[]|null
      */
     public function getSubDescriptions()
     {
-        return $this->container['sub_descriptions'];
+        return $this->container['subDescriptions'];
     }
 
     /**
-     * Sets sub_descriptions
+     * Sets subDescriptions
      *
-     * @param \Dangl\AVACloud\Model\SubDescriptionDto[]|null $sub_descriptions Further structuring of this Position.
+     * @param \Dangl\AVACloud\Model\SubDescriptionDto[]|null $subDescriptions Further structuring of this Position.
      *
      * @return self
      */
-    public function setSubDescriptions($sub_descriptions)
+    public function setSubDescriptions($subDescriptions)
     {
-        if (is_null($sub_descriptions)) {
-            throw new \InvalidArgumentException('non-nullable sub_descriptions cannot be null');
+        if (is_null($subDescriptions)) {
+            throw new \InvalidArgumentException('non-nullable subDescriptions cannot be null');
         }
-        $this->container['sub_descriptions'] = $sub_descriptions;
+        $this->container['subDescriptions'] = $subDescriptions;
 
         return $this;
     }
 
     /**
-     * Gets comission_status
+     * Gets comissionStatus
      *
      * @return \Dangl\AVACloud\Model\ComissionStatusDto
      */
     public function getComissionStatus()
     {
-        return $this->container['comission_status'];
+        return $this->container['comissionStatus'];
     }
 
     /**
-     * Sets comission_status
+     * Sets comissionStatus
      *
-     * @param \Dangl\AVACloud\Model\ComissionStatusDto $comission_status comission_status
+     * @param \Dangl\AVACloud\Model\ComissionStatusDto $comissionStatus comissionStatus
      *
      * @return self
      */
-    public function setComissionStatus($comission_status)
+    public function setComissionStatus($comissionStatus)
     {
-        if (is_null($comission_status)) {
-            throw new \InvalidArgumentException('non-nullable comission_status cannot be null');
+        if (is_null($comissionStatus)) {
+            throw new \InvalidArgumentException('non-nullable comissionStatus cannot be null');
         }
-        $this->container['comission_status'] = $comission_status;
+        $this->container['comissionStatus'] = $comissionStatus;
 
         return $this;
     }
 
     /**
-     * Gets complemented_by
+     * Gets complementedBy
      *
      * @return string[]|null
      */
     public function getComplementedBy()
     {
-        return $this->container['complemented_by'];
+        return $this->container['complementedBy'];
     }
 
     /**
-     * Sets complemented_by
+     * Sets complementedBy
      *
-     * @param string[]|null $complemented_by A list of positions that complement this Position. The positions are referenced by their GUIDs. It might be used together with ComplementedByQuantities in case that only a given quantity is complemented by positions.
+     * @param string[]|null $complementedBy A list of positions that complement this Position. The positions are referenced by their GUIDs. It might be used together with ComplementedByQuantities in case that only a given quantity is complemented by positions.
      *
      * @return self
      */
-    public function setComplementedBy($complemented_by)
+    public function setComplementedBy($complementedBy)
     {
-        if (is_null($complemented_by)) {
-            throw new \InvalidArgumentException('non-nullable complemented_by cannot be null');
+        if (is_null($complementedBy)) {
+            throw new \InvalidArgumentException('non-nullable complementedBy cannot be null');
         }
-        $this->container['complemented_by'] = $complemented_by;
+        $this->container['complementedBy'] = $complementedBy;
 
         return $this;
     }
@@ -1191,1135 +1191,1135 @@ class PositionDto extends IElementDto
     }
 
     /**
-     * Gets amount_to_be_entered_by_bidder
+     * Gets amountToBeEnteredByBidder
      *
      * @return bool
      */
     public function getAmountToBeEnteredByBidder()
     {
-        return $this->container['amount_to_be_entered_by_bidder'];
+        return $this->container['amountToBeEnteredByBidder'];
     }
 
     /**
-     * Sets amount_to_be_entered_by_bidder
+     * Sets amountToBeEnteredByBidder
      *
-     * @param bool $amount_to_be_entered_by_bidder Indicates that the amount for this Position is to be set by the bidder.
+     * @param bool $amountToBeEnteredByBidder Indicates that the amount for this Position is to be set by the bidder.
      *
      * @return self
      */
-    public function setAmountToBeEnteredByBidder($amount_to_be_entered_by_bidder)
+    public function setAmountToBeEnteredByBidder($amountToBeEnteredByBidder)
     {
-        if (is_null($amount_to_be_entered_by_bidder)) {
-            throw new \InvalidArgumentException('non-nullable amount_to_be_entered_by_bidder cannot be null');
+        if (is_null($amountToBeEnteredByBidder)) {
+            throw new \InvalidArgumentException('non-nullable amountToBeEnteredByBidder cannot be null');
         }
-        $this->container['amount_to_be_entered_by_bidder'] = $amount_to_be_entered_by_bidder;
+        $this->container['amountToBeEnteredByBidder'] = $amountToBeEnteredByBidder;
 
         return $this;
     }
 
     /**
-     * Gets price_composition_required
+     * Gets priceCompositionRequired
      *
      * @return bool
      */
     public function getPriceCompositionRequired()
     {
-        return $this->container['price_composition_required'];
+        return $this->container['priceCompositionRequired'];
     }
 
     /**
-     * Sets price_composition_required
+     * Sets priceCompositionRequired
      *
-     * @param bool $price_composition_required Indicates if the bidder demands for prices to be broken up into their price components.
+     * @param bool $priceCompositionRequired Indicates if the bidder demands for prices to be broken up into their price components.
      *
      * @return self
      */
-    public function setPriceCompositionRequired($price_composition_required)
+    public function setPriceCompositionRequired($priceCompositionRequired)
     {
-        if (is_null($price_composition_required)) {
-            throw new \InvalidArgumentException('non-nullable price_composition_required cannot be null');
+        if (is_null($priceCompositionRequired)) {
+            throw new \InvalidArgumentException('non-nullable priceCompositionRequired cannot be null');
         }
-        $this->container['price_composition_required'] = $price_composition_required;
+        $this->container['priceCompositionRequired'] = $priceCompositionRequired;
 
         return $this;
     }
 
     /**
-     * Gets use_different_tax_rate
+     * Gets useDifferentTaxRate
      *
      * @return bool
      */
     public function getUseDifferentTaxRate()
     {
-        return $this->container['use_different_tax_rate'];
+        return $this->container['useDifferentTaxRate'];
     }
 
     /**
-     * Sets use_different_tax_rate
+     * Sets useDifferentTaxRate
      *
-     * @param bool $use_different_tax_rate Indicates if this Position should use a different TaxRate than what is the default for the Project.
+     * @param bool $useDifferentTaxRate Indicates if this Position should use a different TaxRate than what is the default for the Project.
      *
      * @return self
      */
-    public function setUseDifferentTaxRate($use_different_tax_rate)
+    public function setUseDifferentTaxRate($useDifferentTaxRate)
     {
-        if (is_null($use_different_tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable use_different_tax_rate cannot be null');
+        if (is_null($useDifferentTaxRate)) {
+            throw new \InvalidArgumentException('non-nullable useDifferentTaxRate cannot be null');
         }
-        $this->container['use_different_tax_rate'] = $use_different_tax_rate;
+        $this->container['useDifferentTaxRate'] = $useDifferentTaxRate;
 
         return $this;
     }
 
     /**
-     * Gets tax_rate
+     * Gets taxRate
      *
      * @return float
      */
     public function getTaxRate()
     {
-        return $this->container['tax_rate'];
+        return $this->container['taxRate'];
     }
 
     /**
-     * Sets tax_rate
+     * Sets taxRate
      *
-     * @param float $tax_rate Will return either the parent ServiceSpecification's TaxRate or it's own if it has a different value. (For example, in Germany Water has a different TaxRate than regular Positions)
+     * @param float $taxRate Will return either the parent ServiceSpecification's TaxRate or it's own if it has a different value. (For example, in Germany Water has a different TaxRate than regular Positions)
      *
      * @return self
      */
-    public function setTaxRate($tax_rate)
+    public function setTaxRate($taxRate)
     {
-        if (is_null($tax_rate)) {
-            throw new \InvalidArgumentException('non-nullable tax_rate cannot be null');
+        if (is_null($taxRate)) {
+            throw new \InvalidArgumentException('non-nullable taxRate cannot be null');
         }
-        $this->container['tax_rate'] = $tax_rate;
+        $this->container['taxRate'] = $taxRate;
 
         return $this;
     }
 
     /**
-     * Gets item_number
+     * Gets itemNumber
      *
      * @return \Dangl\AVACloud\Model\ItemNumberDto|null
      */
     public function getItemNumber()
     {
-        return $this->container['item_number'];
+        return $this->container['itemNumber'];
     }
 
     /**
-     * Sets item_number
+     * Sets itemNumber
      *
-     * @param \Dangl\AVACloud\Model\ItemNumberDto|null $item_number item_number
+     * @param \Dangl\AVACloud\Model\ItemNumberDto|null $itemNumber itemNumber
      *
      * @return self
      */
-    public function setItemNumber($item_number)
+    public function setItemNumber($itemNumber)
     {
-        if (is_null($item_number)) {
-            throw new \InvalidArgumentException('non-nullable item_number cannot be null');
+        if (is_null($itemNumber)) {
+            throw new \InvalidArgumentException('non-nullable itemNumber cannot be null');
         }
-        $this->container['item_number'] = $item_number;
+        $this->container['itemNumber'] = $itemNumber;
 
         return $this;
     }
 
     /**
-     * Gets deduction_factor
+     * Gets deductionFactor
      *
      * @return float
      */
     public function getDeductionFactor()
     {
-        return $this->container['deduction_factor'];
+        return $this->container['deductionFactor'];
     }
 
     /**
-     * Sets deduction_factor
+     * Sets deductionFactor
      *
-     * @param float $deduction_factor The rate of deductions, i.e. 0.12m means 12% price deduction.
+     * @param float $deductionFactor The rate of deductions, i.e. 0.12m means 12% price deduction.
      *
      * @return self
      */
-    public function setDeductionFactor($deduction_factor)
+    public function setDeductionFactor($deductionFactor)
     {
-        if (is_null($deduction_factor)) {
-            throw new \InvalidArgumentException('non-nullable deduction_factor cannot be null');
+        if (is_null($deductionFactor)) {
+            throw new \InvalidArgumentException('non-nullable deductionFactor cannot be null');
         }
-        $this->container['deduction_factor'] = $deduction_factor;
+        $this->container['deductionFactor'] = $deductionFactor;
 
         return $this;
     }
 
     /**
-     * Gets total_price
+     * Gets totalPrice
      *
      * @return float
      */
     public function getTotalPrice()
     {
-        return $this->container['total_price'];
+        return $this->container['totalPrice'];
     }
 
     /**
-     * Sets total_price
+     * Sets totalPrice
      *
-     * @param float $total_price Returns the product of UnitPrice times Quantity.
+     * @param float $totalPrice Returns the product of UnitPrice times Quantity.
      *
      * @return self
      */
-    public function setTotalPrice($total_price)
+    public function setTotalPrice($totalPrice)
     {
-        if (is_null($total_price)) {
-            throw new \InvalidArgumentException('non-nullable total_price cannot be null');
+        if (is_null($totalPrice)) {
+            throw new \InvalidArgumentException('non-nullable totalPrice cannot be null');
         }
-        $this->container['total_price'] = $total_price;
+        $this->container['totalPrice'] = $totalPrice;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross
+     * Gets totalPriceGross
      *
      * @return float
      */
     public function getTotalPriceGross()
     {
-        return $this->container['total_price_gross'];
+        return $this->container['totalPriceGross'];
     }
 
     /**
-     * Sets total_price_gross
+     * Sets totalPriceGross
      *
-     * @param float $total_price_gross The total gross price for this Position.
+     * @param float $totalPriceGross The total gross price for this Position.
      *
      * @return self
      */
-    public function setTotalPriceGross($total_price_gross)
+    public function setTotalPriceGross($totalPriceGross)
     {
-        if (is_null($total_price_gross)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross cannot be null');
+        if (is_null($totalPriceGross)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGross cannot be null');
         }
-        $this->container['total_price_gross'] = $total_price_gross;
+        $this->container['totalPriceGross'] = $totalPriceGross;
 
         return $this;
     }
 
     /**
-     * Gets total_price_gross_deducted
+     * Gets totalPriceGrossDeducted
      *
      * @return float
      */
     public function getTotalPriceGrossDeducted()
     {
-        return $this->container['total_price_gross_deducted'];
+        return $this->container['totalPriceGrossDeducted'];
     }
 
     /**
-     * Sets total_price_gross_deducted
+     * Sets totalPriceGrossDeducted
      *
-     * @param float $total_price_gross_deducted Total gross price after applied deductions.
+     * @param float $totalPriceGrossDeducted Total gross price after applied deductions.
      *
      * @return self
      */
-    public function setTotalPriceGrossDeducted($total_price_gross_deducted)
+    public function setTotalPriceGrossDeducted($totalPriceGrossDeducted)
     {
-        if (is_null($total_price_gross_deducted)) {
-            throw new \InvalidArgumentException('non-nullable total_price_gross_deducted cannot be null');
+        if (is_null($totalPriceGrossDeducted)) {
+            throw new \InvalidArgumentException('non-nullable totalPriceGrossDeducted cannot be null');
         }
-        $this->container['total_price_gross_deducted'] = $total_price_gross_deducted;
+        $this->container['totalPriceGrossDeducted'] = $totalPriceGrossDeducted;
 
         return $this;
     }
 
     /**
-     * Gets deducted_price
+     * Gets deductedPrice
      *
      * @return float
      */
     public function getDeductedPrice()
     {
-        return $this->container['deducted_price'];
+        return $this->container['deductedPrice'];
     }
 
     /**
-     * Sets deducted_price
+     * Sets deductedPrice
      *
-     * @param float $deducted_price Net price after applied deductions. Please be aware that this is the total price, from TotalPrice, not the unit price of the position.
+     * @param float $deductedPrice Net price after applied deductions. Please be aware that this is the total price, from TotalPrice, not the unit price of the position.
      *
      * @return self
      */
-    public function setDeductedPrice($deducted_price)
+    public function setDeductedPrice($deductedPrice)
     {
-        if (is_null($deducted_price)) {
-            throw new \InvalidArgumentException('non-nullable deducted_price cannot be null');
+        if (is_null($deductedPrice)) {
+            throw new \InvalidArgumentException('non-nullable deductedPrice cannot be null');
         }
-        $this->container['deducted_price'] = $deducted_price;
+        $this->container['deductedPrice'] = $deductedPrice;
 
         return $this;
     }
 
     /**
-     * Gets position_type
+     * Gets positionType
      *
      * @return \Dangl\AVACloud\Model\PositionTypeDto
      */
     public function getPositionType()
     {
-        return $this->container['position_type'];
+        return $this->container['positionType'];
     }
 
     /**
-     * Sets position_type
+     * Sets positionType
      *
-     * @param \Dangl\AVACloud\Model\PositionTypeDto $position_type position_type
+     * @param \Dangl\AVACloud\Model\PositionTypeDto $positionType positionType
      *
      * @return self
      */
-    public function setPositionType($position_type)
+    public function setPositionType($positionType)
     {
-        if (is_null($position_type)) {
-            throw new \InvalidArgumentException('non-nullable position_type cannot be null');
+        if (is_null($positionType)) {
+            throw new \InvalidArgumentException('non-nullable positionType cannot be null');
         }
-        $this->container['position_type'] = $position_type;
+        $this->container['positionType'] = $positionType;
 
         return $this;
     }
 
     /**
-     * Gets price_type
+     * Gets priceType
      *
      * @return \Dangl\AVACloud\Model\PriceTypeDto
      */
     public function getPriceType()
     {
-        return $this->container['price_type'];
+        return $this->container['priceType'];
     }
 
     /**
-     * Sets price_type
+     * Sets priceType
      *
-     * @param \Dangl\AVACloud\Model\PriceTypeDto $price_type price_type
+     * @param \Dangl\AVACloud\Model\PriceTypeDto $priceType priceType
      *
      * @return self
      */
-    public function setPriceType($price_type)
+    public function setPriceType($priceType)
     {
-        if (is_null($price_type)) {
-            throw new \InvalidArgumentException('non-nullable price_type cannot be null');
+        if (is_null($priceType)) {
+            throw new \InvalidArgumentException('non-nullable priceType cannot be null');
         }
-        $this->container['price_type'] = $price_type;
+        $this->container['priceType'] = $priceType;
 
         return $this;
     }
 
     /**
-     * Gets service_type
+     * Gets serviceType
      *
      * @return \Dangl\AVACloud\Model\ServiceTypeDto
      */
     public function getServiceType()
     {
-        return $this->container['service_type'];
+        return $this->container['serviceType'];
     }
 
     /**
-     * Sets service_type
+     * Sets serviceType
      *
-     * @param \Dangl\AVACloud\Model\ServiceTypeDto $service_type service_type
+     * @param \Dangl\AVACloud\Model\ServiceTypeDto $serviceType serviceType
      *
      * @return self
      */
-    public function setServiceType($service_type)
+    public function setServiceType($serviceType)
     {
-        if (is_null($service_type)) {
-            throw new \InvalidArgumentException('non-nullable service_type cannot be null');
+        if (is_null($serviceType)) {
+            throw new \InvalidArgumentException('non-nullable serviceType cannot be null');
         }
-        $this->container['service_type'] = $service_type;
+        $this->container['serviceType'] = $serviceType;
 
         return $this;
     }
 
     /**
-     * Gets product_data
+     * Gets productData
      *
      * @return \Dangl\AVACloud\Model\ProductDataDto|null
      */
     public function getProductData()
     {
-        return $this->container['product_data'];
+        return $this->container['productData'];
     }
 
     /**
-     * Sets product_data
+     * Sets productData
      *
-     * @param \Dangl\AVACloud\Model\ProductDataDto|null $product_data product_data
+     * @param \Dangl\AVACloud\Model\ProductDataDto|null $productData productData
      *
      * @return self
      */
-    public function setProductData($product_data)
+    public function setProductData($productData)
     {
-        if (is_null($product_data)) {
-            throw new \InvalidArgumentException('non-nullable product_data cannot be null');
+        if (is_null($productData)) {
+            throw new \InvalidArgumentException('non-nullable productData cannot be null');
         }
-        $this->container['product_data'] = $product_data;
+        $this->container['productData'] = $productData;
 
         return $this;
     }
 
     /**
-     * Gets short_text
+     * Gets shortText
      *
      * @return string|null
      */
     public function getShortText()
     {
-        return $this->container['short_text'];
+        return $this->container['shortText'];
     }
 
     /**
-     * Sets short_text
+     * Sets shortText
      *
-     * @param string|null $short_text Short description for this DescriptionBase element. Please note that by default, this property takes precedence over the `HtmlShortText` property. If you want to convert from DTO objects, and you want to work with the `HtmlShortText` property, you need to set this property to null.
+     * @param string|null $shortText Short description for this DescriptionBase element. Please note that by default, this property takes precedence over the `HtmlShortText` property. If you want to convert from DTO objects, and you want to work with the `HtmlShortText` property, you need to set this property to null.
      *
      * @return self
      */
-    public function setShortText($short_text)
+    public function setShortText($shortText)
     {
-        if (is_null($short_text)) {
-            throw new \InvalidArgumentException('non-nullable short_text cannot be null');
+        if (is_null($shortText)) {
+            throw new \InvalidArgumentException('non-nullable shortText cannot be null');
         }
-        $this->container['short_text'] = $short_text;
+        $this->container['shortText'] = $shortText;
 
         return $this;
     }
 
     /**
-     * Gets html_short_text
+     * Gets htmlShortText
      *
      * @return string|null
      */
     public function getHtmlShortText()
     {
-        return $this->container['html_short_text'];
+        return $this->container['htmlShortText'];
     }
 
     /**
-     * Sets html_short_text
+     * Sets htmlShortText
      *
-     * @param string|null $html_short_text This contains the Html representation of the Shorttext. When the ShortText is set, this property will be set to contain the plain text representation of the Html text and vice versa. In practice, it's recommended to always use the plain text representations for short texts. This property is used to store the short text in HTML format. If you want to convert from DTO objects, and you want to use this property, then you need to ensure that `ShortText` is set to null, otherwise the plain text takes precedence over the HTML text.
+     * @param string|null $htmlShortText This contains the Html representation of the Shorttext. When the ShortText is set, this property will be set to contain the plain text representation of the Html text and vice versa. In practice, it's recommended to always use the plain text representations for short texts. This property is used to store the short text in HTML format. If you want to convert from DTO objects, and you want to use this property, then you need to ensure that `ShortText` is set to null, otherwise the plain text takes precedence over the HTML text.
      *
      * @return self
      */
-    public function setHtmlShortText($html_short_text)
+    public function setHtmlShortText($htmlShortText)
     {
-        if (is_null($html_short_text)) {
-            throw new \InvalidArgumentException('non-nullable html_short_text cannot be null');
+        if (is_null($htmlShortText)) {
+            throw new \InvalidArgumentException('non-nullable htmlShortText cannot be null');
         }
-        $this->container['html_short_text'] = $html_short_text;
+        $this->container['htmlShortText'] = $htmlShortText;
 
         return $this;
     }
 
     /**
-     * Gets long_text
+     * Gets longText
      *
      * @return string|null
      */
     public function getLongText()
     {
-        return $this->container['long_text'];
+        return $this->container['longText'];
     }
 
     /**
-     * Sets long_text
+     * Sets longText
      *
-     * @param string|null $long_text Detailed description for this DescriptionBase element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
+     * @param string|null $longText Detailed description for this DescriptionBase element. When the HtmlLongText is set, this is automatically overwritten and filled with the appropriate plain text representation of the Html text. Vice versa, setting this property overrides the HtmlLongText.
      *
      * @return self
      */
-    public function setLongText($long_text)
+    public function setLongText($longText)
     {
-        if (is_null($long_text)) {
-            throw new \InvalidArgumentException('non-nullable long_text cannot be null');
+        if (is_null($longText)) {
+            throw new \InvalidArgumentException('non-nullable longText cannot be null');
         }
-        $this->container['long_text'] = $long_text;
+        $this->container['longText'] = $longText;
 
         return $this;
     }
 
     /**
-     * Gets html_long_text
+     * Gets htmlLongText
      *
      * @return string|null
      */
     public function getHtmlLongText()
     {
-        return $this->container['html_long_text'];
+        return $this->container['htmlLongText'];
     }
 
     /**
-     * Sets html_long_text
+     * Sets htmlLongText
      *
-     * @param string|null $html_long_text This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
+     * @param string|null $htmlLongText This contains the Html representation of the Longtext. When the LongText is set, this is automatically overwritten and filled with the appropriate Html representation of the plaintext. Vice versa, setting this property overrides the LongText. GAEB 90 and GAEB 2000 exports do not support any image functionality. In GAEB XML, only images that use an embedded Base64 data uri are exported, regular url references are cleared before written out.
      *
      * @return self
      */
-    public function setHtmlLongText($html_long_text)
+    public function setHtmlLongText($htmlLongText)
     {
-        if (is_null($html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable html_long_text cannot be null');
+        if (is_null($htmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable htmlLongText cannot be null');
         }
-        $this->container['html_long_text'] = $html_long_text;
+        $this->container['htmlLongText'] = $htmlLongText;
 
         return $this;
     }
 
     /**
-     * Gets addition_type
+     * Gets additionType
      *
      * @return \Dangl\AVACloud\Model\AdditionTypeDto
      */
     public function getAdditionType()
     {
-        return $this->container['addition_type'];
+        return $this->container['additionType'];
     }
 
     /**
-     * Sets addition_type
+     * Sets additionType
      *
-     * @param \Dangl\AVACloud\Model\AdditionTypeDto $addition_type addition_type
+     * @param \Dangl\AVACloud\Model\AdditionTypeDto $additionType additionType
      *
      * @return self
      */
-    public function setAdditionType($addition_type)
+    public function setAdditionType($additionType)
     {
-        if (is_null($addition_type)) {
-            throw new \InvalidArgumentException('non-nullable addition_type cannot be null');
+        if (is_null($additionType)) {
+            throw new \InvalidArgumentException('non-nullable additionType cannot be null');
         }
-        $this->container['addition_type'] = $addition_type;
+        $this->container['additionType'] = $additionType;
 
         return $this;
     }
 
     /**
-     * Gets element_type
+     * Gets elementType
      *
      * @return string|null
      */
     public function getElementType()
     {
-        return $this->container['element_type'];
+        return $this->container['elementType'];
     }
 
     /**
-     * Sets element_type
+     * Sets elementType
      *
-     * @param string|null $element_type element_type
+     * @param string|null $elementType elementType
      *
      * @return self
      */
-    public function setElementType($element_type)
+    public function setElementType($elementType)
     {
-        if (is_null($element_type)) {
-            throw new \InvalidArgumentException('non-nullable element_type cannot be null');
+        if (is_null($elementType)) {
+            throw new \InvalidArgumentException('non-nullable elementType cannot be null');
         }
-        $this->container['element_type'] = $element_type;
+        $this->container['elementType'] = $elementType;
 
         return $this;
     }
 
     /**
-     * Gets quantity_assignments
+     * Gets quantityAssignments
      *
      * @return \Dangl\AVACloud\Model\QuantityAssignmentDto[]|null
      */
     public function getQuantityAssignments()
     {
-        return $this->container['quantity_assignments'];
+        return $this->container['quantityAssignments'];
     }
 
     /**
-     * Sets quantity_assignments
+     * Sets quantityAssignments
      *
-     * @param \Dangl\AVACloud\Model\QuantityAssignmentDto[]|null $quantity_assignments Quantity assignments are, in contrast to SubDescriptions, used to categorize parts of this Position. For example, it could be categorized by cost group - e.g. a Position describing concrete walls could follow the German DIN 276 Cost Groups Standard and specify that of the total 1.000m² wall, 500m² are classified as exterior walls and 500m² are classified as interior walls. They would then have different cost groups associated, e.g. for accounting purposes.
+     * @param \Dangl\AVACloud\Model\QuantityAssignmentDto[]|null $quantityAssignments Quantity assignments are, in contrast to SubDescriptions, used to categorize parts of this Position. For example, it could be categorized by cost group - e.g. a Position describing concrete walls could follow the German DIN 276 Cost Groups Standard and specify that of the total 1.000m² wall, 500m² are classified as exterior walls and 500m² are classified as interior walls. They would then have different cost groups associated, e.g. for accounting purposes.
      *
      * @return self
      */
-    public function setQuantityAssignments($quantity_assignments)
+    public function setQuantityAssignments($quantityAssignments)
     {
-        if (is_null($quantity_assignments)) {
-            throw new \InvalidArgumentException('non-nullable quantity_assignments cannot be null');
+        if (is_null($quantityAssignments)) {
+            throw new \InvalidArgumentException('non-nullable quantityAssignments cannot be null');
         }
-        $this->container['quantity_assignments'] = $quantity_assignments;
+        $this->container['quantityAssignments'] = $quantityAssignments;
 
         return $this;
     }
 
     /**
-     * Gets commerce_properties
+     * Gets commerceProperties
      *
      * @return \Dangl\AVACloud\Model\CommercePropertiesDto|null
      */
     public function getCommerceProperties()
     {
-        return $this->container['commerce_properties'];
+        return $this->container['commerceProperties'];
     }
 
     /**
-     * Sets commerce_properties
+     * Sets commerceProperties
      *
-     * @param \Dangl\AVACloud\Model\CommercePropertiesDto|null $commerce_properties commerce_properties
+     * @param \Dangl\AVACloud\Model\CommercePropertiesDto|null $commerceProperties commerceProperties
      *
      * @return self
      */
-    public function setCommerceProperties($commerce_properties)
+    public function setCommerceProperties($commerceProperties)
     {
-        if (is_null($commerce_properties)) {
-            throw new \InvalidArgumentException('non-nullable commerce_properties cannot be null');
+        if (is_null($commerceProperties)) {
+            throw new \InvalidArgumentException('non-nullable commerceProperties cannot be null');
         }
-        $this->container['commerce_properties'] = $commerce_properties;
+        $this->container['commerceProperties'] = $commerceProperties;
 
         return $this;
     }
 
     /**
-     * Gets alternative_to
+     * Gets alternativeTo
      *
      * @return string|null
      */
     public function getAlternativeTo()
     {
-        return $this->container['alternative_to'];
+        return $this->container['alternativeTo'];
     }
 
     /**
-     * Sets alternative_to
+     * Sets alternativeTo
      *
-     * @param string|null $alternative_to If this position is an Alternative, then this property should point to the id of the position in this service specification that it can replace. If this is set to a value, you can optionally also specify an identifier via AlternativeIdentifier to specifiy multiple positions that must be used together to be an alternative to a single base position.
+     * @param string|null $alternativeTo If this position is an Alternative, then this property should point to the id of the position in this service specification that it can replace. If this is set to a value, you can optionally also specify an identifier via AlternativeIdentifier to specifiy multiple positions that must be used together to be an alternative to a single base position.
      *
      * @return self
      */
-    public function setAlternativeTo($alternative_to)
+    public function setAlternativeTo($alternativeTo)
     {
-        if (is_null($alternative_to)) {
-            throw new \InvalidArgumentException('non-nullable alternative_to cannot be null');
+        if (is_null($alternativeTo)) {
+            throw new \InvalidArgumentException('non-nullable alternativeTo cannot be null');
         }
-        $this->container['alternative_to'] = $alternative_to;
+        $this->container['alternativeTo'] = $alternativeTo;
 
         return $this;
     }
 
     /**
-     * Gets alternative_identifier
+     * Gets alternativeIdentifier
      *
      * @return int|null
      */
     public function getAlternativeIdentifier()
     {
-        return $this->container['alternative_identifier'];
+        return $this->container['alternativeIdentifier'];
     }
 
     /**
-     * Sets alternative_identifier
+     * Sets alternativeIdentifier
      *
-     * @param int|null $alternative_identifier This is an optional property that can be used together with AlternativeTo. If this is set, you can indicate which alternative group a specific position is assigned to. That way, if you specifiy multiple alternative Positions with the same AlternativeIdentifier, you can indicate that to replace a single base Position, multiple alternative Positions should be used. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base position via AlternativeTo.
+     * @param int|null $alternativeIdentifier This is an optional property that can be used together with AlternativeTo. If this is set, you can indicate which alternative group a specific position is assigned to. That way, if you specifiy multiple alternative Positions with the same AlternativeIdentifier, you can indicate that to replace a single base Position, multiple alternative Positions should be used. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base position via AlternativeTo.
      *
      * @return self
      */
-    public function setAlternativeIdentifier($alternative_identifier)
+    public function setAlternativeIdentifier($alternativeIdentifier)
     {
-        if (is_null($alternative_identifier)) {
-            throw new \InvalidArgumentException('non-nullable alternative_identifier cannot be null');
+        if (is_null($alternativeIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable alternativeIdentifier cannot be null');
         }
-        $this->container['alternative_identifier'] = $alternative_identifier;
+        $this->container['alternativeIdentifier'] = $alternativeIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets alternative_group_identifier
+     * Gets alternativeGroupIdentifier
      *
      * @return int|null
      */
     public function getAlternativeGroupIdentifier()
     {
-        return $this->container['alternative_group_identifier'];
+        return $this->container['alternativeGroupIdentifier'];
     }
 
     /**
-     * Sets alternative_group_identifier
+     * Sets alternativeGroupIdentifier
      *
-     * @param int|null $alternative_group_identifier This is an optional property that can be used together with AlternativeTo and AlternativeGroupIdentifier. If this is set, you can indicate which alternative group a specific position is assigned to. That way, you can specify the id (in integer format) for the alternative group this position belongs to. It's different to AlternativeIdentifier in that the other property describes the id of the group, while this property here describes the group itself. If a position only has set AlternativeGroupIdentifier but not AlternativeIdentifier, then it likely is a base position for a specific group. This was introduced in version v2.9.0 to be able to model both position and group ids for alternative group combinations. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base position via AlternativeTo.
+     * @param int|null $alternativeGroupIdentifier This is an optional property that can be used together with AlternativeTo and AlternativeGroupIdentifier. If this is set, you can indicate which alternative group a specific position is assigned to. That way, you can specify the id (in integer format) for the alternative group this position belongs to. It's different to AlternativeIdentifier in that the other property describes the id of the group, while this property here describes the group itself. If a position only has set AlternativeGroupIdentifier but not AlternativeIdentifier, then it likely is a base position for a specific group. This was introduced in version v2.9.0 to be able to model both position and group ids for alternative group combinations. This property is not checked or managed automatically, so it is possible for this property to become invalid, by for example setting this property but not setting a base position via AlternativeTo.
      *
      * @return self
      */
-    public function setAlternativeGroupIdentifier($alternative_group_identifier)
+    public function setAlternativeGroupIdentifier($alternativeGroupIdentifier)
     {
-        if (is_null($alternative_group_identifier)) {
-            throw new \InvalidArgumentException('non-nullable alternative_group_identifier cannot be null');
+        if (is_null($alternativeGroupIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable alternativeGroupIdentifier cannot be null');
         }
-        $this->container['alternative_group_identifier'] = $alternative_group_identifier;
+        $this->container['alternativeGroupIdentifier'] = $alternativeGroupIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets is_lump_sum
+     * Gets isLumpSum
      *
      * @return bool
      */
     public function getIsLumpSum()
     {
-        return $this->container['is_lump_sum'];
+        return $this->container['isLumpSum'];
     }
 
     /**
-     * Sets is_lump_sum
+     * Sets isLumpSum
      *
-     * @param bool $is_lump_sum If this is true, it indicates that the position is intended to be a lump sum, \"Pauschal\" in German. This means the position total price that is being invoiced should not depend on the actual quantity. In practice, partial invoices are still often used for partial services rendered. This property does not affect the price calculation for this position. Typically, the Quantity should be set to 1.0 when this flag is used.
+     * @param bool $isLumpSum If this is true, it indicates that the position is intended to be a lump sum, \"Pauschal\" in German. This means the position total price that is being invoiced should not depend on the actual quantity. In practice, partial invoices are still often used for partial services rendered. This property does not affect the price calculation for this position. Typically, the Quantity should be set to 1.0 when this flag is used.
      *
      * @return self
      */
-    public function setIsLumpSum($is_lump_sum)
+    public function setIsLumpSum($isLumpSum)
     {
-        if (is_null($is_lump_sum)) {
-            throw new \InvalidArgumentException('non-nullable is_lump_sum cannot be null');
+        if (is_null($isLumpSum)) {
+            throw new \InvalidArgumentException('non-nullable isLumpSum cannot be null');
         }
-        $this->container['is_lump_sum'] = $is_lump_sum;
+        $this->container['isLumpSum'] = $isLumpSum;
 
         return $this;
     }
 
     /**
-     * Gets repetition_to
+     * Gets repetitionTo
      *
      * @return string|null
      */
     public function getRepetitionTo()
     {
-        return $this->container['repetition_to'];
+        return $this->container['repetitionTo'];
     }
 
     /**
-     * Sets repetition_to
+     * Sets repetitionTo
      *
-     * @param string|null $repetition_to This identifier can be used to point to the Id of a position in the same ServiceSpecification that acts as a base position. It matches \"Bezugsposition\" in GAEB. This can be used for positions that repeat partially or are linked together
+     * @param string|null $repetitionTo This identifier can be used to point to the Id of a position in the same ServiceSpecification that acts as a base position. It matches \"Bezugsposition\" in GAEB. This can be used for positions that repeat partially or are linked together
      *
      * @return self
      */
-    public function setRepetitionTo($repetition_to)
+    public function setRepetitionTo($repetitionTo)
     {
-        if (is_null($repetition_to)) {
-            throw new \InvalidArgumentException('non-nullable repetition_to cannot be null');
+        if (is_null($repetitionTo)) {
+            throw new \InvalidArgumentException('non-nullable repetitionTo cannot be null');
         }
-        $this->container['repetition_to'] = $repetition_to;
+        $this->container['repetitionTo'] = $repetitionTo;
 
         return $this;
     }
 
     /**
-     * Gets standardized_description
+     * Gets standardizedDescription
      *
      * @return \Dangl\AVACloud\Model\StandardizedDescriptionDto|null
      */
     public function getStandardizedDescription()
     {
-        return $this->container['standardized_description'];
+        return $this->container['standardizedDescription'];
     }
 
     /**
-     * Sets standardized_description
+     * Sets standardizedDescription
      *
-     * @param \Dangl\AVACloud\Model\StandardizedDescriptionDto|null $standardized_description standardized_description
+     * @param \Dangl\AVACloud\Model\StandardizedDescriptionDto|null $standardizedDescription standardizedDescription
      *
      * @return self
      */
-    public function setStandardizedDescription($standardized_description)
+    public function setStandardizedDescription($standardizedDescription)
     {
-        if (is_null($standardized_description)) {
-            throw new \InvalidArgumentException('non-nullable standardized_description cannot be null');
+        if (is_null($standardizedDescription)) {
+            throw new \InvalidArgumentException('non-nullable standardizedDescription cannot be null');
         }
-        $this->container['standardized_description'] = $standardized_description;
+        $this->container['standardizedDescription'] = $standardizedDescription;
 
         return $this;
     }
 
     /**
-     * Gets complemented_by_quantities
+     * Gets complementedByQuantities
      *
      * @return \Dangl\AVACloud\Model\ComplementedByQuantityDto[]|null
      */
     public function getComplementedByQuantities()
     {
-        return $this->container['complemented_by_quantities'];
+        return $this->container['complementedByQuantities'];
     }
 
     /**
-     * Sets complemented_by_quantities
+     * Sets complementedByQuantities
      *
-     * @param \Dangl\AVACloud\Model\ComplementedByQuantityDto[]|null $complemented_by_quantities This list contains references to positions that complement this one, additionally also specifying a quantity for which the addition is intended. This does not replace the ComplementedBy property and there are no automatic checks being done between these two properties, so it's up to the user code to ensure deletions (and additions, if desired) are performed for both properties. When copying withing keeping Ids, this list will not be part of the copy process, since it would only contain quantities without actual position references. Containers, however, will rebuild the list with updated position references when copying positions that contain entries here.
+     * @param \Dangl\AVACloud\Model\ComplementedByQuantityDto[]|null $complementedByQuantities This list contains references to positions that complement this one, additionally also specifying a quantity for which the addition is intended. This does not replace the ComplementedBy property and there are no automatic checks being done between these two properties, so it's up to the user code to ensure deletions (and additions, if desired) are performed for both properties. When copying withing keeping Ids, this list will not be part of the copy process, since it would only contain quantities without actual position references. Containers, however, will rebuild the list with updated position references when copying positions that contain entries here.
      *
      * @return self
      */
-    public function setComplementedByQuantities($complemented_by_quantities)
+    public function setComplementedByQuantities($complementedByQuantities)
     {
-        if (is_null($complemented_by_quantities)) {
-            throw new \InvalidArgumentException('non-nullable complemented_by_quantities cannot be null');
+        if (is_null($complementedByQuantities)) {
+            throw new \InvalidArgumentException('non-nullable complementedByQuantities cannot be null');
         }
-        $this->container['complemented_by_quantities'] = $complemented_by_quantities;
+        $this->container['complementedByQuantities'] = $complementedByQuantities;
 
         return $this;
     }
 
     /**
-     * Gets execution_description_reference
+     * Gets executionDescriptionReference
      *
      * @return string|null
      */
     public function getExecutionDescriptionReference()
     {
-        return $this->container['execution_description_reference'];
+        return $this->container['executionDescriptionReference'];
     }
 
     /**
-     * Sets execution_description_reference
+     * Sets executionDescriptionReference
      *
-     * @param string|null $execution_description_reference This identifier can be used to point to the Id of an ExecutionDescription in the same ServiceSpecification. ExecutionDescriptions act as a way to centrally describe how positions should be executed in practice. Often, the position itself still has text of its own to highlight deviations from that or add more details.
+     * @param string|null $executionDescriptionReference This identifier can be used to point to the Id of an ExecutionDescription in the same ServiceSpecification. ExecutionDescriptions act as a way to centrally describe how positions should be executed in practice. Often, the position itself still has text of its own to highlight deviations from that or add more details.
      *
      * @return self
      */
-    public function setExecutionDescriptionReference($execution_description_reference)
+    public function setExecutionDescriptionReference($executionDescriptionReference)
     {
-        if (is_null($execution_description_reference)) {
-            throw new \InvalidArgumentException('non-nullable execution_description_reference cannot be null');
+        if (is_null($executionDescriptionReference)) {
+            throw new \InvalidArgumentException('non-nullable executionDescriptionReference cannot be null');
         }
-        $this->container['execution_description_reference'] = $execution_description_reference;
+        $this->container['executionDescriptionReference'] = $executionDescriptionReference;
 
         return $this;
     }
 
     /**
-     * Gets not_offered
+     * Gets notOffered
      *
      * @return bool
      */
     public function getNotOffered()
     {
-        return $this->container['not_offered'];
+        return $this->container['notOffered'];
     }
 
     /**
-     * Sets not_offered
+     * Sets notOffered
      *
-     * @param bool $not_offered This indicates if a position has not been offered. This is typically only expected to be true when the exchange phase of the parent ServiceSpecification is Offer, and it means that the position has not been offered at all.
+     * @param bool $notOffered This indicates if a position has not been offered. This is typically only expected to be true when the exchange phase of the parent ServiceSpecification is Offer, and it means that the position has not been offered at all.
      *
      * @return self
      */
-    public function setNotOffered($not_offered)
+    public function setNotOffered($notOffered)
     {
-        if (is_null($not_offered)) {
-            throw new \InvalidArgumentException('non-nullable not_offered cannot be null');
+        if (is_null($notOffered)) {
+            throw new \InvalidArgumentException('non-nullable notOffered cannot be null');
         }
-        $this->container['not_offered'] = $not_offered;
+        $this->container['notOffered'] = $notOffered;
 
         return $this;
     }
 
     /**
-     * Gets oenorm_position_properties
+     * Gets oenormPositionProperties
      *
      * @return \Dangl\AVACloud\Model\OenormPositionPropertiesDto|null
      */
     public function getOenormPositionProperties()
     {
-        return $this->container['oenorm_position_properties'];
+        return $this->container['oenormPositionProperties'];
     }
 
     /**
-     * Sets oenorm_position_properties
+     * Sets oenormPositionProperties
      *
-     * @param \Dangl\AVACloud\Model\OenormPositionPropertiesDto|null $oenorm_position_properties oenorm_position_properties
+     * @param \Dangl\AVACloud\Model\OenormPositionPropertiesDto|null $oenormPositionProperties oenormPositionProperties
      *
      * @return self
      */
-    public function setOenormPositionProperties($oenorm_position_properties)
+    public function setOenormPositionProperties($oenormPositionProperties)
     {
-        if (is_null($oenorm_position_properties)) {
-            throw new \InvalidArgumentException('non-nullable oenorm_position_properties cannot be null');
+        if (is_null($oenormPositionProperties)) {
+            throw new \InvalidArgumentException('non-nullable oenormPositionProperties cannot be null');
         }
-        $this->container['oenorm_position_properties'] = $oenorm_position_properties;
+        $this->container['oenormPositionProperties'] = $oenormPositionProperties;
 
         return $this;
     }
 
     /**
-     * Gets description_id
+     * Gets descriptionId
      *
      * @return string|null
      */
     public function getDescriptionId()
     {
-        return $this->container['description_id'];
+        return $this->container['descriptionId'];
     }
 
     /**
-     * Sets description_id
+     * Sets descriptionId
      *
-     * @param string|null $description_id This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It's different to an elements identifier in that it should only apply to the description component, meaning the text itself.
+     * @param string|null $descriptionId This is an identifier specific for this description. Some exchange formats, like GAEB XML, use it to identify descriptions. It's different to an elements identifier in that it should only apply to the description component, meaning the text itself.
      *
      * @return self
      */
-    public function setDescriptionId($description_id)
+    public function setDescriptionId($descriptionId)
     {
-        if (is_null($description_id)) {
-            throw new \InvalidArgumentException('non-nullable description_id cannot be null');
+        if (is_null($descriptionId)) {
+            throw new \InvalidArgumentException('non-nullable descriptionId cannot be null');
         }
-        $this->container['description_id'] = $description_id;
+        $this->container['descriptionId'] = $descriptionId;
 
         return $this;
     }
 
     /**
-     * Gets hierarchy_level
+     * Gets hierarchyLevel
      *
      * @return int
      */
     public function getHierarchyLevel()
     {
-        return $this->container['hierarchy_level'];
+        return $this->container['hierarchyLevel'];
     }
 
     /**
-     * Sets hierarchy_level
+     * Sets hierarchyLevel
      *
-     * @param int $hierarchy_level This is a zero based hierarchy level. It's set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element.
+     * @param int $hierarchyLevel This is a zero based hierarchy level. It's set automatically when used in the context of a Project, and can be used to identify the hierarchy level of the current element.
      *
      * @return self
      */
-    public function setHierarchyLevel($hierarchy_level)
+    public function setHierarchyLevel($hierarchyLevel)
     {
-        if (is_null($hierarchy_level)) {
-            throw new \InvalidArgumentException('non-nullable hierarchy_level cannot be null');
+        if (is_null($hierarchyLevel)) {
+            throw new \InvalidArgumentException('non-nullable hierarchyLevel cannot be null');
         }
-        $this->container['hierarchy_level'] = $hierarchy_level;
+        $this->container['hierarchyLevel'] = $hierarchyLevel;
 
         return $this;
     }
 
     /**
-     * Gets addendum_status
+     * Gets addendumStatus
      *
      * @return \Dangl\AVACloud\Model\AddendumStatusDto|null
      */
     public function getAddendumStatus()
     {
-        return $this->container['addendum_status'];
+        return $this->container['addendumStatus'];
     }
 
     /**
-     * Sets addendum_status
+     * Sets addendumStatus
      *
-     * @param \Dangl\AVACloud\Model\AddendumStatusDto|null $addendum_status addendum_status
+     * @param \Dangl\AVACloud\Model\AddendumStatusDto|null $addendumStatus addendumStatus
      *
      * @return self
      */
-    public function setAddendumStatus($addendum_status)
+    public function setAddendumStatus($addendumStatus)
     {
-        if (is_null($addendum_status)) {
-            throw new \InvalidArgumentException('non-nullable addendum_status cannot be null');
+        if (is_null($addendumStatus)) {
+            throw new \InvalidArgumentException('non-nullable addendumStatus cannot be null');
         }
-        $this->container['addendum_status'] = $addendum_status;
+        $this->container['addendumStatus'] = $addendumStatus;
 
         return $this;
     }
 
     /**
-     * Gets has_bidder_comment_in_html_long_text
+     * Gets hasBidderCommentInHtmlLongText
      *
      * @return bool
      */
     public function getHasBidderCommentInHtmlLongText()
     {
-        return $this->container['has_bidder_comment_in_html_long_text'];
+        return $this->container['hasBidderCommentInHtmlLongText'];
     }
 
     /**
-     * Sets has_bidder_comment_in_html_long_text
+     * Sets hasBidderCommentInHtmlLongText
      *
-     * @param bool $has_bidder_comment_in_html_long_text has_bidder_comment_in_html_long_text
+     * @param bool $hasBidderCommentInHtmlLongText hasBidderCommentInHtmlLongText
      *
      * @return self
      */
-    public function setHasBidderCommentInHtmlLongText($has_bidder_comment_in_html_long_text)
+    public function setHasBidderCommentInHtmlLongText($hasBidderCommentInHtmlLongText)
     {
-        if (is_null($has_bidder_comment_in_html_long_text)) {
-            throw new \InvalidArgumentException('non-nullable has_bidder_comment_in_html_long_text cannot be null');
+        if (is_null($hasBidderCommentInHtmlLongText)) {
+            throw new \InvalidArgumentException('non-nullable hasBidderCommentInHtmlLongText cannot be null');
         }
-        $this->container['has_bidder_comment_in_html_long_text'] = $has_bidder_comment_in_html_long_text;
+        $this->container['hasBidderCommentInHtmlLongText'] = $hasBidderCommentInHtmlLongText;
 
         return $this;
     }
 
     /**
-     * Gets gaeb_complementing_type
+     * Gets gaebComplementingType
      *
      * @return \Dangl\AVACloud\Model\PositionComplementingTypeDto
      */
     public function getGaebComplementingType()
     {
-        return $this->container['gaeb_complementing_type'];
+        return $this->container['gaebComplementingType'];
     }
 
     /**
-     * Sets gaeb_complementing_type
+     * Sets gaebComplementingType
      *
-     * @param \Dangl\AVACloud\Model\PositionComplementingTypeDto $gaeb_complementing_type gaeb_complementing_type
+     * @param \Dangl\AVACloud\Model\PositionComplementingTypeDto $gaebComplementingType gaebComplementingType
      *
      * @return self
      */
-    public function setGaebComplementingType($gaeb_complementing_type)
+    public function setGaebComplementingType($gaebComplementingType)
     {
-        if (is_null($gaeb_complementing_type)) {
-            throw new \InvalidArgumentException('non-nullable gaeb_complementing_type cannot be null');
+        if (is_null($gaebComplementingType)) {
+            throw new \InvalidArgumentException('non-nullable gaebComplementingType cannot be null');
         }
-        $this->container['gaeb_complementing_type'] = $gaeb_complementing_type;
+        $this->container['gaebComplementingType'] = $gaebComplementingType;
 
         return $this;
     }
 
     /**
-     * Gets hold_out_properties
+     * Gets holdOutProperties
      *
      * @return \Dangl\AVACloud\Model\PositionHoldOutPropertiesDto|null
      */
     public function getHoldOutProperties()
     {
-        return $this->container['hold_out_properties'];
+        return $this->container['holdOutProperties'];
     }
 
     /**
-     * Sets hold_out_properties
+     * Sets holdOutProperties
      *
-     * @param \Dangl\AVACloud\Model\PositionHoldOutPropertiesDto|null $hold_out_properties hold_out_properties
+     * @param \Dangl\AVACloud\Model\PositionHoldOutPropertiesDto|null $holdOutProperties holdOutProperties
      *
      * @return self
      */
-    public function setHoldOutProperties($hold_out_properties)
+    public function setHoldOutProperties($holdOutProperties)
     {
-        if (is_null($hold_out_properties)) {
-            throw new \InvalidArgumentException('non-nullable hold_out_properties cannot be null');
+        if (is_null($holdOutProperties)) {
+            throw new \InvalidArgumentException('non-nullable holdOutProperties cannot be null');
         }
-        $this->container['hold_out_properties'] = $hold_out_properties;
+        $this->container['holdOutProperties'] = $holdOutProperties;
 
         return $this;
     }
 
     /**
-     * Gets estimated_quantity
+     * Gets estimatedQuantity
      *
      * @return float|null
      */
     public function getEstimatedQuantity()
     {
-        return $this->container['estimated_quantity'];
+        return $this->container['estimatedQuantity'];
     }
 
     /**
-     * Sets estimated_quantity
+     * Sets estimatedQuantity
      *
-     * @param float|null $estimated_quantity This is an informational property, which directly holds a numerical value for an estimated quantity. It is not used for any price calculations.
+     * @param float|null $estimatedQuantity This is an informational property, which directly holds a numerical value for an estimated quantity. It is not used for any price calculations.
      *
      * @return self
      */
-    public function setEstimatedQuantity($estimated_quantity)
+    public function setEstimatedQuantity($estimatedQuantity)
     {
-        if (is_null($estimated_quantity)) {
-            throw new \InvalidArgumentException('non-nullable estimated_quantity cannot be null');
+        if (is_null($estimatedQuantity)) {
+            throw new \InvalidArgumentException('non-nullable estimatedQuantity cannot be null');
         }
-        $this->container['estimated_quantity'] = $estimated_quantity;
+        $this->container['estimatedQuantity'] = $estimatedQuantity;
 
         return $this;
     }
 
     /**
-     * Gets price_catalogue_data
+     * Gets priceCatalogueData
      *
      * @return \Dangl\AVACloud\Model\PriceCatalogueDataDto|null
      */
     public function getPriceCatalogueData()
     {
-        return $this->container['price_catalogue_data'];
+        return $this->container['priceCatalogueData'];
     }
 
     /**
-     * Sets price_catalogue_data
+     * Sets priceCatalogueData
      *
-     * @param \Dangl\AVACloud\Model\PriceCatalogueDataDto|null $price_catalogue_data price_catalogue_data
+     * @param \Dangl\AVACloud\Model\PriceCatalogueDataDto|null $priceCatalogueData priceCatalogueData
      *
      * @return self
      */
-    public function setPriceCatalogueData($price_catalogue_data)
+    public function setPriceCatalogueData($priceCatalogueData)
     {
-        if (is_null($price_catalogue_data)) {
-            throw new \InvalidArgumentException('non-nullable price_catalogue_data cannot be null');
+        if (is_null($priceCatalogueData)) {
+            throw new \InvalidArgumentException('non-nullable priceCatalogueData cannot be null');
         }
-        $this->container['price_catalogue_data'] = $price_catalogue_data;
+        $this->container['priceCatalogueData'] = $priceCatalogueData;
 
         return $this;
     }
 
     /**
-     * Gets ignore_project_catalogue_propagation
+     * Gets ignoreProjectCataloguePropagation
      *
      * @return bool
      */
     public function getIgnoreProjectCataloguePropagation()
     {
-        return $this->container['ignore_project_catalogue_propagation'];
+        return $this->container['ignoreProjectCataloguePropagation'];
     }
 
     /**
-     * Sets ignore_project_catalogue_propagation
+     * Sets ignoreProjectCataloguePropagation
      *
-     * @param bool $ignore_project_catalogue_propagation If this is set to true, the ProjectCatalogues property will not be propagated to child elements. This is useful in mapping scenarios, where you want to disable propagation for multiple changes, and only enable it once you have mapped all properties.
+     * @param bool $ignoreProjectCataloguePropagation If this is set to true, the ProjectCatalogues property will not be propagated to child elements. This is useful in mapping scenarios, where you want to disable propagation for multiple changes, and only enable it once you have mapped all properties.
      *
      * @return self
      */
-    public function setIgnoreProjectCataloguePropagation($ignore_project_catalogue_propagation)
+    public function setIgnoreProjectCataloguePropagation($ignoreProjectCataloguePropagation)
     {
-        if (is_null($ignore_project_catalogue_propagation)) {
-            throw new \InvalidArgumentException('non-nullable ignore_project_catalogue_propagation cannot be null');
+        if (is_null($ignoreProjectCataloguePropagation)) {
+            throw new \InvalidArgumentException('non-nullable ignoreProjectCataloguePropagation cannot be null');
         }
-        $this->container['ignore_project_catalogue_propagation'] = $ignore_project_catalogue_propagation;
+        $this->container['ignoreProjectCataloguePropagation'] = $ignoreProjectCataloguePropagation;
 
         return $this;
     }
 
     /**
-     * Gets is_main_position
+     * Gets isMainPosition
      *
      * @return bool
      */
     public function getIsMainPosition()
     {
-        return $this->container['is_main_position'];
+        return $this->container['isMainPosition'];
     }
 
     /**
-     * Sets is_main_position
+     * Sets isMainPosition
      *
-     * @param bool $is_main_position A main position means that this position is important and should be highlighted in the user interface. Important meaning that is is usually a bigger part of the total sum of the services, or it needs special attention in another way.
+     * @param bool $isMainPosition A main position means that this position is important and should be highlighted in the user interface. Important meaning that is is usually a bigger part of the total sum of the services, or it needs special attention in another way.
      *
      * @return self
      */
-    public function setIsMainPosition($is_main_position)
+    public function setIsMainPosition($isMainPosition)
     {
-        if (is_null($is_main_position)) {
-            throw new \InvalidArgumentException('non-nullable is_main_position cannot be null');
+        if (is_null($isMainPosition)) {
+            throw new \InvalidArgumentException('non-nullable isMainPosition cannot be null');
         }
-        $this->container['is_main_position'] = $is_main_position;
+        $this->container['isMainPosition'] = $isMainPosition;
 
         return $this;
     }

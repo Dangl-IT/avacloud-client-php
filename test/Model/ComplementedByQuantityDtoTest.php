@@ -90,7 +90,7 @@ class ComplementedByQuantityDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "complementing_position_id"
+     * Test attribute "complementingPositionId"
      */
     public function testPropertyComplementingPositionId()
     {

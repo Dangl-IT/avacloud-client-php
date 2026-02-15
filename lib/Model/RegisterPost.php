@@ -61,8 +61,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         'username' => 'string',
         'email' => 'string',
         'password' => 'string',
-        'preferred_languages' => 'string[]',
-        'service_login_redirect_uri' => 'string'
+        'preferredLanguages' => 'string[]',
+        'serviceLoginRedirectUri' => 'string'
     ];
 
     /**
@@ -76,8 +76,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         'username' => null,
         'email' => 'email',
         'password' => null,
-        'preferred_languages' => null,
-        'service_login_redirect_uri' => null
+        'preferredLanguages' => null,
+        'serviceLoginRedirectUri' => null
     ];
 
     /**
@@ -89,8 +89,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         'username' => false,
         'email' => false,
         'password' => false,
-        'preferred_languages' => false,
-        'service_login_redirect_uri' => false
+        'preferredLanguages' => false,
+        'serviceLoginRedirectUri' => false
     ];
 
     /**
@@ -182,8 +182,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         'username' => 'username',
         'email' => 'email',
         'password' => 'password',
-        'preferred_languages' => 'preferredLanguages',
-        'service_login_redirect_uri' => 'serviceLoginRedirectUri'
+        'preferredLanguages' => 'preferredLanguages',
+        'serviceLoginRedirectUri' => 'serviceLoginRedirectUri'
     ];
 
     /**
@@ -195,8 +195,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         'username' => 'setUsername',
         'email' => 'setEmail',
         'password' => 'setPassword',
-        'preferred_languages' => 'setPreferredLanguages',
-        'service_login_redirect_uri' => 'setServiceLoginRedirectUri'
+        'preferredLanguages' => 'setPreferredLanguages',
+        'serviceLoginRedirectUri' => 'setServiceLoginRedirectUri'
     ];
 
     /**
@@ -208,8 +208,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         'username' => 'getUsername',
         'email' => 'getEmail',
         'password' => 'getPassword',
-        'preferred_languages' => 'getPreferredLanguages',
-        'service_login_redirect_uri' => 'getServiceLoginRedirectUri'
+        'preferredLanguages' => 'getPreferredLanguages',
+        'serviceLoginRedirectUri' => 'getServiceLoginRedirectUri'
     ];
 
     /**
@@ -272,8 +272,8 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('username', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
         $this->setIfExists('password', $data ?? [], null);
-        $this->setIfExists('preferred_languages', $data ?? [], null);
-        $this->setIfExists('service_login_redirect_uri', $data ?? [], null);
+        $this->setIfExists('preferredLanguages', $data ?? [], null);
+        $this->setIfExists('serviceLoginRedirectUri', $data ?? [], null);
     }
 
     /**
@@ -436,55 +436,55 @@ class RegisterPost implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets preferred_languages
+     * Gets preferredLanguages
      *
      * @return string[]|null
      */
     public function getPreferredLanguages()
     {
-        return $this->container['preferred_languages'];
+        return $this->container['preferredLanguages'];
     }
 
     /**
-     * Sets preferred_languages
+     * Sets preferredLanguages
      *
-     * @param string[]|null $preferred_languages preferred_languages
+     * @param string[]|null $preferredLanguages preferredLanguages
      *
      * @return self
      */
-    public function setPreferredLanguages($preferred_languages)
+    public function setPreferredLanguages($preferredLanguages)
     {
-        if (is_null($preferred_languages)) {
-            throw new \InvalidArgumentException('non-nullable preferred_languages cannot be null');
+        if (is_null($preferredLanguages)) {
+            throw new \InvalidArgumentException('non-nullable preferredLanguages cannot be null');
         }
-        $this->container['preferred_languages'] = $preferred_languages;
+        $this->container['preferredLanguages'] = $preferredLanguages;
 
         return $this;
     }
 
     /**
-     * Gets service_login_redirect_uri
+     * Gets serviceLoginRedirectUri
      *
      * @return string|null
      */
     public function getServiceLoginRedirectUri()
     {
-        return $this->container['service_login_redirect_uri'];
+        return $this->container['serviceLoginRedirectUri'];
     }
 
     /**
-     * Sets service_login_redirect_uri
+     * Sets serviceLoginRedirectUri
      *
-     * @param string|null $service_login_redirect_uri service_login_redirect_uri
+     * @param string|null $serviceLoginRedirectUri serviceLoginRedirectUri
      *
      * @return self
      */
-    public function setServiceLoginRedirectUri($service_login_redirect_uri)
+    public function setServiceLoginRedirectUri($serviceLoginRedirectUri)
     {
-        if (is_null($service_login_redirect_uri)) {
-            throw new \InvalidArgumentException('non-nullable service_login_redirect_uri cannot be null');
+        if (is_null($serviceLoginRedirectUri)) {
+            throw new \InvalidArgumentException('non-nullable serviceLoginRedirectUri cannot be null');
         }
-        $this->container['service_login_redirect_uri'] = $service_login_redirect_uri;
+        $this->container['serviceLoginRedirectUri'] = $serviceLoginRedirectUri;
 
         return $this;
     }

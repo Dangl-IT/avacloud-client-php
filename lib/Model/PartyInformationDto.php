@@ -62,24 +62,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'id' => 'string',
         'name' => 'string',
         'street' => 'string',
-        'zip_code' => 'string',
+        'zipCode' => 'string',
         'city' => 'string',
         'country' => 'string',
         'identifier' => 'string',
         'remarks' => 'string',
         'email' => 'string',
         'phone' => 'string',
-        'contact_person_name' => 'string',
-        'award_identifier' => 'string',
-        'is_in_european_economic_area' => 'bool',
-        'vat_id' => 'string',
+        'contactPersonName' => 'string',
+        'awardIdentifier' => 'string',
+        'isInEuropeanEconomicArea' => 'bool',
+        'vatId' => 'string',
         'fax' => 'string',
-        'country_code' => 'string',
-        'creditor_or_debtor_identifier' => 'string',
-        'global_location_number' => 'string',
-        'banking_information' => '\Dangl\AVACloud\Model\BankingInformationDto[]',
-        'registration_number' => 'string',
-        'tax_id' => 'string'
+        'countryCode' => 'string',
+        'creditorOrDebtorIdentifier' => 'string',
+        'globalLocationNumber' => 'string',
+        'bankingInformation' => '\Dangl\AVACloud\Model\BankingInformationDto[]',
+        'registrationNumber' => 'string',
+        'taxId' => 'string'
     ];
 
     /**
@@ -93,24 +93,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'id' => 'guid',
         'name' => null,
         'street' => null,
-        'zip_code' => null,
+        'zipCode' => null,
         'city' => null,
         'country' => null,
         'identifier' => null,
         'remarks' => null,
         'email' => null,
         'phone' => null,
-        'contact_person_name' => null,
-        'award_identifier' => null,
-        'is_in_european_economic_area' => null,
-        'vat_id' => null,
+        'contactPersonName' => null,
+        'awardIdentifier' => null,
+        'isInEuropeanEconomicArea' => null,
+        'vatId' => null,
         'fax' => null,
-        'country_code' => null,
-        'creditor_or_debtor_identifier' => null,
-        'global_location_number' => null,
-        'banking_information' => null,
-        'registration_number' => null,
-        'tax_id' => null
+        'countryCode' => null,
+        'creditorOrDebtorIdentifier' => null,
+        'globalLocationNumber' => null,
+        'bankingInformation' => null,
+        'registrationNumber' => null,
+        'taxId' => null
     ];
 
     /**
@@ -122,24 +122,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'id' => false,
         'name' => false,
         'street' => false,
-        'zip_code' => false,
+        'zipCode' => false,
         'city' => false,
         'country' => false,
         'identifier' => false,
         'remarks' => false,
         'email' => false,
         'phone' => false,
-        'contact_person_name' => false,
-        'award_identifier' => false,
-        'is_in_european_economic_area' => false,
-        'vat_id' => false,
+        'contactPersonName' => false,
+        'awardIdentifier' => false,
+        'isInEuropeanEconomicArea' => false,
+        'vatId' => false,
         'fax' => false,
-        'country_code' => false,
-        'creditor_or_debtor_identifier' => false,
-        'global_location_number' => false,
-        'banking_information' => false,
-        'registration_number' => false,
-        'tax_id' => false
+        'countryCode' => false,
+        'creditorOrDebtorIdentifier' => false,
+        'globalLocationNumber' => false,
+        'bankingInformation' => false,
+        'registrationNumber' => false,
+        'taxId' => false
     ];
 
     /**
@@ -231,24 +231,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'id' => 'id',
         'name' => 'name',
         'street' => 'street',
-        'zip_code' => 'zipCode',
+        'zipCode' => 'zipCode',
         'city' => 'city',
         'country' => 'country',
         'identifier' => 'identifier',
         'remarks' => 'remarks',
         'email' => 'email',
         'phone' => 'phone',
-        'contact_person_name' => 'contactPersonName',
-        'award_identifier' => 'awardIdentifier',
-        'is_in_european_economic_area' => 'isInEuropeanEconomicArea',
-        'vat_id' => 'vatId',
+        'contactPersonName' => 'contactPersonName',
+        'awardIdentifier' => 'awardIdentifier',
+        'isInEuropeanEconomicArea' => 'isInEuropeanEconomicArea',
+        'vatId' => 'vatId',
         'fax' => 'fax',
-        'country_code' => 'countryCode',
-        'creditor_or_debtor_identifier' => 'creditorOrDebtorIdentifier',
-        'global_location_number' => 'globalLocationNumber',
-        'banking_information' => 'bankingInformation',
-        'registration_number' => 'registrationNumber',
-        'tax_id' => 'taxId'
+        'countryCode' => 'countryCode',
+        'creditorOrDebtorIdentifier' => 'creditorOrDebtorIdentifier',
+        'globalLocationNumber' => 'globalLocationNumber',
+        'bankingInformation' => 'bankingInformation',
+        'registrationNumber' => 'registrationNumber',
+        'taxId' => 'taxId'
     ];
 
     /**
@@ -260,24 +260,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'id' => 'setId',
         'name' => 'setName',
         'street' => 'setStreet',
-        'zip_code' => 'setZipCode',
+        'zipCode' => 'setZipCode',
         'city' => 'setCity',
         'country' => 'setCountry',
         'identifier' => 'setIdentifier',
         'remarks' => 'setRemarks',
         'email' => 'setEmail',
         'phone' => 'setPhone',
-        'contact_person_name' => 'setContactPersonName',
-        'award_identifier' => 'setAwardIdentifier',
-        'is_in_european_economic_area' => 'setIsInEuropeanEconomicArea',
-        'vat_id' => 'setVatId',
+        'contactPersonName' => 'setContactPersonName',
+        'awardIdentifier' => 'setAwardIdentifier',
+        'isInEuropeanEconomicArea' => 'setIsInEuropeanEconomicArea',
+        'vatId' => 'setVatId',
         'fax' => 'setFax',
-        'country_code' => 'setCountryCode',
-        'creditor_or_debtor_identifier' => 'setCreditorOrDebtorIdentifier',
-        'global_location_number' => 'setGlobalLocationNumber',
-        'banking_information' => 'setBankingInformation',
-        'registration_number' => 'setRegistrationNumber',
-        'tax_id' => 'setTaxId'
+        'countryCode' => 'setCountryCode',
+        'creditorOrDebtorIdentifier' => 'setCreditorOrDebtorIdentifier',
+        'globalLocationNumber' => 'setGlobalLocationNumber',
+        'bankingInformation' => 'setBankingInformation',
+        'registrationNumber' => 'setRegistrationNumber',
+        'taxId' => 'setTaxId'
     ];
 
     /**
@@ -289,24 +289,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         'id' => 'getId',
         'name' => 'getName',
         'street' => 'getStreet',
-        'zip_code' => 'getZipCode',
+        'zipCode' => 'getZipCode',
         'city' => 'getCity',
         'country' => 'getCountry',
         'identifier' => 'getIdentifier',
         'remarks' => 'getRemarks',
         'email' => 'getEmail',
         'phone' => 'getPhone',
-        'contact_person_name' => 'getContactPersonName',
-        'award_identifier' => 'getAwardIdentifier',
-        'is_in_european_economic_area' => 'getIsInEuropeanEconomicArea',
-        'vat_id' => 'getVatId',
+        'contactPersonName' => 'getContactPersonName',
+        'awardIdentifier' => 'getAwardIdentifier',
+        'isInEuropeanEconomicArea' => 'getIsInEuropeanEconomicArea',
+        'vatId' => 'getVatId',
         'fax' => 'getFax',
-        'country_code' => 'getCountryCode',
-        'creditor_or_debtor_identifier' => 'getCreditorOrDebtorIdentifier',
-        'global_location_number' => 'getGlobalLocationNumber',
-        'banking_information' => 'getBankingInformation',
-        'registration_number' => 'getRegistrationNumber',
-        'tax_id' => 'getTaxId'
+        'countryCode' => 'getCountryCode',
+        'creditorOrDebtorIdentifier' => 'getCreditorOrDebtorIdentifier',
+        'globalLocationNumber' => 'getGlobalLocationNumber',
+        'bankingInformation' => 'getBankingInformation',
+        'registrationNumber' => 'getRegistrationNumber',
+        'taxId' => 'getTaxId'
     ];
 
     /**
@@ -369,24 +369,24 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('street', $data ?? [], null);
-        $this->setIfExists('zip_code', $data ?? [], null);
+        $this->setIfExists('zipCode', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
         $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('identifier', $data ?? [], null);
         $this->setIfExists('remarks', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
         $this->setIfExists('phone', $data ?? [], null);
-        $this->setIfExists('contact_person_name', $data ?? [], null);
-        $this->setIfExists('award_identifier', $data ?? [], null);
-        $this->setIfExists('is_in_european_economic_area', $data ?? [], null);
-        $this->setIfExists('vat_id', $data ?? [], null);
+        $this->setIfExists('contactPersonName', $data ?? [], null);
+        $this->setIfExists('awardIdentifier', $data ?? [], null);
+        $this->setIfExists('isInEuropeanEconomicArea', $data ?? [], null);
+        $this->setIfExists('vatId', $data ?? [], null);
         $this->setIfExists('fax', $data ?? [], null);
-        $this->setIfExists('country_code', $data ?? [], null);
-        $this->setIfExists('creditor_or_debtor_identifier', $data ?? [], null);
-        $this->setIfExists('global_location_number', $data ?? [], null);
-        $this->setIfExists('banking_information', $data ?? [], null);
-        $this->setIfExists('registration_number', $data ?? [], null);
-        $this->setIfExists('tax_id', $data ?? [], null);
+        $this->setIfExists('countryCode', $data ?? [], null);
+        $this->setIfExists('creditorOrDebtorIdentifier', $data ?? [], null);
+        $this->setIfExists('globalLocationNumber', $data ?? [], null);
+        $this->setIfExists('bankingInformation', $data ?? [], null);
+        $this->setIfExists('registrationNumber', $data ?? [], null);
+        $this->setIfExists('taxId', $data ?? [], null);
     }
 
     /**
@@ -419,8 +419,8 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['is_in_european_economic_area'] === null) {
-            $invalidProperties[] = "'is_in_european_economic_area' can't be null";
+        if ($this->container['isInEuropeanEconomicArea'] === null) {
+            $invalidProperties[] = "'isInEuropeanEconomicArea' can't be null";
         }
         return $invalidProperties;
     }
@@ -519,28 +519,28 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets zip_code
+     * Gets zipCode
      *
      * @return string|null
      */
     public function getZipCode()
     {
-        return $this->container['zip_code'];
+        return $this->container['zipCode'];
     }
 
     /**
-     * Sets zip_code
+     * Sets zipCode
      *
-     * @param string|null $zip_code This party's ZipCode.
+     * @param string|null $zipCode This party's ZipCode.
      *
      * @return self
      */
-    public function setZipCode($zip_code)
+    public function setZipCode($zipCode)
     {
-        if (is_null($zip_code)) {
-            throw new \InvalidArgumentException('non-nullable zip_code cannot be null');
+        if (is_null($zipCode)) {
+            throw new \InvalidArgumentException('non-nullable zipCode cannot be null');
         }
-        $this->container['zip_code'] = $zip_code;
+        $this->container['zipCode'] = $zipCode;
 
         return $this;
     }
@@ -708,109 +708,109 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets contact_person_name
+     * Gets contactPersonName
      *
      * @return string|null
      */
     public function getContactPersonName()
     {
-        return $this->container['contact_person_name'];
+        return $this->container['contactPersonName'];
     }
 
     /**
-     * Sets contact_person_name
+     * Sets contactPersonName
      *
-     * @param string|null $contact_person_name The name of a contact person.
+     * @param string|null $contactPersonName The name of a contact person.
      *
      * @return self
      */
-    public function setContactPersonName($contact_person_name)
+    public function setContactPersonName($contactPersonName)
     {
-        if (is_null($contact_person_name)) {
-            throw new \InvalidArgumentException('non-nullable contact_person_name cannot be null');
+        if (is_null($contactPersonName)) {
+            throw new \InvalidArgumentException('non-nullable contactPersonName cannot be null');
         }
-        $this->container['contact_person_name'] = $contact_person_name;
+        $this->container['contactPersonName'] = $contactPersonName;
 
         return $this;
     }
 
     /**
-     * Gets award_identifier
+     * Gets awardIdentifier
      *
      * @return string|null
      */
     public function getAwardIdentifier()
     {
-        return $this->container['award_identifier'];
+        return $this->container['awardIdentifier'];
     }
 
     /**
-     * Sets award_identifier
+     * Sets awardIdentifier
      *
-     * @param string|null $award_identifier This is an identifier related to this PartyInformation and their internal reference of the tender (or award). This might be used to assign an identifier (German \"Vergabenummer\") for the current project. This is typically only used in Buyer and Bidder representations and should map to the concept of \"Vergabenummer\" or \"AwardNo\" in GAEB.
+     * @param string|null $awardIdentifier This is an identifier related to this PartyInformation and their internal reference of the tender (or award). This might be used to assign an identifier (German \"Vergabenummer\") for the current project. This is typically only used in Buyer and Bidder representations and should map to the concept of \"Vergabenummer\" or \"AwardNo\" in GAEB.
      *
      * @return self
      */
-    public function setAwardIdentifier($award_identifier)
+    public function setAwardIdentifier($awardIdentifier)
     {
-        if (is_null($award_identifier)) {
-            throw new \InvalidArgumentException('non-nullable award_identifier cannot be null');
+        if (is_null($awardIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable awardIdentifier cannot be null');
         }
-        $this->container['award_identifier'] = $award_identifier;
+        $this->container['awardIdentifier'] = $awardIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets is_in_european_economic_area
+     * Gets isInEuropeanEconomicArea
      *
      * @return bool
      */
     public function getIsInEuropeanEconomicArea()
     {
-        return $this->container['is_in_european_economic_area'];
+        return $this->container['isInEuropeanEconomicArea'];
     }
 
     /**
-     * Sets is_in_european_economic_area
+     * Sets isInEuropeanEconomicArea
      *
-     * @param bool $is_in_european_economic_area This property indicates if the party is registered within the European Economic Area.
+     * @param bool $isInEuropeanEconomicArea This property indicates if the party is registered within the European Economic Area.
      *
      * @return self
      */
-    public function setIsInEuropeanEconomicArea($is_in_european_economic_area)
+    public function setIsInEuropeanEconomicArea($isInEuropeanEconomicArea)
     {
-        if (is_null($is_in_european_economic_area)) {
-            throw new \InvalidArgumentException('non-nullable is_in_european_economic_area cannot be null');
+        if (is_null($isInEuropeanEconomicArea)) {
+            throw new \InvalidArgumentException('non-nullable isInEuropeanEconomicArea cannot be null');
         }
-        $this->container['is_in_european_economic_area'] = $is_in_european_economic_area;
+        $this->container['isInEuropeanEconomicArea'] = $isInEuropeanEconomicArea;
 
         return $this;
     }
 
     /**
-     * Gets vat_id
+     * Gets vatId
      *
      * @return string|null
      */
     public function getVatId()
     {
-        return $this->container['vat_id'];
+        return $this->container['vatId'];
     }
 
     /**
-     * Sets vat_id
+     * Sets vatId
      *
-     * @param string|null $vat_id If this is within the European Economic Area (see IsInEuropeanEconomicArea, then as a business entity it likely has an EU VAT Id.
+     * @param string|null $vatId If this is within the European Economic Area (see IsInEuropeanEconomicArea, then as a business entity it likely has an EU VAT Id.
      *
      * @return self
      */
-    public function setVatId($vat_id)
+    public function setVatId($vatId)
     {
-        if (is_null($vat_id)) {
-            throw new \InvalidArgumentException('non-nullable vat_id cannot be null');
+        if (is_null($vatId)) {
+            throw new \InvalidArgumentException('non-nullable vatId cannot be null');
         }
-        $this->container['vat_id'] = $vat_id;
+        $this->container['vatId'] = $vatId;
 
         return $this;
     }
@@ -843,163 +843,163 @@ class PartyInformationDto implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      *
      * @return string|null
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
+     * Sets countryCode
      *
-     * @param string|null $country_code The two letter ISO country code, e.g. DE for Germany.
+     * @param string|null $countryCode The two letter ISO country code, e.g. DE for Germany.
      *
      * @return self
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        if (is_null($country_code)) {
-            throw new \InvalidArgumentException('non-nullable country_code cannot be null');
+        if (is_null($countryCode)) {
+            throw new \InvalidArgumentException('non-nullable countryCode cannot be null');
         }
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }
 
     /**
-     * Gets creditor_or_debtor_identifier
+     * Gets creditorOrDebtorIdentifier
      *
      * @return string|null
      */
     public function getCreditorOrDebtorIdentifier()
     {
-        return $this->container['creditor_or_debtor_identifier'];
+        return $this->container['creditorOrDebtorIdentifier'];
     }
 
     /**
-     * Sets creditor_or_debtor_identifier
+     * Sets creditorOrDebtorIdentifier
      *
-     * @param string|null $creditor_or_debtor_identifier Depending on which party this class represents, it might have either a 'creditor' or 'debtor' number. This is often used in internal accounting systems.
+     * @param string|null $creditorOrDebtorIdentifier Depending on which party this class represents, it might have either a 'creditor' or 'debtor' number. This is often used in internal accounting systems.
      *
      * @return self
      */
-    public function setCreditorOrDebtorIdentifier($creditor_or_debtor_identifier)
+    public function setCreditorOrDebtorIdentifier($creditorOrDebtorIdentifier)
     {
-        if (is_null($creditor_or_debtor_identifier)) {
-            throw new \InvalidArgumentException('non-nullable creditor_or_debtor_identifier cannot be null');
+        if (is_null($creditorOrDebtorIdentifier)) {
+            throw new \InvalidArgumentException('non-nullable creditorOrDebtorIdentifier cannot be null');
         }
-        $this->container['creditor_or_debtor_identifier'] = $creditor_or_debtor_identifier;
+        $this->container['creditorOrDebtorIdentifier'] = $creditorOrDebtorIdentifier;
 
         return $this;
     }
 
     /**
-     * Gets global_location_number
+     * Gets globalLocationNumber
      *
      * @return string|null
      */
     public function getGlobalLocationNumber()
     {
-        return $this->container['global_location_number'];
+        return $this->container['globalLocationNumber'];
     }
 
     /**
-     * Sets global_location_number
+     * Sets globalLocationNumber
      *
-     * @param string|null $global_location_number The Global Location Number (GLN) is issued by GS1 and is intended to be a unique identifier for the physical address of a party, e.g. a business office.
+     * @param string|null $globalLocationNumber The Global Location Number (GLN) is issued by GS1 and is intended to be a unique identifier for the physical address of a party, e.g. a business office.
      *
      * @return self
      */
-    public function setGlobalLocationNumber($global_location_number)
+    public function setGlobalLocationNumber($globalLocationNumber)
     {
-        if (is_null($global_location_number)) {
-            throw new \InvalidArgumentException('non-nullable global_location_number cannot be null');
+        if (is_null($globalLocationNumber)) {
+            throw new \InvalidArgumentException('non-nullable globalLocationNumber cannot be null');
         }
-        $this->container['global_location_number'] = $global_location_number;
+        $this->container['globalLocationNumber'] = $globalLocationNumber;
 
         return $this;
     }
 
     /**
-     * Gets banking_information
+     * Gets bankingInformation
      *
      * @return \Dangl\AVACloud\Model\BankingInformationDto[]|null
      */
     public function getBankingInformation()
     {
-        return $this->container['banking_information'];
+        return $this->container['bankingInformation'];
     }
 
     /**
-     * Sets banking_information
+     * Sets bankingInformation
      *
-     * @param \Dangl\AVACloud\Model\BankingInformationDto[]|null $banking_information This list contains information about bank accounts associated with this PartyInformation. It's typically used for buyers and bidders.
+     * @param \Dangl\AVACloud\Model\BankingInformationDto[]|null $bankingInformation This list contains information about bank accounts associated with this PartyInformation. It's typically used for buyers and bidders.
      *
      * @return self
      */
-    public function setBankingInformation($banking_information)
+    public function setBankingInformation($bankingInformation)
     {
-        if (is_null($banking_information)) {
-            throw new \InvalidArgumentException('non-nullable banking_information cannot be null');
+        if (is_null($bankingInformation)) {
+            throw new \InvalidArgumentException('non-nullable bankingInformation cannot be null');
         }
-        $this->container['banking_information'] = $banking_information;
+        $this->container['bankingInformation'] = $bankingInformation;
 
         return $this;
     }
 
     /**
-     * Gets registration_number
+     * Gets registrationNumber
      *
      * @return string|null
      */
     public function getRegistrationNumber()
     {
-        return $this->container['registration_number'];
+        return $this->container['registrationNumber'];
     }
 
     /**
-     * Sets registration_number
+     * Sets registrationNumber
      *
-     * @param string|null $registration_number This can be used to specify a registration number for this party, e.g. a company registration number. It is usually used in GAEB XML commerce exchanges for bidders to supply their WEEE registration number, which is used to identify them as a registered WEEE company.
+     * @param string|null $registrationNumber This can be used to specify a registration number for this party, e.g. a company registration number. It is usually used in GAEB XML commerce exchanges for bidders to supply their WEEE registration number, which is used to identify them as a registered WEEE company.
      *
      * @return self
      */
-    public function setRegistrationNumber($registration_number)
+    public function setRegistrationNumber($registrationNumber)
     {
-        if (is_null($registration_number)) {
-            throw new \InvalidArgumentException('non-nullable registration_number cannot be null');
+        if (is_null($registrationNumber)) {
+            throw new \InvalidArgumentException('non-nullable registrationNumber cannot be null');
         }
-        $this->container['registration_number'] = $registration_number;
+        $this->container['registrationNumber'] = $registrationNumber;
 
         return $this;
     }
 
     /**
-     * Gets tax_id
+     * Gets taxId
      *
      * @return string|null
      */
     public function getTaxId()
     {
-        return $this->container['tax_id'];
+        return $this->container['taxId'];
     }
 
     /**
-     * Sets tax_id
+     * Sets taxId
      *
-     * @param string|null $tax_id This can be used to specify a tax id for this party. It is different from the VatId and the RegistrationNumber. For example, in Germany this would be the \"Steuernummer\". This is usually not mapped to any AVA exchanges, but it's used e.g. in the XRechnung electronic invoices.
+     * @param string|null $taxId This can be used to specify a tax id for this party. It is different from the VatId and the RegistrationNumber. For example, in Germany this would be the \"Steuernummer\". This is usually not mapped to any AVA exchanges, but it's used e.g. in the XRechnung electronic invoices.
      *
      * @return self
      */
-    public function setTaxId($tax_id)
+    public function setTaxId($taxId)
     {
-        if (is_null($tax_id)) {
-            throw new \InvalidArgumentException('non-nullable tax_id cannot be null');
+        if (is_null($taxId)) {
+            throw new \InvalidArgumentException('non-nullable taxId cannot be null');
         }
-        $this->container['tax_id'] = $tax_id;
+        $this->container['taxId'] = $taxId;
 
         return $this;
     }

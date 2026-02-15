@@ -59,14 +59,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'net_amount' => 'float',
-        'relative_charge_base_amount' => 'float',
-        'relative_charge_percentage' => 'float',
-        'vat_category' => '\Dangl\AVACloud\Model\VatCategory',
-        'vat_rate' => 'float',
+        'netAmount' => 'float',
+        'relativeChargeBaseAmount' => 'float',
+        'relativeChargePercentage' => 'float',
+        'vatCategory' => '\Dangl\AVACloud\Model\VatCategory',
+        'vatRate' => 'float',
         'reason' => 'string',
-        'reason_code' => 'string',
-        'reason_type' => '\Dangl\AVACloud\Model\ChargeReasonType'
+        'reasonCode' => 'string',
+        'reasonType' => '\Dangl\AVACloud\Model\ChargeReasonType'
     ];
 
     /**
@@ -77,14 +77,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'net_amount' => 'decimal',
-        'relative_charge_base_amount' => 'decimal',
-        'relative_charge_percentage' => 'decimal',
-        'vat_category' => null,
-        'vat_rate' => 'decimal',
+        'netAmount' => 'decimal',
+        'relativeChargeBaseAmount' => 'decimal',
+        'relativeChargePercentage' => 'decimal',
+        'vatCategory' => null,
+        'vatRate' => 'decimal',
         'reason' => null,
-        'reason_code' => null,
-        'reason_type' => null
+        'reasonCode' => null,
+        'reasonType' => null
     ];
 
     /**
@@ -93,14 +93,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'net_amount' => false,
-        'relative_charge_base_amount' => false,
-        'relative_charge_percentage' => false,
-        'vat_category' => false,
-        'vat_rate' => false,
+        'netAmount' => false,
+        'relativeChargeBaseAmount' => false,
+        'relativeChargePercentage' => false,
+        'vatCategory' => false,
+        'vatRate' => false,
         'reason' => false,
-        'reason_code' => false,
-        'reason_type' => false
+        'reasonCode' => false,
+        'reasonType' => false
     ];
 
     /**
@@ -189,14 +189,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'net_amount' => 'netAmount',
-        'relative_charge_base_amount' => 'relativeChargeBaseAmount',
-        'relative_charge_percentage' => 'relativeChargePercentage',
-        'vat_category' => 'vatCategory',
-        'vat_rate' => 'vatRate',
+        'netAmount' => 'netAmount',
+        'relativeChargeBaseAmount' => 'relativeChargeBaseAmount',
+        'relativeChargePercentage' => 'relativeChargePercentage',
+        'vatCategory' => 'vatCategory',
+        'vatRate' => 'vatRate',
         'reason' => 'reason',
-        'reason_code' => 'reasonCode',
-        'reason_type' => 'reasonType'
+        'reasonCode' => 'reasonCode',
+        'reasonType' => 'reasonType'
     ];
 
     /**
@@ -205,14 +205,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'net_amount' => 'setNetAmount',
-        'relative_charge_base_amount' => 'setRelativeChargeBaseAmount',
-        'relative_charge_percentage' => 'setRelativeChargePercentage',
-        'vat_category' => 'setVatCategory',
-        'vat_rate' => 'setVatRate',
+        'netAmount' => 'setNetAmount',
+        'relativeChargeBaseAmount' => 'setRelativeChargeBaseAmount',
+        'relativeChargePercentage' => 'setRelativeChargePercentage',
+        'vatCategory' => 'setVatCategory',
+        'vatRate' => 'setVatRate',
         'reason' => 'setReason',
-        'reason_code' => 'setReasonCode',
-        'reason_type' => 'setReasonType'
+        'reasonCode' => 'setReasonCode',
+        'reasonType' => 'setReasonType'
     ];
 
     /**
@@ -221,14 +221,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'net_amount' => 'getNetAmount',
-        'relative_charge_base_amount' => 'getRelativeChargeBaseAmount',
-        'relative_charge_percentage' => 'getRelativeChargePercentage',
-        'vat_category' => 'getVatCategory',
-        'vat_rate' => 'getVatRate',
+        'netAmount' => 'getNetAmount',
+        'relativeChargeBaseAmount' => 'getRelativeChargeBaseAmount',
+        'relativeChargePercentage' => 'getRelativeChargePercentage',
+        'vatCategory' => 'getVatCategory',
+        'vatRate' => 'getVatRate',
         'reason' => 'getReason',
-        'reason_code' => 'getReasonCode',
-        'reason_type' => 'getReasonType'
+        'reasonCode' => 'getReasonCode',
+        'reasonType' => 'getReasonType'
     ];
 
     /**
@@ -288,14 +288,14 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('net_amount', $data ?? [], null);
-        $this->setIfExists('relative_charge_base_amount', $data ?? [], null);
-        $this->setIfExists('relative_charge_percentage', $data ?? [], null);
-        $this->setIfExists('vat_category', $data ?? [], null);
-        $this->setIfExists('vat_rate', $data ?? [], null);
+        $this->setIfExists('netAmount', $data ?? [], null);
+        $this->setIfExists('relativeChargeBaseAmount', $data ?? [], null);
+        $this->setIfExists('relativeChargePercentage', $data ?? [], null);
+        $this->setIfExists('vatCategory', $data ?? [], null);
+        $this->setIfExists('vatRate', $data ?? [], null);
         $this->setIfExists('reason', $data ?? [], null);
-        $this->setIfExists('reason_code', $data ?? [], null);
-        $this->setIfExists('reason_type', $data ?? [], null);
+        $this->setIfExists('reasonCode', $data ?? [], null);
+        $this->setIfExists('reasonType', $data ?? [], null);
     }
 
     /**
@@ -325,8 +325,8 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['vat_category'] === null) {
-            $invalidProperties[] = "'vat_category' can't be null";
+        if ($this->container['vatCategory'] === null) {
+            $invalidProperties[] = "'vatCategory' can't be null";
         }
         return $invalidProperties;
     }
@@ -344,136 +344,136 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets net_amount
+     * Gets netAmount
      *
      * @return float|null
      */
     public function getNetAmount()
     {
-        return $this->container['net_amount'];
+        return $this->container['netAmount'];
     }
 
     /**
-     * Sets net_amount
+     * Sets netAmount
      *
-     * @param float|null $net_amount BT-99 The net amount of the charge
+     * @param float|null $netAmount BT-99 The net amount of the charge
      *
      * @return self
      */
-    public function setNetAmount($net_amount)
+    public function setNetAmount($netAmount)
     {
-        if (is_null($net_amount)) {
-            throw new \InvalidArgumentException('non-nullable net_amount cannot be null');
+        if (is_null($netAmount)) {
+            throw new \InvalidArgumentException('non-nullable netAmount cannot be null');
         }
-        $this->container['net_amount'] = $net_amount;
+        $this->container['netAmount'] = $netAmount;
 
         return $this;
     }
 
     /**
-     * Gets relative_charge_base_amount
+     * Gets relativeChargeBaseAmount
      *
      * @return float|null
      */
     public function getRelativeChargeBaseAmount()
     {
-        return $this->container['relative_charge_base_amount'];
+        return $this->container['relativeChargeBaseAmount'];
     }
 
     /**
-     * Sets relative_charge_base_amount
+     * Sets relativeChargeBaseAmount
      *
-     * @param float|null $relative_charge_base_amount BT-100 If this is a relative / percentage charge, this should be set and give the base amount that is being used for the calculation
+     * @param float|null $relativeChargeBaseAmount BT-100 If this is a relative / percentage charge, this should be set and give the base amount that is being used for the calculation
      *
      * @return self
      */
-    public function setRelativeChargeBaseAmount($relative_charge_base_amount)
+    public function setRelativeChargeBaseAmount($relativeChargeBaseAmount)
     {
-        if (is_null($relative_charge_base_amount)) {
-            throw new \InvalidArgumentException('non-nullable relative_charge_base_amount cannot be null');
+        if (is_null($relativeChargeBaseAmount)) {
+            throw new \InvalidArgumentException('non-nullable relativeChargeBaseAmount cannot be null');
         }
-        $this->container['relative_charge_base_amount'] = $relative_charge_base_amount;
+        $this->container['relativeChargeBaseAmount'] = $relativeChargeBaseAmount;
 
         return $this;
     }
 
     /**
-     * Gets relative_charge_percentage
+     * Gets relativeChargePercentage
      *
      * @return float|null
      */
     public function getRelativeChargePercentage()
     {
-        return $this->container['relative_charge_percentage'];
+        return $this->container['relativeChargePercentage'];
     }
 
     /**
-     * Sets relative_charge_percentage
+     * Sets relativeChargePercentage
      *
-     * @param float|null $relative_charge_percentage BT-101 If this is a relative / percentage charge, this should be set and be given in decimal representation, meaning 19% would be 0.19
+     * @param float|null $relativeChargePercentage BT-101 If this is a relative / percentage charge, this should be set and be given in decimal representation, meaning 19% would be 0.19
      *
      * @return self
      */
-    public function setRelativeChargePercentage($relative_charge_percentage)
+    public function setRelativeChargePercentage($relativeChargePercentage)
     {
-        if (is_null($relative_charge_percentage)) {
-            throw new \InvalidArgumentException('non-nullable relative_charge_percentage cannot be null');
+        if (is_null($relativeChargePercentage)) {
+            throw new \InvalidArgumentException('non-nullable relativeChargePercentage cannot be null');
         }
-        $this->container['relative_charge_percentage'] = $relative_charge_percentage;
+        $this->container['relativeChargePercentage'] = $relativeChargePercentage;
 
         return $this;
     }
 
     /**
-     * Gets vat_category
+     * Gets vatCategory
      *
      * @return \Dangl\AVACloud\Model\VatCategory
      */
     public function getVatCategory()
     {
-        return $this->container['vat_category'];
+        return $this->container['vatCategory'];
     }
 
     /**
-     * Sets vat_category
+     * Sets vatCategory
      *
-     * @param \Dangl\AVACloud\Model\VatCategory $vat_category vat_category
+     * @param \Dangl\AVACloud\Model\VatCategory $vatCategory vatCategory
      *
      * @return self
      */
-    public function setVatCategory($vat_category)
+    public function setVatCategory($vatCategory)
     {
-        if (is_null($vat_category)) {
-            throw new \InvalidArgumentException('non-nullable vat_category cannot be null');
+        if (is_null($vatCategory)) {
+            throw new \InvalidArgumentException('non-nullable vatCategory cannot be null');
         }
-        $this->container['vat_category'] = $vat_category;
+        $this->container['vatCategory'] = $vatCategory;
 
         return $this;
     }
 
     /**
-     * Gets vat_rate
+     * Gets vatRate
      *
      * @return float|null
      */
     public function getVatRate()
     {
-        return $this->container['vat_rate'];
+        return $this->container['vatRate'];
     }
 
     /**
-     * Sets vat_rate
+     * Sets vatRate
      *
-     * @param float|null $vat_rate BT-103 The actual tax rate as a decimal value, meaning 19% would be 0.19
+     * @param float|null $vatRate BT-103 The actual tax rate as a decimal value, meaning 19% would be 0.19
      *
      * @return self
      */
-    public function setVatRate($vat_rate)
+    public function setVatRate($vatRate)
     {
-        if (is_null($vat_rate)) {
-            throw new \InvalidArgumentException('non-nullable vat_rate cannot be null');
+        if (is_null($vatRate)) {
+            throw new \InvalidArgumentException('non-nullable vatRate cannot be null');
         }
-        $this->container['vat_rate'] = $vat_rate;
+        $this->container['vatRate'] = $vatRate;
 
         return $this;
     }
@@ -506,55 +506,55 @@ class InvoiceCharge implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets reason_code
+     * Gets reasonCode
      *
      * @return string|null
      */
     public function getReasonCode()
     {
-        return $this->container['reason_code'];
+        return $this->container['reasonCode'];
     }
 
     /**
-     * Sets reason_code
+     * Sets reasonCode
      *
-     * @param string|null $reason_code BT-105 A reason code for the charge according to UNTDID 7161. See this list: https://unece.org/fileadmin/DAM/trade/untdid/d16b/tred/tred7161.htm
+     * @param string|null $reasonCode BT-105 A reason code for the charge according to UNTDID 7161. See this list: https://unece.org/fileadmin/DAM/trade/untdid/d16b/tred/tred7161.htm
      *
      * @return self
      */
-    public function setReasonCode($reason_code)
+    public function setReasonCode($reasonCode)
     {
-        if (is_null($reason_code)) {
-            throw new \InvalidArgumentException('non-nullable reason_code cannot be null');
+        if (is_null($reasonCode)) {
+            throw new \InvalidArgumentException('non-nullable reasonCode cannot be null');
         }
-        $this->container['reason_code'] = $reason_code;
+        $this->container['reasonCode'] = $reasonCode;
 
         return $this;
     }
 
     /**
-     * Gets reason_type
+     * Gets reasonType
      *
      * @return \Dangl\AVACloud\Model\ChargeReasonType|null
      */
     public function getReasonType()
     {
-        return $this->container['reason_type'];
+        return $this->container['reasonType'];
     }
 
     /**
-     * Sets reason_type
+     * Sets reasonType
      *
-     * @param \Dangl\AVACloud\Model\ChargeReasonType|null $reason_type reason_type
+     * @param \Dangl\AVACloud\Model\ChargeReasonType|null $reasonType reasonType
      *
      * @return self
      */
-    public function setReasonType($reason_type)
+    public function setReasonType($reasonType)
     {
-        if (is_null($reason_type)) {
-            throw new \InvalidArgumentException('non-nullable reason_type cannot be null');
+        if (is_null($reasonType)) {
+            throw new \InvalidArgumentException('non-nullable reasonType cannot be null');
         }
-        $this->container['reason_type'] = $reason_type;
+        $this->container['reasonType'] = $reasonType;
 
         return $this;
     }

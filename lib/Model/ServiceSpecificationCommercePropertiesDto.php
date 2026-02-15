@@ -59,18 +59,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'fixed_price_date' => '\DateTime',
-        'delivery_voucher_date' => '\DateTime',
-        'delivery_date' => '\DateTime',
-        'inquiry_number' => 'string',
-        'offer_number' => 'string',
-        'order_number' => 'string',
-        'order_confirmation_number' => 'string',
-        'delivery_number' => 'string',
-        'customer_reference_number' => 'string',
-        'supplier_reference_number' => 'string',
-        'shipping_type' => 'string',
-        'inquiry_type' => '\Dangl\AVACloud\Model\CommerceInquiryTypeDto'
+        'fixedPriceDate' => '\DateTime',
+        'deliveryVoucherDate' => '\DateTime',
+        'deliveryDate' => '\DateTime',
+        'inquiryNumber' => 'string',
+        'offerNumber' => 'string',
+        'orderNumber' => 'string',
+        'orderConfirmationNumber' => 'string',
+        'deliveryNumber' => 'string',
+        'customerReferenceNumber' => 'string',
+        'supplierReferenceNumber' => 'string',
+        'shippingType' => 'string',
+        'inquiryType' => '\Dangl\AVACloud\Model\CommerceInquiryTypeDto'
     ];
 
     /**
@@ -81,18 +81,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'fixed_price_date' => 'date-time',
-        'delivery_voucher_date' => 'date-time',
-        'delivery_date' => 'date-time',
-        'inquiry_number' => null,
-        'offer_number' => null,
-        'order_number' => null,
-        'order_confirmation_number' => null,
-        'delivery_number' => null,
-        'customer_reference_number' => null,
-        'supplier_reference_number' => null,
-        'shipping_type' => null,
-        'inquiry_type' => null
+        'fixedPriceDate' => 'date-time',
+        'deliveryVoucherDate' => 'date-time',
+        'deliveryDate' => 'date-time',
+        'inquiryNumber' => null,
+        'offerNumber' => null,
+        'orderNumber' => null,
+        'orderConfirmationNumber' => null,
+        'deliveryNumber' => null,
+        'customerReferenceNumber' => null,
+        'supplierReferenceNumber' => null,
+        'shippingType' => null,
+        'inquiryType' => null
     ];
 
     /**
@@ -101,18 +101,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'fixed_price_date' => false,
-        'delivery_voucher_date' => false,
-        'delivery_date' => false,
-        'inquiry_number' => false,
-        'offer_number' => false,
-        'order_number' => false,
-        'order_confirmation_number' => false,
-        'delivery_number' => false,
-        'customer_reference_number' => false,
-        'supplier_reference_number' => false,
-        'shipping_type' => false,
-        'inquiry_type' => false
+        'fixedPriceDate' => false,
+        'deliveryVoucherDate' => false,
+        'deliveryDate' => false,
+        'inquiryNumber' => false,
+        'offerNumber' => false,
+        'orderNumber' => false,
+        'orderConfirmationNumber' => false,
+        'deliveryNumber' => false,
+        'customerReferenceNumber' => false,
+        'supplierReferenceNumber' => false,
+        'shippingType' => false,
+        'inquiryType' => false
     ];
 
     /**
@@ -201,18 +201,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
      * @var string[]
      */
     protected static $attributeMap = [
-        'fixed_price_date' => 'fixedPriceDate',
-        'delivery_voucher_date' => 'deliveryVoucherDate',
-        'delivery_date' => 'deliveryDate',
-        'inquiry_number' => 'inquiryNumber',
-        'offer_number' => 'offerNumber',
-        'order_number' => 'orderNumber',
-        'order_confirmation_number' => 'orderConfirmationNumber',
-        'delivery_number' => 'deliveryNumber',
-        'customer_reference_number' => 'customerReferenceNumber',
-        'supplier_reference_number' => 'supplierReferenceNumber',
-        'shipping_type' => 'shippingType',
-        'inquiry_type' => 'inquiryType'
+        'fixedPriceDate' => 'fixedPriceDate',
+        'deliveryVoucherDate' => 'deliveryVoucherDate',
+        'deliveryDate' => 'deliveryDate',
+        'inquiryNumber' => 'inquiryNumber',
+        'offerNumber' => 'offerNumber',
+        'orderNumber' => 'orderNumber',
+        'orderConfirmationNumber' => 'orderConfirmationNumber',
+        'deliveryNumber' => 'deliveryNumber',
+        'customerReferenceNumber' => 'customerReferenceNumber',
+        'supplierReferenceNumber' => 'supplierReferenceNumber',
+        'shippingType' => 'shippingType',
+        'inquiryType' => 'inquiryType'
     ];
 
     /**
@@ -221,18 +221,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
      * @var string[]
      */
     protected static $setters = [
-        'fixed_price_date' => 'setFixedPriceDate',
-        'delivery_voucher_date' => 'setDeliveryVoucherDate',
-        'delivery_date' => 'setDeliveryDate',
-        'inquiry_number' => 'setInquiryNumber',
-        'offer_number' => 'setOfferNumber',
-        'order_number' => 'setOrderNumber',
-        'order_confirmation_number' => 'setOrderConfirmationNumber',
-        'delivery_number' => 'setDeliveryNumber',
-        'customer_reference_number' => 'setCustomerReferenceNumber',
-        'supplier_reference_number' => 'setSupplierReferenceNumber',
-        'shipping_type' => 'setShippingType',
-        'inquiry_type' => 'setInquiryType'
+        'fixedPriceDate' => 'setFixedPriceDate',
+        'deliveryVoucherDate' => 'setDeliveryVoucherDate',
+        'deliveryDate' => 'setDeliveryDate',
+        'inquiryNumber' => 'setInquiryNumber',
+        'offerNumber' => 'setOfferNumber',
+        'orderNumber' => 'setOrderNumber',
+        'orderConfirmationNumber' => 'setOrderConfirmationNumber',
+        'deliveryNumber' => 'setDeliveryNumber',
+        'customerReferenceNumber' => 'setCustomerReferenceNumber',
+        'supplierReferenceNumber' => 'setSupplierReferenceNumber',
+        'shippingType' => 'setShippingType',
+        'inquiryType' => 'setInquiryType'
     ];
 
     /**
@@ -241,18 +241,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
      * @var string[]
      */
     protected static $getters = [
-        'fixed_price_date' => 'getFixedPriceDate',
-        'delivery_voucher_date' => 'getDeliveryVoucherDate',
-        'delivery_date' => 'getDeliveryDate',
-        'inquiry_number' => 'getInquiryNumber',
-        'offer_number' => 'getOfferNumber',
-        'order_number' => 'getOrderNumber',
-        'order_confirmation_number' => 'getOrderConfirmationNumber',
-        'delivery_number' => 'getDeliveryNumber',
-        'customer_reference_number' => 'getCustomerReferenceNumber',
-        'supplier_reference_number' => 'getSupplierReferenceNumber',
-        'shipping_type' => 'getShippingType',
-        'inquiry_type' => 'getInquiryType'
+        'fixedPriceDate' => 'getFixedPriceDate',
+        'deliveryVoucherDate' => 'getDeliveryVoucherDate',
+        'deliveryDate' => 'getDeliveryDate',
+        'inquiryNumber' => 'getInquiryNumber',
+        'offerNumber' => 'getOfferNumber',
+        'orderNumber' => 'getOrderNumber',
+        'orderConfirmationNumber' => 'getOrderConfirmationNumber',
+        'deliveryNumber' => 'getDeliveryNumber',
+        'customerReferenceNumber' => 'getCustomerReferenceNumber',
+        'supplierReferenceNumber' => 'getSupplierReferenceNumber',
+        'shippingType' => 'getShippingType',
+        'inquiryType' => 'getInquiryType'
     ];
 
     /**
@@ -312,18 +312,18 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('fixed_price_date', $data ?? [], null);
-        $this->setIfExists('delivery_voucher_date', $data ?? [], null);
-        $this->setIfExists('delivery_date', $data ?? [], null);
-        $this->setIfExists('inquiry_number', $data ?? [], null);
-        $this->setIfExists('offer_number', $data ?? [], null);
-        $this->setIfExists('order_number', $data ?? [], null);
-        $this->setIfExists('order_confirmation_number', $data ?? [], null);
-        $this->setIfExists('delivery_number', $data ?? [], null);
-        $this->setIfExists('customer_reference_number', $data ?? [], null);
-        $this->setIfExists('supplier_reference_number', $data ?? [], null);
-        $this->setIfExists('shipping_type', $data ?? [], null);
-        $this->setIfExists('inquiry_type', $data ?? [], null);
+        $this->setIfExists('fixedPriceDate', $data ?? [], null);
+        $this->setIfExists('deliveryVoucherDate', $data ?? [], null);
+        $this->setIfExists('deliveryDate', $data ?? [], null);
+        $this->setIfExists('inquiryNumber', $data ?? [], null);
+        $this->setIfExists('offerNumber', $data ?? [], null);
+        $this->setIfExists('orderNumber', $data ?? [], null);
+        $this->setIfExists('orderConfirmationNumber', $data ?? [], null);
+        $this->setIfExists('deliveryNumber', $data ?? [], null);
+        $this->setIfExists('customerReferenceNumber', $data ?? [], null);
+        $this->setIfExists('supplierReferenceNumber', $data ?? [], null);
+        $this->setIfExists('shippingType', $data ?? [], null);
+        $this->setIfExists('inquiryType', $data ?? [], null);
     }
 
     /**
@@ -353,8 +353,8 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
     {
         $invalidProperties = [];
 
-        if ($this->container['inquiry_type'] === null) {
-            $invalidProperties[] = "'inquiry_type' can't be null";
+        if ($this->container['inquiryType'] === null) {
+            $invalidProperties[] = "'inquiryType' can't be null";
         }
         return $invalidProperties;
     }
@@ -372,325 +372,325 @@ class ServiceSpecificationCommercePropertiesDto implements ModelInterface, Array
 
 
     /**
-     * Gets fixed_price_date
+     * Gets fixedPriceDate
      *
      * @return \DateTime|null
      */
     public function getFixedPriceDate()
     {
-        return $this->container['fixed_price_date'];
+        return $this->container['fixedPriceDate'];
     }
 
     /**
-     * Sets fixed_price_date
+     * Sets fixedPriceDate
      *
-     * @param \DateTime|null $fixed_price_date The date until the price is valid or fixed.
+     * @param \DateTime|null $fixedPriceDate The date until the price is valid or fixed.
      *
      * @return self
      */
-    public function setFixedPriceDate($fixed_price_date)
+    public function setFixedPriceDate($fixedPriceDate)
     {
-        if (is_null($fixed_price_date)) {
-            throw new \InvalidArgumentException('non-nullable fixed_price_date cannot be null');
+        if (is_null($fixedPriceDate)) {
+            throw new \InvalidArgumentException('non-nullable fixedPriceDate cannot be null');
         }
-        $this->container['fixed_price_date'] = $fixed_price_date;
+        $this->container['fixedPriceDate'] = $fixedPriceDate;
 
         return $this;
     }
 
     /**
-     * Gets delivery_voucher_date
+     * Gets deliveryVoucherDate
      *
      * @return \DateTime|null
      */
     public function getDeliveryVoucherDate()
     {
-        return $this->container['delivery_voucher_date'];
+        return $this->container['deliveryVoucherDate'];
     }
 
     /**
-     * Sets delivery_voucher_date
+     * Sets deliveryVoucherDate
      *
-     * @param \DateTime|null $delivery_voucher_date The date of the delivery voucher note.
+     * @param \DateTime|null $deliveryVoucherDate The date of the delivery voucher note.
      *
      * @return self
      */
-    public function setDeliveryVoucherDate($delivery_voucher_date)
+    public function setDeliveryVoucherDate($deliveryVoucherDate)
     {
-        if (is_null($delivery_voucher_date)) {
-            throw new \InvalidArgumentException('non-nullable delivery_voucher_date cannot be null');
+        if (is_null($deliveryVoucherDate)) {
+            throw new \InvalidArgumentException('non-nullable deliveryVoucherDate cannot be null');
         }
-        $this->container['delivery_voucher_date'] = $delivery_voucher_date;
+        $this->container['deliveryVoucherDate'] = $deliveryVoucherDate;
 
         return $this;
     }
 
     /**
-     * Gets delivery_date
+     * Gets deliveryDate
      *
      * @return \DateTime|null
      */
     public function getDeliveryDate()
     {
-        return $this->container['delivery_date'];
+        return $this->container['deliveryDate'];
     }
 
     /**
-     * Sets delivery_date
+     * Sets deliveryDate
      *
-     * @param \DateTime|null $delivery_date The actual date of delivery.
+     * @param \DateTime|null $deliveryDate The actual date of delivery.
      *
      * @return self
      */
-    public function setDeliveryDate($delivery_date)
+    public function setDeliveryDate($deliveryDate)
     {
-        if (is_null($delivery_date)) {
-            throw new \InvalidArgumentException('non-nullable delivery_date cannot be null');
+        if (is_null($deliveryDate)) {
+            throw new \InvalidArgumentException('non-nullable deliveryDate cannot be null');
         }
-        $this->container['delivery_date'] = $delivery_date;
+        $this->container['deliveryDate'] = $deliveryDate;
 
         return $this;
     }
 
     /**
-     * Gets inquiry_number
+     * Gets inquiryNumber
      *
      * @return string|null
      */
     public function getInquiryNumber()
     {
-        return $this->container['inquiry_number'];
+        return $this->container['inquiryNumber'];
     }
 
     /**
-     * Sets inquiry_number
+     * Sets inquiryNumber
      *
-     * @param string|null $inquiry_number The number of the inquiry, usually in a context of offer requests.
+     * @param string|null $inquiryNumber The number of the inquiry, usually in a context of offer requests.
      *
      * @return self
      */
-    public function setInquiryNumber($inquiry_number)
+    public function setInquiryNumber($inquiryNumber)
     {
-        if (is_null($inquiry_number)) {
-            throw new \InvalidArgumentException('non-nullable inquiry_number cannot be null');
+        if (is_null($inquiryNumber)) {
+            throw new \InvalidArgumentException('non-nullable inquiryNumber cannot be null');
         }
-        $this->container['inquiry_number'] = $inquiry_number;
+        $this->container['inquiryNumber'] = $inquiryNumber;
 
         return $this;
     }
 
     /**
-     * Gets offer_number
+     * Gets offerNumber
      *
      * @return string|null
      */
     public function getOfferNumber()
     {
-        return $this->container['offer_number'];
+        return $this->container['offerNumber'];
     }
 
     /**
-     * Sets offer_number
+     * Sets offerNumber
      *
-     * @param string|null $offer_number The number of the offer, usually in a context of an offer.
+     * @param string|null $offerNumber The number of the offer, usually in a context of an offer.
      *
      * @return self
      */
-    public function setOfferNumber($offer_number)
+    public function setOfferNumber($offerNumber)
     {
-        if (is_null($offer_number)) {
-            throw new \InvalidArgumentException('non-nullable offer_number cannot be null');
+        if (is_null($offerNumber)) {
+            throw new \InvalidArgumentException('non-nullable offerNumber cannot be null');
         }
-        $this->container['offer_number'] = $offer_number;
+        $this->container['offerNumber'] = $offerNumber;
 
         return $this;
     }
 
     /**
-     * Gets order_number
+     * Gets orderNumber
      *
      * @return string|null
      */
     public function getOrderNumber()
     {
-        return $this->container['order_number'];
+        return $this->container['orderNumber'];
     }
 
     /**
-     * Sets order_number
+     * Sets orderNumber
      *
-     * @param string|null $order_number The order number, usually in the context of a grant or contract.
+     * @param string|null $orderNumber The order number, usually in the context of a grant or contract.
      *
      * @return self
      */
-    public function setOrderNumber($order_number)
+    public function setOrderNumber($orderNumber)
     {
-        if (is_null($order_number)) {
-            throw new \InvalidArgumentException('non-nullable order_number cannot be null');
+        if (is_null($orderNumber)) {
+            throw new \InvalidArgumentException('non-nullable orderNumber cannot be null');
         }
-        $this->container['order_number'] = $order_number;
+        $this->container['orderNumber'] = $orderNumber;
 
         return $this;
     }
 
     /**
-     * Gets order_confirmation_number
+     * Gets orderConfirmationNumber
      *
      * @return string|null
      */
     public function getOrderConfirmationNumber()
     {
-        return $this->container['order_confirmation_number'];
+        return $this->container['orderConfirmationNumber'];
     }
 
     /**
-     * Sets order_confirmation_number
+     * Sets orderConfirmationNumber
      *
-     * @param string|null $order_confirmation_number The order confirmation number
+     * @param string|null $orderConfirmationNumber The order confirmation number
      *
      * @return self
      */
-    public function setOrderConfirmationNumber($order_confirmation_number)
+    public function setOrderConfirmationNumber($orderConfirmationNumber)
     {
-        if (is_null($order_confirmation_number)) {
-            throw new \InvalidArgumentException('non-nullable order_confirmation_number cannot be null');
+        if (is_null($orderConfirmationNumber)) {
+            throw new \InvalidArgumentException('non-nullable orderConfirmationNumber cannot be null');
         }
-        $this->container['order_confirmation_number'] = $order_confirmation_number;
+        $this->container['orderConfirmationNumber'] = $orderConfirmationNumber;
 
         return $this;
     }
 
     /**
-     * Gets delivery_number
+     * Gets deliveryNumber
      *
      * @return string|null
      */
     public function getDeliveryNumber()
     {
-        return $this->container['delivery_number'];
+        return $this->container['deliveryNumber'];
     }
 
     /**
-     * Sets delivery_number
+     * Sets deliveryNumber
      *
-     * @param string|null $delivery_number The number of the delivery, e.g. on the delivery note voucher.
+     * @param string|null $deliveryNumber The number of the delivery, e.g. on the delivery note voucher.
      *
      * @return self
      */
-    public function setDeliveryNumber($delivery_number)
+    public function setDeliveryNumber($deliveryNumber)
     {
-        if (is_null($delivery_number)) {
-            throw new \InvalidArgumentException('non-nullable delivery_number cannot be null');
+        if (is_null($deliveryNumber)) {
+            throw new \InvalidArgumentException('non-nullable deliveryNumber cannot be null');
         }
-        $this->container['delivery_number'] = $delivery_number;
+        $this->container['deliveryNumber'] = $deliveryNumber;
 
         return $this;
     }
 
     /**
-     * Gets customer_reference_number
+     * Gets customerReferenceNumber
      *
      * @return string|null
      */
     public function getCustomerReferenceNumber()
     {
-        return $this->container['customer_reference_number'];
+        return $this->container['customerReferenceNumber'];
     }
 
     /**
-     * Sets customer_reference_number
+     * Sets customerReferenceNumber
      *
-     * @param string|null $customer_reference_number The reference number of the customer / buyer.
+     * @param string|null $customerReferenceNumber The reference number of the customer / buyer.
      *
      * @return self
      */
-    public function setCustomerReferenceNumber($customer_reference_number)
+    public function setCustomerReferenceNumber($customerReferenceNumber)
     {
-        if (is_null($customer_reference_number)) {
-            throw new \InvalidArgumentException('non-nullable customer_reference_number cannot be null');
+        if (is_null($customerReferenceNumber)) {
+            throw new \InvalidArgumentException('non-nullable customerReferenceNumber cannot be null');
         }
-        $this->container['customer_reference_number'] = $customer_reference_number;
+        $this->container['customerReferenceNumber'] = $customerReferenceNumber;
 
         return $this;
     }
 
     /**
-     * Gets supplier_reference_number
+     * Gets supplierReferenceNumber
      *
      * @return string|null
      */
     public function getSupplierReferenceNumber()
     {
-        return $this->container['supplier_reference_number'];
+        return $this->container['supplierReferenceNumber'];
     }
 
     /**
-     * Sets supplier_reference_number
+     * Sets supplierReferenceNumber
      *
-     * @param string|null $supplier_reference_number The reference number of the supplier / bidder.
+     * @param string|null $supplierReferenceNumber The reference number of the supplier / bidder.
      *
      * @return self
      */
-    public function setSupplierReferenceNumber($supplier_reference_number)
+    public function setSupplierReferenceNumber($supplierReferenceNumber)
     {
-        if (is_null($supplier_reference_number)) {
-            throw new \InvalidArgumentException('non-nullable supplier_reference_number cannot be null');
+        if (is_null($supplierReferenceNumber)) {
+            throw new \InvalidArgumentException('non-nullable supplierReferenceNumber cannot be null');
         }
-        $this->container['supplier_reference_number'] = $supplier_reference_number;
+        $this->container['supplierReferenceNumber'] = $supplierReferenceNumber;
 
         return $this;
     }
 
     /**
-     * Gets shipping_type
+     * Gets shippingType
      *
      * @return string|null
      */
     public function getShippingType()
     {
-        return $this->container['shipping_type'];
+        return $this->container['shippingType'];
     }
 
     /**
-     * Sets shipping_type
+     * Sets shippingType
      *
-     * @param string|null $shipping_type The type of shippment.
+     * @param string|null $shippingType The type of shippment.
      *
      * @return self
      */
-    public function setShippingType($shipping_type)
+    public function setShippingType($shippingType)
     {
-        if (is_null($shipping_type)) {
-            throw new \InvalidArgumentException('non-nullable shipping_type cannot be null');
+        if (is_null($shippingType)) {
+            throw new \InvalidArgumentException('non-nullable shippingType cannot be null');
         }
-        $this->container['shipping_type'] = $shipping_type;
+        $this->container['shippingType'] = $shippingType;
 
         return $this;
     }
 
     /**
-     * Gets inquiry_type
+     * Gets inquiryType
      *
      * @return \Dangl\AVACloud\Model\CommerceInquiryTypeDto
      */
     public function getInquiryType()
     {
-        return $this->container['inquiry_type'];
+        return $this->container['inquiryType'];
     }
 
     /**
-     * Sets inquiry_type
+     * Sets inquiryType
      *
-     * @param \Dangl\AVACloud\Model\CommerceInquiryTypeDto $inquiry_type inquiry_type
+     * @param \Dangl\AVACloud\Model\CommerceInquiryTypeDto $inquiryType inquiryType
      *
      * @return self
      */
-    public function setInquiryType($inquiry_type)
+    public function setInquiryType($inquiryType)
     {
-        if (is_null($inquiry_type)) {
-            throw new \InvalidArgumentException('non-nullable inquiry_type cannot be null');
+        if (is_null($inquiryType)) {
+            throw new \InvalidArgumentException('non-nullable inquiryType cannot be null');
         }
-        $this->container['inquiry_type'] = $inquiry_type;
+        $this->container['inquiryType'] = $inquiryType;
 
         return $this;
     }

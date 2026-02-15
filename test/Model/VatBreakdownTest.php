@@ -81,7 +81,7 @@ class VatBreakdownTest extends TestCase
     }
 
     /**
-     * Test attribute "net_taxable_amount"
+     * Test attribute "netTaxableAmount"
      */
     public function testPropertyNetTaxableAmount()
     {
@@ -90,7 +90,7 @@ class VatBreakdownTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_amount"
+     * Test attribute "vatAmount"
      */
     public function testPropertyVatAmount()
     {
@@ -99,7 +99,7 @@ class VatBreakdownTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_category"
+     * Test attribute "vatCategory"
      */
     public function testPropertyVatCategory()
     {
@@ -108,7 +108,7 @@ class VatBreakdownTest extends TestCase
     }
 
     /**
-     * Test attribute "tax_rate"
+     * Test attribute "taxRate"
      */
     public function testPropertyTaxRate()
     {
@@ -117,7 +117,7 @@ class VatBreakdownTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_exemption_reason_text"
+     * Test attribute "vatExemptionReasonText"
      */
     public function testPropertyVatExemptionReasonText()
     {
@@ -126,7 +126,7 @@ class VatBreakdownTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_exemption_reason_code"
+     * Test attribute "vatExemptionReasonCode"
      */
     public function testPropertyVatExemptionReasonCode()
     {

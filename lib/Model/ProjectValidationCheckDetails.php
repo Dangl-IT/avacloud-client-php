@@ -59,7 +59,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'element_id' => 'string'
+        'elementId' => 'string'
     ];
 
     /**
@@ -70,7 +70,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'element_id' => 'guid'
+        'elementId' => 'guid'
     ];
 
     /**
@@ -79,7 +79,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'element_id' => false
+        'elementId' => false
     ];
 
     /**
@@ -168,7 +168,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'element_id' => 'elementId'
+        'elementId' => 'elementId'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'element_id' => 'setElementId'
+        'elementId' => 'setElementId'
     ];
 
     /**
@@ -186,7 +186,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'element_id' => 'getElementId'
+        'elementId' => 'getElementId'
     ];
 
     /**
@@ -246,7 +246,7 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('element_id', $data ?? [], null);
+        $this->setIfExists('elementId', $data ?? [], null);
     }
 
     /**
@@ -276,8 +276,8 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if ($this->container['element_id'] === null) {
-            $invalidProperties[] = "'element_id' can't be null";
+        if ($this->container['elementId'] === null) {
+            $invalidProperties[] = "'elementId' can't be null";
         }
         return $invalidProperties;
     }
@@ -295,28 +295,28 @@ class ProjectValidationCheckDetails implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets element_id
+     * Gets elementId
      *
      * @return string
      */
     public function getElementId()
     {
-        return $this->container['element_id'];
+        return $this->container['elementId'];
     }
 
     /**
-     * Sets element_id
+     * Sets elementId
      *
-     * @param string $element_id The id of the element
+     * @param string $elementId The id of the element
      *
      * @return self
      */
-    public function setElementId($element_id)
+    public function setElementId($elementId)
     {
-        if (is_null($element_id)) {
-            throw new \InvalidArgumentException('non-nullable element_id cannot be null');
+        if (is_null($elementId)) {
+            throw new \InvalidArgumentException('non-nullable elementId cannot be null');
         }
-        $this->container['element_id'] = $element_id;
+        $this->container['elementId'] = $elementId;
 
         return $this;
     }

@@ -133,7 +133,7 @@ try {
 ## `danglIdentityLoginWithCookie()`
 
 ```php
-danglIdentityLoginWithCookie($model, $redirect_url)
+danglIdentityLoginWithCookie($model, $redirectUrl)
 ```
 
 
@@ -157,10 +157,10 @@ $apiInstance = new Dangl\AVACloud\Api\DanglIdentityApi(
     $config
 );
 $model = new \Dangl\AVACloud\Model\LoginPost(); // \Dangl\AVACloud\Model\LoginPost
-$redirect_url = 'redirect_url_example'; // string
+$redirectUrl = 'redirectUrl_example'; // string
 
 try {
-    $apiInstance->danglIdentityLoginWithCookie($model, $redirect_url);
+    $apiInstance->danglIdentityLoginWithCookie($model, $redirectUrl);
 } catch (Exception $e) {
     echo 'Exception when calling DanglIdentityApi->danglIdentityLoginWithCookie: ', $e->getMessage(), PHP_EOL;
 }
@@ -171,7 +171,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **model** | [**\Dangl\AVACloud\Model\LoginPost**](../Model/LoginPost.md)|  | |
-| **redirect_url** | **string**|  | [optional] |
+| **redirectUrl** | **string**|  | [optional] |
 
 ### Return type
 
@@ -252,7 +252,7 @@ try {
 ## `danglIdentityRegister()`
 
 ```php
-danglIdentityRegister($register_model)
+danglIdentityRegister($registerModel)
 ```
 
 
@@ -275,10 +275,10 @@ $apiInstance = new Dangl\AVACloud\Api\DanglIdentityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$register_model = new \Dangl\AVACloud\Model\RegisterPost(); // \Dangl\AVACloud\Model\RegisterPost
+$registerModel = new \Dangl\AVACloud\Model\RegisterPost(); // \Dangl\AVACloud\Model\RegisterPost
 
 try {
-    $apiInstance->danglIdentityRegister($register_model);
+    $apiInstance->danglIdentityRegister($registerModel);
 } catch (Exception $e) {
     echo 'Exception when calling DanglIdentityApi->danglIdentityRegister: ', $e->getMessage(), PHP_EOL;
 }
@@ -288,7 +288,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **register_model** | [**\Dangl\AVACloud\Model\RegisterPost**](../Model/RegisterPost.md)|  | |
+| **registerModel** | [**\Dangl\AVACloud\Model\RegisterPost**](../Model/RegisterPost.md)|  | |
 
 ### Return type
 
@@ -310,7 +310,7 @@ void (empty response body)
 ## `danglIdentityRequestPasswordReset()`
 
 ```php
-danglIdentityRequestPasswordReset($forgot_password_model)
+danglIdentityRequestPasswordReset($forgotPasswordModel)
 ```
 
 
@@ -333,10 +333,10 @@ $apiInstance = new Dangl\AVACloud\Api\DanglIdentityApi(
     new GuzzleHttp\Client(),
     $config
 );
-$forgot_password_model = new \Dangl\AVACloud\Model\ForgotPasswordPost(); // \Dangl\AVACloud\Model\ForgotPasswordPost
+$forgotPasswordModel = new \Dangl\AVACloud\Model\ForgotPasswordPost(); // \Dangl\AVACloud\Model\ForgotPasswordPost
 
 try {
-    $apiInstance->danglIdentityRequestPasswordReset($forgot_password_model);
+    $apiInstance->danglIdentityRequestPasswordReset($forgotPasswordModel);
 } catch (Exception $e) {
     echo 'Exception when calling DanglIdentityApi->danglIdentityRequestPasswordReset: ', $e->getMessage(), PHP_EOL;
 }
@@ -346,7 +346,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **forgot_password_model** | [**\Dangl\AVACloud\Model\ForgotPasswordPost**](../Model/ForgotPasswordPost.md)|  | |
+| **forgotPasswordModel** | [**\Dangl\AVACloud\Model\ForgotPasswordPost**](../Model/ForgotPasswordPost.md)|  | |
 
 ### Return type
 

@@ -81,7 +81,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_number"
+     * Test attribute "invoiceNumber"
      */
     public function testPropertyInvoiceNumber()
     {
@@ -90,7 +90,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_date"
+     * Test attribute "invoiceDate"
      */
     public function testPropertyInvoiceDate()
     {
@@ -99,7 +99,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_type"
+     * Test attribute "invoiceType"
      */
     public function testPropertyInvoiceType()
     {
@@ -108,7 +108,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "currency_code"
+     * Test attribute "currencyCode"
      */
     public function testPropertyCurrencyCode()
     {
@@ -117,7 +117,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_due_date"
+     * Test attribute "paymentDueDate"
      */
     public function testPropertyPaymentDueDate()
     {
@@ -135,7 +135,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_terms"
+     * Test attribute "paymentTerms"
      */
     public function testPropertyPaymentTerms()
     {
@@ -144,7 +144,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "parsed_payment_terms"
+     * Test attribute "parsedPaymentTerms"
      */
     public function testPropertyParsedPaymentTerms()
     {
@@ -153,7 +153,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "previous_invoices"
+     * Test attribute "previousInvoices"
      */
     public function testPropertyPreviousInvoices()
     {
@@ -180,7 +180,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "seller_tax_representative"
+     * Test attribute "sellerTaxRepresentative"
      */
     public function testPropertySellerTaxRepresentative()
     {
@@ -198,7 +198,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_notes"
+     * Test attribute "invoiceNotes"
      */
     public function testPropertyInvoiceNotes()
     {
@@ -207,7 +207,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_period"
+     * Test attribute "invoicePeriod"
      */
     public function testPropertyInvoicePeriod()
     {
@@ -216,7 +216,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "delivery_information"
+     * Test attribute "deliveryInformation"
      */
     public function testPropertyDeliveryInformation()
     {
@@ -234,7 +234,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_instructions"
+     * Test attribute "paymentInstructions"
      */
     public function testPropertyPaymentInstructions()
     {
@@ -252,7 +252,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "vat_breakdown"
+     * Test attribute "vatBreakdown"
      */
     public function testPropertyVatBreakdown()
     {
@@ -279,7 +279,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "line_items"
+     * Test attribute "lineItems"
      */
     public function testPropertyLineItems()
     {
@@ -288,7 +288,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "source_type"
+     * Test attribute "sourceType"
      */
     public function testPropertySourceType()
     {
@@ -297,7 +297,7 @@ class InvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "factur_x_data"
+     * Test attribute "facturXData"
      */
     public function testPropertyFacturXData()
     {

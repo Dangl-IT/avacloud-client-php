@@ -61,8 +61,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'address' => 'string',
         'city' => 'string',
-        'zip_code' => 'string',
-        'country_code' => 'string'
+        'zipCode' => 'string',
+        'countryCode' => 'string'
     ];
 
     /**
@@ -75,8 +75,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'address' => null,
         'city' => null,
-        'zip_code' => null,
-        'country_code' => null
+        'zipCode' => null,
+        'countryCode' => null
     ];
 
     /**
@@ -87,8 +87,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static array $openAPINullables = [
         'address' => false,
         'city' => false,
-        'zip_code' => false,
-        'country_code' => false
+        'zipCode' => false,
+        'countryCode' => false
     ];
 
     /**
@@ -179,8 +179,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'address' => 'address',
         'city' => 'city',
-        'zip_code' => 'zipCode',
-        'country_code' => 'countryCode'
+        'zipCode' => 'zipCode',
+        'countryCode' => 'countryCode'
     ];
 
     /**
@@ -191,8 +191,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'address' => 'setAddress',
         'city' => 'setCity',
-        'zip_code' => 'setZipCode',
-        'country_code' => 'setCountryCode'
+        'zipCode' => 'setZipCode',
+        'countryCode' => 'setCountryCode'
     ];
 
     /**
@@ -203,8 +203,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'address' => 'getAddress',
         'city' => 'getCity',
-        'zip_code' => 'getZipCode',
-        'country_code' => 'getCountryCode'
+        'zipCode' => 'getZipCode',
+        'countryCode' => 'getCountryCode'
     ];
 
     /**
@@ -266,8 +266,8 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->setIfExists('address', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('zip_code', $data ?? [], null);
-        $this->setIfExists('country_code', $data ?? [], null);
+        $this->setIfExists('zipCode', $data ?? [], null);
+        $this->setIfExists('countryCode', $data ?? [], null);
     }
 
     /**
@@ -367,55 +367,55 @@ class DeliveryAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets zip_code
+     * Gets zipCode
      *
      * @return string|null
      */
     public function getZipCode()
     {
-        return $this->container['zip_code'];
+        return $this->container['zipCode'];
     }
 
     /**
-     * Sets zip_code
+     * Sets zipCode
      *
-     * @param string|null $zip_code BT-78 The zip code. BT-78 in XRechnung.
+     * @param string|null $zipCode BT-78 The zip code. BT-78 in XRechnung.
      *
      * @return self
      */
-    public function setZipCode($zip_code)
+    public function setZipCode($zipCode)
     {
-        if (is_null($zip_code)) {
-            throw new \InvalidArgumentException('non-nullable zip_code cannot be null');
+        if (is_null($zipCode)) {
+            throw new \InvalidArgumentException('non-nullable zipCode cannot be null');
         }
-        $this->container['zip_code'] = $zip_code;
+        $this->container['zipCode'] = $zipCode;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      *
      * @return string|null
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
+     * Sets countryCode
      *
-     * @param string|null $country_code BT-80 The ISO 3166-1 2 letter country code. BT-80 in XRechnung.
+     * @param string|null $countryCode BT-80 The ISO 3166-1 2 letter country code. BT-80 in XRechnung.
      *
      * @return self
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        if (is_null($country_code)) {
-            throw new \InvalidArgumentException('non-nullable country_code cannot be null');
+        if (is_null($countryCode)) {
+            throw new \InvalidArgumentException('non-nullable countryCode cannot be null');
         }
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }

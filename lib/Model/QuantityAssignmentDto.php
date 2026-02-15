@@ -61,8 +61,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'id' => 'string',
         'quantity' => 'float',
-        'project_catalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
-        'catalogue_references' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]'
+        'projectCatalogues' => '\Dangl\AVACloud\Model\CatalogueDto[]',
+        'catalogueReferences' => '\Dangl\AVACloud\Model\CatalogueReferenceDto[]'
     ];
 
     /**
@@ -75,8 +75,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPIFormats = [
         'id' => 'guid',
         'quantity' => 'decimal',
-        'project_catalogues' => null,
-        'catalogue_references' => null
+        'projectCatalogues' => null,
+        'catalogueReferences' => null
     ];
 
     /**
@@ -87,8 +87,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static array $openAPINullables = [
         'id' => false,
         'quantity' => false,
-        'project_catalogues' => false,
-        'catalogue_references' => false
+        'projectCatalogues' => false,
+        'catalogueReferences' => false
     ];
 
     /**
@@ -179,8 +179,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $attributeMap = [
         'id' => 'id',
         'quantity' => 'quantity',
-        'project_catalogues' => 'projectCatalogues',
-        'catalogue_references' => 'catalogueReferences'
+        'projectCatalogues' => 'projectCatalogues',
+        'catalogueReferences' => 'catalogueReferences'
     ];
 
     /**
@@ -191,8 +191,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $setters = [
         'id' => 'setId',
         'quantity' => 'setQuantity',
-        'project_catalogues' => 'setProjectCatalogues',
-        'catalogue_references' => 'setCatalogueReferences'
+        'projectCatalogues' => 'setProjectCatalogues',
+        'catalogueReferences' => 'setCatalogueReferences'
     ];
 
     /**
@@ -203,8 +203,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $getters = [
         'id' => 'getId',
         'quantity' => 'getQuantity',
-        'project_catalogues' => 'getProjectCatalogues',
-        'catalogue_references' => 'getCatalogueReferences'
+        'projectCatalogues' => 'getProjectCatalogues',
+        'catalogueReferences' => 'getCatalogueReferences'
     ];
 
     /**
@@ -266,8 +266,8 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('quantity', $data ?? [], null);
-        $this->setIfExists('project_catalogues', $data ?? [], null);
-        $this->setIfExists('catalogue_references', $data ?? [], null);
+        $this->setIfExists('projectCatalogues', $data ?? [], null);
+        $this->setIfExists('catalogueReferences', $data ?? [], null);
     }
 
     /**
@@ -373,55 +373,55 @@ class QuantityAssignmentDto implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets project_catalogues
+     * Gets projectCatalogues
      *
      * @return \Dangl\AVACloud\Model\CatalogueDto[]|null
      */
     public function getProjectCatalogues()
     {
-        return $this->container['project_catalogues'];
+        return $this->container['projectCatalogues'];
     }
 
     /**
-     * Sets project_catalogues
+     * Sets projectCatalogues
      *
-     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $project_catalogues These are Catalogue that are used within this ServiceSpecification. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves.
+     * @param \Dangl\AVACloud\Model\CatalogueDto[]|null $projectCatalogues These are Catalogue that are used within this ServiceSpecification. Catalogue references are used to describe catalogues, or collections, that can be used to describe elements with commonly known properties. For example, QuantityAssignments use these to categorize themselves.
      *
      * @return self
      */
-    public function setProjectCatalogues($project_catalogues)
+    public function setProjectCatalogues($projectCatalogues)
     {
-        if (is_null($project_catalogues)) {
-            throw new \InvalidArgumentException('non-nullable project_catalogues cannot be null');
+        if (is_null($projectCatalogues)) {
+            throw new \InvalidArgumentException('non-nullable projectCatalogues cannot be null');
         }
-        $this->container['project_catalogues'] = $project_catalogues;
+        $this->container['projectCatalogues'] = $projectCatalogues;
 
         return $this;
     }
 
     /**
-     * Gets catalogue_references
+     * Gets catalogueReferences
      *
      * @return \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null
      */
     public function getCatalogueReferences()
     {
-        return $this->container['catalogue_references'];
+        return $this->container['catalogueReferences'];
     }
 
     /**
-     * Sets catalogue_references
+     * Sets catalogueReferences
      *
-     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogue_references Referenced catalogues for this QuantityAssignment.
+     * @param \Dangl\AVACloud\Model\CatalogueReferenceDto[]|null $catalogueReferences Referenced catalogues for this QuantityAssignment.
      *
      * @return self
      */
-    public function setCatalogueReferences($catalogue_references)
+    public function setCatalogueReferences($catalogueReferences)
     {
-        if (is_null($catalogue_references)) {
-            throw new \InvalidArgumentException('non-nullable catalogue_references cannot be null');
+        if (is_null($catalogueReferences)) {
+            throw new \InvalidArgumentException('non-nullable catalogueReferences cannot be null');
         }
-        $this->container['catalogue_references'] = $catalogue_references;
+        $this->container['catalogueReferences'] = $catalogueReferences;
 
         return $this;
     }

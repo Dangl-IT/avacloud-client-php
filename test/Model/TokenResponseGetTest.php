@@ -81,7 +81,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "access_token"
+     * Test attribute "accessToken"
      */
     public function testPropertyAccessToken()
     {
@@ -99,7 +99,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "error_description"
+     * Test attribute "errorDescription"
      */
     public function testPropertyErrorDescription()
     {
@@ -108,7 +108,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "expires_in"
+     * Test attribute "expiresIn"
      */
     public function testPropertyExpiresIn()
     {
@@ -117,7 +117,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "http_error_reason"
+     * Test attribute "httpErrorReason"
      */
     public function testPropertyHttpErrorReason()
     {
@@ -126,7 +126,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "http_status_code"
+     * Test attribute "httpStatusCode"
      */
     public function testPropertyHttpStatusCode()
     {
@@ -135,7 +135,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "identity_token"
+     * Test attribute "identityToken"
      */
     public function testPropertyIdentityToken()
     {
@@ -144,7 +144,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "is_error"
+     * Test attribute "isError"
      */
     public function testPropertyIsError()
     {
@@ -153,7 +153,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "refresh_token"
+     * Test attribute "refreshToken"
      */
     public function testPropertyRefreshToken()
     {
@@ -162,7 +162,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "token_type"
+     * Test attribute "tokenType"
      */
     public function testPropertyTokenType()
     {
@@ -171,7 +171,7 @@ class TokenResponseGetTest extends TestCase
     }
 
     /**
-     * Test attribute "error_type"
+     * Test attribute "errorType"
      */
     public function testPropertyErrorType()
     {

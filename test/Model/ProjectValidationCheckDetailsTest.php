@@ -81,7 +81,7 @@ class ProjectValidationCheckDetailsTest extends TestCase
     }
 
     /**
-     * Test attribute "element_id"
+     * Test attribute "elementId"
      */
     public function testPropertyElementId()
     {

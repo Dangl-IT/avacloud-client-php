@@ -81,7 +81,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_opening_text"
+     * Test attribute "isOpeningText"
      */
     public function testPropertyIsOpeningText()
     {
@@ -90,7 +90,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "is_closing_text"
+     * Test attribute "isClosingText"
      */
     public function testPropertyIsClosingText()
     {
@@ -99,7 +99,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "short_text"
+     * Test attribute "shortText"
      */
     public function testPropertyShortText()
     {
@@ -108,7 +108,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_short_text"
+     * Test attribute "htmlShortText"
      */
     public function testPropertyHtmlShortText()
     {
@@ -117,7 +117,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addition_type"
+     * Test attribute "additionType"
      */
     public function testPropertyAdditionType()
     {
@@ -126,7 +126,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "long_text"
+     * Test attribute "longText"
      */
     public function testPropertyLongText()
     {
@@ -135,7 +135,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "html_long_text"
+     * Test attribute "htmlLongText"
      */
     public function testPropertyHtmlLongText()
     {
@@ -153,7 +153,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "standardized_description"
+     * Test attribute "standardizedDescription"
      */
     public function testPropertyStandardizedDescription()
     {
@@ -162,7 +162,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "element_type"
+     * Test attribute "elementType"
      */
     public function testPropertyElementType()
     {
@@ -171,7 +171,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "description_id"
+     * Test attribute "descriptionId"
      */
     public function testPropertyDescriptionId()
     {
@@ -180,7 +180,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "oenorm_note_text_properties"
+     * Test attribute "oenormNoteTextProperties"
      */
     public function testPropertyOenormNoteTextProperties()
     {
@@ -189,7 +189,7 @@ class NoteTextDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "has_bidder_comment_in_html_long_text"
+     * Test attribute "hasBidderCommentInHtmlLongText"
      */
     public function testPropertyHasBidderCommentInHtmlLongText()
     {

@@ -108,7 +108,7 @@ class BankingInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "account_number"
+     * Test attribute "accountNumber"
      */
     public function testPropertyAccountNumber()
     {
@@ -126,7 +126,7 @@ class BankingInformationDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "routing_number"
+     * Test attribute "routingNumber"
      */
     public function testPropertyRoutingNumber()
     {

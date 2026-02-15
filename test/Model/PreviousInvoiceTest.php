@@ -81,7 +81,7 @@ class PreviousInvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_date"
+     * Test attribute "invoiceDate"
      */
     public function testPropertyInvoiceDate()
     {
@@ -90,7 +90,7 @@ class PreviousInvoiceTest extends TestCase
     }
 
     /**
-     * Test attribute "invoice_number"
+     * Test attribute "invoiceNumber"
      */
     public function testPropertyInvoiceNumber()
     {

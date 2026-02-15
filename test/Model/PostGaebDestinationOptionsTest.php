@@ -81,7 +81,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "destination_gaeb_type"
+     * Test attribute "destinationGaebType"
      */
     public function testPropertyDestinationGaebType()
     {
@@ -90,7 +90,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "target_exchange_phase_transform"
+     * Test attribute "targetExchangePhaseTransform"
      */
     public function testPropertyTargetExchangePhaseTransform()
     {
@@ -99,7 +99,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "enforce_strict_offer_phase_long_text_output"
+     * Test attribute "enforceStrictOfferPhaseLongTextOutput"
      */
     public function testPropertyEnforceStrictOfferPhaseLongTextOutput()
     {
@@ -108,7 +108,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "export_quantity_determination"
+     * Test attribute "exportQuantityDetermination"
      */
     public function testPropertyExportQuantityDetermination()
     {
@@ -117,7 +117,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "remove_unprintable_characters_from_texts"
+     * Test attribute "removeUnprintableCharactersFromTexts"
      */
     public function testPropertyRemoveUnprintableCharactersFromTexts()
     {
@@ -126,7 +126,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "force_include_descriptions"
+     * Test attribute "forceIncludeDescriptions"
      */
     public function testPropertyForceIncludeDescriptions()
     {
@@ -135,7 +135,7 @@ class PostGaebDestinationOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "treat_null_item_number_schema_as_invalid"
+     * Test attribute "treatNullItemNumberSchemaAsInvalid"
      */
     public function testPropertyTreatNullItemNumberSchemaAsInvalid()
     {

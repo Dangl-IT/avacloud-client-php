@@ -90,7 +90,7 @@ class PriceCatalogueDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_price_from"
+     * Test attribute "unitPriceFrom"
      */
     public function testPropertyUnitPriceFrom()
     {
@@ -99,7 +99,7 @@ class PriceCatalogueDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_price_to"
+     * Test attribute "unitPriceTo"
      */
     public function testPropertyUnitPriceTo()
     {
@@ -108,7 +108,7 @@ class PriceCatalogueDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "unit_price_average"
+     * Test attribute "unitPriceAverage"
      */
     public function testPropertyUnitPriceAverage()
     {
@@ -117,7 +117,7 @@ class PriceCatalogueDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "wage_price_from"
+     * Test attribute "wagePriceFrom"
      */
     public function testPropertyWagePriceFrom()
     {
@@ -126,7 +126,7 @@ class PriceCatalogueDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "wage_price_to"
+     * Test attribute "wagePriceTo"
      */
     public function testPropertyWagePriceTo()
     {
@@ -135,7 +135,7 @@ class PriceCatalogueDataDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "wage_price_average"
+     * Test attribute "wagePriceAverage"
      */
     public function testPropertyWagePriceAverage()
     {

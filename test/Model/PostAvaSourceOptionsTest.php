@@ -81,7 +81,7 @@ class PostAvaSourceOptionsTest extends TestCase
     }
 
     /**
-     * Test attribute "try_auto_generate_item_numbers_and_schema"
+     * Test attribute "tryAutoGenerateItemNumbersAndSchema"
      */
     public function testPropertyTryAutoGenerateItemNumbersAndSchema()
     {

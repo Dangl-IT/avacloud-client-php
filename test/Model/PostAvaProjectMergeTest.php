@@ -81,7 +81,7 @@ class PostAvaProjectMergeTest extends TestCase
     }
 
     /**
-     * Test attribute "source_project"
+     * Test attribute "sourceProject"
      */
     public function testPropertySourceProject()
     {
@@ -90,7 +90,7 @@ class PostAvaProjectMergeTest extends TestCase
     }
 
     /**
-     * Test attribute "target_project"
+     * Test attribute "targetProject"
      */
     public function testPropertyTargetProject()
     {

@@ -90,7 +90,7 @@ class IElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "gaeb_xml_id"
+     * Test attribute "gaebXmlId"
      */
     public function testPropertyGaebXmlId()
     {
@@ -99,7 +99,7 @@ class IElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "addendum_number"
+     * Test attribute "addendumNumber"
      */
     public function testPropertyAddendumNumber()
     {
@@ -108,7 +108,7 @@ class IElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "project_catalogues"
+     * Test attribute "projectCatalogues"
      */
     public function testPropertyProjectCatalogues()
     {
@@ -117,7 +117,7 @@ class IElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "catalogue_references"
+     * Test attribute "catalogueReferences"
      */
     public function testPropertyCatalogueReferences()
     {
@@ -126,7 +126,7 @@ class IElementDtoTest extends TestCase
     }
 
     /**
-     * Test attribute "element_type_discriminator"
+     * Test attribute "elementTypeDiscriminator"
      */
     public function testPropertyElementTypeDiscriminator()
     {

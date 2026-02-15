@@ -99,7 +99,7 @@ class PayeeTest extends TestCase
     }
 
     /**
-     * Test attribute "legal_registration_identifier"
+     * Test attribute "legalRegistrationIdentifier"
      */
     public function testPropertyLegalRegistrationIdentifier()
     {

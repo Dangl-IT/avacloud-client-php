@@ -18,7 +18,7 @@ All URIs are relative to https://avacloud-api.dangl-it.com, except if the operat
 ## `xRechnungConversionConvertAvaToPdfInvoice()`
 
 ```php
-xRechnungConversionConvertAvaToPdfInvoice($ava_wrapper): \SplFileObject
+xRechnungConversionConvertAvaToPdfInvoice($avaWrapper): \SplFileObject
 ```
 
 This will convert an AVA wrapper object to a PDF file
@@ -41,10 +41,10 @@ $apiInstance = new Dangl\AVACloud\Api\XRechnungConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ava_wrapper = new \Dangl\AVACloud\Model\AvaProjectWrapper(); // \Dangl\AVACloud\Model\AvaProjectWrapper
+$avaWrapper = new \Dangl\AVACloud\Model\AvaProjectWrapper(); // \Dangl\AVACloud\Model\AvaProjectWrapper
 
 try {
-    $result = $apiInstance->xRechnungConversionConvertAvaToPdfInvoice($ava_wrapper);
+    $result = $apiInstance->xRechnungConversionConvertAvaToPdfInvoice($avaWrapper);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRechnungConversionApi->xRechnungConversionConvertAvaToPdfInvoice: ', $e->getMessage(), PHP_EOL;
@@ -55,7 +55,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ava_wrapper** | [**\Dangl\AVACloud\Model\AvaProjectWrapper**](../Model/AvaProjectWrapper.md)|  | |
+| **avaWrapper** | [**\Dangl\AVACloud\Model\AvaProjectWrapper**](../Model/AvaProjectWrapper.md)|  | |
 
 ### Return type
 
@@ -77,7 +77,7 @@ try {
 ## `xRechnungConversionConvertAvaToXRechnung()`
 
 ```php
-xRechnungConversionConvertAvaToXRechnung($ava_wrapper, $target_format, $disable_price_rounding, $disable_branding_comment): \SplFileObject
+xRechnungConversionConvertAvaToXRechnung($avaWrapper, $targetFormat, $disablePriceRounding, $disableBrandingComment): \SplFileObject
 ```
 
 This will convert an AVA wrapper object to an XRechnung file
@@ -100,13 +100,13 @@ $apiInstance = new Dangl\AVACloud\Api\XRechnungConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ava_wrapper = new \Dangl\AVACloud\Model\AvaProjectWrapper(); // \Dangl\AVACloud\Model\AvaProjectWrapper
-$target_format = 'target_format_example'; // string | The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd)
-$disable_price_rounding = True; // bool | If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places.
-$disable_branding_comment = True; // bool | If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included.
+$avaWrapper = new \Dangl\AVACloud\Model\AvaProjectWrapper(); // \Dangl\AVACloud\Model\AvaProjectWrapper
+$targetFormat = 'targetFormat_example'; // string | The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd)
+$disablePriceRounding = True; // bool | If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places.
+$disableBrandingComment = True; // bool | If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included.
 
 try {
-    $result = $apiInstance->xRechnungConversionConvertAvaToXRechnung($ava_wrapper, $target_format, $disable_price_rounding, $disable_branding_comment);
+    $result = $apiInstance->xRechnungConversionConvertAvaToXRechnung($avaWrapper, $targetFormat, $disablePriceRounding, $disableBrandingComment);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRechnungConversionApi->xRechnungConversionConvertAvaToXRechnung: ', $e->getMessage(), PHP_EOL;
@@ -117,10 +117,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ava_wrapper** | [**\Dangl\AVACloud\Model\AvaProjectWrapper**](../Model/AvaProjectWrapper.md)|  | |
-| **target_format** | **string**| The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) | [optional] |
-| **disable_price_rounding** | **bool**| If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. | [optional] |
-| **disable_branding_comment** | **bool**| If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. | [optional] |
+| **avaWrapper** | [**\Dangl\AVACloud\Model\AvaProjectWrapper**](../Model/AvaProjectWrapper.md)|  | |
+| **targetFormat** | **string**| The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) | [optional] |
+| **disablePriceRounding** | **bool**| If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. | [optional] |
+| **disableBrandingComment** | **bool**| If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. | [optional] |
 
 ### Return type
 
@@ -201,7 +201,7 @@ try {
 ## `xRechnungConversionConvertInvoiceToXRechnung()`
 
 ```php
-xRechnungConversionConvertInvoiceToXRechnung($invoice, $target_format, $disable_price_rounding, $disable_branding_comment): \SplFileObject
+xRechnungConversionConvertInvoiceToXRechnung($invoice, $targetFormat, $disablePriceRounding, $disableBrandingComment): \SplFileObject
 ```
 
 This will convert an Invoice object to an XRechnung file
@@ -225,12 +225,12 @@ $apiInstance = new Dangl\AVACloud\Api\XRechnungConversionApi(
     $config
 );
 $invoice = new \Dangl\AVACloud\Model\Invoice(); // \Dangl\AVACloud\Model\Invoice
-$target_format = 'target_format_example'; // string | The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd)
-$disable_price_rounding = True; // bool | If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places.
-$disable_branding_comment = True; // bool | If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included.
+$targetFormat = 'targetFormat_example'; // string | The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd)
+$disablePriceRounding = True; // bool | If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places.
+$disableBrandingComment = True; // bool | If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included.
 
 try {
-    $result = $apiInstance->xRechnungConversionConvertInvoiceToXRechnung($invoice, $target_format, $disable_price_rounding, $disable_branding_comment);
+    $result = $apiInstance->xRechnungConversionConvertInvoiceToXRechnung($invoice, $targetFormat, $disablePriceRounding, $disableBrandingComment);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRechnungConversionApi->xRechnungConversionConvertInvoiceToXRechnung: ', $e->getMessage(), PHP_EOL;
@@ -242,9 +242,9 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **invoice** | [**\Dangl\AVACloud\Model\Invoice**](../Model/Invoice.md)|  | |
-| **target_format** | **string**| The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) | [optional] |
-| **disable_price_rounding** | **bool**| If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. | [optional] |
-| **disable_branding_comment** | **bool**| If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. | [optional] |
+| **targetFormat** | **string**| The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) | [optional] |
+| **disablePriceRounding** | **bool**| If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. | [optional] |
+| **disableBrandingComment** | **bool**| If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. | [optional] |
 
 ### Return type
 
@@ -266,7 +266,7 @@ try {
 ## `xRechnungConversionConvertXRechnungToAva()`
 
 ```php
-xRechnungConversionConvertXRechnungToAva($xrechnung_file): \Dangl\AVACloud\Model\AvaProjectWrapper
+xRechnungConversionConvertXRechnungToAva($xrechnungFile): \Dangl\AVACloud\Model\AvaProjectWrapper
 ```
 
 This will read an XRechnung file and convert it to an AVA wrapper object
@@ -289,10 +289,10 @@ $apiInstance = new Dangl\AVACloud\Api\XRechnungConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$xrechnung_file = '/path/to/file.txt'; // \SplFileObject
+$xrechnungFile = '/path/to/file.txt'; // \SplFileObject
 
 try {
-    $result = $apiInstance->xRechnungConversionConvertXRechnungToAva($xrechnung_file);
+    $result = $apiInstance->xRechnungConversionConvertXRechnungToAva($xrechnungFile);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRechnungConversionApi->xRechnungConversionConvertXRechnungToAva: ', $e->getMessage(), PHP_EOL;
@@ -303,7 +303,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **xrechnung_file** | **\SplFileObject****\SplFileObject**|  | [optional] |
+| **xrechnungFile** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type
 
@@ -325,7 +325,7 @@ try {
 ## `xRechnungConversionConvertXRechnungToInvoice()`
 
 ```php
-xRechnungConversionConvertXRechnungToInvoice($xrechnung_file): \Dangl\AVACloud\Model\Invoice
+xRechnungConversionConvertXRechnungToInvoice($xrechnungFile): \Dangl\AVACloud\Model\Invoice
 ```
 
 This will read an XRechnung file and convert it to an Invoice object
@@ -348,10 +348,10 @@ $apiInstance = new Dangl\AVACloud\Api\XRechnungConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$xrechnung_file = '/path/to/file.txt'; // \SplFileObject
+$xrechnungFile = '/path/to/file.txt'; // \SplFileObject
 
 try {
-    $result = $apiInstance->xRechnungConversionConvertXRechnungToInvoice($xrechnung_file);
+    $result = $apiInstance->xRechnungConversionConvertXRechnungToInvoice($xrechnungFile);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRechnungConversionApi->xRechnungConversionConvertXRechnungToInvoice: ', $e->getMessage(), PHP_EOL;
@@ -362,7 +362,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **xrechnung_file** | **\SplFileObject****\SplFileObject**|  | [optional] |
+| **xrechnungFile** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type
 
@@ -384,7 +384,7 @@ try {
 ## `xRechnungConversionMergeInvoiceIntoPdfFile()`
 
 ```php
-xRechnungConversionMergeInvoiceIntoPdfFile($pdf_embedd_model, $target_format, $disable_price_rounding, $disable_branding_comment): \SplFileObject
+xRechnungConversionMergeInvoiceIntoPdfFile($pdfEmbeddModel, $targetFormat, $disablePriceRounding, $disableBrandingComment): \SplFileObject
 ```
 
 This will embedd an XRechnung file into an existing PDF file as an attachment.
@@ -407,13 +407,13 @@ $apiInstance = new Dangl\AVACloud\Api\XRechnungConversionApi(
     new GuzzleHttp\Client(),
     $config
 );
-$pdf_embedd_model = new \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd(); // \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd
-$target_format = 'target_format_example'; // string | The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd)
-$disable_price_rounding = True; // bool | If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places.
-$disable_branding_comment = True; // bool | If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included.
+$pdfEmbeddModel = new \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd(); // \Dangl\AVACloud\Model\PostXRechnungPdfEmbedd
+$targetFormat = 'targetFormat_example'; // string | The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd)
+$disablePriceRounding = True; // bool | If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places.
+$disableBrandingComment = True; // bool | If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included.
 
 try {
-    $result = $apiInstance->xRechnungConversionMergeInvoiceIntoPdfFile($pdf_embedd_model, $target_format, $disable_price_rounding, $disable_branding_comment);
+    $result = $apiInstance->xRechnungConversionMergeInvoiceIntoPdfFile($pdfEmbeddModel, $targetFormat, $disablePriceRounding, $disableBrandingComment);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling XRechnungConversionApi->xRechnungConversionMergeInvoiceIntoPdfFile: ', $e->getMessage(), PHP_EOL;
@@ -424,10 +424,10 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pdf_embedd_model** | [**\Dangl\AVACloud\Model\PostXRechnungPdfEmbedd**](../Model/PostXRechnungPdfEmbedd.md)|  | |
-| **target_format** | **string**| The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) | [optional] |
-| **disable_price_rounding** | **bool**| If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. | [optional] |
-| **disable_branding_comment** | **bool**| If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. | [optional] |
+| **pdfEmbeddModel** | [**\Dangl\AVACloud\Model\PostXRechnungPdfEmbedd**](../Model/PostXRechnungPdfEmbedd.md)|  | |
+| **targetFormat** | **string**| The target format for the XRechnung export. Defaults to Ubl. Options are: Ubl, CrossIndustryInvoice and FacturX (ZUGFerd) | [optional] |
+| **disablePriceRounding** | **bool**| If this is enabled, then the price values in the XRechnung export will not be rounded. Otherwise, prices will by default be rounded to two decimal places. | [optional] |
+| **disableBrandingComment** | **bool**| If this is set to true, exported XRechnung files will not contain an XML comment indicating their origin. This is false by default, meaning the comment will be included. | [optional] |
 
 ### Return type
 
